@@ -1,0 +1,3440 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.30_01
+    installdirs: site
+    name: Combine
+    requires:
+      Algorithm::SVMLight: 0
+      Compress::Zlib: 0
+      Config::General: 0
+      DBD::mysql: 0
+      DBI: 0
+      Digest::MD5: 0
+      Encode: 0
+      Geo::IP: 0
+      Getopt::Long: 0
+      HTML::Entities: 0
+      HTML::Tidy: 1.06
+      HTML::TokeParser: 0
+      HTTP::Date: 0
+      HTTP::Request: 0
+      HTTP::Status: 0
+      Image::ExifTool: 0
+      LWP::UserAgent: 0
+      Lingua::Identify: 0
+      Lingua::Stem: 0
+      MIME::Base64: 0
+      Net::hostent: 0
+      URI: 0
+      XML::LibXML: 0
+      XML::LibXSLT: 0
+      XML::Parser: 0
+      ZOOM: 1.2
+    version: 3.12-0
+    version_from: Combine/Config.pm
+  blib:
+    - blib/lib/Combine/Check_record.pm
+    - blib/lib/Combine/CleanXML2CanDoc.pm
+    - blib/lib/Combine/Config.pm
+    - blib/lib/Combine/DataBase.pm
+    - blib/lib/Combine/FromHTML.pm
+    - blib/lib/Combine/FromImage.pm
+    - blib/lib/Combine/FromTeX.pm
+    - blib/lib/Combine/GraphAlgorithm.pm
+    - blib/lib/Combine/HTMLExtractor.pm
+    - blib/lib/Combine/LoadTermList.pm
+    - blib/lib/Combine/LogSQL.pm
+    - blib/lib/Combine/Matcher.pm
+    - blib/lib/Combine/MySQLhdb.pm
+    - blib/lib/Combine/PosCheck_record.pm
+    - blib/lib/Combine/PosMatcher.pm
+    - blib/lib/Combine/RobotRules.pm
+    - blib/lib/Combine/SD_SQL.pm
+    - blib/lib/Combine/UA.pm
+    - blib/lib/Combine/WP7Canonical.pm
+    - blib/lib/Combine/XWI.pm
+    - blib/lib/Combine/XWI2XML.pm
+    - blib/lib/Combine/Zebra.pm
+    - blib/lib/Combine/classifySVM.pm
+    - blib/lib/Combine/selurl.pm
+    - blib/lib/Combine/utilPlugIn.pm
+    - blib/man1/combine.1
+    - blib/man1/combineCtrl.1
+    - blib/man1/combineExport.1
+    - blib/man1/combineINIT.1
+    - blib/man1/combineRank.1
+    - blib/man1/combineReClassify.1
+    - blib/man1/combineRun.1
+    - blib/man1/combineSVM.1
+    - blib/man1/combineUtil.1
+    - blib/man3/Combine::FromHTML.3
+    - blib/man3/Combine::FromTeX.3
+    - blib/man3/Combine::HTMLExtractor.3
+    - blib/man3/Combine::LoadTermList.3
+    - blib/man3/Combine::Matcher.3
+    - blib/man3/Combine::PosMatcher.3
+    - blib/man3/Combine::RobotRules.3
+    - blib/man3/Combine::SD_SQL.3
+    - blib/man3/Combine::XWI.3
+    - blib/man3/Combine::classifySVM.3
+    - blib/man3/Combine::selurl.3
+    - blib/man3/Combine::utilPlugIn.3
+    - blib/script/combine
+    - blib/script/combineCtrl
+    - blib/script/combineExport
+    - blib/script/combineINIT
+    - blib/script/combineRank
+    - blib/script/combineReClassify
+    - blib/script/combineRun
+    - blib/script/combineSVM
+    - blib/script/combineUtil
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Algorithm::SVMLight 0 not found.
+    Warning: prerequisite Config::General 0 not found.
+    Warning: prerequisite DBD::mysql 0 not found.
+    Warning: prerequisite DBI 0 not found.
+    Warning: prerequisite Geo::IP 0 not found.
+    Warning: prerequisite HTML::Entities 0 not found.
+    Warning: prerequisite HTML::Tidy 1.06 not found.
+    Warning: prerequisite HTML::TokeParser 0 not found.
+    Warning: prerequisite HTTP::Date 0 not found.
+    Warning: prerequisite HTTP::Request 0 not found.
+    Warning: prerequisite HTTP::Status 0 not found.
+    Warning: prerequisite Image::ExifTool 0 not found.
+    Warning: prerequisite LWP::UserAgent 0 not found.
+    Warning: prerequisite Lingua::Identify 0 not found.
+    Warning: prerequisite Lingua::Stem 0 not found.
+    Warning: prerequisite URI 0 not found.
+    Warning: prerequisite XML::LibXML 0 not found.
+    Warning: prerequisite XML::LibXSLT 0 not found.
+    Warning: prerequisite XML::Parser 0 not found.
+    Warning: prerequisite ZOOM 1.2 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Combine
+  build_output: |
+    cp Combine/UA.pm blib/lib/Combine/UA.pm
+    cp Combine/Check_record.pm blib/lib/Combine/Check_record.pm
+    cp Combine/RobotRules.pm blib/lib/Combine/RobotRules.pm
+    cp Combine/WP7Canonical.pm blib/lib/Combine/WP7Canonical.pm
+    cp Combine/Matcher.pm blib/lib/Combine/Matcher.pm
+    cp Combine/FromImage.pm blib/lib/Combine/FromImage.pm
+    cp Combine/CleanXML2CanDoc.pm blib/lib/Combine/CleanXML2CanDoc.pm
+    cp Combine/DataBase.pm blib/lib/Combine/DataBase.pm
+    cp Combine/XWI2XML.pm blib/lib/Combine/XWI2XML.pm
+    cp Combine/SD_SQL.pm blib/lib/Combine/SD_SQL.pm
+    cp Combine/LoadTermList.pm blib/lib/Combine/LoadTermList.pm
+    cp Combine/utilPlugIn.pm blib/lib/Combine/utilPlugIn.pm
+    cp Combine/HTMLExtractor.pm blib/lib/Combine/HTMLExtractor.pm
+    cp Combine/selurl.pm blib/lib/Combine/selurl.pm
+    cp Combine/FromHTML.pm blib/lib/Combine/FromHTML.pm
+    cp Combine/PosCheck_record.pm blib/lib/Combine/PosCheck_record.pm
+    cp Combine/XWI.pm blib/lib/Combine/XWI.pm
+    cp Combine/GraphAlgorithm.pm blib/lib/Combine/GraphAlgorithm.pm
+    cp Combine/classifySVM.pm blib/lib/Combine/classifySVM.pm
+    cp Combine/LogSQL.pm blib/lib/Combine/LogSQL.pm
+    cp Combine/PosMatcher.pm blib/lib/Combine/PosMatcher.pm
+    cp Combine/FromTeX.pm blib/lib/Combine/FromTeX.pm
+    cp Combine/MySQLhdb.pm blib/lib/Combine/MySQLhdb.pm
+    cp Combine/Config.pm blib/lib/Combine/Config.pm
+    cp Combine/Zebra.pm blib/lib/Combine/Zebra.pm
+    cp bin/combineRun blib/script/combineRun
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineRun
+    cp bin/combineCtrl blib/script/combineCtrl
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineCtrl
+    cp bin/combineUtil blib/script/combineUtil
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineUtil
+    cp bin/combineRank blib/script/combineRank
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineRank
+    cp bin/combineExport blib/script/combineExport
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineExport
+    cp bin/combineSVM blib/script/combineSVM
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineSVM
+    cp bin/combineINIT blib/script/combineINIT
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineINIT
+    cp bin/combine blib/script/combine
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combine
+    cp bin/combineReClassify blib/script/combineReClassify
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/combineReClassify
+    Manifying blib/man1/combineRun.1
+    Manifying blib/man1/combineCtrl.1
+    Manifying blib/man1/combineUtil.1
+    Manifying blib/man1/combineRank.1
+    Manifying blib/man1/combineExport.1
+    Manifying blib/man1/combineSVM.1
+    Manifying blib/man1/combineINIT.1
+    Manifying blib/man1/combine.1
+    Manifying blib/man1/combineReClassify.1
+    Manifying blib/man3/Combine::selurl.3
+    Manifying blib/man3/Combine::FromHTML.3
+    Manifying blib/man3/Combine::XWI.3
+    Manifying blib/man3/Combine::RobotRules.3
+    Manifying blib/man3/Combine::Matcher.3
+    Manifying blib/man3/Combine::classifySVM.3
+    Manifying blib/man3/Combine::PosMatcher.3
+    Manifying blib/man3/Combine::FromTeX.3
+    Manifying blib/man3/Combine::SD_SQL.3
+    Manifying blib/man3/Combine::LoadTermList.3
+    Manifying blib/man3/Combine::utilPlugIn.3
+    Manifying blib/man3/Combine::HTMLExtractor.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH/Combine-3.12-0/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH/Combine-3.12-0
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH/Combine-3.12-0/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH/Combine-3.12-0/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: AARDO
+  dist_basename: Combine-3.12-0.tar.gz
+  dist_date: 1227000828
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH/Combine-3.12-0
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH/Combine-3.12-0
+  dist_file: /home/brian/CPAN/authors/id/A/AA/AARDO/Combine-3.12-0.tar.gz
+  dist_md5: 07c73eed44ee1db8ad9298aaef6cb8fd
+  dist_size: 983393
+  manifest:
+    - AUTHORS
+    - Changes
+    - Combine/Check_record.pm
+    - Combine/CleanXML2CanDoc.pm
+    - Combine/Config.pm
+    - Combine/DataBase.pm
+    - Combine/FromHTML.pm
+    - Combine/FromImage.pm
+    - Combine/FromTeX.pm
+    - Combine/GraphAlgorithm.pm
+    - Combine/HTMLExtractor.pm
+    - Combine/LoadTermList.pm
+    - Combine/LogSQL.pm
+    - Combine/Matcher.pm
+    - Combine/MySQLhdb.pm
+    - Combine/PosCheck_record.pm
+    - Combine/PosMatcher.pm
+    - Combine/RobotRules.pm
+    - Combine/SD_SQL.pm
+    - Combine/UA.pm
+    - Combine/WP7Canonical.pm
+    - Combine/XWI.pm
+    - Combine/XWI2XML.pm
+    - Combine/Zebra.pm
+    - Combine/classifySVM.pm
+    - Combine/selurl.pm
+    - Combine/utilPlugIn.pm
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - PlugIns/MPCA/PosCheck_MPCA_record.pm
+    - PlugIns/MPCA/README
+    - PlugIns/MPCA/Saa.pm
+    - PlugIns/MPCA/Tana.pm
+    - PlugIns/MPCA/classifyMPCA.pm
+    - PlugIns/README
+    - README
+    - bin/combine
+    - bin/combineCtrl
+    - bin/combineExport
+    - bin/combineINIT
+    - bin/combineRank
+    - bin/combineReClassify
+    - bin/combineRun
+    - bin/combineSVM
+    - bin/combineUtil
+    - conf/SQLstruct.sql
+    - conf/Topic_carnivor.txt
+    - conf/Topic_materialscience.txt
+    - conf/Topic_searchengine.txt
+    - conf/combine2alvis.xsl
+    - conf/combine2dc.xsl
+    - conf/default.cfg
+    - conf/job_default.cfg
+    - conf/tidy.cfg
+    - doc/ClassificationEval.tex
+    - doc/Config.ps
+    - doc/ConfigVars.tex
+    - doc/Configuration.tex
+    - doc/CrawlerArchitecture.xfig.eps
+    - doc/CrawlerOperation.tex
+    - doc/CrawlerSpeed.ps
+    - doc/DepGraph.tex
+    - doc/DocMain.pdf
+    - doc/DocMain.tex
+    - doc/ExpectedPerformance.tex
+    - doc/FAQ.tex
+    - doc/FromHTML.tex
+    - doc/FromTeX.tex
+    - doc/HTML/DocMain.css
+    - doc/HTML/DocMain.html
+    - doc/HTML/DocMain0x.png
+    - doc/HTML/DocMain10.html
+    - doc/HTML/DocMain10x.png
+    - doc/HTML/DocMain11.html
+    - doc/HTML/DocMain11x.png
+    - doc/HTML/DocMain12.html
+    - doc/HTML/DocMain13.html
+    - doc/HTML/DocMain14.html
+    - doc/HTML/DocMain15.html
+    - doc/HTML/DocMain16.html
+    - doc/HTML/DocMain17.html
+    - doc/HTML/DocMain1x.png
+    - doc/HTML/DocMain20.html
+    - doc/HTML/DocMain21.html
+    - doc/HTML/DocMain22.html
+    - doc/HTML/DocMain23.html
+    - doc/HTML/DocMain24.html
+    - doc/HTML/DocMain25.html
+    - doc/HTML/DocMain26.html
+    - doc/HTML/DocMain27.html
+    - doc/HTML/DocMain28.html
+    - doc/HTML/DocMain29.html
+    - doc/HTML/DocMain2x.png
+    - doc/HTML/DocMain30.html
+    - doc/HTML/DocMain32.html
+    - doc/HTML/DocMain33.html
+    - doc/HTML/DocMain36.html
+    - doc/HTML/DocMain37.html
+    - doc/HTML/DocMain38.html
+    - doc/HTML/DocMain3x.png
+    - doc/HTML/DocMain4x.png
+    - doc/HTML/DocMain5.html
+    - doc/HTML/DocMain5x.png
+    - doc/HTML/DocMain6.html
+    - doc/HTML/DocMain6x.png
+    - doc/HTML/DocMain7.html
+    - doc/HTML/DocMain7x.png
+    - doc/HTML/DocMain8x.png
+    - doc/HTML/DocMain9.html
+    - doc/HTML/DocMain9x.png
+    - doc/HTML/DocMainli1.html
+    - doc/HTML/DocMainli2.html
+    - doc/HTML/DocMainpa1.html
+    - doc/HTML/DocMainpa2.html
+    - doc/HTML/DocMainpa3.html
+    - doc/HTML/DocMainse1.html
+    - doc/HTML/DocMainse10.html
+    - doc/HTML/DocMainse11.html
+    - doc/HTML/DocMainse2.html
+    - doc/HTML/DocMainse3.html
+    - doc/HTML/DocMainse4.html
+    - doc/HTML/DocMainse5.html
+    - doc/HTML/DocMainse6.html
+    - doc/HTML/DocMainse7.html
+    - doc/HTML/DocMainse8.html
+    - doc/HTML/DocMainse9.html
+    - doc/HTMLExtractor.tex
+    - doc/InstallationTest.pl
+    - doc/InstallationTest.tex
+    - doc/Intro.tex
+    - doc/LoadTermList.tex
+    - doc/Makefile
+    - doc/ManPages.tex
+    - doc/Matcher.tex
+    - doc/OpenSourceDistr.tex
+    - doc/PlugInTemplate.tex
+    - doc/PosMatcher.tex
+    - doc/RobotRules.tex
+    - doc/SD_SQL.tex
+    - doc/SQL.tex
+    - doc/SystemComponents.tex
+    - doc/TopicFilter.xfig.eps
+    - doc/XWI.tex
+    - doc/classifySVM.tex
+    - doc/combine.tex
+    - doc/combineCtrl.tex
+    - doc/combineExport.tex
+    - doc/combineRank.tex
+    - doc/combineReClassify.tex
+    - doc/combineRun.tex
+    - doc/combineSVM.tex
+    - doc/combineUtil.tex
+    - doc/crawl.ps
+    - doc/defaultConfig.tex
+    - doc/documentation.tex
+    - doc/extrSQLdoc.pl
+    - doc/focusedrobot.eps
+    - doc/genConfigDoc.pl
+    - doc/genDepGraph.pl
+    - doc/genInstTest.pl
+    - doc/genPlugInTemplate.pl
+    - doc/genPod2latex.pl
+    - doc/myalvis.bib
+    - doc/selurl.tex
+    - doc/utilPlugIn.tex
+    - t/00conf.t
+    - t/05MySQL.t
+    - t/10config.t
+    - t/14combineINIT.t
+    - t/15combineINIT.t
+    - t/16combineINIT.t
+    - t/20URLnormalization.t
+    - t/22URLvalidation.t
+    - t/30XWI.t
+    - t/40SD.t
+    - t/43SD.t
+    - t/50FromHTML.t
+    - t/60MySQLhdb.t
+    - t/70DataBase.t
+    - t/90Installationtest.t
+    - t/data/malaria.html
+    - t/data/malaria_xml.html
+    - t/defs.pm
+    - templates/LuceneIntegration/Lucene.pm
+    - templates/LuceneIntegration/LuceneIndexer.java
+    - templates/LuceneIntegration/README
+    - templates/classifyPlugInTemplate.pm
+    - templates/myAnalyse.pm
+  manifest_file_info:
+    - bytesize: 175
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d350169560e75d0cf9fc8e3574a3639
+      mtime: 1226999529
+      name: AUTHORS
+    - bytesize: 10936
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1227000540
+      name: Changes
+    - bytesize: 6779
+      file_mime_type: ~
+      line_count: ~
+      md5: abc055aa3206d0fcb947e3779a6f208f
+      mtime: 1226999529
+      name: Combine/Check_record.pm
+    - bytesize: 1683
+      file_mime_type: ~
+      line_count: ~
+      md5: 47a17498ca86d758e1b98a32ce68393b
+      mtime: 1226999529
+      name: Combine/CleanXML2CanDoc.pm
+    - bytesize: 7107
+      file_mime_type: ~
+      line_count: ~
+      md5: e419f9032ff0e36a9d583015e2a3f74a
+      mtime: 1226999529
+      name: Combine/Config.pm
+    - bytesize: 9644
+      file_mime_type: ~
+      line_count: ~
+      md5: b77a0c1c454a1cb051565934cfbeae08
+      mtime: 1226999529
+      name: Combine/DataBase.pm
+    - bytesize: 13778
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e9898aca4732dbf57746af9cd43a16d
+      mtime: 1226999529
+      name: Combine/FromHTML.pm
+    - bytesize: 2581
+      file_mime_type: ~
+      line_count: ~
+      md5: 0385c05b23a34d33cc4dec4e7385bd17
+      mtime: 1226999529
+      name: Combine/FromImage.pm
+    - bytesize: 5707
+      file_mime_type: ~
+      line_count: ~
+      md5: a7fc2b921426dbe71548597d6ef030a3
+      mtime: 1226999529
+      name: Combine/FromTeX.pm
+    - bytesize: 12301
+      file_mime_type: ~
+      line_count: ~
+      md5: 87c094c72d9299119a32f793c0f14501
+      mtime: 1226999529
+      name: Combine/GraphAlgorithm.pm
+    - bytesize: 10161
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f3fb4e65bc5ea8855e000284b3d715d
+      mtime: 1226999529
+      name: Combine/HTMLExtractor.pm
+    - bytesize: 7016
+      file_mime_type: ~
+      line_count: ~
+      md5: 2defc526fb68cc40a937271bae0dbccb
+      mtime: 1226999529
+      name: Combine/LoadTermList.pm
+    - bytesize: 2653
+      file_mime_type: ~
+      line_count: ~
+      md5: e3f2d40263e6e53c62ae39c15b016e26
+      mtime: 1226999529
+      name: Combine/LogSQL.pm
+    - bytesize: 10897
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c482b3ccd0a3ee4fbeac382ca5a4880
+      mtime: 1226999529
+      name: Combine/Matcher.pm
+    - bytesize: 12418
+      file_mime_type: ~
+      line_count: ~
+      md5: 44c0434cf787a383371a3ac86a4766d7
+      mtime: 1226999529
+      name: Combine/MySQLhdb.pm
+    - bytesize: 5428
+      file_mime_type: ~
+      line_count: ~
+      md5: 99ba435b44deef305410f5588371cf25
+      mtime: 1226999529
+      name: Combine/PosCheck_record.pm
+    - bytesize: 14317
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aa0abfd8be704dcbd4e5674486e4f8d
+      mtime: 1226999529
+      name: Combine/PosMatcher.pm
+    - bytesize: 7365
+      file_mime_type: ~
+      line_count: ~
+      md5: abcd5d743d22efd4187d2dd77e6352a3
+      mtime: 1226999529
+      name: Combine/RobotRules.pm
+    - bytesize: 17132
+      file_mime_type: ~
+      line_count: ~
+      md5: 478f3e23708f9cb98f6540f45de882b3
+      mtime: 1226999529
+      name: Combine/SD_SQL.pm
+    - bytesize: 6508
+      file_mime_type: ~
+      line_count: ~
+      md5: fa88c79e11578e67ae0453232e5ab2c3
+      mtime: 1226999529
+      name: Combine/UA.pm
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c4d8d273e74b28c11712bcaf2e89d6a9
+      mtime: 1226999529
+      name: Combine/WP7Canonical.pm
+    - bytesize: 11013
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ad03473e6e2807919a9836425fe7d8f
+      mtime: 1226999529
+      name: Combine/XWI.pm
+    - bytesize: 12368
+      file_mime_type: ~
+      line_count: ~
+      md5: 9648b61309205313a0876dfd3fe9a63c
+      mtime: 1226999529
+      name: Combine/XWI2XML.pm
+    - bytesize: 3818
+      file_mime_type: ~
+      line_count: ~
+      md5: f551fc5b036e677965f1cce42e70347a
+      mtime: 1226999529
+      name: Combine/Zebra.pm
+    - bytesize: 3572
+      file_mime_type: ~
+      line_count: ~
+      md5: df011532e4003e71752f0b44c23dc960
+      mtime: 1226999529
+      name: Combine/classifySVM.pm
+    - bytesize: 11147
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b8f4c7300f3aedb93fd7e3a36ad35cf
+      mtime: 1226999529
+      name: Combine/selurl.pm
+    - bytesize: 6471
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cb5c81e6f1a0b842888ebd6de6e53c1
+      mtime: 1226999529
+      name: Combine/utilPlugIn.pm
+    - bytesize: 18496
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1226999529
+      name: LICENSE
+    - bytesize: 4030
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1227000541
+      name: MANIFEST
+    - bytesize: 1273
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1227000541
+      name: META.yml
+    - bytesize: 1410
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1226999529
+      name: Makefile.PL
+    - bytesize: 7043
+      file_mime_type: ~
+      line_count: ~
+      md5: 81bc3a387dc0379da9a088cb02ed1451
+      mtime: 1226999528
+      name: PlugIns/MPCA/PosCheck_MPCA_record.pm
+    - bytesize: 699
+      file_mime_type: ~
+      line_count: ~
+      md5: dd2b8209fa92aed18ba01ac0f4de7bec
+      mtime: 1226999528
+      name: PlugIns/MPCA/README
+    - bytesize: 14981
+      file_mime_type: ~
+      line_count: ~
+      md5: eda3e59edc20cedd025df24ca5442281
+      mtime: 1226999528
+      name: PlugIns/MPCA/Saa.pm
+    - bytesize: 7906
+      file_mime_type: ~
+      line_count: ~
+      md5: a4f4887ac9235d2f6f0ce1b7b2cd6db5
+      mtime: 1226999528
+      name: PlugIns/MPCA/Tana.pm
+    - bytesize: 3411
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d34ad45474f3b9a0a42fd16df03d0af
+      mtime: 1226999528
+      name: PlugIns/MPCA/classifyMPCA.pm
+    - bytesize: 611
+      file_mime_type: ~
+      line_count: ~
+      md5: d739fd7040954ad26893cefe4975e20e
+      mtime: 1226999528
+      name: PlugIns/README
+    - bytesize: 1313
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1226999529
+      name: README
+    - bytesize: 12957
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cf6c95d60dc5fa8f376e80848e32cb4
+      mtime: 1226999529
+      name: bin/combine
+    - bytesize: 6675
+      file_mime_type: ~
+      line_count: ~
+      md5: 28e848cc1afd32cb8dc01f775eebef2a
+      mtime: 1226999528
+      name: bin/combineCtrl
+    - bytesize: 11114
+      file_mime_type: ~
+      line_count: ~
+      md5: c0c92f476b60b996d0fb3fcde197db1d
+      mtime: 1226999529
+      name: bin/combineExport
+    - bytesize: 15766
+      file_mime_type: ~
+      line_count: ~
+      md5: fbdf361573078dea07cd057608a1cbba
+      mtime: 1226999528
+      name: bin/combineINIT
+    - bytesize: 10870
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bc491e9f7f0408cd53eb1a0db78f2c7
+      mtime: 1226999528
+      name: bin/combineRank
+    - bytesize: 2923
+      file_mime_type: ~
+      line_count: ~
+      md5: b588852fe719eb2123a1afed8c53c77b
+      mtime: 1226999528
+      name: bin/combineReClassify
+    - bytesize: 1149
+      file_mime_type: ~
+      line_count: ~
+      md5: b7c284673c20182c2211375ce9d29665
+      mtime: 1226999528
+      name: bin/combineRun
+    - bytesize: 4327
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fb09a0006192691b9d10721f1d39896
+      mtime: 1226999528
+      name: bin/combineSVM
+    - bytesize: 31220
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c42d359a4b82b80ef62889cf00f075c
+      mtime: 1226999529
+      name: bin/combineUtil
+    - bytesize: 7282
+      file_mime_type: ~
+      line_count: ~
+      md5: 51b6a6936e3bed172e04a791c02e61a7
+      mtime: 1226999547
+      name: conf/SQLstruct.sql
+    - bytesize: 60445
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f34e1ace2b0cc1c48052eee932f963e
+      mtime: 1226999528
+      name: conf/Topic_carnivor.txt
+    - bytesize: 203997
+      file_mime_type: ~
+      line_count: ~
+      md5: d1da8a37eb15aaa40e7c65f2926ff56b
+      mtime: 1226999528
+      name: conf/Topic_materialscience.txt
+    - bytesize: 504
+      file_mime_type: ~
+      line_count: ~
+      md5: ea6cfe5646587d6e994fdb0672b30d26
+      mtime: 1226999528
+      name: conf/Topic_searchengine.txt
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e13c58d1937a3699a43fb899d51442a
+      mtime: 1226999528
+      name: conf/combine2alvis.xsl
+    - bytesize: 1998
+      file_mime_type: ~
+      line_count: ~
+      md5: 16159862244dbbf516d0e3a33e9090b1
+      mtime: 1226999528
+      name: conf/combine2dc.xsl
+    - bytesize: 5172
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e4d2f0e35deb77102c13651c47667e8
+      mtime: 1226999528
+      name: conf/default.cfg
+    - bytesize: 2530
+      file_mime_type: ~
+      line_count: ~
+      md5: 79831c6a58aa295200950ccebc9fc316
+      mtime: 1226999528
+      name: conf/job_default.cfg
+    - bytesize: 698
+      file_mime_type: ~
+      line_count: ~
+      md5: f4d3077cd0b7c0a68f5ac2178bd031a0
+      mtime: 1226999528
+      name: conf/tidy.cfg
+    - bytesize: 28781
+      file_mime_type: ~
+      line_count: ~
+      md5: 3270477f2b02a6de51f9854c89dbda8d
+      mtime: 1226999528
+      name: doc/ClassificationEval.tex
+    - bytesize: 20942
+      file_mime_type: ~
+      line_count: ~
+      md5: b50681d335582842c68b42a848a8dd3b
+      mtime: 1226999528
+      name: doc/Config.ps
+    - bytesize: 12842
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e9e4f58f70caafcc4f130a40a67365e
+      mtime: 1226999530
+      name: doc/ConfigVars.tex
+    - bytesize: 4228
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a9060f0e52f9274bb92dfcc50fb7d44
+      mtime: 1226999528
+      name: doc/Configuration.tex
+    - bytesize: 18502
+      file_mime_type: ~
+      line_count: ~
+      md5: ad1874a2b404c0c35dfae4efedc5e324
+      mtime: 1226999528
+      name: doc/CrawlerArchitecture.xfig.eps
+    - bytesize: 27372
+      file_mime_type: ~
+      line_count: ~
+      md5: f58f2f7821c6a03ae7b8a2578d54d7a6
+      mtime: 1226999528
+      name: doc/CrawlerOperation.tex
+    - bytesize: 81310
+      file_mime_type: ~
+      line_count: ~
+      md5: cb35fa3aa158e345e0bb1998529f5aff
+      mtime: 1226999528
+      name: doc/CrawlerSpeed.ps
+    - bytesize: 14343
+      file_mime_type: ~
+      line_count: ~
+      md5: 89578643bc2c6acfeb370d924ee8b6fd
+      mtime: 1226999531
+      name: doc/DepGraph.tex
+    - bytesize: 510181
+      file_mime_type: ~
+      line_count: ~
+      md5: 87c46b3a17139937bbe257872a015ba8
+      mtime: 1226999552
+      name: doc/DocMain.pdf
+    - bytesize: 783
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c8397a74d4181e24169eef3fed6a8a5
+      mtime: 1226999528
+      name: doc/DocMain.tex
+    - bytesize: 5851
+      file_mime_type: ~
+      line_count: ~
+      md5: 22e1b190eabc5ed5c8e3726b7481e361
+      mtime: 1226999528
+      name: doc/ExpectedPerformance.tex
+    - bytesize: 9720
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c8f4a2367bf3b994de14e61450d4304
+      mtime: 1226999528
+      name: doc/FAQ.tex
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: 01976b66481a5b097b2281527bdce411
+      mtime: 1226999538
+      name: doc/FromHTML.tex
+    - bytesize: 199
+      file_mime_type: ~
+      line_count: ~
+      md5: 31a7bdc2967955b5d30b638756c4c1eb
+      mtime: 1226999537
+      name: doc/FromTeX.tex
+    - bytesize: 7856
+      file_mime_type: ~
+      line_count: ~
+      md5: 4abef3c7632005543a94c0e927524dcc
+      mtime: 1226999589
+      name: doc/HTML/DocMain.css
+    - bytesize: 8351
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d28bea31df864c4e2e85d9343ac216f
+      mtime: 1226999579
+      name: doc/HTML/DocMain.html
+    - bytesize: 11520
+      file_mime_type: ~
+      line_count: ~
+      md5: a0539f7a35a484df7ba3c561bebe3dc4
+      mtime: 1226999580
+      name: doc/HTML/DocMain0x.png
+    - bytesize: 872
+      file_mime_type: ~
+      line_count: ~
+      md5: 39fd0296f140c97b1e4968eb398c4c5d
+      mtime: 1226999579
+      name: doc/HTML/DocMain10.html
+    - bytesize: 13088
+      file_mime_type: ~
+      line_count: ~
+      md5: ac3e0548b682c70a57c90d1adfcced04
+      mtime: 1226999583
+      name: doc/HTML/DocMain10x.png
+    - bytesize: 842
+      file_mime_type: ~
+      line_count: ~
+      md5: 39fbd4b0b340b201d880bcf0fa7bb64f
+      mtime: 1226999579
+      name: doc/HTML/DocMain11.html
+    - bytesize: 57816
+      file_mime_type: ~
+      line_count: ~
+      md5: aeee7657decafd4b673519e4251c3ee2
+      mtime: 1226999589
+      name: doc/HTML/DocMain11x.png
+    - bytesize: 876
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cc52df2417b6de88288382310f96982
+      mtime: 1226999579
+      name: doc/HTML/DocMain12.html
+    - bytesize: 830
+      file_mime_type: ~
+      line_count: ~
+      md5: 62d12a78149a21a00f324acff7d95447
+      mtime: 1226999579
+      name: doc/HTML/DocMain13.html
+    - bytesize: 831
+      file_mime_type: ~
+      line_count: ~
+      md5: 4096c223bf5ce4495c824d7a1fe8dc71
+      mtime: 1226999579
+      name: doc/HTML/DocMain14.html
+    - bytesize: 829
+      file_mime_type: ~
+      line_count: ~
+      md5: 13211bcc057b696cc8089b2e67191a16
+      mtime: 1226999579
+      name: doc/HTML/DocMain15.html
+    - bytesize: 849
+      file_mime_type: ~
+      line_count: ~
+      md5: e76aa1026248e6709cade25f334d70ae
+      mtime: 1226999579
+      name: doc/HTML/DocMain16.html
+    - bytesize: 853
+      file_mime_type: ~
+      line_count: ~
+      md5: d6f10bbd919821e04bc5e3edbe3efc9a
+      mtime: 1226999579
+      name: doc/HTML/DocMain17.html
+    - bytesize: 23650
+      file_mime_type: ~
+      line_count: ~
+      md5: 934bd4b6103f8c82b045834f4b2fd8bc
+      mtime: 1226999581
+      name: doc/HTML/DocMain1x.png
+    - bytesize: 852
+      file_mime_type: ~
+      line_count: ~
+      md5: 04c4653d7961093780c874533a7a2bc3
+      mtime: 1226999579
+      name: doc/HTML/DocMain20.html
+    - bytesize: 835
+      file_mime_type: ~
+      line_count: ~
+      md5: 64ed27244db4b68a719e25f34b2c1799
+      mtime: 1226999579
+      name: doc/HTML/DocMain21.html
+    - bytesize: 840
+      file_mime_type: ~
+      line_count: ~
+      md5: 4056c8d4cbc286c6c269fdfeb11c570e
+      mtime: 1226999579
+      name: doc/HTML/DocMain22.html
+    - bytesize: 832
+      file_mime_type: ~
+      line_count: ~
+      md5: aebda2acea76e7abcecc075c9693bb12
+      mtime: 1226999579
+      name: doc/HTML/DocMain23.html
+    - bytesize: 843
+      file_mime_type: ~
+      line_count: ~
+      md5: 27d2500b01f9a80b3b758c60b3fd1208
+      mtime: 1226999579
+      name: doc/HTML/DocMain24.html
+    - bytesize: 881
+      file_mime_type: ~
+      line_count: ~
+      md5: 88f5a86448e0f0eaf7fde5ebe11c8c58
+      mtime: 1226999579
+      name: doc/HTML/DocMain25.html
+    - bytesize: 891
+      file_mime_type: ~
+      line_count: ~
+      md5: 884643bc60914b4400c7fdd426c2445e
+      mtime: 1226999579
+      name: doc/HTML/DocMain26.html
+    - bytesize: 896
+      file_mime_type: ~
+      line_count: ~
+      md5: 73b4b42d06235e083cdca6223224bd3b
+      mtime: 1226999579
+      name: doc/HTML/DocMain27.html
+    - bytesize: 828
+      file_mime_type: ~
+      line_count: ~
+      md5: 898b5cd3f892deb6e311f713c329f1bd
+      mtime: 1226999579
+      name: doc/HTML/DocMain28.html
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f869e2895556b52d21071a47fea6e1a
+      mtime: 1226999579
+      name: doc/HTML/DocMain29.html
+    - bytesize: 17832
+      file_mime_type: ~
+      line_count: ~
+      md5: 51dfc7c22537b086e032d04d9410c6b3
+      mtime: 1226999581
+      name: doc/HTML/DocMain2x.png
+    - bytesize: 844
+      file_mime_type: ~
+      line_count: ~
+      md5: fa53c858801953f33cbc662bce45651b
+      mtime: 1226999579
+      name: doc/HTML/DocMain30.html
+    - bytesize: 820
+      file_mime_type: ~
+      line_count: ~
+      md5: bf624b02a47b0570ab814ecfb7399d98
+      mtime: 1226999579
+      name: doc/HTML/DocMain32.html
+    - bytesize: 833
+      file_mime_type: ~
+      line_count: ~
+      md5: bc81396420e63c4bcf368067ea0204c3
+      mtime: 1226999579
+      name: doc/HTML/DocMain33.html
+    - bytesize: 878
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a266885bd4b2f4778cb0fed77ceaeb2
+      mtime: 1226999579
+      name: doc/HTML/DocMain36.html
+    - bytesize: 834
+      file_mime_type: ~
+      line_count: ~
+      md5: 0454ee5aab6e14155553cb653caeb3ab
+      mtime: 1226999579
+      name: doc/HTML/DocMain37.html
+    - bytesize: 843
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a719c095b5f751091c711bb3b48210
+      mtime: 1226999579
+      name: doc/HTML/DocMain38.html
+    - bytesize: 112
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bc5b47aef1d421ed180b89735393b7b
+      mtime: 1226999581
+      name: doc/HTML/DocMain3x.png
+    - bytesize: 112
+      file_mime_type: ~
+      line_count: ~
+      md5: fd8ac09ada453fcd6e05e1e41ace2762
+      mtime: 1226999581
+      name: doc/HTML/DocMain4x.png
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: 95138cf42b9c6eb9fe5f7b5f90f35814
+      mtime: 1226999579
+      name: doc/HTML/DocMain5.html
+    - bytesize: 1044
+      file_mime_type: ~
+      line_count: ~
+      md5: bab7c382deba5e74a08da4f9a42b4c74
+      mtime: 1226999581
+      name: doc/HTML/DocMain5x.png
+    - bytesize: 828
+      file_mime_type: ~
+      line_count: ~
+      md5: 6663e0e6263cf6a27cbca95516fa8105
+      mtime: 1226999579
+      name: doc/HTML/DocMain6.html
+    - bytesize: 5452
+      file_mime_type: ~
+      line_count: ~
+      md5: 17d07450f9f08f6a7d754b8bd0c985c1
+      mtime: 1226999581
+      name: doc/HTML/DocMain6x.png
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f86337ad124581eb88afab40a36fe30
+      mtime: 1226999579
+      name: doc/HTML/DocMain7.html
+    - bytesize: 1044
+      file_mime_type: ~
+      line_count: ~
+      md5: f662498232faaaa3096a55f84e951862
+      mtime: 1226999581
+      name: doc/HTML/DocMain7x.png
+    - bytesize: 6844
+      file_mime_type: ~
+      line_count: ~
+      md5: b237ff8d026fdc084fad5d30acf5e435
+      mtime: 1226999581
+      name: doc/HTML/DocMain8x.png
+    - bytesize: 820
+      file_mime_type: ~
+      line_count: ~
+      md5: e5f42a0820b8d0df5c31943a3e497849
+      mtime: 1226999579
+      name: doc/HTML/DocMain9.html
+    - bytesize: 15405
+      file_mime_type: ~
+      line_count: ~
+      md5: 31a25c459437676983d26b5f9513b311
+      mtime: 1226999582
+      name: doc/HTML/DocMain9x.png
+    - bytesize: 33160
+      file_mime_type: ~
+      line_count: ~
+      md5: 28210b5e4d897626d7d468aed17b26b0
+      mtime: 1226999579
+      name: doc/HTML/DocMainli1.html
+    - bytesize: 9626
+      file_mime_type: ~
+      line_count: ~
+      md5: 2401a8c240a0a6e80a4d90f2f0d03622
+      mtime: 1226999579
+      name: doc/HTML/DocMainli2.html
+    - bytesize: 5743
+      file_mime_type: ~
+      line_count: ~
+      md5: cfa37428bc853f897652ecc12e96676a
+      mtime: 1226999579
+      name: doc/HTML/DocMainpa1.html
+    - bytesize: 2297
+      file_mime_type: ~
+      line_count: ~
+      md5: 15b0fa515db5cb6ff5b17dd98b934768
+      mtime: 1226999579
+      name: doc/HTML/DocMainpa2.html
+    - bytesize: 2038
+      file_mime_type: ~
+      line_count: ~
+      md5: ae7f15ba4613cc6c02e67e6276c63e45
+      mtime: 1226999579
+      name: doc/HTML/DocMainpa3.html
+    - bytesize: 6599
+      file_mime_type: ~
+      line_count: ~
+      md5: 38e665b0e3a0ac7ddc3765518e55584b
+      mtime: 1226999579
+      name: doc/HTML/DocMainse1.html
+    - bytesize: 36601
+      file_mime_type: ~
+      line_count: ~
+      md5: 4aab847251dc5b837f3e9cb54c3534de
+      mtime: 1226999579
+      name: doc/HTML/DocMainse10.html
+    - bytesize: 144219
+      file_mime_type: ~
+      line_count: ~
+      md5: b90e5672dac89cb50c9f1dcd7a3f6cd7
+      mtime: 1226999579
+      name: doc/HTML/DocMainse11.html
+    - bytesize: 32289
+      file_mime_type: ~
+      line_count: ~
+      md5: b311a612f2a2c4df5efeee2f5f0c8bc6
+      mtime: 1226999579
+      name: doc/HTML/DocMainse2.html
+    - bytesize: 8695
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fb00d3ab92ce1857e5d9dfd046171b9
+      mtime: 1226999579
+      name: doc/HTML/DocMainse3.html
+    - bytesize: 46451
+      file_mime_type: ~
+      line_count: ~
+      md5: 31ddb2d30d9d91ca48be7e5d903729d3
+      mtime: 1226999579
+      name: doc/HTML/DocMainse4.html
+    - bytesize: 38363
+      file_mime_type: ~
+      line_count: ~
+      md5: e22a3011f50cb290fe0e5771bacb3309
+      mtime: 1226999579
+      name: doc/HTML/DocMainse5.html
+    - bytesize: 13110
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e1c43e7261edfa0b2dd68cea591ed40
+      mtime: 1226999579
+      name: doc/HTML/DocMainse6.html
+    - bytesize: 7390
+      file_mime_type: ~
+      line_count: ~
+      md5: ecb6f900b1ae206b75385b1fca2ee5a4
+      mtime: 1226999579
+      name: doc/HTML/DocMainse7.html
+    - bytesize: 21261
+      file_mime_type: ~
+      line_count: ~
+      md5: a888a3cd490325008ba4b762ca373964
+      mtime: 1226999579
+      name: doc/HTML/DocMainse8.html
+    - bytesize: 31517
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e4ca6eef3e3f05269ca39459cbd2631
+      mtime: 1226999579
+      name: doc/HTML/DocMainse9.html
+    - bytesize: 596
+      file_mime_type: ~
+      line_count: ~
+      md5: 535e2f4f82217f6a942354e0fd2a08dd
+      mtime: 1226999537
+      name: doc/HTMLExtractor.tex
+    - bytesize: 3965
+      file_mime_type: ~
+      line_count: ~
+      md5: 4375ffa93d3d2a5688f5e3caf2cb3501
+      mtime: 1226999528
+      name: doc/InstallationTest.pl
+    - bytesize: 4436
+      file_mime_type: ~
+      line_count: ~
+      md5: 24c6104d0fc1659f9885985e13f71dae
+      mtime: 1226999547
+      name: doc/InstallationTest.tex
+    - bytesize: 3704
+      file_mime_type: ~
+      line_count: ~
+      md5: b8daa16a4d8e041224b85474ea0071c0
+      mtime: 1226999528
+      name: doc/Intro.tex
+    - bytesize: 1626
+      file_mime_type: ~
+      line_count: ~
+      md5: 6dca68326c9d8d991b8c96c10d3e424b
+      mtime: 1226999537
+      name: doc/LoadTermList.tex
+    - bytesize: 1874
+      file_mime_type: ~
+      line_count: ~
+      md5: f3644bba251750c9ec4a2361d6cc59eb
+      mtime: 1226999528
+      name: doc/Makefile
+    - bytesize: 1415
+      file_mime_type: ~
+      line_count: ~
+      md5: ba39c5485a48778b5a11bd5cf95df715
+      mtime: 1226999539
+      name: doc/ManPages.tex
+    - bytesize: 2272
+      file_mime_type: ~
+      line_count: ~
+      md5: a7fae7143049e20d252109b75bd597a3
+      mtime: 1226999536
+      name: doc/Matcher.tex
+    - bytesize: 14644
+      file_mime_type: ~
+      line_count: ~
+      md5: 263107957d3669961eb16354fc819f41
+      mtime: 1226999528
+      name: doc/OpenSourceDistr.tex
+    - bytesize: 2543
+      file_mime_type: ~
+      line_count: ~
+      md5: 35e9203c6783fd3f7442d0e1ff155a82
+      mtime: 1226999547
+      name: doc/PlugInTemplate.tex
+    - bytesize: 2424
+      file_mime_type: ~
+      line_count: ~
+      md5: 970c511ced4bc01757b9a4c907ac7533
+      mtime: 1226999539
+      name: doc/PosMatcher.tex
+    - bytesize: 143
+      file_mime_type: ~
+      line_count: ~
+      md5: 5da4c6527b4442fc9e3439ee73bc9f99
+      mtime: 1226999536
+      name: doc/RobotRules.tex
+    - bytesize: 3199
+      file_mime_type: ~
+      line_count: ~
+      md5: 7850e84ef57bb638deb85a3a36fdae1a
+      mtime: 1226999537
+      name: doc/SD_SQL.tex
+    - bytesize: 8424
+      file_mime_type: ~
+      line_count: ~
+      md5: 335de2579e0cbb39c6b40e90040b7611
+      mtime: 1226999547
+      name: doc/SQL.tex
+    - bytesize: 3615
+      file_mime_type: ~
+      line_count: ~
+      md5: 4984b1a95b9d47da017fa98bf75477f6
+      mtime: 1226999528
+      name: doc/SystemComponents.tex
+    - bytesize: 9166
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e8add73beef7cb6e78ec5e6cdf8adf3
+      mtime: 1226999528
+      name: doc/TopicFilter.xfig.eps
+    - bytesize: 5006
+      file_mime_type: ~
+      line_count: ~
+      md5: e8e351853dabdfbcbe7b6347d1380f7f
+      mtime: 1226999538
+      name: doc/XWI.tex
+    - bytesize: 833
+      file_mime_type: ~
+      line_count: ~
+      md5: d35ccc658a95f708c59232ba68cc5d52
+      mtime: 1226999538
+      name: doc/classifySVM.tex
+    - bytesize: 2542
+      file_mime_type: ~
+      line_count: ~
+      md5: d1432e42b7f09623bef3f801fa1d6a2b
+      mtime: 1226999531
+      name: doc/combine.tex
+    - bytesize: 4110
+      file_mime_type: ~
+      line_count: ~
+      md5: a36be02317dd4b954d874b5eeb29ab4c
+      mtime: 1226999531
+      name: doc/combineCtrl.tex
+    - bytesize: 3884
+      file_mime_type: ~
+      line_count: ~
+      md5: f3281f064fdec5b06a5365925d423940
+      mtime: 1226999531
+      name: doc/combineExport.tex
+    - bytesize: 2760
+      file_mime_type: ~
+      line_count: ~
+      md5: c2f560986cabfeb97dc3ec7d864a5128
+      mtime: 1226999531
+      name: doc/combineRank.tex
+    - bytesize: 348
+      file_mime_type: ~
+      line_count: ~
+      md5: 36ebd18bb95fff13ea2c3c2fe9c24190
+      mtime: 1226999532
+      name: doc/combineReClassify.tex
+    - bytesize: 1094
+      file_mime_type: ~
+      line_count: ~
+      md5: e2e15fa55f0dbcaf9acd496491271c0a
+      mtime: 1226999532
+      name: doc/combineRun.tex
+    - bytesize: 1721
+      file_mime_type: ~
+      line_count: ~
+      md5: b6966843c52bfd10c2c441d8a1e50ba3
+      mtime: 1226999532
+      name: doc/combineSVM.tex
+    - bytesize: 3740
+      file_mime_type: ~
+      line_count: ~
+      md5: d99eb01ef664f6c0083a482ea4d74ab1
+      mtime: 1226999531
+      name: doc/combineUtil.tex
+    - bytesize: 4420496
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e4ea2e67848d8416c8a00933aa54dec
+      mtime: 1226999528
+      name: doc/crawl.ps
+    - bytesize: 7880
+      file_mime_type: ~
+      line_count: ~
+      md5: d64df143132039445c80c4526c878f08
+      mtime: 1226999530
+      name: doc/defaultConfig.tex
+    - bytesize: 216
+      file_mime_type: ~
+      line_count: ~
+      md5: 49c3493d5463d4a18caeb7870f330cd7
+      mtime: 1226999528
+      name: doc/documentation.tex
+    - bytesize: 1026
+      file_mime_type: ~
+      line_count: ~
+      md5: 9555ff1dcc0e0d3fe38436ff71e58005
+      mtime: 1226999528
+      name: doc/extrSQLdoc.pl
+    - bytesize: 9325
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b915f6dc081036cce9260551925bc34
+      mtime: 1226999528
+      name: doc/focusedrobot.eps
+    - bytesize: 4487
+      file_mime_type: ~
+      line_count: ~
+      md5: b7381c998061bdf8e59aa7ad706b336a
+      mtime: 1226999528
+      name: doc/genConfigDoc.pl
+    - bytesize: 2336
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cae9c8ad0d8b821c6cbb5a77abc8ac6
+      mtime: 1226999528
+      name: doc/genDepGraph.pl
+    - bytesize: 614
+      file_mime_type: ~
+      line_count: ~
+      md5: b0da94b5acb7467b94bb650b4a6bcdda
+      mtime: 1226999528
+      name: doc/genInstTest.pl
+    - bytesize: 381
+      file_mime_type: ~
+      line_count: ~
+      md5: 053bfe7f27d31bc26c8c6168c1842db3
+      mtime: 1226999528
+      name: doc/genPlugInTemplate.pl
+    - bytesize: 784
+      file_mime_type: ~
+      line_count: ~
+      md5: e2e775effad2bde61ecee01254e5a755
+      mtime: 1226999528
+      name: doc/genPod2latex.pl
+    - bytesize: 13276
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e972d6e01bfa95f4d57b21ba6e8145b
+      mtime: 1226999528
+      name: doc/myalvis.bib
+    - bytesize: 1954
+      file_mime_type: ~
+      line_count: ~
+      md5: 201c0a74cd6925b14d2f17b2ad03ee36
+      mtime: 1226999539
+      name: doc/selurl.tex
+    - bytesize: 790
+      file_mime_type: ~
+      line_count: ~
+      md5: 06c3368885615f80cde924b2ad0d6163
+      mtime: 1226999537
+      name: doc/utilPlugIn.tex
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: 794db047953989d1b4193d82ebccea7d
+      mtime: 1226999528
+      name: t/00conf.t
+    - bytesize: 1417
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a9ae0075516c360e97b895a49b5e8f4
+      mtime: 1226999528
+      name: t/05MySQL.t
+    - bytesize: 503
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e134d9d677fea6ae44f72af5c8392c
+      mtime: 1226999528
+      name: t/10config.t
+    - bytesize: 643
+      file_mime_type: ~
+      line_count: ~
+      md5: a9b9cef8f1dd700df5667b8feaad37ff
+      mtime: 1226999528
+      name: t/14combineINIT.t
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: 57f62ba3382e8f173a3a4fb392e57b7f
+      mtime: 1226999528
+      name: t/15combineINIT.t
+    - bytesize: 460
+      file_mime_type: ~
+      line_count: ~
+      md5: d698de4da582240aec898f2309feb0e6
+      mtime: 1226999528
+      name: t/16combineINIT.t
+    - bytesize: 5018
+      file_mime_type: ~
+      line_count: ~
+      md5: 33f79f7d5bbd384ecf5c94e2b827323d
+      mtime: 1226999528
+      name: t/20URLnormalization.t
+    - bytesize: 2141
+      file_mime_type: ~
+      line_count: ~
+      md5: f1c7c7b783814ca60ef1a5b33eed486c
+      mtime: 1226999528
+      name: t/22URLvalidation.t
+    - bytesize: 2909
+      file_mime_type: ~
+      line_count: ~
+      md5: b0e3cb5ebb7347e7707d22c97887f8a1
+      mtime: 1226999528
+      name: t/30XWI.t
+    - bytesize: 1356
+      file_mime_type: ~
+      line_count: ~
+      md5: cb33dba85805031a321b15d1eb845776
+      mtime: 1226999528
+      name: t/40SD.t
+    - bytesize: 1499
+      file_mime_type: ~
+      line_count: ~
+      md5: df5ec99712f8399565e510f58319a0b1
+      mtime: 1226999528
+      name: t/43SD.t
+    - bytesize: 11481
+      file_mime_type: ~
+      line_count: ~
+      md5: 0942cc4722948c2e628ada172709e622
+      mtime: 1226999528
+      name: t/50FromHTML.t
+    - bytesize: 4060
+      file_mime_type: ~
+      line_count: ~
+      md5: a3e238e110bc84d9d9498c2783b3d5e5
+      mtime: 1226999528
+      name: t/60MySQLhdb.t
+    - bytesize: 5549
+      file_mime_type: ~
+      line_count: ~
+      md5: 48877ce7106972912cdc88833cd382d0
+      mtime: 1226999528
+      name: t/70DataBase.t
+    - bytesize: 4110
+      file_mime_type: ~
+      line_count: ~
+      md5: 71a04b0af8db19bfcd993f664a1ecbf2
+      mtime: 1226999528
+      name: t/90Installationtest.t
+    - bytesize: 2248
+      file_mime_type: ~
+      line_count: ~
+      md5: c8b59afec8c6b39b5ad9e8aa6dd2d94b
+      mtime: 1226999528
+      name: t/data/malaria.html
+    - bytesize: 2483
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f613f24e2ccea6018f238355a1b96a4
+      mtime: 1226999528
+      name: t/data/malaria_xml.html
+    - bytesize: 25
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b7b4505910a7786561dffe469d8f194
+      mtime: 1226999528
+      name: t/defs.pm
+    - bytesize: 2888
+      file_mime_type: ~
+      line_count: ~
+      md5: b3e3f323c9b93e6ecc731c4da652a8ee
+      mtime: 1226999529
+      name: templates/LuceneIntegration/Lucene.pm
+    - bytesize: 1955
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ddfb61568e4254764b86de6a0774ed7
+      mtime: 1226999529
+      name: templates/LuceneIntegration/LuceneIndexer.java
+    - bytesize: 644
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e4dc92fc0057e3fcee719d89396bba0
+      mtime: 1226999529
+      name: templates/LuceneIntegration/README
+    - bytesize: 2321
+      file_mime_type: ~
+      line_count: ~
+      md5: 78a72beb72e6b552037c8189f6094102
+      mtime: 1226999529
+      name: templates/classifyPlugInTemplate.pm
+    - bytesize: 469
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e5722076b9cac08f689edc574578ca5
+      mtime: 1226999529
+      name: templates/myAnalyse.pm
+  module_info:
+    - bytesize: 6779
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b7d101c8629585f7a296f4ca064b72e
+      module_name_from_file_guess: Combine::Check_record
+      mtime: 1226999529
+      name: blib/lib/Combine/Check_record.pm
+      packages:
+        - Combine::Check_record
+      primary_package: Combine::Check_record
+      uses:
+        - strict
+        - Combine::XWI
+        - Combine::LoadTermList
+        - Combine::utilPlugIn
+        - Combine::Matcher
+        - Combine::Config
+      version_info:
+        filename: blib/lib/Combine/Check_record.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1683
+      file_mime_type: ~
+      line_count: ~
+      md5: 65b2db23a0448cd9cf33e84f6fb47f5d
+      module_name_from_file_guess: Combine::CleanXML2CanDoc
+      mtime: 1226999529
+      name: blib/lib/Combine/CleanXML2CanDoc.pm
+      packages:
+        - Combine::CleanXML2CanDoc
+      primary_package: Combine::CleanXML2CanDoc
+      uses: []
+      version_info:
+        filename: blib/lib/Combine/CleanXML2CanDoc.pm
+        identifier: VERSION
+        line_number: 3
+        sigil: $
+        value: 0.1
+    - bytesize: 7107
+      file_mime_type: ~
+      line_count: ~
+      md5: 52653b9c0f07a2001cfa4390cd7c351b
+      module_name_from_file_guess: Combine::Config
+      mtime: 1226999529
+      name: blib/lib/Combine/Config.pm
+      packages:
+        - Combine::Config
+      primary_package: Combine::Config
+      uses:
+        - strict
+        - Config::General
+        - DBI
+      version_info:
+        filename: blib/lib/Combine/Config.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 3.12-0
+    - bytesize: 9644
+      file_mime_type: ~
+      line_count: ~
+      md5: 02764261d3cbc8e6531601ee749fbe6c
+      module_name_from_file_guess: Combine::DataBase
+      mtime: 1226999529
+      name: blib/lib/Combine/DataBase.pm
+      packages:
+        - Combine::DataBase
+      primary_package: Combine::DataBase
+      uses:
+        - strict
+        - Combine::MySQLhdb
+        - Digest::MD5
+        - Encode
+        - Combine::selurl
+      version_info:
+        filename: blib/lib/Combine/DataBase.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13778
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e0c9cb89af65c82d51fed0d2f471ead
+      module_name_from_file_guess: Combine::FromHTML
+      mtime: 1226999529
+      name: blib/lib/Combine/FromHTML.pm
+      packages:
+        - Combine::FromHTML
+      primary_package: Combine::FromHTML
+      uses:
+        - strict
+        - Combine::Config
+        - HTTP::Date
+        - URI
+        - URI::Escape
+        - HTML::Entities
+        - Encode
+        - HTML::Tidy
+        - Combine::HTMLExtractor
+      version_info:
+        filename: blib/lib/Combine/FromHTML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2581
+      file_mime_type: ~
+      line_count: ~
+      md5: dc704a136f120941f05cf8ec7697ceb8
+      module_name_from_file_guess: Combine::FromImage
+      mtime: 1226999529
+      name: blib/lib/Combine/FromImage.pm
+      packages:
+        - Combine::FromImage
+      primary_package: Combine::FromImage
+      uses:
+        - strict
+        - Image::ExifTool
+      version_info:
+        filename: blib/lib/Combine/FromImage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5707
+      file_mime_type: ~
+      line_count: ~
+      md5: 878543ecb4f80f085508f61725ef8a3b
+      module_name_from_file_guess: Combine::FromTeX
+      mtime: 1226999529
+      name: blib/lib/Combine/FromTeX.pm
+      packages:
+        - Combine::FromTeX
+      primary_package: Combine::FromTeX
+      uses:
+        - strict
+      version_info:
+        filename: blib/lib/Combine/FromTeX.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12301
+      file_mime_type: ~
+      line_count: ~
+      md5: 64d3404d3d2fc8cc6e17edf41289a6e8
+      module_name_from_file_guess: Combine::GraphAlgorithm
+      mtime: 1226999529
+      name: blib/lib/Combine/GraphAlgorithm.pm
+      packages:
+        - Combine::GraphAlgorithm
+      primary_package: Combine::GraphAlgorithm
+      uses: []
+      version_info:
+        filename: blib/lib/Combine/GraphAlgorithm.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10161
+      file_mime_type: ~
+      line_count: ~
+      md5: e536625a8ad562f956bfe0551faf32b3
+      module_name_from_file_guess: Combine::HTMLExtractor
+      mtime: 1226999529
+      name: blib/lib/Combine/HTMLExtractor.pm
+      packages:
+        - Combine::HTMLExtractor
+      primary_package: Combine::HTMLExtractor
+      uses:
+        - strict
+        - HTML::TokeParser
+        - URI
+        - Carp
+        - vars
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Combine/HTMLExtractor.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 0.121
+    - bytesize: 7016
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bd0e2821098822c272e2da35275beda
+      module_name_from_file_guess: Combine::LoadTermList
+      mtime: 1226999529
+      name: blib/lib/Combine/LoadTermList.pm
+      packages:
+        - Combine::LoadTermList
+      primary_package: Combine::LoadTermList
+      uses:
+        - strict
+        - DBI
+        - Lingua::Stem
+      version_info:
+        filename: blib/lib/Combine/LoadTermList.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2653
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cf841b94da46cd4b3f847e28b5c42e2
+      module_name_from_file_guess: Combine::LogSQL
+      mtime: 1226999529
+      name: blib/lib/Combine/LogSQL.pm
+      packages:
+        - Combine::LogSQL
+      primary_package: Combine::LogSQL
+      uses:
+        - strict
+        - Combine::Config
+      version_info:
+        filename: blib/lib/Combine/LogSQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10897
+      file_mime_type: ~
+      line_count: ~
+      md5: 36a3305e542a1e5484be19e360718ff3
+      module_name_from_file_guess: Combine::Matcher
+      mtime: 1226999529
+      name: blib/lib/Combine/Matcher.pm
+      packages:
+        - Combine::Matcher
+      primary_package: Combine::Matcher
+      uses:
+        - Exporter
+        - strict
+        - HTML::Entities
+        - locale
+      version_info:
+        filename: blib/lib/Combine/Matcher.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12418
+      file_mime_type: ~
+      line_count: ~
+      md5: f8e6d922ede1ad120c4dd0045cef5260
+      module_name_from_file_guess: Combine::MySQLhdb
+      mtime: 1226999529
+      name: blib/lib/Combine/MySQLhdb.pm
+      packages:
+        - Combine::MySQLhdb
+      primary_package: Combine::MySQLhdb
+      uses:
+        - strict
+        - Combine::XWI
+        - HTTP::Date
+        - Encode
+        - Combine::Config
+        - Combine::selurl
+        - Combine::Zebra
+      version_info:
+        filename: blib/lib/Combine/MySQLhdb.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5428
+      file_mime_type: ~
+      line_count: ~
+      md5: a597a0dcafbcb523df5e79ebe3e5b0c0
+      module_name_from_file_guess: Combine::PosCheck_record
+      mtime: 1226999529
+      name: blib/lib/Combine/PosCheck_record.pm
+      packages:
+        - Combine::PosCheck_record
+      primary_package: Combine::PosCheck_record
+      uses:
+        - strict
+        - Combine::LoadTermList
+        - Combine::utilPlugIn
+        - Combine::PosMatcher
+        - Combine::Config
+      version_info:
+        filename: blib/lib/Combine/PosCheck_record.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14317
+      file_mime_type: ~
+      line_count: ~
+      md5: abc4776bd8c3a652e86f63700c0665a0
+      module_name_from_file_guess: Combine::PosMatcher
+      mtime: 1226999529
+      name: blib/lib/Combine/PosMatcher.pm
+      packages:
+        - Combine::PosMatcher
+      primary_package: Combine::PosMatcher
+      uses:
+        - Exporter
+        - strict
+        - Combine::XWI2XML
+        - HTML::Entities
+        - locale
+      version_info:
+        filename: blib/lib/Combine/PosMatcher.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7365
+      file_mime_type: ~
+      line_count: ~
+      md5: e5b049986820c3bce0a2498bc6affd6d
+      module_name_from_file_guess: Combine::RobotRules
+      mtime: 1226999529
+      name: blib/lib/Combine/RobotRules.pm
+      packages:
+        - Combine::RobotRules
+      primary_package: Combine::RobotRules
+      uses:
+        - strict
+        - Combine::Config
+        - Combine::UA
+      version_info:
+        filename: blib/lib/Combine/RobotRules.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17132
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c4e0e91e2d21f772e85a32f9cc39d27
+      module_name_from_file_guess: Combine::SD_SQL
+      mtime: 1226999529
+      name: blib/lib/Combine/SD_SQL.pm
+      packages:
+        - Combine::SD_SQL
+      primary_package: Combine::SD_SQL
+      uses:
+        - Combine::Config
+        - Combine::selurl
+        - DBI
+      version_info:
+        filename: blib/lib/Combine/SD_SQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6508
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e5933f7c8910f6c976060b8cc7eae09
+      module_name_from_file_guess: Combine::UA
+      mtime: 1226999529
+      name: blib/lib/Combine/UA.pm
+      packages:
+        - Combine::UA
+      primary_package: Combine::UA
+      uses:
+        - strict
+        - Combine::Config
+        - LWP::UserAgent
+        - HTTP::Date
+      version_info:
+        filename: blib/lib/Combine/UA.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: bb5b325d12b6bae17b41716447fdf059
+      module_name_from_file_guess: Combine::WP7Canonical
+      mtime: 1226999529
+      name: blib/lib/Combine/WP7Canonical.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Combine/WP7Canonical.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11013
+      file_mime_type: ~
+      line_count: ~
+      md5: d8909b9f0a4d84972461c72744bec13a
+      module_name_from_file_guess: Combine::XWI
+      mtime: 1226999529
+      name: blib/lib/Combine/XWI.pm
+      packages:
+        - Combine::XWI
+      primary_package: Combine::XWI
+      uses:
+        - strict
+        - HTML::Entities
+      version_info:
+        filename: blib/lib/Combine/XWI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12368
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a8538a13a35ef047be30bf2544960a0
+      module_name_from_file_guess: Combine::XWI2XML
+      mtime: 1226999529
+      name: blib/lib/Combine/XWI2XML.pm
+      packages:
+        - Combine::XWI2XML
+      primary_package: Combine::XWI2XML
+      uses:
+        - strict
+        - Combine::XWI
+        - Encode
+        - Combine::Config
+        - Compress::Zlib
+        - MIME::Base64
+        - Combine::CleanXML2CanDoc
+      version_info:
+        filename: blib/lib/Combine/XWI2XML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3818
+      file_mime_type: ~
+      line_count: ~
+      md5: aa327b90ed3fb68cf72160a8d8ebfdb3
+      module_name_from_file_guess: Combine::Zebra
+      mtime: 1226999529
+      name: blib/lib/Combine/Zebra.pm
+      packages:
+        - Combine::Zebra
+      primary_package: Combine::Zebra
+      uses:
+        - strict
+        - Combine::XWI2XML
+        - ZOOM
+      version_info:
+        filename: blib/lib/Combine/Zebra.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3572
+      file_mime_type: ~
+      line_count: ~
+      md5: efe9c67415ef5e7d6c1f226bae4ce7cb
+      module_name_from_file_guess: Combine::classifySVM
+      mtime: 1226999529
+      name: blib/lib/Combine/classifySVM.pm
+      packages:
+        - Combine::classifySVM
+      primary_package: Combine::classifySVM
+      uses:
+        - Combine::XWI
+        - Combine::Config
+        - Combine::MySQLhdb
+        - Combine::utilPlugIn
+        - strict
+      version_info:
+        filename: blib/lib/Combine/classifySVM.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11147
+      file_mime_type: ~
+      line_count: ~
+      md5: acde545dad7bd2f157ae1738f3738ffa
+      module_name_from_file_guess: Combine::selurl
+      mtime: 1226999529
+      name: blib/lib/Combine/selurl.pm
+      packages:
+        - Combine::selurl
+      primary_package: Combine::selurl
+      uses:
+        - strict
+        - URI
+        - Carp
+        - Combine::Config
+      version_info:
+        filename: blib/lib/Combine/selurl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6471
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cb7f233a7e43d7e63a78ff29ed10e32
+      module_name_from_file_guess: Combine::utilPlugIn
+      mtime: 1226999529
+      name: blib/lib/Combine/utilPlugIn.pm
+      packages:
+        - Combine::utilPlugIn
+      primary_package: Combine::utilPlugIn
+      uses:
+        - strict
+        - Combine::XWI
+        - Combine::MySQLhdb
+        - Combine::LoadTermList
+        - Geo::IP
+        - Locale::Country
+        - Lingua::Identify
+        - Algorithm::SVMLight
+      version_info:
+        filename: blib/lib/Combine/utilPlugIn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Combine/Check_record.pm
+    - blib/lib/Combine/CleanXML2CanDoc.pm
+    - blib/lib/Combine/Config.pm
+    - blib/lib/Combine/DataBase.pm
+    - blib/lib/Combine/FromHTML.pm
+    - blib/lib/Combine/FromImage.pm
+    - blib/lib/Combine/FromTeX.pm
+    - blib/lib/Combine/GraphAlgorithm.pm
+    - blib/lib/Combine/HTMLExtractor.pm
+    - blib/lib/Combine/LoadTermList.pm
+    - blib/lib/Combine/LogSQL.pm
+    - blib/lib/Combine/Matcher.pm
+    - blib/lib/Combine/MySQLhdb.pm
+    - blib/lib/Combine/PosCheck_record.pm
+    - blib/lib/Combine/PosMatcher.pm
+    - blib/lib/Combine/RobotRules.pm
+    - blib/lib/Combine/SD_SQL.pm
+    - blib/lib/Combine/UA.pm
+    - blib/lib/Combine/WP7Canonical.pm
+    - blib/lib/Combine/XWI.pm
+    - blib/lib/Combine/XWI2XML.pm
+    - blib/lib/Combine/Zebra.pm
+    - blib/lib/Combine/classifySVM.pm
+    - blib/lib/Combine/selurl.pm
+    - blib/lib/Combine/utilPlugIn.pm
+  test_info:
+    - bytesize: 1499
+      file_mime_type: ~
+      line_count: ~
+      md5: df5ec99712f8399565e510f58319a0b1
+      mtime: 1226999528
+      name: t/43SD.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+        - Combine::SD_SQL
+        - Combine::selurl
+        - Test::More
+    - bytesize: 4060
+      file_mime_type: ~
+      line_count: ~
+      md5: a3e238e110bc84d9d9498c2783b3d5e5
+      mtime: 1226999528
+      name: t/60MySQLhdb.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+        - Combine::XWI
+        - Combine::MySQLhdb
+        - Test::More
+    - bytesize: 11481
+      file_mime_type: ~
+      line_count: ~
+      md5: 0942cc4722948c2e628ada172709e622
+      mtime: 1226999528
+      name: t/50FromHTML.t
+      uses:
+        - strict
+        - ''
+        - Combine::XWI
+        - Combine::UA
+        - Combine::FromHTML
+        - Digest::MD5
+        - HTTP::Date
+        - Combine::LogSQL
+        - Combine::Config
+        - Getopt::Long
+        - Cwd
+        - HTML::Tidy
+    - bytesize: 5018
+      file_mime_type: ~
+      line_count: ~
+      md5: 33f79f7d5bbd384ecf5c94e2b827323d
+      mtime: 1226999528
+      name: t/20URLnormalization.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Combine::selurl
+        - Cwd
+    - bytesize: 4110
+      file_mime_type: ~
+      line_count: ~
+      md5: 71a04b0af8db19bfcd993f664a1ecbf2
+      mtime: 1226999528
+      name: t/90Installationtest.t
+      uses:
+        - strict
+        - ''
+        - Test::More
+        - Cwd
+    - bytesize: 1417
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a9ae0075516c360e97b895a49b5e8f4
+      mtime: 1226999528
+      name: t/05MySQL.t
+      uses:
+        - strict
+        - ''
+        - Test::More
+        - DBI
+    - bytesize: 643
+      file_mime_type: ~
+      line_count: ~
+      md5: a9b9cef8f1dd700df5667b8feaad37ff
+      mtime: 1226999528
+      name: t/14combineINIT.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+        - Test::More
+    - bytesize: 2141
+      file_mime_type: ~
+      line_count: ~
+      md5: f1c7c7b783814ca60ef1a5b33eed486c
+      mtime: 1226999528
+      name: t/22URLvalidation.t
+      uses:
+        - strict
+        - ''
+        - Combine::selurl
+        - Combine::Config
+        - Cwd
+    - bytesize: 503
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e134d9d677fea6ae44f72af5c8392c
+      mtime: 1226999528
+      name: t/10config.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+    - bytesize: 2909
+      file_mime_type: ~
+      line_count: ~
+      md5: b0e3cb5ebb7347e7707d22c97887f8a1
+      mtime: 1226999528
+      name: t/30XWI.t
+      uses:
+        - Combine::XWI
+        - Test::More
+    - bytesize: 5549
+      file_mime_type: ~
+      line_count: ~
+      md5: 48877ce7106972912cdc88833cd382d0
+      mtime: 1226999528
+      name: t/70DataBase.t
+      uses:
+        - strict
+        - ''
+        - Combine::XWI
+        - Combine::Config
+        - Combine::LogSQL
+        - Combine::DataBase
+        - Cwd
+        - Test::More
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: 794db047953989d1b4193d82ebccea7d
+      mtime: 1226999528
+      name: t/00conf.t
+      uses:
+        - strict
+        - ''
+    - bytesize: 460
+      file_mime_type: ~
+      line_count: ~
+      md5: d698de4da582240aec898f2309feb0e6
+      mtime: 1226999528
+      name: t/16combineINIT.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+        - Test::More
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: 57f62ba3382e8f173a3a4fb392e57b7f
+      mtime: 1226999528
+      name: t/15combineINIT.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+        - Test::More
+    - bytesize: 1356
+      file_mime_type: ~
+      line_count: ~
+      md5: cb33dba85805031a321b15d1eb845776
+      mtime: 1226999528
+      name: t/40SD.t
+      uses:
+        - strict
+        - ''
+        - Combine::Config
+        - Cwd
+        - Combine::SD_SQL
+        - Combine::selurl
+        - Test::More
+  tests:
+    - t/43SD.t
+    - t/60MySQLhdb.t
+    - t/50FromHTML.t
+    - t/20URLnormalization.t
+    - t/90Installationtest.t
+    - t/05MySQL.t
+    - t/14combineINIT.t
+    - t/22URLvalidation.t
+    - t/10config.t
+    - t/30XWI.t
+    - t/70DataBase.t
+    - t/00conf.t
+    - t/16combineINIT.t
+    - t/15combineINIT.t
+    - t/40SD.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-40721.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 40721
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268848654
+  examine_start_time: 1268848606
+  examine_time: 48
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 40721
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268848654
+  run_start_time: 1268848606
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

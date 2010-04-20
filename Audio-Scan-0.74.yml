@@ -1,0 +1,3073 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Fast C metadata and tag reader for all common audio file formats
+    author:
+      - 'Andy Grundman <andy@slimdevices.com>'
+    build_requires:
+      ExtUtils::MakeMaker: 0
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.54
+    license: unknown
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Audio-Scan
+    no_index:
+      directory:
+        - t
+        - inc
+    requires: {}
+    version: 0.74
+  blib:
+    - blib/arch/auto/Audio/Scan/Scan.bs
+    - blib/arch/auto/Audio/Scan/Scan.so
+    - blib/lib/Audio/Scan.pm
+    - blib/man3/Audio::Scan.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Audio::Scan
+  build_output: |
+    cp lib/Audio/Scan.pm blib/lib/Audio/Scan.pm
+    /home/brian/bin/perl5.10.1 /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/xsubpp  -typemap /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/typemap  Scan.xs > Scan.xsc && mv Scan.xsc Scan.c
+    Please specify prototyping behavior for Scan.xs (see perlxs manual)
+    cc -c  -I. -I.. -Isrc -Iinclude  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"0.74\"  -DXS_VERSION=\"0.74\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -Wall -Wno-unused-value -Wno-format-security Scan.c
+    In file included from Scan.xs:17:
+    src/ogg.c:689:2: warning: no newline at end of file
+    Running Mkbootstrap for Audio::Scan ()
+    chmod 644 Scan.bs
+    rm -f blib/arch/auto/Audio/Scan/Scan.so
+    LD_RUN_PATH="/usr/lib" cc  -shared  -L/usr/local/lib -fstack-protector Scan.o  -o blib/arch/auto/Audio/Scan/Scan.so 	  -lz  	 
+    chmod 755 blib/arch/auto/Audio/Scan/Scan.so
+    cp Scan.bs blib/arch/auto/Audio/Scan/Scan.bs
+    chmod 644 blib/arch/auto/Audio/Scan/Scan.bs
+    Manifying blib/man3/Audio::Scan.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw/Audio-Scan-0.74/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw/Audio-Scan-0.74
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw/Audio-Scan-0.74/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw/Audio-Scan-0.74/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: AGRUNDMA
+  dist_basename: Audio-Scan-0.74.tar.gz
+  dist_date: 1270224942
+  dist_dir: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw/Audio-Scan-0.74
+  dist_extract_path: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw/Audio-Scan-0.74
+  dist_file: /home/brian/CPAN/authors/id/A/AG/AGRUNDMA/Audio-Scan-0.74.tar.gz
+  dist_md5: 2ea06eea25c642206f3804b6ee52586a
+  dist_size: 2987446
+  manifest:
+    - COPYING
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - README.win32
+    - Scan.xs
+    - hints/darwin.pl
+    - include/aac.h
+    - include/ape.h
+    - include/asf.h
+    - include/buffer.h
+    - include/common.h
+    - include/flac.h
+    - include/id3.h
+    - include/mac.h
+    - include/mp3.h
+    - include/mp4.h
+    - include/mpc.h
+    - include/ogg.h
+    - include/pinttypes.h
+    - include/ppport.h
+    - include/pstdint.h
+    - include/wav.h
+    - include/wavpack.h
+    - lib/Audio/Scan.pm
+    - src/aac.c
+    - src/ape.c
+    - src/asf.c
+    - src/buffer.c
+    - src/common.c
+    - src/flac.c
+    - src/id3.c
+    - src/id3_compat.c
+    - src/id3_compat.gperf
+    - src/id3_frametype.c
+    - src/id3_frametype.gperf
+    - src/id3_genre.dat
+    - src/mac.c
+    - src/mp3.c
+    - src/mp4.c
+    - src/mpc.c
+    - src/ogg.c
+    - src/wav.c
+    - src/wavpack.c
+    - t/01use.t
+    - t/02pod.t
+    - t/03podcoverage.t
+    - t/04critic.rc
+    - t/04critic.t
+    - t/aac.t
+    - t/aac/id3v2.aac
+    - t/aac/leading-junk.aac
+    - t/aac/mono.aac
+    - t/aac/stereo.aac
+    - t/aiff.t
+    - t/aiff/aiff-id3-bad-chunksize.aif
+    - t/aiff/aiff-id3.aif
+    - t/aiff/aiff32.aiff
+    - t/asf.t
+    - t/asf/drm.wma
+    - t/asf/jfif.wma
+    - t/asf/wma-live.wma
+    - t/asf/wma92-32k.wma
+    - t/asf/wma92-48k-pro.wma
+    - t/asf/wma92-lossless.wma
+    - t/asf/wma92-mbr.wma
+    - t/asf/wma92-multiple-tags.wma
+    - t/asf/wma92-vbr.wma
+    - t/asf/wma92-voice.wma
+    - t/asf/wmv92-with-audio.wmv
+    - t/asf/wmv92.wmv
+    - t/flac.t
+    - t/flac/CVE-2007-4619-1.flac
+    - t/flac/CVE-2007-4619-12.flac
+    - t/flac/CVE-2007-4619-2.flac
+    - t/flac/appId.flac
+    - t/flac/audio-data.flac
+    - t/flac/bad-streaminfo.flac
+    - t/flac/empty.flac
+    - t/flac/id3tagged.flac
+    - t/flac/md5.flac
+    - t/flac/picture-large.flac
+    - t/flac/picture.flac
+    - t/flac/short-duration.flac
+    - t/flac/test.flac
+    - t/flac/tiny.flac
+    - t/mac.t
+    - t/mac/apev1.ape
+    - t/mac/apev2.ape
+    - t/memleak.ot
+    - t/mp3.t
+    - t/mp3/ape-no-v1.mp3
+    - t/mp3/bug5686/latin/good.mp3
+    - t/mp3/bug5686/utf/invalid.mp3
+    - t/mp3/gentoo-bug-210564.mp3
+    - t/mp3/no-tags-mp1l2-mono.mp3
+    - t/mp3/no-tags-mp1l2.mp3
+    - t/mp3/no-tags-mp1l3-cbr320.mp3
+    - t/mp3/no-tags-mp1l3-mono.mp3
+    - t/mp3/no-tags-mp1l3-vbr.mp3
+    - t/mp3/no-tags-mp1l3.mp3
+    - t/mp3/no-tags-mp2.5l3.mp3
+    - t/mp3/no-tags-mp2l3-mono.mp3
+    - t/mp3/no-tags-mp2l3-vbr.mp3
+    - t/mp3/no-tags-mp2l3.mp3
+    - t/mp3/no-tags-no-xing-vbr.mp3
+    - t/mp3/no-tags-vbri-mono.mp3
+    - t/mp3/no-tags-vbri-stereo.mp3
+    - t/mp3/v1-iso-8859-1.mp3
+    - t/mp3/v1-utf8.mp3
+    - t/mp3/v1.1.mp3
+    - t/mp3/v1.mp3
+    - t/mp3/v2-v1.mp3
+    - t/mp3/v2.2-itunes81.mp3
+    - t/mp3/v2.2-mpeg20-xing.mp3
+    - t/mp3/v2.2-multiple-comm.mp3
+    - t/mp3/v2.2-pic.mp3
+    - t/mp3/v2.2.mp3
+    - t/mp3/v2.3-compressed-frame.mp3
+    - t/mp3/v2.3-empty-tcon.mp3
+    - t/mp3/v2.3-empty-wxxx.mp3
+    - t/mp3/v2.3-encrypted-frame.mp3
+    - t/mp3/v2.3-etco.mp3
+    - t/mp3/v2.3-ext-header.mp3
+    - t/mp3/v2.3-group-id.mp3
+    - t/mp3/v2.3-invalid-encoding.mp3
+    - t/mp3/v2.3-iso-8859-1.mp3
+    - t/mp3/v2.3-itunes81.mp3
+    - t/mp3/v2.3-link-frame.mp3
+    - t/mp3/v2.3-mcdi.mp3
+    - t/mp3/v2.3-mp2l3-64k-22khz.mp3
+    - t/mp3/v2.3-mp3HD.mp3
+    - t/mp3/v2.3-multiple-tcon-numeric.mp3
+    - t/mp3/v2.3-multiple-tcon-rx-cr.mp3
+    - t/mp3/v2.3-multiple-tcon-text.mp3
+    - t/mp3/v2.3-multiple-tcon.mp3
+    - t/mp3/v2.3-no-audio-frames.mp3
+    - t/mp3/v2.3-null-bytes.mp3
+    - t/mp3/v2.3-rgad.mp3
+    - t/mp3/v2.3-sylt.mp3
+    - t/mp3/v2.3-utf16any.mp3
+    - t/mp3/v2.3-utf16be.mp3
+    - t/mp3/v2.3-utf16le.mp3
+    - t/mp3/v2.3-xsop.mp3
+    - t/mp3/v2.3.mp3
+    - t/mp3/v2.4-ape.mp3
+    - t/mp3/v2.4-apic-jpg.mp3
+    - t/mp3/v2.4-apic-multiple.mp3
+    - t/mp3/v2.4-apic-png.mp3
+    - t/mp3/v2.4-apic-unsync.mp3
+    - t/mp3/v2.4-compressed-frame.mp3
+    - t/mp3/v2.4-corrupt-frame.mp3
+    - t/mp3/v2.4-empty-text.mp3
+    - t/mp3/v2.4-encrypted-frame.mp3
+    - t/mp3/v2.4-geob-multiple.mp3
+    - t/mp3/v2.4-geob.mp3
+    - t/mp3/v2.4-group-id.mp3
+    - t/mp3/v2.4-iso-8859-1.mp3
+    - t/mp3/v2.4-itunes-broken-syncsafe.mp3
+    - t/mp3/v2.4-itunes81.mp3
+    - t/mp3/v2.4-multiple-tcon-numeric.mp3
+    - t/mp3/v2.4-multiple-tcon.mp3
+    - t/mp3/v2.4-rva2-mp3gain.mp3
+    - t/mp3/v2.4-rva2-neg.mp3
+    - t/mp3/v2.4-tipl.mp3
+    - t/mp3/v2.4-unsync.mp3
+    - t/mp3/v2.4-utf16be.mp3
+    - t/mp3/v2.4-utf16le.mp3
+    - t/mp3/v2.4-utf8-null-comment.mp3
+    - t/mp3/v2.4-utf8.mp3
+    - t/mp3/v2.4.mp3
+    - t/mp4.t
+    - t/mp4/882-sample-rate.m4a
+    - t/mp4/alac-multiple-stts.m4a
+    - t/mp4/alac.m4a
+    - t/mp4/array-keys-int.m4a
+    - t/mp4/array-keys.m4a
+    - t/mp4/hd-aac.m4a
+    - t/mp4/hint-track.m4a
+    - t/mp4/itunes811.m4a
+    - t/mp4/leading-mdat.m4a
+    - t/mp4/multiple-covers.m4a
+    - t/mp4/short-trkn.m4a
+    - t/musepack.t
+    - t/musepack/apev2-cover.mpc
+    - t/musepack/apev2.mpc
+    - t/musepack/sv8.mpc
+    - t/ogg.t
+    - t/ogg/bug1155-1.ogg
+    - t/ogg/bug1155-2.ogg
+    - t/ogg/bug12615-aotuv.ogg
+    - t/ogg/bug803.ogg
+    - t/ogg/bug905.ogg
+    - t/ogg/empty.ogg
+    - t/ogg/equals-char.ogg
+    - t/ogg/large-page-segments.ogg
+    - t/ogg/large-pagesize.ogg
+    - t/ogg/metadata-block-picture.ogg
+    - t/ogg/multiple-bitstreams.ogg
+    - t/ogg/multiple.ogg
+    - t/ogg/normal.ogg
+    - t/ogg/old1.ogg
+    - t/ogg/old2.ogg
+    - t/ogg/test.ogg
+    - t/util.t
+    - t/wav.t
+    - t/wav/8kmp38.wav
+    - t/wav/bug14462-wav-bad-data-size.wav
+    - t/wav/bug14462-wav-fmt.wav
+    - t/wav/id3.wav
+    - t/wav/wav32-info-badchunk.wav
+    - t/wav/wav32-info-nulls.wav
+    - t/wav/wav32.wav
+    - t/wavpack.t
+    - t/wavpack/24-bit.wv
+    - t/wavpack/6channel.wv
+    - t/wavpack/custom-samplerate.wv
+    - t/wavpack/hybrid.wv
+    - t/wavpack/silence-44-s.wv
+    - t/wavpack/v2.wv
+    - t/wavpack/v3.wv
+    - t/wavpack/win-executable.wv
+    - t/wavpack/zero-first-block.wv
+    - tools/bench.pl
+    - tools/leak.c
+    - tools/leak.pl
+    - win32/README
+    - win32/zconf.h
+    - win32/zlib.h
+    - win32/zlib.lib
+  manifest_file_info:
+    - bytesize: 17987
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1237747706
+      name: COPYING
+    - bytesize: 16178
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1270224799
+      name: Changes
+    - bytesize: 4808
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1270224825
+      name: MANIFEST
+    - bytesize: 570
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1270224825
+      name: META.yml
+    - bytesize: 1295
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1269368414
+      name: Makefile.PL
+    - bytesize: 18284
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1269921164
+      name: README
+    - bytesize: 613
+      file_mime_type: ~
+      line_count: ~
+      md5: 65539b463d4890c68be9c1e3de589c4d
+      mtime: 1269368416
+      name: README.win32
+    - bytesize: 7689
+      file_mime_type: ~
+      line_count: ~
+      md5: 277f98f529388e25828944f3ca500264
+      mtime: 1270053057
+      name: Scan.xs
+    - bytesize: 1348
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a6457158838a01005e1e33a3f6c7848
+      mtime: 1270042065
+      name: hints/darwin.pl
+    - bytesize: 1156
+      file_mime_type: ~
+      line_count: ~
+      md5: 21e74a6c4d936a6dfa1e51f177496e09
+      mtime: 1269368414
+      name: include/aac.h
+    - bytesize: 3210
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f33e79802be3cd5e69317c78081e7ef
+      mtime: 1266875803
+      name: include/ape.h
+    - bytesize: 7439
+      file_mime_type: ~
+      line_count: ~
+      md5: 4425561bd56e90fd439e116aa7bd08d8
+      mtime: 1240332511
+      name: include/asf.h
+    - bytesize: 4389
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f3b8b06dbcb06c92f4d814b6c210177
+      mtime: 1269368414
+      name: include/buffer.h
+    - bytesize: 2377
+      file_mime_type: ~
+      line_count: ~
+      md5: 1155e8d444b5184de0a4b9e4d0aa4cb6
+      mtime: 1270211574
+      name: include/common.h
+    - bytesize: 2527
+      file_mime_type: ~
+      line_count: ~
+      md5: ba2cb79ec9b9177708dffa870949efd0
+      mtime: 1266583657
+      name: include/flac.h
+    - bytesize: 4382
+      file_mime_type: ~
+      line_count: ~
+      md5: c1d434cfe947d3f3fe678b5d54493d1f
+      mtime: 1269368414
+      name: include/id3.h
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: b60b30cb838bc0161a495c1fa1e12801
+      mtime: 1240597899
+      name: include/mac.h
+    - bytesize: 4263
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b35a1867e972f616ba1fc41df43cc7f
+      mtime: 1259361392
+      name: include/mp3.h
+    - bytesize: 3675
+      file_mime_type: ~
+      line_count: ~
+      md5: a6ac3bd9a8901fd6affcb2f52fe6cc0c
+      mtime: 1269920594
+      name: include/mp4.h
+    - bytesize: 3861
+      file_mime_type: ~
+      line_count: ~
+      md5: 552e1c16f01b137b2778a667942d8c5e
+      mtime: 1248663643
+      name: include/mpc.h
+    - bytesize: 1153
+      file_mime_type: ~
+      line_count: ~
+      md5: 091c0adca0f61f4de4c2bf250cc6adb3
+      mtime: 1268274969
+      name: include/ogg.h
+    - bytesize: 8005
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f22b117c56e2a96039e903ef885a3c4
+      mtime: 1238790238
+      name: include/pinttypes.h
+    - bytesize: 118192
+      file_mime_type: ~
+      line_count: ~
+      md5: 104022568846cd42c19601fe804fe327
+      mtime: 1238792072
+      name: include/ppport.h
+    - bytesize: 26345
+      file_mime_type: ~
+      line_count: ~
+      md5: 6924d7137a9a1e7372fac5e2d99a51be
+      mtime: 1238790238
+      name: include/pstdint.h
+    - bytesize: 1309
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d3abddb1f74ca4eb3a0e0e3bd2aeacf
+      mtime: 1240596337
+      name: include/wav.h
+    - bytesize: 4123
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ad4239ffd3cf51dddf22ae9c08ad5d9
+      mtime: 1270053598
+      name: include/wavpack.h
+    - bytesize: 17426
+      file_mime_type: ~
+      line_count: ~
+      md5: c6d9e4d0d7bc62df4a38a2a84a4157eb
+      mtime: 1270211701
+      name: lib/Audio/Scan.pm
+    - bytesize: 4458
+      file_mime_type: ~
+      line_count: ~
+      md5: 97043dc15b38a0d63777feb91fff6d7d
+      mtime: 1269368415
+      name: src/aac.c
+    - bytesize: 13169
+      file_mime_type: ~
+      line_count: ~
+      md5: a7d232b243db82deb7e419169b8f207b
+      mtime: 1266875803
+      name: src/ape.c
+    - bytesize: 47328
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cc5f159831fdf2f08136f0ee3c956e6
+      mtime: 1269368415
+      name: src/asf.c
+    - bytesize: 20406
+      file_mime_type: ~
+      line_count: ~
+      md5: a4fc02df73c5e2af124168e5b1436d00
+      mtime: 1269920594
+      name: src/buffer.c
+    - bytesize: 7460
+      file_mime_type: ~
+      line_count: ~
+      md5: df7217cd8a3907646570c002cf509f32
+      mtime: 1269368415
+      name: src/common.c
+    - bytesize: 26108
+      file_mime_type: ~
+      line_count: ~
+      md5: 07880deb5045ee64fd8a16613f9594f1
+      mtime: 1269368414
+      name: src/flac.c
+    - bytesize: 47147
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a3691e6eaffb3297877ad159c8d9828
+      mtime: 1270211701
+      name: src/id3.c
+    - bytesize: 13326
+      file_mime_type: ~
+      line_count: ~
+      md5: edd0c04fc00a8dee993bccb8e85375ee
+      mtime: 1269368415
+      name: src/id3_compat.c
+    - bytesize: 4980
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fdf9a3fb4445ea411045893da432190
+      mtime: 1269368414
+      name: src/id3_compat.gperf
+    - bytesize: 17998
+      file_mime_type: ~
+      line_count: ~
+      md5: 27018581c6061e5873205e96e005d45b
+      mtime: 1269368415
+      name: src/id3_frametype.c
+    - bytesize: 8917
+      file_mime_type: ~
+      line_count: ~
+      md5: 6860e3a6f3a00c91b7023daa2bc9e9e4
+      mtime: 1269368415
+      name: src/id3_frametype.gperf
+    - bytesize: 16643
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d2b28b7f67750c042b1300a9d4101a4
+      mtime: 1269368415
+      name: src/id3_genre.dat
+    - bytesize: 5129
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ee83c0a594ccaac6620dc9e193529ef
+      mtime: 1257183394
+      name: src/mac.c
+    - bytesize: 27167
+      file_mime_type: ~
+      line_count: ~
+      md5: ba681885db0a87308e987e66514b845b
+      mtime: 1269368414
+      name: src/mp3.c
+    - bytesize: 50065
+      file_mime_type: ~
+      line_count: ~
+      md5: e08edcc9da9fe7c47234e33a1dff9fd2
+      mtime: 1269920594
+      name: src/mp4.c
+    - bytesize: 10727
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b62fbd7dda8bbd7391e6652a7d458f1
+      mtime: 1258080884
+      name: src/mpc.c
+    - bytesize: 19875
+      file_mime_type: ~
+      line_count: ~
+      md5: dcea8d09c565310f0c356fa068ebf883
+      mtime: 1269368415
+      name: src/ogg.c
+    - bytesize: 13626
+      file_mime_type: ~
+      line_count: ~
+      md5: a5e5d25521ae6d12eee6f6cad4aebe80
+      mtime: 1266432365
+      name: src/wav.c
+    - bytesize: 14066
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f2be005566566fa6c9f48c641191ed1
+      mtime: 1269368415
+      name: src/wavpack.c
+    - bytesize: 50
+      file_mime_type: ~
+      line_count: ~
+      md5: bd6383cd4642801df7e1c709ecf2752e
+      mtime: 1237240771
+      name: t/01use.t
+    - bytesize: 189
+      file_mime_type: ~
+      line_count: ~
+      md5: ae18cd50a4dd26e01b58ebcc2d868a3e
+      mtime: 1237240771
+      name: t/02pod.t
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: 82a82cc097e4a650bad76d49ed3b4fcf
+      mtime: 1237240771
+      name: t/03podcoverage.t
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: fd412047c6c7d210660b934f512d38fa
+      mtime: 1237240771
+      name: t/04critic.rc
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: e24fb108815ec289f500bc1f9f6c797f
+      mtime: 1237839211
+      name: t/04critic.t
+    - bytesize: 2326
+      file_mime_type: ~
+      line_count: ~
+      md5: b4acce28ac7533d561630a8d7124d62d
+      mtime: 1262127261
+      name: t/aac.t
+    - bytesize: 4784
+      file_mime_type: ~
+      line_count: ~
+      md5: 68a1c6930b882430650f890c74e2ff10
+      mtime: 1244216687
+      name: t/aac/id3v2.aac
+    - bytesize: 1381
+      file_mime_type: ~
+      line_count: ~
+      md5: 94f07a75e810408899513969c39f87b2
+      mtime: 1246024339
+      name: t/aac/leading-junk.aac
+    - bytesize: 2053
+      file_mime_type: ~
+      line_count: ~
+      md5: e88ef092b26459324262d4e4ed4295dd
+      mtime: 1244209030
+      name: t/aac/mono.aac
+    - bytesize: 10099
+      file_mime_type: ~
+      line_count: ~
+      md5: b99bdee1c31329cc82d8cddca414d8e2
+      mtime: 1244209030
+      name: t/aac/stereo.aac
+    - bytesize: 2138
+      file_mime_type: ~
+      line_count: ~
+      md5: 97cd08fa408b4b46cb80f9bf053272a9
+      mtime: 1262127261
+      name: t/aiff.t
+    - bytesize: 4170
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bcc32d9719a48c43e5cd56a8958b3db
+      mtime: 1254849025
+      name: t/aiff/aiff-id3-bad-chunksize.aif
+    - bytesize: 4170
+      file_mime_type: ~
+      line_count: ~
+      md5: 58ae10a3f1a925ec2b941e4700433cab
+      mtime: 1240594279
+      name: t/aiff/aiff-id3.aif
+    - bytesize: 3900
+      file_mime_type: ~
+      line_count: ~
+      md5: f38ad6fdc3786901bff06d8ded24bc8a
+      mtime: 1240328846
+      name: t/aiff/aiff32.aiff
+    - bytesize: 13491
+      file_mime_type: ~
+      line_count: ~
+      md5: 50e7bc1362a5e28b1f28cfbb289b55ab
+      mtime: 1269368416
+      name: t/asf.t
+    - bytesize: 15886
+      file_mime_type: ~
+      line_count: ~
+      md5: b1b3b52b570d9c131e10cc42c7527550
+      mtime: 1239475555
+      name: t/asf/drm.wma
+    - bytesize: 49987
+      file_mime_type: ~
+      line_count: ~
+      md5: f0a6eacc512690cbd1143deb8d108aa8
+      mtime: 1239475555
+      name: t/asf/jfif.wma
+    - bytesize: 5113
+      file_mime_type: ~
+      line_count: ~
+      md5: fec7fa8c848146b996e93de30296a428
+      mtime: 1239393401
+      name: t/asf/wma-live.wma
+    - bytesize: 12751
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d1796b6bfc18a1552ca0e748abda39a
+      mtime: 1239393401
+      name: t/asf/wma92-32k.wma
+    - bytesize: 14387
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c698cd95d02fa3cb4530d0e7a7a20ff
+      mtime: 1239393401
+      name: t/asf/wma92-48k-pro.wma
+    - bytesize: 85783
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e8c1666681d3988fa8966ef95e92bf8
+      mtime: 1239393401
+      name: t/asf/wma92-lossless.wma
+    - bytesize: 12819
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f664a76d8982fda223d7385061f25d0
+      mtime: 1239393401
+      name: t/asf/wma92-mbr.wma
+    - bytesize: 9793
+      file_mime_type: ~
+      line_count: ~
+      md5: 282a45b601c0b9cc337b63501860458b
+      mtime: 1255735046
+      name: t/asf/wma92-multiple-tags.wma
+    - bytesize: 14477
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ad0c8839fa94b6e564a173b59903367
+      mtime: 1253210653
+      name: t/asf/wma92-vbr.wma
+    - bytesize: 9659
+      file_mime_type: ~
+      line_count: ~
+      md5: 24bd348f8af93d1303edd33cae287911
+      mtime: 1239393401
+      name: t/asf/wma92-voice.wma
+    - bytesize: 19887
+      file_mime_type: ~
+      line_count: ~
+      md5: c576c6e14943308f668038405ac10dcb
+      mtime: 1239393401
+      name: t/asf/wmv92-with-audio.wmv
+    - bytesize: 7226
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c1bdf5502beac8dfebc84365f7d80df
+      mtime: 1239393401
+      name: t/asf/wmv92.wmv
+    - bytesize: 6888
+      file_mime_type: ~
+      line_count: ~
+      md5: 87815cd82c7b15bc4d2e30dbb20a9740
+      mtime: 1269368416
+      name: t/flac.t
+    - bytesize: 50904
+      file_mime_type: ~
+      line_count: ~
+      md5: f47962df0fbdb609540dd9cc40cf8ec8
+      mtime: 1238707119
+      name: t/flac/CVE-2007-4619-1.flac
+    - bytesize: 50904
+      file_mime_type: ~
+      line_count: ~
+      md5: d8e1d3af7e927855bb0771f948fc28d4
+      mtime: 1238707119
+      name: t/flac/CVE-2007-4619-12.flac
+    - bytesize: 50904
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a6ec1235a79d225f0b2ec5d60e9c628
+      mtime: 1238707119
+      name: t/flac/CVE-2007-4619-2.flac
+    - bytesize: 24262
+      file_mime_type: ~
+      line_count: ~
+      md5: be4ce15f799a814a4ea8a0ea0fc8fbb2
+      mtime: 1254975276
+      name: t/flac/appId.flac
+    - bytesize: 32148
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ccbb2ba047e03b24b7d14e3d334248e
+      mtime: 1240332511
+      name: t/flac/audio-data.flac
+    - bytesize: 49403
+      file_mime_type: ~
+      line_count: ~
+      md5: 943c5a7b7f274e8b2e61e69e6c46ed16
+      mtime: 1266583657
+      name: t/flac/bad-streaminfo.flac
+    - bytesize: 12483
+      file_mime_type: ~
+      line_count: ~
+      md5: dbe86d21b6714536b816bab38f9d9a5e
+      mtime: 1237810518
+      name: t/flac/empty.flac
+    - bytesize: 30000
+      file_mime_type: ~
+      line_count: ~
+      md5: 6525dbe64068380c8587124801590817
+      mtime: 1256563767
+      name: t/flac/id3tagged.flac
+    - bytesize: 5581
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fbeed15ef97a0b122ea6360669711cb
+      mtime: 1237810518
+      name: t/flac/md5.flac
+    - bytesize: 357597
+      file_mime_type: ~
+      line_count: ~
+      md5: 5935ad82800c2102ca6eac577a5b66a9
+      mtime: 1259179759
+      name: t/flac/picture-large.flac
+    - bytesize: 45795
+      file_mime_type: ~
+      line_count: ~
+      md5: 49ae0c6582b24d2e640e581c352e445f
+      mtime: 1237810518
+      name: t/flac/picture.flac
+    - bytesize: 75255
+      file_mime_type: ~
+      line_count: ~
+      md5: c51d8406cab7c42206f7b670c3b3678a
+      mtime: 1255266106
+      name: t/flac/short-duration.flac
+    - bytesize: 12483
+      file_mime_type: ~
+      line_count: ~
+      md5: 108414f416b012ea0d3a71b2ae766113
+      mtime: 1237810518
+      name: t/flac/test.flac
+    - bytesize: 85407
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d659e91015303be9d723b0c1ad4bba5
+      mtime: 1254975276
+      name: t/flac/tiny.flac
+    - bytesize: 1365
+      file_mime_type: ~
+      line_count: ~
+      md5: 397be716c82f31654716e4ded7254790
+      mtime: 1266434744
+      name: t/mac.t
+    - bytesize: 97504
+      file_mime_type: ~
+      line_count: ~
+      md5: e5366d00e85da999004de353bb662445
+      mtime: 1245177414
+      name: t/mac/apev1.ape
+    - bytesize: 97547
+      file_mime_type: ~
+      line_count: ~
+      md5: c19d069d6a343278b71414fbc27bfe25
+      mtime: 1244254794
+      name: t/mac/apev2.ape
+    - bytesize: 2293
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a86bfacc9259b6a5619bf997535fc2b
+      mtime: 1269920595
+      name: t/memleak.ot
+    - bytesize: 40066
+      file_mime_type: ~
+      line_count: ~
+      md5: 8443856c3fe1c2736688ceee3769fed5
+      mtime: 1270211701
+      name: t/mp3.t
+    - bytesize: 1719
+      file_mime_type: ~
+      line_count: ~
+      md5: 19cee06c96065f7952f3330d6f37d026
+      mtime: 1247257028
+      name: t/mp3/ape-no-v1.mp3
+    - bytesize: 4096
+      file_mime_type: ~
+      line_count: ~
+      md5: 4321d09d3eb13d8ae203834177130192
+      mtime: 1237307830
+      name: t/mp3/bug5686/latin/good.mp3
+    - bytesize: 4096
+      file_mime_type: ~
+      line_count: ~
+      md5: 611d9f42860f40b79b348d49b57c7c86
+      mtime: 1237307830
+      name: t/mp3/bug5686/utf/invalid.mp3
+    - bytesize: 92160
+      file_mime_type: ~
+      line_count: ~
+      md5: 1350809d8b6d79c3edd5b6843866228b
+      mtime: 1238699707
+      name: t/mp3/gentoo-bug-210564.mp3
+    - bytesize: 60480
+      file_mime_type: ~
+      line_count: ~
+      md5: bf0b181610442366129e90c9152c504d
+      mtime: 1237663054
+      name: t/mp3/no-tags-mp1l2-mono.mp3
+    - bytesize: 82756
+      file_mime_type: ~
+      line_count: ~
+      md5: dd94bf2d4c62bf5d272a90f966ce9071
+      mtime: 1237663054
+      name: t/mp3/no-tags-mp1l2.mp3
+    - bytesize: 44929
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a0a1cef2fb83dcbeaa6f1c190705cc3
+      mtime: 1237439082
+      name: t/mp3/no-tags-mp1l3-cbr320.mp3
+    - bytesize: 8985
+      file_mime_type: ~
+      line_count: ~
+      md5: 59e095704aa3dcc64fbf15a18636923c
+      mtime: 1237659634
+      name: t/mp3/no-tags-mp1l3-mono.mp3
+    - bytesize: 6336
+      file_mime_type: ~
+      line_count: ~
+      md5: 731c690e37bb4c8bf028767ed9fc9faf
+      mtime: 1237228039
+      name: t/mp3/no-tags-mp1l3-vbr.mp3
+    - bytesize: 4320
+      file_mime_type: ~
+      line_count: ~
+      md5: 80c778cbe67eb614515c4dcd22138570
+      mtime: 1237228039
+      name: t/mp3/no-tags-mp1l3.mp3
+    - bytesize: 1080
+      file_mime_type: ~
+      line_count: ~
+      md5: 8396e6ccfb98fccae17281a84bed8adf
+      mtime: 1237228039
+      name: t/mp3/no-tags-mp2.5l3.mp3
+    - bytesize: 8928
+      file_mime_type: ~
+      line_count: ~
+      md5: 4035181bd159f319c3a0ae50068b0355
+      mtime: 1237659634
+      name: t/mp3/no-tags-mp2l3-mono.mp3
+    - bytesize: 8748
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fe929f859a1857a7d17700d7bdad65e
+      mtime: 1237659634
+      name: t/mp3/no-tags-mp2l3-vbr.mp3
+    - bytesize: 1071
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cbd612d6e4ec9b3f78278014e7bfb83
+      mtime: 1237228039
+      name: t/mp3/no-tags-mp2l3.mp3
+    - bytesize: 133695
+      file_mime_type: ~
+      line_count: ~
+      md5: ac6932dd920910b696d0aaa4cd1e67a2
+      mtime: 1237600944
+      name: t/mp3/no-tags-no-xing-vbr.mp3
+    - bytesize: 5932
+      file_mime_type: ~
+      line_count: ~
+      md5: 4457c14c065292e1b3abee32a370d690
+      mtime: 1237655839
+      name: t/mp3/no-tags-vbri-mono.mp3
+    - bytesize: 8299
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fa7127b547e681b9cb566b157dfc2b
+      mtime: 1237655839
+      name: t/mp3/no-tags-vbri-stereo.mp3
+    - bytesize: 704
+      file_mime_type: ~
+      line_count: ~
+      md5: 769274d71a63c019c623399b489fac60
+      mtime: 1269368416
+      name: t/mp3/v1-iso-8859-1.mp3
+    - bytesize: 704
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f29071d3f3f7926d98452f3cc7fe85a
+      mtime: 1269368416
+      name: t/mp3/v1-utf8.mp3
+    - bytesize: 4448
+      file_mime_type: ~
+      line_count: ~
+      md5: fd60dbcb7ce355b495c103c61df935f3
+      mtime: 1237754257
+      name: t/mp3/v1.1.mp3
+    - bytesize: 4448
+      file_mime_type: ~
+      line_count: ~
+      md5: 046f24c0050bf98ffaf83d52c9f69535
+      mtime: 1237747706
+      name: t/mp3/v1.mp3
+    - bytesize: 3011
+      file_mime_type: ~
+      line_count: ~
+      md5: d7b7e6ff8d9fb3ada0f47de599b3e55b
+      mtime: 1256694431
+      name: t/mp3/v2-v1.mp3
+    - bytesize: 18074
+      file_mime_type: ~
+      line_count: ~
+      md5: dc41414d806e93f09e6bb4613f31c988
+      mtime: 1238013688
+      name: t/mp3/v2.2-itunes81.mp3
+    - bytesize: 1088
+      file_mime_type: ~
+      line_count: ~
+      md5: aaae3d310af6eb4279438e04c2d48d00
+      mtime: 1252720658
+      name: t/mp3/v2.2-mpeg20-xing.mp3
+    - bytesize: 5120
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e63afd14048b845d619c4277f0dbfbc
+      mtime: 1237860823
+      name: t/mp3/v2.2-multiple-comm.mp3
+    - bytesize: 73146
+      file_mime_type: ~
+      line_count: ~
+      md5: 74b124e492586764b03c0b1f3319c955
+      mtime: 1244138272
+      name: t/mp3/v2.2-pic.mp3
+    - bytesize: 16730
+      file_mime_type: ~
+      line_count: ~
+      md5: 856d26cb994f17bfa1c03d890b33bbc0
+      mtime: 1237228039
+      name: t/mp3/v2.2.mp3
+    - bytesize: 5500
+      file_mime_type: ~
+      line_count: ~
+      md5: b1234fec2c53d1560772b717473d73e8
+      mtime: 1269368416
+      name: t/mp3/v2.3-compressed-frame.mp3
+    - bytesize: 73728
+      file_mime_type: ~
+      line_count: ~
+      md5: 06eb11b9c341afb5d89dcc2212e306d5
+      mtime: 1238706421
+      name: t/mp3/v2.3-empty-tcon.mp3
+    - bytesize: 8192
+      file_mime_type: ~
+      line_count: ~
+      md5: 1dbbd850897f5e7d81a80d159067418a
+      mtime: 1238642079
+      name: t/mp3/v2.3-empty-wxxx.mp3
+    - bytesize: 5497
+      file_mime_type: ~
+      line_count: ~
+      md5: d1a6df17050b030e2d1089d7fb0feb0b
+      mtime: 1269368416
+      name: t/mp3/v2.3-encrypted-frame.mp3
+    - bytesize: 27761
+      file_mime_type: ~
+      line_count: ~
+      md5: 301be0980685318c381fe61f7151c6ce
+      mtime: 1269368416
+      name: t/mp3/v2.3-etco.mp3
+    - bytesize: 218
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b7b33c1659045f02b9c57eb690c3a3f
+      mtime: 1269368416
+      name: t/mp3/v2.3-ext-header.mp3
+    - bytesize: 5501
+      file_mime_type: ~
+      line_count: ~
+      md5: d3fab2a06a40aebb45a7f9255dfbf1ac
+      mtime: 1269368416
+      name: t/mp3/v2.3-group-id.mp3
+    - bytesize: 2146
+      file_mime_type: ~
+      line_count: ~
+      md5: f2a5ff556a96ad15633d23d6fe14f8a8
+      mtime: 1269368416
+      name: t/mp3/v2.3-invalid-encoding.mp3
+    - bytesize: 5500
+      file_mime_type: ~
+      line_count: ~
+      md5: 140c1a30d403104c5807af040466749d
+      mtime: 1237307853
+      name: t/mp3/v2.3-iso-8859-1.mp3
+    - bytesize: 18074
+      file_mime_type: ~
+      line_count: ~
+      md5: 2fcfc8a08199588b4e3de6491df4d697
+      mtime: 1238013688
+      name: t/mp3/v2.3-itunes81.mp3
+    - bytesize: 3057
+      file_mime_type: ~
+      line_count: ~
+      md5: 694ec982dc516f4d9b84e75dade0732f
+      mtime: 1258658977
+      name: t/mp3/v2.3-link-frame.mp3
+    - bytesize: 2386
+      file_mime_type: ~
+      line_count: ~
+      md5: 74696807ceaf710ea8b2e8d660d3a73d
+      mtime: 1269368416
+      name: t/mp3/v2.3-mcdi.mp3
+    - bytesize: 11536
+      file_mime_type: ~
+      line_count: ~
+      md5: 9084b51545e1dfe6ff68a851a583bb0c
+      mtime: 1259362051
+      name: t/mp3/v2.3-mp2l3-64k-22khz.mp3
+    - bytesize: 71102
+      file_mime_type: ~
+      line_count: ~
+      md5: b7058f0041a43fcb15e23970c6f3e3ea
+      mtime: 1237985844
+      name: t/mp3/v2.3-mp3HD.mp3
+    - bytesize: 3338
+      file_mime_type: ~
+      line_count: ~
+      md5: e437ce1bce206a6c622a032b7e8a0ce7
+      mtime: 1269368416
+      name: t/mp3/v2.3-multiple-tcon-numeric.mp3
+    - bytesize: 3338
+      file_mime_type: ~
+      line_count: ~
+      md5: 201bc029d2f68e142a2b6b4faef6bf13
+      mtime: 1269368416
+      name: t/mp3/v2.3-multiple-tcon-rx-cr.mp3
+    - bytesize: 3342
+      file_mime_type: ~
+      line_count: ~
+      md5: a7289cdabb859b98974184efef14b0fd
+      mtime: 1269368416
+      name: t/mp3/v2.3-multiple-tcon-text.mp3
+    - bytesize: 3340
+      file_mime_type: ~
+      line_count: ~
+      md5: b3fb8a69ba4deaf4a6d88865c383afb6
+      mtime: 1266444433
+      name: t/mp3/v2.3-multiple-tcon.mp3
+    - bytesize: 8176
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d7b063fbde551d46256321c369879d9
+      mtime: 1237640220
+      name: t/mp3/v2.3-no-audio-frames.mp3
+    - bytesize: 5952
+      file_mime_type: ~
+      line_count: ~
+      md5: 40f1aca58c6f4f8cc0f0eef9e614c021
+      mtime: 1245273887
+      name: t/mp3/v2.3-null-bytes.mp3
+    - bytesize: 4639
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cb11569a30fc9c09d387f1c424f50c3
+      mtime: 1266433763
+      name: t/mp3/v2.3-rgad.mp3
+    - bytesize: 1233
+      file_mime_type: ~
+      line_count: ~
+      md5: 71ad198594c582b12d6fb28156dd6de8
+      mtime: 1269368416
+      name: t/mp3/v2.3-sylt.mp3
+    - bytesize: 6308
+      file_mime_type: ~
+      line_count: ~
+      md5: cf0700e57885f179da29e4bd59f719d1
+      mtime: 1255384785
+      name: t/mp3/v2.3-utf16any.mp3
+    - bytesize: 5500
+      file_mime_type: ~
+      line_count: ~
+      md5: 7861f4acdbd02fe2233e2f182cbd8e49
+      mtime: 1237775536
+      name: t/mp3/v2.3-utf16be.mp3
+    - bytesize: 5500
+      file_mime_type: ~
+      line_count: ~
+      md5: 6dc17a93513d43756ee1db82a19fcf70
+      mtime: 1237775536
+      name: t/mp3/v2.3-utf16le.mp3
+    - bytesize: 18139
+      file_mime_type: ~
+      line_count: ~
+      md5: cd4615dd2e9c8475c9756cf2002a234b
+      mtime: 1269368416
+      name: t/mp3/v2.3-xsop.mp3
+    - bytesize: 5500
+      file_mime_type: ~
+      line_count: ~
+      md5: e64532c49ca3956dd4065d305988323b
+      mtime: 1238642079
+      name: t/mp3/v2.3.mp3
+    - bytesize: 6190
+      file_mime_type: ~
+      line_count: ~
+      md5: 4587e7ade25d448f2f59a47367118d5f
+      mtime: 1240580474
+      name: t/mp3/v2.4-ape.mp3
+    - bytesize: 7828
+      file_mime_type: ~
+      line_count: ~
+      md5: b850d1b5195851984b69df4a9a91d4ce
+      mtime: 1237228039
+      name: t/mp3/v2.4-apic-jpg.mp3
+    - bytesize: 66503
+      file_mime_type: ~
+      line_count: ~
+      md5: d1c3c6b3c58e47e0f3cc7cfb1cc8044c
+      mtime: 1237228039
+      name: t/mp3/v2.4-apic-multiple.mp3
+    - bytesize: 64342
+      file_mime_type: ~
+      line_count: ~
+      md5: 89ad55666e29c4df30735296d6d98e79
+      mtime: 1237228039
+      name: t/mp3/v2.4-apic-png.mp3
+    - bytesize: 50615
+      file_mime_type: ~
+      line_count: ~
+      md5: 1eeaca6a235975b48f5b6d3b7f8ef7d5
+      mtime: 1270046919
+      name: t/mp3/v2.4-apic-unsync.mp3
+    - bytesize: 5637
+      file_mime_type: ~
+      line_count: ~
+      md5: 3bd406a774aeef171432d9d282284266
+      mtime: 1269368416
+      name: t/mp3/v2.4-compressed-frame.mp3
+    - bytesize: 133146
+      file_mime_type: ~
+      line_count: ~
+      md5: 4636641fcf3af3a97bfe2ad61f4952cf
+      mtime: 1255444775
+      name: t/mp3/v2.4-corrupt-frame.mp3
+    - bytesize: 27795
+      file_mime_type: ~
+      line_count: ~
+      md5: 982af6449f49cd7cb9ac449bb1bcdfc7
+      mtime: 1270211701
+      name: t/mp3/v2.4-empty-text.mp3
+    - bytesize: 5634
+      file_mime_type: ~
+      line_count: ~
+      md5: cdd30897dacc4294d19fd16dcdc81301
+      mtime: 1269368416
+      name: t/mp3/v2.4-encrypted-frame.mp3
+    - bytesize: 16072
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dbb0640284da01857b26da10c096d63
+      mtime: 1237228039
+      name: t/mp3/v2.4-geob-multiple.mp3
+    - bytesize: 11925
+      file_mime_type: ~
+      line_count: ~
+      md5: b4f102e8eb1f79110aee1adaff6bfd4a
+      mtime: 1237228039
+      name: t/mp3/v2.4-geob.mp3
+    - bytesize: 5616
+      file_mime_type: ~
+      line_count: ~
+      md5: 70d88756a827368f92137f94b85e7745
+      mtime: 1269368416
+      name: t/mp3/v2.4-group-id.mp3
+    - bytesize: 5487
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bb9a31d66718e4edd8dba8248b440b6
+      mtime: 1238696931
+      name: t/mp3/v2.4-iso-8859-1.mp3
+    - bytesize: 68692
+      file_mime_type: ~
+      line_count: ~
+      md5: 414ae02dda8bef5ffbceccfb7dc80cf7
+      mtime: 1243955044
+      name: t/mp3/v2.4-itunes-broken-syncsafe.mp3
+    - bytesize: 18074
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c39ce4b459d6f5a22e4338af01b0644
+      mtime: 1238013688
+      name: t/mp3/v2.4-itunes81.mp3
+    - bytesize: 3863
+      file_mime_type: ~
+      line_count: ~
+      md5: 99f8ceef64790c536c5cc3f7050c976e
+      mtime: 1269368416
+      name: t/mp3/v2.4-multiple-tcon-numeric.mp3
+    - bytesize: 3865
+      file_mime_type: ~
+      line_count: ~
+      md5: bdf433575274f014215c3079e8862fff
+      mtime: 1259272845
+      name: t/mp3/v2.4-multiple-tcon.mp3
+    - bytesize: 45560
+      file_mime_type: ~
+      line_count: ~
+      md5: cf060ccab96df6af04df0a762acf28d1
+      mtime: 1248555074
+      name: t/mp3/v2.4-rva2-mp3gain.mp3
+    - bytesize: 5615
+      file_mime_type: ~
+      line_count: ~
+      md5: b0fe9a16af8caed89773677f34b22e2c
+      mtime: 1237993049
+      name: t/mp3/v2.4-rva2-neg.mp3
+    - bytesize: 1582
+      file_mime_type: ~
+      line_count: ~
+      md5: 59b80b068098762b2301dd61d39afad1
+      mtime: 1238714065
+      name: t/mp3/v2.4-tipl.mp3
+    - bytesize: 3149
+      file_mime_type: ~
+      line_count: ~
+      md5: ef019cee76cecc4021bd95cf9e9d5b3a
+      mtime: 1269368416
+      name: t/mp3/v2.4-unsync.mp3
+    - bytesize: 5487
+      file_mime_type: ~
+      line_count: ~
+      md5: ce0aa38b476be883bd82d217af0f79c7
+      mtime: 1238696931
+      name: t/mp3/v2.4-utf16be.mp3
+    - bytesize: 5487
+      file_mime_type: ~
+      line_count: ~
+      md5: 89b4728f81180ec9c71c8d41ee172fca
+      mtime: 1238696931
+      name: t/mp3/v2.4-utf16le.mp3
+    - bytesize: 27731
+      file_mime_type: ~
+      line_count: ~
+      md5: a81c31360c3dba22873516ed329e5667
+      mtime: 1269371059
+      name: t/mp3/v2.4-utf8-null-comment.mp3
+    - bytesize: 5487
+      file_mime_type: ~
+      line_count: ~
+      md5: 0780996bedef85cd85f4d306e33e2960
+      mtime: 1238637536
+      name: t/mp3/v2.4-utf8.mp3
+    - bytesize: 5615
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b7c27aa562af50ba7010f2a8fa01793
+      mtime: 1237993049
+      name: t/mp3/v2.4.mp3
+    - bytesize: 9497
+      file_mime_type: ~
+      line_count: ~
+      md5: 733de32836a59dc6198ff2eec81d606e
+      mtime: 1270053057
+      name: t/mp4.t
+    - bytesize: 75502
+      file_mime_type: ~
+      line_count: ~
+      md5: 120c6f5a5bc30e24132752d247719a57
+      mtime: 1251345671
+      name: t/mp4/882-sample-rate.m4a
+    - bytesize: 45703
+      file_mime_type: ~
+      line_count: ~
+      md5: c9f061700df3cbbd994ac6fbf0da3bdf
+      mtime: 1269920595
+      name: t/mp4/alac-multiple-stts.m4a
+    - bytesize: 5077
+      file_mime_type: ~
+      line_count: ~
+      md5: 70963dbfffc7710cf55302815964f80e
+      mtime: 1242929635
+      name: t/mp4/alac.m4a
+    - bytesize: 135015
+      file_mime_type: ~
+      line_count: ~
+      md5: d391cdde3c8c5d5ff77aaa142d716b66
+      mtime: 1254598617
+      name: t/mp4/array-keys-int.m4a
+    - bytesize: 99003
+      file_mime_type: ~
+      line_count: ~
+      md5: 48589c60cc15e14d869f513a2f88fd38
+      mtime: 1251335803
+      name: t/mp4/array-keys.m4a
+    - bytesize: 312412
+      file_mime_type: ~
+      line_count: ~
+      md5: 874afed5e1a4142fcf29d76697bb539c
+      mtime: 1258079929
+      name: t/mp4/hd-aac.m4a
+    - bytesize: 63452
+      file_mime_type: ~
+      line_count: ~
+      md5: 4af51831f8c7017887308f4a7ed6ac9e
+      mtime: 1264699294
+      name: t/mp4/hint-track.m4a
+    - bytesize: 6489
+      file_mime_type: ~
+      line_count: ~
+      md5: 50fd07853b0f40a285c991ffea6d20b9
+      mtime: 1242929635
+      name: t/mp4/itunes811.m4a
+    - bytesize: 24858
+      file_mime_type: ~
+      line_count: ~
+      md5: a07882c0541b7f7addf278c5aa704f13
+      mtime: 1244142232
+      name: t/mp4/leading-mdat.m4a
+    - bytesize: 6489
+      file_mime_type: ~
+      line_count: ~
+      md5: 49611dbbe4a1e12d816e45ffefb6a5b5
+      mtime: 1254426522
+      name: t/mp4/multiple-covers.m4a
+    - bytesize: 34305
+      file_mime_type: ~
+      line_count: ~
+      md5: 752e25cbe6a10b54e8e0dca450597d89
+      mtime: 1255064301
+      name: t/mp4/short-trkn.m4a
+    - bytesize: 2722
+      file_mime_type: ~
+      line_count: ~
+      md5: 86f91143419541dc4509507ddeeb11ed
+      mtime: 1265659925
+      name: t/musepack.t
+    - bytesize: 70718
+      file_mime_type: ~
+      line_count: ~
+      md5: aa02ba96797cf20d8a332f90c60ddf4f
+      mtime: 1265660184
+      name: t/musepack/apev2-cover.mpc
+    - bytesize: 51782
+      file_mime_type: ~
+      line_count: ~
+      md5: b650fe1290f6aefec1436c6e71d99825
+      mtime: 1240581067
+      name: t/musepack/apev2.mpc
+    - bytesize: 208
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ffc7de9bf6d07e8d06ad64fe4bcc93c
+      mtime: 1248663643
+      name: t/musepack/sv8.mpc
+    - bytesize: 7960
+      file_mime_type: ~
+      line_count: ~
+      md5: c5d6c00883906921f0dd33e5919e9eef
+      mtime: 1268273968
+      name: t/ogg.t
+    - bytesize: 25548
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c2a3e8d71f33b239c97d26dbea3080c
+      mtime: 1238276209
+      name: t/ogg/bug1155-1.ogg
+    - bytesize: 5435
+      file_mime_type: ~
+      line_count: ~
+      md5: cb47ed5bb01a1b0c782fc5c8543e1b4d
+      mtime: 1238276209
+      name: t/ogg/bug1155-2.ogg
+    - bytesize: 8202
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b1dd5b11d1ee83b66dae793a30b6636
+      mtime: 1247277376
+      name: t/ogg/bug12615-aotuv.ogg
+    - bytesize: 21513
+      file_mime_type: ~
+      line_count: ~
+      md5: c636b308803d71edaffee677cdf0e977
+      mtime: 1238276209
+      name: t/ogg/bug803.ogg
+    - bytesize: 19025
+      file_mime_type: ~
+      line_count: ~
+      md5: a520b55ab4b87c5beca6dca5c863f1e1
+      mtime: 1238276209
+      name: t/ogg/bug905.ogg
+    - bytesize: 4328
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fd30f7c15e8fa60866fff049dba3ccc
+      mtime: 1237943617
+      name: t/ogg/empty.ogg
+    - bytesize: 5034
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a27b9a2223d7041c96161d428f9d0fc
+      mtime: 1238027221
+      name: t/ogg/equals-char.ogg
+    - bytesize: 50221
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a3cb64d7b2a31d382c6ccefd837f803
+      mtime: 1263349940
+      name: t/ogg/large-page-segments.ogg
+    - bytesize: 111064
+      file_mime_type: ~
+      line_count: ~
+      md5: 66349f7e93484283db61f9be7e3b9a3d
+      mtime: 1238027221
+      name: t/ogg/large-pagesize.ogg
+    - bytesize: 44268
+      file_mime_type: ~
+      line_count: ~
+      md5: eb271768dfaf713577a2a4300aaf598a
+      mtime: 1267503639
+      name: t/ogg/metadata-block-picture.ogg
+    - bytesize: 13046
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bdf1eb2ecd4c07cfbda7ff698edcc8d
+      mtime: 1268256326
+      name: t/ogg/multiple-bitstreams.ogg
+    - bytesize: 5057
+      file_mime_type: ~
+      line_count: ~
+      md5: 242fcfe9a1b59a4e4215ec9b696bcacb
+      mtime: 1238020847
+      name: t/ogg/multiple.ogg
+    - bytesize: 16918
+      file_mime_type: ~
+      line_count: ~
+      md5: 78011df80f26c1569c28dc262725cb36
+      mtime: 1268274969
+      name: t/ogg/normal.ogg
+    - bytesize: 10158
+      file_mime_type: ~
+      line_count: ~
+      md5: 898d9da5202ed5ae267ba37dad494225
+      mtime: 1238027221
+      name: t/ogg/old1.ogg
+    - bytesize: 13512
+      file_mime_type: ~
+      line_count: ~
+      md5: bc8da572c5f51bb10ed2b4965a666956
+      mtime: 1238027221
+      name: t/ogg/old2.ogg
+    - bytesize: 4553
+      file_mime_type: ~
+      line_count: ~
+      md5: 90d66a53dc0e6906fcd0f9b47e40a51d
+      mtime: 1237943617
+      name: t/ogg/test.ogg
+    - bytesize: 812
+      file_mime_type: ~
+      line_count: ~
+      md5: e5827569f256152aedeb82195232d24a
+      mtime: 1262127261
+      name: t/util.t
+    - bytesize: 4186
+      file_mime_type: ~
+      line_count: ~
+      md5: a874fe5e5bcf119054d2559bfd0c4dea
+      mtime: 1269368416
+      name: t/wav.t
+    - bytesize: 13584
+      file_mime_type: ~
+      line_count: ~
+      md5: 44c86db2603f6f41aca5091cd6ceda75
+      mtime: 1240348773
+      name: t/wav/8kmp38.wav
+    - bytesize: 32839
+      file_mime_type: ~
+      line_count: ~
+      md5: d46e6ff92780ea30f945ee5e2300dc04
+      mtime: 1254497629
+      name: t/wav/bug14462-wav-bad-data-size.wav
+    - bytesize: 542
+      file_mime_type: ~
+      line_count: ~
+      md5: 9301c5a6a71d3c4363fe3fe786b1ebe3
+      mtime: 1254487104
+      name: t/wav/bug14462-wav-fmt.wav
+    - bytesize: 4240
+      file_mime_type: ~
+      line_count: ~
+      md5: fff5e22741a28ce59e10278796ba8509
+      mtime: 1240348773
+      name: t/wav/id3.wav
+    - bytesize: 4064
+      file_mime_type: ~
+      line_count: ~
+      md5: 97e86c0fb36388bbcc7e8dab223b855d
+      mtime: 1240430534
+      name: t/wav/wav32-info-badchunk.wav
+    - bytesize: 4046
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b19bbcc8a3270d777a5cf2c3f87df9d
+      mtime: 1256835949
+      name: t/wav/wav32-info-nulls.wav
+    - bytesize: 3896
+      file_mime_type: ~
+      line_count: ~
+      md5: c0e744b35cf8976fa9cbcff864ce1f1f
+      mtime: 1240348773
+      name: t/wav/wav32.wav
+    - bytesize: 5477
+      file_mime_type: ~
+      line_count: ~
+      md5: 54661b6a0711dc9a1d3df26346674be8
+      mtime: 1268662396
+      name: t/wavpack.t
+    - bytesize: 1056
+      file_mime_type: ~
+      line_count: ~
+      md5: eabd3b7ac85a6ebce6e7c551a1a8cd25
+      mtime: 1268662396
+      name: t/wavpack/24-bit.wv
+    - bytesize: 1024
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e8e6f6b95e721dd7a7600a53b9ae0d8
+      mtime: 1268662396
+      name: t/wavpack/6channel.wv
+    - bytesize: 560
+      file_mime_type: ~
+      line_count: ~
+      md5: 293d795221662d7da5410a7ca8de72a6
+      mtime: 1268662396
+      name: t/wavpack/custom-samplerate.wv
+    - bytesize: 25464
+      file_mime_type: ~
+      line_count: ~
+      md5: 8664ce3bf495783d47a010ec2f20368d
+      mtime: 1268662396
+      name: t/wavpack/hybrid.wv
+    - bytesize: 35147
+      file_mime_type: ~
+      line_count: ~
+      md5: 84574e552987aa8d6c8820d02d8a04fc
+      mtime: 1266875822
+      name: t/wavpack/silence-44-s.wv
+    - bytesize: 368
+      file_mime_type: ~
+      line_count: ~
+      md5: 779323470590c5ff07d8a9223b02fcdc
+      mtime: 1268662396
+      name: t/wavpack/v2.wv
+    - bytesize: 176
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e49f54e71b5a7f2f4983d3180ebae39
+      mtime: 1266875822
+      name: t/wavpack/v3.wv
+    - bytesize: 31017
+      file_mime_type: ~
+      line_count: ~
+      md5: 26a8069749c39291b3d019914dcfef01
+      mtime: 1266875822
+      name: t/wavpack/win-executable.wv
+    - bytesize: 795
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a5a588c08713d72deb4f62546d86fb6
+      mtime: 1268346963
+      name: t/wavpack/zero-first-block.wv
+    - bytesize: 1968
+      file_mime_type: ~
+      line_count: ~
+      md5: 60ed527615480e3c2c01f93da973c734
+      mtime: 1269381755
+      name: tools/bench.pl
+    - bytesize: 600
+      file_mime_type: ~
+      line_count: ~
+      md5: 66e1b0dc1a15f004ae46014df33b34bb
+      mtime: 1238011591
+      name: tools/leak.c
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ce4f1d743062a5fb6a4d49b3a4606b5
+      mtime: 1269920594
+      name: tools/leak.pl
+    - bytesize: 68
+      file_mime_type: ~
+      line_count: ~
+      md5: a141d258511da39f5417d9d3484394e8
+      mtime: 1269368416
+      name: win32/README
+    - bytesize: 9876
+      file_mime_type: ~
+      line_count: ~
+      md5: 17a2908344d26a768d6c9626d3914ea8
+      mtime: 1269368416
+      name: win32/zconf.h
+    - bytesize: 67545
+      file_mime_type: ~
+      line_count: ~
+      md5: ead798461ae0367f918ecc3ba531183b
+      mtime: 1269368416
+      name: win32/zlib.h
+    - bytesize: 104438
+      file_mime_type: ~
+      line_count: ~
+      md5: 85ac567641def515c24ba1da18eed921
+      mtime: 1269368416
+      name: win32/zlib.lib
+  module_info:
+    - bytesize: 17426
+      file_mime_type: ~
+      line_count: ~
+      md5: 0997a131c7621bb58c16834bc2023a8c
+      module_name_from_file_guess: Audio::Scan
+      mtime: 1270211701
+      name: blib/lib/Audio/Scan.pm
+      packages:
+        - Audio::Scan
+      primary_package: Audio::Scan
+      uses:
+        - strict
+        - XSLoader
+        - constant
+      version_info:
+        filename: blib/lib/Audio/Scan.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: 0.74
+  modules:
+    - blib/lib/Audio/Scan.pm
+  test_info:
+    - bytesize: 50
+      file_mime_type: ~
+      line_count: ~
+      md5: bd6383cd4642801df7e1c709ecf2752e
+      mtime: 1237240771
+      name: t/01use.t
+      uses:
+        - Test::More
+    - bytesize: 189
+      file_mime_type: ~
+      line_count: ~
+      md5: ae18cd50a4dd26e01b58ebcc2d868a3e
+      mtime: 1237240771
+      name: t/02pod.t
+      uses:
+        - Test::More
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: 82a82cc097e4a650bad76d49ed3b4fcf
+      mtime: 1237240771
+      name: t/03podcoverage.t
+      uses:
+        - Test::More
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: e24fb108815ec289f500bc1f9f6c797f
+      mtime: 1237839211
+      name: t/04critic.t
+      uses:
+        - strict
+        - warnings
+        - File::Spec
+        - FindBin
+        - Test::More
+        - Test::Perl::Critic
+    - bytesize: 2326
+      file_mime_type: ~
+      line_count: ~
+      md5: b4acce28ac7533d561630a8d7124d62d
+      mtime: 1262127261
+      name: t/aac.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 2138
+      file_mime_type: ~
+      line_count: ~
+      md5: 97cd08fa408b4b46cb80f9bf053272a9
+      mtime: 1262127261
+      name: t/aiff.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 13491
+      file_mime_type: ~
+      line_count: ~
+      md5: 50e7bc1362a5e28b1f28cfbb289b55ab
+      mtime: 1269368416
+      name: t/asf.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+        - Encode
+    - bytesize: 6888
+      file_mime_type: ~
+      line_count: ~
+      md5: 87815cd82c7b15bc4d2e30dbb20a9740
+      mtime: 1269368416
+      name: t/flac.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 1365
+      file_mime_type: ~
+      line_count: ~
+      md5: 397be716c82f31654716e4ded7254790
+      mtime: 1266434744
+      name: t/mac.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 40066
+      file_mime_type: ~
+      line_count: ~
+      md5: 8443856c3fe1c2736688ceee3769fed5
+      mtime: 1270211701
+      name: t/mp3.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+        - Encode
+    - bytesize: 9497
+      file_mime_type: ~
+      line_count: ~
+      md5: 733de32836a59dc6198ff2eec81d606e
+      mtime: 1270053057
+      name: t/mp4.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 2722
+      file_mime_type: ~
+      line_count: ~
+      md5: 86f91143419541dc4509507ddeeb11ed
+      mtime: 1265659925
+      name: t/musepack.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 7960
+      file_mime_type: ~
+      line_count: ~
+      md5: c5d6c00883906921f0dd33e5919e9eef
+      mtime: 1268273968
+      name: t/ogg.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+        - Encode
+    - bytesize: 812
+      file_mime_type: ~
+      line_count: ~
+      md5: e5827569f256152aedeb82195232d24a
+      mtime: 1262127261
+      name: t/util.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 4186
+      file_mime_type: ~
+      line_count: ~
+      md5: a874fe5e5bcf119054d2559bfd0c4dea
+      mtime: 1269368416
+      name: t/wav.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+    - bytesize: 5477
+      file_mime_type: ~
+      line_count: ~
+      md5: 54661b6a0711dc9a1d3df26346674be8
+      mtime: 1268662396
+      name: t/wavpack.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - FindBin
+        - Test::More
+        - Audio::Scan
+  tests:
+    - t/01use.t
+    - t/02pod.t
+    - t/03podcoverage.t
+    - t/04critic.t
+    - t/aac.t
+    - t/aiff.t
+    - t/asf.t
+    - t/flac.t
+    - t/mac.t
+    - t/mp3.t
+    - t/mp4.t
+    - t/musepack.t
+    - t/ogg.t
+    - t/util.t
+    - t/wav.t
+    - t/wavpack.t
+  unpack_dir: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.COxw
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 10884
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271520316
+  examine_start_time: 1271520281
+  examine_time: 35
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 49674
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 10884
+  ppid: 49674
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/V9ROrc6a2G
+  run_end_time: 1271520316
+  run_start_time: 1271520281
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/V9ROrc6a2G
+  uuid: A833DB74-4A2B-11DF-BFBC-508FE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

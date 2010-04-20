@@ -1,0 +1,2168 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Perl extension for SSL and TLS using MatrixSSL.org
+    author:
+      - 'C. N. Drake <christopher@pobox.com>'
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.31
+    license: ~
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.2.html
+      version: 1.2
+    name: Crypt-MatrixSSL
+    requires: ~
+    version: 1.86
+  blib:
+    - blib/lib/Crypt/MatrixSSL.pm
+    - blib/lib/Crypt/mxgg.pl
+    - blib/lib/Crypt/sample_functions.pl
+    - blib/lib/Crypt/sample_ssl_client.pl
+    - blib/lib/Crypt/sample_ssl_server.pl
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Crypt::MatrixSSL
+    
+    
+    You appear to be directly connected to the Internet.
+    I have a test that grabs https://www.google.com/
+    
+    Do you want to enable this test? [y] y
+  build_output: |
+    cp sample_ssl_client.pl blib/lib/Crypt/sample_ssl_client.pl
+    cp sample_functions.pl blib/lib/Crypt/sample_functions.pl
+    cp mxgg.pl blib/lib/Crypt/mxgg.pl
+    cp sample_ssl_server.pl blib/lib/Crypt/sample_ssl_server.pl
+    cp MatrixSSL.pm blib/lib/Crypt/MatrixSSL.pm
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/sha1.c -omatrixssl-1-8-6-open/src/crypto/peersec/sha1.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/md2.c -omatrixssl-1-8-6-open/src/crypto/peersec/md2.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/mpi.c -omatrixssl-1-8-6-open/src/crypto/peersec/mpi.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/md5.c -omatrixssl-1-8-6-open/src/crypto/peersec/md5.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/base64.c -omatrixssl-1-8-6-open/src/crypto/peersec/base64.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/des3.c -omatrixssl-1-8-6-open/src/crypto/peersec/des3.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/rsa.c -omatrixssl-1-8-6-open/src/crypto/peersec/rsa.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/crypto/peersec/arc4.c -omatrixssl-1-8-6-open/src/crypto/peersec/arc4.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/cipherSuite.c -omatrixssl-1-8-6-open/src/cipherSuite.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/pki/x509.c -omatrixssl-1-8-6-open/src/pki/x509.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/pki/asn1.c -omatrixssl-1-8-6-open/src/pki/asn1.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/pki/rsaPki.c -omatrixssl-1-8-6-open/src/pki/rsaPki.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/sslv3.c -omatrixssl-1-8-6-open/src/sslv3.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/sslDecode.c -omatrixssl-1-8-6-open/src/sslDecode.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/sslEncode.c -omatrixssl-1-8-6-open/src/sslEncode.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/matrixSsl.c -omatrixssl-1-8-6-open/src/matrixSsl.o
+    cc -c  -I. -Imatrixssl-1-8-6-open  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"1.86\"  -DXS_VERSION=\"1.86\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DLINUX matrixssl-1-8-6-open/src/os/linux/linux.c -omatrixssl-1-8-6-open/src/os/linux/linux.o
+    matrixssl-1-8-6-open/src/os/linux/linux.c: In function 'sslOpenOsdep':
+    matrixssl-1-8-6-open/src/os/linux/linux.c:125: error: 'PTHREAD_MUTEX_RECURSIVE_NP' undeclared (first use in this function)
+    matrixssl-1-8-6-open/src/os/linux/linux.c:125: error: (Each undeclared identifier is reported only once
+    matrixssl-1-8-6-open/src/os/linux/linux.c:125: error: for each function it appears in.)
+    *** Error code 1
+    
+    Stop in /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86.
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: zip
+  dist_author: CDRAKE
+  dist_basename: Crypt-MatrixSSL-1.86.0.zip
+  dist_date: 1231247996
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV/Crypt-MatrixSSL-1.86
+  dist_file: /home/brian/CPAN/authors/id/C/CD/CDRAKE/Crypt-MatrixSSL-1.86.0.zip
+  dist_md5: 715d39346e5d736caccc95ed9df88796
+  dist_size: 700468
+  manifest:
+    - CAcertCln.pem
+    - CAcertSrv.pem
+    - Changes
+    - Crypt-MatrixSSL.ppd
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - MatrixSSL.pm
+    - MatrixSSL.xs
+    - README
+    - ca-certificates.crt
+    - certCln.pem
+    - certSrv.pem
+    - const-c.inc
+    - const-xs.inc
+    - matrixCommon.h
+    - matrixSsl.h
+    - matrixssl-1-1-5-open.files
+    - matrixssl-1-7-3-open.files
+    - matrixssl-1-8-2.files
+    - matrixssl-1-8-2.patch
+    - matrixssl-1-8-3-open.files
+    - matrixssl-1-8-6-open.files
+    - matrixssl-1-8-6-open/doc/MatrixSSL-1.8.6-ReleaseNotes.pdf
+    - matrixssl-1-8-6-open/doc/MatrixSSLApi.pdf
+    - matrixssl-1-8-6-open/doc/MatrixSSLDeveloperGuide.pdf
+    - matrixssl-1-8-6-open/doc/MatrixSSLKeyGeneration.pdf
+    - matrixssl-1-8-6-open/doc/MatrixSSLPortingGuide.pdf
+    - matrixssl-1-8-6-open/doc/MatrixSSLReadme.pdf
+    - matrixssl-1-8-6-open/doc/MatrixSSLSocketApi.pdf
+    - matrixssl-1-8-6-open/examples/CAcertSrv.der
+    - matrixssl-1-8-6-open/examples/CAcertSrv.pem
+    - matrixssl-1-8-6-open/examples/Makefile
+    - matrixssl-1-8-6-open/examples/certSrv.der
+    - matrixssl-1-8-6-open/examples/certSrv.p12
+    - matrixssl-1-8-6-open/examples/certSrv.pem
+    - matrixssl-1-8-6-open/examples/httpsClient.c
+    - matrixssl-1-8-6-open/examples/httpsClient.sln
+    - matrixssl-1-8-6-open/examples/httpsClient.vcproj
+    - matrixssl-1-8-6-open/examples/httpsReflector.c
+    - matrixssl-1-8-6-open/examples/httpsReflector.sln
+    - matrixssl-1-8-6-open/examples/httpsReflector.vcproj
+    - matrixssl-1-8-6-open/examples/privkeySrv.der
+    - matrixssl-1-8-6-open/examples/privkeySrv.pem
+    - matrixssl-1-8-6-open/examples/sslSocket.c
+    - matrixssl-1-8-6-open/examples/sslSocket.h
+    - matrixssl-1-8-6-open/license.txt
+    - matrixssl-1-8-6-open/matrixCommon.h
+    - matrixssl-1-8-6-open/matrixSsl.h
+    - matrixssl-1-8-6-open/src/Makefile
+    - matrixssl-1-8-6-open/src/cipherSuite.c
+    - matrixssl-1-8-6-open/src/crypto/cryptoLayer.h
+    - matrixssl-1-8-6-open/src/crypto/matrixCrypto.h
+    - matrixssl-1-8-6-open/src/crypto/peersec/arc4.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/base64.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/des3.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/md2.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/md5.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/mpi.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/mpi.h
+    - matrixssl-1-8-6-open/src/crypto/peersec/pscrypto.h
+    - matrixssl-1-8-6-open/src/crypto/peersec/rsa.c
+    - matrixssl-1-8-6-open/src/crypto/peersec/sha1.c
+    - matrixssl-1-8-6-open/src/matrixConfig.h
+    - matrixssl-1-8-6-open/src/matrixInternal.h
+    - matrixssl-1-8-6-open/src/matrixSsl.c
+    - matrixssl-1-8-6-open/src/matrixSsl.vcproj
+    - matrixssl-1-8-6-open/src/matrixSslStatic.vcproj
+    - matrixssl-1-8-6-open/src/os/debug.c
+    - matrixssl-1-8-6-open/src/os/linux/linux.c
+    - matrixssl-1-8-6-open/src/os/osLayer.h
+    - matrixssl-1-8-6-open/src/os/psMalloc.h
+    - matrixssl-1-8-6-open/src/os/vxworks/vxworks.c
+    - matrixssl-1-8-6-open/src/os/win/win.c
+    - matrixssl-1-8-6-open/src/pki/asn1.c
+    - matrixssl-1-8-6-open/src/pki/matrixPki.h
+    - matrixssl-1-8-6-open/src/pki/pkiInternal.h
+    - matrixssl-1-8-6-open/src/pki/rsaPki.c
+    - matrixssl-1-8-6-open/src/pki/x509.c
+    - matrixssl-1-8-6-open/src/sslDecode.c
+    - matrixssl-1-8-6-open/src/sslEncode.c
+    - matrixssl-1-8-6-open/src/sslv3.c
+    - matrixssl-1-8-open.files
+    - mxgg.pl
+    - ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.bs
+    - ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.dll
+    - ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.exp
+    - ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.lib
+    - ppmblib/lib/Crypt/MatrixSSL.pm
+    - ppmblib/lib/Crypt/mxgg.pl
+    - ppmblib/lib/Crypt/sample_functions.pl
+    - ppmblib/lib/Crypt/sample_ssl_client.pl
+    - ppmblib/lib/Crypt/sample_ssl_server.pl
+    - ppmhtml/site/lib/Crypt/MatrixSSL.html
+    - ppport.h
+    - privkeyCln.pem
+    - privkeySrv.pem
+    - sample_functions.pl
+    - sample_ssl_client.pl
+    - sample_ssl_server.pl
+    - t/00.load.t
+    - t/Crypt-MatrixSSL.t
+    - t/cert/testca.crt
+    - t/cert/testca.crt.der
+    - t/cert/testca.key
+    - t/cert/testca.serial
+    - t/cert/testserver.crt
+    - t/cert/testserver.crt.der
+    - t/cert/testserver.key
+    - t/cert/testserver.key.der
+    - t/cert/testserver.key.des3
+    - t/client_server.t
+    - t/export-const.t
+    - t/export.t
+    - t/leak.t
+    - t/matrixSslReadKeys.t
+    - typemap
+  manifest_file_info:
+    - bytesize: 968
+      file_mime_type: ~
+      line_count: ~
+      md5: 81dafd61a3220072d87227e9b4bedfda
+      mtime: 1115274472
+      name: CAcertCln.pem
+    - bytesize: 968
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ec8f35b377868902c3ffc0926f22e40
+      mtime: 1115274466
+      name: CAcertSrv.pem
+    - bytesize: 13472
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1231257480
+      name: Changes
+    - bytesize: 672
+      file_mime_type: ~
+      line_count: ~
+      md5: 739aa7699aa4176b9971be1bcf7681d4
+      mtime: 1231269072
+      name: Crypt-MatrixSSL.ppd
+    - bytesize: 5039
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1231268208
+      name: MANIFEST
+    - bytesize: 418
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1231269130
+      name: META.yml
+    - bytesize: 11912
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1231235336
+      name: Makefile.PL
+    - bytesize: 10301
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c9c07be7623b3a40c6d1308c877010e
+      mtime: 1231235370
+      name: MatrixSSL.pm
+    - bytesize: 12514
+      file_mime_type: ~
+      line_count: ~
+      md5: a43fa37f05839726d6bb6f929abea505
+      mtime: 1231237018
+      name: MatrixSSL.xs
+    - bytesize: 1404
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1231235390
+      name: README
+    - bytesize: 147980
+      file_mime_type: ~
+      line_count: ~
+      md5: 91a6e79189f9fcbd909689ae31d1be90
+      mtime: 1162234578
+      name: ca-certificates.crt
+    - bytesize: 944
+      file_mime_type: ~
+      line_count: ~
+      md5: 0033f8ebaca323fc36af239d15fdd6de
+      mtime: 1115274460
+      name: certCln.pem
+    - bytesize: 944
+      file_mime_type: ~
+      line_count: ~
+      md5: dafec0cde8b6c2f97a37244b7fe42816
+      mtime: 1115274454
+      name: certSrv.pem
+    - bytesize: 12491
+      file_mime_type: ~
+      line_count: ~
+      md5: 282c6b8d299b48a3b313562b0c1f764e
+      mtime: 1231269118
+      name: const-c.inc
+    - bytesize: 2672
+      file_mime_type: ~
+      line_count: ~
+      md5: ae790e9005140dbf867058ce86d8dbe9
+      mtime: 1231269118
+      name: const-xs.inc
+    - bytesize: 5206
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a19694207f72a33ff19b5ae9429624c
+      mtime: 1231269118
+      name: matrixCommon.h
+    - bytesize: 5617
+      file_mime_type: ~
+      line_count: ~
+      md5: c07cf22e9d3b8b296978e22c3f9d4e85
+      mtime: 1231269118
+      name: matrixSsl.h
+    - bytesize: 631
+      file_mime_type: ~
+      line_count: ~
+      md5: 58a5b044569a6855c62c66a18c98b1e1
+      mtime: 1162073546
+      name: matrixssl-1-1-5-open.files
+    - bytesize: 727
+      file_mime_type: ~
+      line_count: ~
+      md5: 208792467705d0f5ff94a0c7d630f146
+      mtime: 1162073546
+      name: matrixssl-1-7-3-open.files
+    - bytesize: 619
+      file_mime_type: ~
+      line_count: ~
+      md5: 0829004acc3893faffb2522056a99849
+      mtime: 1162077598
+      name: matrixssl-1-8-2.files
+    - bytesize: 626
+      file_mime_type: ~
+      line_count: ~
+      md5: ca2e4183569e30de4e64e4cb226e652b
+      mtime: 1162078148
+      name: matrixssl-1-8-2.patch
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 6727575aaf6401ad6fbe49af86b7636f
+      mtime: 1175416688
+      name: matrixssl-1-8-3-open.files
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: fb8475ca4b936d3f9dc066af2641283e
+      mtime: 1231235816
+      name: matrixssl-1-8-6-open.files
+    - bytesize: 37440
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f98d074ae36ac9286bf7682681bf7ec
+      mtime: 1220399904
+      name: matrixssl-1-8-6-open/doc/MatrixSSL-1.8.6-ReleaseNotes.pdf
+    - bytesize: 129393
+      file_mime_type: ~
+      line_count: ~
+      md5: eeefa924feca73ac34b20efb32577673
+      mtime: 1220396408
+      name: matrixssl-1-8-6-open/doc/MatrixSSLApi.pdf
+    - bytesize: 90280
+      file_mime_type: ~
+      line_count: ~
+      md5: 306a306f0fd845fd1e522da89bcb370a
+      mtime: 1220396408
+      name: matrixssl-1-8-6-open/doc/MatrixSSLDeveloperGuide.pdf
+    - bytesize: 38107
+      file_mime_type: ~
+      line_count: ~
+      md5: 2df734fc5e83039f709a9fa097213b0f
+      mtime: 1220396408
+      name: matrixssl-1-8-6-open/doc/MatrixSSLKeyGeneration.pdf
+    - bytesize: 18563
+      file_mime_type: ~
+      line_count: ~
+      md5: f6cc5d07f085221005d30513f7a0ac1b
+      mtime: 1220396408
+      name: matrixssl-1-8-6-open/doc/MatrixSSLPortingGuide.pdf
+    - bytesize: 28497
+      file_mime_type: ~
+      line_count: ~
+      md5: e33761597ca470091432aae4fbac1264
+      mtime: 1220396408
+      name: matrixssl-1-8-6-open/doc/MatrixSSLReadme.pdf
+    - bytesize: 33437
+      file_mime_type: ~
+      line_count: ~
+      md5: 59fcb8ced67630d12c47f4a88d964e41
+      mtime: 1220396408
+      name: matrixssl-1-8-6-open/doc/MatrixSSLSocketApi.pdf
+    - bytesize: 663
+      file_mime_type: ~
+      line_count: ~
+      md5: 801bfddb56f6c2cb3bd942b294e8c097
+      mtime: 1175018602
+      name: matrixssl-1-8-6-open/examples/CAcertSrv.der
+    - bytesize: 952
+      file_mime_type: ~
+      line_count: ~
+      md5: e81147adaf20b369469c7afa13831491
+      mtime: 1175018616
+      name: matrixssl-1-8-6-open/examples/CAcertSrv.pem
+    - bytesize: 1818
+      file_mime_type: ~
+      line_count: ~
+      md5: d63f932ed315727595974902893261d1
+      mtime: 1219806884
+      name: matrixssl-1-8-6-open/examples/Makefile
+    - bytesize: 644
+      file_mime_type: ~
+      line_count: ~
+      md5: 9089a329c2b04c793d978984fd1a7fc3
+      mtime: 1175018602
+      name: matrixssl-1-8-6-open/examples/certSrv.der
+    - bytesize: 1806
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b789893a1e21daa420b2f488d20b91c
+      mtime: 1175018602
+      name: matrixssl-1-8-6-open/examples/certSrv.p12
+    - bytesize: 928
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c28698ca04fe7834e5697ab395e05a2
+      mtime: 1175018616
+      name: matrixssl-1-8-6-open/examples/certSrv.pem
+    - bytesize: 10093
+      file_mime_type: ~
+      line_count: ~
+      md5: 4dfb4629e06133882b2bdce099e0d400
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/examples/httpsClient.c
+    - bytesize: 1417
+      file_mime_type: ~
+      line_count: ~
+      md5: 13b2b3e945e9ecbee2b1ba7641d14302
+      mtime: 1083026834
+      name: matrixssl-1-8-6-open/examples/httpsClient.sln
+    - bytesize: 2552
+      file_mime_type: ~
+      line_count: ~
+      md5: a75fd434798b4e74c7a075248572a18b
+      mtime: 1219974630
+      name: matrixssl-1-8-6-open/examples/httpsClient.vcproj
+    - bytesize: 8558
+      file_mime_type: ~
+      line_count: ~
+      md5: 15dbac0411857198b1fedee8ffc03180
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/examples/httpsReflector.c
+    - bytesize: 1423
+      file_mime_type: ~
+      line_count: ~
+      md5: 59627f6ff28622cd7b5e7b55ea3a42ca
+      mtime: 1083026834
+      name: matrixssl-1-8-6-open/examples/httpsReflector.sln
+    - bytesize: 2614
+      file_mime_type: ~
+      line_count: ~
+      md5: 4badc927ddd97b9bd8d840448d5229a2
+      mtime: 1219974690
+      name: matrixssl-1-8-6-open/examples/httpsReflector.vcproj
+    - bytesize: 608
+      file_mime_type: ~
+      line_count: ~
+      md5: cfbb54e57ae2f86388f1f10f39a296a7
+      mtime: 1175018602
+      name: matrixssl-1-8-6-open/examples/privkeySrv.der
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: d1efe5fc177776b53d01708dd0595a2d
+      mtime: 1175018616
+      name: matrixssl-1-8-6-open/examples/privkeySrv.pem
+    - bytesize: 28058
+      file_mime_type: ~
+      line_count: ~
+      md5: cfe8c1ab7af73e24a6f7eccd424acd26
+      mtime: 1219974722
+      name: matrixssl-1-8-6-open/examples/sslSocket.c
+    - bytesize: 4724
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a302ad57e6129be87f46a5b2b53b9ae
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/examples/sslSocket.h
+    - bytesize: 15856
+      file_mime_type: ~
+      line_count: ~
+      md5: dd2d9c27478c0b0501853097c32957bf
+      mtime: 1074580108
+      name: matrixssl-1-8-6-open/license.txt
+    - bytesize: 5158
+      file_mime_type: ~
+      line_count: ~
+      md5: 44225b92e6e69c5670f0925a5917839d
+      mtime: 1219979244
+      name: matrixssl-1-8-6-open/matrixCommon.h
+    - bytesize: 5581
+      file_mime_type: ~
+      line_count: ~
+      md5: d520378bb740a1a53d89d673155eaa7b
+      mtime: 1219979254
+      name: matrixssl-1-8-6-open/matrixSsl.h
+    - bytesize: 2895
+      file_mime_type: ~
+      line_count: ~
+      md5: 256f6533cec11a4c1a671f19786ce5cd
+      mtime: 1220396028
+      name: matrixssl-1-8-6-open/src/Makefile
+    - bytesize: 11918
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c8f31697c104644d4d31bcd07a1e91a
+      mtime: 1219976960
+      name: matrixssl-1-8-6-open/src/cipherSuite.c
+    - bytesize: 4084
+      file_mime_type: ~
+      line_count: ~
+      md5: 780d513b1206a8d8e920b973081081f1
+      mtime: 1219975716
+      name: matrixssl-1-8-6-open/src/crypto/cryptoLayer.h
+    - bytesize: 5192
+      file_mime_type: ~
+      line_count: ~
+      md5: bd2e6fcb46d9d0eb6ff9229c376663c8
+      mtime: 1219975758
+      name: matrixssl-1-8-6-open/src/crypto/matrixCrypto.h
+    - bytesize: 3077
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c1d4a5d14ebf177b0bf479c5cfe0d98
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/crypto/peersec/arc4.c
+    - bytesize: 3743
+      file_mime_type: ~
+      line_count: ~
+      md5: 9253be91433936bd406d8ee3c76b84b5
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/crypto/peersec/base64.c
+    - bytesize: 24035
+      file_mime_type: ~
+      line_count: ~
+      md5: ebd5e85d6b94fbbbfb2127e8b292fe02
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/crypto/peersec/des3.c
+    - bytesize: 6853
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b59f59016b622fe6fb864a7dfe87ec1
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/crypto/peersec/md2.c
+    - bytesize: 11063
+      file_mime_type: ~
+      line_count: ~
+      md5: 95a56dc14001d99ba3b5a4a843dd8253
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/crypto/peersec/md5.c
+    - bytesize: 69792
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c6a261c2e3dcc9191e9f683ff8f7340
+      mtime: 1219975288
+      name: matrixssl-1-8-6-open/src/crypto/peersec/mpi.c
+    - bytesize: 11173
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c76cb8c96d0c8a45ac5d313d6a532d5
+      mtime: 1219975372
+      name: matrixssl-1-8-6-open/src/crypto/peersec/mpi.h
+    - bytesize: 20099
+      file_mime_type: ~
+      line_count: ~
+      md5: ec871df3857b975fb2396583b72403e8
+      mtime: 1219975438
+      name: matrixssl-1-8-6-open/src/crypto/peersec/pscrypto.h
+    - bytesize: 11927
+      file_mime_type: ~
+      line_count: ~
+      md5: c3ba53626c31a56a937cb6f59906fd5a
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/crypto/peersec/rsa.c
+    - bytesize: 7441
+      file_mime_type: ~
+      line_count: ~
+      md5: 674087d5a25848fb7a9a4a1aedf5c460
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/crypto/peersec/sha1.c
+    - bytesize: 3506
+      file_mime_type: ~
+      line_count: ~
+      md5: 1800631f485469b292519f8eb5871670
+      mtime: 1219977118
+      name: matrixssl-1-8-6-open/src/matrixConfig.h
+    - bytesize: 11371
+      file_mime_type: ~
+      line_count: ~
+      md5: 2df343c970ac43b6860b2bced617fc9b
+      mtime: 1219977326
+      name: matrixssl-1-8-6-open/src/matrixInternal.h
+    - bytesize: 23305
+      file_mime_type: ~
+      line_count: ~
+      md5: 9199950e8c61656713b8b55bf11f3e6d
+      mtime: 1219977598
+      name: matrixssl-1-8-6-open/src/matrixSsl.c
+    - bytesize: 5581
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b55884e88c2554f4be91279dec8d224
+      mtime: 1220396150
+      name: matrixssl-1-8-6-open/src/matrixSsl.vcproj
+    - bytesize: 5500
+      file_mime_type: ~
+      line_count: ~
+      md5: 04457bdddf85839cc1d0b0ef0a6fbd0a
+      mtime: 1219808170
+      name: matrixssl-1-8-6-open/src/matrixSslStatic.vcproj
+    - bytesize: 1830
+      file_mime_type: ~
+      line_count: ~
+      md5: 3229ac6b74b4b6e118fceee57bf2f9ff
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/os/debug.c
+    - bytesize: 8721
+      file_mime_type: ~
+      line_count: ~
+      md5: 025385dbc0ca1b57bd8321a8c47b4c0c
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/os/linux/linux.c
+    - bytesize: 5592
+      file_mime_type: ~
+      line_count: ~
+      md5: f5872693e6253f29dfd65452cd025eb4
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/os/osLayer.h
+    - bytesize: 2041
+      file_mime_type: ~
+      line_count: ~
+      md5: f48ef6abf23df5b4ce1e61f97253e37b
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/os/psMalloc.h
+    - bytesize: 5254
+      file_mime_type: ~
+      line_count: ~
+      md5: d48629ee95ec9258e3cd65985840d093
+      mtime: 1220395804
+      name: matrixssl-1-8-6-open/src/os/vxworks/vxworks.c
+    - bytesize: 5332
+      file_mime_type: ~
+      line_count: ~
+      md5: 4aff4943b8bace226a37f4caf7773791
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/os/win/win.c
+    - bytesize: 11432
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d41ce5cbdf7226bf236a63f59d12a2a
+      mtime: 1219808168
+      name: matrixssl-1-8-6-open/src/pki/asn1.c
+    - bytesize: 5048
+      file_mime_type: ~
+      line_count: ~
+      md5: 06b124b804d37c4c503e19d85e755479
+      mtime: 1231269118
+      name: matrixssl-1-8-6-open/src/pki/matrixPki.h
+    - bytesize: 6696
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c0e0ee00e782f1c5152ce52b2607928
+      mtime: 1219976038
+      name: matrixssl-1-8-6-open/src/pki/pkiInternal.h
+    - bytesize: 18610
+      file_mime_type: ~
+      line_count: ~
+      md5: f9c7a2955c3374107a603db9df8a6bb1
+      mtime: 1219976350
+      name: matrixssl-1-8-6-open/src/pki/rsaPki.c
+    - bytesize: 46673
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f0f5c5adb59279073fcd00493b01b68
+      mtime: 1219976518
+      name: matrixssl-1-8-6-open/src/pki/x509.c
+    - bytesize: 43659
+      file_mime_type: ~
+      line_count: ~
+      md5: 4413685904f8aba7a8065b0fc6078e9e
+      mtime: 1219978486
+      name: matrixssl-1-8-6-open/src/sslDecode.c
+    - bytesize: 35119
+      file_mime_type: ~
+      line_count: ~
+      md5: 37df19716428c7f651a6d3a2253f4fb7
+      mtime: 1219978770
+      name: matrixssl-1-8-6-open/src/sslEncode.c
+    - bytesize: 12066
+      file_mime_type: ~
+      line_count: ~
+      md5: 82c8d21fe084d107967213eb3e8449a4
+      mtime: 1219808166
+      name: matrixssl-1-8-6-open/src/sslv3.c
+    - bytesize: 673
+      file_mime_type: ~
+      line_count: ~
+      md5: e0de42664f6f04ddea0db8da67adcba0
+      mtime: 1162073546
+      name: matrixssl-1-8-open.files
+    - bytesize: 4551
+      file_mime_type: ~
+      line_count: ~
+      md5: effa65612a6c3d964782926d09c5ab20
+      mtime: 1144438178
+      name: mxgg.pl
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: e12798544a9baecc013a7b12a15fc293
+      mtime: 1231248000
+      name: ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.bs
+    - bytesize: 82043
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b369a4effcd1dfb3e871b1c2c1abea6
+      mtime: 1231248000
+      name: ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.dll
+    - bytesize: 8373
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e36ca4c99a0554f12ab6975c8088067
+      mtime: 1231248000
+      name: ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.exp
+    - bytesize: 15014
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cb6a82b039659eb32ea4391efc43214
+      mtime: 1231248000
+      name: ppmblib/arch/auto/Crypt/MatrixSSL/MatrixSSL.lib
+    - bytesize: 10301
+      file_mime_type: ~
+      line_count: ~
+      md5: 492a739163947ae338f578d7ab7e3c11
+      mtime: 1231247640
+      name: ppmblib/lib/Crypt/MatrixSSL.pm
+    - bytesize: 4551
+      file_mime_type: ~
+      line_count: ~
+      md5: 6226671090ed108a164acf1ea78a687b
+      mtime: 1231247640
+      name: ppmblib/lib/Crypt/mxgg.pl
+    - bytesize: 3474
+      file_mime_type: ~
+      line_count: ~
+      md5: 3222159c7951c44bd4db71307a61baeb
+      mtime: 1231247640
+      name: ppmblib/lib/Crypt/sample_functions.pl
+    - bytesize: 1597
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cbe675dc446257a76775562cfe1a731
+      mtime: 1231247640
+      name: ppmblib/lib/Crypt/sample_ssl_client.pl
+    - bytesize: 1756
+      file_mime_type: ~
+      line_count: ~
+      md5: a28b75ea19ebd2691fc8838270a5b4e2
+      mtime: 1231247640
+      name: ppmblib/lib/Crypt/sample_ssl_server.pl
+    - bytesize: 13544
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b9041a4bb730d7cba5ebbe260be2b34
+      mtime: 1231267032
+      name: ppmhtml/site/lib/Crypt/MatrixSSL.html
+    - bytesize: 30889
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b6bab0f2880616983951107ca9596e8
+      mtime: 1105980904
+      name: ppport.h
+    - bytesize: 898
+      file_mime_type: ~
+      line_count: ~
+      md5: 39cbb1ad870956753e2956db295be43d
+      mtime: 1115274446
+      name: privkeyCln.pem
+    - bytesize: 898
+      file_mime_type: ~
+      line_count: ~
+      md5: f34e774f4394f0a600808cfc3751d01b
+      mtime: 1115274440
+      name: privkeySrv.pem
+    - bytesize: 3474
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ecc55c9f1fb42d0cf05790a879fc638
+      mtime: 1162073668
+      name: sample_functions.pl
+    - bytesize: 1597
+      file_mime_type: ~
+      line_count: ~
+      md5: f2496348c7805086320d75be55712909
+      mtime: 1162073668
+      name: sample_ssl_client.pl
+    - bytesize: 1756
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b208a75e64e68ce77eced4cafbaa552
+      mtime: 1162073668
+      name: sample_ssl_server.pl
+    - bytesize: 132
+      file_mime_type: ~
+      line_count: ~
+      md5: ff9da73ee850e86d8e6f1a38616d30ec
+      mtime: 1162073546
+      name: t/00.load.t
+    - bytesize: 23243
+      file_mime_type: ~
+      line_count: ~
+      md5: a9ad671cfb40cce7e8b105737f4cb821
+      mtime: 1231257518
+      name: t/Crypt-MatrixSSL.t
+    - bytesize: 952
+      file_mime_type: ~
+      line_count: ~
+      md5: 41819643ea9498fae9651503887af0ca
+      mtime: 1149787506
+      name: t/cert/testca.crt
+    - bytesize: 663
+      file_mime_type: ~
+      line_count: ~
+      md5: b8bfdbe5ff0712b9cb243b9154df629e
+      mtime: 1149794746
+      name: t/cert/testca.crt.der
+    - bytesize: 891
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d958bb996320f3f026fcd722a406692
+      mtime: 1149787464
+      name: t/cert/testca.key
+    - bytesize: 3
+      file_mime_type: ~
+      line_count: ~
+      md5: 91646724ff0fcd68f3e1ce4ac1dd287b
+      mtime: 1149787538
+      name: t/cert/testca.serial
+    - bytesize: 956
+      file_mime_type: ~
+      line_count: ~
+      md5: c058fa673b13802ffe8625487680d0b3
+      mtime: 1149787538
+      name: t/cert/testserver.crt
+    - bytesize: 664
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bfda9c8db5cdbd755351efea3ce66ca
+      mtime: 1149794746
+      name: t/cert/testserver.crt.der
+    - bytesize: 887
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bb66939f767313f1fb01e24699d2735
+      mtime: 1149787516
+      name: t/cert/testserver.key
+    - bytesize: 608
+      file_mime_type: ~
+      line_count: ~
+      md5: 79ff6b61947954097170bfc9f77690f5
+      mtime: 1149794746
+      name: t/cert/testserver.key.der
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: d81700d99007023c966cea3af41b1619
+      mtime: 1149801546
+      name: t/cert/testserver.key.des3
+    - bytesize: 5037
+      file_mime_type: ~
+      line_count: ~
+      md5: 9878db7aec4cea488d2ea7c831580af6
+      mtime: 1162073546
+      name: t/client_server.t
+    - bytesize: 191
+      file_mime_type: ~
+      line_count: ~
+      md5: ef771cfaa14be95136d00c9d20a5f15e
+      mtime: 1162073546
+      name: t/export-const.t
+    - bytesize: 2310
+      file_mime_type: ~
+      line_count: ~
+      md5: 45b41498ed4f851b0990bcd376e6e011
+      mtime: 1162073668
+      name: t/export.t
+    - bytesize: 9847
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cca156a641365ba1d69c7aae7482fc5
+      mtime: 1231251338
+      name: t/leak.t
+    - bytesize: 3414
+      file_mime_type: ~
+      line_count: ~
+      md5: bb024359efca1ef4d0564be9f6c3bd43
+      mtime: 1231250688
+      name: t/matrixSslReadKeys.t
+    - bytesize: 55
+      file_mime_type: ~
+      line_count: ~
+      md5: f421e5dc171b308cac8ecaead365643f
+      mtime: 1162073546
+      name: typemap
+  module_info:
+    - bytesize: 10301
+      file_mime_type: ~
+      line_count: ~
+      md5: c9cffd13031da81914372a4d79661998
+      module_name_from_file_guess: Crypt::MatrixSSL
+      mtime: 1231235370
+      name: blib/lib/Crypt/MatrixSSL.pm
+      packages:
+        - Crypt::MatrixSSL
+      primary_package: Crypt::MatrixSSL
+      uses:
+        - ''
+        - strict
+        - warnings
+        - XSLoader
+      version_info:
+        filename: blib/lib/Crypt/MatrixSSL.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 1.86
+  modules:
+    - blib/lib/Crypt/MatrixSSL.pm
+  test_info:
+    - bytesize: 2310
+      file_mime_type: ~
+      line_count: ~
+      md5: 45b41498ed4f851b0990bcd376e6e011
+      mtime: 1162073668
+      name: t/export.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Crypt::MatrixSSL
+    - bytesize: 23243
+      file_mime_type: ~
+      line_count: ~
+      md5: a9ad671cfb40cce7e8b105737f4cb821
+      mtime: 1231257518
+      name: t/Crypt-MatrixSSL.t
+      uses:
+        - ExtUtils::testlib
+        - Test::More
+        - strict
+        - Crypt::MatrixSSL
+        - IO::Socket
+    - bytesize: 132
+      file_mime_type: ~
+      line_count: ~
+      md5: ff9da73ee850e86d8e6f1a38616d30ec
+      mtime: 1162073546
+      name: t/00.load.t
+      uses:
+        - Test::More
+    - bytesize: 3414
+      file_mime_type: ~
+      line_count: ~
+      md5: bb024359efca1ef4d0564be9f6c3bd43
+      mtime: 1231250688
+      name: t/matrixSslReadKeys.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Crypt::MatrixSSL
+    - bytesize: 191
+      file_mime_type: ~
+      line_count: ~
+      md5: ef771cfaa14be95136d00c9d20a5f15e
+      mtime: 1162073546
+      name: t/export-const.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Test::Exception
+        - Crypt::MatrixSSL
+    - bytesize: 5037
+      file_mime_type: ~
+      line_count: ~
+      md5: 9878db7aec4cea488d2ea7c831580af6
+      mtime: 1162073546
+      name: t/client_server.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Crypt::MatrixSSL
+    - bytesize: 9847
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cca156a641365ba1d69c7aae7482fc5
+      mtime: 1231251338
+      name: t/leak.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Crypt::MatrixSSL
+        - Carp
+  tests:
+    - t/export.t
+    - t/Crypt-MatrixSSL.t
+    - t/00.load.t
+    - t/matrixSslReadKeys.t
+    - t/export-const.t
+    - t/client_server.t
+    - t/leak.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-24663._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 24663
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269029858
+  examine_start_time: 1269029843
+  examine_time: 15
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 24663
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269029858
+  run_start_time: 1269029843
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

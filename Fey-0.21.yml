@@ -1,0 +1,3442 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Better SQL Generation Through Perl
+    author:
+      - 'Dave Rolsky, <autarch@urth.org>'
+    build_requires:
+      DBI: 0
+      Fey::Test: 0.05
+      File::Temp: 0
+      Test::MockObject: 0
+      Test::More: 0
+    generated_by: Module::Build version 0.31012
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.2.html
+      version: 1.2
+    name: Fey
+    provides:
+      Fey:
+        file: lib/Fey.pm
+        version: 0.21
+      Fey::Column:
+        file: lib/Fey/Column.pm
+      Fey::Column::Alias:
+        file: lib/Fey/Column/Alias.pm
+      Fey::Exceptions:
+        file: lib/Fey/Exceptions.pm
+      Fey::FK:
+        file: lib/Fey/FK.pm
+      Fey::FakeDBI:
+        file: lib/Fey/FakeDBI.pm
+      Fey::Literal:
+        file: lib/Fey/Literal.pm
+      Fey::Literal::Function:
+        file: lib/Fey/Literal/Function.pm
+      Fey::Literal::Null:
+        file: lib/Fey/Literal/Null.pm
+      Fey::Literal::Number:
+        file: lib/Fey/Literal/Number.pm
+      Fey::Literal::String:
+        file: lib/Fey/Literal/String.pm
+      Fey::Literal::Term:
+        file: lib/Fey/Literal/Term.pm
+      Fey::NamedObjectSet:
+        file: lib/Fey/NamedObjectSet.pm
+      Fey::Placeholder:
+        file: lib/Fey/Placeholder.pm
+      Fey::Role::ColumnLike:
+        file: lib/Fey/Role/ColumnLike.pm
+      Fey::Role::Comparable:
+        file: lib/Fey/Role/Comparable.pm
+      Fey::Role::Groupable:
+        file: lib/Fey/Role/Groupable.pm
+      Fey::Role::Joinable:
+        file: lib/Fey/Role/Joinable.pm
+      Fey::Role::Named:
+        file: lib/Fey/Role/Named.pm
+      Fey::Role::Orderable:
+        file: lib/Fey/Role/Orderable.pm
+      Fey::Role::SQL::HasBindParams:
+        file: lib/Fey/Role/SQL/HasBindParams.pm
+      Fey::Role::SQL::HasLimitClause:
+        file: lib/Fey/Role/SQL/HasLimitClause.pm
+      Fey::Role::SQL::HasOrderByClause:
+        file: lib/Fey/Role/SQL/HasOrderByClause.pm
+      Fey::Role::SQL::HasWhereClause:
+        file: lib/Fey/Role/SQL/HasWhereClause.pm
+      Fey::Role::Selectable:
+        file: lib/Fey/Role/Selectable.pm
+      Fey::Role::TableLike:
+        file: lib/Fey/Role/TableLike.pm
+      Fey::SQL:
+        file: lib/Fey/SQL.pm
+      Fey::SQL::Delete:
+        file: lib/Fey/SQL/Delete.pm
+      Fey::SQL::Fragment::Join:
+        file: lib/Fey/SQL/Fragment/Join.pm
+      Fey::SQL::Fragment::SubSelect:
+        file: lib/Fey/SQL/Fragment/SubSelect.pm
+      Fey::SQL::Fragment::Where::Boolean:
+        file: lib/Fey/SQL/Fragment/Where/Boolean.pm
+      Fey::SQL::Fragment::Where::Comparison:
+        file: lib/Fey/SQL/Fragment/Where/Comparison.pm
+      Fey::SQL::Fragment::Where::SubgroupEnd:
+        file: lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+      Fey::SQL::Fragment::Where::SubgroupStart:
+        file: lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+      Fey::SQL::Insert:
+        file: lib/Fey/SQL/Insert.pm
+      Fey::SQL::Select:
+        file: lib/Fey/SQL/Select.pm
+      Fey::SQL::Update:
+        file: lib/Fey/SQL/Update.pm
+      Fey::SQL::Where:
+        file: lib/Fey/SQL/Where.pm
+      Fey::Schema:
+        file: lib/Fey/Schema.pm
+      Fey::Table:
+        file: lib/Fey/Table.pm
+      Fey::Table::Alias:
+        file: lib/Fey/Table/Alias.pm
+      Fey::Types:
+        file: lib/Fey/Types.pm
+    recommends:
+      Test::Memory::Cycle: 0
+    requires:
+      Exception::Class: 0
+      Exporter: 0
+      List::AllUtils: 0
+      Moose: 0.66
+      MooseX::AttributeHelpers: 0.13
+      MooseX::Params::Validate: 0.08
+      MooseX::SemiAffordanceAccessor: 0.03
+      MooseX::StrictConstructor: 0.07
+      Scalar::Util: 0
+      Task::Weaken: 0.99
+    resources:
+      bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Fey
+      homepage: http://www.fey-project.org/
+      license: http://dev.perl.org/licenses/
+      repository: http://hg.urth.org/hg/Fey
+    version: 0.21
+  blib:
+    - blib/lib/Fey.pm
+    - blib/lib/Fey/Column.pm
+    - blib/lib/Fey/Column/Alias.pm
+    - blib/lib/Fey/Exceptions.pm
+    - blib/lib/Fey/FK.pm
+    - blib/lib/Fey/FakeDBI.pm
+    - blib/lib/Fey/Literal.pm
+    - blib/lib/Fey/Literal/Function.pm
+    - blib/lib/Fey/Literal/Null.pm
+    - blib/lib/Fey/Literal/Number.pm
+    - blib/lib/Fey/Literal/String.pm
+    - blib/lib/Fey/Literal/Term.pm
+    - blib/lib/Fey/NamedObjectSet.pm
+    - blib/lib/Fey/Placeholder.pm
+    - blib/lib/Fey/Role/ColumnLike.pm
+    - blib/lib/Fey/Role/Comparable.pm
+    - blib/lib/Fey/Role/Groupable.pm
+    - blib/lib/Fey/Role/Joinable.pm
+    - blib/lib/Fey/Role/Named.pm
+    - blib/lib/Fey/Role/Orderable.pm
+    - blib/lib/Fey/Role/SQL/HasBindParams.pm
+    - blib/lib/Fey/Role/SQL/HasLimitClause.pm
+    - blib/lib/Fey/Role/SQL/HasOrderByClause.pm
+    - blib/lib/Fey/Role/SQL/HasWhereClause.pm
+    - blib/lib/Fey/Role/Selectable.pm
+    - blib/lib/Fey/Role/TableLike.pm
+    - blib/lib/Fey/SQL.pm
+    - blib/lib/Fey/SQL/Delete.pm
+    - blib/lib/Fey/SQL/Fragment/Join.pm
+    - blib/lib/Fey/SQL/Fragment/SubSelect.pm
+    - blib/lib/Fey/SQL/Fragment/Where/Boolean.pm
+    - blib/lib/Fey/SQL/Fragment/Where/Comparison.pm
+    - blib/lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+    - blib/lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+    - blib/lib/Fey/SQL/Insert.pm
+    - blib/lib/Fey/SQL/Select.pm
+    - blib/lib/Fey/SQL/Update.pm
+    - blib/lib/Fey/SQL/Where.pm
+    - blib/lib/Fey/Schema.pm
+    - blib/lib/Fey/Table.pm
+    - blib/lib/Fey/Table/Alias.pm
+    - blib/lib/Fey/Types.pm
+    - blib/libdoc/Fey.3
+    - blib/libdoc/Fey::Column.3
+    - blib/libdoc/Fey::Column::Alias.3
+    - blib/libdoc/Fey::Exceptions.3
+    - blib/libdoc/Fey::FK.3
+    - blib/libdoc/Fey::FakeDBI.3
+    - blib/libdoc/Fey::Literal.3
+    - blib/libdoc/Fey::Literal::Function.3
+    - blib/libdoc/Fey::Literal::Null.3
+    - blib/libdoc/Fey::Literal::Number.3
+    - blib/libdoc/Fey::Literal::String.3
+    - blib/libdoc/Fey::Literal::Term.3
+    - blib/libdoc/Fey::NamedObjectSet.3
+    - blib/libdoc/Fey::Placeholder.3
+    - blib/libdoc/Fey::Role::ColumnLike.3
+    - blib/libdoc/Fey::Role::Comparable.3
+    - blib/libdoc/Fey::Role::Groupable.3
+    - blib/libdoc/Fey::Role::Joinable.3
+    - blib/libdoc/Fey::Role::Named.3
+    - blib/libdoc/Fey::Role::Orderable.3
+    - blib/libdoc/Fey::Role::SQL::HasBindParams.3
+    - blib/libdoc/Fey::Role::SQL::HasLimitClause.3
+    - blib/libdoc/Fey::Role::SQL::HasOrderByClause.3
+    - blib/libdoc/Fey::Role::SQL::HasWhereClause.3
+    - blib/libdoc/Fey::Role::Selectable.3
+    - blib/libdoc/Fey::Role::TableLike.3
+    - blib/libdoc/Fey::SQL.3
+    - blib/libdoc/Fey::SQL::Delete.3
+    - blib/libdoc/Fey::SQL::Fragment::Join.3
+    - blib/libdoc/Fey::SQL::Fragment::SubSelect.3
+    - blib/libdoc/Fey::SQL::Fragment::Where::Boolean.3
+    - blib/libdoc/Fey::SQL::Fragment::Where::Comparison.3
+    - blib/libdoc/Fey::SQL::Fragment::Where::SubgroupEnd.3
+    - blib/libdoc/Fey::SQL::Fragment::Where::SubgroupStart.3
+    - blib/libdoc/Fey::SQL::Insert.3
+    - blib/libdoc/Fey::SQL::Select.3
+    - blib/libdoc/Fey::SQL::Update.3
+    - blib/libdoc/Fey::SQL::Where.3
+    - blib/libdoc/Fey::Schema.3
+    - blib/libdoc/Fey::Table.3
+    - blib/libdoc/Fey::Table::Alias.3
+    - blib/libdoc/Fey::Types.3
+  build_file: Build.PL
+  build_file_output: |
+    Checking prerequisites...
+      requires:
+        !  Exception::Class is not installed
+        !  List::AllUtils is not installed
+        !  Moose is not installed
+        !  MooseX::AttributeHelpers is not installed
+        !  MooseX::Params::Validate is not installed
+        !  MooseX::SemiAffordanceAccessor is not installed
+        !  MooseX::StrictConstructor is not installed
+      build_requires:
+        !  DBI is not installed
+        !  Fey::Test is not installed
+        !  Test::MockObject is not installed
+      recommends:
+        *  Test::Memory::Cycle is not installed
+    
+    ERRORS/WARNINGS FOUND IN PREREQUISITES.  You may wish to install the versions
+    of the modules indicated above before proceeding with this installation
+    
+    Run 'Build installdeps' to install missing prerequisites.
+    
+    Creating new 'MYMETA.yml' with configuration results
+    Creating new 'Build' script for 'Fey' version '0.21'
+  build_output: "Building Fey\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+      make: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Build.PL
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Makefile.PL
+    build_files:
+      Build.PL: Build.PL
+      Makefile.PL: Makefile.PL
+    build_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21
+    has_build_and_makefile: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Makefile.PL
+    has_build_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Build.PL
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: 0.3603
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: 1
+    uses_module_build_compat: 1
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DROLSKY
+  dist_basename: Fey-0.21.tar.gz
+  dist_date: 1235491973
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT/Fey-0.21
+  dist_file: /home/brian/CPAN/authors/id/D/DR/DROLSKY/Fey-0.21.tar.gz
+  dist_md5: 17b7e9f725c5a81bad148a670b3bb2e8
+  dist_size: 65972
+  manifest:
+    - Build.PL
+    - Changes
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - SIGNATURE
+    - lib/Fey.pm
+    - lib/Fey/Column.pm
+    - lib/Fey/Column/Alias.pm
+    - lib/Fey/Exceptions.pm
+    - lib/Fey/FK.pm
+    - lib/Fey/FakeDBI.pm
+    - lib/Fey/Literal.pm
+    - lib/Fey/Literal/Function.pm
+    - lib/Fey/Literal/Null.pm
+    - lib/Fey/Literal/Number.pm
+    - lib/Fey/Literal/String.pm
+    - lib/Fey/Literal/Term.pm
+    - lib/Fey/NamedObjectSet.pm
+    - lib/Fey/Placeholder.pm
+    - lib/Fey/Role/ColumnLike.pm
+    - lib/Fey/Role/Comparable.pm
+    - lib/Fey/Role/Groupable.pm
+    - lib/Fey/Role/Joinable.pm
+    - lib/Fey/Role/Named.pm
+    - lib/Fey/Role/Orderable.pm
+    - lib/Fey/Role/SQL/HasBindParams.pm
+    - lib/Fey/Role/SQL/HasLimitClause.pm
+    - lib/Fey/Role/SQL/HasOrderByClause.pm
+    - lib/Fey/Role/SQL/HasWhereClause.pm
+    - lib/Fey/Role/Selectable.pm
+    - lib/Fey/Role/TableLike.pm
+    - lib/Fey/SQL.pm
+    - lib/Fey/SQL/Delete.pm
+    - lib/Fey/SQL/Fragment/Join.pm
+    - lib/Fey/SQL/Fragment/SubSelect.pm
+    - lib/Fey/SQL/Fragment/Where/Boolean.pm
+    - lib/Fey/SQL/Fragment/Where/Comparison.pm
+    - lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+    - lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+    - lib/Fey/SQL/Insert.pm
+    - lib/Fey/SQL/Select.pm
+    - lib/Fey/SQL/Update.pm
+    - lib/Fey/SQL/Where.pm
+    - lib/Fey/Schema.pm
+    - lib/Fey/Table.pm
+    - lib/Fey/Table/Alias.pm
+    - lib/Fey/Types.pm
+    - t/Column-guess-type.t
+    - t/Column.t
+    - t/Column/Alias.t
+    - t/Exceptions.t
+    - t/FK.t
+    - t/FakeDBI.t
+    - t/Literal-as-sql.t
+    - t/Literal.t
+    - t/NamedObjectSet.t
+    - t/SQL-limit-clause.t
+    - t/SQL-order-by-clause.t
+    - t/SQL-where-clause.t
+    - t/SQL.t
+    - t/SQL/Delete-bind-params.t
+    - t/SQL/Delete.t
+    - t/SQL/Insert-bind-params.t
+    - t/SQL/Insert.t
+    - t/SQL/Select-bind-params.t
+    - t/SQL/Select-from-clause.t
+    - t/SQL/Select-group-by-clause.t
+    - t/SQL/Select-having-clause.t
+    - t/SQL/Select-select-clause.t
+    - t/SQL/Update-bind-params.t
+    - t/SQL/Update.t
+    - t/Schema-memory-cycle.t
+    - t/Schema.t
+    - t/Table.t
+    - t/Table/Alias.t
+    - t/kwalitee.t
+    - t/pod-coverage.t
+    - t/pod.t
+  manifest_file_info:
+    - bytesize: 1656
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1235491939
+      name: Build.PL
+    - bytesize: 5091
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1235491939
+      name: Changes
+    - bytesize: 20545
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1235491939
+      name: LICENSE
+    - bytesize: 1778
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1235491939
+      name: MANIFEST
+    - bytesize: 3370
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1235491939
+      name: META.yml
+    - bytesize: 1126
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1235491939
+      name: Makefile.PL
+    - bytesize: 14558
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1235491939
+      name: README
+    - bytesize: 6127
+      file_mime_type: ~
+      line_count: ~
+      md5: ef21bf22481e7930df1e2bda54025095
+      mtime: 1235491944
+      name: SIGNATURE
+    - bytesize: 13718
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f5639caadebcc97d89c0634ed3ef238
+      mtime: 1235491939
+      name: lib/Fey.pm
+    - bytesize: 6792
+      file_mime_type: ~
+      line_count: ~
+      md5: d6013dbee7c306f7f970c52625fd79cc
+      mtime: 1235491939
+      name: lib/Fey/Column.pm
+    - bytesize: 3732
+      file_mime_type: ~
+      line_count: ~
+      md5: 24707da3a117320fd390196f14981d64
+      mtime: 1235491939
+      name: lib/Fey/Column/Alias.pm
+    - bytesize: 2522
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b7f9725527acbe1f22e298c738ca4e2
+      mtime: 1235491939
+      name: lib/Fey/Exceptions.pm
+    - bytesize: 7193
+      file_mime_type: ~
+      line_count: ~
+      md5: bb9727b54778cda4e9d56cfca980f11b
+      mtime: 1235491939
+      name: lib/Fey/FK.pm
+    - bytesize: 1355
+      file_mime_type: ~
+      line_count: ~
+      md5: 52d443c2a37ca583b8b9330522505706
+      mtime: 1235491939
+      name: lib/Fey/FakeDBI.pm
+    - bytesize: 2574
+      file_mime_type: ~
+      line_count: ~
+      md5: 61806ff465399d245a5bd1c6d865e475
+      mtime: 1235491939
+      name: lib/Fey/Literal.pm
+    - bytesize: 3951
+      file_mime_type: ~
+      line_count: ~
+      md5: 0aedaeda3f5aeb71bfc20db86afd374f
+      mtime: 1235491939
+      name: lib/Fey/Literal/Function.pm
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: ab995cb627ee150bb2d8424979101e3e
+      mtime: 1235491939
+      name: lib/Fey/Literal/Null.pm
+    - bytesize: 1708
+      file_mime_type: ~
+      line_count: ~
+      md5: b0cff39860ca96d46913cb86e654ecca
+      mtime: 1235491939
+      name: lib/Fey/Literal/Number.pm
+    - bytesize: 1696
+      file_mime_type: ~
+      line_count: ~
+      md5: a4444ebb2ad816ce658ac89eba191ebc
+      mtime: 1235491939
+      name: lib/Fey/Literal/String.pm
+    - bytesize: 2653
+      file_mime_type: ~
+      line_count: ~
+      md5: 067c5162ab90f33a42f5b1a95c2f66af
+      mtime: 1235491939
+      name: lib/Fey/Literal/Term.pm
+    - bytesize: 3055
+      file_mime_type: ~
+      line_count: ~
+      md5: 92ff6ec3ebde4c205255e1dd17909d6e
+      mtime: 1235491939
+      name: lib/Fey/NamedObjectSet.pm
+    - bytesize: 1239
+      file_mime_type: ~
+      line_count: ~
+      md5: c96e35b9e3c280e4d184f8b5d37a7e7d
+      mtime: 1235491939
+      name: lib/Fey/Placeholder.pm
+    - bytesize: 1992
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d71c586cd0bc13d9270850b7638a671
+      mtime: 1235491939
+      name: lib/Fey/Role/ColumnLike.pm
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d7c75936a03a612e0e12f28bf5a56fe
+      mtime: 1235491939
+      name: lib/Fey/Role/Comparable.pm
+    - bytesize: 830
+      file_mime_type: ~
+      line_count: ~
+      md5: bad7a5ec046fc2649db460e97a9e9cd4
+      mtime: 1235491939
+      name: lib/Fey/Role/Groupable.pm
+    - bytesize: 842
+      file_mime_type: ~
+      line_count: ~
+      md5: e089b5c96d4178a4628f0292f8dd2ec5
+      mtime: 1235491939
+      name: lib/Fey/Role/Joinable.pm
+    - bytesize: 691
+      file_mime_type: ~
+      line_count: ~
+      md5: f849f8fe59be173b9ee05c590fce334e
+      mtime: 1235491939
+      name: lib/Fey/Role/Named.pm
+    - bytesize: 830
+      file_mime_type: ~
+      line_count: ~
+      md5: 221867b56804647ecf18abffd6739029
+      mtime: 1235491939
+      name: lib/Fey/Role/Orderable.pm
+    - bytesize: 1533
+      file_mime_type: ~
+      line_count: ~
+      md5: 2179444e46a2a870299de7a94e4f0027
+      mtime: 1235491939
+      name: lib/Fey/Role/SQL/HasBindParams.pm
+    - bytesize: 1984
+      file_mime_type: ~
+      line_count: ~
+      md5: 5444b82fed985922f1118db48ec6d586
+      mtime: 1235491939
+      name: lib/Fey/Role/SQL/HasLimitClause.pm
+    - bytesize: 2270
+      file_mime_type: ~
+      line_count: ~
+      md5: 38c070e05c2cfd0d93e9ef4560104ce7
+      mtime: 1235491939
+      name: lib/Fey/Role/SQL/HasOrderByClause.pm
+    - bytesize: 4608
+      file_mime_type: ~
+      line_count: ~
+      md5: 83e5c12df33065d25281f6de9466466f
+      mtime: 1235491939
+      name: lib/Fey/Role/SQL/HasWhereClause.pm
+    - bytesize: 821
+      file_mime_type: ~
+      line_count: ~
+      md5: b4d71ec9431c7a68677c093a99944c39
+      mtime: 1235491939
+      name: lib/Fey/Role/Selectable.pm
+    - bytesize: 702
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a1b712b7fcd2609bcc880c6a08583ca
+      mtime: 1235491939
+      name: lib/Fey/Role/TableLike.pm
+    - bytesize: 7974
+      file_mime_type: ~
+      line_count: ~
+      md5: 18d0a58628b1cb1caa8e29a803c5047e
+      mtime: 1235491939
+      name: lib/Fey/SQL.pm
+    - bytesize: 4056
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cb6d3db4522fc2d06b881a984bc4578
+      mtime: 1235491939
+      name: lib/Fey/SQL/Delete.pm
+    - bytesize: 4952
+      file_mime_type: ~
+      line_count: ~
+      md5: c6b9f7afe02125f2004b39be80895bbd
+      mtime: 1235491939
+      name: lib/Fey/SQL/Fragment/Join.pm
+    - bytesize: 1958
+      file_mime_type: ~
+      line_count: ~
+      md5: dc56b6dc9162e72f27368c90a7ed6a3a
+      mtime: 1235491939
+      name: lib/Fey/SQL/Fragment/SubSelect.pm
+    - bytesize: 920
+      file_mime_type: ~
+      line_count: ~
+      md5: 657ca7c5fd10a7a62a0558786bf98c80
+      mtime: 1235491939
+      name: lib/Fey/SQL/Fragment/Where/Boolean.pm
+    - bytesize: 4769
+      file_mime_type: ~
+      line_count: ~
+      md5: 965e4b667e9834df32f12c9fbdaeae0a
+      mtime: 1235491939
+      name: lib/Fey/SQL/Fragment/Where/Comparison.pm
+    - bytesize: 801
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fd549a893e797bdb8671b6a9122f2d2
+      mtime: 1235491939
+      name: lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: 651519421ca8ba07b7f1db47eba834a0
+      mtime: 1235491939
+      name: lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+    - bytesize: 6056
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b61023c322e4023f0875a60d322edf7
+      mtime: 1235491939
+      name: lib/Fey/SQL/Insert.pm
+    - bytesize: 17426
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b530902dad1e6f5bd7729a564e7561c
+      mtime: 1235491939
+      name: lib/Fey/SQL/Select.pm
+    - bytesize: 7080
+      file_mime_type: ~
+      line_count: ~
+      md5: 05b2d8427ec8f1d2d409246416a725c5
+      mtime: 1235491939
+      name: lib/Fey/SQL/Update.pm
+    - bytesize: 1443
+      file_mime_type: ~
+      line_count: ~
+      md5: 845f7d1266001b9c3f3f3419cf4d23b4
+      mtime: 1235491939
+      name: lib/Fey/SQL/Where.pm
+    - bytesize: 7808
+      file_mime_type: ~
+      line_count: ~
+      md5: fbe1d24862737c52ac6cd83be21decf3
+      mtime: 1235491939
+      name: lib/Fey/Schema.pm
+    - bytesize: 11883
+      file_mime_type: ~
+      line_count: ~
+      md5: f7548703254891415cf6ba062f0caf2d
+      mtime: 1235491939
+      name: lib/Fey/Table.pm
+    - bytesize: 4287
+      file_mime_type: ~
+      line_count: ~
+      md5: d308b370dbaf58ec1cc30a7f2983f35f
+      mtime: 1235491939
+      name: lib/Fey/Table/Alias.pm
+    - bytesize: 6043
+      file_mime_type: ~
+      line_count: ~
+      md5: c68d1f02091b4854352e9f743fd42e51
+      mtime: 1235491939
+      name: lib/Fey/Types.pm
+    - bytesize: 2898
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ff1ec0e39074dd85e5804df0ec9ba4e
+      mtime: 1235491939
+      name: t/Column-guess-type.t
+    - bytesize: 3547
+      file_mime_type: ~
+      line_count: ~
+      md5: 45ed3a866ba1f87eaf6670d0fa9b22d8
+      mtime: 1235491939
+      name: t/Column.t
+    - bytesize: 1898
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f0fd0bdc6a9d3385416f71177d8c15d
+      mtime: 1235491939
+      name: t/Column/Alias.t
+    - bytesize: 82
+      file_mime_type: ~
+      line_count: ~
+      md5: d3b0d1a64da613e0e0e495e287ebaae7
+      mtime: 1235491939
+      name: t/Exceptions.t
+    - bytesize: 4677
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b907e4ae176a6abaf36f0901338c468
+      mtime: 1235491939
+      name: t/FK.t
+    - bytesize: 230
+      file_mime_type: ~
+      line_count: ~
+      md5: 776b309e9cec0b4fad9ea935c07dcd6e
+      mtime: 1235491939
+      name: t/FakeDBI.t
+    - bytesize: 5307
+      file_mime_type: ~
+      line_count: ~
+      md5: dbc9f13223823d0e72e68bc313981d06
+      mtime: 1235491939
+      name: t/Literal-as-sql.t
+    - bytesize: 1282
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f27cc9d847114549c4a3c924533478a
+      mtime: 1235491939
+      name: t/Literal.t
+    - bytesize: 2172
+      file_mime_type: ~
+      line_count: ~
+      md5: 46697ddda0947c5981f217cd6b67f5cd
+      mtime: 1235491939
+      name: t/NamedObjectSet.t
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 754b5102d3f554ae8ebd139ae0d829e4
+      mtime: 1235491939
+      name: t/SQL-limit-clause.t
+    - bytesize: 2850
+      file_mime_type: ~
+      line_count: ~
+      md5: c7ee926be9c59278ad7bfd6b27090ee0
+      mtime: 1235491939
+      name: t/SQL-order-by-clause.t
+    - bytesize: 11206
+      file_mime_type: ~
+      line_count: ~
+      md5: 270c7011cef1a7239ad755da194994e2
+      mtime: 1235491939
+      name: t/SQL-where-clause.t
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ee2d480800ec9ec973359f58f413d18
+      mtime: 1235491939
+      name: t/SQL.t
+    - bytesize: 685
+      file_mime_type: ~
+      line_count: ~
+      md5: 620675a551c9037b72c44478dc1bd568
+      mtime: 1235491939
+      name: t/SQL/Delete-bind-params.t
+    - bytesize: 1376
+      file_mime_type: ~
+      line_count: ~
+      md5: b54ed68437ed99965e6e843f4f0c3645
+      mtime: 1235491939
+      name: t/SQL/Delete.t
+    - bytesize: 1017
+      file_mime_type: ~
+      line_count: ~
+      md5: b7289ba922e1038d39f3b3efd90f1eba
+      mtime: 1235491939
+      name: t/SQL/Insert-bind-params.t
+    - bytesize: 6563
+      file_mime_type: ~
+      line_count: ~
+      md5: f84dfd63992e741e64bdbd5d1d16ac49
+      mtime: 1235491939
+      name: t/SQL/Insert.t
+    - bytesize: 5355
+      file_mime_type: ~
+      line_count: ~
+      md5: 9191b27f17ce4be535b2ba0c6ff6aa7e
+      mtime: 1235491939
+      name: t/SQL/Select-bind-params.t
+    - bytesize: 12420
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b3df9ac4b1fb673e3203591dc9764bf
+      mtime: 1235491939
+      name: t/SQL/Select-from-clause.t
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: f83bef33277f0ac8729098c7c50e8e24
+      mtime: 1235491939
+      name: t/SQL/Select-group-by-clause.t
+    - bytesize: 5580
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a1167ad42f062545e5f9fbeaeb7cf7a
+      mtime: 1235491939
+      name: t/SQL/Select-having-clause.t
+    - bytesize: 4107
+      file_mime_type: ~
+      line_count: ~
+      md5: fad56946d342344931a038b4f2f010a8
+      mtime: 1235491939
+      name: t/SQL/Select-select-clause.t
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fa19c472147215b3c2b642ba1654d6d
+      mtime: 1235491939
+      name: t/SQL/Update-bind-params.t
+    - bytesize: 7034
+      file_mime_type: ~
+      line_count: ~
+      md5: e187008ea8d801325e27ce21025c9def
+      mtime: 1235491939
+      name: t/SQL/Update.t
+    - bytesize: 412
+      file_mime_type: ~
+      line_count: ~
+      md5: c54e94186d7242e1647afa5f0eeb7d29
+      mtime: 1235491939
+      name: t/Schema-memory-cycle.t
+    - bytesize: 6266
+      file_mime_type: ~
+      line_count: ~
+      md5: a86f81744fa7fa8b10b7f024e166a2b1
+      mtime: 1235491939
+      name: t/Schema.t
+    - bytesize: 6511
+      file_mime_type: ~
+      line_count: ~
+      md5: fa1901084363a4e8aa5a9e12658d5c53
+      mtime: 1235491939
+      name: t/Table.t
+    - bytesize: 2509
+      file_mime_type: ~
+      line_count: ~
+      md5: eea618eaa946a395ba5bbe059f395f6f
+      mtime: 1235491939
+      name: t/Table/Alias.t
+    - bytesize: 285
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a295b4cdad594cdb42dffc6978102b9
+      mtime: 1235491939
+      name: t/kwalitee.t
+    - bytesize: 903
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1235491939
+      name: t/pod-coverage.t
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1235491939
+      name: t/pod.t
+  module_info:
+    - bytesize: 13718
+      file_mime_type: ~
+      line_count: ~
+      md5: b9387e8509c91a905629488900a97d3d
+      module_name_from_file_guess: Fey
+      mtime: 1270069909
+      name: blib/lib/Fey.pm
+      packages:
+        - Fey
+      primary_package: Fey
+      uses:
+        - strict
+        - warnings
+        - Moose
+      version_info:
+        filename: blib/lib/Fey.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 0.21
+    - bytesize: 6792
+      file_mime_type: ~
+      line_count: ~
+      md5: 5894ddd1d0a5d81745fcf4bfd5d15a60
+      module_name_from_file_guess: Fey::Column
+      mtime: 1270069909
+      name: blib/lib/Fey/Column.pm
+      packages:
+        - Fey::Column
+      primary_package: Fey::Column
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - Fey::Column::Alias
+        - Fey::Exceptions
+        - Fey::Literal
+        - Fey::Table
+        - Fey::Table::Alias
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Column.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3732
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c59fa548e72e4953a7c5499ae0921cd
+      module_name_from_file_guess: Fey::Column::Alias
+      mtime: 1270069909
+      name: blib/lib/Fey/Column/Alias.pm
+      packages:
+        - Fey::Column::Alias
+      primary_package: Fey::Column::Alias
+      uses:
+        - strict
+        - warnings
+        - Fey::Column
+        - Fey::Exceptions
+        - Fey::Table
+        - Fey::Table::Alias
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Column/Alias.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2522
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c671315dc052e11e560e94528bfc78d
+      module_name_from_file_guess: Fey::Exceptions
+      mtime: 1270069909
+      name: blib/lib/Fey/Exceptions.pm
+      packages:
+        - Fey::Exceptions
+      primary_package: Fey::Exceptions
+      uses:
+        - strict
+        - warnings
+        - Exception::Class
+        - base
+      version_info:
+        filename: blib/lib/Fey/Exceptions.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7193
+      file_mime_type: ~
+      line_count: ~
+      md5: 24511e13246d28fda0fb1484c264920a
+      module_name_from_file_guess: Fey::FK
+      mtime: 1270069909
+      name: blib/lib/Fey/FK.pm
+      packages:
+        - Fey::FK
+      primary_package: Fey::FK
+      uses:
+        - strict
+        - warnings
+        - Fey::Column
+        - Fey::Exceptions
+        - Fey::Types
+        - List::AllUtils
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Fey/FK.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1355
+      file_mime_type: ~
+      line_count: ~
+      md5: 22e028aab8453a9133bdc0e168162f55
+      module_name_from_file_guess: Fey::FakeDBI
+      mtime: 1270069909
+      name: blib/lib/Fey/FakeDBI.pm
+      packages:
+        - Fey::FakeDBI
+      primary_package: Fey::FakeDBI
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Fey/FakeDBI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2574
+      file_mime_type: ~
+      line_count: ~
+      md5: f39e41f9df433218286c16756e8e4f41
+      module_name_from_file_guess: Fey::Literal
+      mtime: 1270069909
+      name: blib/lib/Fey/Literal.pm
+      packages:
+        - Fey::Literal
+      primary_package: Fey::Literal
+      uses:
+        - strict
+        - warnings
+        - Fey::FakeDBI
+        - Fey::Types
+        - Scalar::Util
+        - overload
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+        - Fey::Literal::Function
+        - Fey::Literal::Null
+        - Fey::Literal::Number
+        - Fey::Literal::String
+        - Fey::Literal::Term
+      version_info:
+        filename: blib/lib/Fey/Literal.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3951
+      file_mime_type: ~
+      line_count: ~
+      md5: 36af5761a03268bea49efabf5299d174
+      module_name_from_file_guess: Fey::Literal::Function
+      mtime: 1270069909
+      name: blib/lib/Fey/Literal/Function.pm
+      packages:
+        - Fey::Literal::Function
+      primary_package: Fey::Literal::Function
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Scalar::Util
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Literal/Function.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: fddb7a3c66458f77a0819a4bd295f2f8
+      module_name_from_file_guess: Fey::Literal::Null
+      mtime: 1270069909
+      name: blib/lib/Fey/Literal/Null.pm
+      packages:
+        - Fey::Literal::Null
+      primary_package: Fey::Literal::Null
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Literal/Null.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1708
+      file_mime_type: ~
+      line_count: ~
+      md5: e3dd034a28f3837a018085193e3d49d3
+      module_name_from_file_guess: Fey::Literal::Number
+      mtime: 1270069909
+      name: blib/lib/Fey/Literal/Number.pm
+      packages:
+        - Fey::Literal::Number
+      primary_package: Fey::Literal::Number
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Literal/Number.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1696
+      file_mime_type: ~
+      line_count: ~
+      md5: 31cfc575100fa3f9b0c9eb1f193f7d16
+      module_name_from_file_guess: Fey::Literal::String
+      mtime: 1270069909
+      name: blib/lib/Fey/Literal/String.pm
+      packages:
+        - Fey::Literal::String
+      primary_package: Fey::Literal::String
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Literal/String.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2653
+      file_mime_type: ~
+      line_count: ~
+      md5: bd87acb043b3e4d37f03f0ae7de5ca9e
+      module_name_from_file_guess: Fey::Literal::Term
+      mtime: 1270069909
+      name: blib/lib/Fey/Literal/Term.pm
+      packages:
+        - Fey::Literal::Term
+      primary_package: Fey::Literal::Term
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Literal/Term.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3055
+      file_mime_type: ~
+      line_count: ~
+      md5: 7823345306e55f805e61d531452242b8
+      module_name_from_file_guess: Fey::NamedObjectSet
+      mtime: 1270069909
+      name: blib/lib/Fey/NamedObjectSet.pm
+      packages:
+        - Fey::NamedObjectSet
+      primary_package: Fey::NamedObjectSet
+      uses:
+        - strict
+        - warnings
+        - List::AllUtils
+        - Fey::Types
+        - Moose
+        - MooseX::AttributeHelpers
+      version_info:
+        filename: blib/lib/Fey/NamedObjectSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1239
+      file_mime_type: ~
+      line_count: ~
+      md5: b25c9f776235eedfe57e3ca2fb743397
+      module_name_from_file_guess: Fey::Placeholder
+      mtime: 1270069909
+      name: blib/lib/Fey/Placeholder.pm
+      packages:
+        - Fey::Placeholder
+      primary_package: Fey::Placeholder
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Placeholder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1992
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dd3275994bb0e43c448880248ee6bed
+      module_name_from_file_guess: Fey::Role::ColumnLike
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/ColumnLike.pm
+      packages:
+        - Fey::Role::ColumnLike
+      primary_package: Fey::Role::ColumnLike
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/ColumnLike.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: 98682083441fff36edf897263bd34ff9
+      module_name_from_file_guess: Fey::Role::Comparable
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/Comparable.pm
+      packages:
+        - Fey::Role::Comparable
+      primary_package: Fey::Role::Comparable
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/Comparable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 830
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d4ae7889867ff2bd98379be9add33fb
+      module_name_from_file_guess: Fey::Role::Groupable
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/Groupable.pm
+      packages:
+        - Fey::Role::Groupable
+      primary_package: Fey::Role::Groupable
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/Groupable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 842
+      file_mime_type: ~
+      line_count: ~
+      md5: 9402154f31cb1d8d63fdc098cc6308d8
+      module_name_from_file_guess: Fey::Role::Joinable
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/Joinable.pm
+      packages:
+        - Fey::Role::Joinable
+      primary_package: Fey::Role::Joinable
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/Joinable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 691
+      file_mime_type: ~
+      line_count: ~
+      md5: 470c1971a37211d08a5f1953061b3a90
+      module_name_from_file_guess: Fey::Role::Named
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/Named.pm
+      packages:
+        - Fey::Role::Named
+      primary_package: Fey::Role::Named
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/Named.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 830
+      file_mime_type: ~
+      line_count: ~
+      md5: a41f51cc6bbb39e31ec4f2ca6e2aac82
+      module_name_from_file_guess: Fey::Role::Orderable
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/Orderable.pm
+      packages:
+        - Fey::Role::Orderable
+      primary_package: Fey::Role::Orderable
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/Orderable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1533
+      file_mime_type: ~
+      line_count: ~
+      md5: 06c42d4743fb57749372ac9da0673e7f
+      module_name_from_file_guess: Fey::Role::SQL::HasBindParams
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/SQL/HasBindParams.pm
+      packages:
+        - Fey::Role::SQL::HasBindParams
+      primary_package: Fey::Role::SQL::HasBindParams
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/SQL/HasBindParams.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1984
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fe3282dcdd1ff1e70e993705cef8c29
+      module_name_from_file_guess: Fey::Role::SQL::HasLimitClause
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/SQL/HasLimitClause.pm
+      packages:
+        - Fey::Role::SQL::HasLimitClause
+      primary_package: Fey::Role::SQL::HasLimitClause
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - Moose::Role
+        - MooseX::Params::Validate
+      version_info:
+        filename: blib/lib/Fey/Role/SQL/HasLimitClause.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2270
+      file_mime_type: ~
+      line_count: ~
+      md5: 876acc6981f131ee3b7abe0290ef3e46
+      module_name_from_file_guess: Fey::Role::SQL::HasOrderByClause
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/SQL/HasOrderByClause.pm
+      packages:
+        - Fey::Role::SQL::HasOrderByClause
+      primary_package: Fey::Role::SQL::HasOrderByClause
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Scalar::Util
+        - Moose::Role
+        - MooseX::AttributeHelpers
+        - MooseX::Params::Validate
+      version_info:
+        filename: blib/lib/Fey/Role/SQL/HasOrderByClause.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4608
+      file_mime_type: ~
+      line_count: ~
+      md5: b5603183696f63485a7da5008132bb4c
+      module_name_from_file_guess: Fey::Role::SQL::HasWhereClause
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/SQL/HasWhereClause.pm
+      packages:
+        - Fey::Role::SQL::HasWhereClause
+      primary_package: Fey::Role::SQL::HasWhereClause
+      uses:
+        - strict
+        - warnings
+        - Fey::Exceptions
+        - Fey::SQL::Fragment::Where::Boolean
+        - Fey::SQL::Fragment::Where::Comparison
+        - Fey::SQL::Fragment::Where::SubgroupStart
+        - Fey::SQL::Fragment::Where::SubgroupEnd
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/SQL/HasWhereClause.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 821
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f393fcbf93965299a9a04f2b2c11992
+      module_name_from_file_guess: Fey::Role::Selectable
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/Selectable.pm
+      packages:
+        - Fey::Role::Selectable
+      primary_package: Fey::Role::Selectable
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/Selectable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 702
+      file_mime_type: ~
+      line_count: ~
+      md5: cbb1992214e93c7c53055a8c6663845b
+      module_name_from_file_guess: Fey::Role::TableLike
+      mtime: 1270069909
+      name: blib/lib/Fey/Role/TableLike.pm
+      packages:
+        - Fey::Role::TableLike
+      primary_package: Fey::Role::TableLike
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Fey/Role/TableLike.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7974
+      file_mime_type: ~
+      line_count: ~
+      md5: d425d483f01c5a68f7bed357dd56b005
+      module_name_from_file_guess: Fey::SQL
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL.pm
+      packages:
+        - Fey::SQL
+      primary_package: Fey::SQL
+      uses:
+        - strict
+        - warnings
+        - Fey::SQL::Delete
+        - Fey::SQL::Insert
+        - Fey::SQL::Select
+        - Fey::SQL::Update
+        - Fey::SQL::Where
+        - Fey::Types
+      version_info:
+        filename: blib/lib/Fey/SQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4056
+      file_mime_type: ~
+      line_count: ~
+      md5: 05b67945d06526e0d7aa070c4e09dc74
+      module_name_from_file_guess: Fey::SQL::Delete
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Delete.pm
+      packages:
+        - Fey::SQL::Delete
+      primary_package: Fey::SQL::Delete
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/SQL/Delete.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4952
+      file_mime_type: ~
+      line_count: ~
+      md5: 66ce5f189d382361de45cbba1b26d626
+      module_name_from_file_guess: Fey::SQL::Fragment::Join
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Fragment/Join.pm
+      packages:
+        - Fey::SQL::Fragment::Join
+      primary_package: Fey::SQL::Fragment::Join
+      uses:
+        - strict
+        - warnings
+        - Fey::FakeDBI
+        - Fey::Types
+        - List::AllUtils
+        - Moose
+      version_info:
+        filename: blib/lib/Fey/SQL/Fragment/Join.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1958
+      file_mime_type: ~
+      line_count: ~
+      md5: 1df0bf5dd1bf641bbb0ad36be198239d
+      module_name_from_file_guess: Fey::SQL::Fragment::SubSelect
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Fragment/SubSelect.pm
+      packages:
+        - Fey::SQL::Fragment::SubSelect
+      primary_package: Fey::SQL::Fragment::SubSelect
+      uses:
+        - strict
+        - warnings
+        - Fey::FakeDBI
+        - Moose
+      version_info:
+        filename: blib/lib/Fey/SQL/Fragment/SubSelect.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 920
+      file_mime_type: ~
+      line_count: ~
+      md5: 41e1d5faa0afa85eca08dbc1d7263b3f
+      module_name_from_file_guess: Fey::SQL::Fragment::Where::Boolean
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Fragment/Where/Boolean.pm
+      packages:
+        - Fey::SQL::Fragment::Where::Boolean
+      primary_package: Fey::SQL::Fragment::Where::Boolean
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+      version_info:
+        filename: blib/lib/Fey/SQL/Fragment/Where/Boolean.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4769
+      file_mime_type: ~
+      line_count: ~
+      md5: b43a2cb711475cd6570676a1889cdab4
+      module_name_from_file_guess: Fey::SQL::Fragment::Where::Comparison
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Fragment/Where/Comparison.pm
+      packages:
+        - Fey::SQL::Fragment::Where::Comparison
+      primary_package: Fey::SQL::Fragment::Where::Comparison
+      uses:
+        - strict
+        - warnings
+        - Fey::Exceptions
+        - Fey::SQL::Fragment::SubSelect
+        - Fey::Literal
+        - Fey::Placeholder
+        - Fey::Types
+        - Scalar::Util
+        - Moose
+      version_info:
+        filename: blib/lib/Fey/SQL/Fragment/Where/Comparison.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 801
+      file_mime_type: ~
+      line_count: ~
+      md5: 583bb1ce61259c781dbf84562eede621
+      module_name_from_file_guess: Fey::SQL::Fragment::Where::SubgroupEnd
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+      packages:
+        - Fey::SQL::Fragment::Where::SubgroupEnd
+      primary_package: Fey::SQL::Fragment::Where::SubgroupEnd
+      uses:
+        - strict
+        - warnings
+        - Moose
+      version_info:
+        filename: blib/lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: a112a2cc8cf7e3587dbcabcea68bc32a
+      module_name_from_file_guess: Fey::SQL::Fragment::Where::SubgroupStart
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+      packages:
+        - Fey::SQL::Fragment::Where::SubgroupStart
+      primary_package: Fey::SQL::Fragment::Where::SubgroupStart
+      uses:
+        - strict
+        - warnings
+        - Moose
+      version_info:
+        filename: blib/lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6056
+      file_mime_type: ~
+      line_count: ~
+      md5: 74069221794a8345a76dfd0d8b868390
+      module_name_from_file_guess: Fey::SQL::Insert
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Insert.pm
+      packages:
+        - Fey::SQL::Insert
+      primary_package: Fey::SQL::Insert
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - overload
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/SQL/Insert.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17426
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ae787565dfa96e818a51da767b34118
+      module_name_from_file_guess: Fey::SQL::Select
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Select.pm
+      packages:
+        - Fey::SQL::Select
+      primary_package: Fey::SQL::Select
+      uses:
+        - strict
+        - warnings
+        - Fey::Exceptions
+        - Fey::Literal
+        - Fey::SQL::Fragment::Join
+        - Fey::SQL::Fragment::SubSelect
+        - Fey::Types
+        - List::AllUtils
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/SQL/Select.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7080
+      file_mime_type: ~
+      line_count: ~
+      md5: 01e99bd83d09f65cf91492c56d9f03f1
+      module_name_from_file_guess: Fey::SQL::Update
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Update.pm
+      packages:
+        - Fey::SQL::Update
+      primary_package: Fey::SQL::Update
+      uses:
+        - strict
+        - warnings
+        - Fey::Exceptions
+        - Fey::Literal
+        - Fey::Types
+        - overload
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/SQL/Update.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1443
+      file_mime_type: ~
+      line_count: ~
+      md5: e632782c4e5483e90339f90aae774d8e
+      module_name_from_file_guess: Fey::SQL::Where
+      mtime: 1270069909
+      name: blib/lib/Fey/SQL/Where.pm
+      packages:
+        - Fey::SQL::Where
+      primary_package: Fey::SQL::Where
+      uses:
+        - strict
+        - warnings
+        - Fey::Types
+        - Moose
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/SQL/Where.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7808
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b514cacd065e5633519c60817134936
+      module_name_from_file_guess: Fey::Schema
+      mtime: 1270069909
+      name: blib/lib/Fey/Schema.pm
+      packages:
+        - Fey::Schema
+      primary_package: Fey::Schema
+      uses:
+        - strict
+        - warnings
+        - Fey::Exceptions
+        - Fey::NamedObjectSet
+        - Fey::SQL
+        - Fey::Table
+        - Fey::Types
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Schema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11883
+      file_mime_type: ~
+      line_count: ~
+      md5: eee860a9a85ac9726e118590aebd77b0
+      module_name_from_file_guess: Fey::Table
+      mtime: 1270069909
+      name: blib/lib/Fey/Table.pm
+      packages:
+        - Fey::Table
+      primary_package: Fey::Table
+      uses:
+        - strict
+        - warnings
+        - Fey::Column
+        - Fey::Exceptions
+        - Fey::NamedObjectSet
+        - Fey::Schema
+        - Fey::Table::Alias
+        - Fey::Types
+        - List::AllUtils
+        - Scalar::Util
+        - Moose
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::AttributeHelpers
+        - MooseX::StrictConstructor
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Fey/Table.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4287
+      file_mime_type: ~
+      line_count: ~
+      md5: cb2f1e129de1a4bedf710b43fc78a1c3
+      module_name_from_file_guess: Fey::Table::Alias
+      mtime: 1270069909
+      name: blib/lib/Fey/Table/Alias.pm
+      packages:
+        - Fey::Table::Alias
+      primary_package: Fey::Table::Alias
+      uses:
+        - strict
+        - warnings
+        - Fey::Exceptions
+        - Fey::Table
+        - Fey::Types
+        - Moose
+        - MooseX::AttributeHelpers
+        - MooseX::Params::Validate
+        - MooseX::SemiAffordanceAccessor
+        - MooseX::StrictConstructor
+      version_info:
+        filename: blib/lib/Fey/Table/Alias.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6043
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c1ffb01a72180967e827663e0979989
+      module_name_from_file_guess: Fey::Types
+      mtime: 1270069909
+      name: blib/lib/Fey/Types.pm
+      packages:
+        - Fey::Types
+      primary_package: Fey::Types
+      uses:
+        - strict
+        - warnings
+        - List::AllUtils
+        - overload
+        - Scalar::Util
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Fey/Types.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Fey.pm
+    - blib/lib/Fey/Column.pm
+    - blib/lib/Fey/Column/Alias.pm
+    - blib/lib/Fey/Exceptions.pm
+    - blib/lib/Fey/FK.pm
+    - blib/lib/Fey/FakeDBI.pm
+    - blib/lib/Fey/Literal.pm
+    - blib/lib/Fey/Literal/Function.pm
+    - blib/lib/Fey/Literal/Null.pm
+    - blib/lib/Fey/Literal/Number.pm
+    - blib/lib/Fey/Literal/String.pm
+    - blib/lib/Fey/Literal/Term.pm
+    - blib/lib/Fey/NamedObjectSet.pm
+    - blib/lib/Fey/Placeholder.pm
+    - blib/lib/Fey/Role/ColumnLike.pm
+    - blib/lib/Fey/Role/Comparable.pm
+    - blib/lib/Fey/Role/Groupable.pm
+    - blib/lib/Fey/Role/Joinable.pm
+    - blib/lib/Fey/Role/Named.pm
+    - blib/lib/Fey/Role/Orderable.pm
+    - blib/lib/Fey/Role/SQL/HasBindParams.pm
+    - blib/lib/Fey/Role/SQL/HasLimitClause.pm
+    - blib/lib/Fey/Role/SQL/HasOrderByClause.pm
+    - blib/lib/Fey/Role/SQL/HasWhereClause.pm
+    - blib/lib/Fey/Role/Selectable.pm
+    - blib/lib/Fey/Role/TableLike.pm
+    - blib/lib/Fey/SQL.pm
+    - blib/lib/Fey/SQL/Delete.pm
+    - blib/lib/Fey/SQL/Fragment/Join.pm
+    - blib/lib/Fey/SQL/Fragment/SubSelect.pm
+    - blib/lib/Fey/SQL/Fragment/Where/Boolean.pm
+    - blib/lib/Fey/SQL/Fragment/Where/Comparison.pm
+    - blib/lib/Fey/SQL/Fragment/Where/SubgroupEnd.pm
+    - blib/lib/Fey/SQL/Fragment/Where/SubgroupStart.pm
+    - blib/lib/Fey/SQL/Insert.pm
+    - blib/lib/Fey/SQL/Select.pm
+    - blib/lib/Fey/SQL/Update.pm
+    - blib/lib/Fey/SQL/Where.pm
+    - blib/lib/Fey/Schema.pm
+    - blib/lib/Fey/Table.pm
+    - blib/lib/Fey/Table/Alias.pm
+    - blib/lib/Fey/Types.pm
+  test_info:
+    - bytesize: 2172
+      file_mime_type: ~
+      line_count: ~
+      md5: 46697ddda0947c5981f217cd6b67f5cd
+      mtime: 1235491939
+      name: t/NamedObjectSet.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Fey::NamedObjectSet
+        - Moose
+    - bytesize: 82
+      file_mime_type: ~
+      line_count: ~
+      md5: d3b0d1a64da613e0e0e495e287ebaae7
+      mtime: 1235491939
+      name: t/Exceptions.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 6266
+      file_mime_type: ~
+      line_count: ~
+      md5: a86f81744fa7fa8b10b7f024e166a2b1
+      mtime: 1235491939
+      name: t/Schema.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Schema
+        - Fey::FK
+    - bytesize: 2850
+      file_mime_type: ~
+      line_count: ~
+      md5: c7ee926be9c59278ad7bfd6b27090ee0
+      mtime: 1235491939
+      name: t/SQL-order-by-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Literal
+        - Fey::SQL
+    - bytesize: 6511
+      file_mime_type: ~
+      line_count: ~
+      md5: fa1901084363a4e8aa5a9e12658d5c53
+      mtime: 1235491939
+      name: t/Table.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Table
+    - bytesize: 1282
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f27cc9d847114549c4a3c924533478a
+      mtime: 1235491939
+      name: t/Literal.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Fey::Literal
+        - overload
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ee2d480800ec9ec973359f58f413d18
+      mtime: 1235491939
+      name: t/SQL.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 4677
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b907e4ae176a6abaf36f0901338c468
+      mtime: 1235491939
+      name: t/FK.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::FK
+        - Fey::Schema
+    - bytesize: 5307
+      file_mime_type: ~
+      line_count: ~
+      md5: dbc9f13223823d0e72e68bc313981d06
+      mtime: 1235491939
+      name: t/Literal-as-sql.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Literal
+    - bytesize: 11206
+      file_mime_type: ~
+      line_count: ~
+      md5: 270c7011cef1a7239ad755da194994e2
+      mtime: 1235491939
+      name: t/SQL-where-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Placeholder
+        - Fey::SQL
+        - overload
+        - DateTime
+        - DateTime::Format::MySQL
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1235491939
+      name: t/pod.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 2898
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ff1ec0e39074dd85e5804df0ec9ba4e
+      mtime: 1235491939
+      name: t/Column-guess-type.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - Fey::Column
+    - bytesize: 230
+      file_mime_type: ~
+      line_count: ~
+      md5: 776b309e9cec0b4fad9ea935c07dcd6e
+      mtime: 1235491939
+      name: t/FakeDBI.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Fey::FakeDBI
+    - bytesize: 903
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1235491939
+      name: t/pod-coverage.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 412
+      file_mime_type: ~
+      line_count: ~
+      md5: c54e94186d7242e1647afa5f0eeb7d29
+      mtime: 1235491939
+      name: t/Schema-memory-cycle.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Test::Memory::Cycle
+    - bytesize: 3547
+      file_mime_type: ~
+      line_count: ~
+      md5: 45ed3a866ba1f87eaf6670d0fa9b22d8
+      mtime: 1235491939
+      name: t/Column.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - Fey::Column
+        - Fey::Table
+    - bytesize: 285
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a295b4cdad594cdb42dffc6978102b9
+      mtime: 1235491939
+      name: t/kwalitee.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Kwalitee
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 754b5102d3f554ae8ebd139ae0d829e4
+      mtime: 1235491939
+      name: t/SQL-limit-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Literal
+        - Fey::SQL
+    - bytesize: 2509
+      file_mime_type: ~
+      line_count: ~
+      md5: eea618eaa946a395ba5bbe059f395f6f
+      mtime: 1235491939
+      name: t/Table/Alias.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Table::Alias
+    - bytesize: 1898
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f0fd0bdc6a9d3385416f71177d8c15d
+      mtime: 1235491939
+      name: t/Column/Alias.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - Fey::Table
+        - Fey::Column::Alias
+    - bytesize: 7034
+      file_mime_type: ~
+      line_count: ~
+      md5: e187008ea8d801325e27ce21025c9def
+      mtime: 1235491939
+      name: t/SQL/Update.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+        - overload
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fa19c472147215b3c2b642ba1654d6d
+      mtime: 1235491939
+      name: t/SQL/Update-bind-params.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 1376
+      file_mime_type: ~
+      line_count: ~
+      md5: b54ed68437ed99965e6e843f4f0c3645
+      mtime: 1235491939
+      name: t/SQL/Delete.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 1017
+      file_mime_type: ~
+      line_count: ~
+      md5: b7289ba922e1038d39f3b3efd90f1eba
+      mtime: 1235491939
+      name: t/SQL/Insert-bind-params.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 6563
+      file_mime_type: ~
+      line_count: ~
+      md5: f84dfd63992e741e64bdbd5d1d16ac49
+      mtime: 1235491939
+      name: t/SQL/Insert.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Placeholder
+        - Fey::SQL
+        - overload
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: f83bef33277f0ac8729098c7c50e8e24
+      mtime: 1235491939
+      name: t/SQL/Select-group-by-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Literal
+        - Fey::SQL
+    - bytesize: 4107
+      file_mime_type: ~
+      line_count: ~
+      md5: fad56946d342344931a038b4f2f010a8
+      mtime: 1235491939
+      name: t/SQL/Select-select-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 12420
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b3df9ac4b1fb673e3203591dc9764bf
+      mtime: 1235491939
+      name: t/SQL/Select-from-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 685
+      file_mime_type: ~
+      line_count: ~
+      md5: 620675a551c9037b72c44478dc1bd568
+      mtime: 1235491939
+      name: t/SQL/Delete-bind-params.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 5355
+      file_mime_type: ~
+      line_count: ~
+      md5: 9191b27f17ce4be535b2ba0c6ff6aa7e
+      mtime: 1235491939
+      name: t/SQL/Select-bind-params.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::SQL
+    - bytesize: 5580
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a1167ad42f062545e5f9fbeaeb7cf7a
+      mtime: 1235491939
+      name: t/SQL/Select-having-clause.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Fey::Test
+        - Test::More
+        - Fey::Placeholder
+        - Fey::SQL
+  tests:
+    - t/NamedObjectSet.t
+    - t/Exceptions.t
+    - t/Schema.t
+    - t/SQL-order-by-clause.t
+    - t/Table.t
+    - t/Literal.t
+    - t/SQL.t
+    - t/FK.t
+    - t/Literal-as-sql.t
+    - t/SQL-where-clause.t
+    - t/pod.t
+    - t/Column-guess-type.t
+    - t/FakeDBI.t
+    - t/pod-coverage.t
+    - t/Schema-memory-cycle.t
+    - t/Column.t
+    - t/kwalitee.t
+    - t/SQL-limit-clause.t
+    - t/Table/Alias.t
+    - t/Column/Alias.t
+    - t/SQL/Update.t
+    - t/SQL/Update-bind-params.t
+    - t/SQL/Delete.t
+    - t/SQL/Insert-bind-params.t
+    - t/SQL/Insert.t
+    - t/SQL/Select-group-by-clause.t
+    - t/SQL/Select-select-clause.t
+    - t/SQL/Select-from-clause.t
+    - t/SQL/Delete-bind-params.t
+    - t/SQL/Select-bind-params.t
+    - t/SQL/Select-having-clause.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.H2OT
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270069937
+  examine_start_time: 1270069903
+  examine_time: 34
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1270069937
+  run_start_time: 1270069903
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

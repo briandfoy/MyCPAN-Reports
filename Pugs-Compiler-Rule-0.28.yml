@@ -1,0 +1,2848 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Compiler for Perl 6 regexes
+    author: The Pugs Team C<< <perl6-compiler@perl.org> >>.
+    distribution_type: module
+    generated_by: Module::Install version 0.67
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: Pugs-Compiler-Rule
+    no_index:
+      directory:
+        - inc
+        - t
+    recommends:
+      YAML::Syck: 0.60
+    requires:
+      Cache::Cache: 1.05
+      File::Slurp: 0
+      PadWalker: 1.0
+      Parse::Yapp: 0
+      perl: 5.6.1
+    tests: t/*.t t/*/*.t
+    version: 0.28
+  blib:
+    - blib/lib/Pugs/AST/Expression.pm
+    - blib/lib/Pugs/Compiler/Grammar.pm
+    - blib/lib/Pugs/Compiler/Regex.pm
+    - blib/lib/Pugs/Compiler/RegexPerl5.pm
+    - blib/lib/Pugs/Compiler/Rule.pm
+    - blib/lib/Pugs/Compiler/Token.pm
+    - blib/lib/Pugs/Emitter/Grammar/Perl5.pm
+    - blib/lib/Pugs/Emitter/Rule/Parsec.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+    - blib/lib/Pugs/Grammar/Base.pm
+    - blib/lib/Pugs/Grammar/Precedence.pm
+    - blib/lib/Pugs/Grammar/Rule.pm
+    - blib/lib/Pugs/Grammar/Rule.pmc
+    - blib/lib/Pugs/Grammar/Rule2.pm
+    - blib/lib/Pugs/Grammar/RulePure.pm
+    - blib/lib/Pugs/Runtime/Common.pm
+    - blib/lib/Pugs/Runtime/Match.pm
+    - blib/lib/Pugs/Runtime/Match/HsBridge.pm
+    - blib/lib/Pugs/Runtime/Regex.pm
+    - blib/lib/Pugs/Runtime/Rule.pm
+    - blib/lib/Pugs/Runtime/StrPos.pm
+    - blib/lib/Pugs/Runtime/Tracer.pm
+    - blib/man1/compile_p6grammar.pl.1
+    - blib/man3/Pugs::Compiler::Grammar.3
+    - blib/man3/Pugs::Compiler::Regex.3
+    - blib/man3/Pugs::Compiler::RegexPerl5.3
+    - blib/man3/Pugs::Compiler::Rule.3
+    - blib/man3/Pugs::Compiler::Token.3
+    - blib/man3/Pugs::Emitter::Grammar::Perl5.3
+    - blib/man3/Pugs::Grammar::Precedence.3
+    - blib/man3/Pugs::Runtime::Match.3
+    - blib/man3/Pugs::Runtime::Regex.3
+    - blib/man3/Pugs::Runtime::StrPos.3
+    - blib/man3/Pugs::Runtime::Tracer.3
+    - blib/script/compile_p6grammar.pl
+  build_file: Makefile.PL
+  build_file_output: |
+    In releng mode...
+    Warning: prerequisite Cache::Cache 1.05 not found.
+    Warning: prerequisite File::Slurp 0 not found.
+    Warning: prerequisite PadWalker 1.0 not found.
+    Warning: prerequisite Parse::Yapp 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Pugs::Compiler::Rule
+  build_output: |
+    cp lib/Pugs/Emitter/Rule/Parsec.pm blib/lib/Pugs/Emitter/Rule/Parsec.pm
+    cp lib/Pugs/Grammar/Rule2.pm blib/lib/Pugs/Grammar/Rule2.pm
+    cp lib/Pugs/Runtime/Match.pm blib/lib/Pugs/Runtime/Match.pm
+    cp lib/Pugs/Emitter/Rule/Perl5/CharClass.pm blib/lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+    cp lib/Pugs/Compiler/Rule.pm blib/lib/Pugs/Compiler/Rule.pm
+    cp lib/Pugs/Grammar/Rule.pm blib/lib/Pugs/Grammar/Rule.pm
+    cp lib/Pugs/Emitter/Rule/Perl5.pm blib/lib/Pugs/Emitter/Rule/Perl5.pm
+    cp lib/Pugs/Grammar/Precedence.pm blib/lib/Pugs/Grammar/Precedence.pm
+    cp lib/Pugs/Emitter/Grammar/Perl5.pm blib/lib/Pugs/Emitter/Grammar/Perl5.pm
+    cp lib/Pugs/Runtime/Rule.pm blib/lib/Pugs/Runtime/Rule.pm
+    cp lib/Pugs/Emitter/Rule/Perl5/Regex.pm blib/lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+    cp lib/Pugs/Grammar/Base.pm blib/lib/Pugs/Grammar/Base.pm
+    cp lib/Pugs/Compiler/Grammar.pm blib/lib/Pugs/Compiler/Grammar.pm
+    cp lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm blib/lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+    cp lib/Pugs/Runtime/Match/HsBridge.pm blib/lib/Pugs/Runtime/Match/HsBridge.pm
+    cp lib/Pugs/Compiler/Regex.pm blib/lib/Pugs/Compiler/Regex.pm
+    cp lib/Pugs/Runtime/StrPos.pm blib/lib/Pugs/Runtime/StrPos.pm
+    cp lib/Pugs/Runtime/Common.pm blib/lib/Pugs/Runtime/Common.pm
+    cp lib/Pugs/Runtime/Tracer.pm blib/lib/Pugs/Runtime/Tracer.pm
+    cp lib/Pugs/AST/Expression.pm blib/lib/Pugs/AST/Expression.pm
+    cp lib/Pugs/Runtime/Regex.pm blib/lib/Pugs/Runtime/Regex.pm
+    cp lib/Pugs/Grammar/Rule.pmc blib/lib/Pugs/Grammar/Rule.pmc
+    cp lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm blib/lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+    cp lib/Pugs/Grammar/RulePure.pm blib/lib/Pugs/Grammar/RulePure.pm
+    cp lib/Pugs/Compiler/Token.pm blib/lib/Pugs/Compiler/Token.pm
+    cp lib/Pugs/Compiler/RegexPerl5.pm blib/lib/Pugs/Compiler/RegexPerl5.pm
+    cp util/compile_p6grammar.pl blib/script/compile_p6grammar.pl
+    /home/brian/bin/perl5.10.1 "-Iinc" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/compile_p6grammar.pl
+    Manifying blib/man1/compile_p6grammar.pl.1
+    Manifying blib/man3/Pugs::Runtime::Match.3
+    Manifying blib/man3/Pugs::Compiler::Regex.3
+    Manifying blib/man3/Pugs::Runtime::StrPos.3
+    Manifying blib/man3/Pugs::Compiler::Rule.3
+    Manifying blib/man3/Pugs::Runtime::Tracer.3
+    Manifying blib/man3/Pugs::Grammar::Precedence.3
+    Manifying blib/man3/Pugs::Runtime::Regex.3
+    Manifying blib/man3/Pugs::Emitter::Grammar::Perl5.3
+    Manifying blib/man3/Pugs::Compiler::Token.3
+    Manifying blib/man3/Pugs::Compiler::Grammar.3
+    Manifying blib/man3/Pugs::Compiler::RegexPerl5.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH/Pugs-Compiler-Rule-0.28/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH/Pugs-Compiler-Rule-0.28
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH/Pugs-Compiler-Rule-0.28/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH/Pugs-Compiler-Rule-0.28/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: AGENT
+  dist_basename: Pugs-Compiler-Rule-0.28.tar.gz
+  dist_date: 1194016205
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH/Pugs-Compiler-Rule-0.28
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH/Pugs-Compiler-Rule-0.28
+  dist_file: /home/brian/CPAN/authors/id/A/AG/AGENT/Pugs-Compiler-Rule-0.28.tar.gz
+  dist_md5: 14ba49f2e73df0a2fdf7e8526de5b571
+  dist_size: 171018
+  manifest:
+    - Changes
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - Makefile.PL
+    - README
+    - TODO
+    - examples/Grammar.grammar
+    - examples/adder.grammar
+    - examples/adder.input
+    - examples/digits.grammar
+    - examples/digits.input
+    - examples/grammar.input
+    - examples/langs.grammar
+    - examples/langs.input
+    - examples/langs2.grammar
+    - inc/Module/Install.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Scripts.pm
+    - inc/Module/Install/TestBase.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - inc/Spiffy.pm
+    - inc/Test/Base.pm
+    - inc/Test/Base/Filter.pm
+    - inc/Test/Builder.pm
+    - inc/Test/Builder/Module.pm
+    - inc/Test/More.pm
+    - lib/Pugs/AST/Expression.pm
+    - lib/Pugs/Compiler/Grammar.pm
+    - lib/Pugs/Compiler/Regex.pm
+    - lib/Pugs/Compiler/RegexPerl5.pm
+    - lib/Pugs/Compiler/Rule.pm
+    - lib/Pugs/Compiler/Token.pm
+    - lib/Pugs/Emitter/Grammar/Perl5.pm
+    - lib/Pugs/Emitter/Rule/Parsec.pm
+    - lib/Pugs/Emitter/Rule/Perl5.pm
+    - lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+    - lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+    - lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+    - lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+    - lib/Pugs/Grammar/Base.pm
+    - lib/Pugs/Grammar/Precedence.pm
+    - lib/Pugs/Grammar/Rule.pm
+    - lib/Pugs/Grammar/Rule.pmc
+    - lib/Pugs/Grammar/Rule2.pm
+    - lib/Pugs/Grammar/RulePure.pm
+    - lib/Pugs/Runtime/Common.pm
+    - lib/Pugs/Runtime/Match.pm
+    - lib/Pugs/Runtime/Match/HsBridge.pm
+    - lib/Pugs/Runtime/Regex.pm
+    - lib/Pugs/Runtime/Rule.pm
+    - lib/Pugs/Runtime/StrPos.pm
+    - lib/Pugs/Runtime/Tracer.pm
+    - t/00-pod-coverage.t
+    - t/00-pod.t
+    - t/01-iterator_engine.t
+    - t/02-grammar.t
+    - t/03-match.t
+    - t/04-compiler-grammar.t
+    - t/04-compiler-regex.t
+    - t/04-compiler-rule.t
+    - t/04-rule.t
+    - t/05-var.t
+    - t/06-subrule.t
+    - t/08-hash.t
+    - t/09-ratchet.t
+    - t/10-regex_perl5.t
+    - t/11-parsec.t
+    - t/11-quantifier.t
+    - t/12-plain_regex.t
+    - t/13-char_classes.t
+    - t/14-mini_perl6.t
+    - t/15-STD.t
+    - t/16-examples.t
+    - t/16-safemode.t
+    - t/16-tracer-examples.t
+    - t/17-tracer.t
+    - t/ast/00-basic.t
+    - t/declare/00-demo.t
+    - t/declare/01-sigspace.t
+    - t/emitter/00-ratchet.t
+    - t/lib/AST.pm
+    - t/lib/Emitter.pm
+    - t/lib/Regex.pm
+    - t/lib/Util.pm
+    - tracer/jquery.js
+    - tracer/tracer.js
+    - util/compile_p6grammar.pl
+    - util/gen-tracer-view.pl
+    - util/patch-rule-pmc.pl
+    - util/update-rule-pmc
+    - util/update-rule-pmc-obsolete
+    - util/update-tracer-demos
+  manifest_file_info:
+    - bytesize: 11148
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1194015978
+      name: Changes
+    - bytesize: 2208
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1193821896
+      name: MANIFEST
+    - bytesize: 431
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1193821934
+      name: MANIFEST.SKIP
+    - bytesize: 504
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1194015982
+      name: META.yml
+    - bytesize: 1804
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1193040991
+      name: Makefile.PL
+    - bytesize: 4070
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1194016044
+      name: README
+    - bytesize: 5722
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1193040991
+      name: TODO
+    - bytesize: 18723
+      file_mime_type: ~
+      line_count: ~
+      md5: 7152020548a7cda493a4c069a0842071
+      mtime: 1193714976
+      name: examples/Grammar.grammar
+    - bytesize: 229
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fb739936ae19d82573a84bbc239d4ad
+      mtime: 1193715131
+      name: examples/adder.grammar
+    - bytesize: 8
+      file_mime_type: ~
+      line_count: ~
+      md5: c2380a55c00fd0e04767a4b6ee44af3f
+      mtime: 1193716271
+      name: examples/adder.input
+    - bytesize: 278
+      file_mime_type: ~
+      line_count: ~
+      md5: f13e738c72fc90ba849fd309d212b221
+      mtime: 1193122005
+      name: examples/digits.grammar
+    - bytesize: 8
+      file_mime_type: ~
+      line_count: ~
+      md5: f1dc3580b02119196275b4d7a396a994
+      mtime: 1193716392
+      name: examples/digits.input
+    - bytesize: 238
+      file_mime_type: ~
+      line_count: ~
+      md5: d98e174b69f31ac056a2a8a09a245ac4
+      mtime: 1193282387
+      name: examples/grammar.input
+    - bytesize: 536
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c60f67a3750701392e61f6ffda9dc49
+      mtime: 1193715074
+      name: examples/langs.grammar
+    - bytesize: 20
+      file_mime_type: ~
+      line_count: ~
+      md5: d3776d3b570b6d138e3314743416aac5
+      mtime: 1193717107
+      name: examples/langs.input
+    - bytesize: 491
+      file_mime_type: ~
+      line_count: ~
+      md5: f00ddb5e3288debd698336a866c73a48
+      mtime: 1193040991
+      name: examples/langs2.grammar
+    - bytesize: 8073
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1194015982
+      name: inc/Module/Install.pm
+    - bytesize: 1053
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1194015982
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1788
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1194015982
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1194015982
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1194015982
+      name: inc/Module/Install/Include.pm
+    - bytesize: 5961
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1194015982
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 9047
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1194015982
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1304
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d482c1d7f02bdf8d2599f70141f1322
+      mtime: 1194015982
+      name: inc/Module/Install/Scripts.pm
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dc18848b8f6938871b67372e93420ab
+      mtime: 1194015982
+      name: inc/Module/Install/TestBase.pm
+    - bytesize: 1806
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1194015982
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 916
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1194015982
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 15521
+      file_mime_type: ~
+      line_count: ~
+      md5: 5059120afa9837be340de200aecde407
+      mtime: 1194015982
+      name: inc/Spiffy.pm
+    - bytesize: 17067
+      file_mime_type: ~
+      line_count: ~
+      md5: 686e0a753d824ab9aa199f7fd4d76cc1
+      mtime: 1194015982
+      name: inc/Test/Base.pm
+    - bytesize: 7179
+      file_mime_type: ~
+      line_count: ~
+      md5: 14b56a01c393b87727440ca7bdce2966
+      mtime: 1194015982
+      name: inc/Test/Base/Filter.pm
+    - bytesize: 25646
+      file_mime_type: ~
+      line_count: ~
+      md5: c34cbf3e3378e6fd25b2ce7efbbe170a
+      mtime: 1194015982
+      name: inc/Test/Builder.pm
+    - bytesize: 1247
+      file_mime_type: ~
+      line_count: ~
+      md5: e811c7f96a811fb112d041acd9728bcf
+      mtime: 1194015982
+      name: inc/Test/Builder/Module.pm
+    - bytesize: 14344
+      file_mime_type: ~
+      line_count: ~
+      md5: 8447cf50dd9f05ef5ecbad9893518d77
+      mtime: 1194015982
+      name: inc/Test/More.pm
+    - bytesize: 720
+      file_mime_type: ~
+      line_count: ~
+      md5: ad4643e6ce5a67d635bff79b4346c002
+      mtime: 1194015844
+      name: lib/Pugs/AST/Expression.pm
+    - bytesize: 2634
+      file_mime_type: ~
+      line_count: ~
+      md5: 21cb2a02097591dac633c1a066168515
+      mtime: 1194015844
+      name: lib/Pugs/Compiler/Grammar.pm
+    - bytesize: 13644
+      file_mime_type: ~
+      line_count: ~
+      md5: acaea52afb3e0d1523e3e4b7ba229e4d
+      mtime: 1194015844
+      name: lib/Pugs/Compiler/Regex.pm
+    - bytesize: 3082
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ea8944d8c846a5ec15aa8baf892f7ee
+      mtime: 1194015844
+      name: lib/Pugs/Compiler/RegexPerl5.pm
+    - bytesize: 4486
+      file_mime_type: ~
+      line_count: ~
+      md5: 474361e55477a366a600c9a48d39cc32
+      mtime: 1194015844
+      name: lib/Pugs/Compiler/Rule.pm
+    - bytesize: 953
+      file_mime_type: ~
+      line_count: ~
+      md5: f3e0e764ae7efeb831e8be753c7d4580
+      mtime: 1194015844
+      name: lib/Pugs/Compiler/Token.pm
+    - bytesize: 3874
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c82ce755ab510004e25a1c78e98de0b
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Grammar/Perl5.pm
+    - bytesize: 10866
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d84dba42716d3ec9d16d02f048f09db
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Rule/Parsec.pm
+    - bytesize: 18349
+      file_mime_type: ~
+      line_count: ~
+      md5: 144ec04f3405ba546d839551c46714ea
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Rule/Perl5.pm
+    - bytesize: 2376
+      file_mime_type: ~
+      line_count: ~
+      md5: 826858a2e1f0b0e33a131a85f13d176a
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+    - bytesize: 34460
+      file_mime_type: ~
+      line_count: ~
+      md5: e685a9912fbf1260909816639495b2f4
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+    - bytesize: 5979
+      file_mime_type: ~
+      line_count: ~
+      md5: e852d89b90a296d11b3dc05e78b2ea1b
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+    - bytesize: 25578
+      file_mime_type: ~
+      line_count: ~
+      md5: b20ef0e60f9f20e0652a9f7245327cbe
+      mtime: 1194015844
+      name: lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+    - bytesize: 4493
+      file_mime_type: ~
+      line_count: ~
+      md5: dcd18c8d220b8156888fe81a474ab6b9
+      mtime: 1194015844
+      name: lib/Pugs/Grammar/Base.pm
+    - bytesize: 10604
+      file_mime_type: ~
+      line_count: ~
+      md5: f0cf60fa5fba0ba2b074729ecf63b4e8
+      mtime: 1194015844
+      name: lib/Pugs/Grammar/Precedence.pm
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: 182280d1812fdbe98ec0366bad49085e
+      mtime: 1194015844
+      name: lib/Pugs/Grammar/Rule.pm
+    - bytesize: 524618
+      file_mime_type: ~
+      line_count: ~
+      md5: 7477a0507a19b302f63ffcc7c35a32ca
+      mtime: 1194016015
+      name: lib/Pugs/Grammar/Rule.pmc
+    - bytesize: 14062
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b326d086e5e73a6f982b1f6225ad1db
+      mtime: 1194015844
+      name: lib/Pugs/Grammar/Rule2.pm
+    - bytesize: 6349
+      file_mime_type: ~
+      line_count: ~
+      md5: 920bee92473b0082491a93ecb6d6509a
+      mtime: 1194015844
+      name: lib/Pugs/Grammar/RulePure.pm
+    - bytesize: 1417
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b7ccbf29cbca1864f6d0e3dd8ae4ecd
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/Common.pm
+    - bytesize: 6402
+      file_mime_type: ~
+      line_count: ~
+      md5: 782fee23ceabde27c821948901d94236
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/Match.pm
+    - bytesize: 2452
+      file_mime_type: ~
+      line_count: ~
+      md5: b713361a2b0951b47a7060807f96472c
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/Match/HsBridge.pm
+    - bytesize: 23081
+      file_mime_type: ~
+      line_count: ~
+      md5: 061d7cde62b2ef00fdd2207a480a4b4f
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/Regex.pm
+    - bytesize: 51
+      file_mime_type: ~
+      line_count: ~
+      md5: 2de45de00a1d08498b12e8f7fc3be507
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/Rule.pm
+    - bytesize: 4509
+      file_mime_type: ~
+      line_count: ~
+      md5: b2e1bf6dbab892ab0f835e007b2514e1
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/StrPos.pm
+    - bytesize: 2725
+      file_mime_type: ~
+      line_count: ~
+      md5: 112b4a09ec8adb4f8a9a1a19546428d2
+      mtime: 1194015844
+      name: lib/Pugs/Runtime/Tracer.pm
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: 96ff92794393c4844accda52c2da7b64
+      mtime: 1193040991
+      name: t/00-pod-coverage.t
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: c1dc01f4aa3a89c87e8e9f6ff68dcc9d
+      mtime: 1193040991
+      name: t/00-pod.t
+    - bytesize: 9016
+      file_mime_type: ~
+      line_count: ~
+      md5: d543f83ba62ea80cd665529af133121d
+      mtime: 1193040991
+      name: t/01-iterator_engine.t
+    - bytesize: 63
+      file_mime_type: ~
+      line_count: ~
+      md5: c6e017963452d82ac641df8b541cbbab
+      mtime: 1193040991
+      name: t/02-grammar.t
+    - bytesize: 5633
+      file_mime_type: ~
+      line_count: ~
+      md5: 74bcf3294f82a0a4e64542a14817a7a9
+      mtime: 1193040991
+      name: t/03-match.t
+    - bytesize: 3720
+      file_mime_type: ~
+      line_count: ~
+      md5: 9498ebc94bf6945c11926c85f983bca6
+      mtime: 1193710474
+      name: t/04-compiler-grammar.t
+    - bytesize: 4522
+      file_mime_type: ~
+      line_count: ~
+      md5: ee69ff002b90c36de1b7fb15445cfc31
+      mtime: 1193040991
+      name: t/04-compiler-regex.t
+    - bytesize: 1735
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c373cbddca38027ec4d87006fd2ccb8
+      mtime: 1193040991
+      name: t/04-compiler-rule.t
+    - bytesize: 16163
+      file_mime_type: ~
+      line_count: ~
+      md5: a5ad322cd528a14b76eef983a14acc38
+      mtime: 1193710474
+      name: t/04-rule.t
+    - bytesize: 1097
+      file_mime_type: ~
+      line_count: ~
+      md5: bcb26036687d44081aa853c2e74071d6
+      mtime: 1193040991
+      name: t/05-var.t
+    - bytesize: 6193
+      file_mime_type: ~
+      line_count: ~
+      md5: cfcaf21c5c061fe83fbc1ddc13bd0446
+      mtime: 1193710474
+      name: t/06-subrule.t
+    - bytesize: 1924
+      file_mime_type: ~
+      line_count: ~
+      md5: 2217eb866c079b3ba49f4e9874d106d8
+      mtime: 1193040991
+      name: t/08-hash.t
+    - bytesize: 40396
+      file_mime_type: ~
+      line_count: ~
+      md5: bce19bcf520d5612cda403cb445cd5e4
+      mtime: 1193715482
+      name: t/09-ratchet.t
+    - bytesize: 2748
+      file_mime_type: ~
+      line_count: ~
+      md5: 714b015f16f4dead5fc2ec378308a93e
+      mtime: 1193040991
+      name: t/10-regex_perl5.t
+    - bytesize: 3502
+      file_mime_type: ~
+      line_count: ~
+      md5: ff0a61027dd5fdfdb50598a21441809d
+      mtime: 1193715525
+      name: t/11-parsec.t
+    - bytesize: 1816
+      file_mime_type: ~
+      line_count: ~
+      md5: a3a1406acd3d0aa6232f658108de2ab7
+      mtime: 1193040991
+      name: t/11-quantifier.t
+    - bytesize: 7393
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c74742653c5d3103773dbe3bdec64c4
+      mtime: 1193715329
+      name: t/12-plain_regex.t
+    - bytesize: 3389
+      file_mime_type: ~
+      line_count: ~
+      md5: 132463208e09ae3837bc21058124821a
+      mtime: 1193715379
+      name: t/13-char_classes.t
+    - bytesize: 5509
+      file_mime_type: ~
+      line_count: ~
+      md5: a06c16da8a54ec7f1b8e863164f28ad2
+      mtime: 1193715442
+      name: t/14-mini_perl6.t
+    - bytesize: 1174
+      file_mime_type: ~
+      line_count: ~
+      md5: 83b63d315b1ccbbbc64c3b0d0ed82ccb
+      mtime: 1193040991
+      name: t/15-STD.t
+    - bytesize: 944
+      file_mime_type: ~
+      line_count: ~
+      md5: eaa1ec69b0051f2c516d419b1f882489
+      mtime: 1193973878
+      name: t/16-examples.t
+    - bytesize: 1327
+      file_mime_type: ~
+      line_count: ~
+      md5: 1628446a39a3fcae5a8a466a9a2006b2
+      mtime: 1193974842
+      name: t/16-safemode.t
+    - bytesize: 1129
+      file_mime_type: ~
+      line_count: ~
+      md5: 58205305703a32d4dbbd95a55264c584
+      mtime: 1193973991
+      name: t/16-tracer-examples.t
+    - bytesize: 1397
+      file_mime_type: ~
+      line_count: ~
+      md5: f48d29f12e61cbf01418978dbd68f6fb
+      mtime: 1193651970
+      name: t/17-tracer.t
+    - bytesize: 33078
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d06ee683c58019c01c83af296013893
+      mtime: 1193715640
+      name: t/ast/00-basic.t
+    - bytesize: 868
+      file_mime_type: ~
+      line_count: ~
+      md5: 59b9eccabc1c2d9ae2b6d7726cb6014a
+      mtime: 1193040991
+      name: t/declare/00-demo.t
+    - bytesize: 378
+      file_mime_type: ~
+      line_count: ~
+      md5: cf9025b4f7bd0081450cc4e03bcc54aa
+      mtime: 1193040991
+      name: t/declare/01-sigspace.t
+    - bytesize: 14667
+      file_mime_type: ~
+      line_count: ~
+      md5: 86eebc2c8b982abd2e37ba4b4e454959
+      mtime: 1193715270
+      name: t/emitter/00-ratchet.t
+    - bytesize: 1242
+      file_mime_type: ~
+      line_count: ~
+      md5: 276cbb3c7de28de0cc4c06061fd4e5fb
+      mtime: 1193040991
+      name: t/lib/AST.pm
+    - bytesize: 3182
+      file_mime_type: ~
+      line_count: ~
+      md5: 082b2dbd2a87f6fa82936f6ad246e62b
+      mtime: 1194015695
+      name: t/lib/Emitter.pm
+    - bytesize: 4552
+      file_mime_type: ~
+      line_count: ~
+      md5: 336727f8644657ad1cc18ba5070bc6f0
+      mtime: 1193040991
+      name: t/lib/Regex.pm
+    - bytesize: 689
+      file_mime_type: ~
+      line_count: ~
+      md5: f4bc9d00640614aa2fd04cc546e9828c
+      mtime: 1193040991
+      name: t/lib/Util.pm
+    - bytesize: 62885
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a3a0673fae1fdacc9686f18f57a2042
+      mtime: 1193199310
+      name: tracer/jquery.js
+    - bytesize: 5486
+      file_mime_type: ~
+      line_count: ~
+      md5: 94047e26be7399ee458179b31da71b88
+      mtime: 1193282149
+      name: tracer/tracer.js
+    - bytesize: 2558
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f755be0696b39a14a31571049aee0cc
+      mtime: 1193828856
+      name: util/compile_p6grammar.pl
+    - bytesize: 4610
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cd11678c62c2423b47ee7d4c99f9487
+      mtime: 1193833265
+      name: util/gen-tracer-view.pl
+    - bytesize: 736
+      file_mime_type: ~
+      line_count: ~
+      md5: d446e1426ec7f6e5b5fb531ff6248a50
+      mtime: 1193040991
+      name: util/patch-rule-pmc.pl
+    - bytesize: 1483
+      file_mime_type: ~
+      line_count: ~
+      md5: 7798b7402efb2b5c28b3555d4846f099
+      mtime: 1193040991
+      name: util/update-rule-pmc
+    - bytesize: 1689
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f4cf1ef8550011eac797672daaed7b1
+      mtime: 1193713011
+      name: util/update-rule-pmc-obsolete
+    - bytesize: 1471
+      file_mime_type: ~
+      line_count: ~
+      md5: 6331c53ccb5dbcf55a6bef71bc86bbd5
+      mtime: 1193717502
+      name: util/update-tracer-demos
+  module_info:
+    - bytesize: 720
+      file_mime_type: ~
+      line_count: ~
+      md5: 83797379ad84604d9b98f1ff8800ebcd
+      module_name_from_file_guess: Pugs::AST::Expression
+      mtime: 1194015844
+      name: blib/lib/Pugs/AST/Expression.pm
+      packages:
+        - Pugs::AST::Expression
+      primary_package: Pugs::AST::Expression
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Pugs/AST/Expression.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2634
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dfcfe57c03ace010af2cc44dd80869f
+      module_name_from_file_guess: Pugs::Compiler::Grammar
+      mtime: 1194015844
+      name: blib/lib/Pugs/Compiler/Grammar.pm
+      packages:
+        - Pugs::Compiler::Grammar
+      primary_package: Pugs::Compiler::Grammar
+      uses:
+        - strict
+        - warnings
+        - Pugs::Grammar::Rule
+        - Pugs::Emitter::Grammar::Perl5
+        - Carp
+      version_info:
+        filename: blib/lib/Pugs/Compiler/Grammar.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.28
+    - bytesize: 13644
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d3f0c7d61d41209c52137655b5305cc
+      module_name_from_file_guess: Pugs::Compiler::Regex
+      mtime: 1194015844
+      name: blib/lib/Pugs/Compiler/Regex.pm
+      packages:
+        - Pugs::Compiler::Regex
+      primary_package: Pugs::Compiler::Regex
+      uses:
+        - strict
+        - warnings
+        - Pugs::Grammar::Rule
+        - Pugs::Compiler::RegexPerl5
+        - Pugs::Emitter::Rule::Perl5
+        - Pugs::Emitter::Rule::Perl5::Ratchet
+        - Pugs::Runtime::Regex
+        - Carp
+        - Data::Dumper
+        - Symbol
+        - Digest::MD5
+        - Cache::FileCache
+      version_info:
+        filename: blib/lib/Pugs/Compiler/Regex.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: 0.28
+    - bytesize: 3082
+      file_mime_type: ~
+      line_count: ~
+      md5: 9774aa7ccee5db37a288c051304ee563
+      module_name_from_file_guess: Pugs::Compiler::RegexPerl5
+      mtime: 1194015844
+      name: blib/lib/Pugs/Compiler/RegexPerl5.pm
+      packages:
+        - Pugs::Compiler::RegexPerl5
+      primary_package: Pugs::Compiler::RegexPerl5
+      uses:
+        - ''
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Pugs/Compiler/RegexPerl5.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4486
+      file_mime_type: ~
+      line_count: ~
+      md5: 922dcf0e25f6bb4e95491fc87e38308b
+      module_name_from_file_guess: Pugs::Compiler::Rule
+      mtime: 1194015844
+      name: blib/lib/Pugs/Compiler/Rule.pm
+      packages:
+        - Pugs::Compiler::Rule
+      primary_package: Pugs::Compiler::Rule
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Pugs/Compiler/Rule.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.28
+    - bytesize: 953
+      file_mime_type: ~
+      line_count: ~
+      md5: f3fc860010f182282969205baaa77758
+      module_name_from_file_guess: Pugs::Compiler::Token
+      mtime: 1194015844
+      name: blib/lib/Pugs/Compiler/Token.pm
+      packages:
+        - Pugs::Compiler::Token
+      primary_package: Pugs::Compiler::Token
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Pugs/Compiler/Token.pm
+        identifier: VERSION
+        line_number: 3
+        sigil: $
+        value: 0.28
+    - bytesize: 3874
+      file_mime_type: ~
+      line_count: ~
+      md5: b9f40397878caffb25f8f456d5fd70e1
+      module_name_from_file_guess: Pugs::Emitter::Grammar::Perl5
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Grammar/Perl5.pm
+      packages:
+        - Pugs::Emitter::Grammar::Perl5
+      primary_package: Pugs::Emitter::Grammar::Perl5
+      uses:
+        - strict
+        - warnings
+        - Pugs::Emitter::Rule::Perl5::Ratchet
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Grammar/Perl5.pm
+        identifier: VERSION
+        line_number: 3
+        sigil: $
+        value: 0.28
+    - bytesize: 10866
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d09ee8987d28a1f5f841632f4d1fb17
+      module_name_from_file_guess: Pugs::Emitter::Rule::Parsec
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Rule/Parsec.pm
+      packages:
+        - Pugs::Emitter::Rule::Parsec
+      primary_package: Pugs::Emitter::Rule::Parsec
+      uses:
+        - strict
+        - warnings
+        - Pugs::Grammar::MiniPerl6
+        - Data::Dumper
+        - vars
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Rule/Parsec.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 18349
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d7f9cdfe4fea60a32f6ff8821a4392a
+      module_name_from_file_guess: Pugs::Emitter::Rule::Perl5
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Rule/Perl5.pm
+      packages:
+        - Pugs::Emitter::Rule::Perl5
+      primary_package: Pugs::Emitter::Rule::Perl5
+      uses:
+        - Pugs::Emitter::Rule::Perl5::Ratchet
+        - strict
+        - warnings
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Rule/Perl5.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2376
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e22fd010d9d554a158e1e1af0cd78fe
+      module_name_from_file_guess: Pugs::Emitter::Rule::Perl5::CharClass
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+      packages:
+        - Pugs::Emitter::Rule::Perl5::CharClass
+      primary_package: Pugs::Emitter::Rule::Perl5::CharClass
+      uses:
+        - strict
+        - Data::Dumper
+        - vars
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 34460
+      file_mime_type: ~
+      line_count: ~
+      md5: 119b72041bf606ee445b94661d50d324
+      module_name_from_file_guess: Pugs::Emitter::Rule::Perl5::Ratchet
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Pugs::Emitter::Rule::Perl5::CharClass
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5979
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a79b391354e3c5dbdf7c356a4acd185
+      module_name_from_file_guess: Pugs::Emitter::Rule::Perl5::Regex
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+      packages:
+        - Pugs::Emitter::Rule::Perl5::Regex
+      primary_package: Pugs::Emitter::Rule::Perl5::Regex
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - vars
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 25578
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e4ca24ff43d73ef44fe956182384d51
+      module_name_from_file_guess: Pugs::Emitter::Rule::Perl6::Ratchet
+      mtime: 1194015844
+      name: blib/lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+      packages:
+        - Pugs::Emitter::Rule::Perl6::Ratchet
+      primary_package: Pugs::Emitter::Rule::Perl6::Ratchet
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - vars
+      version_info:
+        filename: blib/lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4493
+      file_mime_type: ~
+      line_count: ~
+      md5: 5252696295034f379364cf13c5fa238e
+      module_name_from_file_guess: Pugs::Grammar::Base
+      mtime: 1194015844
+      name: blib/lib/Pugs/Grammar/Base.pm
+      packages:
+        - Pugs::Grammar::Base
+      primary_package: Pugs::Grammar::Base
+      uses:
+        - Pugs::Runtime::Match
+        - Pugs::Compiler::RegexPerl5
+        - Pugs::Compiler::Regex
+        - Data::Dumper
+        - Carp
+        - charnames
+      version_info:
+        filename: blib/lib/Pugs/Grammar/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10604
+      file_mime_type: ~
+      line_count: ~
+      md5: dc5d4f7f8d6afe60b6588f1df54bdce4
+      module_name_from_file_guess: Pugs::Grammar::Precedence
+      mtime: 1194015844
+      name: blib/lib/Pugs/Grammar/Precedence.pm
+      packages:
+        - Pugs::Grammar::Precedence
+      primary_package: Pugs::Grammar::Precedence
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Parse::Yapp
+        - Digest::MD5
+        - Cache::FileCache
+      version_info:
+        filename: blib/lib/Pugs/Grammar/Precedence.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e78babd55e31ed314b679382c110bf9
+      module_name_from_file_guess: Pugs::Grammar::Rule
+      mtime: 1194015844
+      name: blib/lib/Pugs/Grammar/Rule.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Pugs/Grammar/Rule.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14062
+      file_mime_type: ~
+      line_count: ~
+      md5: d1a3d74a9fe3a8d35ce019327bd4f4ce
+      module_name_from_file_guess: Pugs::Grammar::Rule2
+      mtime: 1194015844
+      name: blib/lib/Pugs/Grammar/Rule2.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - ''
+      version_info:
+        filename: blib/lib/Pugs/Grammar/Rule2.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6349
+      file_mime_type: ~
+      line_count: ~
+      md5: 718682bb8f41c0f3a6c0fa24bd241071
+      module_name_from_file_guess: Pugs::Grammar::RulePure
+      mtime: 1194015844
+      name: blib/lib/Pugs/Grammar/RulePure.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - ''
+      version_info:
+        filename: blib/lib/Pugs/Grammar/RulePure.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1417
+      file_mime_type: ~
+      line_count: ~
+      md5: b5fa7eb0d16f398b56dac15aae216224
+      module_name_from_file_guess: Pugs::Runtime::Common
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/Common.pm
+      packages:
+        - Pugs::Runtime::Common
+      primary_package: Pugs::Runtime::Common
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Pugs/Runtime/Common.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6402
+      file_mime_type: ~
+      line_count: ~
+      md5: 08850b7027424521175d61cbb2dddc6a
+      module_name_from_file_guess: Pugs::Runtime::Match
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/Match.pm
+      packages:
+        - Pugs::Runtime::Match
+      primary_package: Pugs::Runtime::Match
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Data::Dumper
+        - Scalar::Util
+        - Pugs::Runtime::StrPos
+        - overload
+        - YAML::Syck
+      version_info:
+        filename: blib/lib/Pugs/Runtime/Match.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2452
+      file_mime_type: ~
+      line_count: ~
+      md5: dba6e4eb15f77bfb37e8353475438fa1
+      module_name_from_file_guess: Pugs::Runtime::Match::HsBridge
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/Match/HsBridge.pm
+      packages:
+        - Pugs::Runtime::Match::HsBridge
+      primary_package: Pugs::Runtime::Match::HsBridge
+      uses:
+        - utf8
+        - strict
+        - warnings
+        - Pugs::Grammar::Base
+        - Pugs::Compiler::Regex
+        - base
+        - ''
+        - ops
+      version_info:
+        filename: blib/lib/Pugs/Runtime/Match/HsBridge.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 23081
+      file_mime_type: ~
+      line_count: ~
+      md5: 7335bd5dea1c2bbf69a6a8a7a550728d
+      module_name_from_file_guess: Pugs::Runtime::Regex
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/Regex.pm
+      packages:
+        - Pugs::Runtime::Regex
+      primary_package: Pugs::Runtime::Regex
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - Pugs::Runtime::Match
+        - Carp
+        - PadWalker
+      version_info:
+        filename: blib/lib/Pugs/Runtime/Regex.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 51
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d41f870ecd3ad21920749939353d1fc
+      module_name_from_file_guess: Pugs::Runtime::Rule
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/Rule.pm
+      packages:
+        - Pugs::Runtime::Rule
+      primary_package: Pugs::Runtime::Rule
+      uses: []
+      version_info:
+        filename: blib/lib/Pugs/Runtime/Rule.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4509
+      file_mime_type: ~
+      line_count: ~
+      md5: 0abdd64d096780ab6edfeb6d3bb27490
+      module_name_from_file_guess: Pugs::Runtime::StrPos
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/StrPos.pm
+      packages:
+        - Pugs::Runtime::StrPos
+      primary_package: Pugs::Runtime::StrPos
+      uses:
+        - strict
+        - warnings
+        - utf8
+        - Data::Dumper
+        - overload
+        - bytes
+        - YAML::Syck
+      version_info:
+        filename: blib/lib/Pugs/Runtime/StrPos.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2725
+      file_mime_type: ~
+      line_count: ~
+      md5: 706684404c642c3e12116968b2687dec
+      module_name_from_file_guess: Pugs::Runtime::Tracer
+      mtime: 1194015844
+      name: blib/lib/Pugs/Runtime/Tracer.pm
+      packages:
+        - Pugs::Runtime::Tracer
+      primary_package: Pugs::Runtime::Tracer
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Pugs/Runtime/Tracer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Pugs/AST/Expression.pm
+    - blib/lib/Pugs/Compiler/Grammar.pm
+    - blib/lib/Pugs/Compiler/Regex.pm
+    - blib/lib/Pugs/Compiler/RegexPerl5.pm
+    - blib/lib/Pugs/Compiler/Rule.pm
+    - blib/lib/Pugs/Compiler/Token.pm
+    - blib/lib/Pugs/Emitter/Grammar/Perl5.pm
+    - blib/lib/Pugs/Emitter/Rule/Parsec.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5/CharClass.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5/Ratchet.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl5/Regex.pm
+    - blib/lib/Pugs/Emitter/Rule/Perl6/Ratchet.pm
+    - blib/lib/Pugs/Grammar/Base.pm
+    - blib/lib/Pugs/Grammar/Precedence.pm
+    - blib/lib/Pugs/Grammar/Rule.pm
+    - blib/lib/Pugs/Grammar/Rule2.pm
+    - blib/lib/Pugs/Grammar/RulePure.pm
+    - blib/lib/Pugs/Runtime/Common.pm
+    - blib/lib/Pugs/Runtime/Match.pm
+    - blib/lib/Pugs/Runtime/Match/HsBridge.pm
+    - blib/lib/Pugs/Runtime/Regex.pm
+    - blib/lib/Pugs/Runtime/Rule.pm
+    - blib/lib/Pugs/Runtime/StrPos.pm
+    - blib/lib/Pugs/Runtime/Tracer.pm
+  test_info:
+    - bytesize: 7393
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c74742653c5d3103773dbe3bdec64c4
+      mtime: 1193715329
+      name: t/12-plain_regex.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - Pugs::Compiler::Rule
+        - Pugs::Emitter::Rule::Perl5::Regex
+    - bytesize: 3389
+      file_mime_type: ~
+      line_count: ~
+      md5: 132463208e09ae3837bc21058124821a
+      mtime: 1193715379
+      name: t/13-char_classes.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - Pugs::Runtime::Match
+        - Pugs::Compiler::Regex
+        - base
+    - bytesize: 4522
+      file_mime_type: ~
+      line_count: ~
+      md5: ee69ff002b90c36de1b7fb15445cfc31
+      mtime: 1193040991
+      name: t/04-compiler-regex.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Pugs::Compiler::Regex
+    - bytesize: 1735
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c373cbddca38027ec4d87006fd2ccb8
+      mtime: 1193040991
+      name: t/04-compiler-rule.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Pugs::Compiler::Rule
+        - Pugs::Grammar::Base
+        - Pugs::Runtime::Match
+    - bytesize: 944
+      file_mime_type: ~
+      line_count: ~
+      md5: eaa1ec69b0051f2c516d419b1f882489
+      mtime: 1193973878
+      name: t/16-examples.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 6193
+      file_mime_type: ~
+      line_count: ~
+      md5: cfcaf21c5c061fe83fbc1ddc13bd0446
+      mtime: 1193710474
+      name: t/06-subrule.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - strict
+        - warnings
+        - base
+    - bytesize: 1129
+      file_mime_type: ~
+      line_count: ~
+      md5: 58205305703a32d4dbbd95a55264c584
+      mtime: 1193973991
+      name: t/16-tracer-examples.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 5509
+      file_mime_type: ~
+      line_count: ~
+      md5: a06c16da8a54ec7f1b8e863164f28ad2
+      mtime: 1193715442
+      name: t/14-mini_perl6.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - Pugs::Compiler::Rule
+        - Pugs::Emitter::Rule::Perl6::Ratchet
+    - bytesize: 3720
+      file_mime_type: ~
+      line_count: ~
+      md5: 9498ebc94bf6945c11926c85f983bca6
+      mtime: 1193710474
+      name: t/04-compiler-grammar.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Pugs::Compiler::Grammar
+    - bytesize: 2748
+      file_mime_type: ~
+      line_count: ~
+      md5: 714b015f16f4dead5fc2ec378308a93e
+      mtime: 1193040991
+      name: t/10-regex_perl5.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - Pugs::Compiler::Rule
+        - Pugs::Runtime::Match
+    - bytesize: 1397
+      file_mime_type: ~
+      line_count: ~
+      md5: f48d29f12e61cbf01418978dbd68f6fb
+      mtime: 1193651970
+      name: t/17-tracer.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Pugs::Runtime::Tracer
+    - bytesize: 1327
+      file_mime_type: ~
+      line_count: ~
+      md5: 1628446a39a3fcae5a8a466a9a2006b2
+      mtime: 1193974842
+      name: t/16-safemode.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 9016
+      file_mime_type: ~
+      line_count: ~
+      md5: d543f83ba62ea80cd665529af133121d
+      mtime: 1193040991
+      name: t/01-iterator_engine.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Pugs::Runtime::Match
+    - bytesize: 3502
+      file_mime_type: ~
+      line_count: ~
+      md5: ff0a61027dd5fdfdb50598a21441809d
+      mtime: 1193715525
+      name: t/11-parsec.t
+      uses:
+        - lib
+        - Test::More
+        - Pugs::Grammar::Rule
+    - bytesize: 1924
+      file_mime_type: ~
+      line_count: ~
+      md5: 2217eb866c079b3ba49f4e9874d106d8
+      mtime: 1193040991
+      name: t/08-hash.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - base
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: c1dc01f4aa3a89c87e8e9f6ff68dcc9d
+      mtime: 1193040991
+      name: t/00-pod.t
+      uses:
+        - Test::More
+    - bytesize: 5633
+      file_mime_type: ~
+      line_count: ~
+      md5: 74bcf3294f82a0a4e64542a14817a7a9
+      mtime: 1193040991
+      name: t/03-match.t
+      uses:
+        - Test::More
+        - Data::Dumper
+    - bytesize: 63
+      file_mime_type: ~
+      line_count: ~
+      md5: c6e017963452d82ac641df8b541cbbab
+      mtime: 1193040991
+      name: t/02-grammar.t
+      uses:
+        - Test::More
+    - bytesize: 1816
+      file_mime_type: ~
+      line_count: ~
+      md5: a3a1406acd3d0aa6232f658108de2ab7
+      mtime: 1193040991
+      name: t/11-quantifier.t
+      uses:
+        - Test::More
+        - Data::Dumper
+    - bytesize: 1097
+      file_mime_type: ~
+      line_count: ~
+      md5: bcb26036687d44081aa853c2e74071d6
+      mtime: 1193040991
+      name: t/05-var.t
+      uses:
+        - Test::More
+        - Pugs::Grammar::Base
+        - Data::Dumper
+    - bytesize: 1174
+      file_mime_type: ~
+      line_count: ~
+      md5: 83b63d315b1ccbbbc64c3b0d0ed82ccb
+      mtime: 1193040991
+      name: t/15-STD.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - base
+    - bytesize: 40396
+      file_mime_type: ~
+      line_count: ~
+      md5: bce19bcf520d5612cda403cb445cd5e4
+      mtime: 1193715482
+      name: t/09-ratchet.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - Pugs::Runtime::Match
+        - base
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: 96ff92794393c4844accda52c2da7b64
+      mtime: 1193040991
+      name: t/00-pod-coverage.t
+      uses:
+        - Test::More
+    - bytesize: 16163
+      file_mime_type: ~
+      line_count: ~
+      md5: a5ad322cd528a14b76eef983a14acc38
+      mtime: 1193710474
+      name: t/04-rule.t
+      uses:
+        - Test::More
+        - Data::Dumper
+        - base
+    - bytesize: 33078
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d06ee683c58019c01c83af296013893
+      mtime: 1193715640
+      name: t/ast/00-basic.t
+      uses:
+        - t::lib::AST
+    - bytesize: 868
+      file_mime_type: ~
+      line_count: ~
+      md5: 59b9eccabc1c2d9ae2b6d7726cb6014a
+      mtime: 1193040991
+      name: t/declare/00-demo.t
+      uses:
+        - t::lib::Regex
+    - bytesize: 378
+      file_mime_type: ~
+      line_count: ~
+      md5: cf9025b4f7bd0081450cc4e03bcc54aa
+      mtime: 1193040991
+      name: t/declare/01-sigspace.t
+      uses:
+        - t::lib::Regex
+    - bytesize: 14667
+      file_mime_type: ~
+      line_count: ~
+      md5: 86eebc2c8b982abd2e37ba4b4e454959
+      mtime: 1193715270
+      name: t/emitter/00-ratchet.t
+      uses:
+        - t::lib::Emitter
+  tests:
+    - t/12-plain_regex.t
+    - t/13-char_classes.t
+    - t/04-compiler-regex.t
+    - t/04-compiler-rule.t
+    - t/16-examples.t
+    - t/06-subrule.t
+    - t/16-tracer-examples.t
+    - t/14-mini_perl6.t
+    - t/04-compiler-grammar.t
+    - t/10-regex_perl5.t
+    - t/17-tracer.t
+    - t/16-safemode.t
+    - t/01-iterator_engine.t
+    - t/11-parsec.t
+    - t/08-hash.t
+    - t/00-pod.t
+    - t/03-match.t
+    - t/02-grammar.t
+    - t/11-quantifier.t
+    - t/05-var.t
+    - t/15-STD.t
+    - t/09-ratchet.t
+    - t/00-pod-coverage.t
+    - t/04-rule.t
+    - t/ast/00-basic.t
+    - t/declare/00-demo.t
+    - t/declare/01-sigspace.t
+    - t/emitter/00-ratchet.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-37045.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 37045
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268913746
+  examine_start_time: 1268913708
+  examine_time: 38
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 37045
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268913746
+  run_start_time: 1268913708
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

@@ -1,0 +1,5413 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: 'An ecommerce solution using Catalyst, Handel and DBIx::Class'
+    author:
+      - Christopher H. Laco
+    build_requires:
+      Directory::Scratch: 0
+      ExtUtils::MakeMaker: 6.11
+    distribution_type: module
+    generated_by: Module::Install version 0.68
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: Mango
+    no_index:
+      directory:
+        - inc
+        - t
+    requires:
+      CGI::FormBuilder: 0
+      Catalyst::Action::REST: 0.60
+      Catalyst::Action::RenderView: 0
+      Catalyst::Component::ACCEPT_CONTEXT: 0.03
+      Catalyst::Devel: 1.02
+      Catalyst::Plugin::Authentication: 0.09999
+      Catalyst::Plugin::Authentication::Credential::HTTP: 0
+      Catalyst::Plugin::Authorization::Roles: 0
+      Catalyst::Plugin::Cache: 0
+      Catalyst::Plugin::ConfigLoader: 0
+      Catalyst::Plugin::Session: 0
+      Catalyst::Plugin::Session::State::Cookie: 0
+      Catalyst::Plugin::Session::Store::File: 0
+      Catalyst::Plugin::Static::Simple: 0
+      Catalyst::Runtime: 5.7012
+      Catalyst::View::TT: 0
+      Class::Accessor::Grouped: 0.06000
+      Class::Inspector: 0
+      Clone: 0.27
+      DBIx::Class: 0.08008
+      DateTime: 0
+      Error: 0
+      File::ShareDir: 0
+      FormValidator::Simple: 0.17
+      Handel: 1.00008
+      I18N::LangTags: 0
+      I18N::LangTags::Detect: 0
+      Locale::Maketext: 0
+      MIME::Types: 0
+      Module::Starter: 1.42
+      Path::Class: 0
+      Scalar::Util: 0
+      Set::Scalar: 0
+      XML::Atom: 0.27
+      XML::Feed: 0.12
+      XML::RSS: 1.31
+      YAML: 0
+      perl: 5.8.1
+    tests: t/*.t t/*/*.t
+    version: 0.01000_07
+  blib: []
+  build_file: Makefile.PL
+  build_file_output: |
+    Can't locate File/Copy/Recursive.pm in @INC (@INC contains: inc /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/5.10.1 /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1 .) at inc/Module/Install/Catalyst.pm line 11.
+    BEGIN failed--compilation aborted at inc/Module/Install/Catalyst.pm line 11.
+    Compilation failed in require at inc/Module/Install.pm line 219.
+    Bareword "catalyst" not allowed while "strict subs" in use at Makefile.PL line 49.
+    Execution of Makefile.PL aborted due to compilation errors.
+  build_output: "make: no target to make.\n"
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV/Mango-0.01000_07/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV/Mango-0.01000_07
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV/Mango-0.01000_07/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV/Mango-0.01000_07/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.68
+    perl_command: ~
+    uses_auto_install: 1
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: CLACO
+  dist_basename: Mango-0.01000_07.tar.gz
+  dist_date: 1199751086
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV/Mango-0.01000_07
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV/Mango-0.01000_07
+  dist_file: /home/brian/CPAN/authors/id/C/CL/CLACO/Mango-0.01000_07.tar.gz
+  dist_md5: 7abd5537eabe15d113ff08e4f3bada76
+  dist_size: 112920
+  manifest:
+    - .DS_Store
+    - API
+    - Changes
+    - MANIFEST
+    - MANIFEST.SKIP
+    - MANIFEST.bak
+    - META.yml
+    - Makefile.PL
+    - Mango.tmproj
+    - README
+    - TODO
+    - inc/Module/AutoInstall.pm
+    - inc/Module/Install.pm
+    - inc/Module/Install/AutoInstall.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Catalyst.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Scripts.pm
+    - inc/Module/Install/Share.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/Catalyst/Helper/Mango.pm
+    - lib/Mango.pm
+    - lib/Mango/Attribute.pm
+    - lib/Mango/Cart.pm
+    - lib/Mango/Cart/Item.pm
+    - lib/Mango/Catalyst/Controller.pm
+    - lib/Mango/Catalyst/Controller/Admin.pm
+    - lib/Mango/Catalyst/Controller/Admin/Products.pm
+    - lib/Mango/Catalyst/Controller/Admin/Products/Attributes.pm
+    - lib/Mango/Catalyst/Controller/Admin/Roles.pm
+    - lib/Mango/Catalyst/Controller/Admin/Users.pm
+    - lib/Mango/Catalyst/Controller/Cart.pm
+    - lib/Mango/Catalyst/Controller/Form.pm
+    - lib/Mango/Catalyst/Controller/Login.pm
+    - lib/Mango/Catalyst/Controller/Logout.pm
+    - lib/Mango/Catalyst/Controller/Products.pm
+    - lib/Mango/Catalyst/Controller/REST.pm
+    - lib/Mango/Catalyst/Controller/Root.pm
+    - lib/Mango/Catalyst/Controller/Users.pm
+    - lib/Mango/Catalyst/Controller/Users/Wishlists.pm
+    - lib/Mango/Catalyst/Controller/Wishlists.pm
+    - lib/Mango/Catalyst/Controller/Wishlists/Items.pm
+    - lib/Mango/Catalyst/Model/Carts.pm
+    - lib/Mango/Catalyst/Model/Orders.pm
+    - lib/Mango/Catalyst/Model/Products.pm
+    - lib/Mango/Catalyst/Model/Profiles.pm
+    - lib/Mango/Catalyst/Model/Provider.pm
+    - lib/Mango/Catalyst/Model/Roles.pm
+    - lib/Mango/Catalyst/Model/Users.pm
+    - lib/Mango/Catalyst/Model/Wishlists.pm
+    - lib/Mango/Catalyst/Plugin/Application.pm
+    - lib/Mango/Catalyst/Plugin/Authentication.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/AnonymousUser.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/CachedUser.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/Store.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/User.pm
+    - lib/Mango/Catalyst/Plugin/Forms.pm
+    - lib/Mango/Catalyst/Plugin/I18N.pm
+    - lib/Mango/Catalyst/View/Atom.pm
+    - lib/Mango/Catalyst/View/Feed.pm
+    - lib/Mango/Catalyst/View/HTML.pm
+    - lib/Mango/Catalyst/View/RSS.pm
+    - lib/Mango/Catalyst/View/Template.pm
+    - lib/Mango/Catalyst/View/Text.pm
+    - lib/Mango/Catalyst/View/XHTML.pm
+    - lib/Mango/Currency.pm
+    - lib/Mango/Exception.pm
+    - lib/Mango/Form.pm
+    - lib/Mango/Form/Results.pm
+    - lib/Mango/I18N.pm
+    - lib/Mango/I18N/en.pm
+    - lib/Mango/I18N/ru.pm
+    - lib/Mango/Iterator.pm
+    - lib/Mango/Manual.pod
+    - lib/Mango/Manual/About.pod
+    - lib/Mango/Object.pm
+    - lib/Mango/Object/Meta.pm
+    - lib/Mango/Order.pm
+    - lib/Mango/Order/Item.pm
+    - lib/Mango/Product.pm
+    - lib/Mango/Profile.pm
+    - lib/Mango/Provider.pm
+    - lib/Mango/Provider/Carts.pm
+    - lib/Mango/Provider/DBIC.pm
+    - lib/Mango/Provider/Orders.pm
+    - lib/Mango/Provider/Products.pm
+    - lib/Mango/Provider/Profiles.pm
+    - lib/Mango/Provider/Roles.pm
+    - lib/Mango/Provider/Users.pm
+    - lib/Mango/Provider/Wishlists.pm
+    - lib/Mango/Role.pm
+    - lib/Mango/Schema.pm
+    - lib/Mango/Schema/Cart.pm
+    - lib/Mango/Schema/Cart/Item.pm
+    - lib/Mango/Schema/Order.pm
+    - lib/Mango/Schema/Order/Item.pm
+    - lib/Mango/Schema/Product.pm
+    - lib/Mango/Schema/ProductAttribute.pm
+    - lib/Mango/Schema/ProductTag.pm
+    - lib/Mango/Schema/Profile.pm
+    - lib/Mango/Schema/Role.pm
+    - lib/Mango/Schema/Tag.pm
+    - lib/Mango/Schema/User.pm
+    - lib/Mango/Schema/UserRole.pm
+    - lib/Mango/Schema/Wishlist.pm
+    - lib/Mango/Schema/Wishlist/Item.pm
+    - lib/Mango/Tag.pm
+    - lib/Mango/User.pm
+    - lib/Mango/Wishlist.pm
+    - lib/Mango/Wishlist/Item.pm
+    - script/mango.pl
+    - share/.DS_Store
+    - share/forms/.DS_Store
+    - share/forms/admin/.DS_Store
+    - share/forms/admin/products/attributes/create.yml
+    - share/forms/admin/products/attributes/delete.yml
+    - share/forms/admin/products/attributes/edit.yml
+    - share/forms/admin/products/create.yml
+    - share/forms/admin/products/delete.yml
+    - share/forms/admin/products/edit.yml
+    - share/forms/admin/roles/create.yml
+    - share/forms/admin/roles/delete.yml
+    - share/forms/admin/roles/edit.yml
+    - share/forms/admin/users/create.yml
+    - share/forms/admin/users/delete.yml
+    - share/forms/admin/users/edit.yml
+    - share/forms/cart/add.yml
+    - share/forms/cart/clear.yml
+    - share/forms/cart/delete.yml
+    - share/forms/cart/save.yml
+    - share/forms/cart/update.yml
+    - share/forms/login/login.yml
+    - share/forms/wishlists/clear.yml
+    - share/forms/wishlists/delete.yml
+    - share/forms/wishlists/edit.yml
+    - share/forms/wishlists/items/delete.yml
+    - share/forms/wishlists/items/update.yml
+    - share/forms/wishlists/update.yml
+    - share/templates/.DS_Store
+    - share/templates/tt/.DS_Store
+    - share/templates/tt/html/.DS_Store
+    - share/templates/tt/html/admin/.DS_Store
+    - share/templates/tt/html/admin/index
+    - share/templates/tt/html/admin/products/attributes/create
+    - share/templates/tt/html/admin/products/attributes/delete
+    - share/templates/tt/html/admin/products/attributes/edit
+    - share/templates/tt/html/admin/products/attributes/index
+    - share/templates/tt/html/admin/products/create
+    - share/templates/tt/html/admin/products/delete
+    - share/templates/tt/html/admin/products/edit
+    - share/templates/tt/html/admin/products/index
+    - share/templates/tt/html/admin/roles/create
+    - share/templates/tt/html/admin/roles/delete
+    - share/templates/tt/html/admin/roles/edit
+    - share/templates/tt/html/admin/roles/index
+    - share/templates/tt/html/admin/users/.DS_Store
+    - share/templates/tt/html/admin/users/create
+    - share/templates/tt/html/admin/users/delete
+    - share/templates/tt/html/admin/users/edit
+    - share/templates/tt/html/admin/users/index
+    - share/templates/tt/html/cart/index
+    - share/templates/tt/html/errors/401
+    - share/templates/tt/html/errors/404
+    - share/templates/tt/html/includes/admin/menu
+    - share/templates/tt/html/includes/errors
+    - share/templates/tt/html/includes/login
+    - share/templates/tt/html/includes/menu
+    - share/templates/tt/html/includes/pager
+    - share/templates/tt/html/index
+    - share/templates/tt/html/login/index
+    - share/templates/tt/html/logout/index
+    - share/templates/tt/html/products/index
+    - share/templates/tt/html/users/wishlists/details
+    - share/templates/tt/html/users/wishlists/index
+    - share/templates/tt/html/wishlists/edit
+    - share/templates/tt/html/wishlists/index
+    - share/templates/tt/html/wishlists/view
+    - share/templates/tt/html/wrapper
+    - t/catalyst/controller_form.t
+    - t/catalyst/controller_rest.t
+    - t/catalyst/live_cart.t
+    - t/catalyst/live_login.t
+    - t/catalyst/live_rest_users.t
+    - t/catalyst/live_users.t
+    - t/catalyst/live_wishlists.t
+    - t/catalyst/model_carts.t
+    - t/catalyst/model_orders.t
+    - t/catalyst/model_products.t
+    - t/catalyst/model_profiles.t
+    - t/catalyst/model_provider.t
+    - t/catalyst/model_roles.t
+    - t/catalyst/model_users.t
+    - t/catalyst/model_wishlists.t
+    - t/catalyst/plugin_authentication_store.t
+    - t/catalyst/plugin_i18n.t
+    - t/catalyst/view_atom.t
+    - t/catalyst/view_feed.t
+    - t/catalyst/view_html.t
+    - t/catalyst/view_rss.t
+    - t/catalyst/view_text.t
+    - t/catalyst/view_xhtml.t
+    - t/exceptions.t
+    - t/form.t
+    - t/iterator.t
+    - t/lib/Mango/Test.pm
+    - t/lib/Mango/Test/Catalyst.pm
+    - t/lib/Mango/Test/Catalyst/Action.pm
+    - t/lib/Mango/Test/Catalyst/I18N.pm
+    - t/lib/Mango/Test/Catalyst/I18N/en.pm
+    - t/lib/Mango/Test/Catalyst/L10N.pm
+    - t/lib/Mango/Test/Catalyst/L10N/en.pm
+    - t/lib/Mango/Test/Catalyst/Log.pm
+    - t/lib/Mango/Test/Catalyst/Request.pm
+    - t/lib/Mango/Test/Catalyst/Response.pm
+    - t/lib/Mango/Test/Catalyst/Session.pm
+    - t/lib/Mango/Test/I18N.pm
+    - t/lib/Mango/Test/I18N/en.pm
+    - t/lib/Mango/Test/Meta.pm
+    - t/lib/Mango/Test/Schema.pm
+    - t/meta.t
+    - t/object.t
+    - t/pod_coverage.t
+    - t/pod_spelling.t
+    - t/pod_syntax.t
+    - t/provider.t
+    - t/provider_carts.t
+    - t/provider_dbic.t
+    - t/provider_orders.t
+    - t/provider_products.t
+    - t/provider_profiles.t
+    - t/provider_roles.t
+    - t/provider_users.t
+    - t/provider_wishlists.t
+    - t/sql/test.sqlite.sql
+  manifest_file_info:
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: edb274d8c594429b8ccc684d79d771f6
+      mtime: 1199556607
+      name: .DS_Store
+    - bytesize: 1078
+      file_mime_type: ~
+      line_count: ~
+      md5: db974238714ca8de634a7ce1d083a14f
+      mtime: 1199661926
+      name: API
+    - bytesize: 2630
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1199750949
+      name: Changes
+    - bytesize: 7309
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1199750979
+      name: MANIFEST
+    - bytesize: 174
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1193265077
+      name: MANIFEST.SKIP
+    - bytesize: 7296
+      file_mime_type: ~
+      line_count: ~
+      md5: ee18958b63e846b0ff212bf8c3c02d89
+      mtime: 1199750959
+      name: MANIFEST.bak
+    - bytesize: 1461
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1199750972
+      name: META.yml
+    - bytesize: 1860
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1199678318
+      name: Makefile.PL
+    - bytesize: 752
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c807c34bb40ff63708a6bc5b629f567
+      mtime: 1199677363
+      name: Mango.tmproj
+    - bytesize: 697
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1199750971
+      name: README
+    - bytesize: 539
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1199678318
+      name: TODO
+    - bytesize: 20986
+      file_mime_type: ~
+      line_count: ~
+      md5: 5df3a53b195a607829bddc376dbf459e
+      mtime: 1199750971
+      name: inc/Module/AutoInstall.pm
+    - bytesize: 8073
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1199750970
+      name: inc/Module/Install.pm
+    - bytesize: 1210
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fbb135dedaecade08ee4b691de9234
+      mtime: 1199750971
+      name: inc/Module/Install/AutoInstall.pm
+    - bytesize: 1053
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1199750971
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1788
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1199750972
+      name: inc/Module/Install/Can.pm
+    - bytesize: 6612
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b35a8f5f17ae139144ceb4a4af01e27
+      mtime: 1199750971
+      name: inc/Module/Install/Catalyst.pm
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1199750972
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1199750971
+      name: inc/Module/Install/Include.pm
+    - bytesize: 5961
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1199750971
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 9047
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1199750971
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1304
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d482c1d7f02bdf8d2599f70141f1322
+      mtime: 1199750971
+      name: inc/Module/Install/Scripts.pm
+    - bytesize: 824
+      file_mime_type: ~
+      line_count: ~
+      md5: 61baa844ea7b403718fff363f28b2e4e
+      mtime: 1199750971
+      name: inc/Module/Install/Share.pm
+    - bytesize: 1806
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1199750972
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 916
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1199750972
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 11967
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ef1843691a08a1dc82e1d6cbbabddbe
+      mtime: 1199662292
+      name: lib/Catalyst/Helper/Mango.pm
+    - bytesize: 1425
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d9ab0267495bf3b7259ffd249699736
+      mtime: 1199556012
+      name: lib/Mango.pm
+    - bytesize: 2057
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ff195cbf47acbaa4a44e4cd91f22c43
+      mtime: 1193265077
+      name: lib/Mango/Attribute.pm
+    - bytesize: 6463
+      file_mime_type: ~
+      line_count: ~
+      md5: 555f5ee1caa0e42a953b83732ba76843
+      mtime: 1199582098
+      name: lib/Mango/Cart.pm
+    - bytesize: 3550
+      file_mime_type: ~
+      line_count: ~
+      md5: 132aba427046290704261a75e5fa5b06
+      mtime: 1193265077
+      name: lib/Mango/Cart/Item.pm
+    - bytesize: 2664
+      file_mime_type: ~
+      line_count: ~
+      md5: cc6335962cbad37da9734b3b889f4cfd
+      mtime: 1199252488
+      name: lib/Mango/Catalyst/Controller.pm
+    - bytesize: 479
+      file_mime_type: ~
+      line_count: ~
+      md5: fab3eb0e2ad91883cff9777772a07427
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin.pm
+    - bytesize: 5345
+      file_mime_type: ~
+      line_count: ~
+      md5: db5134c91b352eeeee2a9606249985ff
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Products.pm
+    - bytesize: 4687
+      file_mime_type: ~
+      line_count: ~
+      md5: 9add46547e06c72fe51b030c75b9d8b3
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Products/Attributes.pm
+    - bytesize: 3747
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b2ae797a3ec43e75e3811da6851707
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Roles.pm
+    - bytesize: 6474
+      file_mime_type: ~
+      line_count: ~
+      md5: 6343a559a1f07f41d6b0a6249f7d7df4
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Users.pm
+    - bytesize: 4578
+      file_mime_type: ~
+      line_count: ~
+      md5: e23611582dbc75bf40243ea8ae36d06a
+      mtime: 1199594422
+      name: lib/Mango/Catalyst/Controller/Cart.pm
+    - bytesize: 7748
+      file_mime_type: ~
+      line_count: ~
+      md5: 79af62f4d8193cfd14efd04758bdd9f3
+      mtime: 1199400760
+      name: lib/Mango/Catalyst/Controller/Form.pm
+    - bytesize: 1468
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d85021d9026a15f16c5cebbc5c8fbeb
+      mtime: 1199418127
+      name: lib/Mango/Catalyst/Controller/Login.pm
+    - bytesize: 861
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a2ed2186f1fec31a70153b67bbb4e29
+      mtime: 1199418127
+      name: lib/Mango/Catalyst/Controller/Logout.pm
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: a9ee8f9554df3da2ee87e159dda25075
+      mtime: 1199504110
+      name: lib/Mango/Catalyst/Controller/Products.pm
+    - bytesize: 6071
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fb847b264b3ec647e7ea3a9e27ed1bc
+      mtime: 1199418127
+      name: lib/Mango/Catalyst/Controller/REST.pm
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 76875e52c3dd9f9b5b0f9774c421a5a1
+      mtime: 1199503745
+      name: lib/Mango/Catalyst/Controller/Root.pm
+    - bytesize: 6538
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cb8dbcb8d53253d78a5b2f3a2d6d742
+      mtime: 1199582858
+      name: lib/Mango/Catalyst/Controller/Users.pm
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b39073c1d82a66bbff50a9ec2d74bd4
+      mtime: 1199582642
+      name: lib/Mango/Catalyst/Controller/Users/Wishlists.pm
+    - bytesize: 3651
+      file_mime_type: ~
+      line_count: ~
+      md5: f4993a5d6c82fdaae9dd4e06f5d30dbb
+      mtime: 1199675262
+      name: lib/Mango/Catalyst/Controller/Wishlists.pm
+    - bytesize: 1723
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dc8f7435782cd98090f28ea2822c6e9
+      mtime: 1199666472
+      name: lib/Mango/Catalyst/Controller/Wishlists/Items.pm
+    - bytesize: 927
+      file_mime_type: ~
+      line_count: ~
+      md5: ba656f90456816b3932b1fbe36d82224
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Carts.pm
+    - bytesize: 936
+      file_mime_type: ~
+      line_count: ~
+      md5: 1202a16dcb2f16fd6298289aa4e6d272
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Orders.pm
+    - bytesize: 954
+      file_mime_type: ~
+      line_count: ~
+      md5: b0b0ed86add2ac651c1898d88a77316e
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Products.pm
+    - bytesize: 960
+      file_mime_type: ~
+      line_count: ~
+      md5: ae10334a25ee2ad5bf5889f2463b1acf
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Profiles.pm
+    - bytesize: 3670
+      file_mime_type: ~
+      line_count: ~
+      md5: d19fb51d1c53733c8b69f5150faec617
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Provider.pm
+    - bytesize: 932
+      file_mime_type: ~
+      line_count: ~
+      md5: 22888383a433aa9e97388ef291989e39
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Roles.pm
+    - bytesize: 927
+      file_mime_type: ~
+      line_count: ~
+      md5: abae946b8ac7105e166be6bc86158256
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Users.pm
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: dc95bb0a87aa5b0be6994f3a0db1f8f5
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Wishlists.pm
+    - bytesize: 877
+      file_mime_type: ~
+      line_count: ~
+      md5: 2db9c000549fb9d12eded30242c266bb
+      mtime: 1198716617
+      name: lib/Mango/Catalyst/Plugin/Application.pm
+    - bytesize: 4877
+      file_mime_type: ~
+      line_count: ~
+      md5: 5644c6eb679c2e436f09768dfd828f6d
+      mtime: 1198716617
+      name: lib/Mango/Catalyst/Plugin/Authentication.pm
+    - bytesize: 3481
+      file_mime_type: ~
+      line_count: ~
+      md5: bde2c066faf641216cfe48433ae18dde
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Plugin/Authentication/AnonymousUser.pm
+    - bytesize: 1950
+      file_mime_type: ~
+      line_count: ~
+      md5: 11bb9841507119553967375ea7dff756
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Plugin/Authentication/CachedUser.pm
+    - bytesize: 6133
+      file_mime_type: ~
+      line_count: ~
+      md5: fd13f1a449f91ed7f10069f426b9243d
+      mtime: 1199221408
+      name: lib/Mango/Catalyst/Plugin/Authentication/Store.pm
+    - bytesize: 5713
+      file_mime_type: ~
+      line_count: ~
+      md5: 462b3dd59ad7c68b83f606df45fc52d4
+      mtime: 1199162998
+      name: lib/Mango/Catalyst/Plugin/Authentication/User.pm
+    - bytesize: 1152
+      file_mime_type: ~
+      line_count: ~
+      md5: 85ef75ae2375aa98cdbdcdf242cca7b8
+      mtime: 1199400760
+      name: lib/Mango/Catalyst/Plugin/Forms.pm
+    - bytesize: 3895
+      file_mime_type: ~
+      line_count: ~
+      md5: 09d6488997b12a827d6cc165f4ca248b
+      mtime: 1194935040
+      name: lib/Mango/Catalyst/Plugin/I18N.pm
+    - bytesize: 1115
+      file_mime_type: ~
+      line_count: ~
+      md5: 57a3ac1bea4f1b931e75015104e8898d
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Atom.pm
+    - bytesize: 3623
+      file_mime_type: ~
+      line_count: ~
+      md5: afb6750844175940fe4eaba2625364bb
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Feed.pm
+    - bytesize: 1988
+      file_mime_type: ~
+      line_count: ~
+      md5: 25c29193c7b8677ab499efd00d8824e1
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/HTML.pm
+    - bytesize: 1105
+      file_mime_type: ~
+      line_count: ~
+      md5: ade9e30c5c2be0f6b36f8eee49e16ff6
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/RSS.pm
+    - bytesize: 6429
+      file_mime_type: ~
+      line_count: ~
+      md5: 54d24a65601e5dd2c24a481b0b601ad9
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Template.pm
+    - bytesize: 1996
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cef196f422a8ef4fb27d6fd9255c7dd
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Text.pm
+    - bytesize: 2351
+      file_mime_type: ~
+      line_count: ~
+      md5: 61f5dcf8c2a958a2fe0881169868d0ad
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/XHTML.pm
+    - bytesize: 766
+      file_mime_type: ~
+      line_count: ~
+      md5: 98a0b56f714f615956e41f5c7b4a12b3
+      mtime: 1193265077
+      name: lib/Mango/Currency.pm
+    - bytesize: 1557
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c8138b57490771149b8b74fe654dc5e
+      mtime: 1193265077
+      name: lib/Mango/Exception.pm
+    - bytesize: 14306
+      file_mime_type: ~
+      line_count: ~
+      md5: 813981808e9328ccac91936993390594
+      mtime: 1199678318
+      name: lib/Mango/Form.pm
+    - bytesize: 1281
+      file_mime_type: ~
+      line_count: ~
+      md5: 6dec4fff2d04e320c7c8871ddb9fe3f9
+      mtime: 1193265077
+      name: lib/Mango/Form/Results.pm
+    - bytesize: 1692
+      file_mime_type: ~
+      line_count: ~
+      md5: 711cdd8690f9f8b6c4ec03b7dbead2d2
+      mtime: 1193265077
+      name: lib/Mango/I18N.pm
+    - bytesize: 5100
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a66a83ff4e34078034f355e7a05d9e
+      mtime: 1199678318
+      name: lib/Mango/I18N/en.pm
+    - bytesize: 739
+      file_mime_type: ~
+      line_count: ~
+      md5: f667fd3b6df3d55b6cfdeeee14f46ced
+      mtime: 1193265077
+      name: lib/Mango/I18N/ru.pm
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: beae4c8a96aacf78c7089b880ebc3b5c
+      mtime: 1193265077
+      name: lib/Mango/Iterator.pm
+    - bytesize: 295
+      file_mime_type: ~
+      line_count: ~
+      md5: 09e17fe7a5c207bc8b50a6e81e50111d
+      mtime: 1193265077
+      name: lib/Mango/Manual.pod
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dc4e26ae3882218dcc1beb4af3ad4d5
+      mtime: 1193265077
+      name: lib/Mango/Manual/About.pod
+    - bytesize: 5632
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e22f7eb930c0e0344a9b1e9e5de97b0
+      mtime: 1193265077
+      name: lib/Mango/Object.pm
+    - bytesize: 1296
+      file_mime_type: ~
+      line_count: ~
+      md5: 78e305b1057be1a5ef20baaf98d852f9
+      mtime: 1193265077
+      name: lib/Mango/Object/Meta.pm
+    - bytesize: 13820
+      file_mime_type: ~
+      line_count: ~
+      md5: 42b479856d33315d7858768e4205fa91
+      mtime: 1193265077
+      name: lib/Mango/Order.pm
+    - bytesize: 3272
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e2b8fec12ce683ff78c10958e1c5823
+      mtime: 1193265077
+      name: lib/Mango/Order/Item.pm
+    - bytesize: 4634
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ffbbd862247bd01c97bec7def399e61
+      mtime: 1193265077
+      name: lib/Mango/Product.pm
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: 056b7c5d0474c6e4328b4ac18d625916
+      mtime: 1193265077
+      name: lib/Mango/Profile.pm
+    - bytesize: 6264
+      file_mime_type: ~
+      line_count: ~
+      md5: 594a712f20e515bdcdfaf04391d15051
+      mtime: 1193265077
+      name: lib/Mango/Provider.pm
+    - bytesize: 5482
+      file_mime_type: ~
+      line_count: ~
+      md5: 0abbb048a13ca4330d8e4c221bf02d24
+      mtime: 1193265077
+      name: lib/Mango/Provider/Carts.pm
+    - bytesize: 7664
+      file_mime_type: ~
+      line_count: ~
+      md5: 02b2d130702f6ffafa5dc9f4c64699b8
+      mtime: 1193265077
+      name: lib/Mango/Provider/DBIC.pm
+    - bytesize: 5625
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cedfd3a5bfb0037d3ca2bc0bb21e800
+      mtime: 1193265077
+      name: lib/Mango/Provider/Orders.pm
+    - bytesize: 15243
+      file_mime_type: ~
+      line_count: ~
+      md5: 456f03bec6ce3bedbb5cbb666526630c
+      mtime: 1193539780
+      name: lib/Mango/Provider/Products.pm
+    - bytesize: 5580
+      file_mime_type: ~
+      line_count: ~
+      md5: 174659242aa4d290fccf52c33a78e13e
+      mtime: 1199594422
+      name: lib/Mango/Provider/Profiles.pm
+    - bytesize: 5850
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d1513b42fc80c5e40dac2e9dc8a4ac2
+      mtime: 1193265077
+      name: lib/Mango/Provider/Roles.pm
+    - bytesize: 2514
+      file_mime_type: ~
+      line_count: ~
+      md5: b407f989c8a5bbd9e8def3c9679a3230
+      mtime: 1193265077
+      name: lib/Mango/Provider/Users.pm
+    - bytesize: 5697
+      file_mime_type: ~
+      line_count: ~
+      md5: 4eb8d2d37afddb6fb3434fa5b365b370
+      mtime: 1199598041
+      name: lib/Mango/Provider/Wishlists.pm
+    - bytesize: 2338
+      file_mime_type: ~
+      line_count: ~
+      md5: e7a9ccbc5fd516f4ea59093c8f01d028
+      mtime: 1193265077
+      name: lib/Mango/Role.pm
+    - bytesize: 1165
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bd77bb3f8bf6f407446773dd1cc187f
+      mtime: 1193265077
+      name: lib/Mango/Schema.pm
+    - bytesize: 2624
+      file_mime_type: ~
+      line_count: ~
+      md5: 78ddaabf80f6d7ca1c790739628ddd84
+      mtime: 1199246214
+      name: lib/Mango/Schema/Cart.pm
+    - bytesize: 4127
+      file_mime_type: ~
+      line_count: ~
+      md5: 56515900e69aa9a5903d541713b32b47
+      mtime: 1199246214
+      name: lib/Mango/Schema/Cart/Item.pm
+    - bytesize: 16373
+      file_mime_type: ~
+      line_count: ~
+      md5: 1edd188d75c11bf2ebb375c4d9ecfae3
+      mtime: 1199246214
+      name: lib/Mango/Schema/Order.pm
+    - bytesize: 4358
+      file_mime_type: ~
+      line_count: ~
+      md5: 84f6704d41762b1e292d67db5e932239
+      mtime: 1193265077
+      name: lib/Mango/Schema/Order/Item.pm
+    - bytesize: 3769
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bcd343e2384f23ed5d6be18f85321e3
+      mtime: 1199246214
+      name: lib/Mango/Schema/Product.pm
+    - bytesize: 3284
+      file_mime_type: ~
+      line_count: ~
+      md5: 82d813e2d635aea6a6e5ce6db1281e95
+      mtime: 1199246214
+      name: lib/Mango/Schema/ProductAttribute.pm
+    - bytesize: 1878
+      file_mime_type: ~
+      line_count: ~
+      md5: c475c6142fa2566cc8c9758764d2d9b0
+      mtime: 1193265077
+      name: lib/Mango/Schema/ProductTag.pm
+    - bytesize: 3168
+      file_mime_type: ~
+      line_count: ~
+      md5: d9e18a01f2c648f3515358052fb21936
+      mtime: 1199246214
+      name: lib/Mango/Schema/Profile.pm
+    - bytesize: 2811
+      file_mime_type: ~
+      line_count: ~
+      md5: 55cb1bb659e7960438b66293e2adb1b5
+      mtime: 1199246214
+      name: lib/Mango/Schema/Role.pm
+    - bytesize: 2533
+      file_mime_type: ~
+      line_count: ~
+      md5: df046ebaa7477af8168d3124f774f8e5
+      mtime: 1199246214
+      name: lib/Mango/Schema/Tag.pm
+    - bytesize: 3008
+      file_mime_type: ~
+      line_count: ~
+      md5: 21f14b188006b2c46e3285e1fdc25546
+      mtime: 1199246214
+      name: lib/Mango/Schema/User.pm
+    - bytesize: 1838
+      file_mime_type: ~
+      line_count: ~
+      md5: 5387ce00a2a7b8b67135718606a04b22
+      mtime: 1193265077
+      name: lib/Mango/Schema/UserRole.pm
+    - bytesize: 3345
+      file_mime_type: ~
+      line_count: ~
+      md5: f936f23192c77865bf504f9141d8f5a5
+      mtime: 1199246214
+      name: lib/Mango/Schema/Wishlist.pm
+    - bytesize: 3977
+      file_mime_type: ~
+      line_count: ~
+      md5: 80822b50d2ae4924c3490fcd24b2f88a
+      mtime: 1199601652
+      name: lib/Mango/Schema/Wishlist/Item.pm
+    - bytesize: 1430
+      file_mime_type: ~
+      line_count: ~
+      md5: 446dbb0fd6b66c8d415bb337a9a1136d
+      mtime: 1194147122
+      name: lib/Mango/Tag.pm
+    - bytesize: 1610
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a1c19e051e3e119a041cdf55672dbdb
+      mtime: 1193265077
+      name: lib/Mango/User.pm
+    - bytesize: 6693
+      file_mime_type: ~
+      line_count: ~
+      md5: d1b6dad1aac89cf74c3fc0facac8a493
+      mtime: 1199674888
+      name: lib/Mango/Wishlist.pm
+    - bytesize: 3281
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d32c9148d593732b3d7e900edf7384b
+      mtime: 1199601652
+      name: lib/Mango/Wishlist/Item.pm
+    - bytesize: 4464
+      file_mime_type: ~
+      line_count: ~
+      md5: bcdf083c6477824a482bf0cd26c76d84
+      mtime: 1193265076
+      name: script/mango.pl
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: e3cb063d20aaeeef758d0c6c534a4c07
+      mtime: 1196987939
+      name: share/.DS_Store
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: 566bee6b6467b1da8aade4c8fc7521ec
+      mtime: 1196987964
+      name: share/forms/.DS_Store
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: 92512026ffccb1b53a7c5fdbc9b8c3bb
+      mtime: 1196987954
+      name: share/forms/admin/.DS_Store
+    - bytesize: 522
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a779cdcfa7df290ddfc510d37f52b80
+      mtime: 1193265076
+      name: share/forms/admin/products/attributes/create.yml
+    - bytesize: 333
+      file_mime_type: ~
+      line_count: ~
+      md5: ad0a9982c3c84ebbdcf9dd637fb87488
+      mtime: 1193265076
+      name: share/forms/admin/products/attributes/delete.yml
+    - bytesize: 738
+      file_mime_type: ~
+      line_count: ~
+      md5: 6140f47e41480f0fda804cf71c392b0c
+      mtime: 1193539780
+      name: share/forms/admin/products/attributes/edit.yml
+    - bytesize: 795
+      file_mime_type: ~
+      line_count: ~
+      md5: 643bd756d75dc5ff8c64e19eb1fad77e
+      mtime: 1199332975
+      name: share/forms/admin/products/create.yml
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: b6b50a4cc74c146dd8229189b6776dc5
+      mtime: 1199332975
+      name: share/forms/admin/products/delete.yml
+    - bytesize: 1011
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fa9e3b035c482e29bbf5284ce5294f4
+      mtime: 1199332975
+      name: share/forms/admin/products/edit.yml
+    - bytesize: 505
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c22338f907e92f520ea424d65e7e299
+      mtime: 1199332975
+      name: share/forms/admin/roles/create.yml
+    - bytesize: 310
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d17362fee07829079ad55cbe4896ccd
+      mtime: 1199332975
+      name: share/forms/admin/roles/delete.yml
+    - bytesize: 703
+      file_mime_type: ~
+      line_count: ~
+      md5: 95f20b2a63a8eb0d69bf9c4f2af889e5
+      mtime: 1199332975
+      name: share/forms/admin/roles/edit.yml
+    - bytesize: 1040
+      file_mime_type: ~
+      line_count: ~
+      md5: a48f19c45a03c8e36538debf249f13f5
+      mtime: 1199332975
+      name: share/forms/admin/users/create.yml
+    - bytesize: 310
+      file_mime_type: ~
+      line_count: ~
+      md5: 97d3fe8ae04824b26dcd4a8bdb6474d1
+      mtime: 1199332975
+      name: share/forms/admin/users/delete.yml
+    - bytesize: 1194
+      file_mime_type: ~
+      line_count: ~
+      md5: 591ee06b527d9952601a53298509d093
+      mtime: 1199332975
+      name: share/forms/admin/users/edit.yml
+    - bytesize: 457
+      file_mime_type: ~
+      line_count: ~
+      md5: f9ff89e8ec1a6b654d4c03be16efd50c
+      mtime: 1199332975
+      name: share/forms/cart/add.yml
+    - bytesize: 121
+      file_mime_type: ~
+      line_count: ~
+      md5: ccd5912b978efc43a411200613feea42
+      mtime: 1199331196
+      name: share/forms/cart/clear.yml
+    - bytesize: 388
+      file_mime_type: ~
+      line_count: ~
+      md5: b8464f0e599ff7a5c6ddf5c971e738c7
+      mtime: 1199332975
+      name: share/forms/cart/delete.yml
+    - bytesize: 228
+      file_mime_type: ~
+      line_count: ~
+      md5: 5184ed9ac7bc9cc304c7a1c556420dad
+      mtime: 1199331189
+      name: share/forms/cart/save.yml
+    - bytesize: 419
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f006534664d6eab838c6ccfb8d5715f
+      mtime: 1199332975
+      name: share/forms/cart/update.yml
+    - bytesize: 502
+      file_mime_type: ~
+      line_count: ~
+      md5: f4dfa6d51126fd049164b69514952594
+      mtime: 1199332975
+      name: share/forms/login/login.yml
+    - bytesize: 131
+      file_mime_type: ~
+      line_count: ~
+      md5: ba40b2eaa2f9748fae80f7166192ca1b
+      mtime: 1199645829
+      name: share/forms/wishlists/clear.yml
+    - bytesize: 312
+      file_mime_type: ~
+      line_count: ~
+      md5: cb580df07287da4ecadec779a75b4caa
+      mtime: 1199665720
+      name: share/forms/wishlists/delete.yml
+    - bytesize: 658
+      file_mime_type: ~
+      line_count: ~
+      md5: bc693befea0d11719edad6e18486f1f1
+      mtime: 1199675308
+      name: share/forms/wishlists/edit.yml
+    - bytesize: 410
+      file_mime_type: ~
+      line_count: ~
+      md5: 8135c6452965dae679031afc9c140702
+      mtime: 1199663507
+      name: share/forms/wishlists/items/delete.yml
+    - bytesize: 441
+      file_mime_type: ~
+      line_count: ~
+      md5: 90bc4718b7beeffc5bb912c99dfb8b06
+      mtime: 1199663497
+      name: share/forms/wishlists/items/update.yml
+    - bytesize: 429
+      file_mime_type: ~
+      line_count: ~
+      md5: 84e593c604a13a3eecfffe64668c496e
+      mtime: 1199645674
+      name: share/forms/wishlists/update.yml
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: c47122a8fdd425ac964c13750223bbd0
+      mtime: 1196987280
+      name: share/templates/.DS_Store
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f4f952d8a45c3d4b346f1bc0abea1b7
+      mtime: 1196987280
+      name: share/templates/tt/.DS_Store
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: fd776175916bf18d3e9847d1acca8961
+      mtime: 1196987285
+      name: share/templates/tt/html/.DS_Store
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: b864c29a5f5b0919c26981d95cfd295f
+      mtime: 1196987931
+      name: share/templates/tt/html/admin/.DS_Store
+    - bytesize: 36
+      file_mime_type: ~
+      line_count: ~
+      md5: 20330944e5d0e11b61f5c3df5a451775
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/index
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: da80d7a0af54a15fe8245711d9069956
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/products/attributes/create
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: bfaf74ef0f1dc7c6c4c0dee27509791b
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/products/attributes/delete
+    - bytesize: 230
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d8456c95f4e56fd54dfaf84320073a7
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/products/attributes/edit
+    - bytesize: 1151
+      file_mime_type: ~
+      line_count: ~
+      md5: d91fb8ca0c3e00ea04de1eb814fa71ea
+      mtime: 1193539780
+      name: share/templates/tt/html/admin/products/attributes/index
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: b1b8b4eaa2f8e2598c20a72497dcd38f
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/products/create
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bfccc50dd83da3dad679f5f19b9c784
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/products/delete
+    - bytesize: 374
+      file_mime_type: ~
+      line_count: ~
+      md5: ed6ced9bbf0778efadd768b48bd757a1
+      mtime: 1193539780
+      name: share/templates/tt/html/admin/products/edit
+    - bytesize: 888
+      file_mime_type: ~
+      line_count: ~
+      md5: eed0f64576a9d23fc3fe22b470668983
+      mtime: 1193539780
+      name: share/templates/tt/html/admin/products/index
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: 55ac347f0334ba391775706ead95eb46
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/roles/create
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: a3553cb3b03157ca02f8e2c921605775
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/roles/delete
+    - bytesize: 215
+      file_mime_type: ~
+      line_count: ~
+      md5: 630c3de927d492b3143fa5841b380576
+      mtime: 1193265076
+      name: share/templates/tt/html/admin/roles/edit
+    - bytesize: 798
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bdba89c2e0a8aaf36f593e848b743b2
+      mtime: 1193539780
+      name: share/templates/tt/html/admin/roles/index
+    - bytesize: 6148
+      file_mime_type: ~
+      line_count: ~
+      md5: e4261154360b37effad78872760d964f
+      mtime: 1196987290
+      name: share/templates/tt/html/admin/users/.DS_Store
+    - bytesize: 102
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f4fafa447aacc1fe230ab068ab28fd3
+      mtime: 1195699597
+      name: share/templates/tt/html/admin/users/create
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b2de6ac58e2acb28f3c1d20d31dbb5a
+      mtime: 1195699597
+      name: share/templates/tt/html/admin/users/delete
+    - bytesize: 221
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a955bca6b30f5398f1b6eb14504374
+      mtime: 1196988671
+      name: share/templates/tt/html/admin/users/edit
+    - bytesize: 711
+      file_mime_type: ~
+      line_count: ~
+      md5: f86de3993037d3982757221f397641d2
+      mtime: 1196987246
+      name: share/templates/tt/html/admin/users/index
+    - bytesize: 2051
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a720d5408cf7031e6ef3c7b1dcb22b7
+      mtime: 1199332975
+      name: share/templates/tt/html/cart/index
+    - bytesize: 98
+      file_mime_type: ~
+      line_count: ~
+      md5: f9ff917d0daa64b51a2a804f1751a505
+      mtime: 1193265076
+      name: share/templates/tt/html/errors/401
+    - bytesize: 110
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a20f8909c09ac0444252b3d70710249
+      mtime: 1193265076
+      name: share/templates/tt/html/errors/404
+    - bytesize: 407
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ef76e0b51bdc748087dca0723ab591c
+      mtime: 1193539780
+      name: share/templates/tt/html/includes/admin/menu
+    - bytesize: 148
+      file_mime_type: ~
+      line_count: ~
+      md5: 73e4a8d8398f30b56dfed95a68e9d142
+      mtime: 1193265076
+      name: share/templates/tt/html/includes/errors
+    - bytesize: 67
+      file_mime_type: ~
+      line_count: ~
+      md5: a80b4d9a6aa1b1420c8f45f72023c40b
+      mtime: 1193539780
+      name: share/templates/tt/html/includes/login
+    - bytesize: 747
+      file_mime_type: ~
+      line_count: ~
+      md5: 111222fea806190a8c0a03fdb0f777ea
+      mtime: 1199585261
+      name: share/templates/tt/html/includes/menu
+    - bytesize: 322
+      file_mime_type: ~
+      line_count: ~
+      md5: a833da3563e7c90d78277b4a2bb29ecb
+      mtime: 1199332975
+      name: share/templates/tt/html/includes/pager
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 50e58d20e8b16d6ba5a66fcf4e0359b4
+      mtime: 1199331703
+      name: share/templates/tt/html/index
+    - bytesize: 112
+      file_mime_type: ~
+      line_count: ~
+      md5: c70aa9ebf7a4279171d14e36c2278b7a
+      mtime: 1199332975
+      name: share/templates/tt/html/login/index
+    - bytesize: 83
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a59386f0dfb5dc0ed5acaa5fa261e06
+      mtime: 1199332975
+      name: share/templates/tt/html/logout/index
+    - bytesize: 201
+      file_mime_type: ~
+      line_count: ~
+      md5: 3558117b4ed2f522a4fcf3b1f9a501eb
+      mtime: 1199329755
+      name: share/templates/tt/html/products/index
+    - bytesize: 1488
+      file_mime_type: ~
+      line_count: ~
+      md5: 07c0ea081b6c373aae033117dd03bcad
+      mtime: 1199585686
+      name: share/templates/tt/html/users/wishlists/details
+    - bytesize: 316
+      file_mime_type: ~
+      line_count: ~
+      md5: b4af65e8849ff83522163eaa75accc86
+      mtime: 1199585686
+      name: share/templates/tt/html/users/wishlists/index
+    - bytesize: 244
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d9302455e0f58ca4f2c2087960e6e08
+      mtime: 1199674928
+      name: share/templates/tt/html/wishlists/edit
+    - bytesize: 474
+      file_mime_type: ~
+      line_count: ~
+      md5: 48066afbc4d602bfc285420562c5a5a3
+      mtime: 1199595234
+      name: share/templates/tt/html/wishlists/index
+    - bytesize: 3044
+      file_mime_type: ~
+      line_count: ~
+      md5: 75d3072cd4c4dc9ecce1aa4d84475feb
+      mtime: 1199666669
+      name: share/templates/tt/html/wishlists/view
+    - bytesize: 1093
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e71ea83e7e9ef1a2991c12bd4656d18
+      mtime: 1199332975
+      name: share/templates/tt/html/wrapper
+    - bytesize: 5390
+      file_mime_type: ~
+      line_count: ~
+      md5: 98efc70fc85ea22322ca4770dc69a7db
+      mtime: 1199418127
+      name: t/catalyst/controller_form.t
+    - bytesize: 2095
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e54a8d9832572bda21ae35cf8c3fb8c
+      mtime: 1199252667
+      name: t/catalyst/controller_rest.t
+    - bytesize: 6064
+      file_mime_type: ~
+      line_count: ~
+      md5: a73ec2e4f2379e74f70e8e954686761f
+      mtime: 1199576858
+      name: t/catalyst/live_cart.t
+    - bytesize: 1910
+      file_mime_type: ~
+      line_count: ~
+      md5: d502b29940b79a2354228c3058568d17
+      mtime: 1199416267
+      name: t/catalyst/live_login.t
+    - bytesize: 2639
+      file_mime_type: ~
+      line_count: ~
+      md5: f1eb5d4fa2dfca3ff4e06d3a1dda793e
+      mtime: 1199147030
+      name: t/catalyst/live_rest_users.t
+    - bytesize: 245
+      file_mime_type: ~
+      line_count: ~
+      md5: 443601f508145937423c8d327940faa3
+      mtime: 1199678157
+      name: t/catalyst/live_users.t
+    - bytesize: 7432
+      file_mime_type: ~
+      line_count: ~
+      md5: 80e33903c628deaf09d653f3bced57f7
+      mtime: 1199678037
+      name: t/catalyst/live_wishlists.t
+    - bytesize: 1236
+      file_mime_type: ~
+      line_count: ~
+      md5: b64a1e6abeb1de224bf7276472beb1c8
+      mtime: 1199142799
+      name: t/catalyst/model_carts.t
+    - bytesize: 1258
+      file_mime_type: ~
+      line_count: ~
+      md5: d174f605f0da27af6d4fd04c7e7ada2b
+      mtime: 1199142799
+      name: t/catalyst/model_orders.t
+    - bytesize: 1321
+      file_mime_type: ~
+      line_count: ~
+      md5: cbe24d194d607cbe517709f378842d49
+      mtime: 1199142799
+      name: t/catalyst/model_products.t
+    - bytesize: 1314
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bb79c21d0dde162451aed18008dfea9
+      mtime: 1199142799
+      name: t/catalyst/model_profiles.t
+    - bytesize: 2495
+      file_mime_type: ~
+      line_count: ~
+      md5: e62c2cbc67979a4ce7e52e0007c331ef
+      mtime: 1199142799
+      name: t/catalyst/model_provider.t
+    - bytesize: 1250
+      file_mime_type: ~
+      line_count: ~
+      md5: 82727c9a0dd878e1fbef9c240c3a2bc9
+      mtime: 1199142799
+      name: t/catalyst/model_roles.t
+    - bytesize: 1269
+      file_mime_type: ~
+      line_count: ~
+      md5: d71279ac686e16ec8a10fe2e9754287d
+      mtime: 1199142799
+      name: t/catalyst/model_users.t
+    - bytesize: 1360
+      file_mime_type: ~
+      line_count: ~
+      md5: c5f73e849a4ccb6dff664a9efcfe24a4
+      mtime: 1199142799
+      name: t/catalyst/model_wishlists.t
+    - bytesize: 9501
+      file_mime_type: ~
+      line_count: ~
+      md5: fa79e8961ed7cadf96943500940c4b04
+      mtime: 1193265076
+      name: t/catalyst/plugin_authentication_store.t
+    - bytesize: 6499
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fe82b7f0889ef43a0f6f01ebd09f595
+      mtime: 1193265076
+      name: t/catalyst/plugin_i18n.t
+    - bytesize: 1124
+      file_mime_type: ~
+      line_count: ~
+      md5: 988bd5fb4264fcc43c8c96c67c9c06d2
+      mtime: 1193265076
+      name: t/catalyst/view_atom.t
+    - bytesize: 11017
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b826b819ab8fdbf5cbee2c820f1fa89
+      mtime: 1193265076
+      name: t/catalyst/view_feed.t
+    - bytesize: 1236
+      file_mime_type: ~
+      line_count: ~
+      md5: fea753d6c5a11f799a42f303bdea6d5a
+      mtime: 1193265076
+      name: t/catalyst/view_html.t
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 63e76f08384d6f6e33c49c00230fb62c
+      mtime: 1193265076
+      name: t/catalyst/view_rss.t
+    - bytesize: 1241
+      file_mime_type: ~
+      line_count: ~
+      md5: 553d143bc1ee1bbc2c4e0bdc87ba32b2
+      mtime: 1193265076
+      name: t/catalyst/view_text.t
+    - bytesize: 1258
+      file_mime_type: ~
+      line_count: ~
+      md5: e3afe2ffb3fb293838325243bd211809
+      mtime: 1193265076
+      name: t/catalyst/view_xhtml.t
+    - bytesize: 1734
+      file_mime_type: ~
+      line_count: ~
+      md5: 768a0bd6f77990363437aeefd7c386d7
+      mtime: 1193265076
+      name: t/exceptions.t
+    - bytesize: 2608
+      file_mime_type: ~
+      line_count: ~
+      md5: 55c958b61671b267851f6d51768dfafa
+      mtime: 1199418127
+      name: t/form.t
+    - bytesize: 1051
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b45a54b3089e72edf15ffcb37bc3441
+      mtime: 1193265076
+      name: t/iterator.t
+    - bytesize: 8521
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d27754ae3aefe68ef957b276d17bf11
+      mtime: 1199400760
+      name: t/lib/Mango/Test.pm
+    - bytesize: 2658
+      file_mime_type: ~
+      line_count: ~
+      md5: f9bc4121aede94e8bab9d92b10f2dd4e
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst.pm
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: 42a37d40986c0ca023ee02876f594e63
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/Action.pm
+    - bytesize: 342
+      file_mime_type: ~
+      line_count: ~
+      md5: 104eca36678abe36eec12b71e6883689
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/I18N.pm
+    - bytesize: 340
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f0c7e26ea530278ae47e61c0aefecbe
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/I18N/en.pm
+    - bytesize: 342
+      file_mime_type: ~
+      line_count: ~
+      md5: 70c154237ed547420e631ed88d81aa84
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/L10N.pm
+    - bytesize: 340
+      file_mime_type: ~
+      line_count: ~
+      md5: 83caf22e48dcb6215021cc7bc80adfdf
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/L10N/en.pm
+    - bytesize: 436
+      file_mime_type: ~
+      line_count: ~
+      md5: 4af6e10fff8f8e92672e985135dae0db
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/Log.pm
+    - bytesize: 506
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f90823f59be62839111ba8e2f7b2e0b
+      mtime: 1194665006
+      name: t/lib/Mango/Test/Catalyst/Request.pm
+    - bytesize: 375
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ab0c9ee4c78bf70d58ff68c55f0dea5
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/Response.pm
+    - bytesize: 248
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bd7280da86932b9b4b9dce9da607502
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Catalyst/Session.pm
+    - bytesize: 323
+      file_mime_type: ~
+      line_count: ~
+      md5: ff901507de8f84e5fc884780bc8e8904
+      mtime: 1193265076
+      name: t/lib/Mango/Test/I18N.pm
+    - bytesize: 301
+      file_mime_type: ~
+      line_count: ~
+      md5: 3bc3eb56ee5aa567deaf172cc814d675
+      mtime: 1193265076
+      name: t/lib/Mango/Test/I18N/en.pm
+    - bytesize: 204
+      file_mime_type: ~
+      line_count: ~
+      md5: efedefc88ba6e2f0f97168c268e485b5
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Meta.pm
+    - bytesize: 263
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b4e18d905aad2cb6d8cd0d62696f556
+      mtime: 1193265076
+      name: t/lib/Mango/Test/Schema.pm
+    - bytesize: 380
+      file_mime_type: ~
+      line_count: ~
+      md5: aa2c7577d9f2e15a7164ea67a43bd4da
+      mtime: 1199556803
+      name: t/meta.t
+    - bytesize: 3313
+      file_mime_type: ~
+      line_count: ~
+      md5: 373e44ed6c87511d04430a8002e31cbd
+      mtime: 1199556655
+      name: t/object.t
+    - bytesize: 612
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f2a7e9d49bb3f5b3943e7d6afde39d0
+      mtime: 1195185076
+      name: t/pod_coverage.t
+    - bytesize: 2150
+      file_mime_type: ~
+      line_count: ~
+      md5: c39b96c5c63a5f30abbc35480d9aaefa
+      mtime: 1199252667
+      name: t/pod_spelling.t
+    - bytesize: 377
+      file_mime_type: ~
+      line_count: ~
+      md5: 99eeb73e4d0b9c33c3da5cf5745df543
+      mtime: 1193265076
+      name: t/pod_syntax.t
+    - bytesize: 2481
+      file_mime_type: ~
+      line_count: ~
+      md5: 86bd41aee6811d80390b591a5bf594b1
+      mtime: 1199400760
+      name: t/provider.t
+    - bytesize: 10766
+      file_mime_type: ~
+      line_count: ~
+      md5: c5b8d5972a82d29581f5e19e267d3c4b
+      mtime: 1199142799
+      name: t/provider_carts.t
+    - bytesize: 6092
+      file_mime_type: ~
+      line_count: ~
+      md5: 25bcc776e71a6d80934abd9e98f790b0
+      mtime: 1199142799
+      name: t/provider_dbic.t
+    - bytesize: 9769
+      file_mime_type: ~
+      line_count: ~
+      md5: ac9c0046e0341253c54727fb6dec2753
+      mtime: 1199142799
+      name: t/provider_orders.t
+    - bytesize: 27051
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c7e65b0000ef81b38273264114982e5
+      mtime: 1199142799
+      name: t/provider_products.t
+    - bytesize: 10294
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cc7849aa49a1aed514b18a72f5aafcb
+      mtime: 1199142799
+      name: t/provider_profiles.t
+    - bytesize: 11254
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b0f50d89861c86d55b18b571302720b
+      mtime: 1199142799
+      name: t/provider_roles.t
+    - bytesize: 5576
+      file_mime_type: ~
+      line_count: ~
+      md5: 115d28b9e46e864782ebe15cdd8f09fa
+      mtime: 1199142799
+      name: t/provider_users.t
+    - bytesize: 11583
+      file_mime_type: ~
+      line_count: ~
+      md5: e40d84a3cac092aeba970048b7fa86e3
+      mtime: 1199142799
+      name: t/provider_wishlists.t
+    - bytesize: 1715
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fa31daeff1f4e1b51fcc492488fd7f6
+      mtime: 1193265076
+      name: t/sql/test.sqlite.sql
+  module_info:
+    - bytesize: 1425
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d9ab0267495bf3b7259ffd249699736
+      module_name_from_file_guess: Mango
+      mtime: 1199556012
+      name: lib/Mango.pm
+      packages:
+        - Mango
+      primary_package: Mango
+      uses:
+        - strict
+        - warnings
+        - base
+        - File::ShareDir
+        - Path::Class
+      version_info:
+        filename: lib/Mango.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 0.01000_07
+    - bytesize: 11967
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ef1843691a08a1dc82e1d6cbbabddbe
+      module_name_from_file_guess: Catalyst::Helper::Mango
+      mtime: 1199662292
+      name: lib/Catalyst/Helper/Mango.pm
+      packages:
+        - Catalyst::Helper::Mango
+      primary_package: Catalyst::Helper::Mango
+      uses:
+        - strict
+        - warnings
+        - base
+        - Catalyst::Utils
+        - DateTime
+        - Path::Class
+        - YAML
+        - Mango::Schema
+      version_info:
+        filename: lib/Catalyst/Helper/Mango.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2057
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ff195cbf47acbaa4a44e4cd91f22c43
+      module_name_from_file_guess: Mango::Attribute
+      mtime: 1193265077
+      name: lib/Mango/Attribute.pm
+      packages:
+        - Mango::Attribute
+      primary_package: Mango::Attribute
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Attribute.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6463
+      file_mime_type: ~
+      line_count: ~
+      md5: 555f5ee1caa0e42a953b83732ba76843
+      module_name_from_file_guess: Mango::Cart
+      mtime: 1199582098
+      name: lib/Mango/Cart.pm
+      packages:
+        - Mango::Cart
+      primary_package: Mango::Cart
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::User
+        - Mango::Exception
+        - DateTime
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Cart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 766
+      file_mime_type: ~
+      line_count: ~
+      md5: 98a0b56f714f615956e41f5c7b4a12b3
+      module_name_from_file_guess: Mango::Currency
+      mtime: 1193265077
+      name: lib/Mango/Currency.pm
+      packages:
+        - Mango::Currency
+      primary_package: Mango::Currency
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Currency.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1557
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c8138b57490771149b8b74fe654dc5e
+      module_name_from_file_guess: Mango::Exception
+      mtime: 1193265077
+      name: lib/Mango/Exception.pm
+      packages:
+        - Mango::Exception
+      primary_package: Mango::Exception
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::I18N
+      version_info:
+        filename: lib/Mango/Exception.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14306
+      file_mime_type: ~
+      line_count: ~
+      md5: 813981808e9328ccac91936993390594
+      module_name_from_file_guess: Mango::Form
+      mtime: 1199678318
+      name: lib/Mango/Form.pm
+      packages:
+        - Mango::Form
+      primary_package: Mango::Form
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Form::Results
+        - Mango::Exception
+        - Mango::I18N
+        - FormValidator::Simple
+        - FormValidator::Simple::Constants
+        - CGI::FormBuilder
+        - Clone
+        - YAML
+      version_info:
+        filename: lib/Mango/Form.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1692
+      file_mime_type: ~
+      line_count: ~
+      md5: 711cdd8690f9f8b6c4ec03b7dbead2d2
+      module_name_from_file_guess: Mango::I18N
+      mtime: 1193265077
+      name: lib/Mango/I18N.pm
+      packages:
+        - Mango::I18N
+      primary_package: Mango::I18N
+      uses:
+        - strict
+        - warnings
+        - utf8
+        - vars
+        - base
+      version_info:
+        filename: lib/Mango/I18N.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: beae4c8a96aacf78c7089b880ebc3b5c
+      module_name_from_file_guess: Mango::Iterator
+      mtime: 1193265077
+      name: lib/Mango/Iterator.pm
+      packages:
+        - Mango::Iterator
+        - Mango::Iterator::List
+        - Mango::Iterator::HandelResults
+      primary_package: Mango::Iterator
+      uses:
+        - strict
+        - warnings
+        - base
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Iterator.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5632
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e22f7eb930c0e0344a9b1e9e5de97b0
+      module_name_from_file_guess: Mango::Object
+      mtime: 1193265077
+      name: lib/Mango/Object.pm
+      packages:
+        - Mango::Object
+      primary_package: Mango::Object
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Object::Meta
+        - Class::Inspector
+      version_info:
+        filename: lib/Mango/Object.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13820
+      file_mime_type: ~
+      line_count: ~
+      md5: 42b479856d33315d7858768e4205fa91
+      module_name_from_file_guess: Mango::Order
+      mtime: 1193265077
+      name: lib/Mango/Order.pm
+      packages:
+        - Mango::Order
+      primary_package: Mango::Order
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constants
+        - Handel::Constraints
+        - DateTime
+      version_info:
+        filename: lib/Mango/Order.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4634
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ffbbd862247bd01c97bec7def399e61
+      module_name_from_file_guess: Mango::Product
+      mtime: 1193265077
+      name: lib/Mango/Product.pm
+      packages:
+        - Mango::Product
+      primary_package: Mango::Product
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Product.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: 056b7c5d0474c6e4328b4ac18d625916
+      module_name_from_file_guess: Mango::Profile
+      mtime: 1193265077
+      name: lib/Mango/Profile.pm
+      packages:
+        - Mango::Profile
+      primary_package: Mango::Profile
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Profile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6264
+      file_mime_type: ~
+      line_count: ~
+      md5: 594a712f20e515bdcdfaf04391d15051
+      module_name_from_file_guess: Mango::Provider
+      mtime: 1193265077
+      name: lib/Mango/Provider.pm
+      packages:
+        - Mango::Provider
+      primary_package: Mango::Provider
+      uses:
+        - strict
+        - warnings
+        - base
+        - Class::Inspector
+        - Scalar::Util
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Provider.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2338
+      file_mime_type: ~
+      line_count: ~
+      md5: e7a9ccbc5fd516f4ea59093c8f01d028
+      module_name_from_file_guess: Mango::Role
+      mtime: 1193265077
+      name: lib/Mango/Role.pm
+      packages:
+        - Mango::Role
+      primary_package: Mango::Role
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Role.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1165
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bd77bb3f8bf6f407446773dd1cc187f
+      module_name_from_file_guess: Mango::Schema
+      mtime: 1193265077
+      name: lib/Mango/Schema.pm
+      packages:
+        - Mango::Schema
+      primary_package: Mango::Schema
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Schema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1430
+      file_mime_type: ~
+      line_count: ~
+      md5: 446dbb0fd6b66c8d415bb337a9a1136d
+      module_name_from_file_guess: Mango::Tag
+      mtime: 1194147122
+      name: lib/Mango/Tag.pm
+      packages:
+        - Mango::Tag
+      primary_package: Mango::Tag
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Tag.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1610
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a1c19e051e3e119a041cdf55672dbdb
+      module_name_from_file_guess: Mango::User
+      mtime: 1193265077
+      name: lib/Mango/User.pm
+      packages:
+        - Mango::User
+      primary_package: Mango::User
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/User.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6693
+      file_mime_type: ~
+      line_count: ~
+      md5: d1b6dad1aac89cf74c3fc0facac8a493
+      module_name_from_file_guess: Mango::Wishlist
+      mtime: 1199674888
+      name: lib/Mango/Wishlist.pm
+      packages:
+        - Mango::Wishlist
+      primary_package: Mango::Wishlist
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constraints
+        - DateTime
+      version_info:
+        filename: lib/Mango/Wishlist.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3550
+      file_mime_type: ~
+      line_count: ~
+      md5: 132aba427046290704261a75e5fa5b06
+      module_name_from_file_guess: Mango::Cart::Item
+      mtime: 1193265077
+      name: lib/Mango/Cart/Item.pm
+      packages:
+        - Mango::Cart::Item
+      primary_package: Mango::Cart::Item
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constraints
+        - DateTime
+      version_info:
+        filename: lib/Mango/Cart/Item.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2664
+      file_mime_type: ~
+      line_count: ~
+      md5: cc6335962cbad37da9734b3b889f4cfd
+      module_name_from_file_guess: Mango::Catalyst::Controller
+      mtime: 1199252488
+      name: lib/Mango/Catalyst/Controller.pm
+      packages:
+        - Mango::Catalyst::Controller
+      primary_package: Mango::Catalyst::Controller
+      uses: []
+      version_info:
+        filename: lib/Mango/Catalyst/Controller.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 479
+      file_mime_type: ~
+      line_count: ~
+      md5: fab3eb0e2ad91883cff9777772a07427
+      module_name_from_file_guess: Mango::Catalyst::Controller::Admin
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin.pm
+      packages:
+        - Mango::Catalyst::Controller::Admin
+      primary_package: Mango::Catalyst::Controller::Admin
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Admin.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4578
+      file_mime_type: ~
+      line_count: ~
+      md5: e23611582dbc75bf40243ea8ae36d06a
+      module_name_from_file_guess: Mango::Catalyst::Controller::Cart
+      mtime: 1199594422
+      name: lib/Mango/Catalyst/Controller/Cart.pm
+      packages:
+        - Mango::Catalyst::Controller::Cart
+      primary_package: Mango::Catalyst::Controller::Cart
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constants
+        - Mango
+        - Path::Class::Dir
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Cart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7748
+      file_mime_type: ~
+      line_count: ~
+      md5: 79af62f4d8193cfd14efd04758bdd9f3
+      module_name_from_file_guess: Mango::Catalyst::Controller::Form
+      mtime: 1199400760
+      name: lib/Mango/Catalyst/Controller/Form.pm
+      packages:
+        - Mango::Catalyst::Controller::Form
+      primary_package: Mango::Catalyst::Controller::Form
+      uses:
+        - strict
+        - warnings
+        - base
+        - Catalyst::Utils
+        - Path::Class
+        - File::Basename
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Form.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1468
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d85021d9026a15f16c5cebbc5c8fbeb
+      module_name_from_file_guess: Mango::Catalyst::Controller::Login
+      mtime: 1199418127
+      name: lib/Mango/Catalyst/Controller/Login.pm
+      packages:
+        - Mango::Catalyst::Controller::Login
+      primary_package: Mango::Catalyst::Controller::Login
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Login.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 861
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a2ed2186f1fec31a70153b67bbb4e29
+      module_name_from_file_guess: Mango::Catalyst::Controller::Logout
+      mtime: 1199418127
+      name: lib/Mango/Catalyst/Controller/Logout.pm
+      packages:
+        - Mango::Catalyst::Controller::Logout
+      primary_package: Mango::Catalyst::Controller::Logout
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Logout.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: a9ee8f9554df3da2ee87e159dda25075
+      module_name_from_file_guess: Mango::Catalyst::Controller::Products
+      mtime: 1199504110
+      name: lib/Mango/Catalyst/Controller/Products.pm
+      packages:
+        - Mango::Catalyst::Controller::Products
+      primary_package: Mango::Catalyst::Controller::Products
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Path::Class::Dir
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Products.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6071
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fb847b264b3ec647e7ea3a9e27ed1bc
+      module_name_from_file_guess: Mango::Catalyst::Controller::REST
+      mtime: 1199418127
+      name: lib/Mango/Catalyst/Controller/REST.pm
+      packages:
+        - Mango::Catalyst::Controller::REST
+      primary_package: Mango::Catalyst::Controller::REST
+      uses:
+        - strict
+        - warnings
+        - base
+        - MIME::Types
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/REST.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 76875e52c3dd9f9b5b0f9774c421a5a1
+      module_name_from_file_guess: Mango::Catalyst::Controller::Root
+      mtime: 1199503745
+      name: lib/Mango/Catalyst/Controller/Root.pm
+      packages:
+        - Mango::Catalyst::Controller::Root
+      primary_package: Mango::Catalyst::Controller::Root
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Root.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6538
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cb8dbcb8d53253d78a5b2f3a2d6d742
+      module_name_from_file_guess: Mango::Catalyst::Controller::Users
+      mtime: 1199582858
+      name: lib/Mango/Catalyst/Controller/Users.pm
+      packages:
+        - Mango::Catalyst::Controller::Users
+      primary_package: Mango::Catalyst::Controller::Users
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Users.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3651
+      file_mime_type: ~
+      line_count: ~
+      md5: f4993a5d6c82fdaae9dd4e06f5d30dbb
+      module_name_from_file_guess: Mango::Catalyst::Controller::Wishlists
+      mtime: 1199675262
+      name: lib/Mango/Catalyst/Controller/Wishlists.pm
+      packages:
+        - Mango::Catalyst::Controller::Wishlists
+      primary_package: Mango::Catalyst::Controller::Wishlists
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constants
+        - Mango
+        - Path::Class::Dir
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Wishlists.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5345
+      file_mime_type: ~
+      line_count: ~
+      md5: db5134c91b352eeeee2a9606249985ff
+      module_name_from_file_guess: Mango::Catalyst::Controller::Admin::Products
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Products.pm
+      packages:
+        - Mango::Catalyst::Controller::Admin::Products
+      primary_package: Mango::Catalyst::Controller::Admin::Products
+      uses:
+        - strict
+        - warnings
+        - base
+        - Set::Scalar
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Admin/Products.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3747
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b2ae797a3ec43e75e3811da6851707
+      module_name_from_file_guess: Mango::Catalyst::Controller::Admin::Roles
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Roles.pm
+      packages:
+        - Mango::Catalyst::Controller::Admin::Roles
+      primary_package: Mango::Catalyst::Controller::Admin::Roles
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Admin/Roles.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6474
+      file_mime_type: ~
+      line_count: ~
+      md5: 6343a559a1f07f41d6b0a6249f7d7df4
+      module_name_from_file_guess: Mango::Catalyst::Controller::Admin::Users
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Users.pm
+      packages:
+        - Mango::Catalyst::Controller::Admin::Users
+      primary_package: Mango::Catalyst::Controller::Admin::Users
+      uses:
+        - strict
+        - warnings
+        - base
+        - Set::Scalar
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Admin/Users.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4687
+      file_mime_type: ~
+      line_count: ~
+      md5: 9add46547e06c72fe51b030c75b9d8b3
+      module_name_from_file_guess: Mango::Catalyst::Controller::Admin::Products::Attributes
+      mtime: 1198992028
+      name: lib/Mango/Catalyst/Controller/Admin/Products/Attributes.pm
+      packages:
+        - Mango::Catalyst::Controller::Admin::Products::Attributes
+      primary_package: Mango::Catalyst::Controller::Admin::Products::Attributes
+      uses:
+        - strict
+        - warnings
+        - base
+        - Set::Scalar
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Admin/Products/Attributes.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b39073c1d82a66bbff50a9ec2d74bd4
+      module_name_from_file_guess: Mango::Catalyst::Controller::Users::Wishlists
+      mtime: 1199582642
+      name: lib/Mango/Catalyst/Controller/Users/Wishlists.pm
+      packages:
+        - Mango::Catalyst::Controller::Users::Wishlists
+      primary_package: Mango::Catalyst::Controller::Users::Wishlists
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constants
+        - Mango
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Users/Wishlists.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1723
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dc8f7435782cd98090f28ea2822c6e9
+      module_name_from_file_guess: Mango::Catalyst::Controller::Wishlists::Items
+      mtime: 1199666472
+      name: lib/Mango/Catalyst/Controller/Wishlists/Items.pm
+      packages:
+        - Mango::Catalyst::Controller::Wishlists::Items
+      primary_package: Mango::Catalyst::Controller::Wishlists::Items
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constants
+        - Mango
+        - Path::Class::Dir
+      version_info:
+        filename: lib/Mango/Catalyst/Controller/Wishlists/Items.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 927
+      file_mime_type: ~
+      line_count: ~
+      md5: ba656f90456816b3932b1fbe36d82224
+      module_name_from_file_guess: Mango::Catalyst::Model::Carts
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Carts.pm
+      packages:
+        - Mango::Catalyst::Model::Carts
+      primary_package: Mango::Catalyst::Model::Carts
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Carts.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 936
+      file_mime_type: ~
+      line_count: ~
+      md5: 1202a16dcb2f16fd6298289aa4e6d272
+      module_name_from_file_guess: Mango::Catalyst::Model::Orders
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Orders.pm
+      packages:
+        - Mango::Catalyst::Model::Orders
+      primary_package: Mango::Catalyst::Model::Orders
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Orders.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 954
+      file_mime_type: ~
+      line_count: ~
+      md5: b0b0ed86add2ac651c1898d88a77316e
+      module_name_from_file_guess: Mango::Catalyst::Model::Products
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Products.pm
+      packages:
+        - Mango::Catalyst::Model::Products
+      primary_package: Mango::Catalyst::Model::Products
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Products.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 960
+      file_mime_type: ~
+      line_count: ~
+      md5: ae10334a25ee2ad5bf5889f2463b1acf
+      module_name_from_file_guess: Mango::Catalyst::Model::Profiles
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Profiles.pm
+      packages:
+        - Mango::Catalyst::Model::Profiles
+      primary_package: Mango::Catalyst::Model::Profiles
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Profiles.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3670
+      file_mime_type: ~
+      line_count: ~
+      md5: d19fb51d1c53733c8b69f5150faec617
+      module_name_from_file_guess: Mango::Catalyst::Model::Provider
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Provider.pm
+      packages:
+        - Mango::Catalyst::Model::Provider
+      primary_package: Mango::Catalyst::Model::Provider
+      uses:
+        - strict
+        - warnings
+        - base
+        - Scalar::Util
+        - Class::Inspector
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Provider.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 932
+      file_mime_type: ~
+      line_count: ~
+      md5: 22888383a433aa9e97388ef291989e39
+      module_name_from_file_guess: Mango::Catalyst::Model::Roles
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Roles.pm
+      packages:
+        - Mango::Catalyst::Model::Roles
+      primary_package: Mango::Catalyst::Model::Roles
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Roles.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 927
+      file_mime_type: ~
+      line_count: ~
+      md5: abae946b8ac7105e166be6bc86158256
+      module_name_from_file_guess: Mango::Catalyst::Model::Users
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Users.pm
+      packages:
+        - Mango::Catalyst::Model::Users
+      primary_package: Mango::Catalyst::Model::Users
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Users.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: dc95bb0a87aa5b0be6994f3a0db1f8f5
+      module_name_from_file_guess: Mango::Catalyst::Model::Wishlists
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Model/Wishlists.pm
+      packages:
+        - Mango::Catalyst::Model::Wishlists
+      primary_package: Mango::Catalyst::Model::Wishlists
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Model/Wishlists.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 877
+      file_mime_type: ~
+      line_count: ~
+      md5: 2db9c000549fb9d12eded30242c266bb
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Application
+      mtime: 1198716617
+      name: lib/Mango/Catalyst/Plugin/Application.pm
+      packages:
+        - Mango::Catalyst::Plugin::Application
+      primary_package: Mango::Catalyst::Plugin::Application
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Application.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: ~
+    - bytesize: 4877
+      file_mime_type: ~
+      line_count: ~
+      md5: 5644c6eb679c2e436f09768dfd828f6d
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Authentication
+      mtime: 1198716617
+      name: lib/Mango/Catalyst/Plugin/Authentication.pm
+      packages:
+        - Mango::Catalyst::Plugin::Authentication
+      primary_package: Mango::Catalyst::Plugin::Authentication
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Mango::I18N
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Authentication.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: ~
+    - bytesize: 1152
+      file_mime_type: ~
+      line_count: ~
+      md5: 85ef75ae2375aa98cdbdcdf242cca7b8
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Forms
+      mtime: 1199400760
+      name: lib/Mango/Catalyst/Plugin/Forms.pm
+      packages:
+        - Mango::Catalyst::Plugin::Forms
+      primary_package: Mango::Catalyst::Plugin::Forms
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Forms.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: ~
+    - bytesize: 3895
+      file_mime_type: ~
+      line_count: ~
+      md5: 09d6488997b12a827d6cc165f4ca248b
+      module_name_from_file_guess: Mango::Catalyst::Plugin::I18N
+      mtime: 1194935040
+      name: lib/Mango/Catalyst/Plugin/I18N.pm
+      packages:
+        - Mango::Catalyst::Plugin::I18N
+      primary_package: Mango::Catalyst::Plugin::I18N
+      uses:
+        - strict
+        - warnings
+        - Mango
+        - Mango::I18N
+        - I18N::LangTags
+        - I18N::LangTags::Detect
+        - NEXT
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/I18N.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: ~
+    - bytesize: 3481
+      file_mime_type: ~
+      line_count: ~
+      md5: bde2c066faf641216cfe48433ae18dde
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Authentication::AnonymousUser
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Plugin/Authentication/AnonymousUser.pm
+      packages:
+        - Mango::Catalyst::Plugin::Authentication::AnonymousUser
+      primary_package: Mango::Catalyst::Plugin::Authentication::AnonymousUser
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Authentication/AnonymousUser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1950
+      file_mime_type: ~
+      line_count: ~
+      md5: 11bb9841507119553967375ea7dff756
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Authentication::CachedUser
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/Plugin/Authentication/CachedUser.pm
+      packages:
+        - Mango::Catalyst::Plugin::Authentication::CachedUser
+      primary_package: Mango::Catalyst::Plugin::Authentication::CachedUser
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Authentication/CachedUser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6133
+      file_mime_type: ~
+      line_count: ~
+      md5: fd13f1a449f91ed7f10069f426b9243d
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Authentication::Store
+      mtime: 1199221408
+      name: lib/Mango/Catalyst/Plugin/Authentication/Store.pm
+      packages:
+        - Mango::Catalyst::Plugin::Authentication::Store
+      primary_package: Mango::Catalyst::Plugin::Authentication::Store
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Mango::Catalyst::Plugin::Authentication::User
+        - Mango::Catalyst::Plugin::Authentication::CachedUser
+        - Mango::Catalyst::Plugin::Authentication::AnonymousUser
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Authentication/Store.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: ~
+    - bytesize: 5713
+      file_mime_type: ~
+      line_count: ~
+      md5: 462b3dd59ad7c68b83f606df45fc52d4
+      module_name_from_file_guess: Mango::Catalyst::Plugin::Authentication::User
+      mtime: 1199162998
+      name: lib/Mango/Catalyst/Plugin/Authentication/User.pm
+      packages:
+        - Mango::Catalyst::Plugin::Authentication::User
+      primary_package: Mango::Catalyst::Plugin::Authentication::User
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Catalyst/Plugin/Authentication/User.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1115
+      file_mime_type: ~
+      line_count: ~
+      md5: 57a3ac1bea4f1b931e75015104e8898d
+      module_name_from_file_guess: Mango::Catalyst::View::Atom
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Atom.pm
+      packages:
+        - Mango::Catalyst::View::Atom
+      primary_package: Mango::Catalyst::View::Atom
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/View/Atom.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3623
+      file_mime_type: ~
+      line_count: ~
+      md5: afb6750844175940fe4eaba2625364bb
+      module_name_from_file_guess: Mango::Catalyst::View::Feed
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Feed.pm
+      packages:
+        - Mango::Catalyst::View::Feed
+      primary_package: Mango::Catalyst::View::Feed
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+        - Scalar::Util
+        - XML::Feed
+      version_info:
+        filename: lib/Mango/Catalyst/View/Feed.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1988
+      file_mime_type: ~
+      line_count: ~
+      md5: 25c29193c7b8677ab499efd00d8824e1
+      module_name_from_file_guess: Mango::Catalyst::View::HTML
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/HTML.pm
+      packages:
+        - Mango::Catalyst::View::HTML
+      primary_package: Mango::Catalyst::View::HTML
+      uses:
+        - strict
+        - warnings
+        - base
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/View/HTML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1105
+      file_mime_type: ~
+      line_count: ~
+      md5: ade9e30c5c2be0f6b36f8eee49e16ff6
+      module_name_from_file_guess: Mango::Catalyst::View::RSS
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/RSS.pm
+      packages:
+        - Mango::Catalyst::View::RSS
+      primary_package: Mango::Catalyst::View::RSS
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Catalyst/View/RSS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6429
+      file_mime_type: ~
+      line_count: ~
+      md5: 54d24a65601e5dd2c24a481b0b601ad9
+      module_name_from_file_guess: Mango::Catalyst::View::Template
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Template.pm
+      packages:
+        - Mango::Catalyst::View::Template
+      primary_package: Mango::Catalyst::View::Template
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Catalyst/View/Template.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1996
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cef196f422a8ef4fb27d6fd9255c7dd
+      module_name_from_file_guess: Mango::Catalyst::View::Text
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/Text.pm
+      packages:
+        - Mango::Catalyst::View::Text
+      primary_package: Mango::Catalyst::View::Text
+      uses:
+        - strict
+        - warnings
+        - base
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/View/Text.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2351
+      file_mime_type: ~
+      line_count: ~
+      md5: 61f5dcf8c2a958a2fe0881169868d0ad
+      module_name_from_file_guess: Mango::Catalyst::View::XHTML
+      mtime: 1193265077
+      name: lib/Mango/Catalyst/View/XHTML.pm
+      packages:
+        - Mango::Catalyst::View::XHTML
+      primary_package: Mango::Catalyst::View::XHTML
+      uses:
+        - strict
+        - warnings
+        - base
+        - Path::Class
+      version_info:
+        filename: lib/Mango/Catalyst/View/XHTML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1281
+      file_mime_type: ~
+      line_count: ~
+      md5: 6dec4fff2d04e320c7c8871ddb9fe3f9
+      module_name_from_file_guess: Mango::Form::Results
+      mtime: 1193265077
+      name: lib/Mango/Form/Results.pm
+      packages:
+        - Mango::Form::Results
+      primary_package: Mango::Form::Results
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Form/Results.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5100
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a66a83ff4e34078034f355e7a05d9e
+      module_name_from_file_guess: Mango::I18N::en
+      mtime: 1199678318
+      name: lib/Mango/I18N/en.pm
+      packages:
+        - Mango::I18N::en
+      primary_package: Mango::I18N::en
+      uses:
+        - strict
+        - warnings
+        - utf8
+        - vars
+        - base
+      version_info:
+        filename: lib/Mango/I18N/en.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 739
+      file_mime_type: ~
+      line_count: ~
+      md5: f667fd3b6df3d55b6cfdeeee14f46ced
+      module_name_from_file_guess: Mango::I18N::ru
+      mtime: 1193265077
+      name: lib/Mango/I18N/ru.pm
+      packages:
+        - Mango::I18N::ru
+      primary_package: Mango::I18N::ru
+      uses:
+        - strict
+        - warnings
+        - utf8
+        - vars
+        - base
+      version_info:
+        filename: lib/Mango/I18N/ru.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1296
+      file_mime_type: ~
+      line_count: ~
+      md5: 78e305b1057be1a5ef20baaf98d852f9
+      module_name_from_file_guess: Mango::Object::Meta
+      mtime: 1193265077
+      name: lib/Mango/Object/Meta.pm
+      packages:
+        - Mango::Object::Meta
+      primary_package: Mango::Object::Meta
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Object/Meta.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3272
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e2b8fec12ce683ff78c10958e1c5823
+      module_name_from_file_guess: Mango::Order::Item
+      mtime: 1193265077
+      name: lib/Mango/Order/Item.pm
+      packages:
+        - Mango::Order::Item
+      primary_package: Mango::Order::Item
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constraints
+        - DateTime
+      version_info:
+        filename: lib/Mango/Order/Item.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5482
+      file_mime_type: ~
+      line_count: ~
+      md5: 0abbb048a13ca4330d8e4c221bf02d24
+      module_name_from_file_guess: Mango::Provider::Carts
+      mtime: 1193265077
+      name: lib/Mango/Provider/Carts.pm
+      packages:
+        - Mango::Provider::Carts
+      primary_package: Mango::Provider::Carts
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Provider/Carts.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7664
+      file_mime_type: ~
+      line_count: ~
+      md5: 02b2d130702f6ffafa5dc9f4c64699b8
+      module_name_from_file_guess: Mango::Provider::DBIC
+      mtime: 1193265077
+      name: lib/Mango/Provider/DBIC.pm
+      packages:
+        - Mango::Provider::DBIC
+      primary_package: Mango::Provider::DBIC
+      uses:
+        - strict
+        - warnings
+        - base
+        - Scalar::Util
+        - DateTime
+        - Mango::Iterator
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Provider/DBIC.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5625
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cedfd3a5bfb0037d3ca2bc0bb21e800
+      module_name_from_file_guess: Mango::Provider::Orders
+      mtime: 1193265077
+      name: lib/Mango/Provider/Orders.pm
+      packages:
+        - Mango::Provider::Orders
+      primary_package: Mango::Provider::Orders
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Provider/Orders.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 15243
+      file_mime_type: ~
+      line_count: ~
+      md5: 456f03bec6ce3bedbb5cbb666526630c
+      module_name_from_file_guess: Mango::Provider::Products
+      mtime: 1193539780
+      name: lib/Mango/Provider/Products.pm
+      packages:
+        - Mango::Provider::Products
+      primary_package: Mango::Provider::Products
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+        - Scalar::Util
+        - DateTime
+      version_info:
+        filename: lib/Mango/Provider/Products.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5580
+      file_mime_type: ~
+      line_count: ~
+      md5: 174659242aa4d290fccf52c33a78e13e
+      module_name_from_file_guess: Mango::Provider::Profiles
+      mtime: 1199594422
+      name: lib/Mango/Provider/Profiles.pm
+      packages:
+        - Mango::Provider::Profiles
+      primary_package: Mango::Provider::Profiles
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+      version_info:
+        filename: lib/Mango/Provider/Profiles.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5850
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d1513b42fc80c5e40dac2e9dc8a4ac2
+      module_name_from_file_guess: Mango::Provider::Roles
+      mtime: 1193265077
+      name: lib/Mango/Provider/Roles.pm
+      packages:
+        - Mango::Provider::Roles
+      primary_package: Mango::Provider::Roles
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Exception
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Provider/Roles.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2514
+      file_mime_type: ~
+      line_count: ~
+      md5: b407f989c8a5bbd9e8def3c9679a3230
+      module_name_from_file_guess: Mango::Provider::Users
+      mtime: 1193265077
+      name: lib/Mango/Provider/Users.pm
+      packages:
+        - Mango::Provider::Users
+      primary_package: Mango::Provider::Users
+      uses:
+        - strict
+        - warnings
+        - base
+        - Scalar::Util
+      version_info:
+        filename: lib/Mango/Provider/Users.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5697
+      file_mime_type: ~
+      line_count: ~
+      md5: 4eb8d2d37afddb6fb3434fa5b365b370
+      module_name_from_file_guess: Mango::Provider::Wishlists
+      mtime: 1199598041
+      name: lib/Mango/Provider/Wishlists.pm
+      packages:
+        - Mango::Provider::Wishlists
+      primary_package: Mango::Provider::Wishlists
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Provider/Wishlists.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2624
+      file_mime_type: ~
+      line_count: ~
+      md5: 78ddaabf80f6d7ca1c790739628ddd84
+      module_name_from_file_guess: Mango::Schema::Cart
+      mtime: 1199246214
+      name: lib/Mango/Schema/Cart.pm
+      packages:
+        - Mango::Schema::Cart
+      primary_package: Mango::Schema::Cart
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Cart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 16373
+      file_mime_type: ~
+      line_count: ~
+      md5: 1edd188d75c11bf2ebb375c4d9ecfae3
+      module_name_from_file_guess: Mango::Schema::Order
+      mtime: 1199246214
+      name: lib/Mango/Schema/Order.pm
+      packages:
+        - Mango::Schema::Order
+      primary_package: Mango::Schema::Order
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Order.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3769
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bcd343e2384f23ed5d6be18f85321e3
+      module_name_from_file_guess: Mango::Schema::Product
+      mtime: 1199246214
+      name: lib/Mango/Schema/Product.pm
+      packages:
+        - Mango::Schema::Product
+      primary_package: Mango::Schema::Product
+      uses:
+        - strict
+        - warnings
+        - base
+        - Mango::Currency
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Product.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3284
+      file_mime_type: ~
+      line_count: ~
+      md5: 82d813e2d635aea6a6e5ce6db1281e95
+      module_name_from_file_guess: Mango::Schema::ProductAttribute
+      mtime: 1199246214
+      name: lib/Mango/Schema/ProductAttribute.pm
+      packages:
+        - Mango::Schema::ProductAttribute
+      primary_package: Mango::Schema::ProductAttribute
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/ProductAttribute.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1878
+      file_mime_type: ~
+      line_count: ~
+      md5: c475c6142fa2566cc8c9758764d2d9b0
+      module_name_from_file_guess: Mango::Schema::ProductTag
+      mtime: 1193265077
+      name: lib/Mango/Schema/ProductTag.pm
+      packages:
+        - Mango::Schema::ProductTag
+      primary_package: Mango::Schema::ProductTag
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Schema/ProductTag.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3168
+      file_mime_type: ~
+      line_count: ~
+      md5: d9e18a01f2c648f3515358052fb21936
+      module_name_from_file_guess: Mango::Schema::Profile
+      mtime: 1199246214
+      name: lib/Mango/Schema/Profile.pm
+      packages:
+        - Mango::Schema::Profile
+      primary_package: Mango::Schema::Profile
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Profile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2811
+      file_mime_type: ~
+      line_count: ~
+      md5: 55cb1bb659e7960438b66293e2adb1b5
+      module_name_from_file_guess: Mango::Schema::Role
+      mtime: 1199246214
+      name: lib/Mango/Schema/Role.pm
+      packages:
+        - Mango::Schema::Role
+      primary_package: Mango::Schema::Role
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Role.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2533
+      file_mime_type: ~
+      line_count: ~
+      md5: df046ebaa7477af8168d3124f774f8e5
+      module_name_from_file_guess: Mango::Schema::Tag
+      mtime: 1199246214
+      name: lib/Mango/Schema/Tag.pm
+      packages:
+        - Mango::Schema::Tag
+      primary_package: Mango::Schema::Tag
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Tag.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3008
+      file_mime_type: ~
+      line_count: ~
+      md5: 21f14b188006b2c46e3285e1fdc25546
+      module_name_from_file_guess: Mango::Schema::User
+      mtime: 1199246214
+      name: lib/Mango/Schema/User.pm
+      packages:
+        - Mango::Schema::User
+      primary_package: Mango::Schema::User
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/User.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1838
+      file_mime_type: ~
+      line_count: ~
+      md5: 5387ce00a2a7b8b67135718606a04b22
+      module_name_from_file_guess: Mango::Schema::UserRole
+      mtime: 1193265077
+      name: lib/Mango/Schema/UserRole.pm
+      packages:
+        - Mango::Schema::UserRole
+      primary_package: Mango::Schema::UserRole
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: lib/Mango/Schema/UserRole.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3345
+      file_mime_type: ~
+      line_count: ~
+      md5: f936f23192c77865bf504f9141d8f5a5
+      module_name_from_file_guess: Mango::Schema::Wishlist
+      mtime: 1199246214
+      name: lib/Mango/Schema/Wishlist.pm
+      packages:
+        - Mango::Schema::Wishlist
+      primary_package: Mango::Schema::Wishlist
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Wishlist.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4127
+      file_mime_type: ~
+      line_count: ~
+      md5: 56515900e69aa9a5903d541713b32b47
+      module_name_from_file_guess: Mango::Schema::Cart::Item
+      mtime: 1199246214
+      name: lib/Mango/Schema/Cart/Item.pm
+      packages:
+        - Mango::Schema::Cart::Item
+      primary_package: Mango::Schema::Cart::Item
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Cart/Item.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4358
+      file_mime_type: ~
+      line_count: ~
+      md5: 84f6704d41762b1e292d67db5e932239
+      module_name_from_file_guess: Mango::Schema::Order::Item
+      mtime: 1193265077
+      name: lib/Mango/Schema/Order/Item.pm
+      packages:
+        - Mango::Schema::Order::Item
+      primary_package: Mango::Schema::Order::Item
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Order/Item.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3977
+      file_mime_type: ~
+      line_count: ~
+      md5: 80822b50d2ae4924c3490fcd24b2f88a
+      module_name_from_file_guess: Mango::Schema::Wishlist::Item
+      mtime: 1199601652
+      name: lib/Mango/Schema/Wishlist/Item.pm
+      packages:
+        - Mango::Schema::Wishlist::Item
+      primary_package: Mango::Schema::Wishlist::Item
+      uses:
+        - strict
+        - warnings
+        - base
+        - DateTime
+      version_info:
+        filename: lib/Mango/Schema/Wishlist/Item.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3281
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d32c9148d593732b3d7e900edf7384b
+      module_name_from_file_guess: Mango::Wishlist::Item
+      mtime: 1199601652
+      name: lib/Mango/Wishlist/Item.pm
+      packages:
+        - Mango::Wishlist::Item
+      primary_package: Mango::Wishlist::Item
+      uses:
+        - strict
+        - warnings
+        - base
+        - Handel::Constraints
+        - DateTime
+      version_info:
+        filename: lib/Mango/Wishlist/Item.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - lib/Mango.pm
+    - lib/Catalyst/Helper/Mango.pm
+    - lib/Mango/Attribute.pm
+    - lib/Mango/Cart.pm
+    - lib/Mango/Currency.pm
+    - lib/Mango/Exception.pm
+    - lib/Mango/Form.pm
+    - lib/Mango/I18N.pm
+    - lib/Mango/Iterator.pm
+    - lib/Mango/Object.pm
+    - lib/Mango/Order.pm
+    - lib/Mango/Product.pm
+    - lib/Mango/Profile.pm
+    - lib/Mango/Provider.pm
+    - lib/Mango/Role.pm
+    - lib/Mango/Schema.pm
+    - lib/Mango/Tag.pm
+    - lib/Mango/User.pm
+    - lib/Mango/Wishlist.pm
+    - lib/Mango/Cart/Item.pm
+    - lib/Mango/Catalyst/Controller.pm
+    - lib/Mango/Catalyst/Controller/Admin.pm
+    - lib/Mango/Catalyst/Controller/Cart.pm
+    - lib/Mango/Catalyst/Controller/Form.pm
+    - lib/Mango/Catalyst/Controller/Login.pm
+    - lib/Mango/Catalyst/Controller/Logout.pm
+    - lib/Mango/Catalyst/Controller/Products.pm
+    - lib/Mango/Catalyst/Controller/REST.pm
+    - lib/Mango/Catalyst/Controller/Root.pm
+    - lib/Mango/Catalyst/Controller/Users.pm
+    - lib/Mango/Catalyst/Controller/Wishlists.pm
+    - lib/Mango/Catalyst/Controller/Admin/Products.pm
+    - lib/Mango/Catalyst/Controller/Admin/Roles.pm
+    - lib/Mango/Catalyst/Controller/Admin/Users.pm
+    - lib/Mango/Catalyst/Controller/Admin/Products/Attributes.pm
+    - lib/Mango/Catalyst/Controller/Users/Wishlists.pm
+    - lib/Mango/Catalyst/Controller/Wishlists/Items.pm
+    - lib/Mango/Catalyst/Model/Carts.pm
+    - lib/Mango/Catalyst/Model/Orders.pm
+    - lib/Mango/Catalyst/Model/Products.pm
+    - lib/Mango/Catalyst/Model/Profiles.pm
+    - lib/Mango/Catalyst/Model/Provider.pm
+    - lib/Mango/Catalyst/Model/Roles.pm
+    - lib/Mango/Catalyst/Model/Users.pm
+    - lib/Mango/Catalyst/Model/Wishlists.pm
+    - lib/Mango/Catalyst/Plugin/Application.pm
+    - lib/Mango/Catalyst/Plugin/Authentication.pm
+    - lib/Mango/Catalyst/Plugin/Forms.pm
+    - lib/Mango/Catalyst/Plugin/I18N.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/AnonymousUser.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/CachedUser.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/Store.pm
+    - lib/Mango/Catalyst/Plugin/Authentication/User.pm
+    - lib/Mango/Catalyst/View/Atom.pm
+    - lib/Mango/Catalyst/View/Feed.pm
+    - lib/Mango/Catalyst/View/HTML.pm
+    - lib/Mango/Catalyst/View/RSS.pm
+    - lib/Mango/Catalyst/View/Template.pm
+    - lib/Mango/Catalyst/View/Text.pm
+    - lib/Mango/Catalyst/View/XHTML.pm
+    - lib/Mango/Form/Results.pm
+    - lib/Mango/I18N/en.pm
+    - lib/Mango/I18N/ru.pm
+    - lib/Mango/Object/Meta.pm
+    - lib/Mango/Order/Item.pm
+    - lib/Mango/Provider/Carts.pm
+    - lib/Mango/Provider/DBIC.pm
+    - lib/Mango/Provider/Orders.pm
+    - lib/Mango/Provider/Products.pm
+    - lib/Mango/Provider/Profiles.pm
+    - lib/Mango/Provider/Roles.pm
+    - lib/Mango/Provider/Users.pm
+    - lib/Mango/Provider/Wishlists.pm
+    - lib/Mango/Schema/Cart.pm
+    - lib/Mango/Schema/Order.pm
+    - lib/Mango/Schema/Product.pm
+    - lib/Mango/Schema/ProductAttribute.pm
+    - lib/Mango/Schema/ProductTag.pm
+    - lib/Mango/Schema/Profile.pm
+    - lib/Mango/Schema/Role.pm
+    - lib/Mango/Schema/Tag.pm
+    - lib/Mango/Schema/User.pm
+    - lib/Mango/Schema/UserRole.pm
+    - lib/Mango/Schema/Wishlist.pm
+    - lib/Mango/Schema/Cart/Item.pm
+    - lib/Mango/Schema/Order/Item.pm
+    - lib/Mango/Schema/Wishlist/Item.pm
+    - lib/Mango/Wishlist/Item.pm
+  test_info:
+    - bytesize: 1734
+      file_mime_type: ~
+      line_count: ~
+      md5: 768a0bd6f77990363437aeefd7c386d7
+      mtime: 1193265076
+      name: t/exceptions.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 2608
+      file_mime_type: ~
+      line_count: ~
+      md5: 55c958b61671b267851f6d51768dfafa
+      mtime: 1199418127
+      name: t/form.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst::Request
+        - Path::Class::File
+    - bytesize: 1051
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b45a54b3089e72edf15ffcb37bc3441
+      mtime: 1193265076
+      name: t/iterator.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 380
+      file_mime_type: ~
+      line_count: ~
+      md5: aa2c7577d9f2e15a7164ea67a43bd4da
+      mtime: 1199556803
+      name: t/meta.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 3313
+      file_mime_type: ~
+      line_count: ~
+      md5: 373e44ed6c87511d04430a8002e31cbd
+      mtime: 1199556655
+      name: t/object.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 612
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f2a7e9d49bb3f5b3943e7d6afde39d0
+      mtime: 1195185076
+      name: t/pod_coverage.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 2150
+      file_mime_type: ~
+      line_count: ~
+      md5: c39b96c5c63a5f30abbc35480d9aaefa
+      mtime: 1199252667
+      name: t/pod_spelling.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 377
+      file_mime_type: ~
+      line_count: ~
+      md5: 99eeb73e4d0b9c33c3da5cf5745df543
+      mtime: 1193265076
+      name: t/pod_syntax.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 2481
+      file_mime_type: ~
+      line_count: ~
+      md5: 86bd41aee6811d80390b591a5bf594b1
+      mtime: 1199400760
+      name: t/provider.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 10766
+      file_mime_type: ~
+      line_count: ~
+      md5: c5b8d5972a82d29581f5e19e267d3c4b
+      mtime: 1199142799
+      name: t/provider_carts.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 6092
+      file_mime_type: ~
+      line_count: ~
+      md5: 25bcc776e71a6d80934abd9e98f790b0
+      mtime: 1199142799
+      name: t/provider_dbic.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 9769
+      file_mime_type: ~
+      line_count: ~
+      md5: ac9c0046e0341253c54727fb6dec2753
+      mtime: 1199142799
+      name: t/provider_orders.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 27051
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c7e65b0000ef81b38273264114982e5
+      mtime: 1199142799
+      name: t/provider_products.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 10294
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cc7849aa49a1aed514b18a72f5aafcb
+      mtime: 1199142799
+      name: t/provider_profiles.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 11254
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b0f50d89861c86d55b18b571302720b
+      mtime: 1199142799
+      name: t/provider_roles.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 5576
+      file_mime_type: ~
+      line_count: ~
+      md5: 115d28b9e46e864782ebe15cdd8f09fa
+      mtime: 1199142799
+      name: t/provider_users.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 11583
+      file_mime_type: ~
+      line_count: ~
+      md5: e40d84a3cac092aeba970048b7fa86e3
+      mtime: 1199142799
+      name: t/provider_wishlists.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 5390
+      file_mime_type: ~
+      line_count: ~
+      md5: 98efc70fc85ea22322ca4770dc69a7db
+      mtime: 1199418127
+      name: t/catalyst/controller_form.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+        - File::Spec::Functions
+        - File::Path
+        - File::Copy
+        - URI
+        - Cwd
+        - Scalar::Util
+    - bytesize: 2095
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e54a8d9832572bda21ae35cf8c3fb8c
+      mtime: 1199252667
+      name: t/catalyst/controller_rest.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 6064
+      file_mime_type: ~
+      line_count: ~
+      md5: a73ec2e4f2379e74f70e8e954686761f
+      mtime: 1199576858
+      name: t/catalyst/live_cart.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Path::Class
+    - bytesize: 1910
+      file_mime_type: ~
+      line_count: ~
+      md5: d502b29940b79a2354228c3058568d17
+      mtime: 1199416267
+      name: t/catalyst/live_login.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 2639
+      file_mime_type: ~
+      line_count: ~
+      md5: f1eb5d4fa2dfca3ff4e06d3a1dda793e
+      mtime: 1199147030
+      name: t/catalyst/live_rest_users.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+    - bytesize: 245
+      file_mime_type: ~
+      line_count: ~
+      md5: 443601f508145937423c8d327940faa3
+      mtime: 1199678157
+      name: t/catalyst/live_users.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Path::Class
+    - bytesize: 7432
+      file_mime_type: ~
+      line_count: ~
+      md5: 80e33903c628deaf09d653f3bced57f7
+      mtime: 1199678037
+      name: t/catalyst/live_wishlists.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Path::Class
+    - bytesize: 1236
+      file_mime_type: ~
+      line_count: ~
+      md5: b64a1e6abeb1de224bf7276472beb1c8
+      mtime: 1199142799
+      name: t/catalyst/model_carts.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1258
+      file_mime_type: ~
+      line_count: ~
+      md5: d174f605f0da27af6d4fd04c7e7ada2b
+      mtime: 1199142799
+      name: t/catalyst/model_orders.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1321
+      file_mime_type: ~
+      line_count: ~
+      md5: cbe24d194d607cbe517709f378842d49
+      mtime: 1199142799
+      name: t/catalyst/model_products.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1314
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bb79c21d0dde162451aed18008dfea9
+      mtime: 1199142799
+      name: t/catalyst/model_profiles.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 2495
+      file_mime_type: ~
+      line_count: ~
+      md5: e62c2cbc67979a4ce7e52e0007c331ef
+      mtime: 1199142799
+      name: t/catalyst/model_provider.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1250
+      file_mime_type: ~
+      line_count: ~
+      md5: 82727c9a0dd878e1fbef9c240c3a2bc9
+      mtime: 1199142799
+      name: t/catalyst/model_roles.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1269
+      file_mime_type: ~
+      line_count: ~
+      md5: d71279ac686e16ec8a10fe2e9754287d
+      mtime: 1199142799
+      name: t/catalyst/model_users.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1360
+      file_mime_type: ~
+      line_count: ~
+      md5: c5f73e849a4ccb6dff664a9efcfe24a4
+      mtime: 1199142799
+      name: t/catalyst/model_wishlists.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 9501
+      file_mime_type: ~
+      line_count: ~
+      md5: fa79e8961ed7cadf96943500940c4b04
+      mtime: 1193265076
+      name: t/catalyst/plugin_authentication_store.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 6499
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fe82b7f0889ef43a0f6f01ebd09f595
+      mtime: 1193265076
+      name: t/catalyst/plugin_i18n.t
+      uses:
+        - strict
+        - warnings
+        - utf8
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1124
+      file_mime_type: ~
+      line_count: ~
+      md5: 988bd5fb4264fcc43c8c96c67c9c06d2
+      mtime: 1193265076
+      name: t/catalyst/view_atom.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+        - DateTime
+    - bytesize: 11017
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b826b819ab8fdbf5cbee2c820f1fa89
+      mtime: 1193265076
+      name: t/catalyst/view_feed.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+        - DateTime
+    - bytesize: 1236
+      file_mime_type: ~
+      line_count: ~
+      md5: fea753d6c5a11f799a42f303bdea6d5a
+      mtime: 1193265076
+      name: t/catalyst/view_html.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 63e76f08384d6f6e33c49c00230fb62c
+      mtime: 1193265076
+      name: t/catalyst/view_rss.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+        - DateTime
+    - bytesize: 1241
+      file_mime_type: ~
+      line_count: ~
+      md5: 553d143bc1ee1bbc2c4e0bdc87ba32b2
+      mtime: 1193265076
+      name: t/catalyst/view_text.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+    - bytesize: 1258
+      file_mime_type: ~
+      line_count: ~
+      md5: e3afe2ffb3fb293838325243bd211809
+      mtime: 1193265076
+      name: t/catalyst/view_xhtml.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Mango::Test
+        - Mango::Test::Catalyst
+  tests:
+    - t/exceptions.t
+    - t/form.t
+    - t/iterator.t
+    - t/meta.t
+    - t/object.t
+    - t/pod_coverage.t
+    - t/pod_spelling.t
+    - t/pod_syntax.t
+    - t/provider.t
+    - t/provider_carts.t
+    - t/provider_dbic.t
+    - t/provider_orders.t
+    - t/provider_products.t
+    - t/provider_profiles.t
+    - t/provider_roles.t
+    - t/provider_users.t
+    - t/provider_wishlists.t
+    - t/catalyst/controller_form.t
+    - t/catalyst/controller_rest.t
+    - t/catalyst/live_cart.t
+    - t/catalyst/live_login.t
+    - t/catalyst/live_rest_users.t
+    - t/catalyst/live_users.t
+    - t/catalyst/live_wishlists.t
+    - t/catalyst/model_carts.t
+    - t/catalyst/model_orders.t
+    - t/catalyst/model_products.t
+    - t/catalyst/model_profiles.t
+    - t/catalyst/model_provider.t
+    - t/catalyst/model_roles.t
+    - t/catalyst/model_users.t
+    - t/catalyst/model_wishlists.t
+    - t/catalyst/plugin_authentication_store.t
+    - t/catalyst/plugin_i18n.t
+    - t/catalyst/view_atom.t
+    - t/catalyst/view_feed.t
+    - t/catalyst/view_html.t
+    - t/catalyst/view_rss.t
+    - t/catalyst/view_text.t
+    - t/catalyst/view_xhtml.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71957._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 71957
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269043734
+  examine_start_time: 1269043678
+  examine_time: 56
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 71957
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269043734
+  run_start_time: 1269043678
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

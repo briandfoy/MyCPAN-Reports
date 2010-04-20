@@ -1,0 +1,2373 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: List-Filter
+    requires:
+      Carp: 0
+      Class::Base: 0.03
+      DBI: 1
+      Env: 0
+      Exporter: 1
+      File::Basename: 0
+      File::Copy: 0
+      File::Path: 0
+      FindBin: 0
+      Hash::Util: 0
+      Memoize: 0
+      Module::List: 0.001
+      Module::List::Pluggable: 0.01
+      Test::More: 0
+      Test::Trap: 0
+      YAML: 0
+      base: 0
+      lib: 0
+      strict: 0
+      warnings: 0
+    version: 0.04
+    version_from: lib/List/Filter.pm
+  blib:
+    - blib/lib/List/Filter.pm
+    - blib/lib/List/Filter/Dispatcher.pm
+    - blib/lib/List/Filter/Filters/Standard.pm
+    - blib/lib/List/Filter/Internal.pm
+    - blib/lib/List/Filter/Library/Documentation.pod
+    - blib/lib/List/Filter/Library/FileExtensions.pm
+    - blib/lib/List/Filter/Library/FileSystem.pm
+    - blib/lib/List/Filter/Project.pod
+    - blib/lib/List/Filter/Storage.pm
+    - blib/lib/List/Filter/Storage/CODE.pm
+    - blib/lib/List/Filter/Storage/DBI.pm
+    - blib/lib/List/Filter/Storage/MEM.pm
+    - blib/lib/List/Filter/Storage/YAML.pm
+    - blib/lib/List/Filter/StorageBase.pm
+    - blib/lib/List/Filter/Transform.pm
+    - blib/lib/List/Filter/Transform/Internal.pm
+    - blib/lib/List/Filter/Transform/Library/Documentation.pod
+    - blib/lib/List/Filter/Transform/Library/FileSystem.pm
+    - blib/lib/List/Filter/Transforms/Standard.pm
+    - blib/man3/List::Filter.3
+    - blib/man3/List::Filter::Dispatcher.3
+    - blib/man3/List::Filter::Filters::Standard.3
+    - blib/man3/List::Filter::Internal.3
+    - blib/man3/List::Filter::Library::Documentation.3
+    - blib/man3/List::Filter::Library::FileExtensions.3
+    - blib/man3/List::Filter::Library::FileSystem.3
+    - blib/man3/List::Filter::Project.3
+    - blib/man3/List::Filter::Storage.3
+    - blib/man3/List::Filter::Storage::CODE.3
+    - blib/man3/List::Filter::Storage::DBI.3
+    - blib/man3/List::Filter::Storage::MEM.3
+    - blib/man3/List::Filter::Storage::YAML.3
+    - blib/man3/List::Filter::StorageBase.3
+    - blib/man3/List::Filter::Transform.3
+    - blib/man3/List::Filter::Transform::Internal.3
+    - blib/man3/List::Filter::Transform::Library::Documentation.3
+    - blib/man3/List::Filter::Transform::Library::FileSystem.3
+    - blib/man3/List::Filter::Transforms::Standard.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Class::Base 0.03 not found.
+    Warning: prerequisite DBI 1 not found.
+    Warning: prerequisite Module::List 0.001 not found.
+    Warning: prerequisite Module::List::Pluggable 0.01 not found.
+    Warning: prerequisite Test::Trap 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for List::Filter
+  build_output: |
+    cp lib/List/Filter/Storage/MEM.pm blib/lib/List/Filter/Storage/MEM.pm
+    cp lib/List/Filter/Transforms/Standard.pm blib/lib/List/Filter/Transforms/Standard.pm
+    cp lib/List/Filter/StorageBase.pm blib/lib/List/Filter/StorageBase.pm
+    cp lib/List/Filter.pm blib/lib/List/Filter.pm
+    cp lib/List/Filter/Transform/Library/FileSystem.pm blib/lib/List/Filter/Transform/Library/FileSystem.pm
+    cp lib/List/Filter/Storage.pm blib/lib/List/Filter/Storage.pm
+    cp lib/List/Filter/Dispatcher.pm blib/lib/List/Filter/Dispatcher.pm
+    cp lib/List/Filter/Storage/DBI.pm blib/lib/List/Filter/Storage/DBI.pm
+    cp lib/List/Filter/Storage/YAML.pm blib/lib/List/Filter/Storage/YAML.pm
+    cp lib/List/Filter/Filters/Standard.pm blib/lib/List/Filter/Filters/Standard.pm
+    cp lib/List/Filter/Project.pod blib/lib/List/Filter/Project.pod
+    cp lib/List/Filter/Internal.pm blib/lib/List/Filter/Internal.pm
+    cp lib/List/Filter/Transform/Library/Documentation.pod blib/lib/List/Filter/Transform/Library/Documentation.pod
+    cp lib/List/Filter/Library/Documentation.pod blib/lib/List/Filter/Library/Documentation.pod
+    cp lib/List/Filter/Transform/Internal.pm blib/lib/List/Filter/Transform/Internal.pm
+    cp lib/List/Filter/Transform.pm blib/lib/List/Filter/Transform.pm
+    cp lib/List/Filter/Storage/CODE.pm blib/lib/List/Filter/Storage/CODE.pm
+    cp lib/List/Filter/Library/FileExtensions.pm blib/lib/List/Filter/Library/FileExtensions.pm
+    cp lib/List/Filter/Library/FileSystem.pm blib/lib/List/Filter/Library/FileSystem.pm
+    Manifying blib/man3/List::Filter::Transforms::Standard.3
+    Manifying blib/man3/List::Filter::Storage::MEM.3
+    Manifying blib/man3/List::Filter::StorageBase.3
+    Manifying blib/man3/List::Filter::Transform::Library::FileSystem.3
+    Manifying blib/man3/List::Filter.3
+    Manifying blib/man3/List::Filter::Storage.3
+    Manifying blib/man3/List::Filter::Dispatcher.3
+    Manifying blib/man3/List::Filter::Storage::DBI.3
+    Manifying blib/man3/List::Filter::Storage::YAML.3
+    Manifying blib/man3/List::Filter::Filters::Standard.3
+    Manifying blib/man3/List::Filter::Project.3
+    Manifying blib/man3/List::Filter::Internal.3
+    Manifying blib/man3/List::Filter::Transform::Library::Documentation.3
+    Manifying blib/man3/List::Filter::Library::Documentation.3
+    Manifying blib/man3/List::Filter::Transform::Internal.3
+    Manifying blib/man3/List::Filter::Transform.3
+    Manifying blib/man3/List::Filter::Library::FileSystem.3
+    Manifying blib/man3/List::Filter::Storage::CODE.3
+    Manifying blib/man3/List::Filter::Library::FileExtensions.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh/List-Filter-0.04/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh/List-Filter-0.04
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh/List-Filter-0.04/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh/List-Filter-0.04/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DOOM
+  dist_basename: List-Filter-0.04.tar.gz
+  dist_date: 1183076960
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh/List-Filter-0.04
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh/List-Filter-0.04
+  dist_file: /home/brian/CPAN/authors/id/D/DO/DOOM/List-Filter-0.04.tar.gz
+  dist_md5: 4792ef9f0d2412cf8c059059e5b0bd96
+  dist_size: 49371
+  manifest:
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - lib/List/Filter.pm
+    - lib/List/Filter/Dispatcher.pm
+    - lib/List/Filter/Filters/Standard.pm
+    - lib/List/Filter/Internal.pm
+    - lib/List/Filter/Library/Documentation.pod
+    - lib/List/Filter/Library/FileExtensions.pm
+    - lib/List/Filter/Library/FileSystem.pm
+    - lib/List/Filter/Project.pod
+    - lib/List/Filter/Storage.pm
+    - lib/List/Filter/Storage/CODE.pm
+    - lib/List/Filter/Storage/DBI.pm
+    - lib/List/Filter/Storage/MEM.pm
+    - lib/List/Filter/Storage/YAML.pm
+    - lib/List/Filter/StorageBase.pm
+    - lib/List/Filter/Transform.pm
+    - lib/List/Filter/Transform/Internal.pm
+    - lib/List/Filter/Transform/Library/Documentation.pod
+    - lib/List/Filter/Transform/Library/FileSystem.pm
+    - lib/List/Filter/Transforms/Standard.pm
+    - t/List-Filter-Dispatcher.t
+    - t/List-Filter-Internal.t
+    - t/List-Filter-Storage.t
+    - t/List-Filter-Transform-Internal.t
+    - t/List-Filter-Transform.t
+    - t/List-Filter.t
+    - t/dat/lib/Nada.pm
+    - t/dat/lib/Nada/Nuttin.pm
+    - t/dat/lib/Nada/Zero.pm
+    - t/dat/lib/Nada/Zip.pm
+    - t/dat/lib/Nada/Zip/Bupkes.pm
+    - t/dat/storage/code/lib/List/Filter/Library/FileSystem/Not/Not/Not.pm
+    - t/dat/tree/Three.JPG
+    - t/dat/tree/Two.jpeg
+    - t/dat/tree/aaa.gif
+    - t/dat/tree/bbb.GIF
+    - t/dat/tree/bottom
+    - t/dat/tree/ccc.Gif
+    - t/dat/tree/five.Jpeg
+    - t/dat/tree/four.JPEG
+    - t/dat/tree/go.xpm
+    - t/dat/tree/ho.PNG
+    - t/dat/tree/less.txt
+    - t/dat/tree/me_there
+    - t/dat/tree/more.txt
+    - t/dat/tree/no.png
+    - t/dat/tree/nother_dir/compile/666-one.c
+    - t/dat/tree/nother_dir/compile/666-one.o
+    - t/dat/tree/nother_dir/compile/666-two.c
+    - t/dat/tree/nother_dir/compile/666-two.o
+    - t/dat/tree/nother_dir/some.JPG
+    - t/dat/tree/nother_dir/some.Jpg
+    - t/dat/tree/nother_dir/some.jpg
+    - t/dat/tree/one.jpg
+    - t/dat/tree/so.Png
+    - t/dat/tree/some.txt
+    - t/dat/tree/something
+    - t/dat/tree/subdir/.#baaad.txt
+    - t/dat/tree/subdir/.#groovy.txt
+    - t/dat/tree/subdir/baaad.txt
+    - t/dat/tree/subdir/deepdir/groovy.txt
+    - t/dat/tree/subdir/dir/just_one.txt
+    - t/dat/tree/subdir/groovy.txt
+    - t/dat/tree/subdir/nasty.txt
+    - t/dat/tree/subdir/rageous.txt
+    - t/dat/tree/subdir/skiddoo.txt
+    - t/dat/tree/the_sky
+    - t/tmp/test11/Expected/.list-filter/filters.yaml
+    - t/tmp/test14/filters.sqlite
+    - t/tmp/test4/.list-filter/filters.yaml
+    - t/tmp/test6/.list-filter/filters.yaml
+    - t/tmp/test6/.list-filter/others.yaml
+    - t/tmp/test8/.list-filter/filters.yaml
+    - t/tmp/test9/filters.sqlite
+    - t/transform/data/test_get_yaml/.list-filter/transforms.yaml
+    - t/transform/data/test_save_yaml/.list-filter/expected_transforms.yaml
+  manifest_file_info:
+    - bytesize: 275
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1182559716
+      name: Changes
+    - bytesize: 2391
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1182324372
+      name: MANIFEST
+    - bytesize: 1056
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1183077315
+      name: META.yml
+    - bytesize: 1658
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1183077293
+      name: Makefile.PL
+    - bytesize: 1001
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1182322743
+      name: README
+    - bytesize: 13810
+      file_mime_type: ~
+      line_count: ~
+      md5: 75564369fc76c4f4ad145503762a624e
+      mtime: 1182663119
+      name: lib/List/Filter.pm
+    - bytesize: 6086
+      file_mime_type: ~
+      line_count: ~
+      md5: e1667611b0573d02fbf28100da20baef
+      mtime: 1182311438
+      name: lib/List/Filter/Dispatcher.pm
+    - bytesize: 5551
+      file_mime_type: ~
+      line_count: ~
+      md5: b25484d201d31d0badfad11ef51e43e8
+      mtime: 1182311438
+      name: lib/List/Filter/Filters/Standard.pm
+    - bytesize: 6448
+      file_mime_type: ~
+      line_count: ~
+      md5: 21a95e9b9ce6e0d53fd3319f7fd3c643
+      mtime: 1182461252
+      name: lib/List/Filter/Internal.pm
+    - bytesize: 2296
+      file_mime_type: ~
+      line_count: ~
+      md5: 21b52743127242e11a75c7f1678f4f27
+      mtime: 1182311438
+      name: lib/List/Filter/Library/Documentation.pod
+    - bytesize: 15415
+      file_mime_type: ~
+      line_count: ~
+      md5: 5710978a9799861d867a892cf81ee394
+      mtime: 1182323252
+      name: lib/List/Filter/Library/FileExtensions.pm
+    - bytesize: 7803
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bbc287a2b4382a94ccf04d0eb6aaf0f
+      mtime: 1182323169
+      name: lib/List/Filter/Library/FileSystem.pm
+    - bytesize: 12618
+      file_mime_type: ~
+      line_count: ~
+      md5: 67a899fb0d52893b5211b23b22198f45
+      mtime: 1182559595
+      name: lib/List/Filter/Project.pod
+    - bytesize: 21878
+      file_mime_type: ~
+      line_count: ~
+      md5: 40d4630d5a143fbb653bd1c23e5a05c8
+      mtime: 1182662419
+      name: lib/List/Filter/Storage.pm
+    - bytesize: 6668
+      file_mime_type: ~
+      line_count: ~
+      md5: 33453e1c9cf5b00b556fc849aba4f89a
+      mtime: 1182311438
+      name: lib/List/Filter/Storage/CODE.pm
+    - bytesize: 8716
+      file_mime_type: ~
+      line_count: ~
+      md5: e7670fecd7d874b8c222251afe6e5498
+      mtime: 1182311438
+      name: lib/List/Filter/Storage/DBI.pm
+    - bytesize: 5413
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f3729de63a0f3b54a6bebfe6aab3f1c
+      mtime: 1182311438
+      name: lib/List/Filter/Storage/MEM.pm
+    - bytesize: 7113
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f88e95731fdde6d2fe5779b97a7f6b0
+      mtime: 1182311438
+      name: lib/List/Filter/Storage/YAML.pm
+    - bytesize: 7622
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f764b537bb75b7aa62cb4395e2d3a6f
+      mtime: 1182323046
+      name: lib/List/Filter/StorageBase.pm
+    - bytesize: 5613
+      file_mime_type: ~
+      line_count: ~
+      md5: c5a0549175d84bd4aad8e628ddd1080e
+      mtime: 1182311438
+      name: lib/List/Filter/Transform.pm
+    - bytesize: 6724
+      file_mime_type: ~
+      line_count: ~
+      md5: ea38573520d5ad1cb632c4873e370404
+      mtime: 1182323584
+      name: lib/List/Filter/Transform/Internal.pm
+    - bytesize: 306
+      file_mime_type: ~
+      line_count: ~
+      md5: 443f256d6f37e52f5e6fc8f8928065d3
+      mtime: 1182311438
+      name: lib/List/Filter/Transform/Library/Documentation.pod
+    - bytesize: 3882
+      file_mime_type: ~
+      line_count: ~
+      md5: de12c17ae904c75a40f5341380af5021
+      mtime: 1182323650
+      name: lib/List/Filter/Transform/Library/FileSystem.pm
+    - bytesize: 4930
+      file_mime_type: ~
+      line_count: ~
+      md5: a084c309fd27d394bd51cb3d71bf3b87
+      mtime: 1182311438
+      name: lib/List/Filter/Transforms/Standard.pm
+    - bytesize: 2208
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c84956537e5602d56cb01740e61793b
+      mtime: 1182396757
+      name: t/List-Filter-Dispatcher.t
+    - bytesize: 6436
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b9fe224f09277790d1d62421c3d7479
+      mtime: 1182311438
+      name: t/List-Filter-Internal.t
+    - bytesize: 23480
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b70194317e1dcc84862298a7d0e2247
+      mtime: 1182650828
+      name: t/List-Filter-Storage.t
+    - bytesize: 1644
+      file_mime_type: ~
+      line_count: ~
+      md5: f66be8780b27adb59f4b73ccff19ccec
+      mtime: 1182311438
+      name: t/List-Filter-Transform-Internal.t
+    - bytesize: 6617
+      file_mime_type: ~
+      line_count: ~
+      md5: 70a8953fcec391b471cbfd3ac8f77dc9
+      mtime: 1182311438
+      name: t/List-Filter-Transform.t
+    - bytesize: 4691
+      file_mime_type: ~
+      line_count: ~
+      md5: 624fefea05d09e9cb2af7e80a95775c7
+      mtime: 1182321456
+      name: t/List-Filter.t
+    - bytesize: 1413
+      file_mime_type: ~
+      line_count: ~
+      md5: f7fdda2c6d18a09e8c65442e44a527a1
+      mtime: 1182311438
+      name: t/dat/lib/Nada.pm
+    - bytesize: 1445
+      file_mime_type: ~
+      line_count: ~
+      md5: d61e9aafa75845b972d997dae8819e59
+      mtime: 1182311438
+      name: t/dat/lib/Nada/Nuttin.pm
+    - bytesize: 1437
+      file_mime_type: ~
+      line_count: ~
+      md5: ef8a1768eeb509cfa4310bb22b6f8347
+      mtime: 1182311438
+      name: t/dat/lib/Nada/Zero.pm
+    - bytesize: 2169
+      file_mime_type: ~
+      line_count: ~
+      md5: d1aaa93063184ae25d4a3a318ddf5d18
+      mtime: 1182311438
+      name: t/dat/lib/Nada/Zip.pm
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: dbb68cbef15000abd5c84245a6503111
+      mtime: 1182311438
+      name: t/dat/lib/Nada/Zip/Bupkes.pm
+    - bytesize: 7035
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c399ed782cb5257b59be06160bb1bb1
+      mtime: 1182311438
+      name: t/dat/storage/code/lib/List/Filter/Library/FileSystem/Not/Not/Not.pm
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f50852360d047ff898853088b1fd902
+      mtime: 1172732580
+      name: t/dat/tree/Three.JPG
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 04ee57a2628048327465f8aec0d476d3
+      mtime: 1172732576
+      name: t/dat/tree/Two.jpeg
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ce244b0f22e59dbc66bd9879035b8f30
+      mtime: 1172732605
+      name: t/dat/tree/aaa.gif
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ea6e7aa34d3c83a8dcaeb4dcd830a953
+      mtime: 1172732610
+      name: t/dat/tree/bbb.GIF
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a09da3f16e890b49aa96ea22040858
+      mtime: 1172725803
+      name: t/dat/tree/bottom
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 03779772d9294f55e0dee822ed851cfb
+      mtime: 1172732615
+      name: t/dat/tree/ccc.Gif
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f0c166195b227094eca847acd6142aa
+      mtime: 1172732597
+      name: t/dat/tree/five.Jpeg
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a3037fe2707c628edf3d2fdd87e5fff5
+      mtime: 1172732590
+      name: t/dat/tree/four.JPEG
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 944f8b9328f0800e9c6287a99614ee2f
+      mtime: 1172732697
+      name: t/dat/tree/go.xpm
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ed28b1cc10133cd5fb6ee5f7d7ef35c
+      mtime: 1172732709
+      name: t/dat/tree/ho.PNG
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d037bfd6c950ec9038d6f3d6829f3eb0
+      mtime: 1172732552
+      name: t/dat/tree/less.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f7f976a7e39a1236d2bd0dc93a4e7740
+      mtime: 1172725808
+      name: t/dat/tree/me_there
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a6f9cf760b02f5f0fe3c37188ae25353
+      mtime: 1172732544
+      name: t/dat/tree/more.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7db078da24fbc3c567188baf456be9be
+      mtime: 1172732704
+      name: t/dat/tree/no.png
+    - bytesize: 65
+      file_mime_type: ~
+      line_count: ~
+      md5: 90a09abffec8d145d9049906507bdc14
+      mtime: 1172737229
+      name: t/dat/tree/nother_dir/compile/666-one.c
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 793c340c2a429541026cc0aed585d2d6
+      mtime: 1172737203
+      name: t/dat/tree/nother_dir/compile/666-one.o
+    - bytesize: 67
+      file_mime_type: ~
+      line_count: ~
+      md5: 64640ebb97fd8fd1f37d3b62f58c9701
+      mtime: 1172737256
+      name: t/dat/tree/nother_dir/compile/666-two.c
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ffe952ea83d9bb5a3d93452189e2aa2
+      mtime: 1172737265
+      name: t/dat/tree/nother_dir/compile/666-two.o
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f7ade56ec6f4192dd14d727b1f8889ad
+      mtime: 1172732882
+      name: t/dat/tree/nother_dir/some.JPG
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 932c5c1fbc1b350ab36a139b78b92dce
+      mtime: 1172732891
+      name: t/dat/tree/nother_dir/some.Jpg
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c5c84ba05bd0d745888b9dafcbae53b7
+      mtime: 1172732885
+      name: t/dat/tree/nother_dir/some.jpg
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: e91550320c6a07070077954fefeec8a4
+      mtime: 1172732572
+      name: t/dat/tree/one.jpg
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: adef98f05b1c7dccb3f5de563d28b99c
+      mtime: 1172732715
+      name: t/dat/tree/so.Png
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c3e14591179b8c41e9e536acb193344c
+      mtime: 1172732527
+      name: t/dat/tree/some.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 145967ba54949a8ba62de7ecf7f60c15
+      mtime: 1172725793
+      name: t/dat/tree/something
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cffbc16543a31329d4ab28e69a8c882
+      mtime: 1182323729
+      name: t/dat/tree/subdir/.#baaad.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c68f560cb955152e507ba65c20bc904e
+      mtime: 1182323729
+      name: t/dat/tree/subdir/.#groovy.txt
+    - bytesize: 136
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c69fa42589141cc50c1b2935f3f6fbe
+      mtime: 1172734599
+      name: t/dat/tree/subdir/baaad.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c127a95708a378b0891f408169fd383
+      mtime: 1172732810
+      name: t/dat/tree/subdir/deepdir/groovy.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ad4a3f099a66d31e2831081adafe7604
+      mtime: 1172732851
+      name: t/dat/tree/subdir/dir/just_one.txt
+    - bytesize: 509
+      file_mime_type: ~
+      line_count: ~
+      md5: 92e352febea804f66377d2fcfc2d1988
+      mtime: 1172734699
+      name: t/dat/tree/subdir/groovy.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c5d0892f0992e051f30d6be050eaf33
+      mtime: 1172732793
+      name: t/dat/tree/subdir/nasty.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a2bcf39cd263fa5a17c79aa6bcda35d6
+      mtime: 1172732786
+      name: t/dat/tree/subdir/rageous.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: adf115567a439c1b0a8d8cbb5f611316
+      mtime: 1172732772
+      name: t/dat/tree/subdir/skiddoo.txt
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e44d39d696da10f348856d1ecc9c5e3
+      mtime: 1172725799
+      name: t/dat/tree/the_sky
+    - bytesize: 391
+      file_mime_type: ~
+      line_count: ~
+      md5: 70e5edc93c247a15923b667b4f6f1daf
+      mtime: 1181936909
+      name: t/tmp/test11/Expected/.list-filter/filters.yaml
+    - bytesize: 3039
+      file_mime_type: ~
+      line_count: ~
+      md5: a8acb69884ac1688c74488e03dcd5fca
+      mtime: 1180040185
+      name: t/tmp/test14/filters.sqlite
+    - bytesize: 244
+      file_mime_type: ~
+      line_count: ~
+      md5: ef5479221931aa7becd309f3b4afa401
+      mtime: 1175805758
+      name: t/tmp/test4/.list-filter/filters.yaml
+    - bytesize: 244
+      file_mime_type: ~
+      line_count: ~
+      md5: da6803e032e3677f6cbbcdb576e23cea
+      mtime: 1175805758
+      name: t/tmp/test6/.list-filter/filters.yaml
+    - bytesize: 272
+      file_mime_type: ~
+      line_count: ~
+      md5: fabc0021d5bfda517902205d3cb6dadb
+      mtime: 1175805758
+      name: t/tmp/test6/.list-filter/others.yaml
+    - bytesize: 417
+      file_mime_type: ~
+      line_count: ~
+      md5: b633826aa7c532b31d5c5dd191e52c65
+      mtime: 1182370795
+      name: t/tmp/test8/.list-filter/filters.yaml
+    - bytesize: 3039
+      file_mime_type: ~
+      line_count: ~
+      md5: 58c0f54826d4b673a9f74584db2b3ce8
+      mtime: 1180040185
+      name: t/tmp/test9/filters.sqlite
+    - bytesize: 456
+      file_mime_type: ~
+      line_count: ~
+      md5: 91d543c03bb3ca6f3fe899bc73785166
+      mtime: 1176869049
+      name: t/transform/data/test_get_yaml/.list-filter/transforms.yaml
+    - bytesize: 456
+      file_mime_type: ~
+      line_count: ~
+      md5: b1bec3bdc5e34393a26cb721c514c6d6
+      mtime: 1176868911
+      name: t/transform/data/test_save_yaml/.list-filter/expected_transforms.yaml
+  module_info:
+    - bytesize: 13810
+      file_mime_type: ~
+      line_count: ~
+      md5: 95771838dcd0ca5e95543c24e1538490
+      module_name_from_file_guess: List::Filter
+      mtime: 1182663119
+      name: blib/lib/List/Filter.pm
+      packages:
+        - List::Filter
+      primary_package: List::Filter
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+        - List::Filter::Dispatcher
+        - Memoize
+      version_info:
+        filename: blib/lib/List/Filter.pm
+        identifier: VERSION
+        line_number: 143
+        sigil: $
+        value: 0.04
+    - bytesize: 6086
+      file_mime_type: ~
+      line_count: ~
+      md5: 95a184369bb6bd6dbf81ae89fc12107f
+      module_name_from_file_guess: List::Filter::Dispatcher
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Dispatcher.pm
+      packages:
+        - List::Filter::Dispatcher
+      primary_package: List::Filter::Dispatcher
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+        - Module::List
+        - Module::List::Pluggable
+      version_info:
+        filename: blib/lib/List/Filter/Dispatcher.pm
+        identifier: VERSION
+        line_number: 65
+        sigil: $
+        value: 0.01
+    - bytesize: 5551
+      file_mime_type: ~
+      line_count: ~
+      md5: 666f0a79c53d0dd576507a95660cbdff
+      module_name_from_file_guess: List::Filter::Filters::Standard
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Filters/Standard.pm
+      packages:
+        - List::Filter::Filters::Standard
+      primary_package: List::Filter::Filters::Standard
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Exporter
+      version_info:
+        filename: blib/lib/List/Filter/Filters/Standard.pm
+        identifier: VERSION
+        line_number: 62
+        sigil: $
+        value: 0.01
+    - bytesize: 6448
+      file_mime_type: ~
+      line_count: ~
+      md5: 93f891eadd450a078ee9fd7a9d7b67f8
+      module_name_from_file_guess: List::Filter::Internal
+      mtime: 1182461252
+      name: blib/lib/List/Filter/Internal.pm
+      packages:
+        - List::Filter::Internal
+      primary_package: List::Filter::Internal
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+        - Env
+        - File::Path
+        - File::Basename
+        - File::Copy
+      version_info:
+        filename: blib/lib/List/Filter/Internal.pm
+        identifier: VERSION
+        line_number: 51
+        sigil: $
+        value: 0.01
+    - bytesize: 15415
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e40cd5e29cd3c85b3c28e39b6ce508c
+      module_name_from_file_guess: List::Filter::Library::FileExtensions
+      mtime: 1182323252
+      name: blib/lib/List/Filter/Library/FileExtensions.pm
+      packages:
+        - List::Filter::Library::FileExtensions
+      primary_package: List::Filter::Library::FileExtensions
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Library/FileExtensions.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 0.01
+    - bytesize: 7803
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e39af19b96203f7859b22026d62faad
+      module_name_from_file_guess: List::Filter::Library::FileSystem
+      mtime: 1182323169
+      name: blib/lib/List/Filter/Library/FileSystem.pm
+      packages:
+        - List::Filter::Library::FileSystem
+      primary_package: List::Filter::Library::FileSystem
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Library/FileSystem.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 0.01
+    - bytesize: 21878
+      file_mime_type: ~
+      line_count: ~
+      md5: d40d0c5885099445973dbc50962d2bdc
+      module_name_from_file_guess: List::Filter::Storage
+      mtime: 1182662419
+      name: blib/lib/List/Filter/Storage.pm
+      packages:
+        - List::Filter::Storage
+      primary_package: List::Filter::Storage
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+        - List::Filter::Internal
+        - File::Path
+        - File::Basename
+        - Env
+        - YAML
+        - Module::List::Pluggable
+        - DBI
+      version_info:
+        filename: blib/lib/List/Filter/Storage.pm
+        identifier: VERSION
+        line_number: 125
+        sigil: $
+        value: 0.01
+    - bytesize: 6668
+      file_mime_type: ~
+      line_count: ~
+      md5: 65045623344903191d370b370b584030
+      module_name_from_file_guess: List::Filter::Storage::CODE
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Storage/CODE.pm
+      packages:
+        - List::Filter::Storage::CODE
+      primary_package: List::Filter::Storage::CODE
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+        - Module::List::Pluggable
+      version_info:
+        filename: blib/lib/List/Filter/Storage/CODE.pm
+        identifier: VERSION
+        line_number: 63
+        sigil: $
+        value: 0.01
+    - bytesize: 8716
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f549f85a2ad3febbb7975394a2f5425
+      module_name_from_file_guess: List::Filter::Storage::DBI
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Storage/DBI.pm
+      packages:
+        - List::Filter::Storage::DBI
+      primary_package: List::Filter::Storage::DBI
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Storage/DBI.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 0.01
+    - bytesize: 5413
+      file_mime_type: ~
+      line_count: ~
+      md5: c2509ba1d1b5d226f00a23b469800302
+      module_name_from_file_guess: List::Filter::Storage::MEM
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Storage/MEM.pm
+      packages:
+        - List::Filter::Storage::MEM
+      primary_package: List::Filter::Storage::MEM
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Storage/MEM.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 0.01
+    - bytesize: 7113
+      file_mime_type: ~
+      line_count: ~
+      md5: b26fea355833b9308a368c8e5c7bd0db
+      module_name_from_file_guess: List::Filter::Storage::YAML
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Storage/YAML.pm
+      packages:
+        - List::Filter::Storage::YAML
+      primary_package: List::Filter::Storage::YAML
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+        - File::Path
+        - File::Basename
+        - Env
+        - YAML
+      version_info:
+        filename: blib/lib/List/Filter/Storage/YAML.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 0.01
+    - bytesize: 7622
+      file_mime_type: ~
+      line_count: ~
+      md5: d1f74d96f275551141189e261badceac
+      module_name_from_file_guess: List::Filter::StorageBase
+      mtime: 1182323046
+      name: blib/lib/List/Filter/StorageBase.pm
+      packages:
+        - List::Filter::StorageBase
+      primary_package: List::Filter::StorageBase
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/StorageBase.pm
+        identifier: VERSION
+        line_number: 102
+        sigil: $
+        value: 0.01
+    - bytesize: 5613
+      file_mime_type: ~
+      line_count: ~
+      md5: d6885b0cc8d8088b5989aa71ddc6d20e
+      module_name_from_file_guess: List::Filter::Transform
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Transform.pm
+      packages:
+        - List::Filter::Transform
+      primary_package: List::Filter::Transform
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Transform.pm
+        identifier: VERSION
+        line_number: 104
+        sigil: $
+        value: 0.01
+    - bytesize: 6724
+      file_mime_type: ~
+      line_count: ~
+      md5: 009fd82bdcc1f8cf1d5d11e85326a797
+      module_name_from_file_guess: List::Filter::Transform::Internal
+      mtime: 1182323584
+      name: blib/lib/List/Filter/Transform/Internal.pm
+      packages:
+        - List::Filter::Transform::Internal
+      primary_package: List::Filter::Transform::Internal
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Transform/Internal.pm
+        identifier: VERSION
+        line_number: 54
+        sigil: $
+        value: 0.01
+    - bytesize: 3882
+      file_mime_type: ~
+      line_count: ~
+      md5: faffe823bac17b6da0aa8b4a3fcaa693
+      module_name_from_file_guess: List::Filter::Transform::Library::FileSystem
+      mtime: 1182323650
+      name: blib/lib/List/Filter/Transform/Library/FileSystem.pm
+      packages:
+        - List::Filter::Transform::Library::FileSystem
+      primary_package: List::Filter::Transform::Library::FileSystem
+      uses:
+        - base
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Hash::Util
+      version_info:
+        filename: blib/lib/List/Filter/Transform/Library/FileSystem.pm
+        identifier: VERSION
+        line_number: 57
+        sigil: $
+        value: 0.01
+    - bytesize: 4930
+      file_mime_type: ~
+      line_count: ~
+      md5: fabeb85ca628678bc1ffcbe8270ccc54
+      module_name_from_file_guess: List::Filter::Transforms::Standard
+      mtime: 1182311438
+      name: blib/lib/List/Filter/Transforms/Standard.pm
+      packages:
+        - List::Filter::Transforms::Standard
+      primary_package: List::Filter::Transforms::Standard
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - Exporter
+        - List::Filter::Transform::Internal
+      version_info:
+        filename: blib/lib/List/Filter/Transforms/Standard.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.01
+  modules:
+    - blib/lib/List/Filter.pm
+    - blib/lib/List/Filter/Dispatcher.pm
+    - blib/lib/List/Filter/Filters/Standard.pm
+    - blib/lib/List/Filter/Internal.pm
+    - blib/lib/List/Filter/Library/FileExtensions.pm
+    - blib/lib/List/Filter/Library/FileSystem.pm
+    - blib/lib/List/Filter/Storage.pm
+    - blib/lib/List/Filter/Storage/CODE.pm
+    - blib/lib/List/Filter/Storage/DBI.pm
+    - blib/lib/List/Filter/Storage/MEM.pm
+    - blib/lib/List/Filter/Storage/YAML.pm
+    - blib/lib/List/Filter/StorageBase.pm
+    - blib/lib/List/Filter/Transform.pm
+    - blib/lib/List/Filter/Transform/Internal.pm
+    - blib/lib/List/Filter/Transform/Library/FileSystem.pm
+    - blib/lib/List/Filter/Transforms/Standard.pm
+  test_info:
+    - bytesize: 1644
+      file_mime_type: ~
+      line_count: ~
+      md5: f66be8780b27adb59f4b73ccff19ccec
+      mtime: 1182311438
+      name: t/List-Filter-Transform-Internal.t
+      uses:
+        - warnings
+        - strict
+        - Data::Dumper
+        - Test::More
+        - FindBin
+        - lib
+    - bytesize: 2208
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c84956537e5602d56cb01740e61793b
+      mtime: 1182396757
+      name: t/List-Filter-Dispatcher.t
+      uses:
+        - warnings
+        - strict
+        - Data::Dumper
+        - Test::More
+        - FindBin
+        - lib
+        - List::Filter
+        - List::Filter::Dispatcher
+    - bytesize: 23480
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b70194317e1dcc84862298a7d0e2247
+      mtime: 1182650828
+      name: t/List-Filter-Storage.t
+      uses:
+        - warnings
+        - strict
+        - Data::Dumper
+        - YAML
+        - File::Path
+        - File::Basename
+        - File::Copy
+        - DBI
+        - Test::Trap
+        - Carp
+        - Test::More
+        - FindBin
+        - lib
+        - List::Filter
+        - List::Filter::Transform
+        - DBD::SQLite
+    - bytesize: 4691
+      file_mime_type: ~
+      line_count: ~
+      md5: 624fefea05d09e9cb2af7e80a95775c7
+      mtime: 1182321456
+      name: t/List-Filter.t
+      uses:
+        - warnings
+        - strict
+        - Data::Dumper
+        - Test::More
+        - FindBin
+        - lib
+    - bytesize: 6436
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b9fe224f09277790d1d62421c3d7479
+      mtime: 1182311438
+      name: t/List-Filter-Internal.t
+      uses:
+        - warnings
+        - strict
+        - Data::Dumper
+        - Env
+        - Test::More
+        - FindBin
+        - lib
+    - bytesize: 6617
+      file_mime_type: ~
+      line_count: ~
+      md5: 70a8953fcec391b471cbfd3ac8f77dc9
+      mtime: 1182311438
+      name: t/List-Filter-Transform.t
+      uses:
+        - warnings
+        - strict
+        - Data::Dumper
+        - Test::More
+        - FindBin
+        - lib
+  tests:
+    - t/List-Filter-Transform-Internal.t
+    - t/List-Filter-Dispatcher.t
+    - t/List-Filter-Storage.t
+    - t/List-Filter.t
+    - t/List-Filter-Internal.t
+    - t/List-Filter-Transform.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.BLMh
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270033447
+  examine_start_time: 1270033422
+  examine_time: 25
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1270033447
+  run_start_time: 1270033422
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

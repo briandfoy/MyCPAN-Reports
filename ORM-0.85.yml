@@ -1,0 +1,5120 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: ORM
+    requires:
+      Class::Data::Inheritable: 0.02
+      DBD::SQLite: 1.11
+      Exception::Class: 1.2
+    version: 0.83
+    version_from: lib/ORM.pm
+  blib:
+    - blib/lib/ORM.pm
+    - blib/lib/ORM.pod
+    - blib/lib/ORM/Auto.pm
+    - blib/lib/ORM/Base.pm
+    - blib/lib/ORM/Broken.pm
+    - blib/lib/ORM/Cache.pm
+    - blib/lib/ORM/Const.pm
+    - blib/lib/ORM/Date.pm
+    - blib/lib/ORM/Date.pod
+    - blib/lib/ORM/Datetime.pm
+    - blib/lib/ORM/Datetime.pod
+    - blib/lib/ORM/Db.pm
+    - blib/lib/ORM/Db/DBI.pm
+    - blib/lib/ORM/Db/DBI/MySQL.pm
+    - blib/lib/ORM/Db/DBI/MySQLemTa.pm
+    - blib/lib/ORM/Db/DBI/PgSQL.pm
+    - blib/lib/ORM/Db/DBI/SQLite.pm
+    - blib/lib/ORM/Db/DBIResultSet.pm
+    - blib/lib/ORM/Db/DBIResultSetFull.pm
+    - blib/lib/ORM/Db/Replicated.pm
+    - blib/lib/ORM/DbLog.pm
+    - blib/lib/ORM/DbResultSet.pm
+    - blib/lib/ORM/Error.pm
+    - blib/lib/ORM/Error.pod
+    - blib/lib/ORM/Expr.pm
+    - blib/lib/ORM/Filter.pm
+    - blib/lib/ORM/Filter/Case.pm
+    - blib/lib/ORM/Filter/Cmp.pm
+    - blib/lib/ORM/Filter/Func.pm
+    - blib/lib/ORM/Filter/Group.pm
+    - blib/lib/ORM/Filter/Interval.pm
+    - blib/lib/ORM/History.pm
+    - blib/lib/ORM/Ident.pm
+    - blib/lib/ORM/Meta/Array.pm
+    - blib/lib/ORM/Meta/ORM/Date.pm
+    - blib/lib/ORM/Meta/ORM/Datetime.pm
+    - blib/lib/ORM/Meta/ORM/History.pm
+    - blib/lib/ORM/Metaprop.pm
+    - blib/lib/ORM/MetapropBuilder.pm
+    - blib/lib/ORM/Order.pm
+    - blib/lib/ORM/ResultSet.pm
+    - blib/lib/ORM/Stat.pm
+    - blib/lib/ORM/StatMetaprop.pm
+    - blib/lib/ORM/StatResultSet.pm
+    - blib/lib/ORM/Ta.pm
+    - blib/lib/ORM/Tjoin.pm
+    - blib/lib/ORM/TjoinNull.pm
+    - blib/lib/ORM/Tutorial.pod
+    - blib/man3/ORM.3
+    - blib/man3/ORM::Auto.3
+    - blib/man3/ORM::Date.3
+    - blib/man3/ORM::Datetime.3
+    - blib/man3/ORM::Error.3
+    - blib/man3/ORM::Tutorial.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Class::Data::Inheritable 0.02 not found.
+    Warning: prerequisite DBD::SQLite 1.11 not found.
+    Warning: prerequisite Exception::Class 1.2 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for ORM
+  build_output: |
+    cp lib/ORM/Expr.pm blib/lib/ORM/Expr.pm
+    cp lib/ORM/Error.pm blib/lib/ORM/Error.pm
+    cp lib/ORM/DbResultSet.pm blib/lib/ORM/DbResultSet.pm
+    cp lib/ORM/TjoinNull.pm blib/lib/ORM/TjoinNull.pm
+    cp lib/ORM/Db/DBI/MySQLemTa.pm blib/lib/ORM/Db/DBI/MySQLemTa.pm
+    cp lib/ORM/Filter/Case.pm blib/lib/ORM/Filter/Case.pm
+    cp lib/ORM/Meta/ORM/History.pm blib/lib/ORM/Meta/ORM/History.pm
+    cp lib/ORM/Cache.pm blib/lib/ORM/Cache.pm
+    cp lib/ORM/Filter/Func.pm blib/lib/ORM/Filter/Func.pm
+    cp lib/ORM/Db/DBIResultSetFull.pm blib/lib/ORM/Db/DBIResultSetFull.pm
+    cp lib/ORM/ResultSet.pm blib/lib/ORM/ResultSet.pm
+    cp lib/ORM/Db/DBI.pm blib/lib/ORM/Db/DBI.pm
+    cp lib/ORM/Const.pm blib/lib/ORM/Const.pm
+    cp lib/ORM/StatMetaprop.pm blib/lib/ORM/StatMetaprop.pm
+    cp lib/ORM/Ident.pm blib/lib/ORM/Ident.pm
+    cp lib/ORM/Base.pm blib/lib/ORM/Base.pm
+    cp lib/ORM/Tjoin.pm blib/lib/ORM/Tjoin.pm
+    cp lib/ORM/History.pm blib/lib/ORM/History.pm
+    cp lib/ORM/Filter/Interval.pm blib/lib/ORM/Filter/Interval.pm
+    cp lib/ORM/Broken.pm blib/lib/ORM/Broken.pm
+    cp lib/ORM/Meta/ORM/Datetime.pm blib/lib/ORM/Meta/ORM/Datetime.pm
+    cp lib/ORM/Tutorial.pod blib/lib/ORM/Tutorial.pod
+    cp lib/ORM/Db/DBI/SQLite.pm blib/lib/ORM/Db/DBI/SQLite.pm
+    cp lib/ORM/Error.pod blib/lib/ORM/Error.pod
+    cp lib/ORM.pod blib/lib/ORM.pod
+    cp lib/ORM/Date.pm blib/lib/ORM/Date.pm
+    cp lib/ORM.pm blib/lib/ORM.pm
+    cp lib/ORM/StatResultSet.pm blib/lib/ORM/StatResultSet.pm
+    cp lib/ORM/Db.pm blib/lib/ORM/Db.pm
+    cp lib/ORM/MetapropBuilder.pm blib/lib/ORM/MetapropBuilder.pm
+    cp lib/ORM/Date.pod blib/lib/ORM/Date.pod
+    cp lib/ORM/Metaprop.pm blib/lib/ORM/Metaprop.pm
+    cp lib/ORM/Order.pm blib/lib/ORM/Order.pm
+    cp lib/ORM/Datetime.pod blib/lib/ORM/Datetime.pod
+    cp lib/ORM/Filter/Group.pm blib/lib/ORM/Filter/Group.pm
+    cp lib/ORM/Auto.pm blib/lib/ORM/Auto.pm
+    cp lib/ORM/Filter/Cmp.pm blib/lib/ORM/Filter/Cmp.pm
+    cp lib/ORM/Db/DBI/MySQL.pm blib/lib/ORM/Db/DBI/MySQL.pm
+    cp lib/ORM/Meta/ORM/Date.pm blib/lib/ORM/Meta/ORM/Date.pm
+    cp lib/ORM/Filter.pm blib/lib/ORM/Filter.pm
+    cp lib/ORM/Ta.pm blib/lib/ORM/Ta.pm
+    cp lib/ORM/DbLog.pm blib/lib/ORM/DbLog.pm
+    cp lib/ORM/Db/DBI/PgSQL.pm blib/lib/ORM/Db/DBI/PgSQL.pm
+    cp lib/ORM/Datetime.pm blib/lib/ORM/Datetime.pm
+    cp lib/ORM/Stat.pm blib/lib/ORM/Stat.pm
+    cp lib/ORM/Db/DBIResultSet.pm blib/lib/ORM/Db/DBIResultSet.pm
+    cp lib/ORM/Db/Replicated.pm blib/lib/ORM/Db/Replicated.pm
+    cp lib/ORM/Meta/Array.pm blib/lib/ORM/Meta/Array.pm
+    Manifying blib/man3/ORM.3
+    Manifying blib/man3/ORM::Date.3
+    Manifying blib/man3/ORM::Datetime.3
+    Manifying blib/man3/ORM::Tutorial.3
+    Manifying blib/man3/ORM::Auto.3
+    Manifying blib/man3/ORM::Error.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH/ORM-0.85/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH/ORM-0.85
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH/ORM-0.85/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH/ORM-0.85/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: AKIMOV
+  dist_basename: ORM-0.85.tar.gz
+  dist_date: 1174946398
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH/ORM-0.85
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH/ORM-0.85
+  dist_file: /home/brian/CPAN/authors/id/A/AK/AKIMOV/ORM-0.85.tar.gz
+  dist_md5: 77b78d06db633b2799a277f6d174ad65
+  dist_size: 203398
+  manifest:
+    - .svn/README.txt
+    - .svn/dir-wcprops
+    - .svn/empty-file
+    - .svn/entries
+    - .svn/format
+    - .svn/prop-base/COPYING.svn-base
+    - .svn/prop-base/Changes.svn-base
+    - .svn/prop-base/MANIFEST.svn-base
+    - .svn/prop-base/META.yml.svn-base
+    - .svn/prop-base/Makefile.PL.svn-base
+    - .svn/prop-base/README.svn-base
+    - .svn/prop-base/TODO.txt.svn-base
+    - .svn/props/COPYING.svn-work
+    - .svn/props/Changes.svn-work
+    - .svn/props/MANIFEST.svn-work
+    - .svn/props/META.yml.svn-work
+    - .svn/props/Makefile.PL.svn-work
+    - .svn/props/README.svn-work
+    - .svn/props/TODO.txt.svn-work
+    - .svn/text-base/COPYING.svn-base
+    - .svn/text-base/Changes.svn-base
+    - .svn/text-base/MANIFEST.svn-base
+    - .svn/text-base/META.yml.svn-base
+    - .svn/text-base/Makefile.PL.svn-base
+    - .svn/text-base/README.svn-base
+    - .svn/text-base/TODO.txt.svn-base
+    - .svn/wcprops/COPYING.svn-work
+    - .svn/wcprops/Changes.svn-work
+    - .svn/wcprops/MANIFEST.svn-work
+    - .svn/wcprops/META.yml.svn-work
+    - .svn/wcprops/Makefile.PL.svn-work
+    - .svn/wcprops/README.svn-work
+    - .svn/wcprops/TODO.txt.svn-work
+    - COPYING
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - TODO.txt
+    - lib/.svn/README.txt
+    - lib/.svn/dir-wcprops
+    - lib/.svn/empty-file
+    - lib/.svn/entries
+    - lib/.svn/format
+    - lib/.svn/prop-base/ORM.pm.svn-base
+    - lib/.svn/prop-base/ORM.pod.svn-base
+    - lib/.svn/props/ORM.pm.svn-work
+    - lib/.svn/props/ORM.pod.svn-work
+    - lib/.svn/text-base/ORM.pm.svn-base
+    - lib/.svn/text-base/ORM.pod.svn-base
+    - lib/.svn/wcprops/ORM.pm.svn-work
+    - lib/.svn/wcprops/ORM.pod.svn-work
+    - lib/ORM.pm
+    - lib/ORM.pod
+    - lib/ORM/.svn/README.txt
+    - lib/ORM/.svn/dir-wcprops
+    - lib/ORM/.svn/empty-file
+    - lib/ORM/.svn/entries
+    - lib/ORM/.svn/format
+    - lib/ORM/.svn/prop-base/Auto.pm.svn-base
+    - lib/ORM/.svn/prop-base/Base.pm.svn-base
+    - lib/ORM/.svn/prop-base/Broken.pm.svn-base
+    - lib/ORM/.svn/prop-base/Cache.pm.svn-base
+    - lib/ORM/.svn/prop-base/Const.pm.svn-base
+    - lib/ORM/.svn/prop-base/Date.pm.svn-base
+    - lib/ORM/.svn/prop-base/Date.pod.svn-base
+    - lib/ORM/.svn/prop-base/Datetime.pm.svn-base
+    - lib/ORM/.svn/prop-base/Datetime.pod.svn-base
+    - lib/ORM/.svn/prop-base/Db.pm.svn-base
+    - lib/ORM/.svn/prop-base/DbLog.pm.svn-base
+    - lib/ORM/.svn/prop-base/DbResultSet.pm.svn-base
+    - lib/ORM/.svn/prop-base/Error.pm.svn-base
+    - lib/ORM/.svn/prop-base/Error.pod.svn-base
+    - lib/ORM/.svn/prop-base/Expr.pm.svn-base
+    - lib/ORM/.svn/prop-base/Filter.pm.svn-base
+    - lib/ORM/.svn/prop-base/History.pm.svn-base
+    - lib/ORM/.svn/prop-base/Ident.pm.svn-base
+    - lib/ORM/.svn/prop-base/Metaprop.pm.svn-base
+    - lib/ORM/.svn/prop-base/MetapropBuilder.pm.svn-base
+    - lib/ORM/.svn/prop-base/Order.pm.svn-base
+    - lib/ORM/.svn/prop-base/ResultSet.pm.svn-base
+    - lib/ORM/.svn/prop-base/Stat.pm.svn-base
+    - lib/ORM/.svn/prop-base/StatMetaprop.pm.svn-base
+    - lib/ORM/.svn/prop-base/StatResultSet.pm.svn-base
+    - lib/ORM/.svn/prop-base/Ta.pm.svn-base
+    - lib/ORM/.svn/prop-base/Tjoin.pm.svn-base
+    - lib/ORM/.svn/prop-base/TjoinNull.pm.svn-base
+    - lib/ORM/.svn/prop-base/Tutorial.pod.svn-base
+    - lib/ORM/.svn/props/Auto.pm.svn-work
+    - lib/ORM/.svn/props/Base.pm.svn-work
+    - lib/ORM/.svn/props/Broken.pm.svn-work
+    - lib/ORM/.svn/props/Cache.pm.svn-work
+    - lib/ORM/.svn/props/Const.pm.svn-work
+    - lib/ORM/.svn/props/Date.pm.svn-work
+    - lib/ORM/.svn/props/Date.pod.svn-work
+    - lib/ORM/.svn/props/Datetime.pm.svn-work
+    - lib/ORM/.svn/props/Datetime.pod.svn-work
+    - lib/ORM/.svn/props/Db.pm.svn-work
+    - lib/ORM/.svn/props/DbLog.pm.svn-work
+    - lib/ORM/.svn/props/DbResultSet.pm.svn-work
+    - lib/ORM/.svn/props/Error.pm.svn-work
+    - lib/ORM/.svn/props/Error.pod.svn-work
+    - lib/ORM/.svn/props/Expr.pm.svn-work
+    - lib/ORM/.svn/props/Filter.pm.svn-work
+    - lib/ORM/.svn/props/History.pm.svn-work
+    - lib/ORM/.svn/props/Ident.pm.svn-work
+    - lib/ORM/.svn/props/Metaprop.pm.svn-work
+    - lib/ORM/.svn/props/MetapropBuilder.pm.svn-work
+    - lib/ORM/.svn/props/Order.pm.svn-work
+    - lib/ORM/.svn/props/ResultSet.pm.svn-work
+    - lib/ORM/.svn/props/Stat.pm.svn-work
+    - lib/ORM/.svn/props/StatMetaprop.pm.svn-work
+    - lib/ORM/.svn/props/StatResultSet.pm.svn-work
+    - lib/ORM/.svn/props/Ta.pm.svn-work
+    - lib/ORM/.svn/props/Tjoin.pm.svn-work
+    - lib/ORM/.svn/props/TjoinNull.pm.svn-work
+    - lib/ORM/.svn/props/Tutorial.pod.svn-work
+    - lib/ORM/.svn/text-base/Auto.pm.svn-base
+    - lib/ORM/.svn/text-base/Base.pm.svn-base
+    - lib/ORM/.svn/text-base/Broken.pm.svn-base
+    - lib/ORM/.svn/text-base/Cache.pm.svn-base
+    - lib/ORM/.svn/text-base/Const.pm.svn-base
+    - lib/ORM/.svn/text-base/Date.pm.svn-base
+    - lib/ORM/.svn/text-base/Date.pod.svn-base
+    - lib/ORM/.svn/text-base/Datetime.pm.svn-base
+    - lib/ORM/.svn/text-base/Datetime.pod.svn-base
+    - lib/ORM/.svn/text-base/Db.pm.svn-base
+    - lib/ORM/.svn/text-base/DbLog.pm.svn-base
+    - lib/ORM/.svn/text-base/DbResultSet.pm.svn-base
+    - lib/ORM/.svn/text-base/Error.pm.svn-base
+    - lib/ORM/.svn/text-base/Error.pod.svn-base
+    - lib/ORM/.svn/text-base/Expr.pm.svn-base
+    - lib/ORM/.svn/text-base/Filter.pm.svn-base
+    - lib/ORM/.svn/text-base/History.pm.svn-base
+    - lib/ORM/.svn/text-base/Ident.pm.svn-base
+    - lib/ORM/.svn/text-base/Metaprop.pm.svn-base
+    - lib/ORM/.svn/text-base/MetapropBuilder.pm.svn-base
+    - lib/ORM/.svn/text-base/Order.pm.svn-base
+    - lib/ORM/.svn/text-base/ResultSet.pm.svn-base
+    - lib/ORM/.svn/text-base/Stat.pm.svn-base
+    - lib/ORM/.svn/text-base/StatMetaprop.pm.svn-base
+    - lib/ORM/.svn/text-base/StatResultSet.pm.svn-base
+    - lib/ORM/.svn/text-base/Ta.pm.svn-base
+    - lib/ORM/.svn/text-base/Tjoin.pm.svn-base
+    - lib/ORM/.svn/text-base/TjoinNull.pm.svn-base
+    - lib/ORM/.svn/text-base/Tutorial.pod.svn-base
+    - lib/ORM/.svn/wcprops/Auto.pm.svn-work
+    - lib/ORM/.svn/wcprops/Base.pm.svn-work
+    - lib/ORM/.svn/wcprops/Broken.pm.svn-work
+    - lib/ORM/.svn/wcprops/Cache.pm.svn-work
+    - lib/ORM/.svn/wcprops/Const.pm.svn-work
+    - lib/ORM/.svn/wcprops/Date.pm.svn-work
+    - lib/ORM/.svn/wcprops/Date.pod.svn-work
+    - lib/ORM/.svn/wcprops/Datetime.pm.svn-work
+    - lib/ORM/.svn/wcprops/Datetime.pod.svn-work
+    - lib/ORM/.svn/wcprops/Db.pm.svn-work
+    - lib/ORM/.svn/wcprops/DbLog.pm.svn-work
+    - lib/ORM/.svn/wcprops/DbResultSet.pm.svn-work
+    - lib/ORM/.svn/wcprops/Error.pm.svn-work
+    - lib/ORM/.svn/wcprops/Error.pod.svn-work
+    - lib/ORM/.svn/wcprops/Expr.pm.svn-work
+    - lib/ORM/.svn/wcprops/Filter.pm.svn-work
+    - lib/ORM/.svn/wcprops/History.pm.svn-work
+    - lib/ORM/.svn/wcprops/Ident.pm.svn-work
+    - lib/ORM/.svn/wcprops/Metaprop.pm.svn-work
+    - lib/ORM/.svn/wcprops/MetapropBuilder.pm.svn-work
+    - lib/ORM/.svn/wcprops/Order.pm.svn-work
+    - lib/ORM/.svn/wcprops/ResultSet.pm.svn-work
+    - lib/ORM/.svn/wcprops/Stat.pm.svn-work
+    - lib/ORM/.svn/wcprops/StatMetaprop.pm.svn-work
+    - lib/ORM/.svn/wcprops/StatResultSet.pm.svn-work
+    - lib/ORM/.svn/wcprops/Ta.pm.svn-work
+    - lib/ORM/.svn/wcprops/Tjoin.pm.svn-work
+    - lib/ORM/.svn/wcprops/TjoinNull.pm.svn-work
+    - lib/ORM/.svn/wcprops/Tutorial.pod.svn-work
+    - lib/ORM/Auto.pm
+    - lib/ORM/Base.pm
+    - lib/ORM/Broken.pm
+    - lib/ORM/Cache.pm
+    - lib/ORM/Const.pm
+    - lib/ORM/Date.pm
+    - lib/ORM/Date.pod
+    - lib/ORM/Datetime.pm
+    - lib/ORM/Datetime.pod
+    - lib/ORM/Db.pm
+    - lib/ORM/Db/.svn/README.txt
+    - lib/ORM/Db/.svn/dir-wcprops
+    - lib/ORM/Db/.svn/empty-file
+    - lib/ORM/Db/.svn/entries
+    - lib/ORM/Db/.svn/format
+    - lib/ORM/Db/.svn/prop-base/DBI.pm.svn-base
+    - lib/ORM/Db/.svn/prop-base/DBIResultSet.pm.svn-base
+    - lib/ORM/Db/.svn/prop-base/DBIResultSetFull.pm.svn-base
+    - lib/ORM/Db/.svn/prop-base/Replicated.pm.svn-base
+    - lib/ORM/Db/.svn/props/DBI.pm.svn-work
+    - lib/ORM/Db/.svn/props/DBIResultSet.pm.svn-work
+    - lib/ORM/Db/.svn/props/DBIResultSetFull.pm.svn-work
+    - lib/ORM/Db/.svn/props/Replicated.pm.svn-work
+    - lib/ORM/Db/.svn/text-base/DBI.pm.svn-base
+    - lib/ORM/Db/.svn/text-base/DBIResultSet.pm.svn-base
+    - lib/ORM/Db/.svn/text-base/DBIResultSetFull.pm.svn-base
+    - lib/ORM/Db/.svn/text-base/Replicated.pm.svn-base
+    - lib/ORM/Db/.svn/wcprops/DBI.pm.svn-work
+    - lib/ORM/Db/.svn/wcprops/DBIResultSet.pm.svn-work
+    - lib/ORM/Db/.svn/wcprops/DBIResultSetFull.pm.svn-work
+    - lib/ORM/Db/.svn/wcprops/Replicated.pm.svn-work
+    - lib/ORM/Db/DBI.pm
+    - lib/ORM/Db/DBI/.svn/README.txt
+    - lib/ORM/Db/DBI/.svn/dir-wcprops
+    - lib/ORM/Db/DBI/.svn/empty-file
+    - lib/ORM/Db/DBI/.svn/entries
+    - lib/ORM/Db/DBI/.svn/format
+    - lib/ORM/Db/DBI/.svn/prop-base/MySQL.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/prop-base/MySQLemTa.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/prop-base/PgSQL.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/prop-base/SQLite.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/props/MySQL.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/props/MySQLemTa.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/props/PgSQL.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/props/SQLite.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/text-base/MySQL.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/text-base/MySQLemTa.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/text-base/PgSQL.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/text-base/SQLite.pm.svn-base
+    - lib/ORM/Db/DBI/.svn/wcprops/MySQL.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/wcprops/MySQLemTa.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/wcprops/PgSQL.pm.svn-work
+    - lib/ORM/Db/DBI/.svn/wcprops/SQLite.pm.svn-work
+    - lib/ORM/Db/DBI/MySQL.pm
+    - lib/ORM/Db/DBI/MySQLemTa.pm
+    - lib/ORM/Db/DBI/PgSQL.pm
+    - lib/ORM/Db/DBI/SQLite.pm
+    - lib/ORM/Db/DBIResultSet.pm
+    - lib/ORM/Db/DBIResultSetFull.pm
+    - lib/ORM/Db/Replicated.pm
+    - lib/ORM/DbLog.pm
+    - lib/ORM/DbResultSet.pm
+    - lib/ORM/Error.pm
+    - lib/ORM/Error.pod
+    - lib/ORM/Expr.pm
+    - lib/ORM/Filter.pm
+    - lib/ORM/Filter/.svn/README.txt
+    - lib/ORM/Filter/.svn/dir-wcprops
+    - lib/ORM/Filter/.svn/empty-file
+    - lib/ORM/Filter/.svn/entries
+    - lib/ORM/Filter/.svn/format
+    - lib/ORM/Filter/.svn/prop-base/Case.pm.svn-base
+    - lib/ORM/Filter/.svn/prop-base/Cmp.pm.svn-base
+    - lib/ORM/Filter/.svn/prop-base/Func.pm.svn-base
+    - lib/ORM/Filter/.svn/prop-base/Group.pm.svn-base
+    - lib/ORM/Filter/.svn/prop-base/Interval.pm.svn-base
+    - lib/ORM/Filter/.svn/props/Case.pm.svn-work
+    - lib/ORM/Filter/.svn/props/Cmp.pm.svn-work
+    - lib/ORM/Filter/.svn/props/Func.pm.svn-work
+    - lib/ORM/Filter/.svn/props/Group.pm.svn-work
+    - lib/ORM/Filter/.svn/props/Interval.pm.svn-work
+    - lib/ORM/Filter/.svn/text-base/Case.pm.svn-base
+    - lib/ORM/Filter/.svn/text-base/Cmp.pm.svn-base
+    - lib/ORM/Filter/.svn/text-base/Func.pm.svn-base
+    - lib/ORM/Filter/.svn/text-base/Group.pm.svn-base
+    - lib/ORM/Filter/.svn/text-base/Interval.pm.svn-base
+    - lib/ORM/Filter/.svn/wcprops/Case.pm.svn-work
+    - lib/ORM/Filter/.svn/wcprops/Cmp.pm.svn-work
+    - lib/ORM/Filter/.svn/wcprops/Func.pm.svn-work
+    - lib/ORM/Filter/.svn/wcprops/Group.pm.svn-work
+    - lib/ORM/Filter/.svn/wcprops/Interval.pm.svn-work
+    - lib/ORM/Filter/Case.pm
+    - lib/ORM/Filter/Cmp.pm
+    - lib/ORM/Filter/Func.pm
+    - lib/ORM/Filter/Group.pm
+    - lib/ORM/Filter/Interval.pm
+    - lib/ORM/History.pm
+    - lib/ORM/Ident.pm
+    - lib/ORM/Meta/.svn/README.txt
+    - lib/ORM/Meta/.svn/dir-wcprops
+    - lib/ORM/Meta/.svn/empty-file
+    - lib/ORM/Meta/.svn/entries
+    - lib/ORM/Meta/.svn/format
+    - lib/ORM/Meta/.svn/prop-base/Array.pm.svn-base
+    - lib/ORM/Meta/.svn/props/Array.pm.svn-work
+    - lib/ORM/Meta/.svn/text-base/Array.pm.svn-base
+    - lib/ORM/Meta/.svn/wcprops/Array.pm.svn-work
+    - lib/ORM/Meta/Array.pm
+    - lib/ORM/Meta/ORM/.svn/README.txt
+    - lib/ORM/Meta/ORM/.svn/dir-wcprops
+    - lib/ORM/Meta/ORM/.svn/empty-file
+    - lib/ORM/Meta/ORM/.svn/entries
+    - lib/ORM/Meta/ORM/.svn/format
+    - lib/ORM/Meta/ORM/.svn/prop-base/Date.pm.svn-base
+    - lib/ORM/Meta/ORM/.svn/prop-base/Datetime.pm.svn-base
+    - lib/ORM/Meta/ORM/.svn/prop-base/History.pm.svn-base
+    - lib/ORM/Meta/ORM/.svn/props/Date.pm.svn-work
+    - lib/ORM/Meta/ORM/.svn/props/Datetime.pm.svn-work
+    - lib/ORM/Meta/ORM/.svn/props/History.pm.svn-work
+    - lib/ORM/Meta/ORM/.svn/text-base/Date.pm.svn-base
+    - lib/ORM/Meta/ORM/.svn/text-base/Datetime.pm.svn-base
+    - lib/ORM/Meta/ORM/.svn/text-base/History.pm.svn-base
+    - lib/ORM/Meta/ORM/.svn/wcprops/Date.pm.svn-work
+    - lib/ORM/Meta/ORM/.svn/wcprops/Datetime.pm.svn-work
+    - lib/ORM/Meta/ORM/.svn/wcprops/History.pm.svn-work
+    - lib/ORM/Meta/ORM/Date.pm
+    - lib/ORM/Meta/ORM/Datetime.pm
+    - lib/ORM/Meta/ORM/History.pm
+    - lib/ORM/Metaprop.pm
+    - lib/ORM/MetapropBuilder.pm
+    - lib/ORM/Order.pm
+    - lib/ORM/ResultSet.pm
+    - lib/ORM/Stat.pm
+    - lib/ORM/StatMetaprop.pm
+    - lib/ORM/StatResultSet.pm
+    - lib/ORM/Ta.pm
+    - lib/ORM/Tjoin.pm
+    - lib/ORM/TjoinNull.pm
+    - lib/ORM/Tutorial.pod
+    - t/.svn/README.txt
+    - t/.svn/dir-wcprops
+    - t/.svn/empty-file
+    - t/.svn/entries
+    - t/.svn/format
+    - t/.svn/prop-base/ORM-Date.t.svn-base
+    - t/.svn/prop-base/ORM-Error.t.svn-base
+    - t/.svn/prop-base/ORM.t.svn-base
+    - t/.svn/prop-base/Test-DB-Init.t.svn-base
+    - t/.svn/prop-base/Test-DB.PgSQL.sql.svn-base
+    - t/.svn/prop-base/Test-DB.SQLite.sql.svn-base
+    - t/.svn/prop-base/Test-Dummy-Child2.t.svn-base
+    - t/.svn/prop-base/Test-Dummy-NoTable.t.svn-base
+    - t/.svn/prop-base/Test-Dummy.t.svn-base
+    - t/.svn/prop-base/Test.db.svn-base
+    - t/.svn/props/ORM-Date.t.svn-work
+    - t/.svn/props/ORM-Error.t.svn-work
+    - t/.svn/props/ORM.t.svn-work
+    - t/.svn/props/Test-DB-Init.t.svn-work
+    - t/.svn/props/Test-DB.PgSQL.sql.svn-work
+    - t/.svn/props/Test-DB.SQLite.sql.svn-work
+    - t/.svn/props/Test-Dummy-Child2.t.svn-work
+    - t/.svn/props/Test-Dummy-NoTable.t.svn-work
+    - t/.svn/props/Test-Dummy.t.svn-work
+    - t/.svn/props/Test.db.svn-work
+    - t/.svn/text-base/ORM-Date.t.svn-base
+    - t/.svn/text-base/ORM-Error.t.svn-base
+    - t/.svn/text-base/ORM.t.svn-base
+    - t/.svn/text-base/Test-DB-Init.t.svn-base
+    - t/.svn/text-base/Test-DB.PgSQL.sql.svn-base
+    - t/.svn/text-base/Test-DB.SQLite.sql.svn-base
+    - t/.svn/text-base/Test-Dummy-Child2.t.svn-base
+    - t/.svn/text-base/Test-Dummy-NoTable.t.svn-base
+    - t/.svn/text-base/Test-Dummy.t.svn-base
+    - t/.svn/text-base/Test.db.svn-base
+    - t/.svn/wcprops/ORM-Date.t.svn-work
+    - t/.svn/wcprops/ORM-Error.t.svn-work
+    - t/.svn/wcprops/ORM.t.svn-work
+    - t/.svn/wcprops/Test-DB-Init.t.svn-work
+    - t/.svn/wcprops/Test-DB.PgSQL.sql.svn-work
+    - t/.svn/wcprops/Test-DB.SQLite.sql.svn-work
+    - t/.svn/wcprops/Test-Dummy-Child2.t.svn-work
+    - t/.svn/wcprops/Test-Dummy-NoTable.t.svn-work
+    - t/.svn/wcprops/Test-Dummy.t.svn-work
+    - t/.svn/wcprops/Test.db.svn-work
+    - t/ORM-Date.t
+    - t/ORM-Error.t
+    - t/ORM.t
+    - t/Test-DB-Init.t
+    - t/Test-DB.PgSQL.sql
+    - t/Test-DB.SQLite.sql
+    - t/Test-Dummy-Child2.t
+    - t/Test-Dummy-NoTable.t
+    - t/Test-Dummy.t
+    - t/Test.db
+    - t/Test/.svn/README.txt
+    - t/Test/.svn/dir-wcprops
+    - t/Test/.svn/empty-file
+    - t/Test/.svn/entries
+    - t/Test/.svn/format
+    - t/Test/.svn/prop-base/Dummy.pm.svn-base
+    - t/Test/.svn/prop-base/History.pm.svn-base
+    - t/Test/.svn/prop-base/ORM.pm.svn-base
+    - t/Test/.svn/props/Dummy.pm.svn-work
+    - t/Test/.svn/props/History.pm.svn-work
+    - t/Test/.svn/props/ORM.pm.svn-work
+    - t/Test/.svn/text-base/Dummy.pm.svn-base
+    - t/Test/.svn/text-base/History.pm.svn-base
+    - t/Test/.svn/text-base/ORM.pm.svn-base
+    - t/Test/.svn/wcprops/Dummy.pm.svn-work
+    - t/Test/.svn/wcprops/History.pm.svn-work
+    - t/Test/.svn/wcprops/ORM.pm.svn-work
+    - t/Test/Dummy.pm
+    - t/Test/Dummy/.svn/README.txt
+    - t/Test/Dummy/.svn/dir-wcprops
+    - t/Test/Dummy/.svn/empty-file
+    - t/Test/Dummy/.svn/entries
+    - t/Test/Dummy/.svn/format
+    - t/Test/Dummy/.svn/prop-base/Child1.pm.svn-base
+    - t/Test/Dummy/.svn/prop-base/Child2.pm.svn-base
+    - t/Test/Dummy/.svn/prop-base/NoTable.pm.svn-base
+    - t/Test/Dummy/.svn/props/Child1.pm.svn-work
+    - t/Test/Dummy/.svn/props/Child2.pm.svn-work
+    - t/Test/Dummy/.svn/props/NoTable.pm.svn-work
+    - t/Test/Dummy/.svn/text-base/Child1.pm.svn-base
+    - t/Test/Dummy/.svn/text-base/Child2.pm.svn-base
+    - t/Test/Dummy/.svn/text-base/NoTable.pm.svn-base
+    - t/Test/Dummy/.svn/wcprops/Child1.pm.svn-work
+    - t/Test/Dummy/.svn/wcprops/Child2.pm.svn-work
+    - t/Test/Dummy/.svn/wcprops/NoTable.pm.svn-work
+    - t/Test/Dummy/Child1.pm
+    - t/Test/Dummy/Child2.pm
+    - t/Test/Dummy/NoTable.pm
+    - t/Test/History.pm
+    - t/Test/ORM.pm
+  manifest_file_info:
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: e5ca2ea0b7a1b444c0618e8ffe5d6e58
+      mtime: 1174944340
+      name: .svn/README.txt
+    - bytesize: 83
+      file_mime_type: ~
+      line_count: ~
+      md5: 25771e4f5679e1a390c7a67f4a31d4cb
+      mtime: 1174944346
+      name: .svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 14ceb8d82a0b5e1760ba1e0d73ebfe1b
+      mtime: 1174944340
+      name: .svn/empty-file
+    - bytesize: 2424
+      file_mime_type: ~
+      line_count: ~
+      md5: 072591d3d66ef7225abf09de3e46ee42
+      mtime: 1174944346
+      name: .svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ae0d7109347a2aaf1a9ae9cbec140fe
+      mtime: 1174944340
+      name: .svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d93e2bf84cb98f528ec4c44e412d3c1
+      mtime: 1174944345
+      name: .svn/prop-base/COPYING.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: afd32ab0ba894d547aa3e0677ec30e15
+      mtime: 1174944345
+      name: .svn/prop-base/Changes.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 53ce2bb4d0e139305a578de6be3ed897
+      mtime: 1174944340
+      name: .svn/prop-base/MANIFEST.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 716df0e721a8baeae319507f24eccea9
+      mtime: 1174944341
+      name: .svn/prop-base/META.yml.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e22f7bd27a89ecd43d7350763d7a55d
+      mtime: 1174944345
+      name: .svn/prop-base/Makefile.PL.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: bd3544bc81058bde75f7037b2057b16e
+      mtime: 1174944346
+      name: .svn/prop-base/README.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f66bf6bdbd11d3d36a0c57755bfc8c3c
+      mtime: 1174944340
+      name: .svn/prop-base/TODO.txt.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 49d98ed872813d44a484f126c4f1cdeb
+      mtime: 1174944345
+      name: .svn/props/COPYING.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: de841029de0301d037842ffa7e75b364
+      mtime: 1174944345
+      name: .svn/props/Changes.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4dac98e23b32db07bcf58ee5f1085aca
+      mtime: 1174944340
+      name: .svn/props/MANIFEST.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d92a7a102c1b764b460573e2f261e072
+      mtime: 1174944341
+      name: .svn/props/META.yml.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: fc4503bfa91106ada45a05b6691e18be
+      mtime: 1174944345
+      name: .svn/props/Makefile.PL.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d940e40ecadb922d8326ae43a46629ed
+      mtime: 1174944346
+      name: .svn/props/README.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: fac9a525fff391a4725049a341693cc2
+      mtime: 1174944340
+      name: .svn/props/TODO.txt.svn-work
+    - bytesize: 26432
+      file_mime_type: ~
+      line_count: ~
+      md5: 853eb9b7a30628ede7b1b41e2cb2fd30
+      mtime: 1174944345
+      name: .svn/text-base/COPYING.svn-base
+    - bytesize: 5023
+      file_mime_type: ~
+      line_count: ~
+      md5: 69f45ef062e76fbfe09e9d0ea0cb1b51
+      mtime: 1174944345
+      name: .svn/text-base/Changes.svn-base
+    - bytesize: 1336
+      file_mime_type: ~
+      line_count: ~
+      md5: f73820a1b36e0319f5dd278d70c24fa9
+      mtime: 1174944340
+      name: .svn/text-base/MANIFEST.svn-base
+    - bytesize: 409
+      file_mime_type: ~
+      line_count: ~
+      md5: 79a1a8c8b3d0af2ae2f9f5000c68652a
+      mtime: 1174944341
+      name: .svn/text-base/META.yml.svn-base
+    - bytesize: 667
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e0899b8056feb308705240e6497446e
+      mtime: 1174944345
+      name: .svn/text-base/Makefile.PL.svn-base
+    - bytesize: 46536
+      file_mime_type: ~
+      line_count: ~
+      md5: 340def9aa0fcb81fd8271f786109ba7d
+      mtime: 1174944346
+      name: .svn/text-base/README.svn-base
+    - bytesize: 3238
+      file_mime_type: ~
+      line_count: ~
+      md5: 2889d8e4fe61028cce2ed26ca71adb60
+      mtime: 1174944340
+      name: .svn/text-base/TODO.txt.svn-base
+    - bytesize: 91
+      file_mime_type: ~
+      line_count: ~
+      md5: 3278b489278797002d8a437768d4255e
+      mtime: 1174944346
+      name: .svn/wcprops/COPYING.svn-work
+    - bytesize: 91
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e5894c120456222a356fe6b78944832
+      mtime: 1174944346
+      name: .svn/wcprops/Changes.svn-work
+    - bytesize: 92
+      file_mime_type: ~
+      line_count: ~
+      md5: ba82d086359d62f3b9d3c6358776346c
+      mtime: 1174944346
+      name: .svn/wcprops/MANIFEST.svn-work
+    - bytesize: 92
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c8139ae72c3c86eabb029275e634ae2
+      mtime: 1174944346
+      name: .svn/wcprops/META.yml.svn-work
+    - bytesize: 95
+      file_mime_type: ~
+      line_count: ~
+      md5: a0c85e7b9e9e22fef138983baee33fcd
+      mtime: 1174944346
+      name: .svn/wcprops/Makefile.PL.svn-work
+    - bytesize: 90
+      file_mime_type: ~
+      line_count: ~
+      md5: 219db3e19960eca9d67afe893beed9e6
+      mtime: 1174944346
+      name: .svn/wcprops/README.svn-work
+    - bytesize: 92
+      file_mime_type: ~
+      line_count: ~
+      md5: 9611141e0a8a2a33f426b2f706d707c2
+      mtime: 1174944346
+      name: .svn/wcprops/TODO.txt.svn-work
+    - bytesize: 26432
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1174944346
+      name: COPYING
+    - bytesize: 5023
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1174944346
+      name: Changes
+    - bytesize: 1336
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1174944346
+      name: MANIFEST
+    - bytesize: 409
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1174944346
+      name: META.yml
+    - bytesize: 667
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1174944346
+      name: Makefile.PL
+    - bytesize: 46536
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1174944346
+      name: README
+    - bytesize: 3238
+      file_mime_type: ~
+      line_count: ~
+      md5: ddc4bbaedfeb2dbe635f7eb7907b98d0
+      mtime: 1174944346
+      name: TODO.txt
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 973cf0a4e7577e1366d0ad3ef512bcd0
+      mtime: 1174944341
+      name: lib/.svn/README.txt
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 1937d6deca50d3544f888d0ca64022ae
+      mtime: 1174944345
+      name: lib/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ea84f2de6b8f8f808727eb675b60535f
+      mtime: 1174944341
+      name: lib/.svn/empty-file
+    - bytesize: 1010
+      file_mime_type: ~
+      line_count: ~
+      md5: 419c865cb0cf319b3e9a65b175f51cef
+      mtime: 1174944345
+      name: lib/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 6eb3118322519181ba757cbb56ffd34f
+      mtime: 1174944341
+      name: lib/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c4c7872c6e5381b32f20826eea7cdc1
+      mtime: 1174944341
+      name: lib/.svn/prop-base/ORM.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b5bab3763433aba833724531ccac6846
+      mtime: 1174944345
+      name: lib/.svn/prop-base/ORM.pod.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6975ca8aff427fb8b2c68fc281918012
+      mtime: 1174944341
+      name: lib/.svn/props/ORM.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b82f659928d07f84d792adc77f1ef40
+      mtime: 1174944345
+      name: lib/.svn/props/ORM.pod.svn-work
+    - bytesize: 50918
+      file_mime_type: ~
+      line_count: ~
+      md5: 667ebe8e332d9d5318e005174b615ef7
+      mtime: 1174944341
+      name: lib/.svn/text-base/ORM.pm.svn-base
+    - bytesize: 24259
+      file_mime_type: ~
+      line_count: ~
+      md5: 282f06096826f8593aa8f1fd1d293272
+      mtime: 1174944345
+      name: lib/.svn/text-base/ORM.pod.svn-base
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cd64c8d2ae85dbad0332dbe692aae9e
+      mtime: 1174944345
+      name: lib/.svn/wcprops/ORM.pm.svn-work
+    - bytesize: 95
+      file_mime_type: ~
+      line_count: ~
+      md5: 108cfcdcbfee70677fe60819c77cb8a5
+      mtime: 1174944345
+      name: lib/.svn/wcprops/ORM.pod.svn-work
+    - bytesize: 50918
+      file_mime_type: ~
+      line_count: ~
+      md5: 733bd06ed3c3368639aeb0f66f6f26e3
+      mtime: 1174944345
+      name: lib/ORM.pm
+    - bytesize: 24259
+      file_mime_type: ~
+      line_count: ~
+      md5: 7210364c01ff1ca7b787317c5dbcafc0
+      mtime: 1174944345
+      name: lib/ORM.pod
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: f57de2d7f0ba7cc95ed3052a70527976
+      mtime: 1174944341
+      name: lib/ORM/.svn/README.txt
+    - bytesize: 91
+      file_mime_type: ~
+      line_count: ~
+      md5: 8656251a7b8617f466fe7b6269ab8a55
+      mtime: 1174944345
+      name: lib/ORM/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6414e3621f48760c7d37283299afd6bf
+      mtime: 1174944341
+      name: lib/ORM/.svn/empty-file
+    - bytesize: 8607
+      file_mime_type: ~
+      line_count: ~
+      md5: f92790d3f8f8921baaf37f674b02a93d
+      mtime: 1174944345
+      name: lib/ORM/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ed6f9d95a377ecd5c799e5e6b1b1f32
+      mtime: 1174944341
+      name: lib/ORM/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 54a58ae2a36b1c2444c169fafa24f024
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Auto.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b88bff87f077e2b6c906965a80de8fb4
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Base.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fbe7735510af5a91392fcd75a80c9fd
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Broken.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c5533ba0ae29bf3bf4c6411c5d6f1fe
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Cache.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d8466eb75b78a8ae33da94a17ae968d
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Const.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e7b7ae76d8daad9abe1b550ebe88857
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Date.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d9f9d18eb5ce92e24fe749730f40e073
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Date.pod.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fb5f144648004a55b8202efdb972e79
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Datetime.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a83883bd8b517ad4ee654ed50746b74e
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Datetime.pod.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: da2f27acdf0e38798c2602e413f87c05
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Db.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f084991ee0825c08ac35d1b21431550d
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/DbLog.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cb4e1e4ec0d0f1c68ba963b19cc6491
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/DbResultSet.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 16255ad96ece986122dbfacff65d7f49
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Error.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: af2feef0d58317dc84517453ca930c29
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Error.pod.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 601e7c89992824955341117cd3c0301f
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Expr.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b26821389ca9578974a24df139de4ff
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Filter.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 58fc2cc04b5931d7202ad9dfea0cdcb4
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/History.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c3fca5611eaeab3931b4075b9688134
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Ident.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c05fc5fc64d0093b762aa99f7ce8494
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Metaprop.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fd2ae28958ff13b02577a2965a2b448
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/MetapropBuilder.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a4b0f791bf2a398ee5272313f78795fc
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Order.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 62cb71b4d57ddfec5fd72161a5f915cb
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/ResultSet.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c18eb3150eb35e38a2e84ef499d73ac
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Stat.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 9994d7798a61e85d384946491b2b5be9
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/StatMetaprop.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7984cb6344b92ed6bb157496418b04d6
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/StatResultSet.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b8ad9cfbb8fbf3172ce4c01f58276a3a
+      mtime: 1174944342
+      name: lib/ORM/.svn/prop-base/Ta.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f128dddecd69a406b95fe8ccb3e38797
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/Tjoin.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: df22dcbadbb457566ab53684e001242e
+      mtime: 1174944344
+      name: lib/ORM/.svn/prop-base/TjoinNull.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 9aaaf42e9cbb4ec1af9f2ffe14ff6781
+      mtime: 1174944341
+      name: lib/ORM/.svn/prop-base/Tutorial.pod.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 54dcd8bf64b33d785f3a70a7581bf39e
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Auto.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: cd85b2c728ef261548d878dc9bf4c2ca
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Base.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 89b2c8c27ceacaa984b030231d888c0f
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Broken.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fb0cc1d2ef91edba6facf2dbbaae4ae
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Cache.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5410e6d3b5869acbebaa861fec23e10f
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Const.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b7c7a0e30119709617f7c7c0228b8bd2
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Date.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 00cfe6ea0e57ee715da40634e195d0f0
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Date.pod.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 010c172f0ff5fce30aa2182bc1a93c07
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Datetime.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 749cacd4cc44e987d3c99f1627fd1e5b
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Datetime.pod.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c97ca99c77ac2ac8bb63b536827abfbf
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Db.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 68a5534084003ab0b0519bea61deb930
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/DbLog.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: aa732f465c2deb0455d86688fb3c3a47
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/DbResultSet.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 58fcc714077568f94a8cf0d4a11ab1e3
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Error.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b8882499c7c4f06fa2b15b2d0b5fd98c
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Error.pod.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: e8c2d9bc9378cef49f7dd51064381f05
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Expr.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4582a97b42cb41a6f3557bf33e22bb73
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Filter.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e22ad079c6a50dc481abf72e690cd1b
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/History.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4655d11ba8ffc9cf912f35bcf4902bfc
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Ident.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 46ceaeda97e4bfffe7d73a07084c2ae7
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Metaprop.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 623afee54dc789540a1881abafcb53db
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/MetapropBuilder.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d54a352dcf958c0af2eef27d3ec6012d
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Order.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fe60bd0413994e7b02598aebe10edb3
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/ResultSet.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f0999f64a4433514b7ee74ea878a5a1e
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Stat.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: e8abe41158289cfc6add264b6b28964a
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/StatMetaprop.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5371b1588046e3133a4a78d93b218eff
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/StatResultSet.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 86c115c0940b11eac629ea170214caac
+      mtime: 1174944342
+      name: lib/ORM/.svn/props/Ta.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d7c97aa841d81cbd811ce321aa3cdbf5
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/Tjoin.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d21c2be834623f5e0119643f1b32ccf6
+      mtime: 1174944344
+      name: lib/ORM/.svn/props/TjoinNull.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 38770e4c43f14c497eb2b29a8840e641
+      mtime: 1174944341
+      name: lib/ORM/.svn/props/Tutorial.pod.svn-work
+    - bytesize: 6764
+      file_mime_type: ~
+      line_count: ~
+      md5: f36402c6061911b5d864aabb9af43fe7
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Auto.pm.svn-base
+    - bytesize: 3167
+      file_mime_type: ~
+      line_count: ~
+      md5: 3217f079bfa8ce5addb8b71600d92308
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Base.pm.svn-base
+    - bytesize: 1983
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f95d9eb9d50a15899cb0f49bfa8fca0
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Broken.pm.svn-base
+    - bytesize: 3472
+      file_mime_type: ~
+      line_count: ~
+      md5: 64f40a62ecaced2409f33fadad3b551b
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Cache.pm.svn-base
+    - bytesize: 1741
+      file_mime_type: ~
+      line_count: ~
+      md5: 92abed69ddb3b2a8a7e5c69cecdecbea
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Const.pm.svn-base
+    - bytesize: 6070
+      file_mime_type: ~
+      line_count: ~
+      md5: a8e45126ac01c0397e73e84e5f774d7c
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Date.pm.svn-base
+    - bytesize: 3828
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bc81e4e7879b191585269563df38675
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Date.pod.svn-base
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: ca91a66834ce6909d46108195334472a
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Datetime.pm.svn-base
+    - bytesize: 1919
+      file_mime_type: ~
+      line_count: ~
+      md5: f7fe0462706e153384aa36bc0e6fc116
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Datetime.pod.svn-base
+    - bytesize: 7261
+      file_mime_type: ~
+      line_count: ~
+      md5: b775e1fec1ddd9b7569578c8bbd14c0d
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Db.pm.svn-base
+    - bytesize: 3361
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b79fdb4ddc261235b214372b442967c
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/DbLog.pm.svn-base
+    - bytesize: 1544
+      file_mime_type: ~
+      line_count: ~
+      md5: 74e25d714896a3130bf88b0775f966c1
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/DbResultSet.pm.svn-base
+    - bytesize: 4457
+      file_mime_type: ~
+      line_count: ~
+      md5: 05b6a1a1316dbcf5947a1379f4502271
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Error.pm.svn-base
+    - bytesize: 2136
+      file_mime_type: ~
+      line_count: ~
+      md5: edfd7add63d1d0dedb13a05a92a4a53c
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Error.pod.svn-base
+    - bytesize: 6196
+      file_mime_type: ~
+      line_count: ~
+      md5: 81f855f538aac263474ec70bf3986de0
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Expr.pm.svn-base
+    - bytesize: 1561
+      file_mime_type: ~
+      line_count: ~
+      md5: a0c163f9fecaf2d6c12409df7a7c42ab
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Filter.pm.svn-base
+    - bytesize: 8514
+      file_mime_type: ~
+      line_count: ~
+      md5: bdf9a560ddc0415d8fddfb89bdb4c7a0
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/History.pm.svn-base
+    - bytesize: 1585
+      file_mime_type: ~
+      line_count: ~
+      md5: b528c771480dae103c1ac8799b8666f5
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Ident.pm.svn-base
+    - bytesize: 12660
+      file_mime_type: ~
+      line_count: ~
+      md5: 24dd976f421ab8356f93112bbda2ff9d
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Metaprop.pm.svn-base
+    - bytesize: 2927
+      file_mime_type: ~
+      line_count: ~
+      md5: 07218e5ba645f522c7321476b6900718
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/MetapropBuilder.pm.svn-base
+    - bytesize: 3012
+      file_mime_type: ~
+      line_count: ~
+      md5: c06b37d6a24e064634e947986964f478
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Order.pm.svn-base
+    - bytesize: 2272
+      file_mime_type: ~
+      line_count: ~
+      md5: 6283d180461ad16b642b3f37a1f70a03
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/ResultSet.pm.svn-base
+    - bytesize: 3462
+      file_mime_type: ~
+      line_count: ~
+      md5: a7588a8e763bd68ce50b357eea37b8da
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Stat.pm.svn-base
+    - bytesize: 2228
+      file_mime_type: ~
+      line_count: ~
+      md5: 774df058320c159b0b19be0d4fbb982c
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/StatMetaprop.pm.svn-base
+    - bytesize: 3728
+      file_mime_type: ~
+      line_count: ~
+      md5: 73f05479daa2d12ef9da558a783224c2
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/StatResultSet.pm.svn-base
+    - bytesize: 2941
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cd9df86e48fe2e4cebdf6e1b0d458a9
+      mtime: 1174944342
+      name: lib/ORM/.svn/text-base/Ta.pm.svn-base
+    - bytesize: 12206
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ac16b97fc422d77d6aa3a6eee613983
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/Tjoin.pm.svn-base
+    - bytesize: 1575
+      file_mime_type: ~
+      line_count: ~
+      md5: 77c66ccf5c3f19e6ab8ba21998db1d48
+      mtime: 1174944344
+      name: lib/ORM/.svn/text-base/TjoinNull.pm.svn-base
+    - bytesize: 42250
+      file_mime_type: ~
+      line_count: ~
+      md5: 23684e029152a1c9b582614831d5ddc3
+      mtime: 1174944341
+      name: lib/ORM/.svn/text-base/Tutorial.pod.svn-base
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e148db3e8f31c9282e593162e9dc3b7
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Auto.pm.svn-work
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 683d3241df4cf3f2f47b7ad873e67006
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Base.pm.svn-work
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a40a5572114884c25f573e2a7862fdc
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Broken.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: 5386c9d5a16e2d4c25df710381060644
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Cache.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: 55cef95f3bb2dc7ee99787f5bfffb939
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Const.pm.svn-work
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 329114d80068cb37f250ea9d4eff82b1
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Date.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: be6a6fef656dd95896296c2c5953a17c
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Date.pod.svn-work
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: b4be40880d884d7773b26838a369de38
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Datetime.pm.svn-work
+    - bytesize: 104
+      file_mime_type: ~
+      line_count: ~
+      md5: f9586196f4bae3b7f047f1de289c56c9
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Datetime.pod.svn-work
+    - bytesize: 97
+      file_mime_type: ~
+      line_count: ~
+      md5: fe6620e5b5b40b9da2b1ac80343654c5
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Db.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: bb614efdd150895d64452831d9017f6f
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/DbLog.pm.svn-work
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: b43d36875da5c6aab628819bcb9cf5a4
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/DbResultSet.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: da7e036226d33e526fce9fdbfb3ecc65
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Error.pm.svn-work
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: 5892a53be5dac638abc7dc40b2065fbd
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Error.pod.svn-work
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 701bbdb66182db580838cd1d179e6f96
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Expr.pm.svn-work
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: 69e2351757222c5e13886e865a03ebc0
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Filter.pm.svn-work
+    - bytesize: 102
+      file_mime_type: ~
+      line_count: ~
+      md5: 47d6d43e7c033bf9ccdcceb863112dba
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/History.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: f61a8fd84083b0efc0a441af89397a5b
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Ident.pm.svn-work
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: e730027bf3732fc834093f732bee4d2c
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Metaprop.pm.svn-work
+    - bytesize: 110
+      file_mime_type: ~
+      line_count: ~
+      md5: d4070047537e554bdd4f09cd687f033f
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/MetapropBuilder.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: 10a48226738ab1472ae0f0e9a173d734
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Order.pm.svn-work
+    - bytesize: 104
+      file_mime_type: ~
+      line_count: ~
+      md5: 26a7f4f5a8bbb39394dcda19cbbfc1c9
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/ResultSet.pm.svn-work
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: f98dcfd2843c8ec4264f2c5099138319
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Stat.pm.svn-work
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: 37662e1f781ab81db60f551cbbb46cc9
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/StatMetaprop.pm.svn-work
+    - bytesize: 108
+      file_mime_type: ~
+      line_count: ~
+      md5: c70d4a839431fa28116b8994cf811b69
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/StatResultSet.pm.svn-work
+    - bytesize: 97
+      file_mime_type: ~
+      line_count: ~
+      md5: e5f288515bcb70b8e3edc233aa535bb7
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Ta.pm.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: efbdc87a465273cbae2170e1d62aa109
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Tjoin.pm.svn-work
+    - bytesize: 104
+      file_mime_type: ~
+      line_count: ~
+      md5: f300a1150f4706df5844989f1243053d
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/TjoinNull.pm.svn-work
+    - bytesize: 104
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e9ed4d5f730ce7c0fc98223633b6dba
+      mtime: 1174944345
+      name: lib/ORM/.svn/wcprops/Tutorial.pod.svn-work
+    - bytesize: 6764
+      file_mime_type: ~
+      line_count: ~
+      md5: 1674db0617a9a98863f83c77f629a8bd
+      mtime: 1174944345
+      name: lib/ORM/Auto.pm
+    - bytesize: 3167
+      file_mime_type: ~
+      line_count: ~
+      md5: 556715c02658278664dd601fe6b63704
+      mtime: 1174944345
+      name: lib/ORM/Base.pm
+    - bytesize: 1983
+      file_mime_type: ~
+      line_count: ~
+      md5: eaa320acb7478335965f2dc08c0cf700
+      mtime: 1174944345
+      name: lib/ORM/Broken.pm
+    - bytesize: 3472
+      file_mime_type: ~
+      line_count: ~
+      md5: 280ceac658d7da8c51dd9792655d2b95
+      mtime: 1174944345
+      name: lib/ORM/Cache.pm
+    - bytesize: 1741
+      file_mime_type: ~
+      line_count: ~
+      md5: bd2b787a6f876ecbade63a6db5822bfc
+      mtime: 1174944345
+      name: lib/ORM/Const.pm
+    - bytesize: 6070
+      file_mime_type: ~
+      line_count: ~
+      md5: d8714a990d60c073b11e0c67666d828d
+      mtime: 1174944345
+      name: lib/ORM/Date.pm
+    - bytesize: 3828
+      file_mime_type: ~
+      line_count: ~
+      md5: e3d5b871aac29be5124d86c09b1466eb
+      mtime: 1174944345
+      name: lib/ORM/Date.pod
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: f3f103668b092f97c73fcc1d145417ab
+      mtime: 1174944345
+      name: lib/ORM/Datetime.pm
+    - bytesize: 1919
+      file_mime_type: ~
+      line_count: ~
+      md5: a726b8b5b5877eeb5e63c3112cea8a0b
+      mtime: 1174944345
+      name: lib/ORM/Datetime.pod
+    - bytesize: 7261
+      file_mime_type: ~
+      line_count: ~
+      md5: 467a048c504e54630eba02bef6dc8d70
+      mtime: 1174944345
+      name: lib/ORM/Db.pm
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 38f15b71101b95f72b6bc08050b5a365
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/README.txt
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d6c2dc5743e4e0ef03d07f2e490fb5e
+      mtime: 1174944344
+      name: lib/ORM/Db/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 888dd3c628e838d234db89037aca8fb4
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/empty-file
+    - bytesize: 1593
+      file_mime_type: ~
+      line_count: ~
+      md5: 05929161a59e38078c6fc721f0ae1ef6
+      mtime: 1174944344
+      name: lib/ORM/Db/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 15a9ead72fc6912f3136864a36db2e1d
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 66ff4eb6fad1fe5b17306547911eb8e2
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/prop-base/DBI.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: fd0ff29135f752d4803bfbfbf0c42118
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/prop-base/DBIResultSet.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 45839697a9c288d030d191e0e635fdb7
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/prop-base/DBIResultSetFull.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e07cbc126e142e0fcab324404f99fa1
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/prop-base/Replicated.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f89d3c4fa6493ab20e159e72d7c159c1
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/props/DBI.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 48ec7d350ca4da88311f9b8e2eb47837
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/props/DBIResultSet.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d7f3ee466ec987933a0cd5f7274b648d
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/props/DBIResultSetFull.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c2f0142566d6c215098a02ff68d98d1
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/props/Replicated.pm.svn-work
+    - bytesize: 22729
+      file_mime_type: ~
+      line_count: ~
+      md5: 13a338ddf6d6607ad8f1400abb962f4a
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/text-base/DBI.pm.svn-base
+    - bytesize: 1617
+      file_mime_type: ~
+      line_count: ~
+      md5: a47fb83335517c796f841e29ee92ea0d
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/text-base/DBIResultSet.pm.svn-base
+    - bytesize: 1842
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f2e9bcf5d16566b90da8ef3d44a935f
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/text-base/DBIResultSetFull.pm.svn-base
+    - bytesize: 1217
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f2bfc150273affafd6427e419673f0f
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/text-base/Replicated.pm.svn-base
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: 05fa5de90d89c167cc141c69d4eb8ad9
+      mtime: 1174944344
+      name: lib/ORM/Db/.svn/wcprops/DBI.pm.svn-work
+    - bytesize: 110
+      file_mime_type: ~
+      line_count: ~
+      md5: 36bdf9b34f90b28b75011ee59baa95b1
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/wcprops/DBIResultSet.pm.svn-work
+    - bytesize: 114
+      file_mime_type: ~
+      line_count: ~
+      md5: f21d3132e9b662da7e36efc5aa9f608a
+      mtime: 1174944343
+      name: lib/ORM/Db/.svn/wcprops/DBIResultSetFull.pm.svn-work
+    - bytesize: 108
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d40e55982db63d4e5d1ed9208108aa8
+      mtime: 1174944344
+      name: lib/ORM/Db/.svn/wcprops/Replicated.pm.svn-work
+    - bytesize: 22729
+      file_mime_type: ~
+      line_count: ~
+      md5: bca2b2edf19f0df1176ef3667330abde
+      mtime: 1174944344
+      name: lib/ORM/Db/DBI.pm
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: f0f9722edbcfc1b12768933cea8cdadc
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/README.txt
+    - bytesize: 98
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cc7212dfbdc13708cc75a953ae59dd3
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 8546a4c9caaa15549a68608c62d7555b
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/empty-file
+    - bytesize: 1547
+      file_mime_type: ~
+      line_count: ~
+      md5: fffed1a083acf0d97f09a7bc3486162e
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 704bc5ce465b593e4cc3e0a39fcc58e2
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 53d87bda6094f8eb734d20060bb41acf
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/prop-base/MySQL.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 770b5bc5734b83c7d41b471f3e88e7d7
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/prop-base/MySQLemTa.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d9dd57e7652f590954372f91876b97ff
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/prop-base/PgSQL.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 744c7e93f83ec54ab0e4ea7f20f159bd
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/prop-base/SQLite.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c7ce0399c181895364584a89aef6956f
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/props/MySQL.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 628a36bc8074f5e9fa90ad2b807330ae
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/props/MySQLemTa.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: e2ce31863b14e42a8b74c351a1441cfe
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/props/PgSQL.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ca1bd537401e6408dbc91e7be538acd6
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/props/SQLite.pm.svn-work
+    - bytesize: 6789
+      file_mime_type: ~
+      line_count: ~
+      md5: c215168db5c708ef0d3348121378d8b7
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/text-base/MySQL.pm.svn-base
+    - bytesize: 4049
+      file_mime_type: ~
+      line_count: ~
+      md5: ef526594e23947473fea6faafe288ea6
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/text-base/MySQLemTa.pm.svn-base
+    - bytesize: 11286
+      file_mime_type: ~
+      line_count: ~
+      md5: f7cfa1dd52b095cd4399b05df69fd63a
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/text-base/PgSQL.pm.svn-base
+    - bytesize: 4935
+      file_mime_type: ~
+      line_count: ~
+      md5: bafa617eb1ee78a9b9ff7309e646811a
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/text-base/SQLite.pm.svn-base
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d0099f5ad7d1a7b31d0f2e9a9307bbc
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/wcprops/MySQL.pm.svn-work
+    - bytesize: 111
+      file_mime_type: ~
+      line_count: ~
+      md5: afb25960f14663d67a6f0b7a25ad6eef
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/wcprops/MySQLemTa.pm.svn-work
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f8fd8b4458d151810b2d26a9e2f86ac
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/wcprops/PgSQL.pm.svn-work
+    - bytesize: 108
+      file_mime_type: ~
+      line_count: ~
+      md5: e09af4e1b1ab1b1ec0efe0b92506dc2f
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/.svn/wcprops/SQLite.pm.svn-work
+    - bytesize: 6789
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b687e28baa5384b5f446a5189c87ad0
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/MySQL.pm
+    - bytesize: 4049
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c4a7951eb4475d8be8d8d3b9be41744
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/MySQLemTa.pm
+    - bytesize: 11286
+      file_mime_type: ~
+      line_count: ~
+      md5: a7a96a7f2cf9dad8e9fdb47de3fcd765
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/PgSQL.pm
+    - bytesize: 4935
+      file_mime_type: ~
+      line_count: ~
+      md5: af29f97579f7862c102ca5bc3547b496
+      mtime: 1174944343
+      name: lib/ORM/Db/DBI/SQLite.pm
+    - bytesize: 1617
+      file_mime_type: ~
+      line_count: ~
+      md5: bf350ce2162316800cd1e7d08ef92064
+      mtime: 1174944343
+      name: lib/ORM/Db/DBIResultSet.pm
+    - bytesize: 1842
+      file_mime_type: ~
+      line_count: ~
+      md5: 406d2d9c3f086545f7779d021038a591
+      mtime: 1174944343
+      name: lib/ORM/Db/DBIResultSetFull.pm
+    - bytesize: 1217
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d6373aae893563e555adc40e578a21d
+      mtime: 1174944344
+      name: lib/ORM/Db/Replicated.pm
+    - bytesize: 3361
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a799cf11b479130ed2da07fa591c1cb
+      mtime: 1174944345
+      name: lib/ORM/DbLog.pm
+    - bytesize: 1544
+      file_mime_type: ~
+      line_count: ~
+      md5: b956f704248ee2d6e4721ebe70da10f3
+      mtime: 1174944345
+      name: lib/ORM/DbResultSet.pm
+    - bytesize: 4457
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dd685442885941be236c08d6890c602
+      mtime: 1174944345
+      name: lib/ORM/Error.pm
+    - bytesize: 2136
+      file_mime_type: ~
+      line_count: ~
+      md5: a9d047c1e6b7685be769b52154c5875a
+      mtime: 1174944345
+      name: lib/ORM/Error.pod
+    - bytesize: 6196
+      file_mime_type: ~
+      line_count: ~
+      md5: 8df9d2e4ec2f83437ea48c991826e3c6
+      mtime: 1174944345
+      name: lib/ORM/Expr.pm
+    - bytesize: 1561
+      file_mime_type: ~
+      line_count: ~
+      md5: 6619b9ff60e97f373019a08633dc36ce
+      mtime: 1174944345
+      name: lib/ORM/Filter.pm
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 86ad8fc9298a18559b8f72dddf83ab5a
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/README.txt
+    - bytesize: 98
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f019ad50e69858943504f60ecf7b3a4
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b68249fb826f8ae61d014927037c5a4
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/empty-file
+    - bytesize: 1818
+      file_mime_type: ~
+      line_count: ~
+      md5: f0b74030461aff73f814809d435ed120
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 6820ae98e2cf7485491ce33be9eff2ce
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: fe75257f32caa1b5c843ce4b5a80df86
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/prop-base/Case.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 894959cbc21aeed40ad1bf544b13e74f
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/prop-base/Cmp.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: bde6fe22c134eac55fb5b3b72a579cf3
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/prop-base/Func.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d39b4a45a9a5bb61895c7b2a489779bd
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/prop-base/Group.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: fd5245b71b5b173db9edb432705500b1
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/prop-base/Interval.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d27b934fed048527f34ecd2a011387cd
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/props/Case.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 047c13b8f65c4b461b3ce0bb59c1ee9e
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/props/Cmp.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 542de8e75584049f252799a5c2c529fd
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/props/Func.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fcaac1a473e4931a8afb60f6029b705
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/props/Group.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 80c73157cf5c8d8562a48a5d777db388
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/props/Interval.pm.svn-work
+    - bytesize: 3072
+      file_mime_type: ~
+      line_count: ~
+      md5: 9109982327e8d7343b0485ee839a0f72
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/text-base/Case.pm.svn-base
+    - bytesize: 2189
+      file_mime_type: ~
+      line_count: ~
+      md5: da8f3afaeff4b907a25aea80b05da822
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/text-base/Cmp.pm.svn-base
+    - bytesize: 2256
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d6ac5b5f28c008960dc461bc80efc2e
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/text-base/Func.pm.svn-base
+    - bytesize: 2355
+      file_mime_type: ~
+      line_count: ~
+      md5: 68d4c5dab4d70b12a2de0ed750e8a8c4
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/text-base/Group.pm.svn-base
+    - bytesize: 1930
+      file_mime_type: ~
+      line_count: ~
+      md5: cf6353c08bf104082c1362cd4f204ed1
+      mtime: 1174944341
+      name: lib/ORM/Filter/.svn/text-base/Interval.pm.svn-base
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ce5330cff679fcd424a5f2625415f70
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/wcprops/Case.pm.svn-work
+    - bytesize: 105
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b5d68c7331a38372db6ed8d2a2dc280
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/wcprops/Cmp.pm.svn-work
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: bdc28a96487fdd726582338222429c50
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/wcprops/Func.pm.svn-work
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bbea692f6c69d132468d1eb419536b8
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/wcprops/Group.pm.svn-work
+    - bytesize: 110
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bcefc9bc1b410eccb637ac0030e5cff
+      mtime: 1174944342
+      name: lib/ORM/Filter/.svn/wcprops/Interval.pm.svn-work
+    - bytesize: 3072
+      file_mime_type: ~
+      line_count: ~
+      md5: e5bf14cea2d285f3fb46099a31aeb0eb
+      mtime: 1174944342
+      name: lib/ORM/Filter/Case.pm
+    - bytesize: 2189
+      file_mime_type: ~
+      line_count: ~
+      md5: 718d2cec3debfcc28017848019e5379d
+      mtime: 1174944342
+      name: lib/ORM/Filter/Cmp.pm
+    - bytesize: 2256
+      file_mime_type: ~
+      line_count: ~
+      md5: 16f3b28c114335847f81fdf70053b914
+      mtime: 1174944342
+      name: lib/ORM/Filter/Func.pm
+    - bytesize: 2355
+      file_mime_type: ~
+      line_count: ~
+      md5: 149ad82866387fc50b2b8c4f6c4b2de8
+      mtime: 1174944342
+      name: lib/ORM/Filter/Group.pm
+    - bytesize: 1930
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d4cde96cb6f982c4f682f866c40485c
+      mtime: 1174944342
+      name: lib/ORM/Filter/Interval.pm
+    - bytesize: 8514
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ba1e727a53ecc3090cc80e070ede8a7
+      mtime: 1174944345
+      name: lib/ORM/History.pm
+    - bytesize: 1585
+      file_mime_type: ~
+      line_count: ~
+      md5: 220e6d1599680d0d7e4231f05e9c7aa4
+      mtime: 1174944345
+      name: lib/ORM/Ident.pm
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: d4c632e74cac82979b5800c568b7e763
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/README.txt
+    - bytesize: 96
+      file_mime_type: ~
+      line_count: ~
+      md5: e8c6b160141ed212fa2d2f19298a6ed4
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d3a9f7706fcb435b1d103469a43e0cb0
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/empty-file
+    - bytesize: 746
+      file_mime_type: ~
+      line_count: ~
+      md5: 9eb7b2e7ca13c8cc64cef9b76a859ac4
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: eb6e33e4b718b9a88f7a12b2b781f39e
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: eb8a9f4ddea2d1401faa3d22bb75b15f
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/prop-base/Array.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7210548d050f5acee26ae2245a0da840
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/props/Array.pm.svn-work
+    - bytesize: 1774
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e46aa98df8c03f311b3214f02115669
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/text-base/Array.pm.svn-base
+    - bytesize: 105
+      file_mime_type: ~
+      line_count: ~
+      md5: 9968357a28d648a3ce5c67aa75c8ea20
+      mtime: 1174944344
+      name: lib/ORM/Meta/.svn/wcprops/Array.pm.svn-work
+    - bytesize: 1774
+      file_mime_type: ~
+      line_count: ~
+      md5: f66f8a029ad7a8981ad01d5fc0db1ad4
+      mtime: 1174944344
+      name: lib/ORM/Meta/Array.pm
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: f27ea84e7bcb7e5830c199c3c525ed95
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/README.txt
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: c5b9239a3385c3a364657c5356258f57
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f10c795d417bc5cca0b67b07ca1d751
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/empty-file
+    - bytesize: 1267
+      file_mime_type: ~
+      line_count: ~
+      md5: ef42c8aa9d73ef7554367384e47acd41
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 212830671ce8a2e37a260baec7731605
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f9863a92eaa19151366167157053cfa4
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/prop-base/Date.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 38dd7477511221f3f2ecf6045efd9d67
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/prop-base/Datetime.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d46d23920b47d10bceb2f7bc721073e4
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/prop-base/History.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b73b237ae5d474b31f7a60cb41647b7
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/props/Date.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d8c117c6ba6fd5f8176ed5a603384e70
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/props/Datetime.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c4821d89d5e9ccc8740847e44d7c128
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/props/History.pm.svn-work
+    - bytesize: 1589
+      file_mime_type: ~
+      line_count: ~
+      md5: 01499289a021c5443f68d04af1dce924
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/text-base/Date.pm.svn-base
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: d879fe73450d4dfd246fa0a5a0487649
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/text-base/Datetime.pm.svn-base
+    - bytesize: 1356
+      file_mime_type: ~
+      line_count: ~
+      md5: 99237be10029550bfe72301453a37ad9
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/text-base/History.pm.svn-base
+    - bytesize: 108
+      file_mime_type: ~
+      line_count: ~
+      md5: c23c3bc004ddaaa8c32226c2b8d5658f
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/wcprops/Date.pm.svn-work
+    - bytesize: 112
+      file_mime_type: ~
+      line_count: ~
+      md5: 0de29c26abafc0f2e235b79fefd11cc4
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/wcprops/Datetime.pm.svn-work
+    - bytesize: 111
+      file_mime_type: ~
+      line_count: ~
+      md5: 90862b113e1a6064fee03ff3cb6d1ae5
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/.svn/wcprops/History.pm.svn-work
+    - bytesize: 1589
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f46bed12cf819b224a05186fc6dfe64
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/Date.pm
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: 958d02216047a369acd5ea6259e1b8bf
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/Datetime.pm
+    - bytesize: 1356
+      file_mime_type: ~
+      line_count: ~
+      md5: f4dade2aefd85b81d108509ca5a6489d
+      mtime: 1174944344
+      name: lib/ORM/Meta/ORM/History.pm
+    - bytesize: 12660
+      file_mime_type: ~
+      line_count: ~
+      md5: bab1e9b6980b4dc02b0d5eb2b40356de
+      mtime: 1174944345
+      name: lib/ORM/Metaprop.pm
+    - bytesize: 2927
+      file_mime_type: ~
+      line_count: ~
+      md5: 2714b6219f21b8ed6a034159a85aee97
+      mtime: 1174944345
+      name: lib/ORM/MetapropBuilder.pm
+    - bytesize: 3012
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ae48087e75c1097ca0fa5efe12919ef
+      mtime: 1174944345
+      name: lib/ORM/Order.pm
+    - bytesize: 2272
+      file_mime_type: ~
+      line_count: ~
+      md5: a8ee0a05d63c5d3cbbe72dfd19503ac3
+      mtime: 1174944345
+      name: lib/ORM/ResultSet.pm
+    - bytesize: 3462
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bea8a9b69cb6c712fcb38713b99bf16
+      mtime: 1174944345
+      name: lib/ORM/Stat.pm
+    - bytesize: 2228
+      file_mime_type: ~
+      line_count: ~
+      md5: 90de5ec0f21f9c631df1c081d3ae2125
+      mtime: 1174944345
+      name: lib/ORM/StatMetaprop.pm
+    - bytesize: 3728
+      file_mime_type: ~
+      line_count: ~
+      md5: 025e1d1e3d312775ee0d62f0acb0d1e9
+      mtime: 1174944345
+      name: lib/ORM/StatResultSet.pm
+    - bytesize: 2941
+      file_mime_type: ~
+      line_count: ~
+      md5: 586791473f14da95bd8d3a12392a0788
+      mtime: 1174944345
+      name: lib/ORM/Ta.pm
+    - bytesize: 12206
+      file_mime_type: ~
+      line_count: ~
+      md5: c80311583b2df3fc44805894d5e9b74e
+      mtime: 1174944345
+      name: lib/ORM/Tjoin.pm
+    - bytesize: 1575
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ac19a8f839cde76409bb976ae2b9d2f
+      mtime: 1174944345
+      name: lib/ORM/TjoinNull.pm
+    - bytesize: 42250
+      file_mime_type: ~
+      line_count: ~
+      md5: 3247a41f0fe90cd9c9846c9ba9b3f2d4
+      mtime: 1174944345
+      name: lib/ORM/Tutorial.pod
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 98928a31cbb499d570d8ac168d6b11ae
+      mtime: 1174944340
+      name: t/.svn/README.txt
+    - bytesize: 85
+      file_mime_type: ~
+      line_count: ~
+      md5: c5b3fb326844a6903108f50db0365080
+      mtime: 1174944340
+      name: t/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 023d3ec21197f8fef066689f31424719
+      mtime: 1174944340
+      name: t/.svn/empty-file
+    - bytesize: 3271
+      file_mime_type: ~
+      line_count: ~
+      md5: eb97e0de4f20efa5152fdba9774453ed
+      mtime: 1174944340
+      name: t/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 457db4edad45eaf8fdb802030b636c97
+      mtime: 1174944340
+      name: t/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 3384fd7457f28f63a9991a1fcded7be9
+      mtime: 1174944340
+      name: t/.svn/prop-base/ORM-Date.t.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 78d8f9f9af537b123c73f6bca357a5f5
+      mtime: 1174944340
+      name: t/.svn/prop-base/ORM-Error.t.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f2b18518152a34fecf402140127ff6c
+      mtime: 1174944340
+      name: t/.svn/prop-base/ORM.t.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: f5824ad7fb432db5c1abd9ef90709376
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test-DB-Init.t.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b14e37e0b60e3cc835086e9e2006462b
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test-DB.PgSQL.sql.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: dcb3b2db945259da20dcc02845afedfd
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test-DB.SQLite.sql.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 93367159dbd52da8a132cc222cddff2e
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test-Dummy-Child2.t.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 110ab61a6d6ff861114a2adf66ab3920
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test-Dummy-NoTable.t.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c59eec66dcd5ae7ec688b53478fcdc90
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test-Dummy.t.svn-base
+    - bytesize: 53
+      file_mime_type: ~
+      line_count: ~
+      md5: bc8b75652198e53bdcba393ccf45a440
+      mtime: 1174944340
+      name: t/.svn/prop-base/Test.db.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f6f32ba7731294c8ec15fa265e5613e
+      mtime: 1174944340
+      name: t/.svn/props/ORM-Date.t.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: e426574ad356adf229634254a4407944
+      mtime: 1174944340
+      name: t/.svn/props/ORM-Error.t.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d66d8a9b2ec507db65c8a20db52f84d
+      mtime: 1174944340
+      name: t/.svn/props/ORM.t.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a00fd0b7f4d313dfeb5a964beb194bc5
+      mtime: 1174944340
+      name: t/.svn/props/Test-DB-Init.t.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: a2f3d5783f3b9ef6870727d8aa19c591
+      mtime: 1174944340
+      name: t/.svn/props/Test-DB.PgSQL.sql.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 13cc3780a59f7153dc9b45f5829446f3
+      mtime: 1174944340
+      name: t/.svn/props/Test-DB.SQLite.sql.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fbf10eb13a7c55350cfc2f0059abec0
+      mtime: 1174944340
+      name: t/.svn/props/Test-Dummy-Child2.t.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: d1e881cee159485d6c27b0dabf5e4699
+      mtime: 1174944340
+      name: t/.svn/props/Test-Dummy-NoTable.t.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: bc994b943522389442b52e07d5798e92
+      mtime: 1174944340
+      name: t/.svn/props/Test-Dummy.t.svn-work
+    - bytesize: 53
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d34a908c2418816563e6409c789ca50
+      mtime: 1174944340
+      name: t/.svn/props/Test.db.svn-work
+    - bytesize: 983
+      file_mime_type: ~
+      line_count: ~
+      md5: b6c1442b399b58c0554797648cbbb996
+      mtime: 1174944340
+      name: t/.svn/text-base/ORM-Date.t.svn-base
+    - bytesize: 1043
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c105bcbc591613884ec78d5240db2d7
+      mtime: 1174944340
+      name: t/.svn/text-base/ORM-Error.t.svn-base
+    - bytesize: 70
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b0d863ade9b986fd9785507e097c28a
+      mtime: 1174944340
+      name: t/.svn/text-base/ORM.t.svn-base
+    - bytesize: 688
+      file_mime_type: ~
+      line_count: ~
+      md5: a14312e3d9fbbd9b14ba02d5dd28a72e
+      mtime: 1174944340
+      name: t/.svn/text-base/Test-DB-Init.t.svn-base
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: 3955cf8b553d236afc0c3cf7ec8f1500
+      mtime: 1174944340
+      name: t/.svn/text-base/Test-DB.PgSQL.sql.svn-base
+    - bytesize: 1412
+      file_mime_type: ~
+      line_count: ~
+      md5: f043d29899f5f9df7404fe8e7180e8e7
+      mtime: 1174944340
+      name: t/.svn/text-base/Test-DB.SQLite.sql.svn-base
+    - bytesize: 735
+      file_mime_type: ~
+      line_count: ~
+      md5: d6d00b12fd370fcb40f8bc909c783250
+      mtime: 1174944340
+      name: t/.svn/text-base/Test-Dummy-Child2.t.svn-base
+    - bytesize: 193
+      file_mime_type: ~
+      line_count: ~
+      md5: 5131def2081dea9943bf369ffe23615c
+      mtime: 1174944340
+      name: t/.svn/text-base/Test-Dummy-NoTable.t.svn-base
+    - bytesize: 5050
+      file_mime_type: ~
+      line_count: ~
+      md5: fae3c84bdaafa4bb2d72de53197255aa
+      mtime: 1174944340
+      name: t/.svn/text-base/Test-Dummy.t.svn-base
+    - bytesize: 12288
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b1a53b2ab5ae7c7e7a0af102a7caea
+      mtime: 1174944340
+      name: t/.svn/text-base/Test.db.svn-base
+    - bytesize: 96
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a646eaa77888b610cb160cc690e51b5
+      mtime: 1174944340
+      name: t/.svn/wcprops/ORM-Date.t.svn-work
+    - bytesize: 97
+      file_mime_type: ~
+      line_count: ~
+      md5: 44ac38595574b0b8e52174b37672c919
+      mtime: 1174944340
+      name: t/.svn/wcprops/ORM-Error.t.svn-work
+    - bytesize: 91
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c7f9bc39bbbe5ab5a18bc4dd478c9de
+      mtime: 1174944340
+      name: t/.svn/wcprops/ORM.t.svn-work
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: 839b647d1c871cdefc9c6a5330e13930
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test-DB-Init.t.svn-work
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: bd9f21de1281f97c2b146166d2d2d01e
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test-DB.PgSQL.sql.svn-work
+    - bytesize: 104
+      file_mime_type: ~
+      line_count: ~
+      md5: 763e0b306cead7dcf989ee7331376921
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test-DB.SQLite.sql.svn-work
+    - bytesize: 105
+      file_mime_type: ~
+      line_count: ~
+      md5: 397d0b7c8e7150cee23c6993c383aef1
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test-Dummy-Child2.t.svn-work
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: c2ceff43963504b82e888a526be1eaee
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test-Dummy-NoTable.t.svn-work
+    - bytesize: 98
+      file_mime_type: ~
+      line_count: ~
+      md5: d12b95674d850fef3390bc5d9d5bf866
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test-Dummy.t.svn-work
+    - bytesize: 93
+      file_mime_type: ~
+      line_count: ~
+      md5: f08c995f8519e0d57dc875ee48d0b573
+      mtime: 1174944340
+      name: t/.svn/wcprops/Test.db.svn-work
+    - bytesize: 983
+      file_mime_type: ~
+      line_count: ~
+      md5: 62df60177c336b6035d016ef6267c490
+      mtime: 1174944340
+      name: t/ORM-Date.t
+    - bytesize: 1043
+      file_mime_type: ~
+      line_count: ~
+      md5: db8e59e22905571a579b3d313f8a09f9
+      mtime: 1174944340
+      name: t/ORM-Error.t
+    - bytesize: 70
+      file_mime_type: ~
+      line_count: ~
+      md5: bb4f4bd9ce57f91860fc867883fae521
+      mtime: 1174944340
+      name: t/ORM.t
+    - bytesize: 688
+      file_mime_type: ~
+      line_count: ~
+      md5: e2a580f2fcbd0550611079282e238013
+      mtime: 1174944340
+      name: t/Test-DB-Init.t
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: 771a87dc39cce88f77205f4250820dc9
+      mtime: 1174944340
+      name: t/Test-DB.PgSQL.sql
+    - bytesize: 1412
+      file_mime_type: ~
+      line_count: ~
+      md5: 829cbd91671830bc5258768c0357fde3
+      mtime: 1174944340
+      name: t/Test-DB.SQLite.sql
+    - bytesize: 735
+      file_mime_type: ~
+      line_count: ~
+      md5: 61fa5ec0ec3a647c152c8b3bc90cb766
+      mtime: 1174944340
+      name: t/Test-Dummy-Child2.t
+    - bytesize: 193
+      file_mime_type: ~
+      line_count: ~
+      md5: 4869869f82e0d7fa8e1dd1850397fbf6
+      mtime: 1174944340
+      name: t/Test-Dummy-NoTable.t
+    - bytesize: 5050
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a3f780f5b8a41a70bef9899fd84e47c
+      mtime: 1174944340
+      name: t/Test-Dummy.t
+    - bytesize: 12288
+      file_mime_type: ~
+      line_count: ~
+      md5: 96b20dc2e48cbf708ab6648fb7ce7611
+      mtime: 1174944340
+      name: t/Test.db
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a4532a1b530687ad2160c9009e74bb8
+      mtime: 1174944340
+      name: t/Test/.svn/README.txt
+    - bytesize: 90
+      file_mime_type: ~
+      line_count: ~
+      md5: b3932d166eb6441e2d32bc01a2f9928d
+      mtime: 1174944340
+      name: t/Test/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 90f4085caa0c0ccee6202a7bb14b2d7d
+      mtime: 1174944340
+      name: t/Test/.svn/empty-file
+    - bytesize: 1292
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f8855ab8fe83ac38cb74bf48bf2a0e
+      mtime: 1174944340
+      name: t/Test/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d6d7d21ca1a82126dd3de8dfbb88bdb
+      mtime: 1174944340
+      name: t/Test/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e70e23f5d499efd961532fcb9c35ea9
+      mtime: 1174944340
+      name: t/Test/.svn/prop-base/Dummy.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f591ba9137f0ea75e19ded8e7408ca
+      mtime: 1174944340
+      name: t/Test/.svn/prop-base/History.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: cdee6360f92e2ddd9764e46a5c9deecd
+      mtime: 1174944340
+      name: t/Test/.svn/prop-base/ORM.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 440b254b00e699bf810f02fea4c30082
+      mtime: 1174944340
+      name: t/Test/.svn/props/Dummy.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e9a81da719a0e14c3518792c5d08ba4
+      mtime: 1174944340
+      name: t/Test/.svn/props/History.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 94a8d71d4c0a70bbb637ce6ddf0cde38
+      mtime: 1174944340
+      name: t/Test/.svn/props/ORM.pm.svn-work
+    - bytesize: 90
+      file_mime_type: ~
+      line_count: ~
+      md5: 367fff0114f01cfea49bb55badada6b1
+      mtime: 1174944340
+      name: t/Test/.svn/text-base/Dummy.pm.svn-base
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: d93cd944731807a06a7111cb2b69650f
+      mtime: 1174944340
+      name: t/Test/.svn/text-base/History.pm.svn-base
+    - bytesize: 1025
+      file_mime_type: ~
+      line_count: ~
+      md5: 96e5c56f1ca96804f806968501911387
+      mtime: 1174944340
+      name: t/Test/.svn/text-base/ORM.pm.svn-base
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 04b4e6ab2e5ce8f0bda9d24f5e157828
+      mtime: 1174944340
+      name: t/Test/.svn/wcprops/Dummy.pm.svn-work
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: 15c490666f47cb684c9dc7c4df6055f4
+      mtime: 1174944340
+      name: t/Test/.svn/wcprops/History.pm.svn-work
+    - bytesize: 97
+      file_mime_type: ~
+      line_count: ~
+      md5: c00da2802b3358e636819deef34ad5f5
+      mtime: 1174944340
+      name: t/Test/.svn/wcprops/ORM.pm.svn-work
+    - bytesize: 90
+      file_mime_type: ~
+      line_count: ~
+      md5: eef6bdd68f429434ddb131aef5d3ece1
+      mtime: 1174944340
+      name: t/Test/Dummy.pm
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 45395efe743ed445c751fabe92669fc8
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/README.txt
+    - bytesize: 96
+      file_mime_type: ~
+      line_count: ~
+      md5: 34113fe6c7761b4f6c5f0629080086d9
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/dir-wcprops
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: fdf9fbbebf5b8dc854ec3be8aa9dc25a
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/empty-file
+    - bytesize: 1263
+      file_mime_type: ~
+      line_count: ~
+      md5: 430bd734622d59bacbfda4cc90544b54
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/entries
+    - bytesize: 2
+      file_mime_type: ~
+      line_count: ~
+      md5: 97a85999c93b41545c9fd023dabeca40
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/format
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 5371033344ae6e412b2484efc03d1266
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/prop-base/Child1.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 38cd0c0469b9b6eeba84f8a57c1123fe
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/prop-base/Child2.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ecf3ddff26e1d5ed9dd17c30de84ed50
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/prop-base/NoTable.pm.svn-base
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 3af0f910cc7c79f4dc7f12ae63e362e2
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/props/Child1.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: aec8eb7d65df1b1c756af8e7098e4a69
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/props/Child2.pm.svn-work
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: ac69e4d6f9b21760a491a10cdef67958
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/props/NoTable.pm.svn-work
+    - bytesize: 74
+      file_mime_type: ~
+      line_count: ~
+      md5: c4286369d17fb3058ed76e53105adc9c
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/text-base/Child1.pm.svn-base
+    - bytesize: 519
+      file_mime_type: ~
+      line_count: ~
+      md5: ca773660ffde9d1ca2ba4b6608d74323
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/text-base/Child2.pm.svn-base
+    - bytesize: 75
+      file_mime_type: ~
+      line_count: ~
+      md5: 28433ed27a4aee4146f2791a6f251868
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/text-base/NoTable.pm.svn-base
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: 43d893e9232d3c558a3daed68a626585
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/wcprops/Child1.pm.svn-work
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: f52c90e8211a5e3915f123ace306c7bc
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/wcprops/Child2.pm.svn-work
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: ecb0ebb4050272fcdf659d62b4f170bf
+      mtime: 1174944340
+      name: t/Test/Dummy/.svn/wcprops/NoTable.pm.svn-work
+    - bytesize: 74
+      file_mime_type: ~
+      line_count: ~
+      md5: 549b48c7bb73e604a94f0e57c7acb4af
+      mtime: 1174944340
+      name: t/Test/Dummy/Child1.pm
+    - bytesize: 519
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ccb233aa7e29a87dece55119364c56e
+      mtime: 1174944340
+      name: t/Test/Dummy/Child2.pm
+    - bytesize: 75
+      file_mime_type: ~
+      line_count: ~
+      md5: a7d5895d60f1a3fbe1bcf902ab4176b3
+      mtime: 1174944340
+      name: t/Test/Dummy/NoTable.pm
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: d50521ad67b8026c983d4c18aa0defad
+      mtime: 1174944340
+      name: t/Test/History.pm
+    - bytesize: 1025
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e5c2169a17bc91b9b981145982f005e
+      mtime: 1174944340
+      name: t/Test/ORM.pm
+  module_info:
+    - bytesize: 50918
+      file_mime_type: ~
+      line_count: ~
+      md5: ad02751257d3894311d107a88cc92fd2
+      module_name_from_file_guess: ORM
+      mtime: 1174944345
+      name: blib/lib/ORM.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - ORM::Error
+        - ORM::Cache
+        - ORM::Broken
+        - ORM::Date
+        - ORM::Datetime
+        - ORM::Ta
+        - ORM::Const
+        - ORM::Ident
+        - ORM::Expr
+        - ORM::Order
+        - ORM::Metaprop
+        - ORM::MetapropBuilder
+        - ORM::ResultSet
+        - ORM::StatResultSet
+      version_info:
+        filename: blib/lib/ORM.pm
+        identifier: VERSION
+        line_number: 52
+        sigil: $
+        value: 0.83
+    - bytesize: 6764
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d7d8d7ab1f728b8b7d796636c8b6bde
+      module_name_from_file_guess: ORM::Auto
+      mtime: 1174944345
+      name: blib/lib/ORM/Auto.pm
+      packages:
+        - ORM::Auto
+      primary_package: ORM::Auto
+      uses:
+        - strict
+        - vars
+        - Carp
+      version_info:
+        filename: blib/lib/ORM/Auto.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3167
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e1a96f49dc3581b1a924f6af93ba698
+      module_name_from_file_guess: ORM::Base
+      mtime: 1174944345
+      name: blib/lib/ORM/Base.pm
+      packages:
+        - ORM::Base
+      primary_package: ORM::Base
+      uses:
+        - Carp
+      version_info:
+        filename: blib/lib/ORM/Base.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 1983
+      file_mime_type: ~
+      line_count: ~
+      md5: 0152894b438549400b6c13cd688f19b9
+      module_name_from_file_guess: ORM::Broken
+      mtime: 1174944345
+      name: blib/lib/ORM/Broken.pm
+      packages:
+        - ORM::Broken
+      primary_package: ORM::Broken
+      uses:
+        - Carp
+      version_info:
+        filename: blib/lib/ORM/Broken.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 3472
+      file_mime_type: ~
+      line_count: ~
+      md5: 04de5110b9373e80f2d9eaf490d85f75
+      module_name_from_file_guess: ORM::Cache
+      mtime: 1174944345
+      name: blib/lib/ORM/Cache.pm
+      packages:
+        - ORM::Cache
+      primary_package: ORM::Cache
+      uses:
+        - vars
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/ORM/Cache.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.83
+    - bytesize: 1741
+      file_mime_type: ~
+      line_count: ~
+      md5: c635ad1493657242d517f94fba4dfa77
+      module_name_from_file_guess: ORM::Const
+      mtime: 1174944345
+      name: blib/lib/ORM/Const.pm
+      packages:
+        - ORM::Const
+      primary_package: ORM::Const
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Const.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 6070
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d8233357b5c51c010b1e046b87c633d
+      module_name_from_file_guess: ORM::Date
+      mtime: 1174944345
+      name: blib/lib/ORM/Date.pm
+      packages:
+        - ORM::Date
+      primary_package: ORM::Date
+      uses:
+        - Carp
+        - POSIX
+        - ORM::Datetime
+        - overload
+      version_info:
+        filename: blib/lib/ORM/Date.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fdce94490819d3a7683a4569a0f0d28
+      module_name_from_file_guess: ORM::Datetime
+      mtime: 1174944345
+      name: blib/lib/ORM/Datetime.pm
+      packages:
+        - ORM::Datetime
+      primary_package: ORM::Datetime
+      uses:
+        - base
+        - overload
+      version_info:
+        filename: blib/lib/ORM/Datetime.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 7261
+      file_mime_type: ~
+      line_count: ~
+      md5: f9642c8a0d2de99eef88dfa526bbc33c
+      module_name_from_file_guess: ORM::Db
+      mtime: 1174944345
+      name: blib/lib/ORM/Db.pm
+      packages:
+        - ORM::Db
+      primary_package: ORM::Db
+      uses:
+        - ORM
+        - ORM::DbLog
+      version_info:
+        filename: blib/lib/ORM/Db.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 22729
+      file_mime_type: ~
+      line_count: ~
+      md5: 01098f969f202aee78cc8f9f3802a7fb
+      module_name_from_file_guess: ORM::Db::DBI
+      mtime: 1174944344
+      name: blib/lib/ORM/Db/DBI.pm
+      packages:
+        - ORM::Db::DBI
+      primary_package: ORM::Db::DBI
+      uses:
+        - DBI
+        - base
+        - ORM::Db::DBIResultSet
+        - ORM::Db::DBIResultSetFull
+      version_info:
+        filename: blib/lib/ORM/Db/DBI.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.83
+    - bytesize: 6789
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c42cc62a4173392cf2811e7f1620c62
+      module_name_from_file_guess: ORM::Db::DBI::MySQL
+      mtime: 1174944343
+      name: blib/lib/ORM/Db/DBI/MySQL.pm
+      packages:
+        - ORM::Db::DBI::MySQL
+      primary_package: ORM::Db::DBI::MySQL
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/DBI/MySQL.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.83
+    - bytesize: 4049
+      file_mime_type: ~
+      line_count: ~
+      md5: a0c1191d08eb1e41b3694fab3ea8acd4
+      module_name_from_file_guess: ORM::Db::DBI::MySQLemTa
+      mtime: 1174944343
+      name: blib/lib/ORM/Db/DBI/MySQLemTa.pm
+      packages:
+        - ORM::Db::DBI::MySQLemTa
+      primary_package: ORM::Db::DBI::MySQLemTa
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/DBI/MySQLemTa.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.83
+    - bytesize: 11286
+      file_mime_type: ~
+      line_count: ~
+      md5: b53ecaecebf7cae43ece8596d331fd6d
+      module_name_from_file_guess: ORM::Db::DBI::PgSQL
+      mtime: 1174944343
+      name: blib/lib/ORM/Db/DBI/PgSQL.pm
+      packages:
+        - ORM::Db::DBI::PgSQL
+      primary_package: ORM::Db::DBI::PgSQL
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/DBI/PgSQL.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.83
+    - bytesize: 4935
+      file_mime_type: ~
+      line_count: ~
+      md5: e6ba14e8d125e54f3f2ebc891fd6bd9a
+      module_name_from_file_guess: ORM::Db::DBI::SQLite
+      mtime: 1174944343
+      name: blib/lib/ORM/Db/DBI/SQLite.pm
+      packages:
+        - ORM::Db::DBI::SQLite
+      primary_package: ORM::Db::DBI::SQLite
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/DBI/SQLite.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 1617
+      file_mime_type: ~
+      line_count: ~
+      md5: a678a23e0ca194553c0deac95f7c3115
+      module_name_from_file_guess: ORM::Db::DBIResultSet
+      mtime: 1174944343
+      name: blib/lib/ORM/Db/DBIResultSet.pm
+      packages:
+        - ORM::Db::DBIResultSet
+      primary_package: ORM::Db::DBIResultSet
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/DBIResultSet.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 1842
+      file_mime_type: ~
+      line_count: ~
+      md5: 73921e9f5081f1df58a287e0d192b673
+      module_name_from_file_guess: ORM::Db::DBIResultSetFull
+      mtime: 1174944343
+      name: blib/lib/ORM/Db/DBIResultSetFull.pm
+      packages:
+        - ORM::Db::DBIResultSetFull
+      primary_package: ORM::Db::DBIResultSetFull
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/DBIResultSetFull.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 1217
+      file_mime_type: ~
+      line_count: ~
+      md5: 24418a7a012c9b1cc424dfd1c09e2957
+      module_name_from_file_guess: ORM::Db::Replicated
+      mtime: 1174944344
+      name: blib/lib/ORM/Db/Replicated.pm
+      packages:
+        - ORM::Db::Replicated
+      primary_package: ORM::Db::Replicated
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Db/Replicated.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 3361
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f8eea6da12ce1bf3a852ced325b7680
+      module_name_from_file_guess: ORM::DbLog
+      mtime: 1174944345
+      name: blib/lib/ORM/DbLog.pm
+      packages:
+        - ORM::DbLog
+      primary_package: ORM::DbLog
+      uses:
+        - ORM::Date
+      version_info:
+        filename: blib/lib/ORM/DbLog.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 1544
+      file_mime_type: ~
+      line_count: ~
+      md5: b8ecda63343457c45faadcabd07c1d0e
+      module_name_from_file_guess: ORM::DbResultSet
+      mtime: 1174944345
+      name: blib/lib/ORM/DbResultSet.pm
+      packages:
+        - ORM::DbResultSet
+      primary_package: ORM::DbResultSet
+      uses: []
+      version_info:
+        filename: blib/lib/ORM/DbResultSet.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 4457
+      file_mime_type: ~
+      line_count: ~
+      md5: 51e64a538188235687c2bd245407b215
+      module_name_from_file_guess: ORM::Error
+      mtime: 1174944345
+      name: blib/lib/ORM/Error.pm
+      packages:
+        - ORM::Error
+      primary_package: ORM::Error
+      uses:
+        - Exception::Class
+        - base
+        - overload
+      version_info:
+        filename: blib/lib/ORM/Error.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 0.83
+    - bytesize: 6196
+      file_mime_type: ~
+      line_count: ~
+      md5: c9cee7eb4f13955df645a07dd4c4ec3f
+      module_name_from_file_guess: ORM::Expr
+      mtime: 1174944345
+      name: blib/lib/ORM/Expr.pm
+      packages:
+        - ORM::Expr
+      primary_package: ORM::Expr
+      uses:
+        - ORM::Filter::Cmp
+        - ORM::Filter::Group
+        - ORM::Filter::Func
+        - ORM::Filter::Interval
+        - ORM::Filter::Case
+        - overload
+      version_info:
+        filename: blib/lib/ORM/Expr.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.81
+    - bytesize: 1561
+      file_mime_type: ~
+      line_count: ~
+      md5: bc235edfea6f98a9569482e4e35045cc
+      module_name_from_file_guess: ORM::Filter
+      mtime: 1174944345
+      name: blib/lib/ORM/Filter.pm
+      packages:
+        - ORM::Filter
+      primary_package: ORM::Filter
+      uses:
+        - ORM
+        - overload
+        - base
+      version_info:
+        filename: blib/lib/ORM/Filter.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 3072
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c17a6fbc1670705382b9b936c22625e
+      module_name_from_file_guess: ORM::Filter::Case
+      mtime: 1174944342
+      name: blib/lib/ORM/Filter/Case.pm
+      packages:
+        - ORM::Filter::Case
+      primary_package: ORM::Filter::Case
+      uses:
+        - overload
+        - base
+      version_info:
+        filename: blib/lib/ORM/Filter/Case.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 2189
+      file_mime_type: ~
+      line_count: ~
+      md5: 088bbf72d7d41b44eadf5e7ed00264b5
+      module_name_from_file_guess: ORM::Filter::Cmp
+      mtime: 1174944342
+      name: blib/lib/ORM/Filter/Cmp.pm
+      packages:
+        - ORM::Filter::Cmp
+      primary_package: ORM::Filter::Cmp
+      uses:
+        - overload
+        - base
+      version_info:
+        filename: blib/lib/ORM/Filter/Cmp.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 2256
+      file_mime_type: ~
+      line_count: ~
+      md5: 53e8570fe25018586f83ec0f2222f13c
+      module_name_from_file_guess: ORM::Filter::Func
+      mtime: 1174944342
+      name: blib/lib/ORM/Filter/Func.pm
+      packages:
+        - ORM::Filter::Func
+      primary_package: ORM::Filter::Func
+      uses:
+        - overload
+        - base
+      version_info:
+        filename: blib/lib/ORM/Filter/Func.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 2355
+      file_mime_type: ~
+      line_count: ~
+      md5: b2564078acad0bbda931850fd20bc0c0
+      module_name_from_file_guess: ORM::Filter::Group
+      mtime: 1174944342
+      name: blib/lib/ORM/Filter/Group.pm
+      packages:
+        - ORM::Filter::Group
+      primary_package: ORM::Filter::Group
+      uses:
+        - Carp
+        - overload
+        - base
+      version_info:
+        filename: blib/lib/ORM/Filter/Group.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 1930
+      file_mime_type: ~
+      line_count: ~
+      md5: 236c17a3da4122015435036c93e7456f
+      module_name_from_file_guess: ORM::Filter::Interval
+      mtime: 1174944342
+      name: blib/lib/ORM/Filter/Interval.pm
+      packages:
+        - ORM::Filter::Interval
+      primary_package: ORM::Filter::Interval
+      uses:
+        - overload
+        - base
+      version_info:
+        filename: blib/lib/ORM/Filter/Interval.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 8514
+      file_mime_type: ~
+      line_count: ~
+      md5: d521879d95de803b1f17b73f064ff908
+      module_name_from_file_guess: ORM::History
+      mtime: 1174944345
+      name: blib/lib/ORM/History.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - English
+        - Cwd
+        - ORM::Meta::ORM::History
+      version_info:
+        filename: blib/lib/ORM/History.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1585
+      file_mime_type: ~
+      line_count: ~
+      md5: b2fe0361bbbf5c6393d28fe883ce1d03
+      module_name_from_file_guess: ORM::Ident
+      mtime: 1174944345
+      name: blib/lib/ORM/Ident.pm
+      packages:
+        - ORM::Ident
+      primary_package: ORM::Ident
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Ident.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.81
+    - bytesize: 1774
+      file_mime_type: ~
+      line_count: ~
+      md5: b6ce89907294497fdc679b557d691a5e
+      module_name_from_file_guess: ORM::Meta::Array
+      mtime: 1174944344
+      name: blib/lib/ORM/Meta/Array.pm
+      packages:
+        - ORM::Meta::Array
+        - Array
+      primary_package: ORM::Meta::Array
+      uses:
+        - base
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/ORM/Meta/Array.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.83
+    - bytesize: 1589
+      file_mime_type: ~
+      line_count: ~
+      md5: 272187007607372f0bd501558f786a92
+      module_name_from_file_guess: ORM::Meta::ORM::Date
+      mtime: 1174944344
+      name: blib/lib/ORM/Meta/ORM/Date.pm
+      packages:
+        - ORM::Meta::ORM::Date
+        - ORM::Date
+      primary_package: ORM::Meta::ORM::Date
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Meta/ORM/Date.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: a795792462acd27fc02254b66b454253
+      module_name_from_file_guess: ORM::Meta::ORM::Datetime
+      mtime: 1174944344
+      name: blib/lib/ORM/Meta/ORM/Datetime.pm
+      packages:
+        - ORM::Meta::ORM::Datetime
+        - ORM::Datetime
+      primary_package: ORM::Meta::ORM::Datetime
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Meta/ORM/Datetime.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 1356
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f2933922054e205cc4cdbdf050d262d
+      module_name_from_file_guess: ORM::Meta::ORM::History
+      mtime: 1174944344
+      name: blib/lib/ORM/Meta/ORM/History.pm
+      packages:
+        - ORM::Meta::ORM::History
+      primary_package: ORM::Meta::ORM::History
+      uses:
+        - base
+      version_info:
+        filename: blib/lib/ORM/Meta/ORM/History.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.81
+    - bytesize: 12660
+      file_mime_type: ~
+      line_count: ~
+      md5: 89d56809f2e4d6bd9031e0a4e3bb6190
+      module_name_from_file_guess: ORM::Metaprop
+      mtime: 1174944345
+      name: blib/lib/ORM/Metaprop.pm
+      packages:
+        - ORM::Metaprop
+      primary_package: ORM::Metaprop
+      uses:
+        - Carp
+        - ORM
+        - ORM::Tjoin
+        - base
+      version_info:
+        filename: blib/lib/ORM/Metaprop.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.81
+    - bytesize: 2927
+      file_mime_type: ~
+      line_count: ~
+      md5: f587dcdf98d4b05a9c0c27bda4923fcd
+      module_name_from_file_guess: ORM::MetapropBuilder
+      mtime: 1174944345
+      name: blib/lib/ORM/MetapropBuilder.pm
+      packages:
+        - ORM::MetapropBuilder
+      primary_package: ORM::MetapropBuilder
+      uses:
+        - ORM::Metaprop
+        - Carp
+        - overload
+      version_info:
+        filename: blib/lib/ORM/MetapropBuilder.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 3012
+      file_mime_type: ~
+      line_count: ~
+      md5: d08d8a35e6eea6ef9f007276ed8c9a33
+      module_name_from_file_guess: ORM::Order
+      mtime: 1174944345
+      name: blib/lib/ORM/Order.pm
+      packages:
+        - ORM::Order
+      primary_package: ORM::Order
+      uses:
+        - ORM::Metaprop
+      version_info:
+        filename: blib/lib/ORM/Order.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 2272
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e146ededa4870bad8561d0813311803
+      module_name_from_file_guess: ORM::ResultSet
+      mtime: 1174944345
+      name: blib/lib/ORM/ResultSet.pm
+      packages:
+        - ORM::ResultSet
+      primary_package: ORM::ResultSet
+      uses:
+        - ORM
+      version_info:
+        filename: blib/lib/ORM/ResultSet.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 3462
+      file_mime_type: ~
+      line_count: ~
+      md5: aabc400a97bf0189c52dc5516bddd3c9
+      module_name_from_file_guess: ORM::Stat
+      mtime: 1174944345
+      name: blib/lib/ORM/Stat.pm
+      packages:
+        - ORM::Stat
+      primary_package: ORM::Stat
+      uses:
+        - ORM::StatMetaprop
+        - ORM::Error
+      version_info:
+        filename: blib/lib/ORM/Stat.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 0.81
+    - bytesize: 2228
+      file_mime_type: ~
+      line_count: ~
+      md5: 82acf1f40bd3f9022749244a47294186
+      module_name_from_file_guess: ORM::StatMetaprop
+      mtime: 1174944345
+      name: blib/lib/ORM/StatMetaprop.pm
+      packages:
+        - ORM::StatMetaprop
+      primary_package: ORM::StatMetaprop
+      uses:
+        - Carp
+        - ORM::Ident
+      version_info:
+        filename: blib/lib/ORM/StatMetaprop.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.81
+    - bytesize: 3728
+      file_mime_type: ~
+      line_count: ~
+      md5: 669324ef5d230b7e638a4c6b2ade4548
+      module_name_from_file_guess: ORM::StatResultSet
+      mtime: 1174944345
+      name: blib/lib/ORM/StatResultSet.pm
+      packages:
+        - ORM::StatResultSet
+      primary_package: ORM::StatResultSet
+      uses:
+        - ORM
+      version_info:
+        filename: blib/lib/ORM/StatResultSet.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.8
+    - bytesize: 2941
+      file_mime_type: ~
+      line_count: ~
+      md5: def18404f8406d9ffc8ab447a93e5528
+      module_name_from_file_guess: ORM::Ta
+      mtime: 1174944345
+      name: blib/lib/ORM/Ta.pm
+      packages:
+        - ORM::Ta
+      primary_package: ORM::Ta
+      uses: []
+      version_info:
+        filename: blib/lib/ORM/Ta.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.8
+    - bytesize: 12206
+      file_mime_type: ~
+      line_count: ~
+      md5: b2482cf711bd14e9feb3d20727057466
+      module_name_from_file_guess: ORM::Tjoin
+      mtime: 1174944345
+      name: blib/lib/ORM/Tjoin.pm
+      packages:
+        - ORM::Tjoin
+      primary_package: ORM::Tjoin
+      uses:
+        - Carp
+        - ORM::TjoinNull
+      version_info:
+        filename: blib/lib/ORM/Tjoin.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 0.81
+    - bytesize: 1575
+      file_mime_type: ~
+      line_count: ~
+      md5: b7e08d273b3cb95a1f65846c7e31e06b
+      module_name_from_file_guess: ORM::TjoinNull
+      mtime: 1174944345
+      name: blib/lib/ORM/TjoinNull.pm
+      packages:
+        - ORM::TjoinNull
+      primary_package: ORM::TjoinNull
+      uses: []
+      version_info:
+        filename: blib/lib/ORM/TjoinNull.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 0.81
+  modules:
+    - blib/lib/ORM.pm
+    - blib/lib/ORM/Auto.pm
+    - blib/lib/ORM/Base.pm
+    - blib/lib/ORM/Broken.pm
+    - blib/lib/ORM/Cache.pm
+    - blib/lib/ORM/Const.pm
+    - blib/lib/ORM/Date.pm
+    - blib/lib/ORM/Datetime.pm
+    - blib/lib/ORM/Db.pm
+    - blib/lib/ORM/Db/DBI.pm
+    - blib/lib/ORM/Db/DBI/MySQL.pm
+    - blib/lib/ORM/Db/DBI/MySQLemTa.pm
+    - blib/lib/ORM/Db/DBI/PgSQL.pm
+    - blib/lib/ORM/Db/DBI/SQLite.pm
+    - blib/lib/ORM/Db/DBIResultSet.pm
+    - blib/lib/ORM/Db/DBIResultSetFull.pm
+    - blib/lib/ORM/Db/Replicated.pm
+    - blib/lib/ORM/DbLog.pm
+    - blib/lib/ORM/DbResultSet.pm
+    - blib/lib/ORM/Error.pm
+    - blib/lib/ORM/Expr.pm
+    - blib/lib/ORM/Filter.pm
+    - blib/lib/ORM/Filter/Case.pm
+    - blib/lib/ORM/Filter/Cmp.pm
+    - blib/lib/ORM/Filter/Func.pm
+    - blib/lib/ORM/Filter/Group.pm
+    - blib/lib/ORM/Filter/Interval.pm
+    - blib/lib/ORM/History.pm
+    - blib/lib/ORM/Ident.pm
+    - blib/lib/ORM/Meta/Array.pm
+    - blib/lib/ORM/Meta/ORM/Date.pm
+    - blib/lib/ORM/Meta/ORM/Datetime.pm
+    - blib/lib/ORM/Meta/ORM/History.pm
+    - blib/lib/ORM/Metaprop.pm
+    - blib/lib/ORM/MetapropBuilder.pm
+    - blib/lib/ORM/Order.pm
+    - blib/lib/ORM/ResultSet.pm
+    - blib/lib/ORM/Stat.pm
+    - blib/lib/ORM/StatMetaprop.pm
+    - blib/lib/ORM/StatResultSet.pm
+    - blib/lib/ORM/Ta.pm
+    - blib/lib/ORM/Tjoin.pm
+    - blib/lib/ORM/TjoinNull.pm
+  test_info:
+    - bytesize: 983
+      file_mime_type: ~
+      line_count: ~
+      md5: 62df60177c336b6035d016ef6267c490
+      mtime: 1174944340
+      name: t/ORM-Date.t
+      uses:
+        - Test::More
+    - bytesize: 1043
+      file_mime_type: ~
+      line_count: ~
+      md5: db8e59e22905571a579b3d313f8a09f9
+      mtime: 1174944340
+      name: t/ORM-Error.t
+      uses:
+        - Test::More
+    - bytesize: 70
+      file_mime_type: ~
+      line_count: ~
+      md5: bb4f4bd9ce57f91860fc867883fae521
+      mtime: 1174944340
+      name: t/ORM.t
+      uses:
+        - Test::More
+    - bytesize: 688
+      file_mime_type: ~
+      line_count: ~
+      md5: e2a580f2fcbd0550611079282e238013
+      mtime: 1174944340
+      name: t/Test-DB-Init.t
+      uses:
+        - lib
+        - Test::More
+        - IO::File
+    - bytesize: 735
+      file_mime_type: ~
+      line_count: ~
+      md5: 61fa5ec0ec3a647c152c8b3bc90cb766
+      mtime: 1174944340
+      name: t/Test-Dummy-Child2.t
+      uses:
+        - lib
+        - Test::More
+    - bytesize: 193
+      file_mime_type: ~
+      line_count: ~
+      md5: 4869869f82e0d7fa8e1dd1850397fbf6
+      mtime: 1174944340
+      name: t/Test-Dummy-NoTable.t
+      uses:
+        - lib
+        - Test::More
+        - Test::Dummy::NoTable
+    - bytesize: 5050
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a3f780f5b8a41a70bef9899fd84e47c
+      mtime: 1174944340
+      name: t/Test-Dummy.t
+      uses:
+        - lib
+        - Test::More
+  tests:
+    - t/ORM-Date.t
+    - t/ORM-Error.t
+    - t/ORM.t
+    - t/Test-DB-Init.t
+    - t/Test-Dummy-Child2.t
+    - t/Test-Dummy-NoTable.t
+    - t/Test-Dummy.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-83242.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 83242
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268919633
+  examine_start_time: 1268919588
+  examine_time: 45
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 83242
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268919633
+  run_start_time: 1268919588
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

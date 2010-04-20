@@ -1,0 +1,3460 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.12
+    installdirs: site
+    name: OpenInteract
+    requires:
+      Apache::Request: 0.31
+      Apache::Session: 1.5
+      Archive::Tar: 0
+      Cache::Cache: 1
+      Carp::Assert: 0
+      Class::Accessor: 0
+      Class::Date: 1
+      Class::Fields: 0
+      Class::Singleton: 1.03
+      Compress::Zlib: 1.08
+      Digest::MD5: 0
+      File::Basename: 0
+      File::Copy: 0
+      File::MMagic: 0
+      File::Path: 0
+      File::Spec: 0
+      HTML::Entities: 1.13
+      HTTP::Request: 0
+      IO::Zlib: 1
+      Lingua::Stem: 0
+      MIME::Lite: 2
+      Mail::RFC822::Address: 0.3
+      Mail::Sendmail: 0.77
+      Pod::POM: 0
+      Pod::Usage: 1.12
+      SPOPS: 0.6
+      Template: 2.04
+      Text::Sentence: 0
+    version: 1.61
+    version_from: OpenInteract.pm
+  blib:
+    - blib/lib/OpenInteract.pm
+    - blib/lib/OpenInteract/ApacheStartup.pm
+    - blib/lib/OpenInteract/Auth.pm
+    - blib/lib/OpenInteract/Cache.pm
+    - blib/lib/OpenInteract/Cache/File.pm
+    - blib/lib/OpenInteract/CommonHandler.pm
+    - blib/lib/OpenInteract/Component.pm
+    - blib/lib/OpenInteract/Config.pm
+    - blib/lib/OpenInteract/Config/GlobalOverride.pm
+    - blib/lib/OpenInteract/Config/Ini.pm
+    - blib/lib/OpenInteract/Config/IniFile.pm
+    - blib/lib/OpenInteract/Config/PerlFile.pm
+    - blib/lib/OpenInteract/Cookies/Apache.pm
+    - blib/lib/OpenInteract/Cookies/CGI.pm
+    - blib/lib/OpenInteract/DBI.pm
+    - blib/lib/OpenInteract/Error.pm
+    - blib/lib/OpenInteract/Error/Main.pm
+    - blib/lib/OpenInteract/Error/System.pm
+    - blib/lib/OpenInteract/Handler/GenericDispatcher.pm
+    - blib/lib/OpenInteract/Intro.pod
+    - blib/lib/OpenInteract/LDAP.pm
+    - blib/lib/OpenInteract/Package.pm
+    - blib/lib/OpenInteract/PackageRepository.pm
+    - blib/lib/OpenInteract/Request.pm
+    - blib/lib/OpenInteract/SPOPS.pm
+    - blib/lib/OpenInteract/SPOPS/DBI.pm
+    - blib/lib/OpenInteract/SPOPS/LDAP.pm
+    - blib/lib/OpenInteract/SQLInstall.pm
+    - blib/lib/OpenInteract/Session.pm
+    - blib/lib/OpenInteract/Session/DBI.pm
+    - blib/lib/OpenInteract/Session/File.pm
+    - blib/lib/OpenInteract/Session/SQLite.pm
+    - blib/lib/OpenInteract/Startup.pm
+    - blib/lib/OpenInteract/Template/Context.pm
+    - blib/lib/OpenInteract/Template/Plugin.pm
+    - blib/lib/OpenInteract/Template/Process.pm
+    - blib/lib/OpenInteract/Template/Provider.pm
+    - blib/lib/OpenInteract/UI/Main.pm
+    - blib/lib/OpenInteract/Utility.pm
+    - blib/man1/oi_manage.1
+    - blib/man3/OpenInteract.3
+    - blib/man3/OpenInteract::ApacheStartup.3
+    - blib/man3/OpenInteract::Auth.3
+    - blib/man3/OpenInteract::Cache.3
+    - blib/man3/OpenInteract::Cache::File.3
+    - blib/man3/OpenInteract::CommonHandler.3
+    - blib/man3/OpenInteract::Component.3
+    - blib/man3/OpenInteract::Config.3
+    - blib/man3/OpenInteract::Config::GlobalOverride.3
+    - blib/man3/OpenInteract::Config::Ini.3
+    - blib/man3/OpenInteract::Config::PerlFile.3
+    - blib/man3/OpenInteract::Cookies::Apache.3
+    - blib/man3/OpenInteract::Cookies::CGI.3
+    - blib/man3/OpenInteract::DBI.3
+    - blib/man3/OpenInteract::Error.3
+    - blib/man3/OpenInteract::Error::Main.3
+    - blib/man3/OpenInteract::Error::System.3
+    - blib/man3/OpenInteract::Handler::GenericDispatcher.3
+    - blib/man3/OpenInteract::Intro.3
+    - blib/man3/OpenInteract::LDAP.3
+    - blib/man3/OpenInteract::Package.3
+    - blib/man3/OpenInteract::PackageRepository.3
+    - blib/man3/OpenInteract::Request.3
+    - blib/man3/OpenInteract::SPOPS.3
+    - blib/man3/OpenInteract::SPOPS::DBI.3
+    - blib/man3/OpenInteract::SPOPS::LDAP.3
+    - blib/man3/OpenInteract::SQLInstall.3
+    - blib/man3/OpenInteract::Session.3
+    - blib/man3/OpenInteract::Session::DBI.3
+    - blib/man3/OpenInteract::Session::File.3
+    - blib/man3/OpenInteract::Session::SQLite.3
+    - blib/man3/OpenInteract::Startup.3
+    - blib/man3/OpenInteract::Template::Context.3
+    - blib/man3/OpenInteract::Template::Plugin.3
+    - blib/man3/OpenInteract::Template::Process.3
+    - blib/man3/OpenInteract::Template::Provider.3
+    - blib/man3/OpenInteract::UI::Main.3
+    - blib/man3/OpenInteract::Utility.3
+    - blib/script/oi_manage
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Apache::Request 0.31 not found.
+    Warning: prerequisite Apache::Session 1.5 not found.
+    Warning: prerequisite Cache::Cache 1 not found.
+    Warning: prerequisite Carp::Assert 0 not found.
+    Warning: prerequisite Class::Accessor 0 not found.
+    Warning: prerequisite Class::Date 1 not found.
+    Warning: prerequisite Class::Fields 0 not found.
+    Warning: prerequisite Class::Singleton 1.03 not found.
+    Warning: prerequisite File::MMagic 0 not found.
+    Warning: prerequisite HTML::Entities 1.13 not found.
+    Warning: prerequisite HTTP::Request 0 not found.
+    Warning: prerequisite Lingua::Stem 0 not found.
+    Warning: prerequisite MIME::Lite 2 not found.
+    Warning: prerequisite Mail::RFC822::Address 0.3 not found.
+    Warning: prerequisite Mail::Sendmail 0.77 not found.
+    Warning: prerequisite Pod::POM 0 not found.
+    Warning: prerequisite SPOPS 0.6 not found.
+    Warning: prerequisite Template 2.04 not found.
+    Warning: prerequisite Text::Sentence 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for OpenInteract
+  build_output: |
+    cp OpenInteract/Session/File.pm blib/lib/OpenInteract/Session/File.pm
+    cp OpenInteract/CommonHandler.pm blib/lib/OpenInteract/CommonHandler.pm
+    cp OpenInteract/SPOPS/DBI.pm blib/lib/OpenInteract/SPOPS/DBI.pm
+    cp OpenInteract/Error/Main.pm blib/lib/OpenInteract/Error/Main.pm
+    cp OpenInteract/Cache/File.pm blib/lib/OpenInteract/Cache/File.pm
+    cp OpenInteract/UI/Main.pm blib/lib/OpenInteract/UI/Main.pm
+    cp OpenInteract/Intro.pod blib/lib/OpenInteract/Intro.pod
+    cp OpenInteract/Template/Context.pm blib/lib/OpenInteract/Template/Context.pm
+    cp OpenInteract/Config/Ini.pm blib/lib/OpenInteract/Config/Ini.pm
+    cp OpenInteract/Template/Plugin.pm blib/lib/OpenInteract/Template/Plugin.pm
+    cp OpenInteract/DBI.pm blib/lib/OpenInteract/DBI.pm
+    cp OpenInteract/Config/GlobalOverride.pm blib/lib/OpenInteract/Config/GlobalOverride.pm
+    cp OpenInteract/Session.pm blib/lib/OpenInteract/Session.pm
+    cp OpenInteract/Handler/GenericDispatcher.pm blib/lib/OpenInteract/Handler/GenericDispatcher.pm
+    cp OpenInteract/Session/DBI.pm blib/lib/OpenInteract/Session/DBI.pm
+    cp OpenInteract/SQLInstall.pm blib/lib/OpenInteract/SQLInstall.pm
+    cp OpenInteract/SPOPS.pm blib/lib/OpenInteract/SPOPS.pm
+    cp OpenInteract/Cookies/CGI.pm blib/lib/OpenInteract/Cookies/CGI.pm
+    cp OpenInteract/Utility.pm blib/lib/OpenInteract/Utility.pm
+    cp OpenInteract.pm blib/lib/OpenInteract.pm
+    cp OpenInteract/Cache.pm blib/lib/OpenInteract/Cache.pm
+    cp OpenInteract/Session/SQLite.pm blib/lib/OpenInteract/Session/SQLite.pm
+    cp OpenInteract/LDAP.pm blib/lib/OpenInteract/LDAP.pm
+    cp OpenInteract/SPOPS/LDAP.pm blib/lib/OpenInteract/SPOPS/LDAP.pm
+    cp OpenInteract/ApacheStartup.pm blib/lib/OpenInteract/ApacheStartup.pm
+    cp OpenInteract/Config.pm blib/lib/OpenInteract/Config.pm
+    cp OpenInteract/PackageRepository.pm blib/lib/OpenInteract/PackageRepository.pm
+    cp OpenInteract/Startup.pm blib/lib/OpenInteract/Startup.pm
+    cp OpenInteract/Auth.pm blib/lib/OpenInteract/Auth.pm
+    cp OpenInteract/Component.pm blib/lib/OpenInteract/Component.pm
+    cp OpenInteract/Error.pm blib/lib/OpenInteract/Error.pm
+    cp OpenInteract/Request.pm blib/lib/OpenInteract/Request.pm
+    cp OpenInteract/Cookies/Apache.pm blib/lib/OpenInteract/Cookies/Apache.pm
+    cp OpenInteract/Package.pm blib/lib/OpenInteract/Package.pm
+    cp OpenInteract/Config/IniFile.pm blib/lib/OpenInteract/Config/IniFile.pm
+    cp OpenInteract/Error/System.pm blib/lib/OpenInteract/Error/System.pm
+    cp OpenInteract/Template/Process.pm blib/lib/OpenInteract/Template/Process.pm
+    cp OpenInteract/Template/Provider.pm blib/lib/OpenInteract/Template/Provider.pm
+    cp OpenInteract/Config/PerlFile.pm blib/lib/OpenInteract/Config/PerlFile.pm
+    cp script/oi_manage blib/script/oi_manage
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/oi_manage
+    Manifying blib/man1/oi_manage.1
+    Manifying blib/man3/OpenInteract::Session::File.3
+    Manifying blib/man3/OpenInteract::CommonHandler.3
+    Manifying blib/man3/OpenInteract::SPOPS::DBI.3
+    Manifying blib/man3/OpenInteract::Error::Main.3
+    Manifying blib/man3/OpenInteract::Cache::File.3
+    Manifying blib/man3/OpenInteract::UI::Main.3
+    Manifying blib/man3/OpenInteract::Intro.3
+    Manifying blib/man3/OpenInteract::Template::Context.3
+    Manifying blib/man3/OpenInteract::Config::Ini.3
+    Manifying blib/man3/OpenInteract::Template::Plugin.3
+    Manifying blib/man3/OpenInteract::DBI.3
+    Manifying blib/man3/OpenInteract::Config::GlobalOverride.3
+    Manifying blib/man3/OpenInteract::Session.3
+    Manifying blib/man3/OpenInteract::Handler::GenericDispatcher.3
+    Manifying blib/man3/OpenInteract::Session::DBI.3
+    Manifying blib/man3/OpenInteract::SQLInstall.3
+    Manifying blib/man3/OpenInteract::SPOPS.3
+    Manifying blib/man3/OpenInteract::Cookies::CGI.3
+    Manifying blib/man3/OpenInteract::Utility.3
+    Manifying blib/man3/OpenInteract.3
+    Manifying blib/man3/OpenInteract::Cache.3
+    Manifying blib/man3/OpenInteract::Session::SQLite.3
+    Manifying blib/man3/OpenInteract::LDAP.3
+    Manifying blib/man3/OpenInteract::SPOPS::LDAP.3
+    Manifying blib/man3/OpenInteract::ApacheStartup.3
+    Manifying blib/man3/OpenInteract::Config.3
+    Manifying blib/man3/OpenInteract::PackageRepository.3
+    Manifying blib/man3/OpenInteract::Startup.3
+    Manifying blib/man3/OpenInteract::Auth.3
+    Manifying blib/man3/OpenInteract::Component.3
+    Manifying blib/man3/OpenInteract::Error.3
+    Manifying blib/man3/OpenInteract::Request.3
+    Manifying blib/man3/OpenInteract::Cookies::Apache.3
+    Manifying blib/man3/OpenInteract::Package.3
+    Manifying blib/man3/OpenInteract::Error::System.3
+    Manifying blib/man3/OpenInteract::Template::Process.3
+    Manifying blib/man3/OpenInteract::Template::Provider.3
+    Manifying blib/man3/OpenInteract::Config::PerlFile.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV/OpenInteract-1.61/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV/OpenInteract-1.61
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV/OpenInteract-1.61/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV/OpenInteract-1.61/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: CWINTERS
+  dist_basename: OpenInteract-1.61.tar.gz
+  dist_date: 1085930343
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV/OpenInteract-1.61
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV/OpenInteract-1.61
+  dist_file: /home/brian/CPAN/authors/id/C/CW/CWINTERS/OpenInteract-1.61.tar.gz
+  dist_md5: 885a2dc18f0936c4960fbdd1b4f761bc
+  dist_size: 658143
+  manifest:
+    - COPYING
+    - Changes
+    - INSTALL
+    - INSTALL.website
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - Makefile.PL
+    - OpenInteract.pm
+    - OpenInteract/ApacheStartup.pm
+    - OpenInteract/Auth.pm
+    - OpenInteract/Cache.pm
+    - OpenInteract/Cache/File.pm
+    - OpenInteract/CommonHandler.pm
+    - OpenInteract/Component.pm
+    - OpenInteract/Config.pm
+    - OpenInteract/Config/GlobalOverride.pm
+    - OpenInteract/Config/Ini.pm
+    - OpenInteract/Config/IniFile.pm
+    - OpenInteract/Config/PerlFile.pm
+    - OpenInteract/Cookies/Apache.pm
+    - OpenInteract/Cookies/CGI.pm
+    - OpenInteract/DBI.pm
+    - OpenInteract/Error.pm
+    - OpenInteract/Error/Main.pm
+    - OpenInteract/Error/System.pm
+    - OpenInteract/Handler/GenericDispatcher.pm
+    - OpenInteract/Intro.pod
+    - OpenInteract/LDAP.pm
+    - OpenInteract/Package.pm
+    - OpenInteract/PackageRepository.pm
+    - OpenInteract/Request.pm
+    - OpenInteract/SPOPS.pm
+    - OpenInteract/SPOPS/DBI.pm
+    - OpenInteract/SPOPS/LDAP.pm
+    - OpenInteract/SQLInstall.pm
+    - OpenInteract/Session.pm
+    - OpenInteract/Session/DBI.pm
+    - OpenInteract/Session/File.pm
+    - OpenInteract/Session/SQLite.pm
+    - OpenInteract/Startup.pm
+    - OpenInteract/Template/Context.pm
+    - OpenInteract/Template/Plugin.pm
+    - OpenInteract/Template/Process.pm
+    - OpenInteract/Template/Provider.pm
+    - OpenInteract/UI/Main.pm
+    - OpenInteract/Utility.pm
+    - README
+    - RELEASE
+    - UPGRADE
+    - conf/sample-Handler.pm
+    - conf/sample-MANIFEST.SKIP
+    - conf/sample-SQLInstall.pm
+    - conf/sample-Stash.pm
+    - conf/sample-action.perl
+    - conf/sample-apache.dat
+    - conf/sample-base.conf
+    - conf/sample-doc-titles
+    - conf/sample-dummy-template.meta
+    - conf/sample-dummy-template.tmpl
+    - conf/sample-httpd_modperl.conf
+    - conf/sample-httpd_modperl_solo.conf
+    - conf/sample-httpd_static.conf
+    - conf/sample-override_spops.ini
+    - conf/sample-package.conf
+    - conf/sample-package.pod
+    - conf/sample-server.ini
+    - conf/sample-server.perl
+    - conf/sample-spops.perl
+    - conf/sample-startup.pl
+    - doc/LDAP.html
+    - doc/README
+    - doc/actions.html
+    - doc/admin.html
+    - doc/caching.html
+    - doc/components.html
+    - doc/configuration.html
+    - doc/data_import.html
+    - doc/database.html
+    - doc/developer.html
+    - doc/diagram.png
+    - doc/error_handling.html
+    - doc/glossary.html
+    - doc/index.html
+    - doc/manager.html
+    - doc/oi_manage.html
+    - doc/overview.html
+    - doc/packages.html
+    - doc/r_contents.html
+    - doc/sample-action-perl.html
+    - doc/sample-httpd-modperl.html
+    - doc/sample-httpd-static.html
+    - doc/sample-server-ini.html
+    - doc/sample-server-perl.html
+    - doc/sample-spops-perl.html
+    - doc/security.html
+    - doc/spops_overview.html
+    - doc/template_widgets.html
+    - doc/templates.html
+    - eg/fruit-0.12.tar.gz
+    - eg/new_package_repository.pl
+    - pkg/base-1.74.tar.gz
+    - pkg/base_box-1.05.tar.gz
+    - pkg/base_error-1.45.tar.gz
+    - pkg/base_group-1.38.tar.gz
+    - pkg/base_page-1.29.tar.gz
+    - pkg/base_security-1.61.tar.gz
+    - pkg/base_template-2.23.tar.gz
+    - pkg/base_theme-1.36.tar.gz
+    - pkg/base_user-1.64.tar.gz
+    - pkg/classified-1.38.tar.gz
+    - pkg/full_text-1.35.tar.gz
+    - pkg/lookup-1.01.tar.gz
+    - pkg/news-1.54.tar.gz
+    - pkg/object_activity-1.04.tar.gz
+    - pkg/results_manage-1.02.tar.gz
+    - pkg/system_doc-1.33.tar.gz
+    - script/oi_manage
+    - script/template_translate.pl
+    - t/dummy.t
+    - template/base_main
+    - template/base_simple
+    - template/data_cell_begin
+    - template/date_select
+    - template/error_message
+    - template/error_not_found
+    - template/error_object_inactive
+    - template/error_task_forbidden
+    - template/error_task_no_default
+    - template/form_checkbox
+    - template/form_hidden
+    - template/form_login
+    - template/form_password
+    - template/form_radio
+    - template/form_reset
+    - template/form_select
+    - template/form_select_intro
+    - template/form_select_option
+    - template/form_select_options_iterator
+    - template/form_select_options_list
+    - template/form_select_options_plain_list
+    - template/form_submit
+    - template/form_submit_row
+    - template/form_text
+    - template/form_textarea
+    - template/form_upload
+    - template/global_javascript
+    - template/header_cell
+    - template/header_row
+    - template/inactive_object_banner
+    - template/label_form_checkbox_row
+    - template/label_form_date_row
+    - template/label_form_login_row
+    - template/label_form_radio_row
+    - template/label_form_select_row
+    - template/label_form_text_row
+    - template/label_form_textarea_row
+    - template/label_form_upload_row
+    - template/label_row
+    - template/label_row_begin
+    - template/label_text_row
+    - template/object_updates
+    - template/page_count
+    - template/row_color
+    - template/search_results_page_listing
+    - template/show_label
+    - template/status_message
+    - template/table_bordered_begin
+    - template/table_bordered_end
+    - template/to_group
+  manifest_file_info:
+    - bytesize: 15144
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1021917712
+      name: COPYING
+    - bytesize: 87775
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1085929816
+      name: Changes
+    - bytesize: 2213
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1002489140
+      name: INSTALL
+    - bytesize: 9686
+      file_mime_type: ~
+      line_count: ~
+      md5: 6269acf1cee2820fa69ab54e70a7a9cc
+      mtime: 1045935176
+      name: INSTALL.website
+    - bytesize: 4176
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1085930090
+      name: MANIFEST
+    - bytesize: 45
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 981094693
+      name: MANIFEST.SKIP
+    - bytesize: 1314
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1085930090
+      name: META.yml
+    - bytesize: 1619
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1069119762
+      name: Makefile.PL
+    - bytesize: 23272
+      file_mime_type: ~
+      line_count: ~
+      md5: b01d8545f45d67db112ae9d3ed94f06d
+      mtime: 1085930029
+      name: OpenInteract.pm
+    - bytesize: 8731
+      file_mime_type: ~
+      line_count: ~
+      md5: b3c12a9d529f592fdb04a1f5317f47e6
+      mtime: 1079616144
+      name: OpenInteract/ApacheStartup.pm
+    - bytesize: 19614
+      file_mime_type: ~
+      line_count: ~
+      md5: 116d396468b530cb672749da8043f0c9
+      mtime: 1023190194
+      name: OpenInteract/Auth.pm
+    - bytesize: 7739
+      file_mime_type: ~
+      line_count: ~
+      md5: fa621adcdcdfe8aa70ef9488683b11bf
+      mtime: 1049684157
+      name: OpenInteract/Cache.pm
+    - bytesize: 2633
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e9d5ef2cd893032ddad6f8be7a761fb
+      mtime: 1031518606
+      name: OpenInteract/Cache/File.pm
+    - bytesize: 67469
+      file_mime_type: ~
+      line_count: ~
+      md5: fa9654f532543c326d9ce7e1a6bb3a0b
+      mtime: 1069119929
+      name: OpenInteract/CommonHandler.pm
+    - bytesize: 7984
+      file_mime_type: ~
+      line_count: ~
+      md5: c9dd4da1baa350a6232fd2208a2dc591
+      mtime: 1032206014
+      name: OpenInteract/Component.pm
+    - bytesize: 11603
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ec24beedc06a57bb21998c1ee00f997
+      mtime: 1019566893
+      name: OpenInteract/Config.pm
+    - bytesize: 12231
+      file_mime_type: ~
+      line_count: ~
+      md5: a2e1e5a6c6f72c4ad03fbc4eb45ab8da
+      mtime: 1019738196
+      name: OpenInteract/Config/GlobalOverride.pm
+    - bytesize: 9518
+      file_mime_type: ~
+      line_count: ~
+      md5: ec7c456e14fa694d921771cc1cbc792a
+      mtime: 1043413427
+      name: OpenInteract/Config/Ini.pm
+    - bytesize: 814
+      file_mime_type: ~
+      line_count: ~
+      md5: c42dca593cc715a4d11d256119fa200e
+      mtime: 1032207628
+      name: OpenInteract/Config/IniFile.pm
+    - bytesize: 4617
+      file_mime_type: ~
+      line_count: ~
+      md5: f0f398de5d70545ddeb94700be1accec
+      mtime: 1019047469
+      name: OpenInteract/Config/PerlFile.pm
+    - bytesize: 4764
+      file_mime_type: ~
+      line_count: ~
+      md5: 77636f4cd6865009565d3466d704b69c
+      mtime: 1009939433
+      name: OpenInteract/Cookies/Apache.pm
+    - bytesize: 4394
+      file_mime_type: ~
+      line_count: ~
+      md5: b1ab13b32e7e39963f28e01ff4769b1e
+      mtime: 1009939433
+      name: OpenInteract/Cookies/CGI.pm
+    - bytesize: 11448
+      file_mime_type: ~
+      line_count: ~
+      md5: 29dff74dfd1c6b2296129079ba4c06ab
+      mtime: 1020859337
+      name: OpenInteract/DBI.pm
+    - bytesize: 7084
+      file_mime_type: ~
+      line_count: ~
+      md5: f039aa57555895852b28794507f3a355
+      mtime: 1009939433
+      name: OpenInteract/Error.pm
+    - bytesize: 4997
+      file_mime_type: ~
+      line_count: ~
+      md5: 26ea0d54549b9164fe883b7de04bdcc7
+      mtime: 1009939433
+      name: OpenInteract/Error/Main.pm
+    - bytesize: 16465
+      file_mime_type: ~
+      line_count: ~
+      md5: ba07ef50f1c979a5b117fcbeeb8b55cb
+      mtime: 1018714206
+      name: OpenInteract/Error/System.pm
+    - bytesize: 21673
+      file_mime_type: ~
+      line_count: ~
+      md5: 597951d525a61d0f327ff84b29d2a269
+      mtime: 1036946019
+      name: OpenInteract/Handler/GenericDispatcher.pm
+    - bytesize: 8845
+      file_mime_type: ~
+      line_count: ~
+      md5: 99373bdac73840fc7144f24ff838515e
+      mtime: 1030338897
+      name: OpenInteract/Intro.pod
+    - bytesize: 5709
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cca314052e55fda6e07e5765a3ac3c2
+      mtime: 1009939433
+      name: OpenInteract/LDAP.pm
+    - bytesize: 60462
+      file_mime_type: ~
+      line_count: ~
+      md5: b6eddda6305c190da0af0f28590edebb
+      mtime: 1043511367
+      name: OpenInteract/Package.pm
+    - bytesize: 16691
+      file_mime_type: ~
+      line_count: ~
+      md5: 0243952b82ac0ca2da274525d8200b3d
+      mtime: 1048645637
+      name: OpenInteract/PackageRepository.pm
+    - bytesize: 17863
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a92a4a8c61475a5968365c8783f43c1
+      mtime: 1060740281
+      name: OpenInteract/Request.pm
+    - bytesize: 16397
+      file_mime_type: ~
+      line_count: ~
+      md5: 58bd6067e1d4f903f1de2b1f204a4c76
+      mtime: 1049169218
+      name: OpenInteract/SPOPS.pm
+    - bytesize: 4506
+      file_mime_type: ~
+      line_count: ~
+      md5: d9bc1b948c3c19c5712dc2ed76c80e3b
+      mtime: 1009939433
+      name: OpenInteract/SPOPS/DBI.pm
+    - bytesize: 3666
+      file_mime_type: ~
+      line_count: ~
+      md5: ebe82070518ff0de36d662373eb00151
+      mtime: 1009939433
+      name: OpenInteract/SPOPS/LDAP.pm
+    - bytesize: 39841
+      file_mime_type: ~
+      line_count: ~
+      md5: 6298a27b37c36d76fba0526d22ae1977
+      mtime: 1041947214
+      name: OpenInteract/SQLInstall.pm
+    - bytesize: 8131
+      file_mime_type: ~
+      line_count: ~
+      md5: ee59ef819dc6be9c9c3dba8431f43dde
+      mtime: 1042003293
+      name: OpenInteract/Session.pm
+    - bytesize: 4195
+      file_mime_type: ~
+      line_count: ~
+      md5: b0cbdf939d1f2a63b0899dbab801ce0f
+      mtime: 1031518364
+      name: OpenInteract/Session/DBI.pm
+    - bytesize: 3374
+      file_mime_type: ~
+      line_count: ~
+      md5: 4946ec81816ff20f4a590b2e7df97536
+      mtime: 1031518364
+      name: OpenInteract/Session/File.pm
+    - bytesize: 3473
+      file_mime_type: ~
+      line_count: ~
+      md5: 4de1e90dbe653c61439178d10d609ad3
+      mtime: 1031518363
+      name: OpenInteract/Session/SQLite.pm
+    - bytesize: 36516
+      file_mime_type: ~
+      line_count: ~
+      md5: 044139b79be3e0fe731d870c1a73944a
+      mtime: 1047525994
+      name: OpenInteract/Startup.pm
+    - bytesize: 3069
+      file_mime_type: ~
+      line_count: ~
+      md5: 179f5d728804b84043af935b6f0b44a9
+      mtime: 1032207689
+      name: OpenInteract/Template/Context.pm
+    - bytesize: 32616
+      file_mime_type: ~
+      line_count: ~
+      md5: efce3f4743a96bdfd32c0cd19cfc5f79
+      mtime: 1060777723
+      name: OpenInteract/Template/Plugin.pm
+    - bytesize: 17454
+      file_mime_type: ~
+      line_count: ~
+      md5: 93e98509308a4553993bba03183ac1ef
+      mtime: 1032207516
+      name: OpenInteract/Template/Process.pm
+    - bytesize: 13447
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c1abec9f57ae1f748502cfc0eb2af74
+      mtime: 1032207515
+      name: OpenInteract/Template/Provider.pm
+    - bytesize: 8420
+      file_mime_type: ~
+      line_count: ~
+      md5: eccaab41256814d27b382772cc3cb087
+      mtime: 1060744604
+      name: OpenInteract/UI/Main.pm
+    - bytesize: 10165
+      file_mime_type: ~
+      line_count: ~
+      md5: fb14e31c9f2d913eb83df13d31cac09f
+      mtime: 1048609968
+      name: OpenInteract/Utility.pm
+    - bytesize: 6254
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1020749733
+      name: README
+    - bytesize: 7750
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d649ef069df9885e382417c79f3d5cd
+      mtime: 1085930029
+      name: RELEASE
+    - bytesize: 14859
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f10b7b76869bf2e029b6ce4632e1323
+      mtime: 1060739683
+      name: UPGRADE
+    - bytesize: 4628
+      file_mime_type: ~
+      line_count: ~
+      md5: 22ae5c2247bda1aca476da18245046a1
+      mtime: 1000850682
+      name: conf/sample-Handler.pm
+    - bytesize: 43
+      file_mime_type: ~
+      line_count: ~
+      md5: bb797c4313487cb703bf9307d5349621
+      mtime: 1007558759
+      name: conf/sample-MANIFEST.SKIP
+    - bytesize: 2490
+      file_mime_type: ~
+      line_count: ~
+      md5: 21688dd2c40cd3d197281bbb160f807b
+      mtime: 981094714
+      name: conf/sample-SQLInstall.pm
+    - bytesize: 2967
+      file_mime_type: ~
+      line_count: ~
+      md5: 85f0eab87d69dad87e1c76279387e786
+      mtime: 1009939434
+      name: conf/sample-Stash.pm
+    - bytesize: 1838
+      file_mime_type: ~
+      line_count: ~
+      md5: edefa0f1c2f45dff9b7a522c56698c24
+      mtime: 981094715
+      name: conf/sample-action.perl
+    - bytesize: 167
+      file_mime_type: ~
+      line_count: ~
+      md5: da73780f4a13a5ab7690080d9b3f2ddf
+      mtime: 1005057399
+      name: conf/sample-apache.dat
+    - bytesize: 452
+      file_mime_type: ~
+      line_count: ~
+      md5: 2257c50492350b7381ee43d3b1eae5ac
+      mtime: 1040336422
+      name: conf/sample-base.conf
+    - bytesize: 49
+      file_mime_type: ~
+      line_count: ~
+      md5: 24871e7b360a417bd55b80c3f0f5d281
+      mtime: 981094715
+      name: conf/sample-doc-titles
+    - bytesize: 413
+      file_mime_type: ~
+      line_count: ~
+      md5: ee177a39c99562cbb3d69efcfbd8109b
+      mtime: 981094715
+      name: conf/sample-dummy-template.meta
+    - bytesize: 516
+      file_mime_type: ~
+      line_count: ~
+      md5: d50bb73b1ddd756bdff10b64d5d46b60
+      mtime: 981094715
+      name: conf/sample-dummy-template.tmpl
+    - bytesize: 1748
+      file_mime_type: ~
+      line_count: ~
+      md5: 50f5d2cb45a85caee40a6519af2a137e
+      mtime: 1011285551
+      name: conf/sample-httpd_modperl.conf
+    - bytesize: 1659
+      file_mime_type: ~
+      line_count: ~
+      md5: c3b355180b47d191125355c3195026ca
+      mtime: 1011284322
+      name: conf/sample-httpd_modperl_solo.conf
+    - bytesize: 1701
+      file_mime_type: ~
+      line_count: ~
+      md5: 9deb18e1aaef296c67e2453753417f80
+      mtime: 1011284322
+      name: conf/sample-httpd_static.conf
+    - bytesize: 3967
+      file_mime_type: ~
+      line_count: ~
+      md5: dfefd53d64d02bffe33fb193f89b5525
+      mtime: 1042084779
+      name: conf/sample-override_spops.ini
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: a60eb165c7f06c78eb3f0f75e1cb832f
+      mtime: 1001085862
+      name: conf/sample-package.conf
+    - bytesize: 420
+      file_mime_type: ~
+      line_count: ~
+      md5: af0536cf4f67292492fc24edd737b0ac
+      mtime: 991018278
+      name: conf/sample-package.pod
+    - bytesize: 14199
+      file_mime_type: ~
+      line_count: ~
+      md5: 98f2fd83820b874ac5ab7177ec1612a9
+      mtime: 1060777461
+      name: conf/sample-server.ini
+    - bytesize: 18906
+      file_mime_type: ~
+      line_count: ~
+      md5: b31cb962ac7639bbceec3e2f6e86860e
+      mtime: 1060777461
+      name: conf/sample-server.perl
+    - bytesize: 6764
+      file_mime_type: ~
+      line_count: ~
+      md5: 723735543a1624b43331ae57eefcad6d
+      mtime: 1030296522
+      name: conf/sample-spops.perl
+    - bytesize: 195
+      file_mime_type: ~
+      line_count: ~
+      md5: ac4cbce61096fcaa2a43fc671e634e25
+      mtime: 1016037363
+      name: conf/sample-startup.pl
+    - bytesize: 13554
+      file_mime_type: ~
+      line_count: ~
+      md5: 76f0472aa15a21e1a03b1101dbd38759
+      mtime: 1004332786
+      name: doc/LDAP.html
+    - bytesize: 360
+      file_mime_type: ~
+      line_count: ~
+      md5: b064430d7458642868e30af11507a6ea
+      mtime: 981094720
+      name: doc/README
+    - bytesize: 16296
+      file_mime_type: ~
+      line_count: ~
+      md5: de896666c6f5c0cff47563d867ae27f8
+      mtime: 1030338609
+      name: doc/actions.html
+    - bytesize: 37246
+      file_mime_type: ~
+      line_count: ~
+      md5: 543669731c0a0b234d44e42eec2cf03f
+      mtime: 1040388999
+      name: doc/admin.html
+    - bytesize: 12467
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fc70534ba6f2bde20e5378e23fe47f8
+      mtime: 1032208103
+      name: doc/caching.html
+    - bytesize: 5682
+      file_mime_type: ~
+      line_count: ~
+      md5: f4fcb73f476445c6196dff8ca2f5d893
+      mtime: 1030338461
+      name: doc/components.html
+    - bytesize: 28267
+      file_mime_type: ~
+      line_count: ~
+      md5: aaeaa85fe200370e4e14e9f75edbddda
+      mtime: 1054486334
+      name: doc/configuration.html
+    - bytesize: 4414
+      file_mime_type: ~
+      line_count: ~
+      md5: b0852b8a0b58f73a6d02d6c20c130cba
+      mtime: 1004332786
+      name: doc/data_import.html
+    - bytesize: 3241
+      file_mime_type: ~
+      line_count: ~
+      md5: 71ccd889d154a1cf0a026e20ee1a60d6
+      mtime: 1002890005
+      name: doc/database.html
+    - bytesize: 34682
+      file_mime_type: ~
+      line_count: ~
+      md5: 52912a036453f632958235a64bb82f32
+      mtime: 1040388999
+      name: doc/developer.html
+    - bytesize: 9819
+      file_mime_type: ~
+      line_count: ~
+      md5: c237f080d4105497015f1784ca04ce6c
+      mtime: 981094725
+      name: doc/diagram.png
+    - bytesize: 17551
+      file_mime_type: ~
+      line_count: ~
+      md5: 2885e6a979284a379c15efa2e16b2cf7
+      mtime: 1040388999
+      name: doc/error_handling.html
+    - bytesize: 2795
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f18792706a2feb1ab42cd9128c7944d
+      mtime: 1004332786
+      name: doc/glossary.html
+    - bytesize: 1493
+      file_mime_type: ~
+      line_count: ~
+      md5: 8879ade8decb76a5cfe459207387b946
+      mtime: 1049686617
+      name: doc/index.html
+    - bytesize: 6021
+      file_mime_type: ~
+      line_count: ~
+      md5: d140772a3a7278b6276589f21dceb5a1
+      mtime: 1040388998
+      name: doc/manager.html
+    - bytesize: 46097
+      file_mime_type: ~
+      line_count: ~
+      md5: b46991a9d1fcde783c192b1bfe4b582f
+      mtime: 1040388998
+      name: doc/oi_manage.html
+    - bytesize: 11013
+      file_mime_type: ~
+      line_count: ~
+      md5: ea249c1820ad9575c75a5486a99ad5f9
+      mtime: 1004356914
+      name: doc/overview.html
+    - bytesize: 8188
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ccc4cd18f82823ee9c31489cfcbf049
+      mtime: 1030338609
+      name: doc/packages.html
+    - bytesize: 12295
+      file_mime_type: ~
+      line_count: ~
+      md5: 01b4095e8fb09ce495b7b3f3e2514f60
+      mtime: 1030338609
+      name: doc/r_contents.html
+    - bytesize: 2076
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c8319f8e567c43f445da7d182d0432c
+      mtime: 981094732
+      name: doc/sample-action-perl.html
+    - bytesize: 2022
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fa7b3363a24da7f8a8ec1dabb467d77
+      mtime: 1040388998
+      name: doc/sample-httpd-modperl.html
+    - bytesize: 1949
+      file_mime_type: ~
+      line_count: ~
+      md5: 205a722946f4e83591402e168cc22bde
+      mtime: 1040388998
+      name: doc/sample-httpd-static.html
+    - bytesize: 13403
+      file_mime_type: ~
+      line_count: ~
+      md5: 153a295bce8d0141829027b1a4ed521d
+      mtime: 1040389035
+      name: doc/sample-server-ini.html
+    - bytesize: 17551
+      file_mime_type: ~
+      line_count: ~
+      md5: bfc14b766d43e29f1273b4324c34eb4c
+      mtime: 1030338609
+      name: doc/sample-server-perl.html
+    - bytesize: 7072
+      file_mime_type: ~
+      line_count: ~
+      md5: f1c39485f95a0e41de35154976fe7f97
+      mtime: 1030296475
+      name: doc/sample-spops-perl.html
+    - bytesize: 9400
+      file_mime_type: ~
+      line_count: ~
+      md5: 668c0cc9db691f7f830a35f569e7ad8c
+      mtime: 1030338609
+      name: doc/security.html
+    - bytesize: 8336
+      file_mime_type: ~
+      line_count: ~
+      md5: bce157e053c8be731425adcbdcea8a89
+      mtime: 1004332786
+      name: doc/spops_overview.html
+    - bytesize: 10120
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ccbd73f89c5f853798b1f306bea4c8
+      mtime: 1030293724
+      name: doc/template_widgets.html
+    - bytesize: 13007
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b1fc2021c4350620bd5c33f4743d4ee
+      mtime: 1030338609
+      name: doc/templates.html
+    - bytesize: 6003
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f73a826bc7c0e2f4438f9e9d698e2f4
+      mtime: 1030337811
+      name: eg/fruit-0.12.tar.gz
+    - bytesize: 1901
+      file_mime_type: ~
+      line_count: ~
+      md5: 14858f98bd601b5a0645821ce3c03a50
+      mtime: 982641863
+      name: eg/new_package_repository.pl
+    - bytesize: 25702
+      file_mime_type: ~
+      line_count: ~
+      md5: 47e4dac875e34cc3222d6cd0bfa9d119
+      mtime: 1085929671
+      name: pkg/base-1.74.tar.gz
+    - bytesize: 13035
+      file_mime_type: ~
+      line_count: ~
+      md5: 93b851ef9ee812a8a078419f8abf84c7
+      mtime: 1085929671
+      name: pkg/base_box-1.05.tar.gz
+    - bytesize: 11129
+      file_mime_type: ~
+      line_count: ~
+      md5: cf34bbc1c6e6113471033b470ef9f544
+      mtime: 1085929671
+      name: pkg/base_error-1.45.tar.gz
+    - bytesize: 8252
+      file_mime_type: ~
+      line_count: ~
+      md5: 984e359cba1a57f6fe64de2eee869f64
+      mtime: 1085929672
+      name: pkg/base_group-1.38.tar.gz
+    - bytesize: 67471
+      file_mime_type: ~
+      line_count: ~
+      md5: e15469d3727d8daf20f41e4cb83e7a35
+      mtime: 1085929672
+      name: pkg/base_page-1.29.tar.gz
+    - bytesize: 18018
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b850a9ba53ceee95885f8193b583c0a
+      mtime: 1085929673
+      name: pkg/base_security-1.61.tar.gz
+    - bytesize: 13214
+      file_mime_type: ~
+      line_count: ~
+      md5: f3059846b95a8ddaff02bdc56b6beced
+      mtime: 1085929673
+      name: pkg/base_template-2.23.tar.gz
+    - bytesize: 12001
+      file_mime_type: ~
+      line_count: ~
+      md5: f88a42b23e63b05c571d997b715790f7
+      mtime: 1085929673
+      name: pkg/base_theme-1.36.tar.gz
+    - bytesize: 20161
+      file_mime_type: ~
+      line_count: ~
+      md5: b94f8d8657a44cc00b15d49b6a01db97
+      mtime: 1085929674
+      name: pkg/base_user-1.64.tar.gz
+    - bytesize: 8597
+      file_mime_type: ~
+      line_count: ~
+      md5: e519b3646bf40420efddf1bcd8900b90
+      mtime: 1085929714
+      name: pkg/classified-1.38.tar.gz
+    - bytesize: 16545
+      file_mime_type: ~
+      line_count: ~
+      md5: 465661eeec132c08b59bcf0054921c53
+      mtime: 1085929714
+      name: pkg/full_text-1.35.tar.gz
+    - bytesize: 10702
+      file_mime_type: ~
+      line_count: ~
+      md5: bd42a3c1b91288c5c9b8be6bb07360c1
+      mtime: 1085929674
+      name: pkg/lookup-1.01.tar.gz
+    - bytesize: 16588
+      file_mime_type: ~
+      line_count: ~
+      md5: 582646acec07be7c14ecea95882950fb
+      mtime: 1085929714
+      name: pkg/news-1.54.tar.gz
+    - bytesize: 6491
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d7feccae562ecf3f7ed0ada4c2b5f1c
+      mtime: 1085929674
+      name: pkg/object_activity-1.04.tar.gz
+    - bytesize: 11957
+      file_mime_type: ~
+      line_count: ~
+      md5: 17d1c2f7369dc5efb1a70e8ca798ed25
+      mtime: 1085929674
+      name: pkg/results_manage-1.02.tar.gz
+    - bytesize: 9212
+      file_mime_type: ~
+      line_count: ~
+      md5: e3c343bb9ace2e68df594adaec62009c
+      mtime: 1085929675
+      name: pkg/system_doc-1.33.tar.gz
+    - bytesize: 144377
+      file_mime_type: ~
+      line_count: ~
+      md5: d7abaa983a96819532cc56530acea50a
+      mtime: 1069035453
+      name: script/oi_manage
+    - bytesize: 4058
+      file_mime_type: ~
+      line_count: ~
+      md5: e63f84f972a3bc8aa4bc5c596083d0a2
+      mtime: 998800732
+      name: script/template_translate.pl
+    - bytesize: 109
+      file_mime_type: ~
+      line_count: ~
+      md5: e47328a909368c92fe65e6f53270f92b
+      mtime: 1020774577
+      name: t/dummy.t
+    - bytesize: 1616
+      file_mime_type: ~
+      line_count: ~
+      md5: d099e572075b65e6a4f0066483f051ad
+      mtime: 1030234008
+      name: template/base_main
+    - bytesize: 283
+      file_mime_type: ~
+      line_count: ~
+      md5: 7609a78953ac77443d84b807942c39bc
+      mtime: 1005060016
+      name: template/base_simple
+    - bytesize: 315
+      file_mime_type: ~
+      line_count: ~
+      md5: 5711e8d6fe825c97d86adc7c2e0a0b91
+      mtime: 1002578629
+      name: template/data_cell_begin
+    - bytesize: 2328
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e78dc543646da675da6f2966e70b36b
+      mtime: 1003407164
+      name: template/date_select
+    - bytesize: 846
+      file_mime_type: ~
+      line_count: ~
+      md5: 43c406f41e573c4d354e7f51a5f6ad2c
+      mtime: 1004714671
+      name: template/error_message
+    - bytesize: 463
+      file_mime_type: ~
+      line_count: ~
+      md5: 9151ec870283a1b5dd346e447d08962e
+      mtime: 1003892578
+      name: template/error_not_found
+    - bytesize: 335
+      file_mime_type: ~
+      line_count: ~
+      md5: e6107f2d5b4cd0f857d400409d3c9c9a
+      mtime: 1007442895
+      name: template/error_object_inactive
+    - bytesize: 417
+      file_mime_type: ~
+      line_count: ~
+      md5: e7350de2607c335370b1201200eaf6c3
+      mtime: 1003892578
+      name: template/error_task_forbidden
+    - bytesize: 475
+      file_mime_type: ~
+      line_count: ~
+      md5: d005f579ee16574e7a1c89568bc8f096
+      mtime: 1003892578
+      name: template/error_task_no_default
+    - bytesize: 350
+      file_mime_type: ~
+      line_count: ~
+      md5: cb6fbb35289a058cd4200f133470487b
+      mtime: 1002572400
+      name: template/form_checkbox
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: 80b164e29f60d08f316fa2e84974f954
+      mtime: 1002572400
+      name: template/form_hidden
+    - bytesize: 513
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a11d69bb8b06c50e87558303ecef7d3
+      mtime: 1003370990
+      name: template/form_login
+    - bytesize: 430
+      file_mime_type: ~
+      line_count: ~
+      md5: 248249e43b0a40793f3b345fd03daf85
+      mtime: 1004533047
+      name: template/form_password
+    - bytesize: 315
+      file_mime_type: ~
+      line_count: ~
+      md5: 479dff109ca155a93daf64b557cfb91b
+      mtime: 1002903099
+      name: template/form_radio
+    - bytesize: 201
+      file_mime_type: ~
+      line_count: ~
+      md5: 369c06ae3bb1be7ed6f197182b57acff
+      mtime: 1003412912
+      name: template/form_reset
+    - bytesize: 707
+      file_mime_type: ~
+      line_count: ~
+      md5: f2ed7dd29165aac8ae8a6efb903a2a71
+      mtime: 1002813125
+      name: template/form_select
+    - bytesize: 350
+      file_mime_type: ~
+      line_count: ~
+      md5: c5a7f32b7d2e0e7540cc1aa42d13e5cc
+      mtime: 1002572400
+      name: template/form_select_intro
+    - bytesize: 563
+      file_mime_type: ~
+      line_count: ~
+      md5: 27ac9baf509666806d5490e016f122de
+      mtime: 1079555883
+      name: template/form_select_option
+    - bytesize: 343
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dd05624c47a35281de0144fd20d68a7
+      mtime: 1002588765
+      name: template/form_select_options_iterator
+    - bytesize: 316
+      file_mime_type: ~
+      line_count: ~
+      md5: 246e345714ad3deb2af84aa1913bf0f2
+      mtime: 1002588765
+      name: template/form_select_options_list
+    - bytesize: 444
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c9a851bd07901d15b2fc6428a5d1c84
+      mtime: 1002813473
+      name: template/form_select_options_plain_list
+    - bytesize: 228
+      file_mime_type: ~
+      line_count: ~
+      md5: 69b22cf12cc25250ebf24153c26765d4
+      mtime: 1002572400
+      name: template/form_submit
+    - bytesize: 509
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c0bdbd8ca17026e2fb713b26759c6b0
+      mtime: 1003412928
+      name: template/form_submit_row
+    - bytesize: 454
+      file_mime_type: ~
+      line_count: ~
+      md5: fed4f400be8deb971ce6e60df3d12033
+      mtime: 1002572400
+      name: template/form_text
+    - bytesize: 463
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e4ecb0f0314182c6ef47a2a33397c97
+      mtime: 1002572400
+      name: template/form_textarea
+    - bytesize: 258
+      file_mime_type: ~
+      line_count: ~
+      md5: c4428449e61edca17bfa8ad94fa99ccb
+      mtime: 1003985053
+      name: template/form_upload
+    - bytesize: 189
+      file_mime_type: ~
+      line_count: ~
+      md5: da72c8672c430627934dd712682d8376
+      mtime: 1003320390
+      name: template/global_javascript
+    - bytesize: 185
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d69a0ce4e01ac279754a59d8b9c7aef
+      mtime: 1003092887
+      name: template/header_cell
+    - bytesize: 253
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bcc6cbb827024edf9b2737817949432
+      mtime: 1002588765
+      name: template/header_row
+    - bytesize: 263
+      file_mime_type: ~
+      line_count: ~
+      md5: c92f927f49a591a5279109cd2a2f6f8d
+      mtime: 1007442872
+      name: template/inactive_object_banner
+    - bytesize: 444
+      file_mime_type: ~
+      line_count: ~
+      md5: 859ad38525b2aa7295d317ef372fe5dd
+      mtime: 1002588765
+      name: template/label_form_checkbox_row
+    - bytesize: 494
+      file_mime_type: ~
+      line_count: ~
+      md5: bb4a4267806d17b40a99fe3439b04c6b
+      mtime: 1007914276
+      name: template/label_form_date_row
+    - bytesize: 427
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ed6ba338686629e78a5260fb8e71fa8
+      mtime: 1003370990
+      name: template/label_form_login_row
+    - bytesize: 445
+      file_mime_type: ~
+      line_count: ~
+      md5: f2c79a4add934f25936a29e98adb99fa
+      mtime: 1002588765
+      name: template/label_form_radio_row
+    - bytesize: 438
+      file_mime_type: ~
+      line_count: ~
+      md5: 730ee0cb34ef91023a2d95ce16fa9977
+      mtime: 1002588765
+      name: template/label_form_select_row
+    - bytesize: 366
+      file_mime_type: ~
+      line_count: ~
+      md5: c35f27b68e50f2acbbbbc3c11e7847f4
+      mtime: 1002588765
+      name: template/label_form_text_row
+    - bytesize: 583
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c31e5015cfda2b22d000e51e9cecf78
+      mtime: 1007442941
+      name: template/label_form_textarea_row
+    - bytesize: 366
+      file_mime_type: ~
+      line_count: ~
+      md5: 947cfb739e8e4ddd492a60cd9bfb94af
+      mtime: 1011367256
+      name: template/label_form_upload_row
+    - bytesize: 408
+      file_mime_type: ~
+      line_count: ~
+      md5: bb059a05f824f2d4fc5e1995365389f1
+      mtime: 1002588765
+      name: template/label_row
+    - bytesize: 555
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ad344365a879e1dce16645df76086bf
+      mtime: 1003320412
+      name: template/label_row_begin
+    - bytesize: 337
+      file_mime_type: ~
+      line_count: ~
+      md5: aa56fdbaa04349393f7b24826f2653aa
+      mtime: 1002588765
+      name: template/label_text_row
+    - bytesize: 352
+      file_mime_type: ~
+      line_count: ~
+      md5: e843f2ca0cd949d8bcb971cf7cdbfdca
+      mtime: 1003320440
+      name: template/object_updates
+    - bytesize: 1301
+      file_mime_type: ~
+      line_count: ~
+      md5: c54e434e277625e58ae658b30125fbce
+      mtime: 1002813437
+      name: template/page_count
+    - bytesize: 466
+      file_mime_type: ~
+      line_count: ~
+      md5: ca17d7b4975b2c9f5990e9dcf183deb0
+      mtime: 1002807466
+      name: template/row_color
+    - bytesize: 1469
+      file_mime_type: ~
+      line_count: ~
+      md5: b224c7f12ac0314de8a5ef67dd3c380c
+      mtime: 1002813271
+      name: template/search_results_page_listing
+    - bytesize: 603
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d0474b8496791fb27715c87bdbee62d
+      mtime: 1006866999
+      name: template/show_label
+    - bytesize: 835
+      file_mime_type: ~
+      line_count: ~
+      md5: d3c78cd336a626a0e494e313b7926521
+      mtime: 1004714671
+      name: template/status_message
+    - bytesize: 1045
+      file_mime_type: ~
+      line_count: ~
+      md5: 353a0bc197a567a8c5ce3ce3a458687f
+      mtime: 1011375464
+      name: template/table_bordered_begin
+    - bytesize: 169
+      file_mime_type: ~
+      line_count: ~
+      md5: c9e5fb8e4ea78e31d5cb63c2398cde49
+      mtime: 1002572400
+      name: template/table_bordered_end
+    - bytesize: 8608
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fff7b46ff929658a16b212021802e4f
+      mtime: 1002813491
+      name: template/to_group
+  module_info:
+    - bytesize: 23272
+      file_mime_type: ~
+      line_count: ~
+      md5: ea9bd7d07d9468b3a335ba89c10c1c27
+      module_name_from_file_guess: OpenInteract
+      mtime: 1085930029
+      name: blib/lib/OpenInteract.pm
+      packages:
+        - OpenInteract
+      primary_package: OpenInteract
+      uses:
+        - strict
+        - Apache::Constants
+        - Apache::Request
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/OpenInteract.pm
+        identifier: OpenInteract::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.61
+    - bytesize: 8731
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b0058b657044c751bff4b2b6a53ec73
+      module_name_from_file_guess: OpenInteract::ApacheStartup
+      mtime: 1079616144
+      name: blib/lib/OpenInteract/ApacheStartup.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - Apache
+        - File::Path
+        - OpenInteract::DBI
+        - OpenInteract::Startup
+        - constant
+        - Config
+      version_info:
+        filename: blib/lib/OpenInteract/ApacheStartup.pm
+        identifier: OpenInteract::ApacheStartup::VERSION
+        line_number: 14
+        sigil: $
+        value: 1.26
+    - bytesize: 19614
+      file_mime_type: ~
+      line_count: ~
+      md5: cab0bd97cb2881ae5aebd6507fb4cf7e
+      module_name_from_file_guess: OpenInteract::Auth
+      mtime: 1023190194
+      name: blib/lib/OpenInteract/Auth.pm
+      packages:
+        - OpenInteract::Auth
+      primary_package: OpenInteract::Auth
+      uses:
+        - strict
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/OpenInteract/Auth.pm
+        identifier: OpenInteract::Auth::VERSION
+        line_number: 8
+        sigil: $
+        value: 1.18
+    - bytesize: 7739
+      file_mime_type: ~
+      line_count: ~
+      md5: 1007e5bf5d814db4b50e6c72bde59df3
+      module_name_from_file_guess: OpenInteract::Cache
+      mtime: 1049684157
+      name: blib/lib/OpenInteract/Cache.pm
+      packages:
+        - OpenInteract::Cache
+      primary_package: OpenInteract::Cache
+      uses:
+        - strict
+      version_info:
+        filename: blib/lib/OpenInteract/Cache.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2633
+      file_mime_type: ~
+      line_count: ~
+      md5: bf4c5473c39be298ef4d2de9614c1366
+      module_name_from_file_guess: OpenInteract::Cache::File
+      mtime: 1031518606
+      name: blib/lib/OpenInteract/Cache/File.pm
+      packages:
+        - OpenInteract::Cache::File
+      primary_package: OpenInteract::Cache::File
+      uses:
+        - strict
+        - base
+        - Cache::FileCache
+      version_info:
+        filename: blib/lib/OpenInteract/Cache/File.pm
+        identifier: OpenInteract::Cache::File::VERSION
+        line_number: 9
+        sigil: $
+        value: 1.04
+    - bytesize: 67469
+      file_mime_type: ~
+      line_count: ~
+      md5: fed33a8a9ad85e16164d3e2730b3efbc
+      module_name_from_file_guess: OpenInteract::CommonHandler
+      mtime: 1069119929
+      name: blib/lib/OpenInteract/CommonHandler.pm
+      packages:
+        - OpenInteract::CommonHandler
+      primary_package: OpenInteract::CommonHandler
+      uses:
+        - strict
+        - Data::Dumper
+        - OpenInteract::Handler::GenericDispatcher
+        - SPOPS::Secure
+        - Exporter
+        - constant
+        - OpenInteract::ResultsManage
+      version_info:
+        filename: blib/lib/OpenInteract/CommonHandler.pm
+        identifier: OpenInteract::CommonHandler::VERSION
+        line_number: 12
+        sigil: $
+        value: 1.44
+    - bytesize: 7984
+      file_mime_type: ~
+      line_count: ~
+      md5: 022ff4f9c9abdfd630bf4a61358d7de6
+      module_name_from_file_guess: OpenInteract::Component
+      mtime: 1032206014
+      name: blib/lib/OpenInteract/Component.pm
+      packages:
+        - OpenInteract::Component
+      primary_package: OpenInteract::Component
+      uses:
+        - strict
+        - SPOPS::Secure
+        - Data::Dumper
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Component.pm
+        identifier: OpenInteract::Component::VERSION
+        line_number: 9
+        sigil: $
+        value: 2.16
+    - bytesize: 11603
+      file_mime_type: ~
+      line_count: ~
+      md5: 27cd2ad5278862a83c109b70f6b3ff47
+      module_name_from_file_guess: OpenInteract::Config
+      mtime: 1019566893
+      name: blib/lib/OpenInteract/Config.pm
+      packages:
+        - OpenInteract::Config
+      primary_package: OpenInteract::Config
+      uses:
+        - strict
+        - OpenInteract::Error
+        - Exporter
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Config.pm
+        identifier: OpenInteract::Config::VERSION
+        line_number: 14
+        sigil: $
+        value: 1.07
+    - bytesize: 12231
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d9f8cbd97db759ed705edfbfe1370fa
+      module_name_from_file_guess: OpenInteract::Config::GlobalOverride
+      mtime: 1019738196
+      name: blib/lib/OpenInteract/Config/GlobalOverride.pm
+      packages:
+        - OpenInteract::Config::GlobalOverride
+      primary_package: OpenInteract::Config::GlobalOverride
+      uses:
+        - strict
+        - OpenInteract::Config
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Config/GlobalOverride.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9518
+      file_mime_type: ~
+      line_count: ~
+      md5: 139aa4d8d7888dd2bea6dd92a89c4f02
+      module_name_from_file_guess: OpenInteract::Config::Ini
+      mtime: 1043413427
+      name: blib/lib/OpenInteract/Config/Ini.pm
+      packages:
+        - OpenInteract::Config::Ini
+      primary_package: OpenInteract::Config::Ini
+      uses:
+        - strict
+        - OpenInteract::Config
+      version_info:
+        filename: blib/lib/OpenInteract/Config/Ini.pm
+        identifier: OpenInteract::Config::Ini::VERSION
+        line_number: 8
+        sigil: $
+        value: 1.91
+    - bytesize: 814
+      file_mime_type: ~
+      line_count: ~
+      md5: ea668ae02d9d95b2e84647ba79ec325a
+      module_name_from_file_guess: OpenInteract::Config::IniFile
+      mtime: 1032207628
+      name: blib/lib/OpenInteract/Config/IniFile.pm
+      packages:
+        - OpenInteract::Config::IniFile
+      primary_package: OpenInteract::Config::IniFile
+      uses:
+        - strict
+        - base
+        - OpenInteract::Config
+        - OpenInteract::Config::Ini
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Config/IniFile.pm
+        identifier: OpenInteract::Config::IniFile::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.50
+    - bytesize: 4617
+      file_mime_type: ~
+      line_count: ~
+      md5: 33925501686d737620fa2c4faf849030
+      module_name_from_file_guess: OpenInteract::Config::PerlFile
+      mtime: 1019047469
+      name: blib/lib/OpenInteract/Config/PerlFile.pm
+      packages:
+        - OpenInteract::Config::PerlFile
+      primary_package: OpenInteract::Config::PerlFile
+      uses:
+        - strict
+        - Data::Dumper
+        - OpenInteract::Config
+      version_info:
+        filename: blib/lib/OpenInteract/Config/PerlFile.pm
+        identifier: OpenInteract::Config::PerlFile::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.06
+    - bytesize: 4764
+      file_mime_type: ~
+      line_count: ~
+      md5: 8068e9bdc2403c3e85aecca14291993d
+      module_name_from_file_guess: OpenInteract::Cookies::Apache
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/Cookies/Apache.pm
+      packages:
+        - OpenInteract::Cookies::Apache
+      primary_package: OpenInteract::Cookies::Apache
+      uses:
+        - strict
+        - Apache::Cookie
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/OpenInteract/Cookies/Apache.pm
+        identifier: OpenInteract::Cookies::Apache::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.05
+    - bytesize: 4394
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ed196aff75cabc6146730ac39487615
+      module_name_from_file_guess: OpenInteract::Cookies::CGI
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/Cookies/CGI.pm
+      packages:
+        - OpenInteract::Cookies::CGI
+      primary_package: OpenInteract::Cookies::CGI
+      uses:
+        - strict
+        - CGI::Cookie
+      version_info:
+        filename: blib/lib/OpenInteract/Cookies/CGI.pm
+        identifier: OpenInteract::Cookies::CGI::VERSION
+        line_number: 9
+        sigil: $
+        value: 1.04
+    - bytesize: 11448
+      file_mime_type: ~
+      line_count: ~
+      md5: 4354631032e66be25a29b764880e97a6
+      module_name_from_file_guess: OpenInteract::DBI
+      mtime: 1020859337
+      name: blib/lib/OpenInteract/DBI.pm
+      packages:
+        - OpenInteract::DBI
+      primary_package: OpenInteract::DBI
+      uses:
+        - strict
+        - Carp
+        - Data::Dumper
+        - DBI
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/DBI.pm
+        identifier: OpenInteract::DBI::VERSION
+        line_number: 11
+        sigil: $
+        value: 1.11
+    - bytesize: 7084
+      file_mime_type: ~
+      line_count: ~
+      md5: dc92d2603581710d3e9998123ca03834
+      module_name_from_file_guess: OpenInteract::Error
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/Error.pm
+      packages:
+        - OpenInteract::Error
+      primary_package: OpenInteract::Error
+      uses:
+        - strict
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Error.pm
+        identifier: OpenInteract::Error::VERSION
+        line_number: 7
+        sigil: $
+        value: 1.06
+    - bytesize: 4997
+      file_mime_type: ~
+      line_count: ~
+      md5: 876429a862e48a438bf4f6b4817f3c93
+      module_name_from_file_guess: OpenInteract::Error::Main
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/Error/Main.pm
+      packages:
+        - OpenInteract::Error::Main
+      primary_package: OpenInteract::Error::Main
+      uses:
+        - strict
+        - Exporter
+        - vars
+        - Carp
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/OpenInteract/Error/Main.pm
+        identifier: OpenInteract::Error::Main::VERSION
+        line_number: 14
+        sigil: $
+        value: 1.07
+    - bytesize: 16465
+      file_mime_type: ~
+      line_count: ~
+      md5: a6cf8b0d351d8c87aa6a2623fd52cc96
+      module_name_from_file_guess: OpenInteract::Error::System
+      mtime: 1018714206
+      name: blib/lib/OpenInteract/Error/System.pm
+      packages:
+        - OpenInteract::Error::System
+      primary_package: OpenInteract::Error::System
+      uses:
+        - strict
+        - Carp
+        - Data::Dumper
+        - OpenInteract::Error::Main
+        - OpenInteract::Utility
+        - SPOPS::Utility
+      version_info:
+        filename: blib/lib/OpenInteract/Error/System.pm
+        identifier: OpenInteract::Error::System::VERSION
+        line_number: 13
+        sigil: $
+        value: 1.09
+    - bytesize: 21673
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d90db5b4ddb64b926af2ef8b88a5417
+      module_name_from_file_guess: OpenInteract::Handler::GenericDispatcher
+      mtime: 1036946019
+      name: blib/lib/OpenInteract/Handler/GenericDispatcher.pm
+      packages:
+        - OpenInteract::Handler::GenericDispatcher
+      primary_package: OpenInteract::Handler::GenericDispatcher
+      uses:
+        - strict
+        - base
+        - SPOPS::Secure
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Handler/GenericDispatcher.pm
+        identifier: OpenInteract::Handler::GenericDispatcher::VERSION
+        line_number: 13
+        sigil: $
+        value: 1.92
+    - bytesize: 5709
+      file_mime_type: ~
+      line_count: ~
+      md5: 55705b6d9f1020367f27c49c03a1683e
+      module_name_from_file_guess: OpenInteract::LDAP
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/LDAP.pm
+      packages:
+        - OpenInteract::LDAP
+      primary_package: OpenInteract::LDAP
+      uses:
+        - strict
+        - Data::Dumper
+        - Net::LDAP
+        - constant
+        - Authen::SASL
+      version_info:
+        filename: blib/lib/OpenInteract/LDAP.pm
+        identifier: OpenInteract::LDAP::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.06
+    - bytesize: 60462
+      file_mime_type: ~
+      line_count: ~
+      md5: 6001ee978d34a9ecec38724599188f96
+      module_name_from_file_guess: OpenInteract::Package
+      mtime: 1043511367
+      name: blib/lib/OpenInteract/Package.pm
+      packages:
+        - OpenInteract::Package
+      primary_package: OpenInteract::Package
+      uses:
+        - strict
+        - Archive::Tar
+        - Cwd
+        - Data::Dumper
+        - ExtUtils::Manifest
+        - File::Basename
+        - File::Copy
+        - File::Path
+        - SPOPS::HashFile
+        - SPOPS::Utility
+        - Exporter
+        - constant
+        - Config
+        - ''
+        - Template
+      version_info:
+        filename: blib/lib/OpenInteract/Package.pm
+        identifier: OpenInteract::Package::VERSION
+        line_number: 22
+        sigil: $
+        value: 1.40
+    - bytesize: 16691
+      file_mime_type: ~
+      line_count: ~
+      md5: 37c6ed3e0045127d52d93752db1612f0
+      module_name_from_file_guess: OpenInteract::PackageRepository
+      mtime: 1048645637
+      name: blib/lib/OpenInteract/PackageRepository.pm
+      packages:
+        - OpenInteract::PackageRepository
+      primary_package: OpenInteract::PackageRepository
+      uses:
+        - strict
+        - base
+        - vars
+        - File::Copy
+        - File::Spec
+        - Data::Dumper
+        - OpenInteract::Package
+        - SPOPS::Utility
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/PackageRepository.pm
+        identifier: OpenInteract::PackageRepository::VERSION
+        line_number: 14
+        sigil: $
+        value: 1.08
+    - bytesize: 17863
+      file_mime_type: ~
+      line_count: ~
+      md5: 224192074fec8b5e0d6a05cc429d5b12
+      module_name_from_file_guess: OpenInteract::Request
+      mtime: 1060740281
+      name: blib/lib/OpenInteract/Request.pm
+      packages:
+        - OpenInteract::Request
+      primary_package: OpenInteract::Request
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - OpenInteract::DBI
+        - OpenInteract::LDAP
+      version_info:
+        filename: blib/lib/OpenInteract/Request.pm
+        identifier: OpenInteract::Request::VERSION
+        line_number: 9
+        sigil: $
+        value: 1.16
+    - bytesize: 16397
+      file_mime_type: ~
+      line_count: ~
+      md5: c4e5977f4c6fe68b8c7049228284041b
+      module_name_from_file_guess: OpenInteract::SPOPS
+      mtime: 1049169218
+      name: blib/lib/OpenInteract/SPOPS.pm
+      packages:
+        - OpenInteract::SPOPS
+      primary_package: OpenInteract::SPOPS
+      uses:
+        - strict
+        - Data::Dumper
+        - Digest::MD5
+        - OpenInteract::Utility
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/SPOPS.pm
+        identifier: OpenInteract::SPOPS::VERSION
+        line_number: 11
+        sigil: $
+        value: 1.33
+    - bytesize: 4506
+      file_mime_type: ~
+      line_count: ~
+      md5: 56efc29d5e0883864903180179713086
+      module_name_from_file_guess: OpenInteract::SPOPS::DBI
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/SPOPS/DBI.pm
+      packages:
+        - OpenInteract::SPOPS::DBI
+      primary_package: OpenInteract::SPOPS::DBI
+      uses:
+        - strict
+        - OpenInteract::SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/OpenInteract/SPOPS/DBI.pm
+        identifier: OpenInteract::SPOPS::DBI::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.12
+    - bytesize: 3666
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bea433beed9cc9ede695d9cf38bea63
+      module_name_from_file_guess: OpenInteract::SPOPS::LDAP
+      mtime: 1009939433
+      name: blib/lib/OpenInteract/SPOPS/LDAP.pm
+      packages:
+        - OpenInteract::SPOPS::LDAP
+      primary_package: OpenInteract::SPOPS::LDAP
+      uses:
+        - strict
+        - OpenInteract::SPOPS
+      version_info:
+        filename: blib/lib/OpenInteract/SPOPS/LDAP.pm
+        identifier: OpenInteract::SPOPS::LDAP::VERSION
+        line_number: 9
+        sigil: $
+        value: 1.11
+    - bytesize: 39841
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a084c291c02fd39e57f415261f8f17d
+      module_name_from_file_guess: OpenInteract::SQLInstall
+      mtime: 1041947214
+      name: blib/lib/OpenInteract/SQLInstall.pm
+      packages:
+        - OpenInteract::SQLInstall
+      primary_package: OpenInteract::SQLInstall
+      uses:
+        - strict
+        - Class::Date
+        - Data::Dumper
+        - OpenInteract::Package
+        - SPOPS::SQLInterface
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/SQLInstall.pm
+        identifier: OpenInteract::SQLInstall::VERSION
+        line_number: 12
+        sigil: $
+        value: 1.22
+    - bytesize: 8131
+      file_mime_type: ~
+      line_count: ~
+      md5: 22fcfb4a0e1285c43357cbbf2e935b3f
+      module_name_from_file_guess: OpenInteract::Session
+      mtime: 1042003293
+      name: blib/lib/OpenInteract/Session.pm
+      packages:
+        - OpenInteract::Session
+      primary_package: OpenInteract::Session
+      uses:
+        - strict
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/OpenInteract/Session.pm
+        identifier: OpenInteract::Session::VERSION
+        line_number: 8
+        sigil: $
+        value: 1.13
+    - bytesize: 4195
+      file_mime_type: ~
+      line_count: ~
+      md5: 18d0f7b0bed670f7460b768f92ae87ed
+      module_name_from_file_guess: OpenInteract::Session::DBI
+      mtime: 1031518364
+      name: blib/lib/OpenInteract/Session/DBI.pm
+      packages:
+        - OpenInteract::Session::DBI
+      primary_package: OpenInteract::Session::DBI
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/OpenInteract/Session/DBI.pm
+        identifier: OpenInteract::Session::DBI::VERSION
+        line_number: 8
+        sigil: $
+        value: 1.10
+    - bytesize: 3374
+      file_mime_type: ~
+      line_count: ~
+      md5: f1df5b936ee36e0ecc37a3d478115eeb
+      module_name_from_file_guess: OpenInteract::Session::File
+      mtime: 1031518364
+      name: blib/lib/OpenInteract/Session/File.pm
+      packages:
+        - OpenInteract::Session::File
+      primary_package: OpenInteract::Session::File
+      uses:
+        - strict
+        - base
+        - Apache::Session::File
+      version_info:
+        filename: blib/lib/OpenInteract/Session/File.pm
+        identifier: OpenInteract::Session::File::VERSION
+        line_number: 9
+        sigil: $
+        value: 1.03
+    - bytesize: 3473
+      file_mime_type: ~
+      line_count: ~
+      md5: 126c2cc694f3fd14a4ff696fae86f3cb
+      module_name_from_file_guess: OpenInteract::Session::SQLite
+      mtime: 1031518363
+      name: blib/lib/OpenInteract/Session/SQLite.pm
+      packages:
+        - OpenInteract::Session::SQLite
+      primary_package: OpenInteract::Session::SQLite
+      uses:
+        - strict
+        - base
+        - Apache::Session::SQLite
+      version_info:
+        filename: blib/lib/OpenInteract/Session/SQLite.pm
+        identifier: OpenInteract::Session::DBI::VERSION
+        line_number: 9
+        sigil: $
+        value: 1.03
+    - bytesize: 36516
+      file_mime_type: ~
+      line_count: ~
+      md5: 5717c627f691e8faec52a58a52f06c1d
+      module_name_from_file_guess: OpenInteract::Startup
+      mtime: 1047525994
+      name: blib/lib/OpenInteract/Startup.pm
+      packages:
+        - OpenInteract::Startup
+      primary_package: OpenInteract::Startup
+      uses:
+        - strict
+        - Cwd
+        - Data::Dumper
+        - File::Basename
+        - File::Path
+        - Getopt::Long
+        - OpenInteract::Config
+        - OpenInteract::Config::GlobalOverride
+        - OpenInteract::Error
+        - OpenInteract::Package
+        - OpenInteract::PackageRepository
+        - SPOPS::ClassFactory
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Startup.pm
+        identifier: OpenInteract::Startup::VERSION
+        line_number: 18
+        sigil: $
+        value: 1.37
+    - bytesize: 3069
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d225e92003a6aeb56af40ab062427ac
+      module_name_from_file_guess: OpenInteract::Template::Context
+      mtime: 1032207689
+      name: blib/lib/OpenInteract/Template/Context.pm
+      packages:
+        - OpenInteract::Template::Context
+      primary_package: OpenInteract::Template::Context
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/OpenInteract/Template/Context.pm
+        identifier: OpenInteract::Template::Context::VERSION
+        line_number: 8
+        sigil: $
+        value: 1.60
+    - bytesize: 32616
+      file_mime_type: ~
+      line_count: ~
+      md5: bc90c3a88d85c3a2f23fb4dcb7ddb953
+      module_name_from_file_guess: OpenInteract::Template::Plugin
+      mtime: 1060777723
+      name: blib/lib/OpenInteract/Template/Plugin.pm
+      packages:
+        - OpenInteract::Template::Plugin
+      primary_package: OpenInteract::Template::Plugin
+      uses:
+        - strict
+        - base
+        - Class::Date
+        - Data::Dumper
+        - HTML::Entities
+        - SPOPS::Secure
+        - SPOPS::Utility
+        - Text::Sentence
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Template/Plugin.pm
+        identifier: OpenInteract::Template::Plugin::VERSION
+        line_number: 14
+        sigil: $
+        value: 1.32
+    - bytesize: 17454
+      file_mime_type: ~
+      line_count: ~
+      md5: 49b8f3350a8f40096cb5d0d50da56c2c
+      module_name_from_file_guess: OpenInteract::Template::Process
+      mtime: 1032207516
+      name: blib/lib/OpenInteract/Template/Process.pm
+      packages:
+        - OpenInteract::Template::Process
+      primary_package: OpenInteract::Template::Process
+      uses:
+        - strict
+        - Data::Dumper
+        - OpenInteract::Template::Context
+        - OpenInteract::Template::Plugin
+        - OpenInteract::Template::Provider
+        - Template
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Template/Process.pm
+        identifier: OpenInteract::Template::Process::VERSION
+        line_number: 12
+        sigil: $
+        value: 1.24
+    - bytesize: 13447
+      file_mime_type: ~
+      line_count: ~
+      md5: 60fa8547b4bb1fb53a2273d221276a51
+      module_name_from_file_guess: OpenInteract::Template::Provider
+      mtime: 1032207515
+      name: blib/lib/OpenInteract/Template/Provider.pm
+      packages:
+        - OpenInteract::Template::Provider
+      primary_package: OpenInteract::Template::Provider
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - Digest::MD5
+        - File::Spec
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Template/Provider.pm
+        identifier: OpenInteract::Template::Provider::VERSION
+        line_number: 11
+        sigil: $
+        value: 1.25
+    - bytesize: 8420
+      file_mime_type: ~
+      line_count: ~
+      md5: d24186a64c3a51f24255355b5058e49a
+      module_name_from_file_guess: OpenInteract::UI::Main
+      mtime: 1060744604
+      name: blib/lib/OpenInteract/UI/Main.pm
+      packages:
+        - OpenInteract::UI::Main
+      primary_package: OpenInteract::UI::Main
+      uses:
+        - strict
+      version_info:
+        filename: blib/lib/OpenInteract/UI/Main.pm
+        identifier: OpenInteract::UI::Main::VERSION
+        line_number: 7
+        sigil: $
+        value: 1.11
+    - bytesize: 10165
+      file_mime_type: ~
+      line_count: ~
+      md5: e836bcbb582f2e0f4cf486b383f2489b
+      module_name_from_file_guess: OpenInteract::Utility
+      mtime: 1048609968
+      name: blib/lib/OpenInteract/Utility.pm
+      packages:
+        - OpenInteract::Utility
+      primary_package: OpenInteract::Utility
+      uses:
+        - strict
+        - Mail::Sendmail
+        - MIME::Lite
+        - constant
+      version_info:
+        filename: blib/lib/OpenInteract/Utility.pm
+        identifier: OpenInteract::Utility::VERSION
+        line_number: 10
+        sigil: $
+        value: 1.09
+  modules:
+    - blib/lib/OpenInteract.pm
+    - blib/lib/OpenInteract/ApacheStartup.pm
+    - blib/lib/OpenInteract/Auth.pm
+    - blib/lib/OpenInteract/Cache.pm
+    - blib/lib/OpenInteract/Cache/File.pm
+    - blib/lib/OpenInteract/CommonHandler.pm
+    - blib/lib/OpenInteract/Component.pm
+    - blib/lib/OpenInteract/Config.pm
+    - blib/lib/OpenInteract/Config/GlobalOverride.pm
+    - blib/lib/OpenInteract/Config/Ini.pm
+    - blib/lib/OpenInteract/Config/IniFile.pm
+    - blib/lib/OpenInteract/Config/PerlFile.pm
+    - blib/lib/OpenInteract/Cookies/Apache.pm
+    - blib/lib/OpenInteract/Cookies/CGI.pm
+    - blib/lib/OpenInteract/DBI.pm
+    - blib/lib/OpenInteract/Error.pm
+    - blib/lib/OpenInteract/Error/Main.pm
+    - blib/lib/OpenInteract/Error/System.pm
+    - blib/lib/OpenInteract/Handler/GenericDispatcher.pm
+    - blib/lib/OpenInteract/LDAP.pm
+    - blib/lib/OpenInteract/Package.pm
+    - blib/lib/OpenInteract/PackageRepository.pm
+    - blib/lib/OpenInteract/Request.pm
+    - blib/lib/OpenInteract/SPOPS.pm
+    - blib/lib/OpenInteract/SPOPS/DBI.pm
+    - blib/lib/OpenInteract/SPOPS/LDAP.pm
+    - blib/lib/OpenInteract/SQLInstall.pm
+    - blib/lib/OpenInteract/Session.pm
+    - blib/lib/OpenInteract/Session/DBI.pm
+    - blib/lib/OpenInteract/Session/File.pm
+    - blib/lib/OpenInteract/Session/SQLite.pm
+    - blib/lib/OpenInteract/Startup.pm
+    - blib/lib/OpenInteract/Template/Context.pm
+    - blib/lib/OpenInteract/Template/Plugin.pm
+    - blib/lib/OpenInteract/Template/Process.pm
+    - blib/lib/OpenInteract/Template/Provider.pm
+    - blib/lib/OpenInteract/UI/Main.pm
+    - blib/lib/OpenInteract/Utility.pm
+  test_info:
+    - bytesize: 109
+      file_mime_type: ~
+      line_count: ~
+      md5: e47328a909368c92fe65e6f53270f92b
+      mtime: 1020774577
+      name: t/dummy.t
+      uses:
+        - OpenInteract::Startup
+  tests:
+    - t/dummy.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5314._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 5314
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269059791
+  examine_start_time: 1269059728
+  examine_time: 63
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 5314
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269059791
+  run_start_time: 1269059728
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

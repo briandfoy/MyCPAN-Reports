@@ -1,0 +1,5846 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: 'Parse, Analyze and Manipulate Perl (without perl)'
+    author:
+      - 'Adam Kennedy <adamk@cpan.org>'
+    build_requires:
+      File::Remove: 0.39
+      File::Spec: 0.84
+      Test::ClassAPI: 1.03
+      Test::More: 0.47
+      Test::Object: 0.07
+      Test::SubCalls: 1.07
+    distribution_type: module
+    generated_by: Module::Install version 0.72
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: PPI
+    no_index:
+      directory:
+        - inc
+        - t
+    requires:
+      Clone: 0.25
+      Digest::MD5: 2.27
+      IO::String: 1.07
+      List::MoreUtils: 0.16
+      List::Util: 1.19
+      Params::Util: 0.21
+      Storable: 2.14
+      Task::Weaken: 0
+      perl: 5.6.0
+    version: 1.202_03
+  blib:
+    - blib/lib/PPI.pm
+    - blib/lib/PPI/Cache.pm
+    - blib/lib/PPI/Document.pm
+    - blib/lib/PPI/Document/File.pm
+    - blib/lib/PPI/Document/Fragment.pm
+    - blib/lib/PPI/Document/Normalized.pm
+    - blib/lib/PPI/Dumper.pm
+    - blib/lib/PPI/Element.pm
+    - blib/lib/PPI/Exception.pm
+    - blib/lib/PPI/Exception/ParserTimeout.pm
+    - blib/lib/PPI/Find.pm
+    - blib/lib/PPI/Lexer.pm
+    - blib/lib/PPI/Node.pm
+    - blib/lib/PPI/Normal.pm
+    - blib/lib/PPI/Normal/Standard.pm
+    - blib/lib/PPI/Statement.pm
+    - blib/lib/PPI/Statement/Break.pm
+    - blib/lib/PPI/Statement/Compound.pm
+    - blib/lib/PPI/Statement/Data.pm
+    - blib/lib/PPI/Statement/End.pm
+    - blib/lib/PPI/Statement/Expression.pm
+    - blib/lib/PPI/Statement/Include.pm
+    - blib/lib/PPI/Statement/Include/Perl6.pm
+    - blib/lib/PPI/Statement/Null.pm
+    - blib/lib/PPI/Statement/Package.pm
+    - blib/lib/PPI/Statement/Scheduled.pm
+    - blib/lib/PPI/Statement/Sub.pm
+    - blib/lib/PPI/Statement/Unknown.pm
+    - blib/lib/PPI/Statement/UnmatchedBrace.pm
+    - blib/lib/PPI/Statement/Variable.pm
+    - blib/lib/PPI/Structure.pm
+    - blib/lib/PPI/Structure/Block.pm
+    - blib/lib/PPI/Structure/Condition.pm
+    - blib/lib/PPI/Structure/Constructor.pm
+    - blib/lib/PPI/Structure/ForLoop.pm
+    - blib/lib/PPI/Structure/List.pm
+    - blib/lib/PPI/Structure/Subscript.pm
+    - blib/lib/PPI/Structure/Unknown.pm
+    - blib/lib/PPI/Token.pm
+    - blib/lib/PPI/Token/ArrayIndex.pm
+    - blib/lib/PPI/Token/Attribute.pm
+    - blib/lib/PPI/Token/Cast.pm
+    - blib/lib/PPI/Token/Comment.pm
+    - blib/lib/PPI/Token/DashedWord.pm
+    - blib/lib/PPI/Token/Data.pm
+    - blib/lib/PPI/Token/End.pm
+    - blib/lib/PPI/Token/HereDoc.pm
+    - blib/lib/PPI/Token/Label.pm
+    - blib/lib/PPI/Token/Magic.pm
+    - blib/lib/PPI/Token/Number.pm
+    - blib/lib/PPI/Token/Number/Binary.pm
+    - blib/lib/PPI/Token/Number/Exp.pm
+    - blib/lib/PPI/Token/Number/Float.pm
+    - blib/lib/PPI/Token/Number/Hex.pm
+    - blib/lib/PPI/Token/Number/Octal.pm
+    - blib/lib/PPI/Token/Number/Version.pm
+    - blib/lib/PPI/Token/Operator.pm
+    - blib/lib/PPI/Token/Pod.pm
+    - blib/lib/PPI/Token/Prototype.pm
+    - blib/lib/PPI/Token/Quote.pm
+    - blib/lib/PPI/Token/Quote/Double.pm
+    - blib/lib/PPI/Token/Quote/Interpolate.pm
+    - blib/lib/PPI/Token/Quote/Literal.pm
+    - blib/lib/PPI/Token/Quote/Single.pm
+    - blib/lib/PPI/Token/QuoteLike.pm
+    - blib/lib/PPI/Token/QuoteLike/Backtick.pm
+    - blib/lib/PPI/Token/QuoteLike/Command.pm
+    - blib/lib/PPI/Token/QuoteLike/Readline.pm
+    - blib/lib/PPI/Token/QuoteLike/Regexp.pm
+    - blib/lib/PPI/Token/QuoteLike/Words.pm
+    - blib/lib/PPI/Token/Regexp.pm
+    - blib/lib/PPI/Token/Regexp/Match.pm
+    - blib/lib/PPI/Token/Regexp/Substitute.pm
+    - blib/lib/PPI/Token/Regexp/Transliterate.pm
+    - blib/lib/PPI/Token/Separator.pm
+    - blib/lib/PPI/Token/Structure.pm
+    - blib/lib/PPI/Token/Symbol.pm
+    - blib/lib/PPI/Token/Unknown.pm
+    - blib/lib/PPI/Token/Whitespace.pm
+    - blib/lib/PPI/Token/Word.pm
+    - blib/lib/PPI/Token/_QuoteEngine.pm
+    - blib/lib/PPI/Token/_QuoteEngine/Full.pm
+    - blib/lib/PPI/Token/_QuoteEngine/Simple.pm
+    - blib/lib/PPI/Tokenizer.pm
+    - blib/lib/PPI/Transform.pm
+    - blib/lib/PPI/Util.pm
+    - blib/man3/PPI.3
+    - blib/man3/PPI::Cache.3
+    - blib/man3/PPI::Document.3
+    - blib/man3/PPI::Document::File.3
+    - blib/man3/PPI::Document::Fragment.3
+    - blib/man3/PPI::Document::Normalized.3
+    - blib/man3/PPI::Dumper.3
+    - blib/man3/PPI::Element.3
+    - blib/man3/PPI::Find.3
+    - blib/man3/PPI::Lexer.3
+    - blib/man3/PPI::Node.3
+    - blib/man3/PPI::Normal.3
+    - blib/man3/PPI::Normal::Standard.3
+    - blib/man3/PPI::Statement.3
+    - blib/man3/PPI::Statement::Break.3
+    - blib/man3/PPI::Statement::Compound.3
+    - blib/man3/PPI::Statement::Data.3
+    - blib/man3/PPI::Statement::End.3
+    - blib/man3/PPI::Statement::Expression.3
+    - blib/man3/PPI::Statement::Include.3
+    - blib/man3/PPI::Statement::Include::Perl6.3
+    - blib/man3/PPI::Statement::Null.3
+    - blib/man3/PPI::Statement::Package.3
+    - blib/man3/PPI::Statement::Scheduled.3
+    - blib/man3/PPI::Statement::Sub.3
+    - blib/man3/PPI::Statement::Unknown.3
+    - blib/man3/PPI::Statement::UnmatchedBrace.3
+    - blib/man3/PPI::Statement::Variable.3
+    - blib/man3/PPI::Structure.3
+    - blib/man3/PPI::Structure::Block.3
+    - blib/man3/PPI::Structure::Condition.3
+    - blib/man3/PPI::Structure::Constructor.3
+    - blib/man3/PPI::Structure::ForLoop.3
+    - blib/man3/PPI::Structure::List.3
+    - blib/man3/PPI::Structure::Subscript.3
+    - blib/man3/PPI::Structure::Unknown.3
+    - blib/man3/PPI::Token.3
+    - blib/man3/PPI::Token::ArrayIndex.3
+    - blib/man3/PPI::Token::Attribute.3
+    - blib/man3/PPI::Token::Cast.3
+    - blib/man3/PPI::Token::Comment.3
+    - blib/man3/PPI::Token::DashedWord.3
+    - blib/man3/PPI::Token::Data.3
+    - blib/man3/PPI::Token::End.3
+    - blib/man3/PPI::Token::HereDoc.3
+    - blib/man3/PPI::Token::Label.3
+    - blib/man3/PPI::Token::Magic.3
+    - blib/man3/PPI::Token::Number.3
+    - blib/man3/PPI::Token::Number::Binary.3
+    - blib/man3/PPI::Token::Number::Exp.3
+    - blib/man3/PPI::Token::Number::Float.3
+    - blib/man3/PPI::Token::Number::Hex.3
+    - blib/man3/PPI::Token::Number::Octal.3
+    - blib/man3/PPI::Token::Number::Version.3
+    - blib/man3/PPI::Token::Operator.3
+    - blib/man3/PPI::Token::Pod.3
+    - blib/man3/PPI::Token::Prototype.3
+    - blib/man3/PPI::Token::Quote.3
+    - blib/man3/PPI::Token::Quote::Double.3
+    - blib/man3/PPI::Token::Quote::Interpolate.3
+    - blib/man3/PPI::Token::Quote::Literal.3
+    - blib/man3/PPI::Token::Quote::Single.3
+    - blib/man3/PPI::Token::QuoteLike.3
+    - blib/man3/PPI::Token::QuoteLike::Backtick.3
+    - blib/man3/PPI::Token::QuoteLike::Command.3
+    - blib/man3/PPI::Token::QuoteLike::Readline.3
+    - blib/man3/PPI::Token::QuoteLike::Regexp.3
+    - blib/man3/PPI::Token::QuoteLike::Words.3
+    - blib/man3/PPI::Token::Regexp.3
+    - blib/man3/PPI::Token::Regexp::Match.3
+    - blib/man3/PPI::Token::Regexp::Substitute.3
+    - blib/man3/PPI::Token::Regexp::Transliterate.3
+    - blib/man3/PPI::Token::Separator.3
+    - blib/man3/PPI::Token::Structure.3
+    - blib/man3/PPI::Token::Symbol.3
+    - blib/man3/PPI::Token::Unknown.3
+    - blib/man3/PPI::Token::Whitespace.3
+    - blib/man3/PPI::Token::Word.3
+    - blib/man3/PPI::Token::_QuoteEngine.3
+    - blib/man3/PPI::Token::_QuoteEngine::Full.3
+    - blib/man3/PPI::Token::_QuoteEngine::Simple.3
+    - blib/man3/PPI::Tokenizer.3
+    - blib/man3/PPI::Transform.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for PPI
+  build_output: |
+    cp lib/PPI.pm blib/lib/PPI.pm
+    cp lib/PPI/Token/Data.pm blib/lib/PPI/Token/Data.pm
+    cp lib/PPI/Token/_QuoteEngine.pm blib/lib/PPI/Token/_QuoteEngine.pm
+    cp lib/PPI/Token/Quote/Literal.pm blib/lib/PPI/Token/Quote/Literal.pm
+    cp lib/PPI/Token/Unknown.pm blib/lib/PPI/Token/Unknown.pm
+    cp lib/PPI/Normal/Standard.pm blib/lib/PPI/Normal/Standard.pm
+    cp lib/PPI/Token/_QuoteEngine/Simple.pm blib/lib/PPI/Token/_QuoteEngine/Simple.pm
+    cp lib/PPI/Node.pm blib/lib/PPI/Node.pm
+    cp lib/PPI/Token/_QuoteEngine/Full.pm blib/lib/PPI/Token/_QuoteEngine/Full.pm
+    cp lib/PPI/Token/Number/Version.pm blib/lib/PPI/Token/Number/Version.pm
+    cp lib/PPI/Dumper.pm blib/lib/PPI/Dumper.pm
+    cp lib/PPI/Statement/Package.pm blib/lib/PPI/Statement/Package.pm
+    cp lib/PPI/Token/Pod.pm blib/lib/PPI/Token/Pod.pm
+    cp lib/PPI/Token/Label.pm blib/lib/PPI/Token/Label.pm
+    cp lib/PPI/Statement/Data.pm blib/lib/PPI/Statement/Data.pm
+    cp lib/PPI/Token/Attribute.pm blib/lib/PPI/Token/Attribute.pm
+    cp lib/PPI/Statement/Break.pm blib/lib/PPI/Statement/Break.pm
+    cp lib/PPI/Structure/Unknown.pm blib/lib/PPI/Structure/Unknown.pm
+    cp lib/PPI/Statement/Compound.pm blib/lib/PPI/Statement/Compound.pm
+    cp lib/PPI/Token/QuoteLike/Words.pm blib/lib/PPI/Token/QuoteLike/Words.pm
+    cp lib/PPI/Token/Magic.pm blib/lib/PPI/Token/Magic.pm
+    cp lib/PPI/Token/Number/Hex.pm blib/lib/PPI/Token/Number/Hex.pm
+    cp lib/PPI/Find.pm blib/lib/PPI/Find.pm
+    cp lib/PPI/Token/Prototype.pm blib/lib/PPI/Token/Prototype.pm
+    cp lib/PPI/Structure/Constructor.pm blib/lib/PPI/Structure/Constructor.pm
+    cp lib/PPI/Token/Quote/Double.pm blib/lib/PPI/Token/Quote/Double.pm
+    cp lib/PPI/Statement/Null.pm blib/lib/PPI/Statement/Null.pm
+    cp lib/PPI/Statement/Scheduled.pm blib/lib/PPI/Statement/Scheduled.pm
+    cp lib/PPI/Token/Cast.pm blib/lib/PPI/Token/Cast.pm
+    cp lib/PPI/Statement/Sub.pm blib/lib/PPI/Statement/Sub.pm
+    cp lib/PPI/Token/End.pm blib/lib/PPI/Token/End.pm
+    cp lib/PPI/Token/Separator.pm blib/lib/PPI/Token/Separator.pm
+    cp lib/PPI/Document/File.pm blib/lib/PPI/Document/File.pm
+    cp lib/PPI/Token/Number/Octal.pm blib/lib/PPI/Token/Number/Octal.pm
+    cp lib/PPI/Token/DashedWord.pm blib/lib/PPI/Token/DashedWord.pm
+    cp lib/PPI/Structure/List.pm blib/lib/PPI/Structure/List.pm
+    cp lib/PPI/Structure/Subscript.pm blib/lib/PPI/Structure/Subscript.pm
+    cp lib/PPI/Token/Structure.pm blib/lib/PPI/Token/Structure.pm
+    cp lib/PPI/Normal.pm blib/lib/PPI/Normal.pm
+    cp lib/PPI/Statement/Unknown.pm blib/lib/PPI/Statement/Unknown.pm
+    cp lib/PPI/Exception.pm blib/lib/PPI/Exception.pm
+    cp lib/PPI/Token/Quote/Single.pm blib/lib/PPI/Token/Quote/Single.pm
+    cp lib/PPI/Token/Quote/Interpolate.pm blib/lib/PPI/Token/Quote/Interpolate.pm
+    cp lib/PPI/Statement/Variable.pm blib/lib/PPI/Statement/Variable.pm
+    cp lib/PPI/Token/Symbol.pm blib/lib/PPI/Token/Symbol.pm
+    cp lib/PPI/Token/Regexp.pm blib/lib/PPI/Token/Regexp.pm
+    cp lib/PPI/Token/Word.pm blib/lib/PPI/Token/Word.pm
+    cp lib/PPI/Token/Number/Float.pm blib/lib/PPI/Token/Number/Float.pm
+    cp lib/PPI/Token/QuoteLike/Readline.pm blib/lib/PPI/Token/QuoteLike/Readline.pm
+    cp lib/PPI/Structure/Condition.pm blib/lib/PPI/Structure/Condition.pm
+    cp lib/PPI/Structure/Block.pm blib/lib/PPI/Structure/Block.pm
+    cp lib/PPI/Token/Regexp/Transliterate.pm blib/lib/PPI/Token/Regexp/Transliterate.pm
+    cp lib/PPI/Statement/Include/Perl6.pm blib/lib/PPI/Statement/Include/Perl6.pm
+    cp lib/PPI/Token/ArrayIndex.pm blib/lib/PPI/Token/ArrayIndex.pm
+    cp lib/PPI/Token/Quote.pm blib/lib/PPI/Token/Quote.pm
+    cp lib/PPI/Token/Number/Binary.pm blib/lib/PPI/Token/Number/Binary.pm
+    cp lib/PPI/Token/QuoteLike/Command.pm blib/lib/PPI/Token/QuoteLike/Command.pm
+    cp lib/PPI/Document.pm blib/lib/PPI/Document.pm
+    cp lib/PPI/Statement/Expression.pm blib/lib/PPI/Statement/Expression.pm
+    cp lib/PPI/Token/Regexp/Substitute.pm blib/lib/PPI/Token/Regexp/Substitute.pm
+    cp lib/PPI/Token/Regexp/Match.pm blib/lib/PPI/Token/Regexp/Match.pm
+    cp lib/PPI/Cache.pm blib/lib/PPI/Cache.pm
+    cp lib/PPI/Element.pm blib/lib/PPI/Element.pm
+    cp lib/PPI/Statement/UnmatchedBrace.pm blib/lib/PPI/Statement/UnmatchedBrace.pm
+    cp lib/PPI/Structure/ForLoop.pm blib/lib/PPI/Structure/ForLoop.pm
+    cp lib/PPI/Token/Number/Exp.pm blib/lib/PPI/Token/Number/Exp.pm
+    cp lib/PPI/Token/Number.pm blib/lib/PPI/Token/Number.pm
+    cp lib/PPI/Token/HereDoc.pm blib/lib/PPI/Token/HereDoc.pm
+    cp lib/PPI/Token/Comment.pm blib/lib/PPI/Token/Comment.pm
+    cp lib/PPI/Document/Fragment.pm blib/lib/PPI/Document/Fragment.pm
+    cp lib/PPI/Statement.pm blib/lib/PPI/Statement.pm
+    cp lib/PPI/Transform.pm blib/lib/PPI/Transform.pm
+    cp lib/PPI/Token/QuoteLike/Backtick.pm blib/lib/PPI/Token/QuoteLike/Backtick.pm
+    cp lib/PPI/Token/QuoteLike.pm blib/lib/PPI/Token/QuoteLike.pm
+    cp lib/PPI/Structure.pm blib/lib/PPI/Structure.pm
+    cp lib/PPI/Tokenizer.pm blib/lib/PPI/Tokenizer.pm
+    cp lib/PPI/Document/Normalized.pm blib/lib/PPI/Document/Normalized.pm
+    cp lib/PPI/Token/QuoteLike/Regexp.pm blib/lib/PPI/Token/QuoteLike/Regexp.pm
+    cp lib/PPI/Token/Operator.pm blib/lib/PPI/Token/Operator.pm
+    cp lib/PPI/Lexer.pm blib/lib/PPI/Lexer.pm
+    cp lib/PPI/Token.pm blib/lib/PPI/Token.pm
+    cp lib/PPI/Token/Whitespace.pm blib/lib/PPI/Token/Whitespace.pm
+    cp lib/PPI/Statement/Include.pm blib/lib/PPI/Statement/Include.pm
+    cp lib/PPI/Util.pm blib/lib/PPI/Util.pm
+    cp lib/PPI/Statement/End.pm blib/lib/PPI/Statement/End.pm
+    cp lib/PPI/Exception/ParserTimeout.pm blib/lib/PPI/Exception/ParserTimeout.pm
+    Manifying blib/man3/PPI.3
+    Manifying blib/man3/PPI::Token::Data.3
+    Manifying blib/man3/PPI::Token::_QuoteEngine.3
+    Manifying blib/man3/PPI::Token::Quote::Literal.3
+    Manifying blib/man3/PPI::Token::Unknown.3
+    Manifying blib/man3/PPI::Token::_QuoteEngine::Simple.3
+    Manifying blib/man3/PPI::Normal::Standard.3
+    Manifying blib/man3/PPI::Node.3
+    Manifying blib/man3/PPI::Token::_QuoteEngine::Full.3
+    Manifying blib/man3/PPI::Token::Number::Version.3
+    Manifying blib/man3/PPI::Dumper.3
+    Manifying blib/man3/PPI::Statement::Package.3
+    Manifying blib/man3/PPI::Token::Pod.3
+    Manifying blib/man3/PPI::Token::Label.3
+    Manifying blib/man3/PPI::Statement::Data.3
+    Manifying blib/man3/PPI::Token::Attribute.3
+    Manifying blib/man3/PPI::Statement::Break.3
+    Manifying blib/man3/PPI::Structure::Unknown.3
+    Manifying blib/man3/PPI::Statement::Compound.3
+    Manifying blib/man3/PPI::Token::QuoteLike::Words.3
+    Manifying blib/man3/PPI::Token::Magic.3
+    Manifying blib/man3/PPI::Token::Number::Hex.3
+    Manifying blib/man3/PPI::Find.3
+    Manifying blib/man3/PPI::Token::Prototype.3
+    Manifying blib/man3/PPI::Structure::Constructor.3
+    Manifying blib/man3/PPI::Token::Quote::Double.3
+    Manifying blib/man3/PPI::Statement::Null.3
+    Manifying blib/man3/PPI::Statement::Scheduled.3
+    Manifying blib/man3/PPI::Token::Cast.3
+    Manifying blib/man3/PPI::Statement::Sub.3
+    Manifying blib/man3/PPI::Token::End.3
+    Manifying blib/man3/PPI::Token::Separator.3
+    Manifying blib/man3/PPI::Document::File.3
+    Manifying blib/man3/PPI::Token::Number::Octal.3
+    Manifying blib/man3/PPI::Token::DashedWord.3
+    Manifying blib/man3/PPI::Structure::List.3
+    Manifying blib/man3/PPI::Structure::Subscript.3
+    Manifying blib/man3/PPI::Token::Structure.3
+    Manifying blib/man3/PPI::Normal.3
+    Manifying blib/man3/PPI::Statement::Unknown.3
+    Manifying blib/man3/PPI::Token::Quote::Interpolate.3
+    Manifying blib/man3/PPI::Token::Quote::Single.3
+    Manifying blib/man3/PPI::Statement::Variable.3
+    Manifying blib/man3/PPI::Token::Symbol.3
+    Manifying blib/man3/PPI::Token::Regexp.3
+    Manifying blib/man3/PPI::Token::Word.3
+    Manifying blib/man3/PPI::Token::Number::Float.3
+    Manifying blib/man3/PPI::Token::QuoteLike::Readline.3
+    Manifying blib/man3/PPI::Structure::Condition.3
+    Manifying blib/man3/PPI::Structure::Block.3
+    Manifying blib/man3/PPI::Token::Regexp::Transliterate.3
+    Manifying blib/man3/PPI::Statement::Include::Perl6.3
+    Manifying blib/man3/PPI::Token::ArrayIndex.3
+    Manifying blib/man3/PPI::Token::Quote.3
+    Manifying blib/man3/PPI::Token::Number::Binary.3
+    Manifying blib/man3/PPI::Token::QuoteLike::Command.3
+    Manifying blib/man3/PPI::Document.3
+    Manifying blib/man3/PPI::Statement::Expression.3
+    Manifying blib/man3/PPI::Token::Regexp::Substitute.3
+    Manifying blib/man3/PPI::Token::Regexp::Match.3
+    Manifying blib/man3/PPI::Cache.3
+    Manifying blib/man3/PPI::Element.3
+    Manifying blib/man3/PPI::Statement::UnmatchedBrace.3
+    Manifying blib/man3/PPI::Token::Number::Exp.3
+    Manifying blib/man3/PPI::Structure::ForLoop.3
+    Manifying blib/man3/PPI::Token::Number.3
+    Manifying blib/man3/PPI::Token::HereDoc.3
+    Manifying blib/man3/PPI::Document::Fragment.3
+    Manifying blib/man3/PPI::Token::Comment.3
+    Manifying blib/man3/PPI::Token::QuoteLike::Backtick.3
+    Manifying blib/man3/PPI::Transform.3
+    Manifying blib/man3/PPI::Statement.3
+    Manifying blib/man3/PPI::Tokenizer.3
+    Manifying blib/man3/PPI::Structure.3
+    Manifying blib/man3/PPI::Token::QuoteLike.3
+    Manifying blib/man3/PPI::Token::QuoteLike::Regexp.3
+    Manifying blib/man3/PPI::Document::Normalized.3
+    Manifying blib/man3/PPI::Lexer.3
+    Manifying blib/man3/PPI::Token::Operator.3
+    Manifying blib/man3/PPI::Token.3
+    Manifying blib/man3/PPI::Statement::Include.3
+    Manifying blib/man3/PPI::Token::Whitespace.3
+    Manifying blib/man3/PPI::Statement::End.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH/PPI-1.202_03/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH/PPI-1.202_03
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH/PPI-1.202_03/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH/PPI-1.202_03/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.72
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: ADAMK
+  dist_basename: PPI-1.202_03.tar.gz
+  dist_date: 1210698971
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH/PPI-1.202_03
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH/PPI-1.202_03
+  dist_file: /home/brian/CPAN/authors/id/A/AD/ADAMK/PPI-1.202_03.tar.gz
+  dist_md5: 7c4be30cacafc4c36c9c0e600ceb991d
+  dist_size: 202011
+  manifest:
+    - Changes
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - inc/Class/Inspector.pm
+    - inc/Config/Tiny.pm
+    - inc/File/Remove.pm
+    - inc/Hook/LexWrap.pm
+    - inc/Module/Install.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - inc/Test/ClassAPI.pm
+    - inc/Test/Object.pm
+    - inc/Test/SubCalls.pm
+    - inline2test.conf
+    - inline2test.tpl
+    - lib/PPI.pm
+    - lib/PPI/Cache.pm
+    - lib/PPI/Document.pm
+    - lib/PPI/Document/File.pm
+    - lib/PPI/Document/Fragment.pm
+    - lib/PPI/Document/Normalized.pm
+    - lib/PPI/Dumper.pm
+    - lib/PPI/Element.pm
+    - lib/PPI/Exception.pm
+    - lib/PPI/Exception/ParserTimeout.pm
+    - lib/PPI/Find.pm
+    - lib/PPI/Lexer.pm
+    - lib/PPI/Node.pm
+    - lib/PPI/Normal.pm
+    - lib/PPI/Normal/Standard.pm
+    - lib/PPI/Statement.pm
+    - lib/PPI/Statement/Break.pm
+    - lib/PPI/Statement/Compound.pm
+    - lib/PPI/Statement/Data.pm
+    - lib/PPI/Statement/End.pm
+    - lib/PPI/Statement/Expression.pm
+    - lib/PPI/Statement/Include.pm
+    - lib/PPI/Statement/Include/Perl6.pm
+    - lib/PPI/Statement/Null.pm
+    - lib/PPI/Statement/Package.pm
+    - lib/PPI/Statement/Scheduled.pm
+    - lib/PPI/Statement/Sub.pm
+    - lib/PPI/Statement/Unknown.pm
+    - lib/PPI/Statement/UnmatchedBrace.pm
+    - lib/PPI/Statement/Variable.pm
+    - lib/PPI/Structure.pm
+    - lib/PPI/Structure/Block.pm
+    - lib/PPI/Structure/Condition.pm
+    - lib/PPI/Structure/Constructor.pm
+    - lib/PPI/Structure/ForLoop.pm
+    - lib/PPI/Structure/List.pm
+    - lib/PPI/Structure/Subscript.pm
+    - lib/PPI/Structure/Unknown.pm
+    - lib/PPI/Token.pm
+    - lib/PPI/Token/ArrayIndex.pm
+    - lib/PPI/Token/Attribute.pm
+    - lib/PPI/Token/Cast.pm
+    - lib/PPI/Token/Comment.pm
+    - lib/PPI/Token/DashedWord.pm
+    - lib/PPI/Token/Data.pm
+    - lib/PPI/Token/End.pm
+    - lib/PPI/Token/HereDoc.pm
+    - lib/PPI/Token/Label.pm
+    - lib/PPI/Token/Magic.pm
+    - lib/PPI/Token/Number.pm
+    - lib/PPI/Token/Number/Binary.pm
+    - lib/PPI/Token/Number/Exp.pm
+    - lib/PPI/Token/Number/Float.pm
+    - lib/PPI/Token/Number/Hex.pm
+    - lib/PPI/Token/Number/Octal.pm
+    - lib/PPI/Token/Number/Version.pm
+    - lib/PPI/Token/Operator.pm
+    - lib/PPI/Token/Pod.pm
+    - lib/PPI/Token/Prototype.pm
+    - lib/PPI/Token/Quote.pm
+    - lib/PPI/Token/Quote/Double.pm
+    - lib/PPI/Token/Quote/Interpolate.pm
+    - lib/PPI/Token/Quote/Literal.pm
+    - lib/PPI/Token/Quote/Single.pm
+    - lib/PPI/Token/QuoteLike.pm
+    - lib/PPI/Token/QuoteLike/Backtick.pm
+    - lib/PPI/Token/QuoteLike/Command.pm
+    - lib/PPI/Token/QuoteLike/Readline.pm
+    - lib/PPI/Token/QuoteLike/Regexp.pm
+    - lib/PPI/Token/QuoteLike/Words.pm
+    - lib/PPI/Token/Regexp.pm
+    - lib/PPI/Token/Regexp/Match.pm
+    - lib/PPI/Token/Regexp/Substitute.pm
+    - lib/PPI/Token/Regexp/Transliterate.pm
+    - lib/PPI/Token/Separator.pm
+    - lib/PPI/Token/Structure.pm
+    - lib/PPI/Token/Symbol.pm
+    - lib/PPI/Token/Unknown.pm
+    - lib/PPI/Token/Whitespace.pm
+    - lib/PPI/Token/Word.pm
+    - lib/PPI/Token/_QuoteEngine.pm
+    - lib/PPI/Token/_QuoteEngine/Full.pm
+    - lib/PPI/Token/_QuoteEngine/Simple.pm
+    - lib/PPI/Tokenizer.pm
+    - lib/PPI/Transform.pm
+    - lib/PPI/Util.pm
+    - t/01_compile.t
+    - t/02_api.t
+    - t/03_empiric.t
+    - t/04_element.t
+    - t/05_lexer_practical.t
+    - t/06_round_trip.t
+    - t/07_token.t
+    - t/08_regression.t
+    - t/09_normal.t
+    - t/10_statement.t
+    - t/11_util.t
+    - t/12_location.t
+    - t/13_data.t
+    - t/14_charsets.t
+    - t/15_transform.t
+    - t/16_xml_compatibility.t
+    - t/17_storable.t
+    - t/18_cache.t
+    - t/19_selftesting.t
+    - t/20_tokenizer_regression.t
+    - t/21_exhaustive.t
+    - t/22_readonly.t
+    - t/23_file.t
+    - t/24_v6.t
+    - t/97_meta.t
+    - t/99_author.t
+    - t/data/03_empiric/test.dat
+    - t/data/05_lexer_practical/01_simpleassign.code
+    - t/data/05_lexer_practical/01_simpleassign.dump
+    - t/data/05_lexer_practical/02_END.code
+    - t/data/05_lexer_practical/02_END.dump
+    - t/data/05_lexer_practical/03_subroutine_attributes.code
+    - t/data/05_lexer_practical/03_subroutine_attributes.dump
+    - t/data/05_lexer_practical/04_anonymous_subroutines.code
+    - t/data/05_lexer_practical/04_anonymous_subroutines.dump
+    - t/data/05_lexer_practical/05_compound_loops.code
+    - t/data/05_lexer_practical/05_compound_loops.dump
+    - t/data/05_lexer_practical/06_subroutine_prototypes.code
+    - t/data/05_lexer_practical/06_subroutine_prototypes.dump
+    - t/data/05_lexer_practical/07_unmatched_braces.code
+    - t/data/05_lexer_practical/07_unmatched_braces.dump
+    - t/data/05_lexer_practical/08_subroutines.code
+    - t/data/05_lexer_practical/08_subroutines.dump
+    - t/data/05_lexer_practical/09_heredoc.code
+    - t/data/05_lexer_practical/09_heredoc.dump
+    - t/data/05_lexer_practical/10_readline.code
+    - t/data/05_lexer_practical/10_readline.dump
+    - t/data/05_lexer_practical/11_dor.code
+    - t/data/05_lexer_practical/11_dor.dump
+    - t/data/07_token/exp.code
+    - t/data/07_token/exp.dump
+    - t/data/07_token/hex.code
+    - t/data/07_token/hex.dump
+    - t/data/07_token/range_operator.code
+    - t/data/07_token/range_operator.dump
+    - t/data/08_regression/01_rt_cpan_19629.code
+    - t/data/08_regression/01_rt_cpan_19629.dump
+    - t/data/08_regression/01_rt_cpan_19629b.code
+    - t/data/08_regression/01_rt_cpan_19629b.dump
+    - t/data/08_regression/02_rt_cpan_9582.code
+    - t/data/08_regression/02_rt_cpan_9582.dump
+    - t/data/08_regression/03_rt_cpan_9614.code
+    - t/data/08_regression/03_rt_cpan_9614.dump
+    - t/data/08_regression/04_tinderbox.code
+    - t/data/08_regression/04_tinderbox.dump
+    - t/data/08_regression/05_rt_cpan_13425.code
+    - t/data/08_regression/05_rt_cpan_13425.dump
+    - t/data/08_regression/06_partial_quote_double.code
+    - t/data/08_regression/06_partial_quote_double.dump
+    - t/data/08_regression/07_partial_quote_single.code
+    - t/data/08_regression/07_partial_quote_single.dump
+    - t/data/08_regression/08_partial_regex_substitution.code
+    - t/data/08_regression/08_partial_regex_substitution.dump
+    - t/data/08_regression/09_for_var.code
+    - t/data/08_regression/09_for_var.dump
+    - t/data/08_regression/10_leading_regexp.code
+    - t/data/08_regression/10_leading_regexp.dump
+    - t/data/08_regression/11_multiply_vs_glob_cast.code
+    - t/data/08_regression/11_multiply_vs_glob_cast.dump
+    - t/data/08_regression/12_pow.code
+    - t/data/08_regression/12_pow.dump
+    - t/data/08_regression/13_goto.code
+    - t/data/08_regression/13_goto.dump
+    - t/data/08_regression/14_minus.code
+    - t/data/08_regression/14_minus.dump
+    - t/data/08_regression/14b_minus.code
+    - t/data/08_regression/14b_minus.dump
+    - t/data/08_regression/15_dash_t.code
+    - t/data/08_regression/15_dash_t.dump
+    - t/data/08_regression/16_sub_declaration.code
+    - t/data/08_regression/16_sub_declaration.dump
+    - t/data/08_regression/17_scope.code
+    - t/data/08_regression/17_scope.dump
+    - t/data/08_regression/18_decimal_point.code
+    - t/data/08_regression/18_decimal_point.dump
+    - t/data/08_regression/19_long_operators.code
+    - t/data/08_regression/19_long_operators.dump
+    - t/data/08_regression/19_long_operators2.code
+    - t/data/08_regression/19_long_operators2.dump
+    - t/data/08_regression/20_hash_constructor.code
+    - t/data/08_regression/20_hash_constructor.dump
+    - t/data/08_regression/21_list_of_refs.code
+    - t/data/08_regression/21_list_of_refs.dump
+    - t/data/08_regression/22_hash_vs_brace.code
+    - t/data/08_regression/22_hash_vs_brace.dump
+    - t/data/08_regression/23_rt_cpan_8752.code
+    - t/data/08_regression/23_rt_cpan_8752.dump
+    - t/data/08_regression/24_compound.code
+    - t/data/08_regression/24_compound.dump
+    - t/data/08_regression/25_hash_block.code
+    - t/data/08_regression/25_hash_block.dump
+    - t/data/08_regression/26_rt_cpan_23253.code
+    - t/data/08_regression/26_rt_cpan_23253.dump
+    - t/data/08_regression/27_constant_hash.code
+    - t/data/08_regression/27_constant_hash.dump
+    - t/data/08_regression/28_backref_style_heredoc.code
+    - t/data/08_regression/28_backref_style_heredoc.dump
+    - t/data/08_regression/29_chained_casts.code
+    - t/data/08_regression/29_chained_casts.dump
+    - t/data/08_regression/29_magic_carat.code
+    - t/data/08_regression/29_magic_carat.dump
+    - t/data/08_regression/30_hash_bang.code
+    - t/data/08_regression/30_hash_bang.dump
+    - t/data/08_regression/31_hash_carat_H.code
+    - t/data/08_regression/31_hash_carat_H.dump
+    - t/data/08_regression/32_readline.code
+    - t/data/08_regression/32_readline.dump
+    - t/data/08_regression/33_magic_carat_long.code
+    - t/data/08_regression/33_magic_carat_long.dump
+    - t/data/08_regression/34_attr_whitespace.code
+    - t/data/08_regression/34_attr_whitespace.dump
+    - t/data/08_regression/35_attr_perlsub.code
+    - t/data/08_regression/35_attr_perlsub.dump
+    - t/data/08_regression/36_begin_label.code
+    - t/data/08_regression/36_begin_label.dump
+    - t/data/11_util/test.pm
+    - t/data/13_data/Foo.pm
+    - t/data/15_transform/sample1.pm
+    - t/data/15_transform/sample1.pm.out
+    - t/data/24_v6/Grammar.pm
+    - t/data/24_v6/Simple.pm
+    - t/data/basic.pl
+    - t/data/test2.txt
+    - t/lib/PPI.pm
+    - t/ppi_element.t
+    - t/ppi_node.t
+    - t/ppi_normal.t
+    - t/ppi_statement_variable.t
+    - t/ppi_token__quoteengine_full.t
+    - t/ppi_token_dashedword.t
+    - t/ppi_token_quote.t
+    - t/ppi_token_quote_double.t
+    - t/ppi_token_quote_interpolate.t
+    - t/ppi_token_quote_literal.t
+    - t/ppi_token_quote_single.t
+    - t/ppi_token_word.t
+  manifest_file_info:
+    - bytesize: 38206
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1210698734
+      name: Changes
+    - bytesize: 20217
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1210698734
+      name: LICENSE
+    - bytesize: 8336
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1210698871
+      name: MANIFEST
+    - bytesize: 671
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1210698870
+      name: META.yml
+    - bytesize: 1197
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1210698734
+      name: Makefile.PL
+    - bytesize: 32172
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1210698734
+      name: README
+    - bytesize: 9136
+      file_mime_type: ~
+      line_count: ~
+      md5: 21383e4e5bd71e777e65d92a94ca1b67
+      mtime: 1210698869
+      name: inc/Class/Inspector.pm
+    - bytesize: 2568
+      file_mime_type: ~
+      line_count: ~
+      md5: 75845727699824b605d83efaa4a1cc4d
+      mtime: 1210698870
+      name: inc/Config/Tiny.pm
+    - bytesize: 4368
+      file_mime_type: ~
+      line_count: ~
+      md5: e1566434a1ff28845ad101338878696e
+      mtime: 1210698869
+      name: inc/File/Remove.pm
+    - bytesize: 2375
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ac66b4f7fe6fafe6c8f264f88997f7b
+      mtime: 1210698870
+      name: inc/Hook/LexWrap.pm
+    - bytesize: 8566
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1210698869
+      name: inc/Module/Install.pm
+    - bytesize: 1053
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1210698869
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1788
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1210698870
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1210698870
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1210698869
+      name: inc/Module/Install/Include.pm
+    - bytesize: 6225
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1210698870
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 8970
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1210698869
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1794
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1210698870
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 721
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1210698870
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 6155
+      file_mime_type: ~
+      line_count: ~
+      md5: f3711db953e7bda97d62dd2693743b7e
+      mtime: 1210698869
+      name: inc/Test/ClassAPI.pm
+    - bytesize: 901
+      file_mime_type: ~
+      line_count: ~
+      md5: 47aa857ee2f5e9add37706f34845e734
+      mtime: 1210698869
+      name: inc/Test/Object.pm
+    - bytesize: 1863
+      file_mime_type: ~
+      line_count: ~
+      md5: ec545295f38cb9e6a2752667be82d2a7
+      mtime: 1210698869
+      name: inc/Test/SubCalls.pm
+    - bytesize: 30
+      file_mime_type: ~
+      line_count: ~
+      md5: 031a7e15b31f25a683e245c6d7fffc2b
+      mtime: 1210698734
+      name: inline2test.conf
+    - bytesize: 282
+      file_mime_type: ~
+      line_count: ~
+      md5: dedbe210d7b842c136c116f6a4922803
+      mtime: 1210698734
+      name: inline2test.tpl
+    - bytesize: 31052
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a7d36c01fb19a7b6aeda7f25ead3c1c
+      mtime: 1210698734
+      name: lib/PPI.pm
+    - bytesize: 6145
+      file_mime_type: ~
+      line_count: ~
+      md5: e19b5d7f1e45d4e404012eb63ed4432f
+      mtime: 1210698734
+      name: lib/PPI/Cache.pm
+    - bytesize: 20509
+      file_mime_type: ~
+      line_count: ~
+      md5: be76229e10cf77a6dac171894178689d
+      mtime: 1210698734
+      name: lib/PPI/Document.pm
+    - bytesize: 3073
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e5dc78ae6ebbaab71ee5b1847fe4fdb
+      mtime: 1210698735
+      name: lib/PPI/Document/File.pm
+    - bytesize: 1911
+      file_mime_type: ~
+      line_count: ~
+      md5: a2528391cbd9cfa8effb2b5639e180bd
+      mtime: 1210698735
+      name: lib/PPI/Document/Fragment.pm
+    - bytesize: 7824
+      file_mime_type: ~
+      line_count: ~
+      md5: 64423cce05daed35ec768f48365603c1
+      mtime: 1210698735
+      name: lib/PPI/Document/Normalized.pm
+    - bytesize: 7190
+      file_mime_type: ~
+      line_count: ~
+      md5: bf6ebc080d479836d3ad37dd9e9735cd
+      mtime: 1210698734
+      name: lib/PPI/Dumper.pm
+    - bytesize: 21239
+      file_mime_type: ~
+      line_count: ~
+      md5: 77e1e6cd75a30596fb350d02737f7fae
+      mtime: 1210698734
+      name: lib/PPI/Element.pm
+    - bytesize: 640
+      file_mime_type: ~
+      line_count: ~
+      md5: f5060408b1916337e58a8b54d709ee59
+      mtime: 1210698734
+      name: lib/PPI/Exception.pm
+    - bytesize: 141
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ad019276bebba59b868e7643b1d3ec
+      mtime: 1210698735
+      name: lib/PPI/Exception/ParserTimeout.pm
+    - bytesize: 9002
+      file_mime_type: ~
+      line_count: ~
+      md5: 957cc76f7c91703bb624d9e724cf130a
+      mtime: 1210698734
+      name: lib/PPI/Find.pm
+    - bytesize: 36450
+      file_mime_type: ~
+      line_count: ~
+      md5: 58307b7b41f119d9042e815874ae81a1
+      mtime: 1210698734
+      name: lib/PPI/Lexer.pm
+    - bytesize: 20136
+      file_mime_type: ~
+      line_count: ~
+      md5: db0e320c555757fd5e87b9c52713e872
+      mtime: 1210698734
+      name: lib/PPI/Node.pm
+    - bytesize: 8772
+      file_mime_type: ~
+      line_count: ~
+      md5: e6ef432496dc877eedd562a47ba90e9a
+      mtime: 1210698734
+      name: lib/PPI/Normal.pm
+    - bytesize: 3212
+      file_mime_type: ~
+      line_count: ~
+      md5: c1234c7c5441b578687a89aa3bebce32
+      mtime: 1210698735
+      name: lib/PPI/Normal/Standard.pm
+    - bytesize: 8420
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fa9aaecb7acd08d1ef1b6eeb1a3fc47
+      mtime: 1210698735
+      name: lib/PPI/Statement.pm
+    - bytesize: 1419
+      file_mime_type: ~
+      line_count: ~
+      md5: f4eb09652b77aa00ce8b646d60221e6d
+      mtime: 1210698735
+      name: lib/PPI/Statement/Break.pm
+    - bytesize: 4108
+      file_mime_type: ~
+      line_count: ~
+      md5: 05087de3e85bb680770dfed3be61142f
+      mtime: 1210698735
+      name: lib/PPI/Statement/Compound.pm
+    - bytesize: 1428
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f884063f841c0ef035ed87ee0df6238
+      mtime: 1210698735
+      name: lib/PPI/Statement/Data.pm
+    - bytesize: 1379
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e4bac6b9a3b781668a88929eadcd027
+      mtime: 1210698735
+      name: lib/PPI/Statement/End.pm
+    - bytesize: 1260
+      file_mime_type: ~
+      line_count: ~
+      md5: 93916152088fcc9aa6406530675f4fec
+      mtime: 1210698735
+      name: lib/PPI/Statement/Expression.pm
+    - bytesize: 4145
+      file_mime_type: ~
+      line_count: ~
+      md5: a75c5603d2cb4cbb75a1169b184e8115
+      mtime: 1210698735
+      name: lib/PPI/Statement/Include.pm
+    - bytesize: 1638
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ac2030487f6be0f20331354cdc49689
+      mtime: 1210698735
+      name: lib/PPI/Statement/Include/Perl6.pm
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: c4592b82efd3d83199bc6535edb2ee47
+      mtime: 1210698735
+      name: lib/PPI/Statement/Null.pm
+    - bytesize: 3004
+      file_mime_type: ~
+      line_count: ~
+      md5: 3186d4ac56641d47536756257fb3aabe
+      mtime: 1210698735
+      name: lib/PPI/Statement/Package.pm
+    - bytesize: 1825
+      file_mime_type: ~
+      line_count: ~
+      md5: 59a3b901492e5da0922f77acf7a1054a
+      mtime: 1210698735
+      name: lib/PPI/Statement/Scheduled.pm
+    - bytesize: 3653
+      file_mime_type: ~
+      line_count: ~
+      md5: 52b4b49b094175937155f829dd793630
+      mtime: 1210698735
+      name: lib/PPI/Statement/Sub.pm
+    - bytesize: 1373
+      file_mime_type: ~
+      line_count: ~
+      md5: 99122564e4ee08bbfe41db72bf055335
+      mtime: 1210698735
+      name: lib/PPI/Statement/Unknown.pm
+    - bytesize: 1572
+      file_mime_type: ~
+      line_count: ~
+      md5: eabe96996f68bf786aa2e838931d40b7
+      mtime: 1210698735
+      name: lib/PPI/Statement/UnmatchedBrace.pm
+    - bytesize: 5217
+      file_mime_type: ~
+      line_count: ~
+      md5: d9b3d130f66faee2841fd3e5d62d5d50
+      mtime: 1210698735
+      name: lib/PPI/Statement/Variable.pm
+    - bytesize: 8576
+      file_mime_type: ~
+      line_count: ~
+      md5: 70bcdd955caed9210ae91154c7d24ea7
+      mtime: 1210698734
+      name: lib/PPI/Structure.pm
+    - bytesize: 1405
+      file_mime_type: ~
+      line_count: ~
+      md5: 525258d540c667899cda459cc1d435f6
+      mtime: 1210698735
+      name: lib/PPI/Structure/Block.pm
+    - bytesize: 1212
+      file_mime_type: ~
+      line_count: ~
+      md5: 25fcccd196304fbd384c336b44625603
+      mtime: 1210698735
+      name: lib/PPI/Structure/Condition.pm
+    - bytesize: 1189
+      file_mime_type: ~
+      line_count: ~
+      md5: 28d5390e8a35300d75ad4b2903d63619
+      mtime: 1210698735
+      name: lib/PPI/Structure/Constructor.pm
+    - bytesize: 1159
+      file_mime_type: ~
+      line_count: ~
+      md5: f74eae5d4f9c1c49b4f03cf551d143ab
+      mtime: 1210698735
+      name: lib/PPI/Structure/ForLoop.pm
+    - bytesize: 1192
+      file_mime_type: ~
+      line_count: ~
+      md5: 929ebc7479e7dbd0186e201413f546ef
+      mtime: 1210698735
+      name: lib/PPI/Structure/List.pm
+    - bytesize: 1315
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ba54c707254d1307ac599638649d83a
+      mtime: 1210698735
+      name: lib/PPI/Structure/Subscript.pm
+    - bytesize: 1610
+      file_mime_type: ~
+      line_count: ~
+      md5: 24c0860e8260fc20b32483eedafc2abb
+      mtime: 1210698735
+      name: lib/PPI/Structure/Unknown.pm
+    - bytesize: 5331
+      file_mime_type: ~
+      line_count: ~
+      md5: a50ba70c20e68670707954bf57c49acc
+      mtime: 1210698734
+      name: lib/PPI/Token.pm
+    - bytesize: 1433
+      file_mime_type: ~
+      line_count: ~
+      md5: 3aae2955685928462fabbbfcbdfedf78
+      mtime: 1210698735
+      name: lib/PPI/Token/ArrayIndex.pm
+    - bytesize: 3909
+      file_mime_type: ~
+      line_count: ~
+      md5: b766e88c2d960b3ae7b9fd9336f155cd
+      mtime: 1210698735
+      name: lib/PPI/Token/Attribute.pm
+    - bytesize: 1447
+      file_mime_type: ~
+      line_count: ~
+      md5: 629a560a68a6c403530fb9a7d665f5b0
+      mtime: 1210698735
+      name: lib/PPI/Token/Cast.pm
+    - bytesize: 3473
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f4e6dfb99212172b4020cc93a1fdf7a
+      mtime: 1210698735
+      name: lib/PPI/Token/Comment.pm
+    - bytesize: 2513
+      file_mime_type: ~
+      line_count: ~
+      md5: c2038393c40caaeea39a00c8be932b61
+      mtime: 1210698735
+      name: lib/PPI/Token/DashedWord.pm
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: befbcab1f2b48f9502db98f6d16a5247
+      mtime: 1210698735
+      name: lib/PPI/Token/Data.pm
+    - bytesize: 2440
+      file_mime_type: ~
+      line_count: ~
+      md5: e61bdc944676f24dcb5edd9b2b63ebe3
+      mtime: 1210698735
+      name: lib/PPI/Token/End.pm
+    - bytesize: 7701
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c7e3cf6479edf995ac2b073781d8fa8
+      mtime: 1210698735
+      name: lib/PPI/Token/HereDoc.pm
+    - bytesize: 1166
+      file_mime_type: ~
+      line_count: ~
+      md5: 67fd0e240ade58d11585ab3e813cc944
+      mtime: 1210698735
+      name: lib/PPI/Token/Label.pm
+    - bytesize: 5022
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a4fbe61205790fec7468d5693368371
+      mtime: 1210698735
+      name: lib/PPI/Token/Magic.pm
+    - bytesize: 3248
+      file_mime_type: ~
+      line_count: ~
+      md5: bfdc1f91ffc6603009b29c67caadfb32
+      mtime: 1210698735
+      name: lib/PPI/Token/Number.pm
+    - bytesize: 1939
+      file_mime_type: ~
+      line_count: ~
+      md5: 06b967623b91f1e6aedc3e6fce2b9210
+      mtime: 1210698736
+      name: lib/PPI/Token/Number/Binary.pm
+    - bytesize: 2397
+      file_mime_type: ~
+      line_count: ~
+      md5: a0951bd6e2729faeb2d00cb8df8a7e78
+      mtime: 1210698735
+      name: lib/PPI/Token/Number/Exp.pm
+    - bytesize: 2542
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b3aa80e6586a11cab5810f4d0e6ed6e
+      mtime: 1210698736
+      name: lib/PPI/Token/Number/Float.pm
+    - bytesize: 1666
+      file_mime_type: ~
+      line_count: ~
+      md5: a1ff4af082c9ae914eef8bc315ee7224
+      mtime: 1210698736
+      name: lib/PPI/Token/Number/Hex.pm
+    - bytesize: 1844
+      file_mime_type: ~
+      line_count: ~
+      md5: 32afa69539199b31afcd955dc8805bca
+      mtime: 1210698735
+      name: lib/PPI/Token/Number/Octal.pm
+    - bytesize: 2292
+      file_mime_type: ~
+      line_count: ~
+      md5: 266103f58a653e25794e5dae920c7000
+      mtime: 1210698735
+      name: lib/PPI/Token/Number/Version.pm
+    - bytesize: 3187
+      file_mime_type: ~
+      line_count: ~
+      md5: 337527607f3db28b0a8d896c93661bdb
+      mtime: 1210698735
+      name: lib/PPI/Token/Operator.pm
+    - bytesize: 3160
+      file_mime_type: ~
+      line_count: ~
+      md5: f63b47da8e491b980fa011f2fc384453
+      mtime: 1210698735
+      name: lib/PPI/Token/Pod.pm
+    - bytesize: 2343
+      file_mime_type: ~
+      line_count: ~
+      md5: ff8fbf83152a36c4d232c9b452157e0d
+      mtime: 1210698735
+      name: lib/PPI/Token/Prototype.pm
+    - bytesize: 2960
+      file_mime_type: ~
+      line_count: ~
+      md5: ae0a6378244f39059b21cf2cd2619eac
+      mtime: 1210698735
+      name: lib/PPI/Token/Quote.pm
+    - bytesize: 4077
+      file_mime_type: ~
+      line_count: ~
+      md5: fb329a07ed31c700060e1d0771a6b217
+      mtime: 1210698735
+      name: lib/PPI/Token/Quote/Double.pm
+    - bytesize: 2170
+      file_mime_type: ~
+      line_count: ~
+      md5: dbdb474d3585047075aafb218f258222
+      mtime: 1210698735
+      name: lib/PPI/Token/Quote/Interpolate.pm
+    - bytesize: 2129
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c24b8df6c56526d3fc4e991262ecf2f
+      mtime: 1210698735
+      name: lib/PPI/Token/Quote/Literal.pm
+    - bytesize: 2499
+      file_mime_type: ~
+      line_count: ~
+      md5: 361bfa1184b1b9a882f35227dc6b1f67
+      mtime: 1210698735
+      name: lib/PPI/Token/Quote/Single.pm
+    - bytesize: 1626
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e7dd462c1f1de3d63a7e6d20a25d70d
+      mtime: 1210698735
+      name: lib/PPI/Token/QuoteLike.pm
+    - bytesize: 1173
+      file_mime_type: ~
+      line_count: ~
+      md5: fa7c1f8974f9eac9ccdf5a94ce80f509
+      mtime: 1210698735
+      name: lib/PPI/Token/QuoteLike/Backtick.pm
+    - bytesize: 1184
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d9de34fd29ea2e0736b5cdca1e7758e
+      mtime: 1210698735
+      name: lib/PPI/Token/QuoteLike/Command.pm
+    - bytesize: 1358
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cbfa68c56753e532d0739b5e93aa4ec
+      mtime: 1210698735
+      name: lib/PPI/Token/QuoteLike/Readline.pm
+    - bytesize: 1289
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a2562d09b12b882695f644dc2c3fb31
+      mtime: 1210698735
+      name: lib/PPI/Token/QuoteLike/Regexp.pm
+    - bytesize: 1293
+      file_mime_type: ~
+      line_count: ~
+      md5: e1fb8cdb23e3c109b243a85d9ae0ccc3
+      mtime: 1210698735
+      name: lib/PPI/Token/QuoteLike/Words.pm
+    - bytesize: 1420
+      file_mime_type: ~
+      line_count: ~
+      md5: 10241450a9a1dbbbc4a4128c8f73b4dd
+      mtime: 1210698735
+      name: lib/PPI/Token/Regexp.pm
+    - bytesize: 1495
+      file_mime_type: ~
+      line_count: ~
+      md5: 33c982fdc0a353316abff42bbf95538c
+      mtime: 1210698735
+      name: lib/PPI/Token/Regexp/Match.pm
+    - bytesize: 1229
+      file_mime_type: ~
+      line_count: ~
+      md5: 69c0cdd983b49f7ece4a353ce4ab593a
+      mtime: 1210698735
+      name: lib/PPI/Token/Regexp/Substitute.pm
+    - bytesize: 1446
+      file_mime_type: ~
+      line_count: ~
+      md5: 095d0c8386d14df5e009071d69e25e1d
+      mtime: 1210698735
+      name: lib/PPI/Token/Regexp/Transliterate.pm
+    - bytesize: 1317
+      file_mime_type: ~
+      line_count: ~
+      md5: 879d6576287de0c71bdcc7a3414a5299
+      mtime: 1210698735
+      name: lib/PPI/Token/Separator.pm
+    - bytesize: 4904
+      file_mime_type: ~
+      line_count: ~
+      md5: b0404ec384e40d1b731eaf660f436b2a
+      mtime: 1210698735
+      name: lib/PPI/Token/Structure.pm
+    - bytesize: 5043
+      file_mime_type: ~
+      line_count: ~
+      md5: a0cc7799569184192d8e47da1b3a89ea
+      mtime: 1210698735
+      name: lib/PPI/Token/Symbol.pm
+    - bytesize: 7775
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f8eb5421a1ac2596674317cfd95bdcc
+      mtime: 1210698735
+      name: lib/PPI/Token/Unknown.pm
+    - bytesize: 11605
+      file_mime_type: ~
+      line_count: ~
+      md5: e55d5d2e3fdcd8e88037231764c504e3
+      mtime: 1210698735
+      name: lib/PPI/Token/Whitespace.pm
+    - bytesize: 10192
+      file_mime_type: ~
+      line_count: ~
+      md5: cd382578dae2a6c330edf978fa5b58d7
+      mtime: 1210698735
+      name: lib/PPI/Token/Word.pm
+    - bytesize: 6947
+      file_mime_type: ~
+      line_count: ~
+      md5: 70fb66a9f0b28b16baf116b47579f225
+      mtime: 1210698735
+      name: lib/PPI/Token/_QuoteEngine.pm
+    - bytesize: 11458
+      file_mime_type: ~
+      line_count: ~
+      md5: 99f86e9c7d4480f8894933d92abf4a2f
+      mtime: 1210698736
+      name: lib/PPI/Token/_QuoteEngine/Full.pm
+    - bytesize: 1369
+      file_mime_type: ~
+      line_count: ~
+      md5: a439ecb93d2d2ce93d06977ff28c2e56
+      mtime: 1210698736
+      name: lib/PPI/Token/_QuoteEngine/Simple.pm
+    - bytesize: 33409
+      file_mime_type: ~
+      line_count: ~
+      md5: 8aa180b2784a3c8fd4e4d24a754d2d84
+      mtime: 1210698735
+      name: lib/PPI/Tokenizer.pm
+    - bytesize: 5859
+      file_mime_type: ~
+      line_count: ~
+      md5: 93fb5e76ba042a35575dfa52298b3cb6
+      mtime: 1210698735
+      name: lib/PPI/Transform.pm
+    - bytesize: 1616
+      file_mime_type: ~
+      line_count: ~
+      md5: 3533e4ab037271f1de77aebfed908fba
+      mtime: 1210698734
+      name: lib/PPI/Util.pm
+    - bytesize: 988
+      file_mime_type: ~
+      line_count: ~
+      md5: c24b043d94b636b7dc2a9666760662ef
+      mtime: 1210698736
+      name: t/01_compile.t
+    - bytesize: 6820
+      file_mime_type: ~
+      line_count: ~
+      md5: e743e769301f5bbdfc298cb1333a2a18
+      mtime: 1210698736
+      name: t/02_api.t
+    - bytesize: 652
+      file_mime_type: ~
+      line_count: ~
+      md5: 34758cba61a64d3458bd522c3e1fe461
+      mtime: 1210698736
+      name: t/03_empiric.t
+    - bytesize: 21361
+      file_mime_type: ~
+      line_count: ~
+      md5: bc75248401ada77f82c627c88c307355
+      mtime: 1210698736
+      name: t/04_element.t
+    - bytesize: 594
+      file_mime_type: ~
+      line_count: ~
+      md5: f200a5b17cb052694e4506a1b65ad014
+      mtime: 1210698736
+      name: t/05_lexer_practical.t
+    - bytesize: 2732
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a1d388907cc33b9bfea0f4ddc736d89
+      mtime: 1210698736
+      name: t/06_round_trip.t
+    - bytesize: 4800
+      file_mime_type: ~
+      line_count: ~
+      md5: bf48c0d965a7a915c3bc797c9e13164c
+      mtime: 1210698736
+      name: t/07_token.t
+    - bytesize: 7531
+      file_mime_type: ~
+      line_count: ~
+      md5: b63462fb36e1ef758a091577ccae12f6
+      mtime: 1210698736
+      name: t/08_regression.t
+    - bytesize: 1746
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fa05304c1186d8425af39cdcc0b49e9
+      mtime: 1210698736
+      name: t/09_normal.t
+    - bytesize: 1710
+      file_mime_type: ~
+      line_count: ~
+      md5: bbed71c823aae25b337fd508d97870a2
+      mtime: 1210698736
+      name: t/10_statement.t
+    - bytesize: 1241
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f577ff422a302365745c901cb17574f
+      mtime: 1210698736
+      name: t/11_util.t
+    - bytesize: 4944
+      file_mime_type: ~
+      line_count: ~
+      md5: 72ac77d5801ceb9c9e3636a4cc0d84db
+      mtime: 1210698736
+      name: t/12_location.t
+    - bytesize: 964
+      file_mime_type: ~
+      line_count: ~
+      md5: 01ced6e4caf8e328b6a14fd3ca3349b6
+      mtime: 1210698736
+      name: t/13_data.t
+    - bytesize: 1999
+      file_mime_type: ~
+      line_count: ~
+      md5: 460ae849e73d7f6ecf9c125442c6874e
+      mtime: 1210698736
+      name: t/14_charsets.t
+    - bytesize: 3463
+      file_mime_type: ~
+      line_count: ~
+      md5: 5be75a07e1f806c1fe5fc69c0f052c83
+      mtime: 1210698736
+      name: t/15_transform.t
+    - bytesize: 1135
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d74d56d036941f58e90c37a5103dbcb
+      mtime: 1210698736
+      name: t/16_xml_compatibility.t
+    - bytesize: 1424
+      file_mime_type: ~
+      line_count: ~
+      md5: e25c838d8bc4e4f28a7384aa8548f74f
+      mtime: 1210698736
+      name: t/17_storable.t
+    - bytesize: 5433
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d7ca909ea74cd9ae3e7dd84014db577
+      mtime: 1210698736
+      name: t/18_cache.t
+    - bytesize: 4383
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e05dfe6ad1ef1472611dda1ae0966cb
+      mtime: 1210698736
+      name: t/19_selftesting.t
+    - bytesize: 3711
+      file_mime_type: ~
+      line_count: ~
+      md5: 28ebdd0ee0e289578d803169e3eaeaaa
+      mtime: 1210698736
+      name: t/20_tokenizer_regression.t
+    - bytesize: 4949
+      file_mime_type: ~
+      line_count: ~
+      md5: 49ac08fd5c4aa8d84fb1777b4c53afb2
+      mtime: 1210698736
+      name: t/21_exhaustive.t
+    - bytesize: 1080
+      file_mime_type: ~
+      line_count: ~
+      md5: bdec0ca473f8fc0f722c1b3314b4257b
+      mtime: 1210698736
+      name: t/22_readonly.t
+    - bytesize: 652
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a797b0ffcbaf9c286eb6f9d15359e03
+      mtime: 1210698736
+      name: t/23_file.t
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 401fc87bc56a97809ea970d32aa9c3ff
+      mtime: 1210698736
+      name: t/24_v6.t
+    - bytesize: 571
+      file_mime_type: ~
+      line_count: ~
+      md5: af6a95a2a732e6577e27f57dc9806b7e
+      mtime: 1210698736
+      name: t/97_meta.t
+    - bytesize: 1012
+      file_mime_type: ~
+      line_count: ~
+      md5: 9044855d06dd0902ba1bd8692bb2280f
+      mtime: 1210698736
+      name: t/99_author.t
+    - bytesize: 199
+      file_mime_type: ~
+      line_count: ~
+      md5: 59515f4a5eaa99331578753efe9ce772
+      mtime: 1210698736
+      name: t/data/03_empiric/test.dat
+    - bytesize: 11
+      file_mime_type: ~
+      line_count: ~
+      md5: e36d7bd61c77cb62d96d01e2f672864c
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/01_simpleassign.code
+    - bytesize: 322
+      file_mime_type: ~
+      line_count: ~
+      md5: 970c0f2c0ac5b9182a548a423d0733bd
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/01_simpleassign.dump
+    - bytesize: 57
+      file_mime_type: ~
+      line_count: ~
+      md5: c31eb93cc3866051cf5a4e5180d52572
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/02_END.code
+    - bytesize: 244
+      file_mime_type: ~
+      line_count: ~
+      md5: 18549924e688516e73e6ba513fbe2980
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/02_END.dump
+    - bytesize: 126
+      file_mime_type: ~
+      line_count: ~
+      md5: 111550af4d8adbb89c3435d0908a12c3
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/03_subroutine_attributes.code
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b2ef1d31d49860b68fa5ea634bc9617
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/03_subroutine_attributes.dump
+    - bytesize: 50
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ceddda0fad5c99209411c34e075f8f4
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/04_anonymous_subroutines.code
+    - bytesize: 1073
+      file_mime_type: ~
+      line_count: ~
+      md5: 76b3e7650bb775aa49f37a1de00a3135
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/04_anonymous_subroutines.dump
+    - bytesize: 185
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fdbd06bfec6e64e73007875004b1884
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/05_compound_loops.code
+    - bytesize: 3782
+      file_mime_type: ~
+      line_count: ~
+      md5: 08da99b7e37e56fd9d1248c0121b1b5a
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/05_compound_loops.dump
+    - bytesize: 28
+      file_mime_type: ~
+      line_count: ~
+      md5: cd64be3d170e7fef5e263c0d010f717a
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/06_subroutine_prototypes.code
+    - bytesize: 576
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f3bcb3a7d35a112a011ac444d24ea4b
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/06_subroutine_prototypes.dump
+    - bytesize: 33
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e4cf902365b00d3a353f6526853e183
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/07_unmatched_braces.code
+    - bytesize: 728
+      file_mime_type: ~
+      line_count: ~
+      md5: afa758aaabd9da49762bae3a1de693cf
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/07_unmatched_braces.dump
+    - bytesize: 66
+      file_mime_type: ~
+      line_count: ~
+      md5: ba17fac625042b5110983184eef04177
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/08_subroutines.code
+    - bytesize: 1314
+      file_mime_type: ~
+      line_count: ~
+      md5: 2fe70fcf80e15ba17524c999c87266a8
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/08_subroutines.dump
+    - bytesize: 282
+      file_mime_type: ~
+      line_count: ~
+      md5: 7faa19881e3b9e93aa5e412b962fd770
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/09_heredoc.code
+    - bytesize: 1867
+      file_mime_type: ~
+      line_count: ~
+      md5: b53185b8744c76a47e9793c00a44e30f
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/09_heredoc.dump
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 5eb37bb5ec403e6699350a6926fd9075
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/10_readline.code
+    - bytesize: 1749
+      file_mime_type: ~
+      line_count: ~
+      md5: 99e4a77a68288f9644fa7ff943991306
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/10_readline.dump
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: bc8fe19328bb005f77a563af9724866c
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/11_dor.code
+    - bytesize: 454
+      file_mime_type: ~
+      line_count: ~
+      md5: 4aa70813976380bb54e38b79b3fc2f7b
+      mtime: 1210698738
+      name: t/data/05_lexer_practical/11_dor.dump
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: 1aa8c05e230dee31c5db2d30460a5cda
+      mtime: 1210698738
+      name: t/data/07_token/exp.code
+    - bytesize: 1518
+      file_mime_type: ~
+      line_count: ~
+      md5: f85e8e24cffe14ec223eb421f0cca316
+      mtime: 1210698738
+      name: t/data/07_token/exp.dump
+    - bytesize: 3
+      file_mime_type: ~
+      line_count: ~
+      md5: f5550e6338641ae6330cbcc2e5c12177
+      mtime: 1210698738
+      name: t/data/07_token/hex.code
+    - bytesize: 93
+      file_mime_type: ~
+      line_count: ~
+      md5: 35bf634fc74f3b76c641825921fcb3d8
+      mtime: 1210698738
+      name: t/data/07_token/hex.dump
+    - bytesize: 4
+      file_mime_type: ~
+      line_count: ~
+      md5: dce4965cdc739ac8c8b00dda45be519a
+      mtime: 1210698738
+      name: t/data/07_token/range_operator.code
+    - bytesize: 121
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e58cc6c56d18096939bf8074fe6588e
+      mtime: 1210698738
+      name: t/data/07_token/range_operator.dump
+    - bytesize: 12
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fbc89f86e0211db43da827fb2521f2f
+      mtime: 1210698736
+      name: t/data/08_regression/01_rt_cpan_19629.code
+    - bytesize: 394
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fe7ab90ed07ce68c8aaa6118936aff0
+      mtime: 1210698738
+      name: t/data/08_regression/01_rt_cpan_19629.dump
+    - bytesize: 14
+      file_mime_type: ~
+      line_count: ~
+      md5: b19ad36135f58100a63928426d0fe253
+      mtime: 1210698737
+      name: t/data/08_regression/01_rt_cpan_19629b.code
+    - bytesize: 501
+      file_mime_type: ~
+      line_count: ~
+      md5: 932830145d88e9897db8e6cbdcd76f2a
+      mtime: 1210698737
+      name: t/data/08_regression/01_rt_cpan_19629b.dump
+    - bytesize: 115
+      file_mime_type: ~
+      line_count: ~
+      md5: 453c6ac39b6bbb3257f2db3c2b4be450
+      mtime: 1210698737
+      name: t/data/08_regression/02_rt_cpan_9582.code
+    - bytesize: 2324
+      file_mime_type: ~
+      line_count: ~
+      md5: 533952bac16c977e2171fc1aeb7b6622
+      mtime: 1210698738
+      name: t/data/08_regression/02_rt_cpan_9582.dump
+    - bytesize: 93
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e15991eddc2f0119e7da48fc5fc9dc0
+      mtime: 1210698738
+      name: t/data/08_regression/03_rt_cpan_9614.code
+    - bytesize: 1588
+      file_mime_type: ~
+      line_count: ~
+      md5: d5da3d56b3fab270505dccac1a749b32
+      mtime: 1210698738
+      name: t/data/08_regression/03_rt_cpan_9614.dump
+    - bytesize: 79
+      file_mime_type: ~
+      line_count: ~
+      md5: 9200ba797e985eeb63d8be455feac0f2
+      mtime: 1210698737
+      name: t/data/08_regression/04_tinderbox.code
+    - bytesize: 1508
+      file_mime_type: ~
+      line_count: ~
+      md5: ce11900be2ddd0d8d32ff7bf8fe9fec5
+      mtime: 1210698737
+      name: t/data/08_regression/04_tinderbox.dump
+    - bytesize: 28
+      file_mime_type: ~
+      line_count: ~
+      md5: f19309615aea1933911bb455883c3063
+      mtime: 1210698737
+      name: t/data/08_regression/05_rt_cpan_13425.code
+    - bytesize: 526
+      file_mime_type: ~
+      line_count: ~
+      md5: cf3c1eebe66ea977da310a458ee034e2
+      mtime: 1210698737
+      name: t/data/08_regression/05_rt_cpan_13425.dump
+    - bytesize: 15
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bb27bbf361beea84262aa787f018023
+      mtime: 1210698737
+      name: t/data/08_regression/06_partial_quote_double.code
+    - bytesize: 139
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c2ee5c0ca9bfe73359a9db6d5841443
+      mtime: 1210698737
+      name: t/data/08_regression/06_partial_quote_double.dump
+    - bytesize: 15
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c78570074a8362112e3f22a79b9bd3d
+      mtime: 1210698737
+      name: t/data/08_regression/07_partial_quote_single.code
+    - bytesize: 139
+      file_mime_type: ~
+      line_count: ~
+      md5: 0eb3050a58137ffd6d6c873bba5671a3
+      mtime: 1210698738
+      name: t/data/08_regression/07_partial_quote_single.dump
+    - bytesize: 9
+      file_mime_type: ~
+      line_count: ~
+      md5: 92b20aa8c3617b3de5dc491b165ccfce
+      mtime: 1210698737
+      name: t/data/08_regression/08_partial_regex_substitution.code
+    - bytesize: 202
+      file_mime_type: ~
+      line_count: ~
+      md5: e3108d3ccdc84e4deed76e6efb7b8044
+      mtime: 1210698737
+      name: t/data/08_regression/08_partial_regex_substitution.dump
+    - bytesize: 15
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e96d44eeb9f61f607c8f3c802cf03d4
+      mtime: 1210698738
+      name: t/data/08_regression/09_for_var.code
+    - bytesize: 306
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dfb9894d091c0102cee88b0db1fb5e9
+      mtime: 1210698738
+      name: t/data/08_regression/09_for_var.dump
+    - bytesize: 14
+      file_mime_type: ~
+      line_count: ~
+      md5: fa77fb8e334093a9558a79d6cb86f5eb
+      mtime: 1210698737
+      name: t/data/08_regression/10_leading_regexp.code
+    - bytesize: 307
+      file_mime_type: ~
+      line_count: ~
+      md5: df863beb8eded3a28c5a631913414235
+      mtime: 1210698737
+      name: t/data/08_regression/10_leading_regexp.dump
+    - bytesize: 11
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d016df01a029faee27ac047220e55da
+      mtime: 1210698738
+      name: t/data/08_regression/11_multiply_vs_glob_cast.code
+    - bytesize: 190
+      file_mime_type: ~
+      line_count: ~
+      md5: 86a08d5db87484cf36b3a3c6ce3c59cd
+      mtime: 1210698737
+      name: t/data/08_regression/11_multiply_vs_glob_cast.dump
+    - bytesize: 12
+      file_mime_type: ~
+      line_count: ~
+      md5: c7de1361cccd63f33ca27d2e8f7f2774
+      mtime: 1210698737
+      name: t/data/08_regression/12_pow.code
+    - bytesize: 192
+      file_mime_type: ~
+      line_count: ~
+      md5: fddc1d2c778a43df90d2b601288fd7f5
+      mtime: 1210698736
+      name: t/data/08_regression/12_pow.dump
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c8054215fe3b379b95e9927f12b4b8e
+      mtime: 1210698737
+      name: t/data/08_regression/13_goto.code
+    - bytesize: 399
+      file_mime_type: ~
+      line_count: ~
+      md5: d2f99bcb2e2016cac3d31cd9d9e3ff70
+      mtime: 1210698737
+      name: t/data/08_regression/13_goto.dump
+    - bytesize: 4
+      file_mime_type: ~
+      line_count: ~
+      md5: 54f82ac73a40ac537c470eb1dcf095c5
+      mtime: 1210698737
+      name: t/data/08_regression/14_minus.code
+    - bytesize: 152
+      file_mime_type: ~
+      line_count: ~
+      md5: d8599f248491c045cc21b10c75e27c05
+      mtime: 1210698737
+      name: t/data/08_regression/14_minus.dump
+    - bytesize: 14
+      file_mime_type: ~
+      line_count: ~
+      md5: b4e48ee81c84416ff2d81a517dac5407
+      mtime: 1210698738
+      name: t/data/08_regression/14b_minus.code
+    - bytesize: 247
+      file_mime_type: ~
+      line_count: ~
+      md5: b05aecd65de045c85ef54cc821240f64
+      mtime: 1210698737
+      name: t/data/08_regression/14b_minus.dump
+    - bytesize: 4
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e67072bbd359af08c892fa4fa224836
+      mtime: 1210698738
+      name: t/data/08_regression/15_dash_t.code
+    - bytesize: 127
+      file_mime_type: ~
+      line_count: ~
+      md5: 36b95740d1dbdc09f913b0cc7a3ee3e6
+      mtime: 1210698738
+      name: t/data/08_regression/15_dash_t.dump
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d03ad69d2c9e8f304a30bd0b372f943
+      mtime: 1210698737
+      name: t/data/08_regression/16_sub_declaration.code
+    - bytesize: 487
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d5d6f922c3b73415609bbbc3fc02e5a
+      mtime: 1210698737
+      name: t/data/08_regression/16_sub_declaration.dump
+    - bytesize: 21
+      file_mime_type: ~
+      line_count: ~
+      md5: 37627e40b0c2c7c41bac3035d0a2c0f2
+      mtime: 1210698738
+      name: t/data/08_regression/17_scope.code
+    - bytesize: 444
+      file_mime_type: ~
+      line_count: ~
+      md5: 2693b98f73d55a76a847f1a3bf7aa973
+      mtime: 1210698737
+      name: t/data/08_regression/17_scope.dump
+    - bytesize: 5
+      file_mime_type: ~
+      line_count: ~
+      md5: 835c5f168b1c696ec9b863570d240bba
+      mtime: 1210698737
+      name: t/data/08_regression/18_decimal_point.code
+    - bytesize: 71
+      file_mime_type: ~
+      line_count: ~
+      md5: f17829b1e10e741dc03a8f6616fa8ec3
+      mtime: 1210698737
+      name: t/data/08_regression/18_decimal_point.dump
+    - bytesize: 7
+      file_mime_type: ~
+      line_count: ~
+      md5: 71121c46376c28dff3aaa46a8da22fba
+      mtime: 1210698737
+      name: t/data/08_regression/19_long_operators.code
+    - bytesize: 188
+      file_mime_type: ~
+      line_count: ~
+      md5: a51185805cf05d5ae718b494a6aa6283
+      mtime: 1210698737
+      name: t/data/08_regression/19_long_operators.dump
+    - bytesize: 7
+      file_mime_type: ~
+      line_count: ~
+      md5: 1853ff45fee63b5f13dd14b386943a92
+      mtime: 1210698738
+      name: t/data/08_regression/19_long_operators2.code
+    - bytesize: 188
+      file_mime_type: ~
+      line_count: ~
+      md5: 72c004b32e33b2f916031b90b8b15776
+      mtime: 1210698737
+      name: t/data/08_regression/19_long_operators2.dump
+    - bytesize: 5
+      file_mime_type: ~
+      line_count: ~
+      md5: ee6c1482d28c133a14083f1369148438
+      mtime: 1210698737
+      name: t/data/08_regression/20_hash_constructor.code
+    - bytesize: 134
+      file_mime_type: ~
+      line_count: ~
+      md5: 4047b5963eeabbc8b9e899e4fb4a950b
+      mtime: 1210698737
+      name: t/data/08_regression/20_hash_constructor.dump
+    - bytesize: 16
+      file_mime_type: ~
+      line_count: ~
+      md5: 202c9295e9c51a445d5b446bb74cb90f
+      mtime: 1210698737
+      name: t/data/08_regression/21_list_of_refs.code
+    - bytesize: 478
+      file_mime_type: ~
+      line_count: ~
+      md5: 3972a297c75b782c7110b4df35464263
+      mtime: 1210698737
+      name: t/data/08_regression/21_list_of_refs.dump
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bcb828df185545ead9c07434a844ee4
+      mtime: 1210698738
+      name: t/data/08_regression/22_hash_vs_brace.code
+    - bytesize: 1968
+      file_mime_type: ~
+      line_count: ~
+      md5: 78073613f68df11213c3ebba660954d9
+      mtime: 1210698737
+      name: t/data/08_regression/22_hash_vs_brace.dump
+    - bytesize: 28
+      file_mime_type: ~
+      line_count: ~
+      md5: 5135d81f3d3a0320f0e142be691c25e2
+      mtime: 1210698737
+      name: t/data/08_regression/23_rt_cpan_8752.code
+    - bytesize: 560
+      file_mime_type: ~
+      line_count: ~
+      md5: 52dfe2331f4ede05c4e043324af4ec28
+      mtime: 1210698738
+      name: t/data/08_regression/23_rt_cpan_8752.dump
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 6df2970459fc0dc3046b9bf8b35686ed
+      mtime: 1210698737
+      name: t/data/08_regression/24_compound.code
+    - bytesize: 453
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bc46f058269a5b83e1deac716fcacf4
+      mtime: 1210698737
+      name: t/data/08_regression/24_compound.dump
+    - bytesize: 25
+      file_mime_type: ~
+      line_count: ~
+      md5: eca392f9cf53d6c97f9f3313248340bb
+      mtime: 1210698737
+      name: t/data/08_regression/25_hash_block.code
+    - bytesize: 807
+      file_mime_type: ~
+      line_count: ~
+      md5: 76abdfe88f93fe099d9a943884ce4f60
+      mtime: 1210698737
+      name: t/data/08_regression/25_hash_block.dump
+    - bytesize: 54
+      file_mime_type: ~
+      line_count: ~
+      md5: a9e390be46f0a57b19159123afa6dc9f
+      mtime: 1210698737
+      name: t/data/08_regression/26_rt_cpan_23253.code
+    - bytesize: 1098
+      file_mime_type: ~
+      line_count: ~
+      md5: c7bb6d4d909d7bd041f859b24f4288fb
+      mtime: 1210698738
+      name: t/data/08_regression/26_rt_cpan_23253.dump
+    - bytesize: 60
+      file_mime_type: ~
+      line_count: ~
+      md5: 7407e8222bc8fdff885637c0f5ca5175
+      mtime: 1210698737
+      name: t/data/08_regression/27_constant_hash.code
+    - bytesize: 1155
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a0cc24344fb11db8ee09311a783aacf
+      mtime: 1210698737
+      name: t/data/08_regression/27_constant_hash.dump
+    - bytesize: 16
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d72c99a284ff6fec85026169d443df7
+      mtime: 1210698737
+      name: t/data/08_regression/28_backref_style_heredoc.code
+    - bytesize: 130
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b5f77f6a1f1b48e2d59863e46396637
+      mtime: 1210698737
+      name: t/data/08_regression/28_backref_style_heredoc.dump
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 82a495a294ca9b400b01d06d8de32811
+      mtime: 1210698737
+      name: t/data/08_regression/29_chained_casts.code
+    - bytesize: 376
+      file_mime_type: ~
+      line_count: ~
+      md5: b18bb2cff052923d34677b7029dafe35
+      mtime: 1210698737
+      name: t/data/08_regression/29_chained_casts.dump
+    - bytesize: 8
+      file_mime_type: ~
+      line_count: ~
+      md5: d6a950241a950a3e46b18cafd085d815
+      mtime: 1210698737
+      name: t/data/08_regression/29_magic_carat.code
+    - bytesize: 219
+      file_mime_type: ~
+      line_count: ~
+      md5: 69c7c487c0839aa15033b8a1d4464d73
+      mtime: 1210698737
+      name: t/data/08_regression/29_magic_carat.dump
+    - bytesize: 8
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a0bb1eaa3e7b84c654b997e32354f46
+      mtime: 1210698738
+      name: t/data/08_regression/30_hash_bang.code
+    - bytesize: 224
+      file_mime_type: ~
+      line_count: ~
+      md5: b955ae62696ece2505a8bb5c47d8b5bd
+      mtime: 1210698738
+      name: t/data/08_regression/30_hash_bang.dump
+    - bytesize: 7
+      file_mime_type: ~
+      line_count: ~
+      md5: 5482346df84f304ab40d3d15ef76b03d
+      mtime: 1210698737
+      name: t/data/08_regression/31_hash_carat_H.code
+    - bytesize: 159
+      file_mime_type: ~
+      line_count: ~
+      md5: beeb32a141cf1020ae6d1189a26dbad6
+      mtime: 1210698736
+      name: t/data/08_regression/31_hash_carat_H.dump
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a03f7a00b880a98b4f0bfcd3f23c3f0
+      mtime: 1210698737
+      name: t/data/08_regression/32_readline.code
+    - bytesize: 434
+      file_mime_type: ~
+      line_count: ~
+      md5: 3acf29b76262b2627527bf9575201c72
+      mtime: 1210698737
+      name: t/data/08_regression/32_readline.dump
+    - bytesize: 25
+      file_mime_type: ~
+      line_count: ~
+      md5: f728ee8a77f0a7dcc037809c205fe279
+      mtime: 1210698737
+      name: t/data/08_regression/33_magic_carat_long.code
+    - bytesize: 267
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f2f2257991656c26750bea3b89ef233
+      mtime: 1210698737
+      name: t/data/08_regression/33_magic_carat_long.dump
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 58bb4112ab935873e29124811ee0e17a
+      mtime: 1210698738
+      name: t/data/08_regression/34_attr_whitespace.code
+    - bytesize: 362
+      file_mime_type: ~
+      line_count: ~
+      md5: e20aa64d6933bbc75365703b2ea397b8
+      mtime: 1210698737
+      name: t/data/08_regression/34_attr_whitespace.dump
+    - bytesize: 110
+      file_mime_type: ~
+      line_count: ~
+      md5: b2500c959ca9855cae11d0eee256993f
+      mtime: 1210698737
+      name: t/data/08_regression/35_attr_perlsub.code
+    - bytesize: 1505
+      file_mime_type: ~
+      line_count: ~
+      md5: 8eeb83a149aff7ec65a9f7ea99f5fe73
+      mtime: 1210698737
+      name: t/data/08_regression/35_attr_perlsub.dump
+    - bytesize: 29
+      file_mime_type: ~
+      line_count: ~
+      md5: f96befcc681650d24bbacba90c562df1
+      mtime: 1210698737
+      name: t/data/08_regression/36_begin_label.code
+    - bytesize: 657
+      file_mime_type: ~
+      line_count: ~
+      md5: b309fee8c344b313fcca632ddc7cccd5
+      mtime: 1210698737
+      name: t/data/08_regression/36_begin_label.dump
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 57342038529b5c4d04867c82147449b6
+      mtime: 1210698736
+      name: t/data/11_util/test.pm
+    - bytesize: 72
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d399f53081d2486a477a14bef6013f0
+      mtime: 1210698736
+      name: t/data/13_data/Foo.pm
+    - bytesize: 19
+      file_mime_type: ~
+      line_count: ~
+      md5: 88f098edd30cce477ea059f1d24e3713
+      mtime: 1210698738
+      name: t/data/15_transform/sample1.pm
+    - bytesize: 13
+      file_mime_type: ~
+      line_count: ~
+      md5: 39c51ea43980f0f2722cb6ac8af26e88
+      mtime: 1210698738
+      name: t/data/15_transform/sample1.pm.out
+    - bytesize: 18092
+      file_mime_type: ~
+      line_count: ~
+      md5: 4af2880ee69a1c37c4bba780102bac41
+      mtime: 1210698738
+      name: t/data/24_v6/Grammar.pm
+    - bytesize: 19
+      file_mime_type: ~
+      line_count: ~
+      md5: 8197adf8e428240b25f2ee6b6f4ccec3
+      mtime: 1210698738
+      name: t/data/24_v6/Simple.pm
+    - bytesize: 60
+      file_mime_type: ~
+      line_count: ~
+      md5: b6a557c82ce5f003fb95dfd35cc76add
+      mtime: 1210698736
+      name: t/data/basic.pl
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: e4a14283f844a85b14c3359054b6caeb
+      mtime: 1210698736
+      name: t/data/test2.txt
+    - bytesize: 4844
+      file_mime_type: ~
+      line_count: ~
+      md5: 90cb212b56a685837f00a65ec9385179
+      mtime: 1210698738
+      name: t/lib/PPI.pm
+    - bytesize: 2466
+      file_mime_type: ~
+      line_count: ~
+      md5: bfe9459a33399133677c43d52d316b73
+      mtime: 1210698736
+      name: t/ppi_element.t
+    - bytesize: 786
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b991c3467d56fe3adf7eb7806632f20
+      mtime: 1210698736
+      name: t/ppi_node.t
+    - bytesize: 2644
+      file_mime_type: ~
+      line_count: ~
+      md5: 457480a538ac4d941532962607ad1937
+      mtime: 1210698736
+      name: t/ppi_normal.t
+    - bytesize: 1461
+      file_mime_type: ~
+      line_count: ~
+      md5: 68075ed5b57b52bae0754293cc8baa7f
+      mtime: 1210698736
+      name: t/ppi_statement_variable.t
+    - bytesize: 2558
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b866de1c3a6c2a77197b111832008d8
+      mtime: 1210698736
+      name: t/ppi_token__quoteengine_full.t
+    - bytesize: 797
+      file_mime_type: ~
+      line_count: ~
+      md5: 60de51cb829cf59abd0a9f6387198006
+      mtime: 1210698736
+      name: t/ppi_token_dashedword.t
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: d538e615c35ee356c2ae05a70bc80a8d
+      mtime: 1210698736
+      name: t/ppi_token_quote.t
+    - bytesize: 1432
+      file_mime_type: ~
+      line_count: ~
+      md5: 86f9cd11dc524dd1dfa3070ed547398f
+      mtime: 1210698736
+      name: t/ppi_token_quote_double.t
+    - bytesize: 947
+      file_mime_type: ~
+      line_count: ~
+      md5: aa5a11ba12cb554be94bc08217474de6
+      mtime: 1210698736
+      name: t/ppi_token_quote_interpolate.t
+    - bytesize: 896
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dd4b0634497e603e8a17bd222120082
+      mtime: 1210698736
+      name: t/ppi_token_quote_literal.t
+    - bytesize: 1107
+      file_mime_type: ~
+      line_count: ~
+      md5: b504cbbc3955cce6d82c79b61cee3cc7
+      mtime: 1210698736
+      name: t/ppi_token_quote_single.t
+    - bytesize: 694
+      file_mime_type: ~
+      line_count: ~
+      md5: e08099523ba5fd4ea5b88216c00ee49b
+      mtime: 1210698736
+      name: t/ppi_token_word.t
+  module_info:
+    - bytesize: 31052
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d5b816243dfa6fc0f829a6ce0cef2c1
+      module_name_from_file_guess: PPI
+      mtime: 1210698734
+      name: blib/lib/PPI.pm
+      packages:
+        - PPI
+      primary_package: PPI
+      uses:
+        - ''
+        - strict
+        - vars
+        - PPI::Exception
+        - PPI::Element
+        - PPI::Token
+        - PPI::Statement
+        - PPI::Structure
+        - PPI::Document
+        - PPI::Document::File
+        - PPI::Document::Normalized
+        - PPI::Normal
+        - PPI::Tokenizer
+        - PPI::Lexer
+        - PPI::XS
+      version_info:
+        filename: blib/lib/PPI.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 1.202_03
+    - bytesize: 6145
+      file_mime_type: ~
+      line_count: ~
+      md5: c891df619c02f95a18414d50f0db1708
+      module_name_from_file_guess: PPI::Cache
+      mtime: 1210698734
+      name: blib/lib/PPI/Cache.pm
+      packages:
+        - PPI::Cache
+      primary_package: PPI::Cache
+      uses: []
+      version_info:
+        filename: blib/lib/PPI/Cache.pm
+        identifier: VERSION
+        line_number: 60
+        sigil: $
+        value: 1.202_03
+    - bytesize: 20509
+      file_mime_type: ~
+      line_count: ~
+      md5: cc6d76a66b690e904540055027cd3ebb
+      module_name_from_file_guess: PPI::Document
+      mtime: 1210698734
+      name: blib/lib/PPI/Document.pm
+      packages:
+        - PPI::Document
+      primary_package: PPI::Document
+      uses:
+        - strict
+        - base
+        - Carp
+        - List::MoreUtils
+        - Params::Util
+        - Digest::MD5
+        - PPI
+        - PPI::Util
+        - PPI::Exception::ParserTimeout
+        - overload
+        - constant
+        - vars
+        - PPI::Document::Fragment
+      version_info:
+        filename: blib/lib/PPI/Document.pm
+        identifier: VERSION
+        line_number: 84
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3073
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dd676283a8ce676b7185b379e751faf
+      module_name_from_file_guess: PPI::Document::File
+      mtime: 1210698735
+      name: blib/lib/PPI/Document/File.pm
+      packages:
+        - PPI::Document::File
+      primary_package: PPI::Document::File
+      uses:
+        - strict
+        - Carp
+        - Params::Util
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Document/File.pm
+        identifier: VERSION
+        line_number: 27
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1911
+      file_mime_type: ~
+      line_count: ~
+      md5: 20d65168ef000af22cdadf50d7a4720c
+      module_name_from_file_guess: PPI::Document::Fragment
+      mtime: 1210698735
+      name: blib/lib/PPI/Document/Fragment.pm
+      packages:
+        - PPI::Document::Fragment
+      primary_package: PPI::Document::Fragment
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Document/Fragment.pm
+        identifier: VERSION
+        line_number: 26
+        sigil: $
+        value: 1.202_03
+    - bytesize: 7824
+      file_mime_type: ~
+      line_count: ~
+      md5: acc13437ec51f69131079f6e05b19cc0
+      module_name_from_file_guess: PPI::Document::Normalized
+      mtime: 1210698735
+      name: blib/lib/PPI/Document/Normalized.pm
+      packages:
+        - PPI::Document::Normalized
+      primary_package: PPI::Document::Normalized
+      uses:
+        - strict
+        - overload
+        - Params::Util
+        - vars
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/PPI/Document/Normalized.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 1.202_03
+    - bytesize: 7190
+      file_mime_type: ~
+      line_count: ~
+      md5: 404cd6eb1eef9fbe97d77a60d52c5a0a
+      module_name_from_file_guess: PPI::Dumper
+      mtime: 1210698734
+      name: blib/lib/PPI/Dumper.pm
+      packages:
+        - PPI::Dumper
+      primary_package: PPI::Dumper
+      uses:
+        - strict
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Dumper.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 21239
+      file_mime_type: ~
+      line_count: ~
+      md5: 76be2fa80adffa9e725629882c36324b
+      module_name_from_file_guess: PPI::Element
+      mtime: 1210698734
+      name: blib/lib/PPI/Element.pm
+      packages:
+        - PPI::Element
+      primary_package: PPI::Element
+      uses:
+        - strict
+        - Scalar::Util
+        - Params::Util
+        - PPI::Node
+        - Clone
+        - List::MoreUtils
+        - overload
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Element.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 640
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e512d4dd854f402b21e2bf0d7fdae34
+      module_name_from_file_guess: PPI::Exception
+      mtime: 1210698734
+      name: blib/lib/PPI/Exception.pm
+      packages:
+        - PPI::Exception
+      primary_package: PPI::Exception
+      uses:
+        - strict
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Exception.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 1.202_03
+    - bytesize: 141
+      file_mime_type: ~
+      line_count: ~
+      md5: c4e407e80cceba73c687d9e84ac7112d
+      module_name_from_file_guess: PPI::Exception::ParserTimeout
+      mtime: 1210698735
+      name: blib/lib/PPI/Exception/ParserTimeout.pm
+      packages:
+        - PPI::Exception::ParserTimeout
+      primary_package: PPI::Exception::ParserTimeout
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Exception/ParserTimeout.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 1.202_03
+    - bytesize: 9002
+      file_mime_type: ~
+      line_count: ~
+      md5: b93e575ab6fd65f706e4cb522cc79693
+      module_name_from_file_guess: PPI::Find
+      mtime: 1210698734
+      name: blib/lib/PPI/Find.pm
+      packages:
+        - PPI::Find
+      primary_package: PPI::Find
+      uses:
+        - strict
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Find.pm
+        identifier: VERSION
+        line_number: 79
+        sigil: $
+        value: 1.202_03
+    - bytesize: 36450
+      file_mime_type: ~
+      line_count: ~
+      md5: e91f8d424f08bc1ddbd48165ab6215e3
+      module_name_from_file_guess: PPI::Lexer
+      mtime: 1210698734
+      name: blib/lib/PPI/Lexer.pm
+      packages:
+        - PPI::Lexer
+      primary_package: PPI::Lexer
+      uses:
+        - strict
+        - Params::Util
+        - PPI
+        - PPI::Token
+        - PPI::Document
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Lexer.pm
+        identifier: VERSION
+        line_number: 64
+        sigil: $
+        value: 1.202_03
+    - bytesize: 20136
+      file_mime_type: ~
+      line_count: ~
+      md5: 309d6ff94190717ec10e2165518fb14c
+      module_name_from_file_guess: PPI::Node
+      mtime: 1210698734
+      name: blib/lib/PPI/Node.pm
+      packages:
+        - PPI::Node
+      primary_package: PPI::Node
+      uses:
+        - strict
+        - base
+        - Carp
+        - Scalar::Util
+        - List::MoreUtils
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Node.pm
+        identifier: VERSION
+        line_number: 61
+        sigil: $
+        value: 1.202_03
+    - bytesize: 8772
+      file_mime_type: ~
+      line_count: ~
+      md5: b859accec3d11e7623fd9213310f8dc5
+      module_name_from_file_guess: PPI::Normal
+      mtime: 1210698734
+      name: blib/lib/PPI/Normal.pm
+      packages:
+        - PPI::Normal
+      primary_package: PPI::Normal
+      uses:
+        - strict
+        - Carp
+        - List::MoreUtils
+        - PPI::Util
+        - PPI::Document::Normalized
+        - vars
+        - PPI::Normal::Standard
+      version_info:
+        filename: blib/lib/PPI/Normal.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3212
+      file_mime_type: ~
+      line_count: ~
+      md5: 956a58443c04355819183d4bf2c98c27
+      module_name_from_file_guess: PPI::Normal::Standard
+      mtime: 1210698735
+      name: blib/lib/PPI/Normal/Standard.pm
+      packages:
+        - PPI::Normal::Standard
+      primary_package: PPI::Normal::Standard
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Normal/Standard.pm
+        identifier: VERSION
+        line_number: 23
+        sigil: $
+        value: 1.202_03
+    - bytesize: 8420
+      file_mime_type: ~
+      line_count: ~
+      md5: e6d57629046155d38a674deafc11c4e0
+      module_name_from_file_guess: PPI::Statement
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement.pm
+      packages:
+        - PPI::Statement
+      primary_package: PPI::Statement
+      uses:
+        - strict
+        - base
+        - Params::Util
+        - vars
+        - PPI::Statement::Break
+        - PPI::Statement::Compound
+        - PPI::Statement::Data
+        - PPI::Statement::End
+        - PPI::Statement::Expression
+        - PPI::Statement::Include
+        - PPI::Statement::Null
+        - PPI::Statement::Package
+        - PPI::Statement::Scheduled
+        - PPI::Statement::Sub
+        - PPI::Statement::UnmatchedBrace
+        - PPI::Statement::Unknown
+        - PPI::Statement::Variable
+      version_info:
+        filename: blib/lib/PPI/Statement.pm
+        identifier: VERSION
+        line_number: 145
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1419
+      file_mime_type: ~
+      line_count: ~
+      md5: c48e4c8acb9a5e9dc0e6ef65b8401f9e
+      module_name_from_file_guess: PPI::Statement::Break
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Break.pm
+      packages:
+        - PPI::Statement::Break
+      primary_package: PPI::Statement::Break
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Break.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 1.202_03
+    - bytesize: 4108
+      file_mime_type: ~
+      line_count: ~
+      md5: 995e29e31ddda799e55a890471b9bd66
+      module_name_from_file_guess: PPI::Statement::Compound
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Compound.pm
+      packages:
+        - PPI::Statement::Compound
+      primary_package: PPI::Statement::Compound
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Compound.pm
+        identifier: VERSION
+        line_number: 58
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1428
+      file_mime_type: ~
+      line_count: ~
+      md5: 4aa5de4eea9fce12cd0e498ae5032c62
+      module_name_from_file_guess: PPI::Statement::Data
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Data.pm
+      packages:
+        - PPI::Statement::Data
+      primary_package: PPI::Statement::Data
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Data.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1379
+      file_mime_type: ~
+      line_count: ~
+      md5: 841bd7f4884a7a46aa99010bb5e301d0
+      module_name_from_file_guess: PPI::Statement::End
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/End.pm
+      packages:
+        - PPI::Statement::End
+      primary_package: PPI::Statement::End
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/End.pm
+        identifier: VERSION
+        line_number: 52
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1260
+      file_mime_type: ~
+      line_count: ~
+      md5: c8032dac17538ab252e6a88152567b8a
+      module_name_from_file_guess: PPI::Statement::Expression
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Expression.pm
+      packages:
+        - PPI::Statement::Expression
+      primary_package: PPI::Statement::Expression
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Expression.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.202_03
+    - bytesize: 4145
+      file_mime_type: ~
+      line_count: ~
+      md5: 3027d571ff3bc4b7a0f3bfeb993259d6
+      module_name_from_file_guess: PPI::Statement::Include
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Include.pm
+      packages:
+        - PPI::Statement::Include
+      primary_package: PPI::Statement::Include
+      uses:
+        - strict
+        - base
+        - vars
+        - PPI::Statement::Include::Perl6
+      version_info:
+        filename: blib/lib/PPI/Statement/Include.pm
+        identifier: VERSION
+        line_number: 52
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1638
+      file_mime_type: ~
+      line_count: ~
+      md5: ba929863bdfcfed258a9a6e228032fe2
+      module_name_from_file_guess: PPI::Statement::Include::Perl6
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Include/Perl6.pm
+      packages:
+        - PPI::Statement::Include::Perl6
+      primary_package: PPI::Statement::Include::Perl6
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Include/Perl6.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: e2e5f6526644969d1427adcf975bb121
+      module_name_from_file_guess: PPI::Statement::Null
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Null.pm
+      packages:
+        - PPI::Statement::Null
+      primary_package: PPI::Statement::Null
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Null.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3004
+      file_mime_type: ~
+      line_count: ~
+      md5: baecd0f66c5340e1380df8f775aa42c9
+      module_name_from_file_guess: PPI::Statement::Package
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Package.pm
+      packages:
+        - PPI::Statement::Package
+      primary_package: PPI::Statement::Package
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Package.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1825
+      file_mime_type: ~
+      line_count: ~
+      md5: 4da4587ad4489f3ef428ce9e935362e0
+      module_name_from_file_guess: PPI::Statement::Scheduled
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Scheduled.pm
+      packages:
+        - PPI::Statement::Scheduled
+      primary_package: PPI::Statement::Scheduled
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Scheduled.pm
+        identifier: VERSION
+        line_number: 56
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3653
+      file_mime_type: ~
+      line_count: ~
+      md5: f4b3f4810aa722c992d45a0b5788fa27
+      module_name_from_file_guess: PPI::Statement::Sub
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Sub.pm
+      packages:
+        - PPI::Statement::Sub
+      primary_package: PPI::Statement::Sub
+      uses:
+        - strict
+        - base
+        - List::Util
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Sub.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1373
+      file_mime_type: ~
+      line_count: ~
+      md5: f30e943ec5cde450b5eea70950c425db
+      module_name_from_file_guess: PPI::Statement::Unknown
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Unknown.pm
+      packages:
+        - PPI::Statement::Unknown
+      primary_package: PPI::Statement::Unknown
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Unknown.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1572
+      file_mime_type: ~
+      line_count: ~
+      md5: 28107143db60f22b51e4b73fd93f86c4
+      module_name_from_file_guess: PPI::Statement::UnmatchedBrace
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/UnmatchedBrace.pm
+      packages:
+        - PPI::Statement::UnmatchedBrace
+      primary_package: PPI::Statement::UnmatchedBrace
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/UnmatchedBrace.pm
+        identifier: VERSION
+        line_number: 52
+        sigil: $
+        value: 1.202_03
+    - bytesize: 5217
+      file_mime_type: ~
+      line_count: ~
+      md5: 6483f353214f2563d209f6ffc2863634
+      module_name_from_file_guess: PPI::Statement::Variable
+      mtime: 1210698735
+      name: blib/lib/PPI/Statement/Variable.pm
+      packages:
+        - PPI::Statement::Variable
+      primary_package: PPI::Statement::Variable
+      uses:
+        - strict
+        - base
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Statement/Variable.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.202_03
+    - bytesize: 8576
+      file_mime_type: ~
+      line_count: ~
+      md5: 62dba5f954d3d9868183e4667434cf01
+      module_name_from_file_guess: PPI::Structure
+      mtime: 1210698734
+      name: blib/lib/PPI/Structure.pm
+      packages:
+        - PPI::Structure
+      primary_package: PPI::Structure
+      uses:
+        - strict
+        - base
+        - Scalar::Util
+        - Params::Util
+        - vars
+        - PPI::Structure::Block
+        - PPI::Structure::Condition
+        - PPI::Structure::Constructor
+        - PPI::Structure::ForLoop
+        - PPI::Structure::List
+        - PPI::Structure::Subscript
+        - PPI::Structure::Unknown
+      version_info:
+        filename: blib/lib/PPI/Structure.pm
+        identifier: VERSION
+        line_number: 90
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1405
+      file_mime_type: ~
+      line_count: ~
+      md5: 14663da1239cfe3d7e8555e7a2b3fa37
+      module_name_from_file_guess: PPI::Structure::Block
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/Block.pm
+      packages:
+        - PPI::Structure::Block
+      primary_package: PPI::Structure::Block
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/Block.pm
+        identifier: VERSION
+        line_number: 50
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1212
+      file_mime_type: ~
+      line_count: ~
+      md5: 8559f76b05f2b5c72beab10771f7d51c
+      module_name_from_file_guess: PPI::Structure::Condition
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/Condition.pm
+      packages:
+        - PPI::Structure::Condition
+      primary_package: PPI::Structure::Condition
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/Condition.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1189
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a4e9269a16ec1c0fc9e0ac06cdf604c
+      module_name_from_file_guess: PPI::Structure::Constructor
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/Constructor.pm
+      packages:
+        - PPI::Structure::Constructor
+      primary_package: PPI::Structure::Constructor
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/Constructor.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1159
+      file_mime_type: ~
+      line_count: ~
+      md5: 492e1d11e0f26168a6b34cfcf3dfb764
+      module_name_from_file_guess: PPI::Structure::ForLoop
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/ForLoop.pm
+      packages:
+        - PPI::Structure::ForLoop
+      primary_package: PPI::Structure::ForLoop
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/ForLoop.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1192
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cfed046c5eae85adb15a512013307b9
+      module_name_from_file_guess: PPI::Structure::List
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/List.pm
+      packages:
+        - PPI::Structure::List
+      primary_package: PPI::Structure::List
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/List.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1315
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e358473e548dad3ae19bc56a9eacda8
+      module_name_from_file_guess: PPI::Structure::Subscript
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/Subscript.pm
+      packages:
+        - PPI::Structure::Subscript
+      primary_package: PPI::Structure::Subscript
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/Subscript.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1610
+      file_mime_type: ~
+      line_count: ~
+      md5: e18096fccd8fdd553efee610c9759c98
+      module_name_from_file_guess: PPI::Structure::Unknown
+      mtime: 1210698735
+      name: blib/lib/PPI/Structure/Unknown.pm
+      packages:
+        - PPI::Structure::Unknown
+      primary_package: PPI::Structure::Unknown
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Structure/Unknown.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.202_03
+    - bytesize: 5331
+      file_mime_type: ~
+      line_count: ~
+      md5: 27775c96830ba89b402cae43c583e158
+      module_name_from_file_guess: PPI::Token
+      mtime: 1210698734
+      name: blib/lib/PPI/Token.pm
+      packages:
+        - PPI::Token
+      primary_package: PPI::Token
+      uses:
+        - strict
+        - base
+        - Params::Util
+        - PPI::Exception
+        - vars
+        - PPI::Token::Whitespace
+        - PPI::Token::Comment
+        - PPI::Token::Pod
+        - PPI::Token::Number
+        - PPI::Token::Number::Binary
+        - PPI::Token::Number::Octal
+        - PPI::Token::Number::Hex
+        - PPI::Token::Number::Float
+        - PPI::Token::Number::Exp
+        - PPI::Token::Number::Version
+        - PPI::Token::Word
+        - PPI::Token::DashedWord
+        - PPI::Token::Symbol
+        - PPI::Token::ArrayIndex
+        - PPI::Token::Magic
+        - PPI::Token::Quote::Single
+        - PPI::Token::Quote::Double
+        - PPI::Token::Quote::Literal
+        - PPI::Token::Quote::Interpolate
+        - PPI::Token::QuoteLike::Backtick
+        - PPI::Token::QuoteLike::Command
+        - PPI::Token::QuoteLike::Regexp
+        - PPI::Token::QuoteLike::Words
+        - PPI::Token::QuoteLike::Readline
+        - PPI::Token::Regexp::Match
+        - PPI::Token::Regexp::Substitute
+        - PPI::Token::Regexp::Transliterate
+        - PPI::Token::Operator
+        - PPI::Token::Cast
+        - PPI::Token::Structure
+        - PPI::Token::Label
+        - PPI::Token::HereDoc
+        - PPI::Token::Separator
+        - PPI::Token::Data
+        - PPI::Token::End
+        - PPI::Token::Prototype
+        - PPI::Token::Attribute
+        - PPI::Token::Unknown
+      version_info:
+        filename: blib/lib/PPI/Token.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1433
+      file_mime_type: ~
+      line_count: ~
+      md5: bc7972a9eb7e2c821dfeebe4433eaf68
+      module_name_from_file_guess: PPI::Token::ArrayIndex
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/ArrayIndex.pm
+      packages:
+        - PPI::Token::ArrayIndex
+      primary_package: PPI::Token::ArrayIndex
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/ArrayIndex.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3909
+      file_mime_type: ~
+      line_count: ~
+      md5: 6db1291de06f89cffc8bc9bf42805df4
+      module_name_from_file_guess: PPI::Token::Attribute
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Attribute.pm
+      packages:
+        - PPI::Token::Attribute
+      primary_package: PPI::Token::Attribute
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Attribute.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1447
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ff71e215a634f1b62a95f7fd7880811
+      module_name_from_file_guess: PPI::Token::Cast
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Cast.pm
+      packages:
+        - PPI::Token::Cast
+      primary_package: PPI::Token::Cast
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Cast.pm
+        identifier: VERSION
+        line_number: 39
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3473
+      file_mime_type: ~
+      line_count: ~
+      md5: 06d3ee1068bf8e370158c87cc76e1ab7
+      module_name_from_file_guess: PPI::Token::Comment
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Comment.pm
+      packages:
+        - PPI::Token::Comment
+      primary_package: PPI::Token::Comment
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Comment.pm
+        identifier: VERSION
+        line_number: 66
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2513
+      file_mime_type: ~
+      line_count: ~
+      md5: f00616539c4e983d345b94e2bdb2b0da
+      module_name_from_file_guess: PPI::Token::DashedWord
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/DashedWord.pm
+      packages:
+        - PPI::Token::DashedWord
+      primary_package: PPI::Token::DashedWord
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/DashedWord.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: 629837e68b11e1ecc4bca5d566f9d7d8
+      module_name_from_file_guess: PPI::Token::Data
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Data.pm
+      packages:
+        - PPI::Token::Data
+      primary_package: PPI::Token::Data
+      uses:
+        - strict
+        - base
+        - IO::String
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Data.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2440
+      file_mime_type: ~
+      line_count: ~
+      md5: 50fb58eaaa66cf6ffc31d0978b5d4acf
+      module_name_from_file_guess: PPI::Token::End
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/End.pm
+      packages:
+        - PPI::Token::End
+      primary_package: PPI::Token::End
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/End.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 1.202_03
+    - bytesize: 7701
+      file_mime_type: ~
+      line_count: ~
+      md5: bb3403be54b4599a663600b4906da565
+      module_name_from_file_guess: PPI::Token::HereDoc
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/HereDoc.pm
+      packages:
+        - PPI::Token::HereDoc
+      primary_package: PPI::Token::HereDoc
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/HereDoc.pm
+        identifier: VERSION
+        line_number: 92
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1166
+      file_mime_type: ~
+      line_count: ~
+      md5: eaa2c0eb75c5bb89ee67e280994a63a1
+      module_name_from_file_guess: PPI::Token::Label
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Label.pm
+      packages:
+        - PPI::Token::Label
+      primary_package: PPI::Token::Label
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Label.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 5022
+      file_mime_type: ~
+      line_count: ~
+      md5: c5aeb4a8294f6974eee7b1127e8ae539
+      module_name_from_file_guess: PPI::Token::Magic
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Magic.pm
+      packages:
+        - PPI::Token::Magic
+      primary_package: PPI::Token::Magic
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Magic.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3248
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d5a02e34fc38a1f3f46f20325031581
+      module_name_from_file_guess: PPI::Token::Number
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Number.pm
+      packages:
+        - PPI::Token::Number
+      primary_package: PPI::Token::Number
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1939
+      file_mime_type: ~
+      line_count: ~
+      md5: d1eb62984551bdfae524553e84da0c59
+      module_name_from_file_guess: PPI::Token::Number::Binary
+      mtime: 1210698736
+      name: blib/lib/PPI/Token/Number/Binary.pm
+      packages:
+        - PPI::Token::Number::Binary
+      primary_package: PPI::Token::Number::Binary
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number/Binary.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2397
+      file_mime_type: ~
+      line_count: ~
+      md5: 4770c99d418d85f5203a00fc2ca7c013
+      module_name_from_file_guess: PPI::Token::Number::Exp
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Number/Exp.pm
+      packages:
+        - PPI::Token::Number::Exp
+      primary_package: PPI::Token::Number::Exp
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number/Exp.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2542
+      file_mime_type: ~
+      line_count: ~
+      md5: 82388f5efdc3c72c5f4f967ac305be98
+      module_name_from_file_guess: PPI::Token::Number::Float
+      mtime: 1210698736
+      name: blib/lib/PPI/Token/Number/Float.pm
+      packages:
+        - PPI::Token::Number::Float
+      primary_package: PPI::Token::Number::Float
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number/Float.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1666
+      file_mime_type: ~
+      line_count: ~
+      md5: acc47c41497ad98be2e01835a1d01992
+      module_name_from_file_guess: PPI::Token::Number::Hex
+      mtime: 1210698736
+      name: blib/lib/PPI/Token/Number/Hex.pm
+      packages:
+        - PPI::Token::Number::Hex
+      primary_package: PPI::Token::Number::Hex
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number/Hex.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1844
+      file_mime_type: ~
+      line_count: ~
+      md5: 188427c303b85184e4bf0075e75045d9
+      module_name_from_file_guess: PPI::Token::Number::Octal
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Number/Octal.pm
+      packages:
+        - PPI::Token::Number::Octal
+      primary_package: PPI::Token::Number::Octal
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number/Octal.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2292
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cf5a59912178640378863fa181da643
+      module_name_from_file_guess: PPI::Token::Number::Version
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Number/Version.pm
+      packages:
+        - PPI::Token::Number::Version
+      primary_package: PPI::Token::Number::Version
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Number/Version.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3187
+      file_mime_type: ~
+      line_count: ~
+      md5: e7b11c78d10283f5a9968a1c047b61aa
+      module_name_from_file_guess: PPI::Token::Operator
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Operator.pm
+      packages:
+        - PPI::Token::Operator
+      primary_package: PPI::Token::Operator
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Operator.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 1.202_03
+    - bytesize: 3160
+      file_mime_type: ~
+      line_count: ~
+      md5: c90c114e5078cc7fcbf2196c345bfceb
+      module_name_from_file_guess: PPI::Token::Pod
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Pod.pm
+      packages:
+        - PPI::Token::Pod
+      primary_package: PPI::Token::Pod
+      uses:
+        - strict
+        - base
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Pod.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2343
+      file_mime_type: ~
+      line_count: ~
+      md5: 43531b1901e879fbc045bd94c08407e7
+      module_name_from_file_guess: PPI::Token::Prototype
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Prototype.pm
+      packages:
+        - PPI::Token::Prototype
+      primary_package: PPI::Token::Prototype
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Prototype.pm
+        identifier: VERSION
+        line_number: 54
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2960
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ebb07ad458f607fcd1f59e35fa64be
+      module_name_from_file_guess: PPI::Token::Quote
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Quote.pm
+      packages:
+        - PPI::Token::Quote
+      primary_package: PPI::Token::Quote
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Quote.pm
+        identifier: VERSION
+        line_number: 53
+        sigil: $
+        value: 1.202_03
+    - bytesize: 4077
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c01da8f0ab0d2c2c66c13a6c221058b
+      module_name_from_file_guess: PPI::Token::Quote::Double
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Quote/Double.pm
+      packages:
+        - PPI::Token::Quote::Double
+      primary_package: PPI::Token::Quote::Double
+      uses:
+        - strict
+        - base
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Quote/Double.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2170
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f49cfe9b15b3df8950d8f761b13d4a1
+      module_name_from_file_guess: PPI::Token::Quote::Interpolate
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Quote/Interpolate.pm
+      packages:
+        - PPI::Token::Quote::Interpolate
+      primary_package: PPI::Token::Quote::Interpolate
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Quote/Interpolate.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2129
+      file_mime_type: ~
+      line_count: ~
+      md5: ab269916ead2fb03e8e8893963cec01e
+      module_name_from_file_guess: PPI::Token::Quote::Literal
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Quote/Literal.pm
+      packages:
+        - PPI::Token::Quote::Literal
+      primary_package: PPI::Token::Quote::Literal
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Quote/Literal.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.202_03
+    - bytesize: 2499
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b59819d5a41c00abe45790edec85efc
+      module_name_from_file_guess: PPI::Token::Quote::Single
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Quote/Single.pm
+      packages:
+        - PPI::Token::Quote::Single
+      primary_package: PPI::Token::Quote::Single
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Quote/Single.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1626
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ac62b278787a4017e821e233b4743a6
+      module_name_from_file_guess: PPI::Token::QuoteLike
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/QuoteLike.pm
+      packages:
+        - PPI::Token::QuoteLike
+      primary_package: PPI::Token::QuoteLike
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/QuoteLike.pm
+        identifier: VERSION
+        line_number: 53
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1173
+      file_mime_type: ~
+      line_count: ~
+      md5: a8660251ccf493a1eabb8ca35a4ed582
+      module_name_from_file_guess: PPI::Token::QuoteLike::Backtick
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/QuoteLike/Backtick.pm
+      packages:
+        - PPI::Token::QuoteLike::Backtick
+      primary_package: PPI::Token::QuoteLike::Backtick
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/QuoteLike/Backtick.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1184
+      file_mime_type: ~
+      line_count: ~
+      md5: 5306ff7fc9ee4f6ce123290aaf5e8519
+      module_name_from_file_guess: PPI::Token::QuoteLike::Command
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/QuoteLike/Command.pm
+      packages:
+        - PPI::Token::QuoteLike::Command
+      primary_package: PPI::Token::QuoteLike::Command
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/QuoteLike/Command.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1358
+      file_mime_type: ~
+      line_count: ~
+      md5: d42777d25109130913b49e3a35aed489
+      module_name_from_file_guess: PPI::Token::QuoteLike::Readline
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/QuoteLike/Readline.pm
+      packages:
+        - PPI::Token::QuoteLike::Readline
+      primary_package: PPI::Token::QuoteLike::Readline
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/QuoteLike/Readline.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1289
+      file_mime_type: ~
+      line_count: ~
+      md5: 8507c3a368d70e78c63dca58768b298b
+      module_name_from_file_guess: PPI::Token::QuoteLike::Regexp
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/QuoteLike/Regexp.pm
+      packages:
+        - PPI::Token::QuoteLike::Regexp
+      primary_package: PPI::Token::QuoteLike::Regexp
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/QuoteLike/Regexp.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1293
+      file_mime_type: ~
+      line_count: ~
+      md5: df8bce66ecc2e90ee9a342956159fc8c
+      module_name_from_file_guess: PPI::Token::QuoteLike::Words
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/QuoteLike/Words.pm
+      packages:
+        - PPI::Token::QuoteLike::Words
+      primary_package: PPI::Token::QuoteLike::Words
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/QuoteLike/Words.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1420
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a21d9d9c41752d00c206405a45f2aa6
+      module_name_from_file_guess: PPI::Token::Regexp
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Regexp.pm
+      packages:
+        - PPI::Token::Regexp
+      primary_package: PPI::Token::Regexp
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Regexp.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1495
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a5bf0706e80d89b3a8c921dfc0dcd17
+      module_name_from_file_guess: PPI::Token::Regexp::Match
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Regexp/Match.pm
+      packages:
+        - PPI::Token::Regexp::Match
+      primary_package: PPI::Token::Regexp::Match
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Regexp/Match.pm
+        identifier: VERSION
+        line_number: 51
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1229
+      file_mime_type: ~
+      line_count: ~
+      md5: f4afdb4d997adab265b73078247c852e
+      module_name_from_file_guess: PPI::Token::Regexp::Substitute
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Regexp/Substitute.pm
+      packages:
+        - PPI::Token::Regexp::Substitute
+      primary_package: PPI::Token::Regexp::Substitute
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Regexp/Substitute.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1446
+      file_mime_type: ~
+      line_count: ~
+      md5: a9209dc1f497c087e61a14257396d573
+      module_name_from_file_guess: PPI::Token::Regexp::Transliterate
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Regexp/Transliterate.pm
+      packages:
+        - PPI::Token::Regexp::Transliterate
+      primary_package: PPI::Token::Regexp::Transliterate
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Regexp/Transliterate.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1317
+      file_mime_type: ~
+      line_count: ~
+      md5: e9b72c7d512febfa89b7b4c1028c9bcf
+      module_name_from_file_guess: PPI::Token::Separator
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Separator.pm
+      packages:
+        - PPI::Token::Separator
+      primary_package: PPI::Token::Separator
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Separator.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.202_03
+    - bytesize: 4904
+      file_mime_type: ~
+      line_count: ~
+      md5: 194f43d6636747638218772fab101c47
+      module_name_from_file_guess: PPI::Token::Structure
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Structure.pm
+      packages:
+        - PPI::Token::Structure
+      primary_package: PPI::Token::Structure
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Structure.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 5043
+      file_mime_type: ~
+      line_count: ~
+      md5: d64e183bb283a38cb13ab9bba87f9025
+      module_name_from_file_guess: PPI::Token::Symbol
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Symbol.pm
+      packages:
+        - PPI::Token::Symbol
+      primary_package: PPI::Token::Symbol
+      uses:
+        - strict
+        - base
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Symbol.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 7775
+      file_mime_type: ~
+      line_count: ~
+      md5: b8a244d46b0cef0ac2cf0f01419be59e
+      module_name_from_file_guess: PPI::Token::Unknown
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Unknown.pm
+      packages:
+        - PPI::Token::Unknown
+      primary_package: PPI::Token::Unknown
+      uses:
+        - strict
+        - base
+        - PPI::Exception
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Unknown.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.202_03
+    - bytesize: 11605
+      file_mime_type: ~
+      line_count: ~
+      md5: c335b795009cd0d312c92b47e59472d8
+      module_name_from_file_guess: PPI::Token::Whitespace
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Whitespace.pm
+      packages:
+        - PPI::Token::Whitespace
+      primary_package: PPI::Token::Whitespace
+      uses:
+        - strict
+        - base
+        - Clone
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Whitespace.pm
+        identifier: VERSION
+        line_number: 50
+        sigil: $
+        value: 1.202_03
+    - bytesize: 10192
+      file_mime_type: ~
+      line_count: ~
+      md5: b38a6a2509025d0ff4543e2177b0656d
+      module_name_from_file_guess: PPI::Token::Word
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/Word.pm
+      packages:
+        - PPI::Token::Word
+      primary_package: PPI::Token::Word
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/Word.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.202_03
+    - bytesize: 6947
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ae3fe40fe53a94b8ec80f9cb7d23a79
+      module_name_from_file_guess: PPI::Token::_QuoteEngine
+      mtime: 1210698735
+      name: blib/lib/PPI/Token/_QuoteEngine.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/_QuoteEngine.pm
+        identifier: VERSION
+        line_number: 38
+        sigil: $
+        value: 1.202_03
+    - bytesize: 11458
+      file_mime_type: ~
+      line_count: ~
+      md5: dd99482887684a8c4274dc8809e476ca
+      module_name_from_file_guess: PPI::Token::_QuoteEngine::Full
+      mtime: 1210698736
+      name: blib/lib/PPI/Token/_QuoteEngine/Full.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - base
+        - Clone
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/_QuoteEngine/Full.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1369
+      file_mime_type: ~
+      line_count: ~
+      md5: 58c83f96e6bffb7fac97f1b5d55ae906
+      module_name_from_file_guess: PPI::Token::_QuoteEngine::Simple
+      mtime: 1210698736
+      name: blib/lib/PPI/Token/_QuoteEngine/Simple.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Token/_QuoteEngine/Simple.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 1.202_03
+    - bytesize: 33409
+      file_mime_type: ~
+      line_count: ~
+      md5: ebb765f78381bbe3eceeffe9c2946a48
+      module_name_from_file_guess: PPI::Tokenizer
+      mtime: 1210698735
+      name: blib/lib/PPI/Tokenizer.pm
+      packages:
+        - PPI::Tokenizer
+      primary_package: PPI::Tokenizer
+      uses:
+        - strict
+        - List::MoreUtils
+        - Params::Util
+        - PPI::Element
+        - PPI::Token
+        - PPI::Util
+        - PPI::Exception
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Tokenizer.pm
+        identifier: VERSION
+        line_number: 84
+        sigil: $
+        value: 1.202_03
+    - bytesize: 5859
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dd28c36ce5bab1d848d60fbed43d32d
+      module_name_from_file_guess: PPI::Transform
+      mtime: 1210698735
+      name: blib/lib/PPI/Transform.pm
+      packages:
+        - PPI::Transform
+      primary_package: PPI::Transform
+      uses:
+        - strict
+        - Carp
+        - List::Util
+        - PPI::Document
+        - Params::Util
+        - vars
+      version_info:
+        filename: blib/lib/PPI/Transform.pm
+        identifier: VERSION
+        line_number: 29
+        sigil: $
+        value: 1.202_03
+    - bytesize: 1616
+      file_mime_type: ~
+      line_count: ~
+      md5: 35a17a67bf157b88c5df4dca47b18b22
+      module_name_from_file_guess: PPI::Util
+      mtime: 1210698734
+      name: blib/lib/PPI/Util.pm
+      packages:
+        - PPI::Util
+      primary_package: PPI::Util
+      uses:
+        - strict
+        - Digest::MD5
+        - Params::Util
+        - vars
+        - Exporter
+        - PPI::Document
+      version_info:
+        filename: blib/lib/PPI/Util.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 1.202_03
+  modules:
+    - blib/lib/PPI.pm
+    - blib/lib/PPI/Cache.pm
+    - blib/lib/PPI/Document.pm
+    - blib/lib/PPI/Document/File.pm
+    - blib/lib/PPI/Document/Fragment.pm
+    - blib/lib/PPI/Document/Normalized.pm
+    - blib/lib/PPI/Dumper.pm
+    - blib/lib/PPI/Element.pm
+    - blib/lib/PPI/Exception.pm
+    - blib/lib/PPI/Exception/ParserTimeout.pm
+    - blib/lib/PPI/Find.pm
+    - blib/lib/PPI/Lexer.pm
+    - blib/lib/PPI/Node.pm
+    - blib/lib/PPI/Normal.pm
+    - blib/lib/PPI/Normal/Standard.pm
+    - blib/lib/PPI/Statement.pm
+    - blib/lib/PPI/Statement/Break.pm
+    - blib/lib/PPI/Statement/Compound.pm
+    - blib/lib/PPI/Statement/Data.pm
+    - blib/lib/PPI/Statement/End.pm
+    - blib/lib/PPI/Statement/Expression.pm
+    - blib/lib/PPI/Statement/Include.pm
+    - blib/lib/PPI/Statement/Include/Perl6.pm
+    - blib/lib/PPI/Statement/Null.pm
+    - blib/lib/PPI/Statement/Package.pm
+    - blib/lib/PPI/Statement/Scheduled.pm
+    - blib/lib/PPI/Statement/Sub.pm
+    - blib/lib/PPI/Statement/Unknown.pm
+    - blib/lib/PPI/Statement/UnmatchedBrace.pm
+    - blib/lib/PPI/Statement/Variable.pm
+    - blib/lib/PPI/Structure.pm
+    - blib/lib/PPI/Structure/Block.pm
+    - blib/lib/PPI/Structure/Condition.pm
+    - blib/lib/PPI/Structure/Constructor.pm
+    - blib/lib/PPI/Structure/ForLoop.pm
+    - blib/lib/PPI/Structure/List.pm
+    - blib/lib/PPI/Structure/Subscript.pm
+    - blib/lib/PPI/Structure/Unknown.pm
+    - blib/lib/PPI/Token.pm
+    - blib/lib/PPI/Token/ArrayIndex.pm
+    - blib/lib/PPI/Token/Attribute.pm
+    - blib/lib/PPI/Token/Cast.pm
+    - blib/lib/PPI/Token/Comment.pm
+    - blib/lib/PPI/Token/DashedWord.pm
+    - blib/lib/PPI/Token/Data.pm
+    - blib/lib/PPI/Token/End.pm
+    - blib/lib/PPI/Token/HereDoc.pm
+    - blib/lib/PPI/Token/Label.pm
+    - blib/lib/PPI/Token/Magic.pm
+    - blib/lib/PPI/Token/Number.pm
+    - blib/lib/PPI/Token/Number/Binary.pm
+    - blib/lib/PPI/Token/Number/Exp.pm
+    - blib/lib/PPI/Token/Number/Float.pm
+    - blib/lib/PPI/Token/Number/Hex.pm
+    - blib/lib/PPI/Token/Number/Octal.pm
+    - blib/lib/PPI/Token/Number/Version.pm
+    - blib/lib/PPI/Token/Operator.pm
+    - blib/lib/PPI/Token/Pod.pm
+    - blib/lib/PPI/Token/Prototype.pm
+    - blib/lib/PPI/Token/Quote.pm
+    - blib/lib/PPI/Token/Quote/Double.pm
+    - blib/lib/PPI/Token/Quote/Interpolate.pm
+    - blib/lib/PPI/Token/Quote/Literal.pm
+    - blib/lib/PPI/Token/Quote/Single.pm
+    - blib/lib/PPI/Token/QuoteLike.pm
+    - blib/lib/PPI/Token/QuoteLike/Backtick.pm
+    - blib/lib/PPI/Token/QuoteLike/Command.pm
+    - blib/lib/PPI/Token/QuoteLike/Readline.pm
+    - blib/lib/PPI/Token/QuoteLike/Regexp.pm
+    - blib/lib/PPI/Token/QuoteLike/Words.pm
+    - blib/lib/PPI/Token/Regexp.pm
+    - blib/lib/PPI/Token/Regexp/Match.pm
+    - blib/lib/PPI/Token/Regexp/Substitute.pm
+    - blib/lib/PPI/Token/Regexp/Transliterate.pm
+    - blib/lib/PPI/Token/Separator.pm
+    - blib/lib/PPI/Token/Structure.pm
+    - blib/lib/PPI/Token/Symbol.pm
+    - blib/lib/PPI/Token/Unknown.pm
+    - blib/lib/PPI/Token/Whitespace.pm
+    - blib/lib/PPI/Token/Word.pm
+    - blib/lib/PPI/Token/_QuoteEngine.pm
+    - blib/lib/PPI/Token/_QuoteEngine/Full.pm
+    - blib/lib/PPI/Token/_QuoteEngine/Simple.pm
+    - blib/lib/PPI/Tokenizer.pm
+    - blib/lib/PPI/Transform.pm
+    - blib/lib/PPI/Util.pm
+  test_info:
+    - bytesize: 4800
+      file_mime_type: ~
+      line_count: ~
+      md5: bf48c0d965a7a915c3bc797c9e13164c
+      mtime: 1210698736
+      name: t/07_token.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - List::MoreUtils
+        - PPI
+        - Test::More
+        - t::lib::PPI
+    - bytesize: 1080
+      file_mime_type: ~
+      line_count: ~
+      md5: bdec0ca473f8fc0f722c1b3314b4257b
+      mtime: 1210698736
+      name: t/22_readonly.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Document
+        - Test::More
+    - bytesize: 797
+      file_mime_type: ~
+      line_count: ~
+      md5: 60de51cb829cf59abd0a9f6387198006
+      mtime: 1210698736
+      name: t/ppi_token_dashedword.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 4383
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e05dfe6ad1ef1472611dda1ae0966cb
+      mtime: 1210698736
+      name: t/19_selftesting.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Class::Inspector
+        - constant
+        - Params::Util
+        - Test::More
+        - Test::Object
+        - t::lib::PPI
+    - bytesize: 947
+      file_mime_type: ~
+      line_count: ~
+      md5: aa5a11ba12cb554be94bc08217474de6
+      mtime: 1210698736
+      name: t/ppi_token_quote_interpolate.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 594
+      file_mime_type: ~
+      line_count: ~
+      md5: f200a5b17cb052694e4506a1b65ad014
+      mtime: 1210698736
+      name: t/05_lexer_practical.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Lexer
+        - PPI::Dumper
+        - Test::More
+        - t::lib::PPI
+    - bytesize: 5433
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d7ca909ea74cd9ae3e7dd84014db577
+      mtime: 1210698736
+      name: t/18_cache.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Cache
+        - PPI::Document
+        - File::Remove
+        - Scalar::Util
+        - Test::More
+        - Test::SubCalls
+    - bytesize: 1746
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fa05304c1186d8425af39cdcc0b49e9
+      mtime: 1210698736
+      name: t/09_normal.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 401fc87bc56a97809ea970d32aa9c3ff
+      mtime: 1210698736
+      name: t/24_v6.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1241
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f577ff422a302365745c901cb17574f
+      mtime: 1210698736
+      name: t/11_util.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Lexer
+        - PPI
+        - PPI::Util
+        - Test::More
+    - bytesize: 2644
+      file_mime_type: ~
+      line_count: ~
+      md5: 457480a538ac4d941532962607ad1937
+      mtime: 1210698736
+      name: t/ppi_normal.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1432
+      file_mime_type: ~
+      line_count: ~
+      md5: 86f9cd11dc524dd1dfa3070ed547398f
+      mtime: 1210698736
+      name: t/ppi_token_quote_double.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 4949
+      file_mime_type: ~
+      line_count: ~
+      md5: 49ac08fd5c4aa8d84fb1777b4c53afb2
+      mtime: 1210698736
+      name: t/21_exhaustive.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Carp
+        - Params::Util
+        - vars
+        - Test::More
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: d538e615c35ee356c2ae05a70bc80a8d
+      mtime: 1210698736
+      name: t/ppi_token_quote.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1461
+      file_mime_type: ~
+      line_count: ~
+      md5: 68075ed5b57b52bae0754293cc8baa7f
+      mtime: 1210698736
+      name: t/ppi_statement_variable.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1424
+      file_mime_type: ~
+      line_count: ~
+      md5: e25c838d8bc4e4f28a7384aa8548f74f
+      mtime: 1210698736
+      name: t/17_storable.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - PPI::Document
+        - Test::More
+        - Scalar::Util
+        - Storable
+    - bytesize: 2558
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b866de1c3a6c2a77197b111832008d8
+      mtime: 1210698736
+      name: t/ppi_token__quoteengine_full.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 7531
+      file_mime_type: ~
+      line_count: ~
+      md5: b63462fb36e1ef758a091577ccae12f6
+      mtime: 1210698736
+      name: t/08_regression.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Lexer
+        - PPI::Dumper
+        - Params::Util
+        - Time::HiRes
+        - Test::More
+        - t::lib::PPI
+    - bytesize: 2466
+      file_mime_type: ~
+      line_count: ~
+      md5: bfe9459a33399133677c43d52d316b73
+      mtime: 1210698736
+      name: t/ppi_element.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1135
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d74d56d036941f58e90c37a5103dbcb
+      mtime: 1210698736
+      name: t/16_xml_compatibility.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 21361
+      file_mime_type: ~
+      line_count: ~
+      md5: bc75248401ada77f82c627c88c307355
+      mtime: 1210698736
+      name: t/04_element.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Lexer
+        - Test::More
+        - Scalar::Util
+        - vars
+        - Time::HiRes
+    - bytesize: 964
+      file_mime_type: ~
+      line_count: ~
+      md5: 01ced6e4caf8e328b6a14fd3ca3349b6
+      mtime: 1210698736
+      name: t/13_data.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 896
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dd4b0634497e603e8a17bd222120082
+      mtime: 1210698736
+      name: t/ppi_token_quote_literal.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 694
+      file_mime_type: ~
+      line_count: ~
+      md5: e08099523ba5fd4ea5b88216c00ee49b
+      mtime: 1210698736
+      name: t/ppi_token_word.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1710
+      file_mime_type: ~
+      line_count: ~
+      md5: bbed71c823aae25b337fd508d97870a2
+      mtime: 1210698736
+      name: t/10_statement.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Lexer
+        - Test::More
+        - Scalar::Util
+    - bytesize: 3711
+      file_mime_type: ~
+      line_count: ~
+      md5: 28ebdd0ee0e289578d803169e3eaeaaa
+      mtime: 1210698736
+      name: t/20_tokenizer_regression.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Lexer
+        - PPI::Dumper
+        - Carp
+        - Params::Util
+        - Time::HiRes
+        - vars
+        - Test::More
+    - bytesize: 1107
+      file_mime_type: ~
+      line_count: ~
+      md5: b504cbbc3955cce6d82c79b61cee3cc7
+      mtime: 1210698736
+      name: t/ppi_token_quote_single.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 6820
+      file_mime_type: ~
+      line_count: ~
+      md5: e743e769301f5bbdfc298cb1333a2a18
+      mtime: 1210698736
+      name: t/02_api.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - PPI::Dumper
+        - PPI::Find
+        - PPI::Transform
+        - Test::More
+        - Test::ClassAPI
+    - bytesize: 652
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a797b0ffcbaf9c286eb6f9d15359e03
+      mtime: 1210698736
+      name: t/23_file.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI::Document::File
+        - Test::More
+    - bytesize: 988
+      file_mime_type: ~
+      line_count: ~
+      md5: c24b043d94b636b7dc2a9666760662ef
+      mtime: 1210698736
+      name: t/01_compile.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - Test::More
+    - bytesize: 4944
+      file_mime_type: ~
+      line_count: ~
+      md5: 72ac77d5801ceb9c9e3636a4cc0d84db
+      mtime: 1210698736
+      name: t/12_location.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 652
+      file_mime_type: ~
+      line_count: ~
+      md5: 34758cba61a64d3458bd522c3e1fe461
+      mtime: 1210698736
+      name: t/03_empiric.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 3463
+      file_mime_type: ~
+      line_count: ~
+      md5: 5be75a07e1f806c1fe5fc69c0f052c83
+      mtime: 1210698736
+      name: t/15_transform.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - PPI::Transform
+        - Test::More
+        - Scalar::Util
+        - File::Copy
+        - Params::Util
+        - base
+        - vars
+    - bytesize: 2732
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a1d388907cc33b9bfea0f4ddc736d89
+      mtime: 1210698736
+      name: t/06_round_trip.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+    - bytesize: 1999
+      file_mime_type: ~
+      line_count: ~
+      md5: 460ae849e73d7f6ecf9c125442c6874e
+      mtime: 1210698736
+      name: t/14_charsets.t
+      uses:
+        - Test::More
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Params::Util
+        - utf8
+        - ''
+    - bytesize: 1012
+      file_mime_type: ~
+      line_count: ~
+      md5: 9044855d06dd0902ba1bd8692bb2280f
+      mtime: 1210698736
+      name: t/99_author.t
+      uses:
+        - Test::More
+    - bytesize: 571
+      file_mime_type: ~
+      line_count: ~
+      md5: af6a95a2a732e6577e27f57dc9806b7e
+      mtime: 1210698736
+      name: t/97_meta.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 786
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b991c3467d56fe3adf7eb7806632f20
+      mtime: 1210698736
+      name: t/ppi_node.t
+      uses:
+        - strict
+        - File::Spec::Functions
+        - PPI
+        - Test::More
+  tests:
+    - t/07_token.t
+    - t/22_readonly.t
+    - t/ppi_token_dashedword.t
+    - t/19_selftesting.t
+    - t/ppi_token_quote_interpolate.t
+    - t/05_lexer_practical.t
+    - t/18_cache.t
+    - t/09_normal.t
+    - t/24_v6.t
+    - t/11_util.t
+    - t/ppi_normal.t
+    - t/ppi_token_quote_double.t
+    - t/21_exhaustive.t
+    - t/ppi_token_quote.t
+    - t/ppi_statement_variable.t
+    - t/17_storable.t
+    - t/ppi_token__quoteengine_full.t
+    - t/08_regression.t
+    - t/ppi_element.t
+    - t/16_xml_compatibility.t
+    - t/04_element.t
+    - t/13_data.t
+    - t/ppi_token_quote_literal.t
+    - t/ppi_token_word.t
+    - t/10_statement.t
+    - t/20_tokenizer_regression.t
+    - t/ppi_token_quote_single.t
+    - t/02_api.t
+    - t/23_file.t
+    - t/01_compile.t
+    - t/12_location.t
+    - t/03_empiric.t
+    - t/15_transform.t
+    - t/06_round_trip.t
+    - t/14_charsets.t
+    - t/99_author.t
+    - t/97_meta.t
+    - t/ppi_node.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-70214.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 70214
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268861917
+  examine_start_time: 1268861859
+  examine_time: 58
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 70214
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268861917
+  run_start_time: 1268861859
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

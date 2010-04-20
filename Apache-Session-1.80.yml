@@ -1,0 +1,2655 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: Apache-Session
+    requires:
+      Test::Deep: 0.082
+      Test::Exception: 0.15
+      Test::More: 0.47
+    version: 1.80
+    version_from: Session.pm
+  blib:
+    - blib/lib/Apache/Session.pm
+    - blib/lib/Apache/Session/DB_File.pm
+    - blib/lib/Apache/Session/File.pm
+    - blib/lib/Apache/Session/Flex.pm
+    - blib/lib/Apache/Session/Generate/MD5.pm
+    - blib/lib/Apache/Session/Generate/ModUniqueId.pm
+    - blib/lib/Apache/Session/Generate/ModUsertrack.pm
+    - blib/lib/Apache/Session/Informix.pm
+    - blib/lib/Apache/Session/Lock/File.pm
+    - blib/lib/Apache/Session/Lock/MySQL.pm
+    - blib/lib/Apache/Session/Lock/Null.pm
+    - blib/lib/Apache/Session/Lock/Semaphore.pm
+    - blib/lib/Apache/Session/Lock/Sybase.pm
+    - blib/lib/Apache/Session/MySQL.pm
+    - blib/lib/Apache/Session/Oracle.pm
+    - blib/lib/Apache/Session/Postgres.pm
+    - blib/lib/Apache/Session/Serialize/Base64.pm
+    - blib/lib/Apache/Session/Serialize/Storable.pm
+    - blib/lib/Apache/Session/Serialize/Sybase.pm
+    - blib/lib/Apache/Session/Serialize/UUEncode.pm
+    - blib/lib/Apache/Session/Store/DBI.pm
+    - blib/lib/Apache/Session/Store/DB_File.pm
+    - blib/lib/Apache/Session/Store/File.pm
+    - blib/lib/Apache/Session/Store/Informix.pm
+    - blib/lib/Apache/Session/Store/MySQL.pm
+    - blib/lib/Apache/Session/Store/Oracle.pm
+    - blib/lib/Apache/Session/Store/Postgres.pm
+    - blib/lib/Apache/Session/Store/Sybase.pm
+    - blib/lib/Apache/Session/Sybase.pm
+    - blib/man3/Apache::Session.3
+    - blib/man3/Apache::Session::DB_File.3
+    - blib/man3/Apache::Session::File.3
+    - blib/man3/Apache::Session::Flex.3
+    - blib/man3/Apache::Session::Generate::MD5.3
+    - blib/man3/Apache::Session::Generate::ModUniqueId.3
+    - blib/man3/Apache::Session::Generate::ModUsertrack.3
+    - blib/man3/Apache::Session::Informix.3
+    - blib/man3/Apache::Session::Lock::File.3
+    - blib/man3/Apache::Session::Lock::MySQL.3
+    - blib/man3/Apache::Session::Lock::Null.3
+    - blib/man3/Apache::Session::Lock::Semaphore.3
+    - blib/man3/Apache::Session::Lock::Sybase.3
+    - blib/man3/Apache::Session::MySQL.3
+    - blib/man3/Apache::Session::Oracle.3
+    - blib/man3/Apache::Session::Postgres.3
+    - blib/man3/Apache::Session::Serialize::Base64.3
+    - blib/man3/Apache::Session::Serialize::Storable.3
+    - blib/man3/Apache::Session::Serialize::Sybase.3
+    - blib/man3/Apache::Session::Serialize::UUEncode.3
+    - blib/man3/Apache::Session::Store::DB_File.3
+    - blib/man3/Apache::Session::Store::File.3
+    - blib/man3/Apache::Session::Store::Informix.3
+    - blib/man3/Apache::Session::Store::MySQL.3
+    - blib/man3/Apache::Session::Store::Oracle.3
+    - blib/man3/Apache::Session::Store::Postgres.3
+    - blib/man3/Apache::Session::Store::Sybase.3
+    - blib/man3/Apache::Session::Sybase.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Test::Deep 0.082 not found.
+    Warning: prerequisite Test::Exception 0.15 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Apache::Session
+  build_output: |
+    cp Session/Store/File.pm blib/lib/Apache/Session/Store/File.pm
+    cp Session/Generate/MD5.pm blib/lib/Apache/Session/Generate/MD5.pm
+    cp Session/Store/Sybase.pm blib/lib/Apache/Session/Store/Sybase.pm
+    cp Session/Informix.pm blib/lib/Apache/Session/Informix.pm
+    cp Session/Lock/Sybase.pm blib/lib/Apache/Session/Lock/Sybase.pm
+    cp Session/Store/DBI.pm blib/lib/Apache/Session/Store/DBI.pm
+    cp Session/Sybase.pm blib/lib/Apache/Session/Sybase.pm
+    cp Session/Store/Oracle.pm blib/lib/Apache/Session/Store/Oracle.pm
+    cp Session/Lock/MySQL.pm blib/lib/Apache/Session/Lock/MySQL.pm
+    cp Session/Generate/ModUniqueId.pm blib/lib/Apache/Session/Generate/ModUniqueId.pm
+    cp Session/Serialize/Sybase.pm blib/lib/Apache/Session/Serialize/Sybase.pm
+    cp Session/Store/Informix.pm blib/lib/Apache/Session/Store/Informix.pm
+    cp Session/Lock/File.pm blib/lib/Apache/Session/Lock/File.pm
+    cp Session/Store/MySQL.pm blib/lib/Apache/Session/Store/MySQL.pm
+    cp Session.pm blib/lib/Apache/Session.pm
+    cp Session/File.pm blib/lib/Apache/Session/File.pm
+    cp Session/Postgres.pm blib/lib/Apache/Session/Postgres.pm
+    cp Session/Lock/Null.pm blib/lib/Apache/Session/Lock/Null.pm
+    cp Session/Generate/ModUsertrack.pm blib/lib/Apache/Session/Generate/ModUsertrack.pm
+    cp Session/DB_File.pm blib/lib/Apache/Session/DB_File.pm
+    cp Session/Oracle.pm blib/lib/Apache/Session/Oracle.pm
+    cp Session/Lock/Semaphore.pm blib/lib/Apache/Session/Lock/Semaphore.pm
+    cp Session/Store/DB_File.pm blib/lib/Apache/Session/Store/DB_File.pm
+    cp Session/Serialize/Storable.pm blib/lib/Apache/Session/Serialize/Storable.pm
+    cp Session/Flex.pm blib/lib/Apache/Session/Flex.pm
+    cp Session/Serialize/UUEncode.pm blib/lib/Apache/Session/Serialize/UUEncode.pm
+    cp Session/Store/Postgres.pm blib/lib/Apache/Session/Store/Postgres.pm
+    cp Session/Serialize/Base64.pm blib/lib/Apache/Session/Serialize/Base64.pm
+    cp Session/MySQL.pm blib/lib/Apache/Session/MySQL.pm
+    Manifying blib/man3/Apache::Session::Store::File.3
+    Manifying blib/man3/Apache::Session::Generate::MD5.3
+    Manifying blib/man3/Apache::Session::Store::Sybase.3
+    Manifying blib/man3/Apache::Session::Informix.3
+    Manifying blib/man3/Apache::Session::Lock::Sybase.3
+    Manifying blib/man3/Apache::Session::Store::Oracle.3
+    Manifying blib/man3/Apache::Session::Lock::MySQL.3
+    Manifying blib/man3/Apache::Session::Sybase.3
+    Manifying blib/man3/Apache::Session::Store::Informix.3
+    Manifying blib/man3/Apache::Session::Serialize::Sybase.3
+    Manifying blib/man3/Apache::Session::Generate::ModUniqueId.3
+    Manifying blib/man3/Apache::Session::Lock::File.3
+    Manifying blib/man3/Apache::Session::Store::MySQL.3
+    Manifying blib/man3/Apache::Session.3
+    Manifying blib/man3/Apache::Session::File.3
+    Manifying blib/man3/Apache::Session::Postgres.3
+    Manifying blib/man3/Apache::Session::DB_File.3
+    Manifying blib/man3/Apache::Session::Generate::ModUsertrack.3
+    Manifying blib/man3/Apache::Session::Lock::Null.3
+    Manifying blib/man3/Apache::Session::Oracle.3
+    Manifying blib/man3/Apache::Session::Store::DB_File.3
+    Manifying blib/man3/Apache::Session::Lock::Semaphore.3
+    Manifying blib/man3/Apache::Session::Serialize::Storable.3
+    Manifying blib/man3/Apache::Session::Flex.3
+    Manifying blib/man3/Apache::Session::Serialize::UUEncode.3
+    Manifying blib/man3/Apache::Session::Store::Postgres.3
+    Manifying blib/man3/Apache::Session::Serialize::Base64.3
+    Manifying blib/man3/Apache::Session::MySQL.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV/Apache-Session-1.80/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV/Apache-Session-1.80
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV/Apache-Session-1.80/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV/Apache-Session-1.80/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: CWEST
+  dist_basename: Apache-Session-1.80.tar.gz
+  dist_date: 1128637052
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV/Apache-Session-1.80
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV/Apache-Session-1.80
+  dist_file: /home/brian/CPAN/authors/id/C/CW/CWEST/Apache-Session-1.80.tar.gz
+  dist_md5: 1708ef39588e607105984b3a1f67463e
+  dist_size: 31227
+  manifest:
+    - CHANGES
+    - INSTALL
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - Session.pm
+    - Session/DB_File.pm
+    - Session/File.pm
+    - Session/Flex.pm
+    - Session/Generate/MD5.pm
+    - Session/Generate/ModUniqueId.pm
+    - Session/Generate/ModUsertrack.pm
+    - Session/Informix.pm
+    - Session/Lock/File.pm
+    - Session/Lock/MySQL.pm
+    - Session/Lock/Null.pm
+    - Session/Lock/Semaphore.pm
+    - Session/Lock/Sybase.pm
+    - Session/MySQL.pm
+    - Session/Oracle.pm
+    - Session/Postgres.pm
+    - Session/Serialize/Base64.pm
+    - Session/Serialize/Storable.pm
+    - Session/Serialize/Sybase.pm
+    - Session/Serialize/UUEncode.pm
+    - Session/Store/DBI.pm
+    - Session/Store/DB_File.pm
+    - Session/Store/File.pm
+    - Session/Store/Informix.pm
+    - Session/Store/MySQL.pm
+    - Session/Store/Oracle.pm
+    - Session/Store/Postgres.pm
+    - Session/Store/Sybase.pm
+    - Session/Sybase.pm
+    - TODO
+    - b/dbi.b
+    - b/dbinew.b
+    - b/dbipop.b
+    - b/dbstore.b
+    - b/flexpop.b
+    - b/gdbm.b
+    - b/mysqllock.b
+    - b/uuevsmime.b
+    - eg/example.perl
+    - t/99base64.t
+    - t/99dbfile.t
+    - t/99dbfilestore.t
+    - t/99file.t
+    - t/99filelock.t
+    - t/99filestore.t
+    - t/99flex.t
+    - t/99md5gen.t
+    - t/99moduniqgen.t
+    - t/99mysql.t
+    - t/99mysqllock.t
+    - t/99mysqlstore.t
+    - t/99nulllock.t
+    - t/99oracle.t
+    - t/99postgres.t
+    - t/99semaphore.t
+    - t/99storable.t
+    - t/99uue.t
+  manifest_file_info:
+    - bytesize: 2467
+      file_mime_type: ~
+      line_count: ~
+      md5: e4eb329834da3d36278b1b7d943b3bc9
+      mtime: 1128636649
+      name: CHANGES
+    - bytesize: 278
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1094063877
+      name: INSTALL
+    - bytesize: 1106
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1094064096
+      name: MANIFEST
+    - bytesize: 422
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1128636935
+      name: META.yml
+    - bytesize: 313
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1094064408
+      name: Makefile.PL
+    - bytesize: 3545
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1094063842
+      name: README
+    - bytesize: 17379
+      file_mime_type: ~
+      line_count: ~
+      md5: 61b94effff8678dd8c19a4b453bca72f
+      mtime: 1128636903
+      name: Session.pm
+    - bytesize: 1960
+      file_mime_type: ~
+      line_count: ~
+      md5: c3876358bc095299338c36520f9059bb
+      mtime: 967845688
+      name: Session/DB_File.pm
+    - bytesize: 2109
+      file_mime_type: ~
+      line_count: ~
+      md5: 00bb243a8b6fd18d83b200cbd1430f44
+      mtime: 967847435
+      name: Session/File.pm
+    - bytesize: 4030
+      file_mime_type: ~
+      line_count: ~
+      md5: f3af68f087345a408aa02981415511f4
+      mtime: 1002821499
+      name: Session/Flex.pm
+    - bytesize: 2460
+      file_mime_type: ~
+      line_count: ~
+      md5: f9f534bfcc96575f44795069065ea011
+      mtime: 1002821169
+      name: Session/Generate/MD5.pm
+    - bytesize: 1321
+      file_mime_type: ~
+      line_count: ~
+      md5: 8449bb89a7abb444c508e45d28737151
+      mtime: 1002821750
+      name: Session/Generate/ModUniqueId.pm
+    - bytesize: 2529
+      file_mime_type: ~
+      line_count: ~
+      md5: e086fec8632f0aca7d9af87e29417258
+      mtime: 1002822212
+      name: Session/Generate/ModUsertrack.pm
+    - bytesize: 2710
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ea76b6c63cac70a7508211453255b73
+      mtime: 1036503476
+      name: Session/Informix.pm
+    - bytesize: 5314
+      file_mime_type: ~
+      line_count: ~
+      md5: 73a2423f8ca307aa6fa07e437516ab7d
+      mtime: 1077650840
+      name: Session/Lock/File.pm
+    - bytesize: 3669
+      file_mime_type: ~
+      line_count: ~
+      md5: 66f6e687373b97b68c0bedf714854119
+      mtime: 959321507
+      name: Session/Lock/MySQL.pm
+    - bytesize: 1546
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f1e28b29a4ebebb2d9e83bddebac368
+      mtime: 959321506
+      name: Session/Lock/Null.pm
+    - bytesize: 6698
+      file_mime_type: ~
+      line_count: ~
+      md5: 08a9ba38ae6eb2cffd0291026210c95e
+      mtime: 1128636513
+      name: Session/Lock/Semaphore.pm
+    - bytesize: 3649
+      file_mime_type: ~
+      line_count: ~
+      md5: 055bfd72a597e7809fbd1c6e64aa144c
+      mtime: 1077646649
+      name: Session/Lock/Sybase.pm
+    - bytesize: 2220
+      file_mime_type: ~
+      line_count: ~
+      md5: 0678750d35a30e6b5389d51ddc14c626
+      mtime: 967845681
+      name: Session/MySQL.pm
+    - bytesize: 2686
+      file_mime_type: ~
+      line_count: ~
+      md5: 0197f3e24cdab95a8d438d1da92472a9
+      mtime: 967845716
+      name: Session/Oracle.pm
+    - bytesize: 2567
+      file_mime_type: ~
+      line_count: ~
+      md5: f9828e9a4523cec02f2fe56b724bd2af
+      mtime: 967845713
+      name: Session/Postgres.pm
+    - bytesize: 1602
+      file_mime_type: ~
+      line_count: ~
+      md5: c7dd181b29c9f4a79422a8431551491d
+      mtime: 959321507
+      name: Session/Serialize/Base64.pm
+    - bytesize: 1386
+      file_mime_type: ~
+      line_count: ~
+      md5: a96839461a94ae38fe9106eb74f3abb1
+      mtime: 959321507
+      name: Session/Serialize/Storable.pm
+    - bytesize: 2371
+      file_mime_type: ~
+      line_count: ~
+      md5: 22809cff962d800ad68193a3d72ec8cb
+      mtime: 1077646649
+      name: Session/Serialize/Sybase.pm
+    - bytesize: 1599
+      file_mime_type: ~
+      line_count: ~
+      md5: b3333eb3fa3e4892fa9b94badcac333e
+      mtime: 959321507
+      name: Session/Serialize/UUEncode.pm
+    - bytesize: 2965
+      file_mime_type: ~
+      line_count: ~
+      md5: bf285d89973c4d9e39aec0d113d94511
+      mtime: 1077649248
+      name: Session/Store/DBI.pm
+    - bytesize: 3193
+      file_mime_type: ~
+      line_count: ~
+      md5: 5567ad0c79f3c6db41550482a2769877
+      mtime: 1079655315
+      name: Session/Store/DB_File.pm
+    - bytesize: 4515
+      file_mime_type: ~
+      line_count: ~
+      md5: cc3c8d0462a6d3ceb46af30bdc53284c
+      mtime: 1077649123
+      name: Session/Store/File.pm
+    - bytesize: 4546
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a85708c33a30c7b0e7df263e97de060
+      mtime: 1077651052
+      name: Session/Store/Informix.pm
+    - bytesize: 3451
+      file_mime_type: ~
+      line_count: ~
+      md5: dcd20c8626aa7797b8de6d7a5d2fd9c9
+      mtime: 1077649541
+      name: Session/Store/MySQL.pm
+    - bytesize: 4513
+      file_mime_type: ~
+      line_count: ~
+      md5: 10561e98d2cec37c6d6068ce9a6589ff
+      mtime: 964410305
+      name: Session/Store/Oracle.pm
+    - bytesize: 4574
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f9e995f73934b3e51483bd8bba06393
+      mtime: 1077652260
+      name: Session/Store/Postgres.pm
+    - bytesize: 7614
+      file_mime_type: ~
+      line_count: ~
+      md5: 44bfe5c614571ca842224ed91ed2ee5a
+      mtime: 1077649304
+      name: Session/Store/Sybase.pm
+    - bytesize: 2355
+      file_mime_type: ~
+      line_count: ~
+      md5: 24b03b841b0f725399fd0fbf4e5a3c43
+      mtime: 967845723
+      name: Session/Sybase.pm
+    - bytesize: 1530
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1094063688
+      name: TODO
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: b336a8addebe33bc6d09b7105bcb4f7d
+      mtime: 959321534
+      name: b/dbi.b
+    - bytesize: 190
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b33f2b72fe79a3d0e92ce341f3f2624
+      mtime: 959321535
+      name: b/dbinew.b
+    - bytesize: 156
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b672e4df998690f5898fa25c439b2a8
+      mtime: 959321535
+      name: b/dbipop.b
+    - bytesize: 1144
+      file_mime_type: ~
+      line_count: ~
+      md5: 912798f263b7ca3bbda326bcc1ba45d0
+      mtime: 959321534
+      name: b/dbstore.b
+    - bytesize: 261
+      file_mime_type: ~
+      line_count: ~
+      md5: 249bd8d5ec82c9884536a859273d67ac
+      mtime: 959321536
+      name: b/flexpop.b
+    - bytesize: 641
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dba5b6f3c5787400897c1607045c8a1
+      mtime: 959321534
+      name: b/gdbm.b
+    - bytesize: 1455
+      file_mime_type: ~
+      line_count: ~
+      md5: 84d17f445a6e78161bee30b36a2b5dc9
+      mtime: 959321534
+      name: b/mysqllock.b
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: 37b2539db549fa67b2e5609eef187965
+      mtime: 959321536
+      name: b/uuevsmime.b
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: d6ed48beea93389f5fbfe9f12f795ba0
+      mtime: 959358538
+      name: eg/example.perl
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: b01cf355e288edc9d3a6a5ed9313e597
+      mtime: 1079651852
+      name: t/99base64.t
+    - bytesize: 1152
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bcad8d09526afed86d4711580b13569
+      mtime: 1079653103
+      name: t/99dbfile.t
+    - bytesize: 1682
+      file_mime_type: ~
+      line_count: ~
+      md5: e46105385b56447b991bdb72b81153fd
+      mtime: 1079708168
+      name: t/99dbfilestore.t
+    - bytesize: 1303
+      file_mime_type: ~
+      line_count: ~
+      md5: bcdb96102856b90eaa51394bc100d66b
+      mtime: 1079708206
+      name: t/99file.t
+    - bytesize: 1000
+      file_mime_type: ~
+      line_count: ~
+      md5: c7f7b2cb442cb13d7ecad1fa20ba52d7
+      mtime: 1092870270
+      name: t/99filelock.t
+    - bytesize: 1618
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b1a35d8962f1b90e9666e779aba6e06
+      mtime: 1092868601
+      name: t/99filestore.t
+    - bytesize: 1613
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b5a0e52078ea28128f1c9ff1491dd54
+      mtime: 1092859954
+      name: t/99flex.t
+    - bytesize: 1158
+      file_mime_type: ~
+      line_count: ~
+      md5: ae2e9881d814b505d214df834074bc72
+      mtime: 1092861568
+      name: t/99md5gen.t
+    - bytesize: 656
+      file_mime_type: ~
+      line_count: ~
+      md5: 607fe36c4d46f8bbb938bc590664493a
+      mtime: 1092861948
+      name: t/99moduniqgen.t
+    - bytesize: 2458
+      file_mime_type: ~
+      line_count: ~
+      md5: 08f9a206d081a2231e6a55076e8fd511
+      mtime: 1092869162
+      name: t/99mysql.t
+    - bytesize: 1610
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d8a85af0054d32fb252b93192c6a196
+      mtime: 1092869153
+      name: t/99mysqllock.t
+    - bytesize: 632
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c771ec2cbd6de6bbdb0c22616394d9c
+      mtime: 1092869127
+      name: t/99mysqlstore.t
+    - bytesize: 619
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f0c20abf5be84d1883e086f3d4ca181
+      mtime: 1092864060
+      name: t/99nulllock.t
+    - bytesize: 2319
+      file_mime_type: ~
+      line_count: ~
+      md5: 851fbc357fcceb99089f4415724fd3d0
+      mtime: 1092869202
+      name: t/99oracle.t
+    - bytesize: 2270
+      file_mime_type: ~
+      line_count: ~
+      md5: 43eeb418e9eaa79a7efa994ad6d1e903
+      mtime: 1092869227
+      name: t/99postgres.t
+    - bytesize: 1945
+      file_mime_type: ~
+      line_count: ~
+      md5: fa47ade54a0999e471961b56533870cf
+      mtime: 1092869867
+      name: t/99semaphore.t
+    - bytesize: 901
+      file_mime_type: ~
+      line_count: ~
+      md5: 21bb8db1a671d83f211692f743304d5c
+      mtime: 1092868291
+      name: t/99storable.t
+    - bytesize: 898
+      file_mime_type: ~
+      line_count: ~
+      md5: 7902530054bdb3e727d55168e277f779
+      mtime: 1092868381
+      name: t/99uue.t
+  module_info:
+    - bytesize: 17379
+      file_mime_type: ~
+      line_count: ~
+      md5: 8aa7a9cdd9e9363a4742e77dbc3cc2fc
+      module_name_from_file_guess: Apache::Session
+      mtime: 1128636903
+      name: blib/lib/Apache/Session.pm
+      packages:
+        - Apache::Session
+      primary_package: Apache::Session
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session.pm
+        identifier: VERSION
+        line_number: 315
+        sigil: $
+        value: 1.80
+    - bytesize: 1960
+      file_mime_type: ~
+      line_count: ~
+      md5: 7db3dac68dd362ba8bae6a2c3dd68972
+      module_name_from_file_guess: Apache::Session::DB_File
+      mtime: 967845688
+      name: blib/lib/Apache/Session/DB_File.pm
+      packages:
+        - Apache::Session::DB_File
+      primary_package: Apache::Session::DB_File
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+        - Apache::Session::Lock::File
+        - Apache::Session::Store::DB_File
+        - Apache::Session::Generate::MD5
+        - Apache::Session::Serialize::Storable
+      version_info:
+        filename: blib/lib/Apache/Session/DB_File.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 2109
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c70b8640a398012680c134d7b56a3e9
+      module_name_from_file_guess: Apache::Session::File
+      mtime: 967847435
+      name: blib/lib/Apache/Session/File.pm
+      packages:
+        - Apache::Session::File
+      primary_package: Apache::Session::File
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+        - Apache::Session::Lock::File
+        - Apache::Session::Store::File
+        - Apache::Session::Generate::MD5
+        - Apache::Session::Serialize::Storable
+      version_info:
+        filename: blib/lib/Apache/Session/File.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.54
+    - bytesize: 4030
+      file_mime_type: ~
+      line_count: ~
+      md5: 3469d020e102743b845903e0cc57a749
+      module_name_from_file_guess: Apache::Session::Flex
+      mtime: 1002821499
+      name: blib/lib/Apache/Session/Flex.pm
+      packages:
+        - Apache::Session::Flex
+      primary_package: Apache::Session::Flex
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+      version_info:
+        filename: blib/lib/Apache/Session/Flex.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 2460
+      file_mime_type: ~
+      line_count: ~
+      md5: f7c71ca718083dd35d3649a4b5771377
+      module_name_from_file_guess: Apache::Session::Generate::MD5
+      mtime: 1002821169
+      name: blib/lib/Apache/Session/Generate/MD5.pm
+      packages:
+        - Apache::Session::Generate::MD5
+      primary_package: Apache::Session::Generate::MD5
+      uses:
+        - strict
+        - vars
+        - Digest::MD5
+      version_info:
+        filename: blib/lib/Apache/Session/Generate/MD5.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 2.1
+    - bytesize: 1321
+      file_mime_type: ~
+      line_count: ~
+      md5: 701e2d3fd5e4dcc0c288f2478279104b
+      module_name_from_file_guess: Apache::Session::Generate::ModUniqueId
+      mtime: 1002821750
+      name: blib/lib/Apache/Session/Generate/ModUniqueId.pm
+      packages:
+        - Apache::Session::Generate::ModUniqueId
+      primary_package: Apache::Session::Generate::ModUniqueId
+      uses:
+        - strict
+        - vars
+        - Carp
+      version_info:
+        filename: blib/lib/Apache/Session/Generate/ModUniqueId.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: 0.01
+    - bytesize: 2529
+      file_mime_type: ~
+      line_count: ~
+      md5: 86ee1f233d7e0758b4bd26686191be46
+      module_name_from_file_guess: Apache::Session::Generate::ModUsertrack
+      mtime: 1002822212
+      name: blib/lib/Apache/Session/Generate/ModUsertrack.pm
+      packages:
+        - Apache::Session::Generate::ModUsertrack
+      primary_package: Apache::Session::Generate::ModUsertrack
+      uses:
+        - strict
+        - vars
+        - CGI::Cookie
+        - constant
+        - Apache
+        - Carp
+      version_info:
+        filename: blib/lib/Apache/Session/Generate/ModUsertrack.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: 0.01
+    - bytesize: 2710
+      file_mime_type: ~
+      line_count: ~
+      md5: bad10257688626ae05dfa30fb03c97ad
+      module_name_from_file_guess: Apache::Session::Informix
+      mtime: 1036503476
+      name: blib/lib/Apache/Session/Informix.pm
+      packages:
+        - Apache::Session::Informix
+      primary_package: Apache::Session::Informix
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+        - Apache::Session::Lock::Null
+        - Apache::Session::Store::Informix
+        - Apache::Session::Generate::MD5
+        - Apache::Session::Serialize::Base64
+      version_info:
+        filename: blib/lib/Apache/Session/Informix.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 5314
+      file_mime_type: ~
+      line_count: ~
+      md5: 65e2d41c25a2263dd3afabb2743193cc
+      module_name_from_file_guess: Apache::Session::Lock::File
+      mtime: 1077650840
+      name: blib/lib/Apache/Session/Lock/File.pm
+      packages:
+        - Apache::Session::Lock::File
+      primary_package: Apache::Session::Lock::File
+      uses:
+        - strict
+        - Fcntl
+        - Symbol
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Lock/File.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 1.02
+    - bytesize: 3669
+      file_mime_type: ~
+      line_count: ~
+      md5: a321979a74379d659088c2637678fe7a
+      module_name_from_file_guess: Apache::Session::Lock::MySQL
+      mtime: 959321507
+      name: blib/lib/Apache/Session/Lock/MySQL.pm
+      packages:
+        - Apache::Session::Lock::MySQL
+      primary_package: Apache::Session::Lock::MySQL
+      uses:
+        - strict
+        - DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Lock/MySQL.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.00
+    - bytesize: 1546
+      file_mime_type: ~
+      line_count: ~
+      md5: a621e0b0001a00ae29a2b55377a5a933
+      module_name_from_file_guess: Apache::Session::Lock::Null
+      mtime: 959321506
+      name: blib/lib/Apache/Session/Lock/Null.pm
+      packages:
+        - Apache::Session::Lock::Null
+      primary_package: Apache::Session::Lock::Null
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Lock/Null.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 6698
+      file_mime_type: ~
+      line_count: ~
+      md5: 106574ae18a358e9058918e0513044ce
+      module_name_from_file_guess: Apache::Session::Lock::Semaphore
+      mtime: 1128636513
+      name: blib/lib/Apache/Session/Lock/Semaphore.pm
+      packages:
+        - Apache::Session::Lock::Semaphore
+      primary_package: Apache::Session::Lock::Semaphore
+      uses:
+        - strict
+        - Config
+        - IPC::SysV
+        - IPC::Semaphore
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Lock/Semaphore.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 1.01
+    - bytesize: 3649
+      file_mime_type: ~
+      line_count: ~
+      md5: c615f4063d4179e4fa0d2229dca03d53
+      module_name_from_file_guess: Apache::Session::Lock::Sybase
+      mtime: 1077646649
+      name: blib/lib/Apache/Session/Lock/Sybase.pm
+      packages:
+        - Apache::Session::Lock::Sybase
+      primary_package: Apache::Session::Lock::Sybase
+      uses:
+        - strict
+        - DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Lock/Sybase.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.00
+    - bytesize: 2220
+      file_mime_type: ~
+      line_count: ~
+      md5: 130df771e4110433463ad81d645ca5c8
+      module_name_from_file_guess: Apache::Session::MySQL
+      mtime: 967845681
+      name: blib/lib/Apache/Session/MySQL.pm
+      packages:
+        - Apache::Session::MySQL
+      primary_package: Apache::Session::MySQL
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+        - Apache::Session::Lock::MySQL
+        - Apache::Session::Store::MySQL
+        - Apache::Session::Generate::MD5
+        - Apache::Session::Serialize::Storable
+      version_info:
+        filename: blib/lib/Apache/Session/MySQL.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 2686
+      file_mime_type: ~
+      line_count: ~
+      md5: e1ace884eeadabe3fd520a9e66fd49e3
+      module_name_from_file_guess: Apache::Session::Oracle
+      mtime: 967845716
+      name: blib/lib/Apache/Session/Oracle.pm
+      packages:
+        - Apache::Session::Oracle
+      primary_package: Apache::Session::Oracle
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+        - Apache::Session::Lock::Null
+        - Apache::Session::Store::Oracle
+        - Apache::Session::Generate::MD5
+        - Apache::Session::Serialize::Base64
+      version_info:
+        filename: blib/lib/Apache/Session/Oracle.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 2567
+      file_mime_type: ~
+      line_count: ~
+      md5: b3d9c678b9818d1ab98d959c4207b51b
+      module_name_from_file_guess: Apache::Session::Postgres
+      mtime: 967845713
+      name: blib/lib/Apache/Session/Postgres.pm
+      packages:
+        - Apache::Session::Postgres
+      primary_package: Apache::Session::Postgres
+      uses:
+        - strict
+        - vars
+        - Apache::Session
+        - Apache::Session::Lock::Null
+        - Apache::Session::Store::Postgres
+        - Apache::Session::Generate::MD5
+        - Apache::Session::Serialize::Base64
+      version_info:
+        filename: blib/lib/Apache/Session/Postgres.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 1.01
+    - bytesize: 1602
+      file_mime_type: ~
+      line_count: ~
+      md5: 991534363b270e5564f855980c06f048
+      module_name_from_file_guess: Apache::Session::Serialize::Base64
+      mtime: 959321507
+      name: blib/lib/Apache/Session/Serialize/Base64.pm
+      packages:
+        - Apache::Session::Serialize::Base64
+      primary_package: Apache::Session::Serialize::Base64
+      uses:
+        - strict
+        - vars
+        - MIME::Base64
+        - Storable
+      version_info:
+        filename: blib/lib/Apache/Session/Serialize/Base64.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.00
+    - bytesize: 1386
+      file_mime_type: ~
+      line_count: ~
+      md5: bddfc0b77967ca8c08459a1fa29dd0dd
+      module_name_from_file_guess: Apache::Session::Serialize::Storable
+      mtime: 959321507
+      name: blib/lib/Apache/Session/Serialize/Storable.pm
+      packages:
+        - Apache::Session::Serialize::Storable
+      primary_package: Apache::Session::Serialize::Storable
+      uses:
+        - strict
+        - vars
+        - Storable
+      version_info:
+        filename: blib/lib/Apache/Session/Serialize/Storable.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.00
+    - bytesize: 2371
+      file_mime_type: ~
+      line_count: ~
+      md5: b313a5a3d7fd478160780896b50d471b
+      module_name_from_file_guess: Apache::Session::Serialize::Sybase
+      mtime: 1077646649
+      name: blib/lib/Apache/Session/Serialize/Sybase.pm
+      packages:
+        - Apache::Session::Serialize::Sybase
+      primary_package: Apache::Session::Serialize::Sybase
+      uses:
+        - strict
+        - vars
+        - Apache::Session::Serialize::Storable
+      version_info:
+        filename: blib/lib/Apache/Session/Serialize/Sybase.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 1.00
+    - bytesize: 1599
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b887194ba26ac7f255906be9bfa4e14
+      module_name_from_file_guess: Apache::Session::Serialize::UUEncode
+      mtime: 959321507
+      name: blib/lib/Apache/Session/Serialize/UUEncode.pm
+      packages:
+        - Apache::Session::Serialize::UUEncode
+      primary_package: Apache::Session::Serialize::UUEncode
+      uses:
+        - strict
+        - vars
+        - Storable
+      version_info:
+        filename: blib/lib/Apache/Session/Serialize/UUEncode.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.00
+    - bytesize: 2965
+      file_mime_type: ~
+      line_count: ~
+      md5: 2010665b40cbfda5d90fe7652c4dcb10
+      module_name_from_file_guess: Apache::Session::Store::DBI
+      mtime: 1077649248
+      name: blib/lib/Apache/Session/Store/DBI.pm
+      packages:
+        - Apache::Session::Store::DBI
+      primary_package: Apache::Session::Store::DBI
+      uses:
+        - strict
+        - DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Store/DBI.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.02
+    - bytesize: 3193
+      file_mime_type: ~
+      line_count: ~
+      md5: 07df14689873232b049734f9018ee66d
+      module_name_from_file_guess: Apache::Session::Store::DB_File
+      mtime: 1079655315
+      name: blib/lib/Apache/Session/Store/DB_File.pm
+      packages:
+        - Apache::Session::Store::DB_File
+      primary_package: Apache::Session::Store::DB_File
+      uses:
+        - strict
+        - vars
+        - DB_File
+      version_info:
+        filename: blib/lib/Apache/Session/Store/DB_File.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.00
+    - bytesize: 4515
+      file_mime_type: ~
+      line_count: ~
+      md5: 756e1d292f84524ba3a7344790ae7911
+      module_name_from_file_guess: Apache::Session::Store::File
+      mtime: 1077649123
+      name: blib/lib/Apache/Session/Store/File.pm
+      packages:
+        - Apache::Session::Store::File
+      primary_package: Apache::Session::Store::File
+      uses:
+        - strict
+        - Symbol
+        - Fcntl
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Store/File.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.02
+    - bytesize: 4546
+      file_mime_type: ~
+      line_count: ~
+      md5: 55e25d4c86840eb31d988d2a9a581257
+      module_name_from_file_guess: Apache::Session::Store::Informix
+      mtime: 1077651052
+      name: blib/lib/Apache/Session/Store/Informix.pm
+      packages:
+        - Apache::Session::Store::Informix
+      primary_package: Apache::Session::Store::Informix
+      uses:
+        - strict
+        - DBI
+        - Apache::Session::Store::DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Store/Informix.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.01
+    - bytesize: 3451
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a64ed55454d988e2f1895a6ddc6053b
+      module_name_from_file_guess: Apache::Session::Store::MySQL
+      mtime: 1077649541
+      name: blib/lib/Apache/Session/Store/MySQL.pm
+      packages:
+        - Apache::Session::Store::MySQL
+      primary_package: Apache::Session::Store::MySQL
+      uses:
+        - strict
+        - DBI
+        - Apache::Session::Store::DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Store/MySQL.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.04
+    - bytesize: 4513
+      file_mime_type: ~
+      line_count: ~
+      md5: d8765ef2a0d21d3987635ea3aba0c91f
+      module_name_from_file_guess: Apache::Session::Store::Oracle
+      mtime: 964410305
+      name: blib/lib/Apache/Session/Store/Oracle.pm
+      packages:
+        - Apache::Session::Store::Oracle
+      primary_package: Apache::Session::Store::Oracle
+      uses:
+        - strict
+        - DBI
+        - Apache::Session::Store::DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Store/Oracle.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.01
+    - bytesize: 4574
+      file_mime_type: ~
+      line_count: ~
+      md5: 45732af16ba93e03fa641148c0f02c79
+      module_name_from_file_guess: Apache::Session::Store::Postgres
+      mtime: 1077652260
+      name: blib/lib/Apache/Session/Store/Postgres.pm
+      packages:
+        - Apache::Session::Store::Postgres
+      primary_package: Apache::Session::Store::Postgres
+      uses:
+        - strict
+        - DBI
+        - Apache::Session::Store::DBI
+        - vars
+      version_info:
+        filename: blib/lib/Apache/Session/Store/Postgres.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.03
+    - bytesize: 7614
+      file_mime_type: ~
+      line_count: ~
+      md5: 8df53fecfb28b7251c2d2777ce5a8e4b
+      module_name_from_file_guess: Apache::Session::Store::Sybase
+      mtime: 1077649304
+      name: blib/lib/Apache/Session/Store/Sybase.pm
+      packages:
+        - Apache::Session::Store::Sybase
+      primary_package: Apache::Session::Store::Sybase
+      uses:
+        - strict
+        - vars
+        - Apache::Session::Store::DBI
+      version_info:
+        filename: blib/lib/Apache/Session/Store/Sybase.pm
+        identifier: VERSION
+        line_number: 25
+        sigil: $
+        value: 1.01
+    - bytesize: 2355
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d2258dc47da91380aefb0b5f67be86a
+      module_name_from_file_guess: Apache::Session::Sybase
+      mtime: 967845723
+      name: blib/lib/Apache/Session/Sybase.pm
+      packages:
+        - Apache::Session::Sybase
+      primary_package: Apache::Session::Sybase
+      uses: []
+      version_info:
+        filename: blib/lib/Apache/Session/Sybase.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 1.00
+  modules:
+    - blib/lib/Apache/Session.pm
+    - blib/lib/Apache/Session/DB_File.pm
+    - blib/lib/Apache/Session/File.pm
+    - blib/lib/Apache/Session/Flex.pm
+    - blib/lib/Apache/Session/Generate/MD5.pm
+    - blib/lib/Apache/Session/Generate/ModUniqueId.pm
+    - blib/lib/Apache/Session/Generate/ModUsertrack.pm
+    - blib/lib/Apache/Session/Informix.pm
+    - blib/lib/Apache/Session/Lock/File.pm
+    - blib/lib/Apache/Session/Lock/MySQL.pm
+    - blib/lib/Apache/Session/Lock/Null.pm
+    - blib/lib/Apache/Session/Lock/Semaphore.pm
+    - blib/lib/Apache/Session/Lock/Sybase.pm
+    - blib/lib/Apache/Session/MySQL.pm
+    - blib/lib/Apache/Session/Oracle.pm
+    - blib/lib/Apache/Session/Postgres.pm
+    - blib/lib/Apache/Session/Serialize/Base64.pm
+    - blib/lib/Apache/Session/Serialize/Storable.pm
+    - blib/lib/Apache/Session/Serialize/Sybase.pm
+    - blib/lib/Apache/Session/Serialize/UUEncode.pm
+    - blib/lib/Apache/Session/Store/DBI.pm
+    - blib/lib/Apache/Session/Store/DB_File.pm
+    - blib/lib/Apache/Session/Store/File.pm
+    - blib/lib/Apache/Session/Store/Informix.pm
+    - blib/lib/Apache/Session/Store/MySQL.pm
+    - blib/lib/Apache/Session/Store/Oracle.pm
+    - blib/lib/Apache/Session/Store/Postgres.pm
+    - blib/lib/Apache/Session/Store/Sybase.pm
+    - blib/lib/Apache/Session/Sybase.pm
+  test_info:
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: b01cf355e288edc9d3a6a5ed9313e597
+      mtime: 1079651852
+      name: t/99base64.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - MIME::Base64
+        - Storable
+    - bytesize: 1152
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bcad8d09526afed86d4711580b13569
+      mtime: 1079653103
+      name: t/99dbfile.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - File::Temp
+        - Cwd
+        - DB_File
+    - bytesize: 1682
+      file_mime_type: ~
+      line_count: ~
+      md5: e46105385b56447b991bdb72b81153fd
+      mtime: 1079708168
+      name: t/99dbfilestore.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - DB_File
+    - bytesize: 1303
+      file_mime_type: ~
+      line_count: ~
+      md5: bcdb96102856b90eaa51394bc100d66b
+      mtime: 1079708206
+      name: t/99file.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Fcntl
+    - bytesize: 1000
+      file_mime_type: ~
+      line_count: ~
+      md5: c7f7b2cb442cb13d7ecad1fa20ba52d7
+      mtime: 1092870270
+      name: t/99filelock.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Fcntl
+    - bytesize: 1618
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b1a35d8962f1b90e9666e779aba6e06
+      mtime: 1092868601
+      name: t/99filestore.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Fcntl
+    - bytesize: 1613
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b5a0e52078ea28128f1c9ff1491dd54
+      mtime: 1092859954
+      name: t/99flex.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Fcntl
+        - DB_File
+        - IPC::Semaphore
+        - IPC::SysV
+    - bytesize: 1158
+      file_mime_type: ~
+      line_count: ~
+      md5: ae2e9881d814b505d214df834074bc72
+      mtime: 1092861568
+      name: t/99md5gen.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Digest::MD5
+    - bytesize: 656
+      file_mime_type: ~
+      line_count: ~
+      md5: 607fe36c4d46f8bbb938bc590664493a
+      mtime: 1092861948
+      name: t/99moduniqgen.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+    - bytesize: 2458
+      file_mime_type: ~
+      line_count: ~
+      md5: 08f9a206d081a2231e6a55076e8fd511
+      mtime: 1092869162
+      name: t/99mysql.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - DBI
+        - DBD::mysql
+    - bytesize: 1610
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d8a85af0054d32fb252b93192c6a196
+      mtime: 1092869153
+      name: t/99mysqllock.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - DBI
+        - DBD::mysql
+    - bytesize: 632
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c771ec2cbd6de6bbdb0c22616394d9c
+      mtime: 1092869127
+      name: t/99mysqlstore.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - DBI
+        - DBD::mysql
+    - bytesize: 619
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f0c20abf5be84d1883e086f3d4ca181
+      mtime: 1092864060
+      name: t/99nulllock.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Fcntl
+    - bytesize: 2319
+      file_mime_type: ~
+      line_count: ~
+      md5: 851fbc357fcceb99089f4415724fd3d0
+      mtime: 1092869202
+      name: t/99oracle.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - DBI
+        - DBD::Oracle
+    - bytesize: 2270
+      file_mime_type: ~
+      line_count: ~
+      md5: 43eeb418e9eaa79a7efa994ad6d1e903
+      mtime: 1092869227
+      name: t/99postgres.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - DBI
+        - DBD::Pg
+    - bytesize: 1945
+      file_mime_type: ~
+      line_count: ~
+      md5: fa47ade54a0999e471961b56533870cf
+      mtime: 1092869867
+      name: t/99semaphore.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - IPC::SysV
+        - IPC::Semaphore
+    - bytesize: 901
+      file_mime_type: ~
+      line_count: ~
+      md5: 21bb8db1a671d83f211692f743304d5c
+      mtime: 1092868291
+      name: t/99storable.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Storable
+    - bytesize: 898
+      file_mime_type: ~
+      line_count: ~
+      md5: 7902530054bdb3e727d55168e277f779
+      mtime: 1092868381
+      name: t/99uue.t
+      uses:
+        - Test::More
+        - Test::Deep
+        - Test::Exception
+        - File::Temp
+        - Cwd
+        - Storable
+  tests:
+    - t/99base64.t
+    - t/99dbfile.t
+    - t/99dbfilestore.t
+    - t/99file.t
+    - t/99filelock.t
+    - t/99filestore.t
+    - t/99flex.t
+    - t/99md5gen.t
+    - t/99moduniqgen.t
+    - t/99mysql.t
+    - t/99mysqllock.t
+    - t/99mysqlstore.t
+    - t/99nulllock.t
+    - t/99oracle.t
+    - t/99postgres.t
+    - t/99semaphore.t
+    - t/99storable.t
+    - t/99uue.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-95232._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 95232
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269058801
+  examine_start_time: 1269058784
+  examine_time: 17
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 95232
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269058801
+  run_start_time: 1269058784
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

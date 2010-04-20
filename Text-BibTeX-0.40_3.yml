@@ -1,0 +1,2542 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: interface to read and parse BibTeX files
+    author:
+      - 'Alberto Simões <ambs@cpan.org>'
+      - 'Greg Ward <gward@python.net>'
+    build_requires:
+      Capture::Tiny: 0.06
+      Config::AutoConf: 0.14
+      ExtUtils::CBuilder: 0.27
+      File::Copy: 0
+      Module::Build: 0.3603
+    configure_requires:
+      Module::Build: 0.36
+    generated_by: Module::Build version 0.3603
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Text-BibTeX
+    provides:
+      Text::BibTeX:
+        file: lib/Text/BibTeX.pm
+        version: 0.40_3
+      Text::BibTeX::BibEntry:
+        file: lib/Text/BibTeX/Bib.pm
+      Text::BibTeX::BibFormat:
+        file: lib/Text/BibTeX/BibFormat.pm
+      Text::BibTeX::BibSort:
+        file: lib/Text/BibTeX/BibSort.pm
+      Text::BibTeX::BibStructure:
+        file: lib/Text/BibTeX/Bib.pm
+      Text::BibTeX::Entry:
+        file: lib/Text/BibTeX/Entry.pm
+      Text::BibTeX::File:
+        file: lib/Text/BibTeX/File.pm
+      Text::BibTeX::Name:
+        file: lib/Text/BibTeX/Name.pm
+      Text::BibTeX::NameFormat:
+        file: lib/Text/BibTeX/NameFormat.pm
+      Text::BibTeX::SimpleValue:
+        file: lib/Text/BibTeX/Value.pm
+      Text::BibTeX::Structure:
+        file: lib/Text/BibTeX/Structure.pm
+      Text::BibTeX::StructuredEntry:
+        file: lib/Text/BibTeX/Structure.pm
+      Text::BibTeX::Value:
+        file: lib/Text/BibTeX/Value.pm
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 0.40_3
+  blib: []
+  build_file: Build.PL
+  build_file_output: |
+    Can't locate Config/AutoConf.pm in @INC (@INC contains: inc /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/5.10.1 /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1 .) at inc/MyBuilder.pm line 10.
+    BEGIN failed--compilation aborted at inc/MyBuilder.pm line 10.
+    Compilation failed in require at Build.PL line 5.
+    BEGIN failed--compilation aborted at Build.PL line 5.
+  build_output: "Can't open perl script \"./Build\": No such file or directory\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV/Text-BibTeX-0.40_3/Build.PL
+    build_files:
+      Build.PL: Build.PL
+    build_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV/Text-BibTeX-0.40_3/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV/Text-BibTeX-0.40_3
+    has_build_and_makefile: ~
+    has_build_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV/Text-BibTeX-0.40_3/Build.PL
+    has_makefile_pl: ~
+    make_command: ~
+    makefile_pl_path: ~
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: ~
+    uses_module_build: 0
+    uses_module_build_compat: ~
+    uses_module_install: ~
+  dist_archive_type: tgz
+  dist_author: AMBS
+  dist_basename: Text-BibTeX-0.40_3.tar.gz
+  dist_date: 1266513719
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV/Text-BibTeX-0.40_3
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV/Text-BibTeX-0.40_3
+  dist_file: /home/brian/CPAN/authors/id/A/AM/AMBS/Text/Text-BibTeX-0.40_3.tar.gz
+  dist_md5: 286943b08a18fea991c63651e9d90c47
+  dist_size: 265034
+  manifest:
+    - Build.PL
+    - CHANGES
+    - MANIFEST
+    - META.yml
+    - README
+    - THANKS
+    - btool_faq.pod
+    - btparse/doc/bt_format_names.pod
+    - btparse/doc/bt_input.pod
+    - btparse/doc/bt_language.pod
+    - btparse/doc/bt_macros.pod
+    - btparse/doc/bt_misc.pod
+    - btparse/doc/bt_post_processing.pod
+    - btparse/doc/bt_postprocess.pod
+    - btparse/doc/bt_split_names.pod
+    - btparse/doc/bt_traversal.pod
+    - btparse/doc/btparse.pod
+    - btparse/pccts/antlr.h
+    - btparse/pccts/ast.c
+    - btparse/pccts/ast.h
+    - btparse/pccts/config.h
+    - btparse/pccts/dlgauto.h
+    - btparse/pccts/dlgdef.h
+    - btparse/pccts/err.h
+    - btparse/progs/args.c
+    - btparse/progs/args.h
+    - btparse/progs/biblex.c
+    - btparse/progs/bibparse.c
+    - btparse/progs/dumpnames.c
+    - btparse/progs/getopt.c
+    - btparse/progs/getopt.h
+    - btparse/progs/getopt1.c
+    - btparse/src/attrib.h
+    - btparse/src/bibtex.c
+    - btparse/src/bibtex_ast.c
+    - btparse/src/bibtex_ast.h
+    - btparse/src/bt_config.h.in
+    - btparse/src/bt_debug.h
+    - btparse/src/btparse.h
+    - btparse/src/err.c
+    - btparse/src/error.c
+    - btparse/src/error.h
+    - btparse/src/file_header.c
+    - btparse/src/format_name.c
+    - btparse/src/function_header.c
+    - btparse/src/init.c
+    - btparse/src/input.c
+    - btparse/src/lex_auxiliary.c
+    - btparse/src/lex_auxiliary.h
+    - btparse/src/line_offsets.c
+    - btparse/src/line_offsets.h
+    - btparse/src/macros.c
+    - btparse/src/mode.h
+    - btparse/src/modify.c
+    - btparse/src/my_alloca.h
+    - btparse/src/my_dmalloc.h
+    - btparse/src/names.c
+    - btparse/src/parse_auxiliary.c
+    - btparse/src/parse_auxiliary.h
+    - btparse/src/postprocess.c
+    - btparse/src/prototypes.h
+    - btparse/src/scan.c
+    - btparse/src/stdpccts.h
+    - btparse/src/string_util.c
+    - btparse/src/sym.c
+    - btparse/src/sym.h
+    - btparse/src/tex_tree.c
+    - btparse/src/tokens.h
+    - btparse/src/traversal.c
+    - btparse/src/util.c
+    - btparse/src/util.h
+    - btparse/tests/case_test.c
+    - btparse/tests/data/TESTS
+    - btparse/tests/data/commas.bib
+    - btparse/tests/data/comment.bib
+    - btparse/tests/data/empty.bib
+    - btparse/tests/data/foreign.bib
+    - btparse/tests/data/macro.bib
+    - btparse/tests/data/names
+    - btparse/tests/data/preamble.bib
+    - btparse/tests/data/purify.strings
+    - btparse/tests/data/regular.bib
+    - btparse/tests/data/simple.bib
+    - btparse/tests/macro_test.c
+    - btparse/tests/name_test.c
+    - btparse/tests/namebug.c
+    - btparse/tests/postprocess_test.c
+    - btparse/tests/purify_test.c
+    - btparse/tests/read_test.c
+    - btparse/tests/simple_test.c
+    - btparse/tests/testlib.c
+    - btparse/tests/testlib.h
+    - btparse/tests/tex_test.c
+    - examples/append_entries
+    - inc/MyBuilder.pm
+    - lib/Text/BibTeX.pm
+    - lib/Text/BibTeX/Bib.pm
+    - lib/Text/BibTeX/BibFormat.pm
+    - lib/Text/BibTeX/BibSort.pm
+    - lib/Text/BibTeX/Entry.pm
+    - lib/Text/BibTeX/File.pm
+    - lib/Text/BibTeX/Name.pm
+    - lib/Text/BibTeX/NameFormat.pm
+    - lib/Text/BibTeX/Structure.pm
+    - lib/Text/BibTeX/Value.pm
+    - scripts/btcheck
+    - scripts/btformat
+    - scripts/btsort
+    - t/00.init.t
+    - t/bib.t
+    - t/common.pl
+    - t/macro.t
+    - t/modify.t
+    - t/nameformat.t
+    - t/namelist.t
+    - t/names.t
+    - t/output.t
+    - t/parse.t
+    - t/parse_f.t
+    - t/parse_s.t
+    - t/purify.t
+    - t/split_names
+    - t/zz.cleanup.t
+    - typemap
+    - xscode/BibTeX.xs
+    - xscode/btxs_support.c
+    - xscode/btxs_support.h
+  manifest_file_info:
+    - bytesize: 2829
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1266513377
+      name: Build.PL
+    - bytesize: 4914
+      file_mime_type: ~
+      line_count: ~
+      md5: e4eb329834da3d36278b1b7d943b3bc9
+      mtime: 1266513377
+      name: CHANGES
+    - bytesize: 2977
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1266513377
+      name: MANIFEST
+    - bytesize: 1367
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1266513377
+      name: META.yml
+    - bytesize: 6104
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1266513377
+      name: README
+    - bytesize: 406
+      file_mime_type: ~
+      line_count: ~
+      md5: df89e795839ea42c0425275caa0e08fc
+      mtime: 1266513377
+      name: THANKS
+    - bytesize: 5075
+      file_mime_type: ~
+      line_count: ~
+      md5: 511d1b870b0f6349804fb1bf8ecddec9
+      mtime: 1266513377
+      name: btool_faq.pod
+    - bytesize: 11720
+      file_mime_type: ~
+      line_count: ~
+      md5: 91df73b9ce6b2f74f966abd6cc542e16
+      mtime: 1266513377
+      name: btparse/doc/bt_format_names.pod
+    - bytesize: 6808
+      file_mime_type: ~
+      line_count: ~
+      md5: c85471daec6d32d1826a27f3a3f22382
+      mtime: 1266513377
+      name: btparse/doc/bt_input.pod
+    - bytesize: 11573
+      file_mime_type: ~
+      line_count: ~
+      md5: b31c6497064871fa7781003c87605c79
+      mtime: 1266513377
+      name: btparse/doc/bt_language.pod
+    - bytesize: 5645
+      file_mime_type: ~
+      line_count: ~
+      md5: a582cd60bc3573ae8c34c1c5eb6ce04f
+      mtime: 1266513377
+      name: btparse/doc/bt_macros.pod
+    - bytesize: 5601
+      file_mime_type: ~
+      line_count: ~
+      md5: dea162ef4d63aa74d99ec8c1d6d0e1a0
+      mtime: 1266513377
+      name: btparse/doc/bt_misc.pod
+    - bytesize: 10829
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b658ccc27b63d686456aad8a2cfe2da
+      mtime: 1266513377
+      name: btparse/doc/bt_post_processing.pod
+    - bytesize: 11238
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d2971f4fcd9bfa4d710b041b96abad6
+      mtime: 1266513377
+      name: btparse/doc/bt_postprocess.pod
+    - bytesize: 9721
+      file_mime_type: ~
+      line_count: ~
+      md5: a77ac8f4693207b9f9946d5a6947eb5e
+      mtime: 1266513377
+      name: btparse/doc/bt_split_names.pod
+    - bytesize: 6423
+      file_mime_type: ~
+      line_count: ~
+      md5: af13fc64550afcf76ac247ec4a374762
+      mtime: 1266513377
+      name: btparse/doc/bt_traversal.pod
+    - bytesize: 19964
+      file_mime_type: ~
+      line_count: ~
+      md5: 348a6f048673599959047531b8784fb1
+      mtime: 1266513377
+      name: btparse/doc/btparse.pod
+    - bytesize: 17362
+      file_mime_type: ~
+      line_count: ~
+      md5: d0996b2336870140afbb42dc6e7bd5a8
+      mtime: 1266513377
+      name: btparse/pccts/antlr.h
+    - bytesize: 6741
+      file_mime_type: ~
+      line_count: ~
+      md5: 784730d52b609b5217d28c32d28771d0
+      mtime: 1266513377
+      name: btparse/pccts/ast.c
+    - bytesize: 3457
+      file_mime_type: ~
+      line_count: ~
+      md5: d63524eeae884bfc7801e1fdaa9f3ed9
+      mtime: 1266513377
+      name: btparse/pccts/ast.h
+    - bytesize: 6293
+      file_mime_type: ~
+      line_count: ~
+      md5: 80e3c7f89475ff548eab02f1a704f27f
+      mtime: 1266513377
+      name: btparse/pccts/config.h
+    - bytesize: 10251
+      file_mime_type: ~
+      line_count: ~
+      md5: f407f55de5bc3657c2e7b4aa52a49483
+      mtime: 1266513377
+      name: btparse/pccts/dlgauto.h
+    - bytesize: 4344
+      file_mime_type: ~
+      line_count: ~
+      md5: 188c0e443d81c467ffd3fd159b6ec903
+      mtime: 1266513377
+      name: btparse/pccts/dlgdef.h
+    - bytesize: 18404
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ace09e6c6a31bcdfb2cce46fef616f
+      mtime: 1266513377
+      name: btparse/pccts/err.h
+    - bytesize: 3478
+      file_mime_type: ~
+      line_count: ~
+      md5: c674b4e9aa4af096174b493001b5cabf
+      mtime: 1266513377
+      name: btparse/progs/args.c
+    - bytesize: 1191
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a36f8b4cc534b4c60a7cdbb19f37395
+      mtime: 1266513377
+      name: btparse/progs/args.h
+    - bytesize: 2797
+      file_mime_type: ~
+      line_count: ~
+      md5: 126bc457d070f85c6021fac9a0f8942c
+      mtime: 1266513377
+      name: btparse/progs/biblex.c
+    - bytesize: 8981
+      file_mime_type: ~
+      line_count: ~
+      md5: cd6b85b0a081b25350addcddc6d126c5
+      mtime: 1266513377
+      name: btparse/progs/bibparse.c
+    - bytesize: 3625
+      file_mime_type: ~
+      line_count: ~
+      md5: 173e8b17a0c8d0e836de7986d9a133e3
+      mtime: 1266513377
+      name: btparse/progs/dumpnames.c
+    - bytesize: 23313
+      file_mime_type: ~
+      line_count: ~
+      md5: 4de343f38e86b15d42f600277afa17dd
+      mtime: 1266513377
+      name: btparse/progs/getopt.c
+    - bytesize: 4507
+      file_mime_type: ~
+      line_count: ~
+      md5: dd57027d5bdd65a1eb050fc05f259bd7
+      mtime: 1266513377
+      name: btparse/progs/getopt.h
+    - bytesize: 4536
+      file_mime_type: ~
+      line_count: ~
+      md5: c5d97339205d5bcbc58aa19734c36736
+      mtime: 1266513377
+      name: btparse/progs/getopt1.c
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: 49d3a0babe5743728ef928fa0a83d1e3
+      mtime: 1266513377
+      name: btparse/src/attrib.h
+    - bytesize: 7206
+      file_mime_type: ~
+      line_count: ~
+      md5: c819d07ba91b1d904fe95725cd6e0bc4
+      mtime: 1266513377
+      name: btparse/src/bibtex.c
+    - bytesize: 1733
+      file_mime_type: ~
+      line_count: ~
+      md5: effc35c3ec6256358a9ae140c39cdec8
+      mtime: 1266513377
+      name: btparse/src/bibtex_ast.c
+    - bytesize: 762
+      file_mime_type: ~
+      line_count: ~
+      md5: 449ff9900497324b8b0f5942af8544fa
+      mtime: 1266513377
+      name: btparse/src/bibtex_ast.h
+    - bytesize: 3076
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bd77fb5779c73dadb0c5dc861db3b42
+      mtime: 1266513377
+      name: btparse/src/bt_config.h.in
+    - bytesize: 1320
+      file_mime_type: ~
+      line_count: ~
+      md5: 66e1293ad2f491912f0e903891462e8c
+      mtime: 1266513377
+      name: btparse/src/bt_debug.h
+    - bytesize: 10982
+      file_mime_type: ~
+      line_count: ~
+      md5: d4f50fa8833caa1de8e052e77a71217a
+      mtime: 1266513377
+      name: btparse/src/btparse.h
+    - bytesize: 1861
+      file_mime_type: ~
+      line_count: ~
+      md5: 45755a818839ce7ffac8d35bc7a05060
+      mtime: 1266513377
+      name: btparse/src/err.c
+    - bytesize: 10576
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ed7e1979f7314d76160884645c95215
+      mtime: 1266513377
+      name: btparse/src/error.c
+    - bytesize: 2859
+      file_mime_type: ~
+      line_count: ~
+      md5: 11934e9910ce039300c7d1b2ae97a1a6
+      mtime: 1266513377
+      name: btparse/src/error.h
+    - bytesize: 785
+      file_mime_type: ~
+      line_count: ~
+      md5: 000799b382e9dc4e546a850a449d6cf1
+      mtime: 1266513377
+      name: btparse/src/file_header.c
+    - bytesize: 28385
+      file_mime_type: ~
+      line_count: ~
+      md5: 36680d756b9e5894b659fce44e3d2e62
+      mtime: 1266513377
+      name: btparse/src/format_name.c
+    - bytesize: 304
+      file_mime_type: ~
+      line_count: ~
+      md5: 5786ead903b83c67f200c693cffd1218
+      mtime: 1266513377
+      name: btparse/src/function_header.c
+    - bytesize: 1306
+      file_mime_type: ~
+      line_count: ~
+      md5: e7fa5215d76fbc0bfb8ec6d2b526423f
+      mtime: 1266513377
+      name: btparse/src/init.c
+    - bytesize: 17222
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e90d9b752f63272db888966039645d0
+      mtime: 1266513377
+      name: btparse/src/input.c
+    - bytesize: 25889
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c596a7a7a8222a9215585bb66664517
+      mtime: 1266513377
+      name: btparse/src/lex_auxiliary.c
+    - bytesize: 2319
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fed7e8dd613667333310f7deaabb2ec
+      mtime: 1266513377
+      name: btparse/src/lex_auxiliary.h
+    - bytesize: 2111
+      file_mime_type: ~
+      line_count: ~
+      md5: 27d599c3fa2eee87da3adc5b51c19532
+      mtime: 1266513377
+      name: btparse/src/line_offsets.c
+    - bytesize: 294
+      file_mime_type: ~
+      line_count: ~
+      md5: be7b6e8b86f27c9c6ef8d86301db838c
+      mtime: 1266513377
+      name: btparse/src/line_offsets.h
+    - bytesize: 11504
+      file_mime_type: ~
+      line_count: ~
+      md5: c9d1f4952fcbb59659adb3cea18c34e0
+      mtime: 1266513377
+      name: btparse/src/macros.c
+    - bytesize: 57
+      file_mime_type: ~
+      line_count: ~
+      md5: aae38606d8663c87d9fa37bd0748afe2
+      mtime: 1266513377
+      name: btparse/src/mode.h
+    - bytesize: 2796
+      file_mime_type: ~
+      line_count: ~
+      md5: 992c571822c7510f997460ae779e7f8e
+      mtime: 1266513377
+      name: btparse/src/modify.c
+    - bytesize: 1138
+      file_mime_type: ~
+      line_count: ~
+      md5: d1f57675f2ade218e40c485cbf63466e
+      mtime: 1266513377
+      name: btparse/src/my_alloca.h
+    - bytesize: 558
+      file_mime_type: ~
+      line_count: ~
+      md5: 3084c4aad557742116e3219624c62f56
+      mtime: 1266513377
+      name: btparse/src/my_dmalloc.h
+    - bytesize: 31148
+      file_mime_type: ~
+      line_count: ~
+      md5: 5af896421475cc70fb51766703bcbb39
+      mtime: 1266513377
+      name: btparse/src/names.c
+    - bytesize: 7592
+      file_mime_type: ~
+      line_count: ~
+      md5: 591fe02576d1dd96221ff647db308f6f
+      mtime: 1266513377
+      name: btparse/src/parse_auxiliary.c
+    - bytesize: 1243
+      file_mime_type: ~
+      line_count: ~
+      md5: 78f058f9a2b4bdc90889d021870815d9
+      mtime: 1266513377
+      name: btparse/src/parse_auxiliary.h
+    - bytesize: 17259
+      file_mime_type: ~
+      line_count: ~
+      md5: 44151ddaea758513c0ba41cc92b74df2
+      mtime: 1266513377
+      name: btparse/src/postprocess.c
+    - bytesize: 1594
+      file_mime_type: ~
+      line_count: ~
+      md5: 33bd917e11198db477a64a94715baf0e
+      mtime: 1266513377
+      name: btparse/src/prototypes.h
+    - bytesize: 9572
+      file_mime_type: ~
+      line_count: ~
+      md5: 7534208ad0936b98a37e2fc787e81566
+      mtime: 1266513377
+      name: btparse/src/scan.c
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: 342b0dee398b26d47be3db9b2473d0b7
+      mtime: 1266513377
+      name: btparse/src/stdpccts.h
+    - bytesize: 24507
+      file_mime_type: ~
+      line_count: ~
+      md5: a48d0477e610578200a475e926e2443f
+      mtime: 1266513377
+      name: btparse/src/string_util.c
+    - bytesize: 10480
+      file_mime_type: ~
+      line_count: ~
+      md5: 802f100978266ad1965abc217de861e6
+      mtime: 1266513377
+      name: btparse/src/sym.c
+    - bytesize: 998
+      file_mime_type: ~
+      line_count: ~
+      md5: 2fd720c3413dab9eec2f6e7dcad5b4b2
+      mtime: 1266513377
+      name: btparse/src/sym.h
+    - bytesize: 11303
+      file_mime_type: ~
+      line_count: ~
+      md5: 56827d89173fc2c4fbd8e632e3688c19
+      mtime: 1266513377
+      name: btparse/src/tex_tree.c
+    - bytesize: 1359
+      file_mime_type: ~
+      line_count: ~
+      md5: 2941405018084cf07e6f9aa65474b4a0
+      mtime: 1266513377
+      name: btparse/src/tokens.h
+    - bytesize: 4897
+      file_mime_type: ~
+      line_count: ~
+      md5: d3b3db86158ef35c02364d05eac81ff4
+      mtime: 1266513377
+      name: btparse/src/traversal.c
+    - bytesize: 2302
+      file_mime_type: ~
+      line_count: ~
+      md5: aadd6eab67f075dd191f35574916849f
+      mtime: 1266513377
+      name: btparse/src/util.c
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: a9df0a11d1ca7587c413f33c058aaf8d
+      mtime: 1266513377
+      name: btparse/src/util.h
+    - bytesize: 902
+      file_mime_type: ~
+      line_count: ~
+      md5: 069c22e04d5b9129d5e77e39b4453030
+      mtime: 1266513377
+      name: btparse/tests/case_test.c
+    - bytesize: 325
+      file_mime_type: ~
+      line_count: ~
+      md5: 701ee40b9c1b2f506ee810e7d090cd2d
+      mtime: 1266513377
+      name: btparse/tests/data/TESTS
+    - bytesize: 594
+      file_mime_type: ~
+      line_count: ~
+      md5: db00169a964cac87f671603f7fbc7e68
+      mtime: 1266513377
+      name: btparse/tests/data/commas.bib
+    - bytesize: 244
+      file_mime_type: ~
+      line_count: ~
+      md5: 35dfa6d43a2fb015ab1e66a2d88b372e
+      mtime: 1266513377
+      name: btparse/tests/data/comment.bib
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ad91ee037ccb7761b0989fe4745a769
+      mtime: 1266513377
+      name: btparse/tests/data/empty.bib
+    - bytesize: 259
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e7cd000ae67b8fee95bf1bb315b943b
+      mtime: 1266513377
+      name: btparse/tests/data/foreign.bib
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ece07d8f7395e8505a61e0b88f524a3
+      mtime: 1266513377
+      name: btparse/tests/data/macro.bib
+    - bytesize: 325
+      file_mime_type: ~
+      line_count: ~
+      md5: f2f0eb1f96e19bff51f67e26a4561561
+      mtime: 1266513377
+      name: btparse/tests/data/names
+    - bytesize: 90
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e2775a9d60c736424d22bfd6c299385
+      mtime: 1266513377
+      name: btparse/tests/data/preamble.bib
+    - bytesize: 702
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e24d29c4aa20e64729154ccf41d79ed
+      mtime: 1266513377
+      name: btparse/tests/data/purify.strings
+    - bytesize: 232
+      file_mime_type: ~
+      line_count: ~
+      md5: 45d32c9defc1f1a64c2db59f2aa9df90
+      mtime: 1266513377
+      name: btparse/tests/data/regular.bib
+    - bytesize: 643
+      file_mime_type: ~
+      line_count: ~
+      md5: deb9cee0950a10a981ffd29977ad46d7
+      mtime: 1266513377
+      name: btparse/tests/data/simple.bib
+    - bytesize: 2137
+      file_mime_type: ~
+      line_count: ~
+      md5: 6306fe908697af4553a60c36511a302b
+      mtime: 1266513377
+      name: btparse/tests/macro_test.c
+    - bytesize: 4357
+      file_mime_type: ~
+      line_count: ~
+      md5: 531d4a907baaff780e1388c7a8f865a4
+      mtime: 1266513377
+      name: btparse/tests/name_test.c
+    - bytesize: 445
+      file_mime_type: ~
+      line_count: ~
+      md5: 731047bc9dd40ffe4d5d667c5885ee6d
+      mtime: 1266513377
+      name: btparse/tests/namebug.c
+    - bytesize: 979
+      file_mime_type: ~
+      line_count: ~
+      md5: cfcb3b45dc147a7251b3bf36c9c2ec21
+      mtime: 1266513377
+      name: btparse/tests/postprocess_test.c
+    - bytesize: 922
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dce49e44e91d34ed00cf692517c549f
+      mtime: 1266513377
+      name: btparse/tests/purify_test.c
+    - bytesize: 2297
+      file_mime_type: ~
+      line_count: ~
+      md5: 41032986cd369ac7a803f29999129502
+      mtime: 1266513377
+      name: btparse/tests/read_test.c
+    - bytesize: 17145
+      file_mime_type: ~
+      line_count: ~
+      md5: c953c59c5226e7ff5da7f0660546b2fb
+      mtime: 1266513377
+      name: btparse/tests/simple_test.c
+    - bytesize: 1040
+      file_mime_type: ~
+      line_count: ~
+      md5: badbdf7da3e31160d714d7efbc4a4f50
+      mtime: 1266513377
+      name: btparse/tests/testlib.c
+    - bytesize: 1821
+      file_mime_type: ~
+      line_count: ~
+      md5: d04163ff2b5cdfffa255946132488cdf
+      mtime: 1266513377
+      name: btparse/tests/testlib.h
+    - bytesize: 848
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e98c6f7fb1d7e62f579437664b09a20
+      mtime: 1266513377
+      name: btparse/tests/tex_test.c
+    - bytesize: 3198
+      file_mime_type: ~
+      line_count: ~
+      md5: c0c9b00060fca842bc2d7d71b824b7ae
+      mtime: 1266513377
+      name: examples/append_entries
+    - bytesize: 9224
+      file_mime_type: ~
+      line_count: ~
+      md5: e429f0b3818c5bd66acda58a205a92b7
+      mtime: 1266513377
+      name: inc/MyBuilder.pm
+    - bytesize: 28520
+      file_mime_type: ~
+      line_count: ~
+      md5: 84b9259086ca86308c2f29a64212cd31
+      mtime: 1266513377
+      name: lib/Text/BibTeX.pm
+    - bytesize: 18344
+      file_mime_type: ~
+      line_count: ~
+      md5: e327866b72270601de14d698870f78ba
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Bib.pm
+    - bytesize: 14750
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e9ad6b8cc2a4402a9fd39d70887141c
+      mtime: 1266513377
+      name: lib/Text/BibTeX/BibFormat.pm
+    - bytesize: 7665
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bf9bef09fe21e6652a9599b607deebd
+      mtime: 1266513377
+      name: lib/Text/BibTeX/BibSort.pm
+    - bytesize: 30468
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ad1ea00aaa31be3017d872003a86a87
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Entry.pm
+    - bytesize: 5199
+      file_mime_type: ~
+      line_count: ~
+      md5: 31d35f55314fa19517b7006533199e6e
+      mtime: 1266513377
+      name: lib/Text/BibTeX/File.pm
+    - bytesize: 12405
+      file_mime_type: ~
+      line_count: ~
+      md5: 41f534ddc535f0eaceed3f2f2fa69270
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Name.pm
+    - bytesize: 11609
+      file_mime_type: ~
+      line_count: ~
+      md5: f580cfacc9f2b538fb3cbcd6a73b3459
+      mtime: 1266513377
+      name: lib/Text/BibTeX/NameFormat.pm
+    - bytesize: 43550
+      file_mime_type: ~
+      line_count: ~
+      md5: fd37559dea951b4aa47970b1fe00fdd5
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Structure.pm
+    - bytesize: 11166
+      file_mime_type: ~
+      line_count: ~
+      md5: ce3a737c439f56f25516bcb9073c8da4
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Value.pm
+    - bytesize: 869
+      file_mime_type: ~
+      line_count: ~
+      md5: a8f0faf704e8ff2c4f9f0e07b5c86bd0
+      mtime: 1266513377
+      name: scripts/btcheck
+    - bytesize: 4154
+      file_mime_type: ~
+      line_count: ~
+      md5: d7932af3b830e820bd72839303212052
+      mtime: 1266513377
+      name: scripts/btformat
+    - bytesize: 876
+      file_mime_type: ~
+      line_count: ~
+      md5: fa39f9927acbb52f49c69fb3ff1fbcbc
+      mtime: 1266513377
+      name: scripts/btsort
+    - bytesize: 431
+      file_mime_type: ~
+      line_count: ~
+      md5: f45ed037e4ccb0d8ac3e15756a795fb9
+      mtime: 1266513377
+      name: t/00.init.t
+    - bytesize: 5079
+      file_mime_type: ~
+      line_count: ~
+      md5: 60cfea7540b8df15408186aab29e3aee
+      mtime: 1266513377
+      name: t/bib.t
+    - bytesize: 1520
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f3b877d162dc3f6b4158d0137eb27bc
+      mtime: 1266513377
+      name: t/common.pl
+    - bytesize: 3576
+      file_mime_type: ~
+      line_count: ~
+      md5: 765d2525117dce0747976ee940379002
+      mtime: 1266513377
+      name: t/macro.t
+    - bytesize: 2404
+      file_mime_type: ~
+      line_count: ~
+      md5: d7f9bab6b4571ec5f2d8f9f36a9212c1
+      mtime: 1266513377
+      name: t/modify.t
+    - bytesize: 2048
+      file_mime_type: ~
+      line_count: ~
+      md5: 4df86a23389c1220725b70181d5ed079
+      mtime: 1266513377
+      name: t/nameformat.t
+    - bytesize: 2029
+      file_mime_type: ~
+      line_count: ~
+      md5: e361354684f4b4a4252b2e3060b18e2b
+      mtime: 1266513377
+      name: t/namelist.t
+    - bytesize: 2997
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ff4ad42783eb87bc0d42e49dbb832e8
+      mtime: 1266513377
+      name: t/names.t
+    - bytesize: 2186
+      file_mime_type: ~
+      line_count: ~
+      md5: 20dc262fa5e4f60ea4b38d00c29e035e
+      mtime: 1266513377
+      name: t/output.t
+    - bytesize: 1407
+      file_mime_type: ~
+      line_count: ~
+      md5: 943290a8a715c952efddcb6d09e0e44b
+      mtime: 1266513377
+      name: t/parse.t
+    - bytesize: 2799
+      file_mime_type: ~
+      line_count: ~
+      md5: 14680638b5b6043b3f58fb3882e6ca32
+      mtime: 1266513377
+      name: t/parse_f.t
+    - bytesize: 2593
+      file_mime_type: ~
+      line_count: ~
+      md5: 590c1f70c9ada735c132ff98cd35d256
+      mtime: 1266513377
+      name: t/parse_s.t
+    - bytesize: 4937
+      file_mime_type: ~
+      line_count: ~
+      md5: d8178c7ecb6077818d352a2805f74163
+      mtime: 1266513377
+      name: t/purify.t
+    - bytesize: 593
+      file_mime_type: ~
+      line_count: ~
+      md5: b91ecf20589acd27dc55de4d4738f76d
+      mtime: 1266513377
+      name: t/split_names
+    - bytesize: 395
+      file_mime_type: ~
+      line_count: ~
+      md5: e4c8a6876bc3ef9073a8f87c5c28b117
+      mtime: 1266513377
+      name: t/zz.cleanup.t
+    - bytesize: 733
+      file_mime_type: ~
+      line_count: ~
+      md5: f421e5dc171b308cac8ecaead365643f
+      mtime: 1266513377
+      name: typemap
+    - bytesize: 14432
+      file_mime_type: ~
+      line_count: ~
+      md5: 14f8006b7c760560e30beb1f7e952090
+      mtime: 1266513377
+      name: xscode/BibTeX.xs
+    - bytesize: 15767
+      file_mime_type: ~
+      line_count: ~
+      md5: c6cad1b59d7146d83a9a6a60b3d1711c
+      mtime: 1266513377
+      name: xscode/btxs_support.c
+    - bytesize: 1371
+      file_mime_type: ~
+      line_count: ~
+      md5: 56a951e3659be0eab750c4bc29465874
+      mtime: 1266513377
+      name: xscode/btxs_support.h
+  module_info:
+    - bytesize: 28520
+      file_mime_type: ~
+      line_count: ~
+      md5: 84b9259086ca86308c2f29a64212cd31
+      module_name_from_file_guess: Text::BibTeX
+      mtime: 1266513377
+      name: lib/Text/BibTeX.pm
+      packages:
+        - Text::BibTeX
+      primary_package: Text::BibTeX
+      uses:
+        - ''
+        - strict
+        - UNIVERSAL
+        - Carp
+        - vars
+        - Exporter
+        - DynaLoader
+        - Text::BibTeX::File
+        - Text::BibTeX::Entry
+      version_info:
+        filename: lib/Text/BibTeX.pm
+        identifier: VERSION
+        line_number: 27
+        sigil: $
+        value: 0.40_3
+    - bytesize: 18344
+      file_mime_type: ~
+      line_count: ~
+      md5: e327866b72270601de14d698870f78ba
+      module_name_from_file_guess: Text::BibTeX::Bib
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Bib.pm
+      packages:
+        - Text::BibTeX::BibStructure
+        - Text::BibTeX::BibEntry
+      primary_package: Text::BibTeX::BibStructure
+      uses:
+        - strict
+        - vars
+        - Text::BibTeX::BibSort
+        - Text::BibTeX::BibFormat
+      version_info:
+        filename: lib/Text/BibTeX/Bib.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14750
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e9ad6b8cc2a4402a9fd39d70887141c
+      module_name_from_file_guess: Text::BibTeX::BibFormat
+      mtime: 1266513377
+      name: lib/Text/BibTeX/BibFormat.pm
+      packages:
+        - Text::BibTeX::BibFormat
+      primary_package: Text::BibTeX::BibFormat
+      uses:
+        - Carp
+        - strict
+        - vars
+        - Text::BibTeX::Name
+        - Text::BibTeX::NameFormat
+        - Text::BibTeX::Structure
+        - Text::BibTeX
+      version_info:
+        filename: lib/Text/BibTeX/BibFormat.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7665
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bf9bef09fe21e6652a9599b607deebd
+      module_name_from_file_guess: Text::BibTeX::BibSort
+      mtime: 1266513377
+      name: lib/Text/BibTeX/BibSort.pm
+      packages:
+        - Text::BibTeX::BibSort
+      primary_package: Text::BibTeX::BibSort
+      uses:
+        - strict
+        - vars
+        - Text::BibTeX::Structure
+        - Text::BibTeX
+        - Carp
+        - Text::BibTeX::Name
+        - Text::BibTeX::NameFormat
+      version_info:
+        filename: lib/Text/BibTeX/BibSort.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 30468
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ad1ea00aaa31be3017d872003a86a87
+      module_name_from_file_guess: Text::BibTeX::Entry
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Entry.pm
+      packages:
+        - Text::BibTeX::Entry
+      primary_package: Text::BibTeX::Entry
+      uses:
+        - ''
+        - strict
+        - UNIVERSAL
+        - Carp
+        - Text::BibTeX
+        - Text::BibTeX::Value
+        - Text::BibTeX::Name
+      version_info:
+        filename: lib/Text/BibTeX/Entry.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5199
+      file_mime_type: ~
+      line_count: ~
+      md5: 31d35f55314fa19517b7006533199e6e
+      module_name_from_file_guess: Text::BibTeX::File
+      mtime: 1266513377
+      name: lib/Text/BibTeX/File.pm
+      packages:
+        - Text::BibTeX::File
+      primary_package: Text::BibTeX::File
+      uses:
+        - strict
+        - Carp
+        - IO::File
+        - Text::BibTeX::Structure
+      version_info:
+        filename: lib/Text/BibTeX/File.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12405
+      file_mime_type: ~
+      line_count: ~
+      md5: 41f534ddc535f0eaceed3f2f2fa69270
+      module_name_from_file_guess: Text::BibTeX::Name
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Name.pm
+      packages:
+        - Text::BibTeX::Name
+      primary_package: Text::BibTeX::Name
+      uses:
+        - ''
+        - strict
+        - Carp
+      version_info:
+        filename: lib/Text/BibTeX/Name.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11609
+      file_mime_type: ~
+      line_count: ~
+      md5: f580cfacc9f2b538fb3cbcd6a73b3459
+      module_name_from_file_guess: Text::BibTeX::NameFormat
+      mtime: 1266513377
+      name: lib/Text/BibTeX/NameFormat.pm
+      packages:
+        - Text::BibTeX::NameFormat
+      primary_package: Text::BibTeX::NameFormat
+      uses:
+        - ''
+        - strict
+        - Carp
+      version_info:
+        filename: lib/Text/BibTeX/NameFormat.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 43550
+      file_mime_type: ~
+      line_count: ~
+      md5: fd37559dea951b4aa47970b1fe00fdd5
+      module_name_from_file_guess: Text::BibTeX::Structure
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Structure.pm
+      packages:
+        - Text::BibTeX::Structure
+        - Text::BibTeX::StructuredEntry
+      primary_package: Text::BibTeX::Structure
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Text::BibTeX
+        - vars
+      version_info:
+        filename: lib/Text/BibTeX/Structure.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11166
+      file_mime_type: ~
+      line_count: ~
+      md5: ce3a737c439f56f25516bcb9073c8da4
+      module_name_from_file_guess: Text::BibTeX::Value
+      mtime: 1266513377
+      name: lib/Text/BibTeX/Value.pm
+      packages:
+        - Text::BibTeX::Value
+        - Text::BibTeX::SimpleValue
+      primary_package: Text::BibTeX::Value
+      uses:
+        - strict
+        - UNIVERSAL
+        - Carp
+        - Text::BibTeX
+      version_info:
+        filename: lib/Text/BibTeX/Value.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - lib/Text/BibTeX.pm
+    - lib/Text/BibTeX/Bib.pm
+    - lib/Text/BibTeX/BibFormat.pm
+    - lib/Text/BibTeX/BibSort.pm
+    - lib/Text/BibTeX/Entry.pm
+    - lib/Text/BibTeX/File.pm
+    - lib/Text/BibTeX/Name.pm
+    - lib/Text/BibTeX/NameFormat.pm
+    - lib/Text/BibTeX/Structure.pm
+    - lib/Text/BibTeX/Value.pm
+  test_info:
+    - bytesize: 431
+      file_mime_type: ~
+      line_count: ~
+      md5: f45ed037e4ccb0d8ac3e15756a795fb9
+      mtime: 1266513377
+      name: t/00.init.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - File::Copy
+        - File::Spec::Functions
+    - bytesize: 5079
+      file_mime_type: ~
+      line_count: ~
+      md5: 60cfea7540b8df15408186aab29e3aee
+      mtime: 1266513377
+      name: t/bib.t
+      uses:
+        - strict
+        - warnings
+        - vars
+        - IO::Handle
+        - POSIX
+        - Test::More
+        - ''
+    - bytesize: 3576
+      file_mime_type: ~
+      line_count: ~
+      md5: 765d2525117dce0747976ee940379002
+      mtime: 1266513377
+      name: t/macro.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - vars
+        - ''
+    - bytesize: 2404
+      file_mime_type: ~
+      line_count: ~
+      md5: d7f9bab6b4571ec5f2d8f9f36a9212c1
+      mtime: 1266513377
+      name: t/modify.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - ''
+    - bytesize: 2048
+      file_mime_type: ~
+      line_count: ~
+      md5: 4df86a23389c1220725b70181d5ed079
+      mtime: 1266513377
+      name: t/nameformat.t
+      uses:
+        - strict
+        - vars
+        - IO::Handle
+        - Test::More
+        - ''
+        - Text::BibTeX
+        - Text::BibTeX::Name
+        - Text::BibTeX::NameFormat
+    - bytesize: 2029
+      file_mime_type: ~
+      line_count: ~
+      md5: e361354684f4b4a4252b2e3060b18e2b
+      mtime: 1266513377
+      name: t/namelist.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - vars
+        - ''
+    - bytesize: 2997
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ff4ad42783eb87bc0d42e49dbb832e8
+      mtime: 1266513377
+      name: t/names.t
+      uses: []
+    - bytesize: 2186
+      file_mime_type: ~
+      line_count: ~
+      md5: 20dc262fa5e4f60ea4b38d00c29e035e
+      mtime: 1266513377
+      name: t/output.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - vars
+        - ''
+        - Fcntl
+    - bytesize: 1407
+      file_mime_type: ~
+      line_count: ~
+      md5: 943290a8a715c952efddcb6d09e0e44b
+      mtime: 1266513377
+      name: t/parse.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - vars
+        - ''
+    - bytesize: 2799
+      file_mime_type: ~
+      line_count: ~
+      md5: 14680638b5b6043b3f58fb3882e6ca32
+      mtime: 1266513377
+      name: t/parse_f.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - vars
+        - ''
+    - bytesize: 2593
+      file_mime_type: ~
+      line_count: ~
+      md5: 590c1f70c9ada735c132ff98cd35d256
+      mtime: 1266513377
+      name: t/parse_s.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - vars
+        - ''
+    - bytesize: 4937
+      file_mime_type: ~
+      line_count: ~
+      md5: d8178c7ecb6077818d352a2805f74163
+      mtime: 1266513377
+      name: t/purify.t
+      uses:
+        - strict
+        - warnings
+        - IO::Handle
+        - Test::More
+        - vars
+        - ''
+    - bytesize: 395
+      file_mime_type: ~
+      line_count: ~
+      md5: e4c8a6876bc3ef9073a8f87c5c28b117
+      mtime: 1266513377
+      name: t/zz.cleanup.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - File::Copy
+        - File::Spec::Functions
+  tests:
+    - t/00.init.t
+    - t/bib.t
+    - t/macro.t
+    - t/modify.t
+    - t/nameformat.t
+    - t/namelist.t
+    - t/names.t
+    - t/output.t
+    - t/parse.t
+    - t/parse_f.t
+    - t/parse_s.t
+    - t/purify.t
+    - t/zz.cleanup.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-6190._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 6190
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268955046
+  examine_start_time: 1268955030
+  examine_time: 16
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 6190
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1268955046
+  run_start_time: 1268955030
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

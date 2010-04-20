@@ -1,0 +1,3993 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Get stock and mutual fund quotes from various exchanges
+    author:
+      - 'Paul Fenwick <pjf@cpan.org>'
+    build_requires:
+      ExtUtils::MakeMaker: 6.42
+      Test::More: 0
+    configure_requires:
+      ExtUtils::MakeMaker: 6.42
+    distribution_type: module
+    generated_by: Module::Install version 0.91
+    license: gpl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Finance-Quote
+    no_index:
+      directory:
+        - examples
+        - inc
+        - t
+    requires:
+      Crypt::SSLeay: 0
+      HTML::TableExtract: 0
+      HTML::TreeBuilder: 0
+      HTTP::Request::Common: 0
+      LWP::UserAgent: 0
+      perl: 5.005
+    resources:
+      MailingList: https://lists.sourceforge.net/lists/listinfo/finance-quote-devel
+      bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Finance-Quote
+      homepage: http://finance-quote.sourceforge.net/
+      license: http://opensource.org/licenses/gpl-license.php
+      repository: http://github.com/pfenwick/finance-quote/
+    version: 1.17
+  blib:
+    - blib/lib/Finance/Quote.pm
+    - blib/lib/Finance/Quote/AEX.pm
+    - blib/lib/Finance/Quote/AIAHK.pm
+    - blib/lib/Finance/Quote/ASEGR.pm
+    - blib/lib/Finance/Quote/ASX.pm
+    - blib/lib/Finance/Quote/BMONesbittBurns.pm
+    - blib/lib/Finance/Quote/Bourso.pm
+    - blib/lib/Finance/Quote/Cdnfundlibrary.pm
+    - blib/lib/Finance/Quote/Cominvest.pm
+    - blib/lib/Finance/Quote/Currencies.pm
+    - blib/lib/Finance/Quote/DWS.pm
+    - blib/lib/Finance/Quote/Deka.pm
+    - blib/lib/Finance/Quote/FTPortfolios.pm
+    - blib/lib/Finance/Quote/Fidelity.pm
+    - blib/lib/Finance/Quote/FinanceCanada.pm
+    - blib/lib/Finance/Quote/Finanzpartner.pm
+    - blib/lib/Finance/Quote/Fool.pm
+    - blib/lib/Finance/Quote/GoldMoney.pm
+    - blib/lib/Finance/Quote/HEX.pm
+    - blib/lib/Finance/Quote/HU.pm
+    - blib/lib/Finance/Quote/IndiaMutual.pm
+    - blib/lib/Finance/Quote/LeRevenu.pm
+    - blib/lib/Finance/Quote/ManInvestments.pm
+    - blib/lib/Finance/Quote/Morningstar.pm
+    - blib/lib/Finance/Quote/NZX.pm
+    - blib/lib/Finance/Quote/Platinum.pm
+    - blib/lib/Finance/Quote/SEB.pm
+    - blib/lib/Finance/Quote/StockHouseCanada.pm
+    - blib/lib/Finance/Quote/TSP.pm
+    - blib/lib/Finance/Quote/TSX.pm
+    - blib/lib/Finance/Quote/Tdefunds.pm
+    - blib/lib/Finance/Quote/Tdwaterhouse.pm
+    - blib/lib/Finance/Quote/Tiaacref.pm
+    - blib/lib/Finance/Quote/Troweprice.pm
+    - blib/lib/Finance/Quote/Trustnet.pm
+    - blib/lib/Finance/Quote/USFedBonds.pm
+    - blib/lib/Finance/Quote/Union.pm
+    - blib/lib/Finance/Quote/UserAgent.pm
+    - blib/lib/Finance/Quote/VWD.pm
+    - blib/lib/Finance/Quote/Yahoo/Asia.pm
+    - blib/lib/Finance/Quote/Yahoo/Australia.pm
+    - blib/lib/Finance/Quote/Yahoo/Base.pm
+    - blib/lib/Finance/Quote/Yahoo/Brasil.pm
+    - blib/lib/Finance/Quote/Yahoo/Europe.pm
+    - blib/lib/Finance/Quote/Yahoo/NZ.pm
+    - blib/lib/Finance/Quote/Yahoo/USA.pm
+    - blib/lib/Finance/Quote/ZA.pm
+    - blib/man3/Finance::Quote.3
+    - blib/man3/Finance::Quote::AEX.3
+    - blib/man3/Finance::Quote::AIAHK.3
+    - blib/man3/Finance::Quote::ASEGR.3
+    - blib/man3/Finance::Quote::ASX.3
+    - blib/man3/Finance::Quote::BMONesbittBurns.3
+    - blib/man3/Finance::Quote::Bourso.3
+    - blib/man3/Finance::Quote::Cdnfundlibrary.3
+    - blib/man3/Finance::Quote::Cominvest.3
+    - blib/man3/Finance::Quote::Currencies.3
+    - blib/man3/Finance::Quote::DWS.3
+    - blib/man3/Finance::Quote::Deka.3
+    - blib/man3/Finance::Quote::FTPortfolios.3
+    - blib/man3/Finance::Quote::Fidelity.3
+    - blib/man3/Finance::Quote::FinanceCanada.3
+    - blib/man3/Finance::Quote::Finanzpartner.3
+    - blib/man3/Finance::Quote::Fool.3
+    - blib/man3/Finance::Quote::GoldMoney.3
+    - blib/man3/Finance::Quote::HEX.3
+    - blib/man3/Finance::Quote::HU.3
+    - blib/man3/Finance::Quote::IndiaMutual.3
+    - blib/man3/Finance::Quote::LeRevenu.3
+    - blib/man3/Finance::Quote::ManInvestments.3
+    - blib/man3/Finance::Quote::Morningstar.3
+    - blib/man3/Finance::Quote::NZX.3
+    - blib/man3/Finance::Quote::Platinum.3
+    - blib/man3/Finance::Quote::SEB.3
+    - blib/man3/Finance::Quote::TSP.3
+    - blib/man3/Finance::Quote::TSX.3
+    - blib/man3/Finance::Quote::Tdefunds.3
+    - blib/man3/Finance::Quote::Tdwaterhouse.3
+    - blib/man3/Finance::Quote::Tiaacref.3
+    - blib/man3/Finance::Quote::Troweprice.3
+    - blib/man3/Finance::Quote::Trustnet.3
+    - blib/man3/Finance::Quote::USFedBonds.3
+    - blib/man3/Finance::Quote::Union.3
+    - blib/man3/Finance::Quote::VWD.3
+    - blib/man3/Finance::Quote::Yahoo::Asia.3
+    - blib/man3/Finance::Quote::Yahoo::Australia.3
+    - blib/man3/Finance::Quote::Yahoo::Base.3
+    - blib/man3/Finance::Quote::Yahoo::Brasil.3
+    - blib/man3/Finance::Quote::Yahoo::Europe.3
+    - blib/man3/Finance::Quote::Yahoo::NZ.3
+    - blib/man3/Finance::Quote::Yahoo::USA.3
+    - blib/man3/Finance::Quote::ZA.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Crypt::SSLeay 0 not found.
+    Warning: prerequisite HTML::TableExtract 0 not found.
+    Warning: prerequisite HTML::TreeBuilder 0 not found.
+    Warning: prerequisite HTTP::Request::Common 0 not found.
+    Warning: prerequisite LWP::UserAgent 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Finance::Quote
+  build_output: |
+    cp lib/Finance/Quote/Tdefunds.pm blib/lib/Finance/Quote/Tdefunds.pm
+    cp lib/Finance/Quote/Cominvest.pm blib/lib/Finance/Quote/Cominvest.pm
+    cp lib/Finance/Quote/FTPortfolios.pm blib/lib/Finance/Quote/FTPortfolios.pm
+    cp lib/Finance/Quote/BMONesbittBurns.pm blib/lib/Finance/Quote/BMONesbittBurns.pm
+    cp lib/Finance/Quote/Finanzpartner.pm blib/lib/Finance/Quote/Finanzpartner.pm
+    cp lib/Finance/Quote/Yahoo/USA.pm blib/lib/Finance/Quote/Yahoo/USA.pm
+    cp lib/Finance/Quote/Platinum.pm blib/lib/Finance/Quote/Platinum.pm
+    cp lib/Finance/Quote/TSP.pm blib/lib/Finance/Quote/TSP.pm
+    cp lib/Finance/Quote/Yahoo/Europe.pm blib/lib/Finance/Quote/Yahoo/Europe.pm
+    cp lib/Finance/Quote/TSX.pm blib/lib/Finance/Quote/TSX.pm
+    cp lib/Finance/Quote/StockHouseCanada.pm blib/lib/Finance/Quote/StockHouseCanada.pm
+    cp lib/Finance/Quote/NZX.pm blib/lib/Finance/Quote/NZX.pm
+    cp lib/Finance/Quote/AEX.pm blib/lib/Finance/Quote/AEX.pm
+    cp lib/Finance/Quote/IndiaMutual.pm blib/lib/Finance/Quote/IndiaMutual.pm
+    cp lib/Finance/Quote/Currencies.pm blib/lib/Finance/Quote/Currencies.pm
+    cp lib/Finance/Quote/Bourso.pm blib/lib/Finance/Quote/Bourso.pm
+    cp lib/Finance/Quote/Tiaacref.pm blib/lib/Finance/Quote/Tiaacref.pm
+    cp lib/Finance/Quote/AIAHK.pm blib/lib/Finance/Quote/AIAHK.pm
+    cp lib/Finance/Quote/USFedBonds.pm blib/lib/Finance/Quote/USFedBonds.pm
+    cp lib/Finance/Quote/SEB.pm blib/lib/Finance/Quote/SEB.pm
+    cp lib/Finance/Quote/ASEGR.pm blib/lib/Finance/Quote/ASEGR.pm
+    cp lib/Finance/Quote/Union.pm blib/lib/Finance/Quote/Union.pm
+    cp lib/Finance/Quote/Cdnfundlibrary.pm blib/lib/Finance/Quote/Cdnfundlibrary.pm
+    cp lib/Finance/Quote/FinanceCanada.pm blib/lib/Finance/Quote/FinanceCanada.pm
+    cp lib/Finance/Quote/DWS.pm blib/lib/Finance/Quote/DWS.pm
+    cp lib/Finance/Quote/ZA.pm blib/lib/Finance/Quote/ZA.pm
+    cp lib/Finance/Quote/Yahoo/Asia.pm blib/lib/Finance/Quote/Yahoo/Asia.pm
+    cp lib/Finance/Quote/Yahoo/Brasil.pm blib/lib/Finance/Quote/Yahoo/Brasil.pm
+    cp lib/Finance/Quote/GoldMoney.pm blib/lib/Finance/Quote/GoldMoney.pm
+    cp lib/Finance/Quote/Yahoo/Base.pm blib/lib/Finance/Quote/Yahoo/Base.pm
+    cp lib/Finance/Quote.pm blib/lib/Finance/Quote.pm
+    cp lib/Finance/Quote/HU.pm blib/lib/Finance/Quote/HU.pm
+    cp lib/Finance/Quote/Tdwaterhouse.pm blib/lib/Finance/Quote/Tdwaterhouse.pm
+    cp lib/Finance/Quote/Yahoo/NZ.pm blib/lib/Finance/Quote/Yahoo/NZ.pm
+    cp lib/Finance/Quote/VWD.pm blib/lib/Finance/Quote/VWD.pm
+    cp lib/Finance/Quote/Morningstar.pm blib/lib/Finance/Quote/Morningstar.pm
+    cp lib/Finance/Quote/Fidelity.pm blib/lib/Finance/Quote/Fidelity.pm
+    cp lib/Finance/Quote/LeRevenu.pm blib/lib/Finance/Quote/LeRevenu.pm
+    cp lib/Finance/Quote/HEX.pm blib/lib/Finance/Quote/HEX.pm
+    cp lib/Finance/Quote/Yahoo/Australia.pm blib/lib/Finance/Quote/Yahoo/Australia.pm
+    cp lib/Finance/Quote/Troweprice.pm blib/lib/Finance/Quote/Troweprice.pm
+    cp lib/Finance/Quote/UserAgent.pm blib/lib/Finance/Quote/UserAgent.pm
+    cp lib/Finance/Quote/ASX.pm blib/lib/Finance/Quote/ASX.pm
+    cp lib/Finance/Quote/Fool.pm blib/lib/Finance/Quote/Fool.pm
+    cp lib/Finance/Quote/Trustnet.pm blib/lib/Finance/Quote/Trustnet.pm
+    cp lib/Finance/Quote/Deka.pm blib/lib/Finance/Quote/Deka.pm
+    cp lib/Finance/Quote/ManInvestments.pm blib/lib/Finance/Quote/ManInvestments.pm
+    Manifying blib/man3/Finance::Quote::Tdefunds.3
+    Manifying blib/man3/Finance::Quote::Cominvest.3
+    Manifying blib/man3/Finance::Quote::FTPortfolios.3
+    Manifying blib/man3/Finance::Quote::BMONesbittBurns.3
+    Manifying blib/man3/Finance::Quote::Finanzpartner.3
+    Manifying blib/man3/Finance::Quote::Yahoo::USA.3
+    Manifying blib/man3/Finance::Quote::Platinum.3
+    Manifying blib/man3/Finance::Quote::TSP.3
+    Manifying blib/man3/Finance::Quote::Yahoo::Europe.3
+    Manifying blib/man3/Finance::Quote::TSX.3
+    Manifying blib/man3/Finance::Quote::NZX.3
+    Manifying blib/man3/Finance::Quote::AEX.3
+    Manifying blib/man3/Finance::Quote::IndiaMutual.3
+    Manifying blib/man3/Finance::Quote::Currencies.3
+    Manifying blib/man3/Finance::Quote::Tiaacref.3
+    Manifying blib/man3/Finance::Quote::Bourso.3
+    Manifying blib/man3/Finance::Quote::AIAHK.3
+    Manifying blib/man3/Finance::Quote::USFedBonds.3
+    Manifying blib/man3/Finance::Quote::SEB.3
+    Manifying blib/man3/Finance::Quote::Union.3
+    Manifying blib/man3/Finance::Quote::ASEGR.3
+    Manifying blib/man3/Finance::Quote::Cdnfundlibrary.3
+    Manifying blib/man3/Finance::Quote::DWS.3
+    Manifying blib/man3/Finance::Quote::FinanceCanada.3
+    Manifying blib/man3/Finance::Quote::ZA.3
+    Manifying blib/man3/Finance::Quote::Yahoo::Asia.3
+    Manifying blib/man3/Finance::Quote::Yahoo::Brasil.3
+    Manifying blib/man3/Finance::Quote::GoldMoney.3
+    Manifying blib/man3/Finance::Quote::Yahoo::Base.3
+    Manifying blib/man3/Finance::Quote.3
+    Manifying blib/man3/Finance::Quote::HU.3
+    Manifying blib/man3/Finance::Quote::Yahoo::NZ.3
+    Manifying blib/man3/Finance::Quote::Tdwaterhouse.3
+    Manifying blib/man3/Finance::Quote::VWD.3
+    Manifying blib/man3/Finance::Quote::Morningstar.3
+    Manifying blib/man3/Finance::Quote::Fidelity.3
+    Manifying blib/man3/Finance::Quote::LeRevenu.3
+    Manifying blib/man3/Finance::Quote::Yahoo::Australia.3
+    Manifying blib/man3/Finance::Quote::HEX.3
+    Manifying blib/man3/Finance::Quote::Troweprice.3
+    Manifying blib/man3/Finance::Quote::Fool.3
+    Manifying blib/man3/Finance::Quote::ASX.3
+    Manifying blib/man3/Finance::Quote::Trustnet.3
+    Manifying blib/man3/Finance::Quote::Deka.3
+    Manifying blib/man3/Finance::Quote::ManInvestments.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF/Finance-Quote-1.17/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF/Finance-Quote-1.17
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF/Finance-Quote-1.17/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF/Finance-Quote-1.17/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.91
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: ECOCODE
+  dist_basename: Finance-Quote-1.17.tar.gz
+  dist_date: 1254765078
+  dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF/Finance-Quote-1.17
+  dist_extract_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF/Finance-Quote-1.17
+  dist_file: /home/brian/CPAN/authors/id/E/EC/ECOCODE/Finance-Quote-1.17.tar.gz
+  dist_md5: f1292e3d24a5a13a93f524a544102be5
+  dist_size: 130686
+  manifest:
+    - ChangeLog
+    - ChangeLog.1
+    - Documentation/FAQ
+    - Documentation/Hackers-Guide
+    - Documentation/License
+    - Documentation/README
+    - Examples/Quote_example.pl
+    - Examples/chkshares.pl
+    - Examples/currency-lookup.pl
+    - Examples/stockdump.pl
+    - INSTALL
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - inc/Module/Install.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/Finance/Quote.pm
+    - lib/Finance/Quote/AEX.pm
+    - lib/Finance/Quote/AIAHK.pm
+    - lib/Finance/Quote/ASEGR.pm
+    - lib/Finance/Quote/ASX.pm
+    - lib/Finance/Quote/BMONesbittBurns.pm
+    - lib/Finance/Quote/Bourso.pm
+    - lib/Finance/Quote/Cdnfundlibrary.pm
+    - lib/Finance/Quote/Cominvest.pm
+    - lib/Finance/Quote/Currencies.pm
+    - lib/Finance/Quote/DWS.pm
+    - lib/Finance/Quote/Deka.pm
+    - lib/Finance/Quote/FTPortfolios.pm
+    - lib/Finance/Quote/Fidelity.pm
+    - lib/Finance/Quote/FinanceCanada.pm
+    - lib/Finance/Quote/Finanzpartner.pm
+    - lib/Finance/Quote/Fool.pm
+    - lib/Finance/Quote/GoldMoney.pm
+    - lib/Finance/Quote/HEX.pm
+    - lib/Finance/Quote/HU.pm
+    - lib/Finance/Quote/IndiaMutual.pm
+    - lib/Finance/Quote/LeRevenu.pm
+    - lib/Finance/Quote/ManInvestments.pm
+    - lib/Finance/Quote/Morningstar.pm
+    - lib/Finance/Quote/NZX.pm
+    - lib/Finance/Quote/Platinum.pm
+    - lib/Finance/Quote/SEB.pm
+    - lib/Finance/Quote/StockHouseCanada.pm
+    - lib/Finance/Quote/TSP.pm
+    - lib/Finance/Quote/TSX.pm
+    - lib/Finance/Quote/Tdefunds.pm
+    - lib/Finance/Quote/Tdwaterhouse.pm
+    - lib/Finance/Quote/Tiaacref.pm
+    - lib/Finance/Quote/Troweprice.pm
+    - lib/Finance/Quote/Trustnet.pm
+    - lib/Finance/Quote/USFedBonds.pm
+    - lib/Finance/Quote/Union.pm
+    - lib/Finance/Quote/UserAgent.pm
+    - lib/Finance/Quote/VWD.pm
+    - lib/Finance/Quote/Yahoo/Asia.pm
+    - lib/Finance/Quote/Yahoo/Australia.pm
+    - lib/Finance/Quote/Yahoo/Base.pm
+    - lib/Finance/Quote/Yahoo/Brasil.pm
+    - lib/Finance/Quote/Yahoo/Europe.pm
+    - lib/Finance/Quote/Yahoo/NZ.pm
+    - lib/Finance/Quote/Yahoo/USA.pm
+    - lib/Finance/Quote/ZA.pm
+    - t/00-use.t
+    - t/01-pod.t
+    - t/02-pod-coverage.t
+    - t/03-kwalitee.t
+    - t/04-critic.t
+    - t/05-data-dumper.t
+    - t/aex.t
+    - t/aiahk.t
+    - t/asegr.t
+    - t/asx.t
+    - t/bmonesbittburns.t
+    - t/bourso.t
+    - t/cdnfundlibrary.t
+    - t/cominvest.t
+    - t/currencies.t
+    - t/currency.t
+    - t/currency_lookup.t
+    - t/deka.t
+    - t/dws.t
+    - t/fidelity.t
+    - t/financecanada.t
+    - t/finanzpartner.t
+    - t/ftportfolios.t
+    - t/goldmoney.t
+    - t/hex.t
+    - t/hu.t
+    - t/indiamutual.t
+    - t/lerevenu.t
+    - t/maninvestments.t
+    - t/morningstar.t
+    - t/nzx.t
+    - t/platinum.t
+    - t/quote.t
+    - t/seb.t
+    - t/stockhousecanada.t
+    - t/tdefunds.t
+    - t/tdwaterhouse.t
+    - t/tiaacref.t
+    - t/troweprice.t
+    - t/trustnet.t
+    - t/tsp.t
+    - t/tsx.t
+    - t/union.t
+    - t/usfedbonds.t
+    - t/vanguard.t
+    - t/vwd.t
+    - t/yahoo.t
+    - t/yahoo_asia.t
+    - t/yahoo_australia.t
+    - t/yahoo_brasil.t
+    - t/yahoo_europe.t
+    - t/yahoo_nz.t
+    - t/za.t
+  manifest_file_info:
+    - bytesize: 19378
+      file_mime_type: ~
+      line_count: ~
+      md5: 02f0b547c2779d25cff89672135f20e3
+      mtime: 1254764397
+      name: ChangeLog
+    - bytesize: 21854
+      file_mime_type: ~
+      line_count: ~
+      md5: 909569d9c8952a90d917711822e30bf7
+      mtime: 1254764397
+      name: ChangeLog.1
+    - bytesize: 2762
+      file_mime_type: ~
+      line_count: ~
+      md5: b9fb47c9e989363dad8d1c1be16c28cc
+      mtime: 1254764397
+      name: Documentation/FAQ
+    - bytesize: 10765
+      file_mime_type: ~
+      line_count: ~
+      md5: b914ca616f6128493147c2f6d5d6f503
+      mtime: 1254764397
+      name: Documentation/Hackers-Guide
+    - bytesize: 17992
+      file_mime_type: ~
+      line_count: ~
+      md5: 61baba20dc5d50d04783d9dde0682f83
+      mtime: 1254764397
+      name: Documentation/License
+    - bytesize: 1856
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ed4cfcd76ba3c53c0bfe7852941c365
+      mtime: 1254764397
+      name: Documentation/README
+    - bytesize: 2552
+      file_mime_type: ~
+      line_count: ~
+      md5: e67976a6aa9b5d4d05bda8499a208953
+      mtime: 1254764397
+      name: Examples/Quote_example.pl
+    - bytesize: 1329
+      file_mime_type: ~
+      line_count: ~
+      md5: 41da17dc79f4aac4daf6cf4c01b9872a
+      mtime: 1254764397
+      name: Examples/chkshares.pl
+    - bytesize: 499
+      file_mime_type: ~
+      line_count: ~
+      md5: 32cf57c4c5441b5b6354c0ebae39ab6b
+      mtime: 1254764397
+      name: Examples/currency-lookup.pl
+    - bytesize: 500
+      file_mime_type: ~
+      line_count: ~
+      md5: 815ab90be24a6f0e141d2299ab58c0c5
+      mtime: 1254764397
+      name: Examples/stockdump.pl
+    - bytesize: 2586
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1254764397
+      name: INSTALL
+    - bytesize: 2611
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1254764641
+      name: MANIFEST
+    - bytesize: 946
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1254764633
+      name: META.yml
+    - bytesize: 1846
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1254764397
+      name: Makefile.PL
+    - bytesize: 2580
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1254764397
+      name: README
+    - bytesize: 10316
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1254764632
+      name: inc/Module/Install.pm
+    - bytesize: 1014
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1254764632
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1254764632
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2455
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1254764632
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 7171
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1254764632
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 15044
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1254764632
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1254764632
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 1170
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1254764632
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 36257
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fe1e6c1a1b685f35567e5ffc4e8242e
+      mtime: 1254764397
+      name: lib/Finance/Quote.pm
+    - bytesize: 7502
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e867191f1ea41913cbb36f2a07a2bee
+      mtime: 1254764397
+      name: lib/Finance/Quote/AEX.pm
+    - bytesize: 5227
+      file_mime_type: ~
+      line_count: ~
+      md5: ccc3224ee14badd22e915e38dc1d3807
+      mtime: 1254764397
+      name: lib/Finance/Quote/AIAHK.pm
+    - bytesize: 4426
+      file_mime_type: ~
+      line_count: ~
+      md5: 27ce440efd4ff5996ea84eb7af30cb81
+      mtime: 1254764397
+      name: lib/Finance/Quote/ASEGR.pm
+    - bytesize: 6652
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b08b34fe5780aeac586139ff87ce864
+      mtime: 1254764397
+      name: lib/Finance/Quote/ASX.pm
+    - bytesize: 7514
+      file_mime_type: ~
+      line_count: ~
+      md5: 6caacb10660f7b7588ab9e09b24922da
+      mtime: 1254764397
+      name: lib/Finance/Quote/BMONesbittBurns.pm
+    - bytesize: 7771
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e3523576ea8ec3200f0022edaf69be8
+      mtime: 1254764397
+      name: lib/Finance/Quote/Bourso.pm
+    - bytesize: 4766
+      file_mime_type: ~
+      line_count: ~
+      md5: fcaf86fa0ebfed5650ef934878965776
+      mtime: 1254764397
+      name: lib/Finance/Quote/Cdnfundlibrary.pm
+    - bytesize: 4913
+      file_mime_type: ~
+      line_count: ~
+      md5: 978eca6db8445720c556b8a40b707951
+      mtime: 1254764397
+      name: lib/Finance/Quote/Cominvest.pm
+    - bytesize: 14786
+      file_mime_type: ~
+      line_count: ~
+      md5: ab41eb8425cb5b5d229962496752331b
+      mtime: 1254764397
+      name: lib/Finance/Quote/Currencies.pm
+    - bytesize: 7840
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cfefebec978740ef8aef413bcefae8b
+      mtime: 1254764397
+      name: lib/Finance/Quote/DWS.pm
+    - bytesize: 3395
+      file_mime_type: ~
+      line_count: ~
+      md5: 60751dd116ca262c50a08a1f79443b59
+      mtime: 1254764397
+      name: lib/Finance/Quote/Deka.pm
+    - bytesize: 5819
+      file_mime_type: ~
+      line_count: ~
+      md5: e5f4ede6020b9e868080d9218ad19567
+      mtime: 1254764397
+      name: lib/Finance/Quote/FTPortfolios.pm
+    - bytesize: 4802
+      file_mime_type: ~
+      line_count: ~
+      md5: 27f7ebf70a08d94deca3416147f73aaa
+      mtime: 1254764397
+      name: lib/Finance/Quote/Fidelity.pm
+    - bytesize: 5937
+      file_mime_type: ~
+      line_count: ~
+      md5: d4a20f10e272bae7a836b05c6b240725
+      mtime: 1254764397
+      name: lib/Finance/Quote/FinanceCanada.pm
+    - bytesize: 3264
+      file_mime_type: ~
+      line_count: ~
+      md5: 05fad9df6841876f2ceb354709d53e1a
+      mtime: 1254764397
+      name: lib/Finance/Quote/Finanzpartner.pm
+    - bytesize: 4535
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f47a0a2387d2fd795ae72331e2d3c82
+      mtime: 1254764397
+      name: lib/Finance/Quote/Fool.pm
+    - bytesize: 7642
+      file_mime_type: ~
+      line_count: ~
+      md5: a9ed829d37f6d60516549148d34974de
+      mtime: 1254764397
+      name: lib/Finance/Quote/GoldMoney.pm
+    - bytesize: 5705
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bb036bad8d793a59bfcab38e862a0a8
+      mtime: 1254764397
+      name: lib/Finance/Quote/HEX.pm
+    - bytesize: 18208
+      file_mime_type: ~
+      line_count: ~
+      md5: 0afcd3662eb1fb80154202c4d0e9a084
+      mtime: 1254764397
+      name: lib/Finance/Quote/HU.pm
+    - bytesize: 4371
+      file_mime_type: ~
+      line_count: ~
+      md5: e06db2e3b9629905617c636c29cd3c21
+      mtime: 1254764397
+      name: lib/Finance/Quote/IndiaMutual.pm
+    - bytesize: 12684
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a2cf9d576c5be1c7a1218e9969a404f
+      mtime: 1254764397
+      name: lib/Finance/Quote/LeRevenu.pm
+    - bytesize: 6130
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cd3103d2fadc23ef0960ea63d530cb0
+      mtime: 1254764397
+      name: lib/Finance/Quote/ManInvestments.pm
+    - bytesize: 2981
+      file_mime_type: ~
+      line_count: ~
+      md5: 4016eddb495857d62e5335ac6d9213a8
+      mtime: 1254764397
+      name: lib/Finance/Quote/Morningstar.pm
+    - bytesize: 3863
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d340788b227f86becda37066730cbac
+      mtime: 1254764397
+      name: lib/Finance/Quote/NZX.pm
+    - bytesize: 4903
+      file_mime_type: ~
+      line_count: ~
+      md5: 89f16c44545fb62121728a5353e0c33f
+      mtime: 1254764397
+      name: lib/Finance/Quote/Platinum.pm
+    - bytesize: 3985
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b1df283549f6c442c483a8a66462561
+      mtime: 1254764397
+      name: lib/Finance/Quote/SEB.pm
+    - bytesize: 5977
+      file_mime_type: ~
+      line_count: ~
+      md5: 4942d8d96abad78d79a495025fb5c372
+      mtime: 1254764397
+      name: lib/Finance/Quote/StockHouseCanada.pm
+    - bytesize: 5067
+      file_mime_type: ~
+      line_count: ~
+      md5: 16fb04437515903f3c9b1ad9a067b81d
+      mtime: 1254764397
+      name: lib/Finance/Quote/TSP.pm
+    - bytesize: 5795
+      file_mime_type: ~
+      line_count: ~
+      md5: 191d42b26234490b836305b963ff9927
+      mtime: 1254764397
+      name: lib/Finance/Quote/TSX.pm
+    - bytesize: 4958
+      file_mime_type: ~
+      line_count: ~
+      md5: 6871ceddd141bbec073623b8970460db
+      mtime: 1254764397
+      name: lib/Finance/Quote/Tdefunds.pm
+    - bytesize: 5025
+      file_mime_type: ~
+      line_count: ~
+      md5: ca06e3c87ff0164b27596782048286f3
+      mtime: 1254764397
+      name: lib/Finance/Quote/Tdwaterhouse.pm
+    - bytesize: 14112
+      file_mime_type: ~
+      line_count: ~
+      md5: 7561f1da0eb3032a2c364c32710597d7
+      mtime: 1254764397
+      name: lib/Finance/Quote/Tiaacref.pm
+    - bytesize: 3985
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e022401955dea2dc76a45ea6f193ffd
+      mtime: 1254764397
+      name: lib/Finance/Quote/Troweprice.pm
+    - bytesize: 7376
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e186ef96fe77c215e0544d81124b9bb
+      mtime: 1254764397
+      name: lib/Finance/Quote/Trustnet.pm
+    - bytesize: 6160
+      file_mime_type: ~
+      line_count: ~
+      md5: 90be3ed76352f2f9d132d9336166870c
+      mtime: 1254764397
+      name: lib/Finance/Quote/USFedBonds.pm
+    - bytesize: 4609
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f9401c24e4011415541c959feeb2127
+      mtime: 1254764397
+      name: lib/Finance/Quote/Union.pm
+    - bytesize: 3325
+      file_mime_type: ~
+      line_count: ~
+      md5: 25ed34770b8156cf1ac4e89425e30f66
+      mtime: 1254764397
+      name: lib/Finance/Quote/UserAgent.pm
+    - bytesize: 5920
+      file_mime_type: ~
+      line_count: ~
+      md5: 48d804b521fd4eb62c955f2b10716e97
+      mtime: 1254764397
+      name: lib/Finance/Quote/VWD.pm
+    - bytesize: 4286
+      file_mime_type: ~
+      line_count: ~
+      md5: fa998a270667854e6433921d429d702c
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/Asia.pm
+    - bytesize: 3929
+      file_mime_type: ~
+      line_count: ~
+      md5: a0bec542c14f674cf87765af377a77ce
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/Australia.pm
+    - bytesize: 12611
+      file_mime_type: ~
+      line_count: ~
+      md5: cb61cd422c416823558c352b024e8ad5
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/Base.pm
+    - bytesize: 3517
+      file_mime_type: ~
+      line_count: ~
+      md5: e6794ec96cb11271972aabf966a497c3
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/Brasil.pm
+    - bytesize: 5055
+      file_mime_type: ~
+      line_count: ~
+      md5: c47f83656b883b9c0af565f9cde5abec
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/Europe.pm
+    - bytesize: 3428
+      file_mime_type: ~
+      line_count: ~
+      md5: a764973efcb6cc315d4d9dfa10ca49ca
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/NZ.pm
+    - bytesize: 5000
+      file_mime_type: ~
+      line_count: ~
+      md5: 753bda0fb26563f68612e0d8c29bb757
+      mtime: 1254764397
+      name: lib/Finance/Quote/Yahoo/USA.pm
+    - bytesize: 4770
+      file_mime_type: ~
+      line_count: ~
+      md5: 6702ec973e3643be005c236cceea3043
+      mtime: 1254764397
+      name: lib/Finance/Quote/ZA.pm
+    - bytesize: 3142
+      file_mime_type: ~
+      line_count: ~
+      md5: 72b9e3313c9da0b772074566dce943ed
+      mtime: 1254764397
+      name: t/00-use.t
+    - bytesize: 285
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cfb8c336ae446789e3770d8c172b3ef
+      mtime: 1254764397
+      name: t/01-pod.t
+    - bytesize: 295
+      file_mime_type: ~
+      line_count: ~
+      md5: 032de7ce1eeb52bdad1525b2a287b00b
+      mtime: 1254764397
+      name: t/02-pod-coverage.t
+    - bytesize: 286
+      file_mime_type: ~
+      line_count: ~
+      md5: 62f5333e9f3ac3f35e71e77bc9f48d9f
+      mtime: 1254764397
+      name: t/03-kwalitee.t
+    - bytesize: 337
+      file_mime_type: ~
+      line_count: ~
+      md5: b05fd2fb5c0ada95984d4f41fbb72ee1
+      mtime: 1254764397
+      name: t/04-critic.t
+    - bytesize: 463
+      file_mime_type: ~
+      line_count: ~
+      md5: 141115d18973e5e59ae33f532740c6ff
+      mtime: 1254764397
+      name: t/05-data-dumper.t
+    - bytesize: 1136
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f2d1c730ec6c6052ebdbfa65ed9563c
+      mtime: 1254764397
+      name: t/aex.t
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: bcb4367e0ac8ce43f5e23037a4445ab0
+      mtime: 1254764397
+      name: t/aiahk.t
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 580373f13db0b43a421ae79101d8a72d
+      mtime: 1254764397
+      name: t/asegr.t
+    - bytesize: 1483
+      file_mime_type: ~
+      line_count: ~
+      md5: 24d53f81bc25d80ffad24927ff900d80
+      mtime: 1254764397
+      name: t/asx.t
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a2550341558a2e923713730477a244f
+      mtime: 1254764397
+      name: t/bmonesbittburns.t
+    - bytesize: 1518
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f1d5d65d5c1211b52d5b2f8fd910119
+      mtime: 1254764397
+      name: t/bourso.t
+    - bytesize: 932
+      file_mime_type: ~
+      line_count: ~
+      md5: 895145a7d8ec44063f2935425f11cd35
+      mtime: 1254764397
+      name: t/cdnfundlibrary.t
+    - bytesize: 1005
+      file_mime_type: ~
+      line_count: ~
+      md5: af119afabff73b4ae8a4e54480c2ec9c
+      mtime: 1254764397
+      name: t/cominvest.t
+    - bytesize: 503
+      file_mime_type: ~
+      line_count: ~
+      md5: a1568b58617f2854586c5891eba7916d
+      mtime: 1254764397
+      name: t/currencies.t
+    - bytesize: 1146
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bae609635e580c9abaf37642d224202
+      mtime: 1254764397
+      name: t/currency.t
+    - bytesize: 1806
+      file_mime_type: ~
+      line_count: ~
+      md5: 000d2777db49e7382323cf2286a687e5
+      mtime: 1254764397
+      name: t/currency_lookup.t
+    - bytesize: 1154
+      file_mime_type: ~
+      line_count: ~
+      md5: 96885150f8206bf224c40a5422d6b5ef
+      mtime: 1254764397
+      name: t/deka.t
+    - bytesize: 888
+      file_mime_type: ~
+      line_count: ~
+      md5: 751df6995fc494cb90ca4ca3133eb6d0
+      mtime: 1254764397
+      name: t/dws.t
+    - bytesize: 1240
+      file_mime_type: ~
+      line_count: ~
+      md5: a7c69042cf1d2a4b564bdcd17d69e000
+      mtime: 1254764397
+      name: t/fidelity.t
+    - bytesize: 1014
+      file_mime_type: ~
+      line_count: ~
+      md5: aaeddc256326bf980ba9762fb42e7b2d
+      mtime: 1254764397
+      name: t/financecanada.t
+    - bytesize: 955
+      file_mime_type: ~
+      line_count: ~
+      md5: 6567f1def3809b8400f1cedae33f31e3
+      mtime: 1254764397
+      name: t/finanzpartner.t
+    - bytesize: 1091
+      file_mime_type: ~
+      line_count: ~
+      md5: 24cfe100cd3e8085c13174c16e36f211
+      mtime: 1254764397
+      name: t/ftportfolios.t
+    - bytesize: 1546
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f6b74e8cdc2dd39ec6177554c8edca3
+      mtime: 1254764397
+      name: t/goldmoney.t
+    - bytesize: 976
+      file_mime_type: ~
+      line_count: ~
+      md5: ed845567fb05ac4528e6400c4d1deef7
+      mtime: 1254764397
+      name: t/hex.t
+    - bytesize: 2452
+      file_mime_type: ~
+      line_count: ~
+      md5: 660b9c66842ee6c6a07afd2bd690c2aa
+      mtime: 1254764397
+      name: t/hu.t
+    - bytesize: 1049
+      file_mime_type: ~
+      line_count: ~
+      md5: 20521d009e2d11d0fec09e89dea4b3b2
+      mtime: 1254764397
+      name: t/indiamutual.t
+    - bytesize: 1365
+      file_mime_type: ~
+      line_count: ~
+      md5: 167b25ff5a68a8ad94f3024ad584acf4
+      mtime: 1254764397
+      name: t/lerevenu.t
+    - bytesize: 1023
+      file_mime_type: ~
+      line_count: ~
+      md5: 269be1a74841a0bc785454bffc027074
+      mtime: 1254764397
+      name: t/maninvestments.t
+    - bytesize: 1097
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ef1fa95c682cae3c6b1400affeaaf05
+      mtime: 1254764397
+      name: t/morningstar.t
+    - bytesize: 967
+      file_mime_type: ~
+      line_count: ~
+      md5: f3442c0b06c38a2722db9d4908bd06aa
+      mtime: 1254764397
+      name: t/nzx.t
+    - bytesize: 955
+      file_mime_type: ~
+      line_count: ~
+      md5: 60bf1c367f7cf61c4801351ec93406d2
+      mtime: 1254764397
+      name: t/platinum.t
+    - bytesize: 611
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ae29a67a76d9392c68f6be275addad3
+      mtime: 1254764397
+      name: t/quote.t
+    - bytesize: 1024
+      file_mime_type: ~
+      line_count: ~
+      md5: 31a870f6a941e28beabece47090fac5d
+      mtime: 1254764397
+      name: t/seb.t
+    - bytesize: 1242
+      file_mime_type: ~
+      line_count: ~
+      md5: ef63d46e36e1dd08779d8a4fe8294b95
+      mtime: 1254764397
+      name: t/stockhousecanada.t
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: 397bcdd75f1bfeee9a896fb0c196179b
+      mtime: 1254764397
+      name: t/tdefunds.t
+    - bytesize: 1087
+      file_mime_type: ~
+      line_count: ~
+      md5: 6871107075271b9e9700a6137775716c
+      mtime: 1254764397
+      name: t/tdwaterhouse.t
+    - bytesize: 1857
+      file_mime_type: ~
+      line_count: ~
+      md5: f658cc9aa9c8f581d7f7b0a52210d7f3
+      mtime: 1254764397
+      name: t/tiaacref.t
+    - bytesize: 1205
+      file_mime_type: ~
+      line_count: ~
+      md5: e031678587528458b2acd64632abca53
+      mtime: 1254764397
+      name: t/troweprice.t
+    - bytesize: 1001
+      file_mime_type: ~
+      line_count: ~
+      md5: c9200ba00e8ff9e975bd69e4b869047f
+      mtime: 1254764397
+      name: t/trustnet.t
+    - bytesize: 1722
+      file_mime_type: ~
+      line_count: ~
+      md5: 29d9655373f0fede05e31a568c08f602
+      mtime: 1254764397
+      name: t/tsp.t
+    - bytesize: 1020
+      file_mime_type: ~
+      line_count: ~
+      md5: b0a10d9c4e6f4c840a0e077612c2d93c
+      mtime: 1254764397
+      name: t/tsx.t
+    - bytesize: 891
+      file_mime_type: ~
+      line_count: ~
+      md5: 21f527b795eaee431d8234e176d08ba5
+      mtime: 1254764397
+      name: t/union.t
+    - bytesize: 2052
+      file_mime_type: ~
+      line_count: ~
+      md5: 473740a7a3c00b586796caf066b60782
+      mtime: 1254764397
+      name: t/usfedbonds.t
+    - bytesize: 953
+      file_mime_type: ~
+      line_count: ~
+      md5: 12048e053d9d8a3c3d2d1d1a5c8f6294
+      mtime: 1254764397
+      name: t/vanguard.t
+    - bytesize: 958
+      file_mime_type: ~
+      line_count: ~
+      md5: 1488846af8d75c372d4649714ded8da7
+      mtime: 1254764397
+      name: t/vwd.t
+    - bytesize: 1105
+      file_mime_type: ~
+      line_count: ~
+      md5: 8651c89ef434d5474be5c0fdde1d1ea6
+      mtime: 1254764397
+      name: t/yahoo.t
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: cce1823c2e5803b81ec11a7f50cc1840
+      mtime: 1254764397
+      name: t/yahoo_asia.t
+    - bytesize: 997
+      file_mime_type: ~
+      line_count: ~
+      md5: 4514d961b5f97f07af57c6959ad384f3
+      mtime: 1254764397
+      name: t/yahoo_australia.t
+    - bytesize: 1155
+      file_mime_type: ~
+      line_count: ~
+      md5: 5214ce0cf6edcb9111ae1b8b1935bdf7
+      mtime: 1254764397
+      name: t/yahoo_brasil.t
+    - bytesize: 3158
+      file_mime_type: ~
+      line_count: ~
+      md5: c43b375bf033386a0496ca3cba6d478e
+      mtime: 1254764397
+      name: t/yahoo_europe.t
+    - bytesize: 986
+      file_mime_type: ~
+      line_count: ~
+      md5: 65ef766955c1a15102086fbb920fd24b
+      mtime: 1254764397
+      name: t/yahoo_nz.t
+    - bytesize: 1247
+      file_mime_type: ~
+      line_count: ~
+      md5: 76baa00a4e488cda724dbeca2221181c
+      mtime: 1254764397
+      name: t/za.t
+  module_info:
+    - bytesize: 36257
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a80186a28c613a5edf6503e73724168
+      module_name_from_file_guess: Finance::Quote
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote.pm
+      packages:
+        - Finance::Quote
+      primary_package: Finance::Quote
+      uses:
+        - ''
+        - strict
+        - Exporter
+        - Carp
+        - Finance::Quote::UserAgent
+        - HTTP::Request::Common
+        - HTML::TreeBuilder
+        - Encode
+        - Data::Dumper
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote.pm
+        identifier: VERSION
+        line_number: 54
+        sigil: $
+        value: 1.17
+    - bytesize: 7502
+      file_mime_type: ~
+      line_count: ~
+      md5: 4425fcf652f24e5075cb6b1671429d73
+      module_name_from_file_guess: Finance::Quote::AEX
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/AEX.pm
+      packages:
+        - Finance::Quote::AEX
+      primary_package: Finance::Quote::AEX
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+        - CGI
+        - POSIX
+      version_info:
+        filename: blib/lib/Finance/Quote/AEX.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.17
+    - bytesize: 5227
+      file_mime_type: ~
+      line_count: ~
+      md5: ba9f403c7f7736c2bf12a6a552a7f0d0
+      module_name_from_file_guess: Finance::Quote::AIAHK
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/AIAHK.pm
+      packages:
+        - Finance::Quote::AIAHK
+      primary_package: Finance::Quote::AIAHK
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/AIAHK.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.17
+    - bytesize: 4426
+      file_mime_type: ~
+      line_count: ~
+      md5: ab8cbc3e64849cc044fd1b329e49a05a
+      module_name_from_file_guess: Finance::Quote::ASEGR
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/ASEGR.pm
+      packages:
+        - Finance::Quote::ASEGR
+      primary_package: Finance::Quote::ASEGR
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/ASEGR.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 1.17
+    - bytesize: 6652
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b4f2e15ad93446c6b5d5273257297df
+      module_name_from_file_guess: Finance::Quote::ASX
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/ASX.pm
+      packages:
+        - Finance::Quote::ASX
+      primary_package: Finance::Quote::ASX
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - HTML::TableExtract
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/ASX.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.17
+    - bytesize: 7514
+      file_mime_type: ~
+      line_count: ~
+      md5: 00439298429ffb0a5f8cf4e0b44b57e0
+      module_name_from_file_guess: Finance::Quote::BMONesbittBurns
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/BMONesbittBurns.pm
+      packages:
+        - Finance::Quote::BMONesbittBurns
+      primary_package: Finance::Quote::BMONesbittBurns
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/BMONesbittBurns.pm
+        identifier: VERSION
+        line_number: 38
+        sigil: $
+        value: 1.17
+    - bytesize: 7771
+      file_mime_type: ~
+      line_count: ~
+      md5: b749f21878e8de58b08efb8fe44dc55d
+      module_name_from_file_guess: Finance::Quote::Bourso
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Bourso.pm
+      packages:
+        - Finance::Quote::Bourso
+      primary_package: Finance::Quote::Bourso
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TreeBuilder
+      version_info:
+        filename: blib/lib/Finance/Quote/Bourso.pm
+        identifier: VERSION
+        line_number: 74
+        sigil: $
+        value: 1.17
+    - bytesize: 4766
+      file_mime_type: ~
+      line_count: ~
+      md5: 177e60648fe15420a9f18a262a8a11f7
+      module_name_from_file_guess: Finance::Quote::Cdnfundlibrary
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Cdnfundlibrary.pm
+      packages:
+        - Finance::Quote::Cdnfundlibrary
+      primary_package: Finance::Quote::Cdnfundlibrary
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/Cdnfundlibrary.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 1.17
+    - bytesize: 4913
+      file_mime_type: ~
+      line_count: ~
+      md5: 003a8cd98d76e907d8c7553d727168cb
+      module_name_from_file_guess: Finance::Quote::Cominvest
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Cominvest.pm
+      packages:
+        - Finance::Quote::Cominvest
+      primary_package: Finance::Quote::Cominvest
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+      version_info:
+        filename: blib/lib/Finance/Quote/Cominvest.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.17
+    - bytesize: 14786
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d23130769168271e22a0ac03fd71a98
+      module_name_from_file_guess: Finance::Quote::Currencies
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Currencies.pm
+      packages:
+        - Finance::Quote::Currencies
+      primary_package: Finance::Quote::Currencies
+      uses:
+        - strict
+        - warnings
+        - base
+        - vars
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - HTML::Parser
+        - Encode
+      version_info:
+        filename: blib/lib/Finance/Quote/Currencies.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 1.17
+    - bytesize: 7840
+      file_mime_type: ~
+      line_count: ~
+      md5: bc010a8896c895b7bed9f9790401f9e2
+      module_name_from_file_guess: Finance::Quote::DWS
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/DWS.pm
+      packages:
+        - Finance::Quote::DWS
+      primary_package: Finance::Quote::DWS
+      uses:
+        - ''
+        - Crypt::SSLeay
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+        - LWP::Simple
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/DWS.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 1.17
+    - bytesize: 3395
+      file_mime_type: ~
+      line_count: ~
+      md5: 9229cfb15a529704c42955e454999f71
+      module_name_from_file_guess: Finance::Quote::Deka
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Deka.pm
+      packages:
+        - Finance::Quote::Deka
+      primary_package: Finance::Quote::Deka
+      uses:
+        - strict
+        - HTML::TableExtract
+        - Crypt::SSLeay
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Deka.pm
+        identifier: VERSION
+        line_number: 26
+        sigil: $
+        value: 1.17
+    - bytesize: 5819
+      file_mime_type: ~
+      line_count: ~
+      md5: 226fecbd14c694229d67392c2fa76c20
+      module_name_from_file_guess: Finance::Quote::FTPortfolios
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/FTPortfolios.pm
+      packages:
+        - Finance::Quote::FTPortfolios
+      primary_package: Finance::Quote::FTPortfolios
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/FTPortfolios.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 1.17
+    - bytesize: 4802
+      file_mime_type: ~
+      line_count: ~
+      md5: b8d9f40c639d700f2df65cbbb4784ce8
+      module_name_from_file_guess: Finance::Quote::Fidelity
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Fidelity.pm
+      packages:
+        - Finance::Quote::Fidelity
+      primary_package: Finance::Quote::Fidelity
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+      version_info:
+        filename: blib/lib/Finance/Quote/Fidelity.pm
+        identifier: VERSION
+        line_number: 39
+        sigil: $
+        value: 1.17
+    - bytesize: 5937
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d0068bc94c1a5db84e5ae729e91bee0
+      module_name_from_file_guess: Finance::Quote::FinanceCanada
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/FinanceCanada.pm
+      packages:
+        - Finance::Quote::FinanceCanada
+      primary_package: Finance::Quote::FinanceCanada
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/FinanceCanada.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 1.17
+    - bytesize: 3264
+      file_mime_type: ~
+      line_count: ~
+      md5: 66849722559375391cf46be24cd8250e
+      module_name_from_file_guess: Finance::Quote::Finanzpartner
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Finanzpartner.pm
+      packages:
+        - Finance::Quote::Finanzpartner
+      primary_package: Finance::Quote::Finanzpartner
+      uses:
+        - strict
+        - HTML::TableExtract
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Finanzpartner.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 1.17
+    - bytesize: 4535
+      file_mime_type: ~
+      line_count: ~
+      md5: edf10bce3cfb5e18f183776bfbcc8aa3
+      module_name_from_file_guess: Finance::Quote::Fool
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Fool.pm
+      packages:
+        - Finance::Quote::Fool
+      primary_package: Finance::Quote::Fool
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Exporter
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Fool.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.17
+    - bytesize: 7642
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a4170dfb2be52b2330eacecdaee1d12
+      module_name_from_file_guess: Finance::Quote::GoldMoney
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/GoldMoney.pm
+      packages:
+        - Finance::Quote::GoldMoney
+      primary_package: Finance::Quote::GoldMoney
+      uses:
+        - ''
+        - Crypt::SSLeay
+        - HTTP::Request::Common
+        - HTML::TableExtract
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/GoldMoney.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.17
+    - bytesize: 5705
+      file_mime_type: ~
+      line_count: ~
+      md5: 6167debae158e7e01460ab7a0a6c534b
+      module_name_from_file_guess: Finance::Quote::HEX
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/HEX.pm
+      packages:
+        - Finance::Quote::HEX
+      primary_package: Finance::Quote::HEX
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - HTML::TableExtract
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/HEX.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.17
+    - bytesize: 18208
+      file_mime_type: ~
+      line_count: ~
+      md5: 5917ea26e198e00efb0b783813ef4d07
+      module_name_from_file_guess: Finance::Quote::HU
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/HU.pm
+      packages:
+        - Finance::Quote::HU
+      primary_package: Finance::Quote::HU
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+        - Encode
+        - Storable
+      version_info:
+        filename: blib/lib/Finance/Quote/HU.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 1.17
+    - bytesize: 4371
+      file_mime_type: ~
+      line_count: ~
+      md5: ed09b9e3bfa97fc0056b0af28937d2fe
+      module_name_from_file_guess: Finance::Quote::IndiaMutual
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/IndiaMutual.pm
+      packages:
+        - Finance::Quote::IndiaMutual
+      primary_package: Finance::Quote::IndiaMutual
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTTP::Status
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/IndiaMutual.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.17
+    - bytesize: 12684
+      file_mime_type: ~
+      line_count: ~
+      md5: 066939cb2e2580b1558bee1855011ad0
+      module_name_from_file_guess: Finance::Quote::LeRevenu
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/LeRevenu.pm
+      packages:
+        - Finance::Quote::LeRevenu
+      primary_package: Finance::Quote::LeRevenu
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/LeRevenu.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.17
+    - bytesize: 6130
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d7dfe8c26169721ecea96f685230ef8
+      module_name_from_file_guess: Finance::Quote::ManInvestments
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/ManInvestments.pm
+      packages:
+        - Finance::Quote::ManInvestments
+      primary_package: Finance::Quote::ManInvestments
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - HTML::TableExtract
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/ManInvestments.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.17
+    - bytesize: 2981
+      file_mime_type: ~
+      line_count: ~
+      md5: cd2f8e6edf8cdaad26535163a3a0f587
+      module_name_from_file_guess: Finance::Quote::Morningstar
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Morningstar.pm
+      packages:
+        - Finance::Quote::Morningstar
+      primary_package: Finance::Quote::Morningstar
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/Morningstar.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 1.17
+    - bytesize: 3863
+      file_mime_type: ~
+      line_count: ~
+      md5: d685b097a5fae7eefabef710a6b5a593
+      module_name_from_file_guess: Finance::Quote::NZX
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/NZX.pm
+      packages:
+        - Finance::Quote::NZX
+      primary_package: Finance::Quote::NZX
+      uses:
+        - ''
+        - strict
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/NZX.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 1.17
+    - bytesize: 4903
+      file_mime_type: ~
+      line_count: ~
+      md5: dfb628978adfd156033cbf8d8014071a
+      module_name_from_file_guess: Finance::Quote::Platinum
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Platinum.pm
+      packages:
+        - Finance::Quote::Platinum
+      primary_package: Finance::Quote::Platinum
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - HTML::TableExtract
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Platinum.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.17
+    - bytesize: 3985
+      file_mime_type: ~
+      line_count: ~
+      md5: d3628dd4fbdc19de43e19ed3f212f46f
+      module_name_from_file_guess: Finance::Quote::SEB
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/SEB.pm
+      packages:
+        - Finance::Quote::SEB
+      primary_package: Finance::Quote::SEB
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - utf8
+      version_info:
+        filename: blib/lib/Finance/Quote/SEB.pm
+        identifier: VERSION
+        line_number: 38
+        sigil: $
+        value: 1.17
+    - bytesize: 5977
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b31b031104620189e4bbf5205dc4b77
+      module_name_from_file_guess: Finance::Quote::StockHouseCanada
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/StockHouseCanada.pm
+      packages:
+        - Finance::Quote::StockHouseCanada
+      primary_package: Finance::Quote::StockHouseCanada
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/StockHouseCanada.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.17
+    - bytesize: 5067
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e33900c07d7707a3140c3acb6e77ab7
+      module_name_from_file_guess: Finance::Quote::TSP
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/TSP.pm
+      packages:
+        - Finance::Quote::TSP
+      primary_package: Finance::Quote::TSP
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/TSP.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 1.17
+    - bytesize: 5795
+      file_mime_type: ~
+      line_count: ~
+      md5: 742c15e1866958cf81bd20b1ebc72267
+      module_name_from_file_guess: Finance::Quote::TSX
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/TSX.pm
+      packages:
+        - Finance::Quote::TSX
+      primary_package: Finance::Quote::TSX
+      uses:
+        - ''
+        - strict
+        - LWP::UserAgent
+        - HTML::TableExtract
+        - URI
+        - URI::QueryParam
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/TSX.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.17
+    - bytesize: 4958
+      file_mime_type: ~
+      line_count: ~
+      md5: fa9de48d5aa126cf2ad5b1002b11d8f5
+      module_name_from_file_guess: Finance::Quote::Tdefunds
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Tdefunds.pm
+      packages:
+        - Finance::Quote::Tdefunds
+      primary_package: Finance::Quote::Tdefunds
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - Carp
+      version_info:
+        filename: blib/lib/Finance/Quote/Tdefunds.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.17
+    - bytesize: 5025
+      file_mime_type: ~
+      line_count: ~
+      md5: 7030f8cd052ca569bf698810edfa76cb
+      module_name_from_file_guess: Finance::Quote::Tdwaterhouse
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Tdwaterhouse.pm
+      packages:
+        - Finance::Quote::Tdwaterhouse
+      primary_package: Finance::Quote::Tdwaterhouse
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - Carp
+      version_info:
+        filename: blib/lib/Finance/Quote/Tdwaterhouse.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.17
+    - bytesize: 14112
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a6a2fd00ef8834e177944957576d96a
+      module_name_from_file_guess: Finance::Quote::Tiaacref
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Tiaacref.pm
+      packages:
+        - Finance::Quote::Tiaacref
+      primary_package: Finance::Quote::Tiaacref
+      uses:
+        - ''
+        - Crypt::SSLeay
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - Carp
+      version_info:
+        filename: blib/lib/Finance/Quote/Tiaacref.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.17
+    - bytesize: 3985
+      file_mime_type: ~
+      line_count: ~
+      md5: ac00d974037f549b58f02f71951fdcf7
+      module_name_from_file_guess: Finance::Quote::Troweprice
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Troweprice.pm
+      packages:
+        - Finance::Quote::Troweprice
+      primary_package: Finance::Quote::Troweprice
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - Carp
+      version_info:
+        filename: blib/lib/Finance/Quote/Troweprice.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.17
+    - bytesize: 7376
+      file_mime_type: ~
+      line_count: ~
+      md5: ccf8ed214928aa46b52c3d671bb8e48e
+      module_name_from_file_guess: Finance::Quote::Trustnet
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Trustnet.pm
+      packages:
+        - Finance::Quote::Trustnet
+      primary_package: Finance::Quote::Trustnet
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/Trustnet.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 1.17
+    - bytesize: 6160
+      file_mime_type: ~
+      line_count: ~
+      md5: f6125d0192095a33998e992dd72c95f5
+      module_name_from_file_guess: Finance::Quote::USFedBonds
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/USFedBonds.pm
+      packages:
+        - Finance::Quote::USFedBonds
+      primary_package: Finance::Quote::USFedBonds
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+        - HTML::Parser
+      version_info:
+        filename: blib/lib/Finance/Quote/USFedBonds.pm
+        identifier: VERSION
+        line_number: 26
+        sigil: $
+        value: 1.17
+    - bytesize: 4609
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f9b466d73520204727cb5d1ee1538d0
+      module_name_from_file_guess: Finance::Quote::Union
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Union.pm
+      packages:
+        - Finance::Quote::Union
+      primary_package: Finance::Quote::Union
+      uses:
+        - ''
+        - strict
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Union.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.17
+    - bytesize: 3325
+      file_mime_type: ~
+      line_count: ~
+      md5: ecc22701acac2afac3d7204301e22a3d
+      module_name_from_file_guess: Finance::Quote::UserAgent
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/UserAgent.pm
+      packages:
+        - Finance::Quote::UserAgent
+      primary_package: Finance::Quote::UserAgent
+      uses:
+        - ''
+        - strict
+        - LWP::UserAgent
+        - HTTP::Headers
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/UserAgent.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.17
+    - bytesize: 5920
+      file_mime_type: ~
+      line_count: ~
+      md5: 26cea8f75317deb65e045125a0bdb95c
+      module_name_from_file_guess: Finance::Quote::VWD
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/VWD.pm
+      packages:
+        - Finance::Quote::VWD
+      primary_package: Finance::Quote::VWD
+      uses:
+        - ''
+        - strict
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TreeBuilder
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/VWD.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.17
+    - bytesize: 4286
+      file_mime_type: ~
+      line_count: ~
+      md5: 145f2219e4265ab623e9749fe240b65f
+      module_name_from_file_guess: Finance::Quote::Yahoo::Asia
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/Asia.pm
+      packages:
+        - Finance::Quote::Yahoo::Asia
+      primary_package: Finance::Quote::Yahoo::Asia
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Finance::Quote::Yahoo::Base
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/Asia.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.17
+    - bytesize: 3929
+      file_mime_type: ~
+      line_count: ~
+      md5: 20eaa21b633cf34964e10ddd3adb669f
+      module_name_from_file_guess: Finance::Quote::Yahoo::Australia
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/Australia.pm
+      packages:
+        - Finance::Quote::Yahoo::Australia
+      primary_package: Finance::Quote::Yahoo::Australia
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Finance::Quote::Yahoo::Base
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/Australia.pm
+        identifier: VERSION
+        line_number: 38
+        sigil: $
+        value: 1.17
+    - bytesize: 12611
+      file_mime_type: ~
+      line_count: ~
+      md5: a858ff59816dba35f826eef06b21978f
+      module_name_from_file_guess: Finance::Quote::Yahoo::Base
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/Base.pm
+      packages:
+        - Finance::Quote::Yahoo::Base
+      primary_package: Finance::Quote::Yahoo::Base
+      uses:
+        - ''
+        - strict
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - Exporter
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/Base.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.17
+    - bytesize: 3517
+      file_mime_type: ~
+      line_count: ~
+      md5: 13145a92d326b626c8d29df203983932
+      module_name_from_file_guess: Finance::Quote::Yahoo::Brasil
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/Brasil.pm
+      packages:
+        - Finance::Quote::Yahoo::Brasil
+      primary_package: Finance::Quote::Yahoo::Brasil
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Finance::Quote::Yahoo::Base
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/Brasil.pm
+        identifier: VERSION
+        line_number: 38
+        sigil: $
+        value: 1.17
+    - bytesize: 5055
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ce2be6bac35bd36f45b9fe010d80bb7
+      module_name_from_file_guess: Finance::Quote::Yahoo::Europe
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/Europe.pm
+      packages:
+        - Finance::Quote::Yahoo::Europe
+      primary_package: Finance::Quote::Yahoo::Europe
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Finance::Quote::Yahoo::Base
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/Europe.pm
+        identifier: VERSION
+        line_number: 39
+        sigil: $
+        value: 1.17
+    - bytesize: 3428
+      file_mime_type: ~
+      line_count: ~
+      md5: f4fb3feb0362cea5f2d0c061a0d3e92c
+      module_name_from_file_guess: Finance::Quote::Yahoo::NZ
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/NZ.pm
+      packages:
+        - Finance::Quote::Yahoo::NZ
+      primary_package: Finance::Quote::Yahoo::NZ
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Finance::Quote::Yahoo::Base
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/NZ.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.17
+    - bytesize: 5000
+      file_mime_type: ~
+      line_count: ~
+      md5: 7aa41702eec64df9ca632c73fd25d931
+      module_name_from_file_guess: Finance::Quote::Yahoo::USA
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/Yahoo/USA.pm
+      packages:
+        - Finance::Quote::Yahoo::USA
+      primary_package: Finance::Quote::Yahoo::USA
+      uses:
+        - ''
+        - strict
+        - HTTP::Request::Common
+        - LWP::UserAgent
+        - Finance::Quote::Yahoo::Base
+        - vars
+      version_info:
+        filename: blib/lib/Finance/Quote/Yahoo/USA.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.17
+    - bytesize: 4770
+      file_mime_type: ~
+      line_count: ~
+      md5: e8d4cbb4dff7921bc364968ed5faa0b4
+      module_name_from_file_guess: Finance::Quote::ZA
+      mtime: 1254764397
+      name: blib/lib/Finance/Quote/ZA.pm
+      packages:
+        - Finance::Quote::ZA
+      primary_package: Finance::Quote::ZA
+      uses:
+        - ''
+        - strict
+        - vars
+        - LWP::UserAgent
+        - HTTP::Request::Common
+        - HTML::TableExtract
+      version_info:
+        filename: blib/lib/Finance/Quote/ZA.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.17
+  modules:
+    - blib/lib/Finance/Quote.pm
+    - blib/lib/Finance/Quote/AEX.pm
+    - blib/lib/Finance/Quote/AIAHK.pm
+    - blib/lib/Finance/Quote/ASEGR.pm
+    - blib/lib/Finance/Quote/ASX.pm
+    - blib/lib/Finance/Quote/BMONesbittBurns.pm
+    - blib/lib/Finance/Quote/Bourso.pm
+    - blib/lib/Finance/Quote/Cdnfundlibrary.pm
+    - blib/lib/Finance/Quote/Cominvest.pm
+    - blib/lib/Finance/Quote/Currencies.pm
+    - blib/lib/Finance/Quote/DWS.pm
+    - blib/lib/Finance/Quote/Deka.pm
+    - blib/lib/Finance/Quote/FTPortfolios.pm
+    - blib/lib/Finance/Quote/Fidelity.pm
+    - blib/lib/Finance/Quote/FinanceCanada.pm
+    - blib/lib/Finance/Quote/Finanzpartner.pm
+    - blib/lib/Finance/Quote/Fool.pm
+    - blib/lib/Finance/Quote/GoldMoney.pm
+    - blib/lib/Finance/Quote/HEX.pm
+    - blib/lib/Finance/Quote/HU.pm
+    - blib/lib/Finance/Quote/IndiaMutual.pm
+    - blib/lib/Finance/Quote/LeRevenu.pm
+    - blib/lib/Finance/Quote/ManInvestments.pm
+    - blib/lib/Finance/Quote/Morningstar.pm
+    - blib/lib/Finance/Quote/NZX.pm
+    - blib/lib/Finance/Quote/Platinum.pm
+    - blib/lib/Finance/Quote/SEB.pm
+    - blib/lib/Finance/Quote/StockHouseCanada.pm
+    - blib/lib/Finance/Quote/TSP.pm
+    - blib/lib/Finance/Quote/TSX.pm
+    - blib/lib/Finance/Quote/Tdefunds.pm
+    - blib/lib/Finance/Quote/Tdwaterhouse.pm
+    - blib/lib/Finance/Quote/Tiaacref.pm
+    - blib/lib/Finance/Quote/Troweprice.pm
+    - blib/lib/Finance/Quote/Trustnet.pm
+    - blib/lib/Finance/Quote/USFedBonds.pm
+    - blib/lib/Finance/Quote/Union.pm
+    - blib/lib/Finance/Quote/UserAgent.pm
+    - blib/lib/Finance/Quote/VWD.pm
+    - blib/lib/Finance/Quote/Yahoo/Asia.pm
+    - blib/lib/Finance/Quote/Yahoo/Australia.pm
+    - blib/lib/Finance/Quote/Yahoo/Base.pm
+    - blib/lib/Finance/Quote/Yahoo/Brasil.pm
+    - blib/lib/Finance/Quote/Yahoo/Europe.pm
+    - blib/lib/Finance/Quote/Yahoo/NZ.pm
+    - blib/lib/Finance/Quote/Yahoo/USA.pm
+    - blib/lib/Finance/Quote/ZA.pm
+  test_info:
+    - bytesize: 3142
+      file_mime_type: ~
+      line_count: ~
+      md5: 72b9e3313c9da0b772074566dce943ed
+      mtime: 1254764397
+      name: t/00-use.t
+      uses:
+        - strict
+        - Test
+        - Finance::Quote
+    - bytesize: 285
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cfb8c336ae446789e3770d8c172b3ef
+      mtime: 1254764397
+      name: t/01-pod.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 295
+      file_mime_type: ~
+      line_count: ~
+      md5: 032de7ce1eeb52bdad1525b2a287b00b
+      mtime: 1254764397
+      name: t/02-pod-coverage.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 286
+      file_mime_type: ~
+      line_count: ~
+      md5: 62f5333e9f3ac3f35e71e77bc9f48d9f
+      mtime: 1254764397
+      name: t/03-kwalitee.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Kwalitee
+    - bytesize: 337
+      file_mime_type: ~
+      line_count: ~
+      md5: b05fd2fb5c0ada95984d4f41fbb72ee1
+      mtime: 1254764397
+      name: t/04-critic.t
+      uses:
+        - strict
+        - Test::More
+        - File::Spec
+        - Test::Perl::Critic
+    - bytesize: 463
+      file_mime_type: ~
+      line_count: ~
+      md5: 141115d18973e5e59ae33f532740c6ff
+      mtime: 1254764397
+      name: t/05-data-dumper.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1136
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f2d1c730ec6c6052ebdbfa65ed9563c
+      mtime: 1254764397
+      name: t/aex.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: bcb4367e0ac8ce43f5e23037a4445ab0
+      mtime: 1254764397
+      name: t/aiahk.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 580373f13db0b43a421ae79101d8a72d
+      mtime: 1254764397
+      name: t/asegr.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1483
+      file_mime_type: ~
+      line_count: ~
+      md5: 24d53f81bc25d80ffad24927ff900d80
+      mtime: 1254764397
+      name: t/asx.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a2550341558a2e923713730477a244f
+      mtime: 1254764397
+      name: t/bmonesbittburns.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1518
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f1d5d65d5c1211b52d5b2f8fd910119
+      mtime: 1254764397
+      name: t/bourso.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 932
+      file_mime_type: ~
+      line_count: ~
+      md5: 895145a7d8ec44063f2935425f11cd35
+      mtime: 1254764397
+      name: t/cdnfundlibrary.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1005
+      file_mime_type: ~
+      line_count: ~
+      md5: af119afabff73b4ae8a4e54480c2ec9c
+      mtime: 1254764397
+      name: t/cominvest.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 503
+      file_mime_type: ~
+      line_count: ~
+      md5: a1568b58617f2854586c5891eba7916d
+      mtime: 1254764397
+      name: t/currencies.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote::Currencies
+    - bytesize: 1146
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bae609635e580c9abaf37642d224202
+      mtime: 1254764397
+      name: t/currency.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1806
+      file_mime_type: ~
+      line_count: ~
+      md5: 000d2777db49e7382323cf2286a687e5
+      mtime: 1254764397
+      name: t/currency_lookup.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1154
+      file_mime_type: ~
+      line_count: ~
+      md5: 96885150f8206bf224c40a5422d6b5ef
+      mtime: 1254764397
+      name: t/deka.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 888
+      file_mime_type: ~
+      line_count: ~
+      md5: 751df6995fc494cb90ca4ca3133eb6d0
+      mtime: 1254764397
+      name: t/dws.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1240
+      file_mime_type: ~
+      line_count: ~
+      md5: a7c69042cf1d2a4b564bdcd17d69e000
+      mtime: 1254764397
+      name: t/fidelity.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1014
+      file_mime_type: ~
+      line_count: ~
+      md5: aaeddc256326bf980ba9762fb42e7b2d
+      mtime: 1254764397
+      name: t/financecanada.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 955
+      file_mime_type: ~
+      line_count: ~
+      md5: 6567f1def3809b8400f1cedae33f31e3
+      mtime: 1254764397
+      name: t/finanzpartner.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 976
+      file_mime_type: ~
+      line_count: ~
+      md5: ed845567fb05ac4528e6400c4d1deef7
+      mtime: 1254764397
+      name: t/hex.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1091
+      file_mime_type: ~
+      line_count: ~
+      md5: 24cfe100cd3e8085c13174c16e36f211
+      mtime: 1254764397
+      name: t/ftportfolios.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1546
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f6b74e8cdc2dd39ec6177554c8edca3
+      mtime: 1254764397
+      name: t/goldmoney.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 2452
+      file_mime_type: ~
+      line_count: ~
+      md5: 660b9c66842ee6c6a07afd2bd690c2aa
+      mtime: 1254764397
+      name: t/hu.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1049
+      file_mime_type: ~
+      line_count: ~
+      md5: 20521d009e2d11d0fec09e89dea4b3b2
+      mtime: 1254764397
+      name: t/indiamutual.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1365
+      file_mime_type: ~
+      line_count: ~
+      md5: 167b25ff5a68a8ad94f3024ad584acf4
+      mtime: 1254764397
+      name: t/lerevenu.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1023
+      file_mime_type: ~
+      line_count: ~
+      md5: 269be1a74841a0bc785454bffc027074
+      mtime: 1254764397
+      name: t/maninvestments.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1097
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ef1fa95c682cae3c6b1400affeaaf05
+      mtime: 1254764397
+      name: t/morningstar.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 967
+      file_mime_type: ~
+      line_count: ~
+      md5: f3442c0b06c38a2722db9d4908bd06aa
+      mtime: 1254764397
+      name: t/nzx.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 955
+      file_mime_type: ~
+      line_count: ~
+      md5: 60bf1c367f7cf61c4801351ec93406d2
+      mtime: 1254764397
+      name: t/platinum.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 611
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ae29a67a76d9392c68f6be275addad3
+      mtime: 1254764397
+      name: t/quote.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1024
+      file_mime_type: ~
+      line_count: ~
+      md5: 31a870f6a941e28beabece47090fac5d
+      mtime: 1254764397
+      name: t/seb.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1242
+      file_mime_type: ~
+      line_count: ~
+      md5: ef63d46e36e1dd08779d8a4fe8294b95
+      mtime: 1254764397
+      name: t/stockhousecanada.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: 397bcdd75f1bfeee9a896fb0c196179b
+      mtime: 1254764397
+      name: t/tdefunds.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1087
+      file_mime_type: ~
+      line_count: ~
+      md5: 6871107075271b9e9700a6137775716c
+      mtime: 1254764397
+      name: t/tdwaterhouse.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1857
+      file_mime_type: ~
+      line_count: ~
+      md5: f658cc9aa9c8f581d7f7b0a52210d7f3
+      mtime: 1254764397
+      name: t/tiaacref.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1205
+      file_mime_type: ~
+      line_count: ~
+      md5: e031678587528458b2acd64632abca53
+      mtime: 1254764397
+      name: t/troweprice.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1001
+      file_mime_type: ~
+      line_count: ~
+      md5: c9200ba00e8ff9e975bd69e4b869047f
+      mtime: 1254764397
+      name: t/trustnet.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1722
+      file_mime_type: ~
+      line_count: ~
+      md5: 29d9655373f0fede05e31a568c08f602
+      mtime: 1254764397
+      name: t/tsp.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1020
+      file_mime_type: ~
+      line_count: ~
+      md5: b0a10d9c4e6f4c840a0e077612c2d93c
+      mtime: 1254764397
+      name: t/tsx.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Dumper
+        - Finance::Quote
+    - bytesize: 891
+      file_mime_type: ~
+      line_count: ~
+      md5: 21f527b795eaee431d8234e176d08ba5
+      mtime: 1254764397
+      name: t/union.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 2052
+      file_mime_type: ~
+      line_count: ~
+      md5: 473740a7a3c00b586796caf066b60782
+      mtime: 1254764397
+      name: t/usfedbonds.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 953
+      file_mime_type: ~
+      line_count: ~
+      md5: 12048e053d9d8a3c3d2d1d1a5c8f6294
+      mtime: 1254764397
+      name: t/vanguard.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 958
+      file_mime_type: ~
+      line_count: ~
+      md5: 1488846af8d75c372d4649714ded8da7
+      mtime: 1254764397
+      name: t/vwd.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1105
+      file_mime_type: ~
+      line_count: ~
+      md5: 8651c89ef434d5474be5c0fdde1d1ea6
+      mtime: 1254764397
+      name: t/yahoo.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: cce1823c2e5803b81ec11a7f50cc1840
+      mtime: 1254764397
+      name: t/yahoo_asia.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 997
+      file_mime_type: ~
+      line_count: ~
+      md5: 4514d961b5f97f07af57c6959ad384f3
+      mtime: 1254764397
+      name: t/yahoo_australia.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1155
+      file_mime_type: ~
+      line_count: ~
+      md5: 5214ce0cf6edcb9111ae1b8b1935bdf7
+      mtime: 1254764397
+      name: t/yahoo_brasil.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 3158
+      file_mime_type: ~
+      line_count: ~
+      md5: c43b375bf033386a0496ca3cba6d478e
+      mtime: 1254764397
+      name: t/yahoo_europe.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 986
+      file_mime_type: ~
+      line_count: ~
+      md5: 65ef766955c1a15102086fbb920fd24b
+      mtime: 1254764397
+      name: t/yahoo_nz.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+    - bytesize: 1247
+      file_mime_type: ~
+      line_count: ~
+      md5: 76baa00a4e488cda724dbeca2221181c
+      mtime: 1254764397
+      name: t/za.t
+      uses:
+        - strict
+        - Test::More
+        - Finance::Quote
+  tests:
+    - t/00-use.t
+    - t/01-pod.t
+    - t/02-pod-coverage.t
+    - t/03-kwalitee.t
+    - t/04-critic.t
+    - t/05-data-dumper.t
+    - t/aex.t
+    - t/aiahk.t
+    - t/asegr.t
+    - t/asx.t
+    - t/bmonesbittburns.t
+    - t/bourso.t
+    - t/cdnfundlibrary.t
+    - t/cominvest.t
+    - t/currencies.t
+    - t/currency.t
+    - t/currency_lookup.t
+    - t/deka.t
+    - t/dws.t
+    - t/fidelity.t
+    - t/financecanada.t
+    - t/finanzpartner.t
+    - t/hex.t
+    - t/ftportfolios.t
+    - t/goldmoney.t
+    - t/hu.t
+    - t/indiamutual.t
+    - t/lerevenu.t
+    - t/maninvestments.t
+    - t/morningstar.t
+    - t/nzx.t
+    - t/platinum.t
+    - t/quote.t
+    - t/seb.t
+    - t/stockhousecanada.t
+    - t/tdefunds.t
+    - t/tdwaterhouse.t
+    - t/tiaacref.t
+    - t/troweprice.t
+    - t/trustnet.t
+    - t/tsp.t
+    - t/tsx.t
+    - t/union.t
+    - t/usfedbonds.t
+    - t/vanguard.t
+    - t/vwd.t
+    - t/yahoo.t
+    - t/yahoo_asia.t
+    - t/yahoo_australia.t
+    - t/yahoo_brasil.t
+    - t/yahoo_europe.t
+    - t/yahoo_nz.t
+    - t/za.t
+  unpack_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.pYDF
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 1055
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270117793
+  examine_start_time: 1270117746
+  examine_time: 47
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1029
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 1055
+  ppid: 1029
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/0AlPIU22Ym
+  run_end_time: 1270117793
+  run_start_time: 1270117746
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/0AlPIU22Ym
+  uuid: 1F94478C-3D73-11DF-9C68-EB68E8F9184E
+  worker_class: MyCPAN::Indexer::Worker

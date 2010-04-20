@@ -1,0 +1,2890 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: VCS-LibCVS
+    requires: ~
+    version: 1.0002
+    version_from: VCS/LibCVS.pm
+  blib:
+    - blib/lib/VCS/LibCVS.pm
+    - blib/lib/VCS/LibCVS/Admin.pm
+    - blib/lib/VCS/LibCVS/Branch.pm
+    - blib/lib/VCS/LibCVS/Client.pm
+    - blib/lib/VCS/LibCVS/Client/Connection.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/CvsPass.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/Ext.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/Local.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/Pserver.pm
+    - blib/lib/VCS/LibCVS/Client/LoggingIOHandle.pm
+    - blib/lib/VCS/LibCVS/Client/Request.pm
+    - blib/lib/VCS/LibCVS/Client/Request/Argument.pm
+    - blib/lib/VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+    - blib/lib/VCS/LibCVS/Client/Request/Requests.pm
+    - blib/lib/VCS/LibCVS/Client/Response.pm
+    - blib/lib/VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+    - blib/lib/VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+    - blib/lib/VCS/LibCVS/Client/Response/Responses.pm
+    - blib/lib/VCS/LibCVS/Command.pm
+    - blib/lib/VCS/LibCVS/Datum.pm
+    - blib/lib/VCS/LibCVS/Datum/DirectoryName.pm
+    - blib/lib/VCS/LibCVS/Datum/Entry.pm
+    - blib/lib/VCS/LibCVS/Datum/FileContents.pm
+    - blib/lib/VCS/LibCVS/Datum/FileMode.pm
+    - blib/lib/VCS/LibCVS/Datum/FileName.pm
+    - blib/lib/VCS/LibCVS/Datum/LogMessage.pm
+    - blib/lib/VCS/LibCVS/Datum/PathName.pm
+    - blib/lib/VCS/LibCVS/Datum/RevisionNumber.pm
+    - blib/lib/VCS/LibCVS/Datum/Root.pm
+    - blib/lib/VCS/LibCVS/Datum/String.pm
+    - blib/lib/VCS/LibCVS/Datum/TagSpec.pm
+    - blib/lib/VCS/LibCVS/Datum/Time.pm
+    - blib/lib/VCS/LibCVS/DirectoryBranch.pm
+    - blib/lib/VCS/LibCVS/FileBranch.pm
+    - blib/lib/VCS/LibCVS/FileRevision.pm
+    - blib/lib/VCS/LibCVS/IgnoreChecker.pm
+    - blib/lib/VCS/LibCVS/Repository.pm
+    - blib/lib/VCS/LibCVS/RepositoryDirectory.pm
+    - blib/lib/VCS/LibCVS/RepositoryFile.pm
+    - blib/lib/VCS/LibCVS/RepositoryFileOrDirectory.pm
+    - blib/lib/VCS/LibCVS/Slice.pm
+    - blib/lib/VCS/LibCVS/WorkingDirectory.pm
+    - blib/lib/VCS/LibCVS/WorkingFile.pm
+    - blib/lib/VCS/LibCVS/WorkingFileOrDirectory.pm
+    - blib/lib/VCS/LibCVS/WorkingUnmanagedFile.pm
+    - blib/man3/VCS::LibCVS.3
+    - blib/man3/VCS::LibCVS::Admin.3
+    - blib/man3/VCS::LibCVS::Branch.3
+    - blib/man3/VCS::LibCVS::Client.3
+    - blib/man3/VCS::LibCVS::Client::Connection.3
+    - blib/man3/VCS::LibCVS::Client::Connection::CvsPass.3
+    - blib/man3/VCS::LibCVS::Client::Connection::Ext.3
+    - blib/man3/VCS::LibCVS::Client::Connection::Local.3
+    - blib/man3/VCS::LibCVS::Client::Connection::Pserver.3
+    - blib/man3/VCS::LibCVS::Client::Request.3
+    - blib/man3/VCS::LibCVS::Client::Request::Argument.3
+    - blib/man3/VCS::LibCVS::Client::Request::ArgumentUsingRequests.3
+    - blib/man3/VCS::LibCVS::Client::Request::Requests.3
+    - blib/man3/VCS::LibCVS::Client::Response.3
+    - blib/man3/VCS::LibCVS::Client::Response::FileUpdateModifyingResponses.3
+    - blib/man3/VCS::LibCVS::Client::Response::FileUpdatingResponses.3
+    - blib/man3/VCS::LibCVS::Client::Response::Responses.3
+    - blib/man3/VCS::LibCVS::Command.3
+    - blib/man3/VCS::LibCVS::Datum.3
+    - blib/man3/VCS::LibCVS::Datum::DirectoryName.3
+    - blib/man3/VCS::LibCVS::Datum::Entry.3
+    - blib/man3/VCS::LibCVS::Datum::FileContents.3
+    - blib/man3/VCS::LibCVS::Datum::FileMode.3
+    - blib/man3/VCS::LibCVS::Datum::FileName.3
+    - blib/man3/VCS::LibCVS::Datum::LogMessage.3
+    - blib/man3/VCS::LibCVS::Datum::PathName.3
+    - blib/man3/VCS::LibCVS::Datum::RevisionNumber.3
+    - blib/man3/VCS::LibCVS::Datum::Root.3
+    - blib/man3/VCS::LibCVS::Datum::String.3
+    - blib/man3/VCS::LibCVS::Datum::TagSpec.3
+    - blib/man3/VCS::LibCVS::Datum::Time.3
+    - blib/man3/VCS::LibCVS::DirectoryBranch.3
+    - blib/man3/VCS::LibCVS::FileBranch.3
+    - blib/man3/VCS::LibCVS::FileRevision.3
+    - blib/man3/VCS::LibCVS::IgnoreChecker.3
+    - blib/man3/VCS::LibCVS::Repository.3
+    - blib/man3/VCS::LibCVS::RepositoryDirectory.3
+    - blib/man3/VCS::LibCVS::RepositoryFile.3
+    - blib/man3/VCS::LibCVS::RepositoryFileOrDirectory.3
+    - blib/man3/VCS::LibCVS::Slice.3
+    - blib/man3/VCS::LibCVS::WorkingDirectory.3
+    - blib/man3/VCS::LibCVS::WorkingFile.3
+    - blib/man3/VCS::LibCVS::WorkingFileOrDirectory.3
+    - blib/man3/VCS::LibCVS::WorkingUnmanagedFile.3
+    - blib/script/lcvs-logsummary
+    - blib/script/lcvs-st
+    - blib/script/lcvs-tagbase
+    - blib/script/lcvs-version
+  build_file: Makefile.PL
+  build_file_output: |
+    Writing Makefile for VCS::LibCVS
+    Writing Makefile for LibCVS-examples
+    Writing Makefile for VCS::LibCVS
+  build_output: |
+    cp LibCVS/Client/Response.pm ../blib/lib/VCS/LibCVS/Client/Response.pm
+    cp LibCVS/FileBranch.pm ../blib/lib/VCS/LibCVS/FileBranch.pm
+    cp LibCVS/Command.pm ../blib/lib/VCS/LibCVS/Command.pm
+    cp LibCVS/WorkingFile.pm ../blib/lib/VCS/LibCVS/WorkingFile.pm
+    cp LibCVS/Client/Request/ArgumentUsingRequests.pm ../blib/lib/VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+    cp LibCVS/Datum/Time.pm ../blib/lib/VCS/LibCVS/Datum/Time.pm
+    cp LibCVS/DirectoryBranch.pm ../blib/lib/VCS/LibCVS/DirectoryBranch.pm
+    cp LibCVS/Datum/Entry.pm ../blib/lib/VCS/LibCVS/Datum/Entry.pm
+    cp LibCVS/Datum/FileContents.pm ../blib/lib/VCS/LibCVS/Datum/FileContents.pm
+    cp LibCVS/Client/Response/FileUpdateModifyingResponses.pm ../blib/lib/VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+    cp LibCVS.pm ../blib/lib/VCS/LibCVS.pm
+    cp LibCVS/Client/Connection.pm ../blib/lib/VCS/LibCVS/Client/Connection.pm
+    cp LibCVS/Datum/LogMessage.pm ../blib/lib/VCS/LibCVS/Datum/LogMessage.pm
+    cp LibCVS/Client/Connection/CvsPass.pm ../blib/lib/VCS/LibCVS/Client/Connection/CvsPass.pm
+    cp LibCVS/Client.pm ../blib/lib/VCS/LibCVS/Client.pm
+    cp LibCVS/Client/Request/Argument.pm ../blib/lib/VCS/LibCVS/Client/Request/Argument.pm
+    cp LibCVS/RepositoryDirectory.pm ../blib/lib/VCS/LibCVS/RepositoryDirectory.pm
+    cp LibCVS/WorkingUnmanagedFile.pm ../blib/lib/VCS/LibCVS/WorkingUnmanagedFile.pm
+    cp LibCVS/Slice.pm ../blib/lib/VCS/LibCVS/Slice.pm
+    cp LibCVS/Datum/String.pm ../blib/lib/VCS/LibCVS/Datum/String.pm
+    cp LibCVS/RepositoryFile.pm ../blib/lib/VCS/LibCVS/RepositoryFile.pm
+    cp LibCVS/FileRevision.pm ../blib/lib/VCS/LibCVS/FileRevision.pm
+    cp LibCVS/Datum.pm ../blib/lib/VCS/LibCVS/Datum.pm
+    cp LibCVS/Admin.pm ../blib/lib/VCS/LibCVS/Admin.pm
+    cp LibCVS/Client/Request/Requests.pm ../blib/lib/VCS/LibCVS/Client/Request/Requests.pm
+    cp LibCVS/RepositoryFileOrDirectory.pm ../blib/lib/VCS/LibCVS/RepositoryFileOrDirectory.pm
+    cp LibCVS/Datum/Root.pm ../blib/lib/VCS/LibCVS/Datum/Root.pm
+    cp LibCVS/Client/Request.pm ../blib/lib/VCS/LibCVS/Client/Request.pm
+    cp LibCVS/Datum/RevisionNumber.pm ../blib/lib/VCS/LibCVS/Datum/RevisionNumber.pm
+    cp LibCVS/Datum/FileName.pm ../blib/lib/VCS/LibCVS/Datum/FileName.pm
+    cp LibCVS/IgnoreChecker.pm ../blib/lib/VCS/LibCVS/IgnoreChecker.pm
+    cp LibCVS/Client/LoggingIOHandle.pm ../blib/lib/VCS/LibCVS/Client/LoggingIOHandle.pm
+    cp LibCVS/WorkingFileOrDirectory.pm ../blib/lib/VCS/LibCVS/WorkingFileOrDirectory.pm
+    cp LibCVS/Datum/PathName.pm ../blib/lib/VCS/LibCVS/Datum/PathName.pm
+    cp LibCVS/Client/Connection/Ext.pm ../blib/lib/VCS/LibCVS/Client/Connection/Ext.pm
+    cp LibCVS/WorkingDirectory.pm ../blib/lib/VCS/LibCVS/WorkingDirectory.pm
+    cp LibCVS/Client/Response/FileUpdatingResponses.pm ../blib/lib/VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+    cp LibCVS/Client/Response/Responses.pm ../blib/lib/VCS/LibCVS/Client/Response/Responses.pm
+    cp LibCVS/Branch.pm ../blib/lib/VCS/LibCVS/Branch.pm
+    cp LibCVS/Repository.pm ../blib/lib/VCS/LibCVS/Repository.pm
+    cp LibCVS/Datum/DirectoryName.pm ../blib/lib/VCS/LibCVS/Datum/DirectoryName.pm
+    cp LibCVS/Datum/FileMode.pm ../blib/lib/VCS/LibCVS/Datum/FileMode.pm
+    cp LibCVS/Client/Connection/Pserver.pm ../blib/lib/VCS/LibCVS/Client/Connection/Pserver.pm
+    cp LibCVS/Client/Connection/Local.pm ../blib/lib/VCS/LibCVS/Client/Connection/Local.pm
+    cp LibCVS/Datum/TagSpec.pm ../blib/lib/VCS/LibCVS/Datum/TagSpec.pm
+    Manifying ../blib/man3/VCS::LibCVS::Client::Response.3
+    Manifying ../blib/man3/VCS::LibCVS::FileBranch.3
+    Manifying ../blib/man3/VCS::LibCVS::Command.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::Time.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Request::ArgumentUsingRequests.3
+    Manifying ../blib/man3/VCS::LibCVS::WorkingFile.3
+    Manifying ../blib/man3/VCS::LibCVS::DirectoryBranch.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::Entry.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::FileContents.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Response::FileUpdateModifyingResponses.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Connection.3
+    Manifying ../blib/man3/VCS::LibCVS.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::LogMessage.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Connection::CvsPass.3
+    Manifying ../blib/man3/VCS::LibCVS::RepositoryDirectory.3
+    Manifying ../blib/man3/VCS::LibCVS::Client.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Request::Argument.3
+    Manifying ../blib/man3/VCS::LibCVS::WorkingUnmanagedFile.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::String.3
+    Manifying ../blib/man3/VCS::LibCVS::Slice.3
+    Manifying ../blib/man3/VCS::LibCVS::RepositoryFile.3
+    Manifying ../blib/man3/VCS::LibCVS::FileRevision.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Request::Requests.3
+    Manifying ../blib/man3/VCS::LibCVS::Admin.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum.3
+    Manifying ../blib/man3/VCS::LibCVS::RepositoryFileOrDirectory.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::Root.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Request.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::RevisionNumber.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::FileName.3
+    Manifying ../blib/man3/VCS::LibCVS::IgnoreChecker.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::PathName.3
+    Manifying ../blib/man3/VCS::LibCVS::WorkingFileOrDirectory.3
+    Manifying ../blib/man3/VCS::LibCVS::WorkingDirectory.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Connection::Ext.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Response::FileUpdatingResponses.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Response::Responses.3
+    Manifying ../blib/man3/VCS::LibCVS::Branch.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::DirectoryName.3
+    Manifying ../blib/man3/VCS::LibCVS::Repository.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::FileMode.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Connection::Pserver.3
+    Manifying ../blib/man3/VCS::LibCVS::Datum::TagSpec.3
+    Manifying ../blib/man3/VCS::LibCVS::Client::Connection::Local.3
+    cp examples/lcvs-st blib/script/lcvs-st
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/lcvs-st
+    cp examples/lcvs-tagbase blib/script/lcvs-tagbase
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/lcvs-tagbase
+    cp examples/lcvs-logsummary blib/script/lcvs-logsummary
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/lcvs-logsummary
+    cp examples/lcvs-version blib/script/lcvs-version
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/lcvs-version
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh/VCS-LibCVS-1.0002/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh/VCS-LibCVS-1.0002
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh/VCS-LibCVS-1.0002/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh/VCS-LibCVS-1.0002/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DISSENT
+  dist_basename: VCS-LibCVS-1.0002.tar.gz
+  dist_date: 1128974574
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh/VCS-LibCVS-1.0002
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh/VCS-LibCVS-1.0002
+  dist_file: /home/brian/CPAN/authors/id/D/DI/DISSENT/VCS-LibCVS-1.0002.tar.gz
+  dist_md5: e493025aec424531d93f48843fad1d77
+  dist_size: 87440
+  manifest:
+    - COPYING
+    - ChangeLog-1-00-02
+    - GPL
+    - META.yml
+    - Makefile.PL
+    - PerlArtisticLicense
+    - README
+    - VCS/LibCVS.pm
+    - VCS/LibCVS/Admin.pm
+    - VCS/LibCVS/Branch.pm
+    - VCS/LibCVS/Client.pm
+    - VCS/LibCVS/Client/Connection.pm
+    - VCS/LibCVS/Client/Connection/CvsPass.pm
+    - VCS/LibCVS/Client/Connection/Ext.pm
+    - VCS/LibCVS/Client/Connection/Local.pm
+    - VCS/LibCVS/Client/Connection/Pserver.pm
+    - VCS/LibCVS/Client/LoggingIOHandle.pm
+    - VCS/LibCVS/Client/Request.pm
+    - VCS/LibCVS/Client/Request/Argument.pm
+    - VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+    - VCS/LibCVS/Client/Request/Requests.pm
+    - VCS/LibCVS/Client/Response.pm
+    - VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+    - VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+    - VCS/LibCVS/Client/Response/Responses.pm
+    - VCS/LibCVS/Command.pm
+    - VCS/LibCVS/Datum.pm
+    - VCS/LibCVS/Datum/DirectoryName.pm
+    - VCS/LibCVS/Datum/Entry.pm
+    - VCS/LibCVS/Datum/FileContents.pm
+    - VCS/LibCVS/Datum/FileMode.pm
+    - VCS/LibCVS/Datum/FileName.pm
+    - VCS/LibCVS/Datum/LogMessage.pm
+    - VCS/LibCVS/Datum/PathName.pm
+    - VCS/LibCVS/Datum/RevisionNumber.pm
+    - VCS/LibCVS/Datum/Root.pm
+    - VCS/LibCVS/Datum/String.pm
+    - VCS/LibCVS/Datum/TagSpec.pm
+    - VCS/LibCVS/Datum/Time.pm
+    - VCS/LibCVS/DirectoryBranch.pm
+    - VCS/LibCVS/FileBranch.pm
+    - VCS/LibCVS/FileRevision.pm
+    - VCS/LibCVS/IgnoreChecker.pm
+    - VCS/LibCVS/Repository.pm
+    - VCS/LibCVS/RepositoryDirectory.pm
+    - VCS/LibCVS/RepositoryFile.pm
+    - VCS/LibCVS/RepositoryFileOrDirectory.pm
+    - VCS/LibCVS/Slice.pm
+    - VCS/LibCVS/WorkingDirectory.pm
+    - VCS/LibCVS/WorkingFile.pm
+    - VCS/LibCVS/WorkingFileOrDirectory.pm
+    - VCS/LibCVS/WorkingUnmanagedFile.pm
+    - VCS/Makefile.PL
+    - examples/Makefile.PL
+    - examples/lcvs-example
+    - examples/lcvs-get
+    - examples/lcvs-logsummary
+    - examples/lcvs-st
+    - examples/lcvs-tagbase
+    - examples/lcvs-version
+    - examples/t/lcvs-st.t
+    - examples/t/lcvs-st.t-setup.sh
+  manifest_file_info:
+    - bytesize: 525
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1122946685
+      name: COPYING
+    - bytesize: 11891
+      file_mime_type: ~
+      line_count: ~
+      md5: a0e5cd26b99314f09c4b3d7cfa254fe9
+      mtime: 1128973503
+      name: ChangeLog-1-00-02
+    - bytesize: 18011
+      file_mime_type: ~
+      line_count: ~
+      md5: a75a069601a66b8d7655437cb132a350
+      mtime: 1122946685
+      name: GPL
+    - bytesize: 302
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1128973503
+      name: META.yml
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1128962029
+      name: Makefile.PL
+    - bytesize: 6106
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a7c77d8fdd7c61d9eb28490a884cceb
+      mtime: 1122946685
+      name: PerlArtisticLicense
+    - bytesize: 3298
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1128972816
+      name: README
+    - bytesize: 10567
+      file_mime_type: ~
+      line_count: ~
+      md5: 32e7ea990e1fecc2fd435184095e933e
+      mtime: 1128949122
+      name: VCS/LibCVS.pm
+    - bytesize: 6962
+      file_mime_type: ~
+      line_count: ~
+      md5: f6aa7730e2c87a3b69285ced699568be
+      mtime: 1128948731
+      name: VCS/LibCVS/Admin.pm
+    - bytesize: 2853
+      file_mime_type: ~
+      line_count: ~
+      md5: 152f560e9a8a9eb9272e60950be8d5fd
+      mtime: 1128948731
+      name: VCS/LibCVS/Branch.pm
+    - bytesize: 19400
+      file_mime_type: ~
+      line_count: ~
+      md5: 54923c39e01aaa6afb199de7ddcca81e
+      mtime: 1128948731
+      name: VCS/LibCVS/Client.pm
+    - bytesize: 7623
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d5860506728328575e26ae79d347986
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Connection.pm
+    - bytesize: 4590
+      file_mime_type: ~
+      line_count: ~
+      md5: d78649574662ad159896c293d4f3b0cb
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Connection/CvsPass.pm
+    - bytesize: 3201
+      file_mime_type: ~
+      line_count: ~
+      md5: ca679180f7a4698084d565e95461ff6a
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Connection/Ext.pm
+    - bytesize: 2999
+      file_mime_type: ~
+      line_count: ~
+      md5: eb238843171619921b3d40ce52114fd4
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Connection/Local.pm
+    - bytesize: 9467
+      file_mime_type: ~
+      line_count: ~
+      md5: 496e09cb3cec812ad18e96df7e5189d0
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Connection/Pserver.pm
+    - bytesize: 3766
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cd4b2189710eb9d28bc6363c55af342
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/LoggingIOHandle.pm
+    - bytesize: 7413
+      file_mime_type: ~
+      line_count: ~
+      md5: 645639c83ec83cf991742cd0eb59925b
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Request.pm
+    - bytesize: 4121
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d951de962dc4c6295d3c054ae1bc16a
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Request/Argument.pm
+    - bytesize: 9696
+      file_mime_type: ~
+      line_count: ~
+      md5: a426aa03435aa00e814e1009476b7327
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+    - bytesize: 9842
+      file_mime_type: ~
+      line_count: ~
+      md5: 0875212b02ce875ae186237f137ec7f5
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Request/Requests.pm
+    - bytesize: 8265
+      file_mime_type: ~
+      line_count: ~
+      md5: d7182c17832302870cef7c764a11c2fc
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Response.pm
+    - bytesize: 2585
+      file_mime_type: ~
+      line_count: ~
+      md5: b79c459f0ac1f149f17c5b6204f8aed2
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+    - bytesize: 6341
+      file_mime_type: ~
+      line_count: ~
+      md5: af31b280f6c49dc79d927ff9929d280f
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+    - bytesize: 6038
+      file_mime_type: ~
+      line_count: ~
+      md5: b9cfee7ec5dc9983af564a255ea15c07
+      mtime: 1128948731
+      name: VCS/LibCVS/Client/Response/Responses.pm
+    - bytesize: 10967
+      file_mime_type: ~
+      line_count: ~
+      md5: b5c66ce994a83c4c4ac868d14738e350
+      mtime: 1128946758
+      name: VCS/LibCVS/Command.pm
+    - bytesize: 7280
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a384656a06a40374ef0d1592827a3b5
+      mtime: 1128948731
+      name: VCS/LibCVS/Datum.pm
+    - bytesize: 1912
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bd8062fc3fa084c7eb6e0fac555e06e
+      mtime: 1128948731
+      name: VCS/LibCVS/Datum/DirectoryName.pm
+    - bytesize: 8700
+      file_mime_type: ~
+      line_count: ~
+      md5: b7067b0e59a0e149c607315052543c67
+      mtime: 1128948731
+      name: VCS/LibCVS/Datum/Entry.pm
+    - bytesize: 5336
+      file_mime_type: ~
+      line_count: ~
+      md5: 6366421d6d527cd5ac0e248ea033d821
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/FileContents.pm
+    - bytesize: 2653
+      file_mime_type: ~
+      line_count: ~
+      md5: 26e0cc5b37e5977d1781f3768c9ebd7b
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/FileMode.pm
+    - bytesize: 1877
+      file_mime_type: ~
+      line_count: ~
+      md5: 91d79a8befe389daaad82f4b43f8dc3b
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/FileName.pm
+    - bytesize: 3905
+      file_mime_type: ~
+      line_count: ~
+      md5: c2c33006a73dd80968d6f01515046a50
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/LogMessage.pm
+    - bytesize: 2032
+      file_mime_type: ~
+      line_count: ~
+      md5: feacce9f05eb116052284f8a77eda40b
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/PathName.pm
+    - bytesize: 13081
+      file_mime_type: ~
+      line_count: ~
+      md5: 160c5831548e07a1d35c1f0298b6a545
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/RevisionNumber.pm
+    - bytesize: 3688
+      file_mime_type: ~
+      line_count: ~
+      md5: 5de91d82bbff7991deb44e5386669faa
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/Root.pm
+    - bytesize: 1880
+      file_mime_type: ~
+      line_count: ~
+      md5: acb0fa07d80756017cc1ffdf080fdbb5
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/String.pm
+    - bytesize: 3656
+      file_mime_type: ~
+      line_count: ~
+      md5: 46992c68350d4cf2d0f0c79fa8d1d8e9
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/TagSpec.pm
+    - bytesize: 1903
+      file_mime_type: ~
+      line_count: ~
+      md5: c5105106f5f56d15583735f5ca747947
+      mtime: 1128948732
+      name: VCS/LibCVS/Datum/Time.pm
+    - bytesize: 5453
+      file_mime_type: ~
+      line_count: ~
+      md5: 589346c11839b245fb1d5c2cd7f789b0
+      mtime: 1128948731
+      name: VCS/LibCVS/DirectoryBranch.pm
+    - bytesize: 9014
+      file_mime_type: ~
+      line_count: ~
+      md5: 790120423dc6cc1d31dfc24e08128a50
+      mtime: 1128948731
+      name: VCS/LibCVS/FileBranch.pm
+    - bytesize: 10739
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f700323e5fce885a4cea187017bd3d9
+      mtime: 1128948731
+      name: VCS/LibCVS/FileRevision.pm
+    - bytesize: 7761
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e7aa9f0fb8ffd3a24bdb92b2fca1668
+      mtime: 1128948731
+      name: VCS/LibCVS/IgnoreChecker.pm
+    - bytesize: 7170
+      file_mime_type: ~
+      line_count: ~
+      md5: b5e3aec4ea42ef03e0cf868e71778e1a
+      mtime: 1128948731
+      name: VCS/LibCVS/Repository.pm
+    - bytesize: 4645
+      file_mime_type: ~
+      line_count: ~
+      md5: daf2b5b68d28d417026037193e217d34
+      mtime: 1128948731
+      name: VCS/LibCVS/RepositoryDirectory.pm
+    - bytesize: 13459
+      file_mime_type: ~
+      line_count: ~
+      md5: ed6c3c39a742b06406fa52a146c4d9f0
+      mtime: 1128948731
+      name: VCS/LibCVS/RepositoryFile.pm
+    - bytesize: 6567
+      file_mime_type: ~
+      line_count: ~
+      md5: b3091dfa7a796695f6e71e8967abbfca
+      mtime: 1128948731
+      name: VCS/LibCVS/RepositoryFileOrDirectory.pm
+    - bytesize: 3718
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cc75faf5df7395a6d540d1b50af464e
+      mtime: 1126318831
+      name: VCS/LibCVS/Slice.pm
+    - bytesize: 6461
+      file_mime_type: ~
+      line_count: ~
+      md5: eacf243d40c424b27cb231fa4395d51d
+      mtime: 1128948731
+      name: VCS/LibCVS/WorkingDirectory.pm
+    - bytesize: 14207
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cde6baee994dded7f9cda66159e668c
+      mtime: 1128948731
+      name: VCS/LibCVS/WorkingFile.pm
+    - bytesize: 5033
+      file_mime_type: ~
+      line_count: ~
+      md5: de4b55aa7bcb32ba29bb7161c6861fe5
+      mtime: 1128948731
+      name: VCS/LibCVS/WorkingFileOrDirectory.pm
+    - bytesize: 4508
+      file_mime_type: ~
+      line_count: ~
+      md5: fdd1912151cb22f3161b67904f2faddf
+      mtime: 1128948731
+      name: VCS/LibCVS/WorkingUnmanagedFile.pm
+    - bytesize: 302
+      file_mime_type: ~
+      line_count: ~
+      md5: 322583dfcc02e4559b9b10624845b2a6
+      mtime: 1128948731
+      name: VCS/Makefile.PL
+    - bytesize: 305
+      file_mime_type: ~
+      line_count: ~
+      md5: f7b41b95d6beec3e8a7043d5c84fa138
+      mtime: 1128948732
+      name: examples/Makefile.PL
+    - bytesize: 2250
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f8ce041f7e528bf7907ae9fb4b444f7
+      mtime: 1128948732
+      name: examples/lcvs-example
+    - bytesize: 2155
+      file_mime_type: ~
+      line_count: ~
+      md5: 4388b167c032338383d5296ed0138548
+      mtime: 1128948732
+      name: examples/lcvs-get
+    - bytesize: 17410
+      file_mime_type: ~
+      line_count: ~
+      md5: 71e7b79c0597a905c2dcf7f1b4fb1cef
+      mtime: 1128948732
+      name: examples/lcvs-logsummary
+    - bytesize: 18376
+      file_mime_type: ~
+      line_count: ~
+      md5: 79bd7ab8f3c0f054071b6cb946d15c5e
+      mtime: 1128948732
+      name: examples/lcvs-st
+    - bytesize: 5099
+      file_mime_type: ~
+      line_count: ~
+      md5: e5691ddfcd00b6947cb53b7e3681010b
+      mtime: 1126318866
+      name: examples/lcvs-tagbase
+    - bytesize: 303
+      file_mime_type: ~
+      line_count: ~
+      md5: e698b23ee93a26ad7b7d9c9a00375bf6
+      mtime: 1128948732
+      name: examples/lcvs-version
+    - bytesize: 3179
+      file_mime_type: ~
+      line_count: ~
+      md5: 342510bdc3a60c2944e9eb8f460d8912
+      mtime: 1128948732
+      name: examples/t/lcvs-st.t
+    - bytesize: 6501
+      file_mime_type: ~
+      line_count: ~
+      md5: 705723996181b73e13cb84359fce8d7f
+      mtime: 1128948732
+      name: examples/t/lcvs-st.t-setup.sh
+  module_info:
+    - bytesize: 10567
+      file_mime_type: ~
+      line_count: ~
+      md5: abb3e74db08ed6eaf26a3aca6868aa62
+      module_name_from_file_guess: VCS::LibCVS
+      mtime: 1128949122
+      name: blib/lib/VCS/LibCVS.pm
+      packages:
+        - VCS::LibCVS
+      primary_package: VCS::LibCVS
+      uses:
+        - strict
+        - Carp
+        - Time::Local
+        - VCS::LibCVS::Client
+        - VCS::LibCVS::Admin
+        - VCS::LibCVS::IgnoreChecker
+        - VCS::LibCVS::Command
+        - VCS::LibCVS::WorkingFileOrDirectory
+        - VCS::LibCVS::WorkingFile
+        - VCS::LibCVS::WorkingDirectory
+        - VCS::LibCVS::WorkingUnmanagedFile
+        - VCS::LibCVS::Repository
+        - VCS::LibCVS::RepositoryFileOrDirectory
+        - VCS::LibCVS::RepositoryFile
+        - VCS::LibCVS::RepositoryDirectory
+        - VCS::LibCVS::DirectoryBranch
+        - VCS::LibCVS::FileBranch
+        - VCS::LibCVS::FileRevision
+        - VCS::LibCVS::Branch
+        - VCS::LibCVS::Slice
+        - VCS::LibCVS::Datum
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS.pm
+        identifier: VERSION
+        line_number: 206
+        sigil: $
+        value: 1.0002
+    - bytesize: 6962
+      file_mime_type: ~
+      line_count: ~
+      md5: 268ce09c50cc213421f36c09fcde6617
+      module_name_from_file_guess: VCS::LibCVS::Admin
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Admin.pm
+      packages:
+        - VCS::LibCVS::Admin
+      primary_package: VCS::LibCVS::Admin
+      uses:
+        - strict
+        - Carp
+        - FileHandle
+        - VCS::LibCVS::Datum
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Admin.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2853
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c199f3f97b37f555c1345256b3d163c
+      module_name_from_file_guess: VCS::LibCVS::Branch
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Branch.pm
+      packages:
+        - VCS::LibCVS::Branch
+      primary_package: VCS::LibCVS::Branch
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Branch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 19400
+      file_mime_type: ~
+      line_count: ~
+      md5: 3289687eb330ac8582df3a77940dc57d
+      module_name_from_file_guess: VCS::LibCVS::Client
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client.pm
+      packages:
+        - VCS::LibCVS::Client
+      primary_package: VCS::LibCVS::Client
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+        - VCS::LibCVS::Client::Connection
+        - VCS::LibCVS::Client::Connection::CvsPass
+        - VCS::LibCVS::Client::Connection::Local
+        - VCS::LibCVS::Client::Connection::Ext
+        - VCS::LibCVS::Client::Connection::Pserver
+        - VCS::LibCVS::Client::Request
+        - VCS::LibCVS::Client::Request::Requests
+        - VCS::LibCVS::Client::Request::ArgumentUsingRequests
+        - VCS::LibCVS::Client::Request::Argument
+        - VCS::LibCVS::Client::Response
+        - VCS::LibCVS::Client::Response::Responses
+        - VCS::LibCVS::Client::Response::FileUpdatingResponses
+        - VCS::LibCVS::Client::Response::FileUpdateModifyingResponses
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7623
+      file_mime_type: ~
+      line_count: ~
+      md5: 21fd5b0c5399345666b47eb9353587e9
+      module_name_from_file_guess: VCS::LibCVS::Client::Connection
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Connection.pm
+      packages:
+        - VCS::LibCVS::Client::Connection
+      primary_package: VCS::LibCVS::Client::Connection
+      uses:
+        - strict
+        - Carp
+        - VCS::LibCVS::Client::LoggingIOHandle
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Connection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4590
+      file_mime_type: ~
+      line_count: ~
+      md5: fca7678ac57a01647565615f6522f83d
+      module_name_from_file_guess: VCS::LibCVS::Client::Connection::CvsPass
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Connection/CvsPass.pm
+      packages:
+        - VCS::LibCVS::Client::Connection::CvsPass
+      primary_package: VCS::LibCVS::Client::Connection::CvsPass
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Connection/CvsPass.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3201
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d00c0a6c172776878ea42c4e6020a82
+      module_name_from_file_guess: VCS::LibCVS::Client::Connection::Ext
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Connection/Ext.pm
+      packages:
+        - VCS::LibCVS::Client::Connection::Ext
+      primary_package: VCS::LibCVS::Client::Connection::Ext
+      uses:
+        - strict
+        - Carp
+        - IPC::Open2
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Connection/Ext.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2999
+      file_mime_type: ~
+      line_count: ~
+      md5: 40bb17218648a999656e5f152edf0122
+      module_name_from_file_guess: VCS::LibCVS::Client::Connection::Local
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Connection/Local.pm
+      packages:
+        - VCS::LibCVS::Client::Connection::Local
+      primary_package: VCS::LibCVS::Client::Connection::Local
+      uses:
+        - strict
+        - Carp
+        - IPC::Open2
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Connection/Local.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9467
+      file_mime_type: ~
+      line_count: ~
+      md5: 09e2375fd4b2af7867e63cded4e62e38
+      module_name_from_file_guess: VCS::LibCVS::Client::Connection::Pserver
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Connection/Pserver.pm
+      packages:
+        - VCS::LibCVS::Client::Connection::Pserver
+      primary_package: VCS::LibCVS::Client::Connection::Pserver
+      uses:
+        - strict
+        - Carp
+        - IO::Socket::INET
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Connection/Pserver.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3766
+      file_mime_type: ~
+      line_count: ~
+      md5: 2490b3b32f06aaf29b7f5cee9a1b51aa
+      module_name_from_file_guess: VCS::LibCVS::Client::LoggingIOHandle
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/LoggingIOHandle.pm
+      packages:
+        - VCS::LibCVS::Client::LoggingIOHandle
+      primary_package: VCS::LibCVS::Client::LoggingIOHandle
+      uses:
+        - strict
+        - IO::Handle
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/LoggingIOHandle.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7413
+      file_mime_type: ~
+      line_count: ~
+      md5: 915e1f3cd7b22f0a12911026e64b3273
+      module_name_from_file_guess: VCS::LibCVS::Client::Request
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Request.pm
+      packages:
+        - VCS::LibCVS::Client::Request
+      primary_package: VCS::LibCVS::Client::Request
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Request.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4121
+      file_mime_type: ~
+      line_count: ~
+      md5: d6160d2ddd88877da950afc283e94a44
+      module_name_from_file_guess: VCS::LibCVS::Client::Request::Argument
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Request/Argument.pm
+      packages:
+        - VCS::LibCVS::Client::Request::Argument
+      primary_package: VCS::LibCVS::Client::Request::Argument
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Request/Argument.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9696
+      file_mime_type: ~
+      line_count: ~
+      md5: 2926e1357bd55521c89622fc41701e5e
+      module_name_from_file_guess: VCS::LibCVS::Client::Request::ArgumentUsingRequests
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+      packages:
+        - VCS::LibCVS::Client::Request::ArgumentUsingRequest
+        - VCS::LibCVS::Client::Request::ci
+        - VCS::LibCVS::Client::Request::diff
+        - VCS::LibCVS::Client::Request::tag
+        - VCS::LibCVS::Client::Request::status
+        - VCS::LibCVS::Client::Request::log
+        - VCS::LibCVS::Client::Request::history
+        - VCS::LibCVS::Client::Request::annotate
+        - VCS::LibCVS::Client::Request::co
+        - VCS::LibCVS::Client::Request::export
+        - VCS::LibCVS::Client::Request::update
+        - VCS::LibCVS::Client::Request::add
+        - VCS::LibCVS::Client::Request::remove
+        - VCS::LibCVS::Client::Request::rdiff
+        - VCS::LibCVS::Client::Request::rlog
+      primary_package: VCS::LibCVS::Client::Request::ArgumentUsingRequest
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9842
+      file_mime_type: ~
+      line_count: ~
+      md5: 213e0c93396a9e28e2df09a64575aff7
+      module_name_from_file_guess: VCS::LibCVS::Client::Request::Requests
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Request/Requests.pm
+      packages:
+        - VCS::LibCVS::Client::Request::Root
+        - VCS::LibCVS::Client::Request::Valid_responses
+        - VCS::LibCVS::Client::Request::valid_requests
+        - VCS::LibCVS::Client::Request::Directory
+        - VCS::LibCVS::Client::Request::Sticky
+        - VCS::LibCVS::Client::Request::Entry
+        - VCS::LibCVS::Client::Request::Checkin_time
+        - VCS::LibCVS::Client::Request::Modified
+        - VCS::LibCVS::Client::Request::Is_modified
+        - VCS::LibCVS::Client::Request::Unchanged
+        - VCS::LibCVS::Client::Request::UseUnchanged
+        - VCS::LibCVS::Client::Request::Questionable
+        - VCS::LibCVS::Client::Request::Case
+        - VCS::LibCVS::Client::Request::init
+        - VCS::LibCVS::Client::Request::noop
+        - VCS::LibCVS::Client::Request::version
+      primary_package: VCS::LibCVS::Client::Request::Root
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Request/Requests.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8265
+      file_mime_type: ~
+      line_count: ~
+      md5: 62bfcbdb48554991aa368dc6bb4cecb2
+      module_name_from_file_guess: VCS::LibCVS::Client::Response
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Response.pm
+      packages:
+        - VCS::LibCVS::Client::Response
+      primary_package: VCS::LibCVS::Client::Response
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Response.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2585
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e23bb7302433ffe9fad8463c5f4f4c1
+      module_name_from_file_guess: VCS::LibCVS::Client::Response::FileUpdateModifyingResponses
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+      packages:
+        - VCS::LibCVS::Client::Response::FileUpdateModifyingResponse
+        - VCS::LibCVS::Client::Response::Mode
+        - VCS::LibCVS::Client::Response::Mod_time
+      primary_package: VCS::LibCVS::Client::Response::FileUpdateModifyingResponse
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6341
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a5d09d042170a1cbced8135523d586d
+      module_name_from_file_guess: VCS::LibCVS::Client::Response::FileUpdatingResponses
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+      packages:
+        - VCS::LibCVS::Client::Response::FileUpdatingResponse
+        - VCS::LibCVS::Client::Response::Checked_in
+        - VCS::LibCVS::Client::Response::New_entry
+        - VCS::LibCVS::Client::Response::Updated
+        - VCS::LibCVS::Client::Response::Created
+        - VCS::LibCVS::Client::Response::Update_existing
+        - VCS::LibCVS::Client::Response::Merged
+        - VCS::LibCVS::Client::Response::Patched
+        - VCS::LibCVS::Client::Response::Removed
+        - VCS::LibCVS::Client::Response::Remove_entry
+      primary_package: VCS::LibCVS::Client::Response::FileUpdatingResponse
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6038
+      file_mime_type: ~
+      line_count: ~
+      md5: e7bdae0d480e06112272078fa2af9973
+      module_name_from_file_guess: VCS::LibCVS::Client::Response::Responses
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Client/Response/Responses.pm
+      packages:
+        - VCS::LibCVS::Client::Response::ok
+        - VCS::LibCVS::Client::Response::error
+        - VCS::LibCVS::Client::Response::Valid_requests
+        - VCS::LibCVS::Client::Response::E
+        - VCS::LibCVS::Client::Response::M
+        - VCS::LibCVS::Client::Response::Mbinary
+        - VCS::LibCVS::Client::Response::Copy_file
+        - VCS::LibCVS::Client::Response::Set_sticky
+        - VCS::LibCVS::Client::Response::Clear_sticky
+      primary_package: VCS::LibCVS::Client::Response::ok
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Client/Response/Responses.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10967
+      file_mime_type: ~
+      line_count: ~
+      md5: 89b30d1799812a60fe5d7d7bfab7bd77
+      module_name_from_file_guess: VCS::LibCVS::Command
+      mtime: 1128946758
+      name: blib/lib/VCS/LibCVS/Command.pm
+      packages:
+        - VCS::LibCVS::Command
+      primary_package: VCS::LibCVS::Command
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Command.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7280
+      file_mime_type: ~
+      line_count: ~
+      md5: 3db6f0fa31b389fd1133305776af8a24
+      module_name_from_file_guess: VCS::LibCVS::Datum
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Datum.pm
+      packages:
+        - VCS::LibCVS::Datum
+      primary_package: VCS::LibCVS::Datum
+      uses:
+        - strict
+        - Carp
+        - VCS::LibCVS::Datum::DirectoryName
+        - VCS::LibCVS::Datum::Entry
+        - VCS::LibCVS::Datum::FileContents
+        - VCS::LibCVS::Datum::FileMode
+        - VCS::LibCVS::Datum::FileName
+        - VCS::LibCVS::Datum::LogMessage
+        - VCS::LibCVS::Datum::PathName
+        - VCS::LibCVS::Datum::RevisionNumber
+        - VCS::LibCVS::Datum::Root
+        - VCS::LibCVS::Datum::String
+        - VCS::LibCVS::Datum::TagSpec
+        - VCS::LibCVS::Datum::Time
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1912
+      file_mime_type: ~
+      line_count: ~
+      md5: eff2635e3aa19e4982a7510fb73d2076
+      module_name_from_file_guess: VCS::LibCVS::Datum::DirectoryName
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Datum/DirectoryName.pm
+      packages:
+        - VCS::LibCVS::Datum::DirectoryName
+      primary_package: VCS::LibCVS::Datum::DirectoryName
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/DirectoryName.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8700
+      file_mime_type: ~
+      line_count: ~
+      md5: f3e7a66db276c3d0d536f858e51fcb1d
+      module_name_from_file_guess: VCS::LibCVS::Datum::Entry
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Datum/Entry.pm
+      packages:
+        - VCS::LibCVS::Datum::Entry
+      primary_package: VCS::LibCVS::Datum::Entry
+      uses:
+        - strict
+        - Carp
+        - Time::Local
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/Entry.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5336
+      file_mime_type: ~
+      line_count: ~
+      md5: 07e2b22937e168c261744f3073849582
+      module_name_from_file_guess: VCS::LibCVS::Datum::FileContents
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/FileContents.pm
+      packages:
+        - VCS::LibCVS::Datum::FileContents
+      primary_package: VCS::LibCVS::Datum::FileContents
+      uses:
+        - strict
+        - Carp
+        - IO::File
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/FileContents.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2653
+      file_mime_type: ~
+      line_count: ~
+      md5: 765e7135ec13ad8852654ba8895b1b1b
+      module_name_from_file_guess: VCS::LibCVS::Datum::FileMode
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/FileMode.pm
+      packages:
+        - VCS::LibCVS::Datum::FileMode
+      primary_package: VCS::LibCVS::Datum::FileMode
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/FileMode.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1877
+      file_mime_type: ~
+      line_count: ~
+      md5: 00e0797caef7fbaa99a241e9f6f07dd6
+      module_name_from_file_guess: VCS::LibCVS::Datum::FileName
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/FileName.pm
+      packages:
+        - VCS::LibCVS::Datum::FileName
+      primary_package: VCS::LibCVS::Datum::FileName
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/FileName.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3905
+      file_mime_type: ~
+      line_count: ~
+      md5: a145c23238cf04e2330ecb16481e637a
+      module_name_from_file_guess: VCS::LibCVS::Datum::LogMessage
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/LogMessage.pm
+      packages:
+        - VCS::LibCVS::Datum::LogMessage
+      primary_package: VCS::LibCVS::Datum::LogMessage
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/LogMessage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2032
+      file_mime_type: ~
+      line_count: ~
+      md5: b6f1be974f00b86dd33432002c0b5b28
+      module_name_from_file_guess: VCS::LibCVS::Datum::PathName
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/PathName.pm
+      packages:
+        - VCS::LibCVS::Datum::PathName
+      primary_package: VCS::LibCVS::Datum::PathName
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/PathName.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13081
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cac6d6fb075ff933f5b945f8143b750
+      module_name_from_file_guess: VCS::LibCVS::Datum::RevisionNumber
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/RevisionNumber.pm
+      packages:
+        - VCS::LibCVS::Datum::RevisionNumber
+      primary_package: VCS::LibCVS::Datum::RevisionNumber
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/RevisionNumber.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3688
+      file_mime_type: ~
+      line_count: ~
+      md5: 31cba3de4dc40777fe6b428e1795388e
+      module_name_from_file_guess: VCS::LibCVS::Datum::Root
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/Root.pm
+      packages:
+        - VCS::LibCVS::Datum::Root
+      primary_package: VCS::LibCVS::Datum::Root
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/Root.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1880
+      file_mime_type: ~
+      line_count: ~
+      md5: d9e00baf177d685d940d83e0589296f0
+      module_name_from_file_guess: VCS::LibCVS::Datum::String
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/String.pm
+      packages:
+        - VCS::LibCVS::Datum::String
+      primary_package: VCS::LibCVS::Datum::String
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/String.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3656
+      file_mime_type: ~
+      line_count: ~
+      md5: 1393a26395e909320ffa632f221baf70
+      module_name_from_file_guess: VCS::LibCVS::Datum::TagSpec
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/TagSpec.pm
+      packages:
+        - VCS::LibCVS::Datum::TagSpec
+      primary_package: VCS::LibCVS::Datum::TagSpec
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/TagSpec.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1903
+      file_mime_type: ~
+      line_count: ~
+      md5: 741dd23d86bf90b544e94d94a32c82c0
+      module_name_from_file_guess: VCS::LibCVS::Datum::Time
+      mtime: 1128948732
+      name: blib/lib/VCS/LibCVS/Datum/Time.pm
+      packages:
+        - VCS::LibCVS::Datum::Time
+      primary_package: VCS::LibCVS::Datum::Time
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Datum/Time.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5453
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d139eeffd679b160090a86a7dae1d1d
+      module_name_from_file_guess: VCS::LibCVS::DirectoryBranch
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/DirectoryBranch.pm
+      packages:
+        - VCS::LibCVS::DirectoryBranch
+      primary_package: VCS::LibCVS::DirectoryBranch
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/DirectoryBranch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9014
+      file_mime_type: ~
+      line_count: ~
+      md5: 51ae158ff987e13d3f8a3d40778b1457
+      module_name_from_file_guess: VCS::LibCVS::FileBranch
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/FileBranch.pm
+      packages:
+        - VCS::LibCVS::FileBranch
+      primary_package: VCS::LibCVS::FileBranch
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/FileBranch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10739
+      file_mime_type: ~
+      line_count: ~
+      md5: 4dc7fd1f55a956760e70211116b4da46
+      module_name_from_file_guess: VCS::LibCVS::FileRevision
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/FileRevision.pm
+      packages:
+        - VCS::LibCVS::FileRevision
+      primary_package: VCS::LibCVS::FileRevision
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/FileRevision.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7761
+      file_mime_type: ~
+      line_count: ~
+      md5: cffbc209be86f9cc1bce470413f3df76
+      module_name_from_file_guess: VCS::LibCVS::IgnoreChecker
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/IgnoreChecker.pm
+      packages:
+        - VCS::LibCVS::IgnoreChecker
+      primary_package: VCS::LibCVS::IgnoreChecker
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/IgnoreChecker.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7170
+      file_mime_type: ~
+      line_count: ~
+      md5: e1bf68d48e816ae2510feef93264a9d7
+      module_name_from_file_guess: VCS::LibCVS::Repository
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/Repository.pm
+      packages:
+        - VCS::LibCVS::Repository
+      primary_package: VCS::LibCVS::Repository
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Repository.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4645
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c61fea22ec00ac4d39b2202e8085cd6
+      module_name_from_file_guess: VCS::LibCVS::RepositoryDirectory
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/RepositoryDirectory.pm
+      packages:
+        - VCS::LibCVS::RepositoryDirectory
+      primary_package: VCS::LibCVS::RepositoryDirectory
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/RepositoryDirectory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13459
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ccd80e6b8c59cb889bc7701fc00e1bb
+      module_name_from_file_guess: VCS::LibCVS::RepositoryFile
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/RepositoryFile.pm
+      packages:
+        - VCS::LibCVS::RepositoryFile
+      primary_package: VCS::LibCVS::RepositoryFile
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/RepositoryFile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6567
+      file_mime_type: ~
+      line_count: ~
+      md5: bf987f4e54c6e7e81ecd311d88ce455b
+      module_name_from_file_guess: VCS::LibCVS::RepositoryFileOrDirectory
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/RepositoryFileOrDirectory.pm
+      packages:
+        - VCS::LibCVS::RepositoryFileOrDirectory
+      primary_package: VCS::LibCVS::RepositoryFileOrDirectory
+      uses:
+        - strict
+        - Carp
+        - File::Spec::Unix
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/RepositoryFileOrDirectory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3718
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f3ef7f834180baea80138b5531a2848
+      module_name_from_file_guess: VCS::LibCVS::Slice
+      mtime: 1126318831
+      name: blib/lib/VCS/LibCVS/Slice.pm
+      packages:
+        - VCS::LibCVS::Slice
+      primary_package: VCS::LibCVS::Slice
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/Slice.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6461
+      file_mime_type: ~
+      line_count: ~
+      md5: 2fa20ac6d64933700ea6678cce585816
+      module_name_from_file_guess: VCS::LibCVS::WorkingDirectory
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/WorkingDirectory.pm
+      packages:
+        - VCS::LibCVS::WorkingDirectory
+      primary_package: VCS::LibCVS::WorkingDirectory
+      uses:
+        - strict
+        - Carp
+        - IO::Dir
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/WorkingDirectory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14207
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dfb619965fa0dcecfc24bdef1c7af73
+      module_name_from_file_guess: VCS::LibCVS::WorkingFile
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/WorkingFile.pm
+      packages:
+        - VCS::LibCVS::WorkingFile
+      primary_package: VCS::LibCVS::WorkingFile
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/WorkingFile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5033
+      file_mime_type: ~
+      line_count: ~
+      md5: fcc7989c9d2a896665bdecbee5f1d1ec
+      module_name_from_file_guess: VCS::LibCVS::WorkingFileOrDirectory
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/WorkingFileOrDirectory.pm
+      packages:
+        - VCS::LibCVS::WorkingFileOrDirectory
+      primary_package: VCS::LibCVS::WorkingFileOrDirectory
+      uses:
+        - strict
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/VCS/LibCVS/WorkingFileOrDirectory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4508
+      file_mime_type: ~
+      line_count: ~
+      md5: 687cf63554f57fa4c1c9f473092facca
+      module_name_from_file_guess: VCS::LibCVS::WorkingUnmanagedFile
+      mtime: 1128948731
+      name: blib/lib/VCS/LibCVS/WorkingUnmanagedFile.pm
+      packages:
+        - VCS::LibCVS::WorkingUnmanagedFile
+      primary_package: VCS::LibCVS::WorkingUnmanagedFile
+      uses:
+        - strict
+        - Carp
+        - constant
+        - vars
+      version_info:
+        filename: blib/lib/VCS/LibCVS/WorkingUnmanagedFile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/VCS/LibCVS.pm
+    - blib/lib/VCS/LibCVS/Admin.pm
+    - blib/lib/VCS/LibCVS/Branch.pm
+    - blib/lib/VCS/LibCVS/Client.pm
+    - blib/lib/VCS/LibCVS/Client/Connection.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/CvsPass.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/Ext.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/Local.pm
+    - blib/lib/VCS/LibCVS/Client/Connection/Pserver.pm
+    - blib/lib/VCS/LibCVS/Client/LoggingIOHandle.pm
+    - blib/lib/VCS/LibCVS/Client/Request.pm
+    - blib/lib/VCS/LibCVS/Client/Request/Argument.pm
+    - blib/lib/VCS/LibCVS/Client/Request/ArgumentUsingRequests.pm
+    - blib/lib/VCS/LibCVS/Client/Request/Requests.pm
+    - blib/lib/VCS/LibCVS/Client/Response.pm
+    - blib/lib/VCS/LibCVS/Client/Response/FileUpdateModifyingResponses.pm
+    - blib/lib/VCS/LibCVS/Client/Response/FileUpdatingResponses.pm
+    - blib/lib/VCS/LibCVS/Client/Response/Responses.pm
+    - blib/lib/VCS/LibCVS/Command.pm
+    - blib/lib/VCS/LibCVS/Datum.pm
+    - blib/lib/VCS/LibCVS/Datum/DirectoryName.pm
+    - blib/lib/VCS/LibCVS/Datum/Entry.pm
+    - blib/lib/VCS/LibCVS/Datum/FileContents.pm
+    - blib/lib/VCS/LibCVS/Datum/FileMode.pm
+    - blib/lib/VCS/LibCVS/Datum/FileName.pm
+    - blib/lib/VCS/LibCVS/Datum/LogMessage.pm
+    - blib/lib/VCS/LibCVS/Datum/PathName.pm
+    - blib/lib/VCS/LibCVS/Datum/RevisionNumber.pm
+    - blib/lib/VCS/LibCVS/Datum/Root.pm
+    - blib/lib/VCS/LibCVS/Datum/String.pm
+    - blib/lib/VCS/LibCVS/Datum/TagSpec.pm
+    - blib/lib/VCS/LibCVS/Datum/Time.pm
+    - blib/lib/VCS/LibCVS/DirectoryBranch.pm
+    - blib/lib/VCS/LibCVS/FileBranch.pm
+    - blib/lib/VCS/LibCVS/FileRevision.pm
+    - blib/lib/VCS/LibCVS/IgnoreChecker.pm
+    - blib/lib/VCS/LibCVS/Repository.pm
+    - blib/lib/VCS/LibCVS/RepositoryDirectory.pm
+    - blib/lib/VCS/LibCVS/RepositoryFile.pm
+    - blib/lib/VCS/LibCVS/RepositoryFileOrDirectory.pm
+    - blib/lib/VCS/LibCVS/Slice.pm
+    - blib/lib/VCS/LibCVS/WorkingDirectory.pm
+    - blib/lib/VCS/LibCVS/WorkingFile.pm
+    - blib/lib/VCS/LibCVS/WorkingFileOrDirectory.pm
+    - blib/lib/VCS/LibCVS/WorkingUnmanagedFile.pm
+  test_info: []
+  tests: []
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.tvXh
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270011199
+  examine_start_time: 1270011167
+  examine_time: 32
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1270011199
+  run_start_time: 1270011167
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

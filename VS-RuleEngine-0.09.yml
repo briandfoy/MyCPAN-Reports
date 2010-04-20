@@ -1,0 +1,3134 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Generic rule based processing engine
+    author:
+      - 'Claes Jakobsson <claesjac@cpan.org>'
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.44
+    license: mit
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: VS-RuleEngine
+    requires:
+      List::Util: 0
+      Object::Tiny: 0
+      Scalar::Util: 0
+      Test::AbstractMethod: 0
+      Test::Exception: 0
+      Test::More: 0
+    version: 0.09
+  blib:
+    - blib/lib/VS/RuleEngine.pm
+    - blib/lib/VS/RuleEngine/Action.pm
+    - blib/lib/VS/RuleEngine/Action/Perl.pm
+    - blib/lib/VS/RuleEngine/Action/SetGlobal.pm
+    - blib/lib/VS/RuleEngine/Action/SetLocal.pm
+    - blib/lib/VS/RuleEngine/Constants.pm
+    - blib/lib/VS/RuleEngine/Cv.pm
+    - blib/lib/VS/RuleEngine/Data.pm
+    - blib/lib/VS/RuleEngine/Declare.pm
+    - blib/lib/VS/RuleEngine/Engine.pm
+    - blib/lib/VS/RuleEngine/Engine/Actions.pm
+    - blib/lib/VS/RuleEngine/Engine/Common.pm
+    - blib/lib/VS/RuleEngine/Engine/Defaults.pm
+    - blib/lib/VS/RuleEngine/Engine/Hooks.pm
+    - blib/lib/VS/RuleEngine/Engine/Inputs.pm
+    - blib/lib/VS/RuleEngine/Engine/Outputs.pm
+    - blib/lib/VS/RuleEngine/Engine/Rules.pm
+    - blib/lib/VS/RuleEngine/Hook.pm
+    - blib/lib/VS/RuleEngine/Hook/Perl.pm
+    - blib/lib/VS/RuleEngine/Input.pm
+    - blib/lib/VS/RuleEngine/Input/Perl.pm
+    - blib/lib/VS/RuleEngine/InputHandler.pm
+    - blib/lib/VS/RuleEngine/Output.pm
+    - blib/lib/VS/RuleEngine/Output/Perl.pm
+    - blib/lib/VS/RuleEngine/Rule.pm
+    - blib/lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+    - blib/lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+    - blib/lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+    - blib/lib/VS/RuleEngine/Rule/Perl.pm
+    - blib/lib/VS/RuleEngine/Runloop.pm
+    - blib/lib/VS/RuleEngine/TypeDecl.pm
+    - blib/lib/VS/RuleEngine/Util.pm
+    - blib/man3/VS::RuleEngine.3
+    - blib/man3/VS::RuleEngine::Action.3
+    - blib/man3/VS::RuleEngine::Action::Perl.3
+    - blib/man3/VS::RuleEngine::Action::SetGlobal.3
+    - blib/man3/VS::RuleEngine::Action::SetLocal.3
+    - blib/man3/VS::RuleEngine::Constants.3
+    - blib/man3/VS::RuleEngine::Cv.3
+    - blib/man3/VS::RuleEngine::Data.3
+    - blib/man3/VS::RuleEngine::Declare.3
+    - blib/man3/VS::RuleEngine::Engine.3
+    - blib/man3/VS::RuleEngine::Engine::Actions.3
+    - blib/man3/VS::RuleEngine::Engine::Common.3
+    - blib/man3/VS::RuleEngine::Engine::Defaults.3
+    - blib/man3/VS::RuleEngine::Engine::Hooks.3
+    - blib/man3/VS::RuleEngine::Engine::Inputs.3
+    - blib/man3/VS::RuleEngine::Engine::Outputs.3
+    - blib/man3/VS::RuleEngine::Engine::Rules.3
+    - blib/man3/VS::RuleEngine::Hook.3
+    - blib/man3/VS::RuleEngine::Hook::Perl.3
+    - blib/man3/VS::RuleEngine::Input.3
+    - blib/man3/VS::RuleEngine::Input::Perl.3
+    - blib/man3/VS::RuleEngine::InputHandler.3
+    - blib/man3/VS::RuleEngine::Output.3
+    - blib/man3/VS::RuleEngine::Output::Perl.3
+    - blib/man3/VS::RuleEngine::Rule.3
+    - blib/man3/VS::RuleEngine::Rule::InputMatchesRegexp.3
+    - blib/man3/VS::RuleEngine::Rule::InputOverThreshold.3
+    - blib/man3/VS::RuleEngine::Rule::InputUnderThreshold.3
+    - blib/man3/VS::RuleEngine::Rule::Perl.3
+    - blib/man3/VS::RuleEngine::Runloop.3
+    - blib/man3/VS::RuleEngine::TypeDecl.3
+    - blib/man3/VS::RuleEngine::Util.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Object::Tiny 0 not found.
+    Warning: prerequisite Test::AbstractMethod 0 not found.
+    Warning: prerequisite Test::Exception 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for VS::RuleEngine
+  build_output: |
+    cp lib/VS/RuleEngine/Output/Perl.pm blib/lib/VS/RuleEngine/Output/Perl.pm
+    cp lib/VS/RuleEngine/Engine/Outputs.pm blib/lib/VS/RuleEngine/Engine/Outputs.pm
+    cp lib/VS/RuleEngine/Input.pm blib/lib/VS/RuleEngine/Input.pm
+    cp lib/VS/RuleEngine/Engine/Common.pm blib/lib/VS/RuleEngine/Engine/Common.pm
+    cp lib/VS/RuleEngine/Constants.pm blib/lib/VS/RuleEngine/Constants.pm
+    cp lib/VS/RuleEngine/Hook.pm blib/lib/VS/RuleEngine/Hook.pm
+    cp lib/VS/RuleEngine/Input/Perl.pm blib/lib/VS/RuleEngine/Input/Perl.pm
+    cp lib/VS/RuleEngine/Engine/Defaults.pm blib/lib/VS/RuleEngine/Engine/Defaults.pm
+    cp lib/VS/RuleEngine/Engine/Rules.pm blib/lib/VS/RuleEngine/Engine/Rules.pm
+    cp lib/VS/RuleEngine/Action/SetGlobal.pm blib/lib/VS/RuleEngine/Action/SetGlobal.pm
+    cp lib/VS/RuleEngine/Hook/Perl.pm blib/lib/VS/RuleEngine/Hook/Perl.pm
+    cp lib/VS/RuleEngine/Rule/InputUnderThreshold.pm blib/lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+    cp lib/VS/RuleEngine/Engine/Inputs.pm blib/lib/VS/RuleEngine/Engine/Inputs.pm
+    cp lib/VS/RuleEngine/Data.pm blib/lib/VS/RuleEngine/Data.pm
+    cp lib/VS/RuleEngine/InputHandler.pm blib/lib/VS/RuleEngine/InputHandler.pm
+    cp lib/VS/RuleEngine/Output.pm blib/lib/VS/RuleEngine/Output.pm
+    cp lib/VS/RuleEngine/Util.pm blib/lib/VS/RuleEngine/Util.pm
+    cp lib/VS/RuleEngine/Action/SetLocal.pm blib/lib/VS/RuleEngine/Action/SetLocal.pm
+    cp lib/VS/RuleEngine.pm blib/lib/VS/RuleEngine.pm
+    cp lib/VS/RuleEngine/Action/Perl.pm blib/lib/VS/RuleEngine/Action/Perl.pm
+    cp lib/VS/RuleEngine/Rule/Perl.pm blib/lib/VS/RuleEngine/Rule/Perl.pm
+    cp lib/VS/RuleEngine/TypeDecl.pm blib/lib/VS/RuleEngine/TypeDecl.pm
+    cp lib/VS/RuleEngine/Declare.pm blib/lib/VS/RuleEngine/Declare.pm
+    cp lib/VS/RuleEngine/Action.pm blib/lib/VS/RuleEngine/Action.pm
+    cp lib/VS/RuleEngine/Cv.pm blib/lib/VS/RuleEngine/Cv.pm
+    cp lib/VS/RuleEngine/Runloop.pm blib/lib/VS/RuleEngine/Runloop.pm
+    cp lib/VS/RuleEngine/Engine.pm blib/lib/VS/RuleEngine/Engine.pm
+    cp lib/VS/RuleEngine/Engine/Actions.pm blib/lib/VS/RuleEngine/Engine/Actions.pm
+    cp lib/VS/RuleEngine/Engine/Hooks.pm blib/lib/VS/RuleEngine/Engine/Hooks.pm
+    cp lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm blib/lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+    cp lib/VS/RuleEngine/Rule/InputOverThreshold.pm blib/lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+    cp lib/VS/RuleEngine/Rule.pm blib/lib/VS/RuleEngine/Rule.pm
+    Manifying blib/man3/VS::RuleEngine::Output::Perl.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Outputs.3
+    Manifying blib/man3/VS::RuleEngine::Input.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Common.3
+    Manifying blib/man3/VS::RuleEngine::Constants.3
+    Manifying blib/man3/VS::RuleEngine::Hook.3
+    Manifying blib/man3/VS::RuleEngine::Input::Perl.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Defaults.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Rules.3
+    Manifying blib/man3/VS::RuleEngine::Action::SetGlobal.3
+    Manifying blib/man3/VS::RuleEngine::Hook::Perl.3
+    Manifying blib/man3/VS::RuleEngine::Rule::InputUnderThreshold.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Inputs.3
+    Manifying blib/man3/VS::RuleEngine::Data.3
+    Manifying blib/man3/VS::RuleEngine::InputHandler.3
+    Manifying blib/man3/VS::RuleEngine::Output.3
+    Manifying blib/man3/VS::RuleEngine::Util.3
+    Manifying blib/man3/VS::RuleEngine::Action::SetLocal.3
+    Manifying blib/man3/VS::RuleEngine.3
+    Manifying blib/man3/VS::RuleEngine::Action::Perl.3
+    Manifying blib/man3/VS::RuleEngine::Rule::Perl.3
+    Manifying blib/man3/VS::RuleEngine::TypeDecl.3
+    Manifying blib/man3/VS::RuleEngine::Declare.3
+    Manifying blib/man3/VS::RuleEngine::Action.3
+    Manifying blib/man3/VS::RuleEngine::Cv.3
+    Manifying blib/man3/VS::RuleEngine::Runloop.3
+    Manifying blib/man3/VS::RuleEngine::Engine.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Actions.3
+    Manifying blib/man3/VS::RuleEngine::Engine::Hooks.3
+    Manifying blib/man3/VS::RuleEngine::Rule::InputMatchesRegexp.3
+    Manifying blib/man3/VS::RuleEngine::Rule::InputOverThreshold.3
+    Manifying blib/man3/VS::RuleEngine::Rule.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV/VS-RuleEngine-0.09/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV/VS-RuleEngine-0.09
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV/VS-RuleEngine-0.09/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV/VS-RuleEngine-0.09/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: CLAESJAC
+  dist_basename: VS-RuleEngine-0.09.tar.gz
+  dist_date: 1217842192
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV/VS-RuleEngine-0.09
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV/VS-RuleEngine-0.09
+  dist_file: /home/brian/CPAN/authors/id/C/CL/CLAESJAC/VS-RuleEngine-0.09.tar.gz
+  dist_md5: f3d86d07fd9c2027f22a54da05064b61
+  dist_size: 23586
+  manifest:
+    - Changes
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - lib/VS/RuleEngine.pm
+    - lib/VS/RuleEngine/Action.pm
+    - lib/VS/RuleEngine/Action/Perl.pm
+    - lib/VS/RuleEngine/Action/SetGlobal.pm
+    - lib/VS/RuleEngine/Action/SetLocal.pm
+    - lib/VS/RuleEngine/Constants.pm
+    - lib/VS/RuleEngine/Cv.pm
+    - lib/VS/RuleEngine/Data.pm
+    - lib/VS/RuleEngine/Declare.pm
+    - lib/VS/RuleEngine/Engine.pm
+    - lib/VS/RuleEngine/Engine/Actions.pm
+    - lib/VS/RuleEngine/Engine/Common.pm
+    - lib/VS/RuleEngine/Engine/Defaults.pm
+    - lib/VS/RuleEngine/Engine/Hooks.pm
+    - lib/VS/RuleEngine/Engine/Inputs.pm
+    - lib/VS/RuleEngine/Engine/Outputs.pm
+    - lib/VS/RuleEngine/Engine/Rules.pm
+    - lib/VS/RuleEngine/Hook.pm
+    - lib/VS/RuleEngine/Hook/Perl.pm
+    - lib/VS/RuleEngine/Input.pm
+    - lib/VS/RuleEngine/Input/Perl.pm
+    - lib/VS/RuleEngine/InputHandler.pm
+    - lib/VS/RuleEngine/Output.pm
+    - lib/VS/RuleEngine/Output/Perl.pm
+    - lib/VS/RuleEngine/Rule.pm
+    - lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+    - lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+    - lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+    - lib/VS/RuleEngine/Rule/Perl.pm
+    - lib/VS/RuleEngine/Runloop.pm
+    - lib/VS/RuleEngine/TypeDecl.pm
+    - lib/VS/RuleEngine/Util.pm
+    - t/action/01-setlocal.t
+    - t/action/02-setglobal.t
+    - t/assorted/01-typedecl.t
+    - t/declare/01-basic.t
+    - t/declare/02-inputs.t
+    - t/declare/03-outputs.t
+    - t/declare/04-actions.t
+    - t/declare/05-hooks.t
+    - t/declare/06-rules.t
+    - t/declare/07-defaults.t
+    - t/docs/pod-coverage.t
+    - t/docs/pod.t
+    - t/engine/01-basic.t
+    - t/engine/02-input-add.t
+    - t/engine/03-hook-add.t
+    - t/engine/04-prehook.t
+    - t/engine/05-posthook.t
+    - t/engine/06-action-add.t
+    - t/engine/07-rule-add.t
+    - t/engine/08-rule-order.t
+    - t/engine/09-rule-actions.t
+    - t/engine/10-inputs.t
+    - t/engine/11-defaults.t
+    - t/hook/01-base.t
+    - t/input/01-base.t
+    - t/lib/Test/VS/RuleEngine/Action.pm
+    - t/lib/Test/VS/RuleEngine/Hook.pm
+    - t/lib/Test/VS/RuleEngine/Input.pm
+    - t/lib/Test/VS/RuleEngine/Output.pm
+    - t/lib/Test/VS/RuleEngine/Rule.pm
+    - t/output/01-base.t
+    - t/rule/01-base.t
+    - t/rule/02-inputoverthreshold.t
+    - t/rule/03-inputunderthreshold.t
+    - t/rule/04-inputmatchingregexp.t
+    - t/runloop/01-basic.t
+    - t/runloop/02-hooks.t
+    - t/runloop/03-rules.t
+    - t/runloop/04-actions.t
+    - t/runloop/05-output.t
+    - t/runloop/07-multiple.t
+    - t/runloop/08-globals.t
+    - t/runloop/09-skip.t
+  manifest_file_info:
+    - bytesize: 2377
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1217838589
+      name: Changes
+    - bytesize: 1101
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1217838269
+      name: LICENSE
+    - bytesize: 2183
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1217841995
+      name: MANIFEST
+    - bytesize: 638
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1217841995
+      name: META.yml
+    - bytesize: 632
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1217838269
+      name: Makefile.PL
+    - bytesize: 5635
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1217838269
+      name: README
+    - bytesize: 5433
+      file_mime_type: ~
+      line_count: ~
+      md5: 33df4652756a277940218372e5155016
+      mtime: 1217838269
+      name: lib/VS/RuleEngine.pm
+    - bytesize: 801
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f50382d18eca51ad866c777993625f8
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Action.pm
+    - bytesize: 605
+      file_mime_type: ~
+      line_count: ~
+      md5: aacdfb04c07071f124e09a0edbbcd725
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Action/Perl.pm
+    - bytesize: 1422
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d1209738d6bde076fc267c97f226d45
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Action/SetGlobal.pm
+    - bytesize: 1420
+      file_mime_type: ~
+      line_count: ~
+      md5: 98af208d193f168c65303502a14d536a
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Action/SetLocal.pm
+    - bytesize: 1359
+      file_mime_type: ~
+      line_count: ~
+      md5: f8194804a59c54f00df4534703ccd3d0
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Constants.pm
+    - bytesize: 373
+      file_mime_type: ~
+      line_count: ~
+      md5: 47195fdd3ad418ed8ea10bbf1617a985
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Cv.pm
+    - bytesize: 1847
+      file_mime_type: ~
+      line_count: ~
+      md5: ffc4817aee1bdd75be6a3d7d8496503d
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Data.pm
+    - bytesize: 9701
+      file_mime_type: ~
+      line_count: ~
+      md5: 583797a1adc87c2cd4000dff1899e067
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Declare.pm
+    - bytesize: 5191
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fcc57537156b6fe312822c8bf0a5484
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine.pm
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: ddc2f1e1cadfc710e57d6775ef7490e8
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Actions.pm
+    - bytesize: 997
+      file_mime_type: ~
+      line_count: ~
+      md5: 32809109d27bcf982025f88ff4a2b5ec
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Common.pm
+    - bytesize: 719
+      file_mime_type: ~
+      line_count: ~
+      md5: f907a1a34cbfe2545597a7f032a639d2
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Defaults.pm
+    - bytesize: 1163
+      file_mime_type: ~
+      line_count: ~
+      md5: f53075543a50819228cfce50f78be7a4
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Hooks.pm
+    - bytesize: 992
+      file_mime_type: ~
+      line_count: ~
+      md5: 8faa4e77f713feb811e538d0db909b4d
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Inputs.pm
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: 44474689251308a199e3428845b68835
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Outputs.pm
+    - bytesize: 1308
+      file_mime_type: ~
+      line_count: ~
+      md5: 14a3764b44f96614a37fd3e99f4a1bce
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Engine/Rules.pm
+    - bytesize: 841
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cbcdfdc345df9577447b4a7e7ec2695
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Hook.pm
+    - bytesize: 596
+      file_mime_type: ~
+      line_count: ~
+      md5: b7a866446c21b540dcf011d7574ec562
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Hook/Perl.pm
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: ac78183bf041cffca79f809f98b22bb1
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Input.pm
+    - bytesize: 598
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e9232dd1972f0315d45f8126f359f76
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Input/Perl.pm
+    - bytesize: 2763
+      file_mime_type: ~
+      line_count: ~
+      md5: ec4cf54d9cebec8dc9e6843be245f9da
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/InputHandler.pm
+    - bytesize: 1484
+      file_mime_type: ~
+      line_count: ~
+      md5: a6277ff44d12b30f99bb65a7c2b63835
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Output.pm
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: e43bc65c460ebc10b56c819bfc773dc2
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Output/Perl.pm
+    - bytesize: 880
+      file_mime_type: ~
+      line_count: ~
+      md5: 56308cc96a4e309ad4282de2de972689
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Rule.pm
+    - bytesize: 1811
+      file_mime_type: ~
+      line_count: ~
+      md5: a9e054aceecc04edadecc7bc6daa82d4
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+    - bytesize: 1993
+      file_mime_type: ~
+      line_count: ~
+      md5: 31682d9453a57ff5b23807d7a0e2160d
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+    - bytesize: 2007
+      file_mime_type: ~
+      line_count: ~
+      md5: e7ab998bbcdf8100189ed769b6bdaaf3
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+    - bytesize: 600
+      file_mime_type: ~
+      line_count: ~
+      md5: 39b4f2465c12d312ad7cb9689f2354a1
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Rule/Perl.pm
+    - bytesize: 6265
+      file_mime_type: ~
+      line_count: ~
+      md5: 316524ebb1fced6c4b3778a49d94fa08
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Runloop.pm
+    - bytesize: 2072
+      file_mime_type: ~
+      line_count: ~
+      md5: 51b643e2d4f37246848a99258e9fd6a3
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/TypeDecl.pm
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: 068fd1cf5385254bc1729b4fe99f2111
+      mtime: 1217838269
+      name: lib/VS/RuleEngine/Util.pm
+    - bytesize: 708
+      file_mime_type: ~
+      line_count: ~
+      md5: 50f4600cfc06a8c0ead52876a72231ff
+      mtime: 1217838269
+      name: t/action/01-setlocal.t
+    - bytesize: 716
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ba3f278c53bbc74afc6694a275a84fa
+      mtime: 1217838269
+      name: t/action/02-setglobal.t
+    - bytesize: 1198
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dd0021407aa32ea5cf6298633257f6e
+      mtime: 1217838269
+      name: t/assorted/01-typedecl.t
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: 9518f56fe23fda8e7e07f52b220e32eb
+      mtime: 1217838269
+      name: t/declare/01-basic.t
+    - bytesize: 1156
+      file_mime_type: ~
+      line_count: ~
+      md5: 0961d35714fb147c27ef2fd89c3ecd50
+      mtime: 1217838269
+      name: t/declare/02-inputs.t
+    - bytesize: 1205
+      file_mime_type: ~
+      line_count: ~
+      md5: c4932ce3520bfd285350b512f367a71e
+      mtime: 1217838269
+      name: t/declare/03-outputs.t
+    - bytesize: 1205
+      file_mime_type: ~
+      line_count: ~
+      md5: 763273de1b0eccfba49da661965f5416
+      mtime: 1217838269
+      name: t/declare/04-actions.t
+    - bytesize: 2195
+      file_mime_type: ~
+      line_count: ~
+      md5: 71ec0d53a183caf69e612f12feb1e08a
+      mtime: 1217838269
+      name: t/declare/05-hooks.t
+    - bytesize: 1639
+      file_mime_type: ~
+      line_count: ~
+      md5: 83bb7251b7284f61dbd803c670236882
+      mtime: 1217838269
+      name: t/declare/06-rules.t
+    - bytesize: 964
+      file_mime_type: ~
+      line_count: ~
+      md5: b065ec7a15fd9f98ddd209f920f5f377
+      mtime: 1217838269
+      name: t/declare/07-defaults.t
+    - bytesize: 260
+      file_mime_type: ~
+      line_count: ~
+      md5: 26e4f199363827fad104534c1a742266
+      mtime: 1217838269
+      name: t/docs/pod-coverage.t
+    - bytesize: 227
+      file_mime_type: ~
+      line_count: ~
+      md5: 362874bdc4a9eca18e912814a219ddc0
+      mtime: 1217838269
+      name: t/docs/pod.t
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 577e8efc37379705b12c3cbaac667c19
+      mtime: 1217838269
+      name: t/engine/01-basic.t
+    - bytesize: 1533
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a54ce3ed1a0752f919810fbe0405b34
+      mtime: 1217838269
+      name: t/engine/02-input-add.t
+    - bytesize: 1242
+      file_mime_type: ~
+      line_count: ~
+      md5: f25984c3cca00996a3a71e70d8f811f0
+      mtime: 1217838269
+      name: t/engine/03-hook-add.t
+    - bytesize: 703
+      file_mime_type: ~
+      line_count: ~
+      md5: cc9ecaadfed1ceb5992f479f31ea62f1
+      mtime: 1217838269
+      name: t/engine/04-prehook.t
+    - bytesize: 708
+      file_mime_type: ~
+      line_count: ~
+      md5: 76fbbcca187644a00b5423eee1ec255f
+      mtime: 1217838269
+      name: t/engine/05-posthook.t
+    - bytesize: 1562
+      file_mime_type: ~
+      line_count: ~
+      md5: f8395ec86acd48868fc8b950e6a1df24
+      mtime: 1217838269
+      name: t/engine/06-action-add.t
+    - bytesize: 1512
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f0f6da74b4a37dcd4a99217af2452ce
+      mtime: 1217838269
+      name: t/engine/07-rule-add.t
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: 9758888f3cc1c4d102ed8a6be88e222b
+      mtime: 1217838269
+      name: t/engine/08-rule-order.t
+    - bytesize: 643
+      file_mime_type: ~
+      line_count: ~
+      md5: b642d53d4cda799e9bf65bfb94b129de
+      mtime: 1217838269
+      name: t/engine/09-rule-actions.t
+    - bytesize: 1383
+      file_mime_type: ~
+      line_count: ~
+      md5: 11e591e06b13c87be903429a260ad70a
+      mtime: 1217838269
+      name: t/engine/10-inputs.t
+    - bytesize: 975
+      file_mime_type: ~
+      line_count: ~
+      md5: 630cb79bb3e29cd669fd7ca7edfd848e
+      mtime: 1217838269
+      name: t/engine/11-defaults.t
+    - bytesize: 358
+      file_mime_type: ~
+      line_count: ~
+      md5: 26ff3ead3d881a79e9a63dbab4b3e99e
+      mtime: 1217838269
+      name: t/hook/01-base.t
+    - bytesize: 360
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b098b4f3f4865f2fff6a8a8c138b5af
+      mtime: 1217838269
+      name: t/input/01-base.t
+    - bytesize: 391
+      file_mime_type: ~
+      line_count: ~
+      md5: 535b930345b3fb45d06fa4ad8bbccd8c
+      mtime: 1217838269
+      name: t/lib/Test/VS/RuleEngine/Action.pm
+    - bytesize: 383
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a9a0de284211767ef98c44de861193c
+      mtime: 1217838269
+      name: t/lib/Test/VS/RuleEngine/Hook.pm
+    - bytesize: 387
+      file_mime_type: ~
+      line_count: ~
+      md5: fb7c2fc52c9f53ebf96364e14d6778b5
+      mtime: 1217838269
+      name: t/lib/Test/VS/RuleEngine/Input.pm
+    - bytesize: 391
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b7930fd9b804e0897f517a334c8b661
+      mtime: 1217838269
+      name: t/lib/Test/VS/RuleEngine/Output.pm
+    - bytesize: 383
+      file_mime_type: ~
+      line_count: ~
+      md5: 18bba375b45d726d06ba6c021b2e25db
+      mtime: 1217838269
+      name: t/lib/Test/VS/RuleEngine/Rule.pm
+    - bytesize: 392
+      file_mime_type: ~
+      line_count: ~
+      md5: c019da2920cc7e8469f577b548ec3748
+      mtime: 1217838269
+      name: t/output/01-base.t
+    - bytesize: 359
+      file_mime_type: ~
+      line_count: ~
+      md5: 926fbf9dee28f6658b74c006487d6f87
+      mtime: 1217838269
+      name: t/rule/01-base.t
+    - bytesize: 1524
+      file_mime_type: ~
+      line_count: ~
+      md5: e33f71ee36413e0acf0365cffe152781
+      mtime: 1217838269
+      name: t/rule/02-inputoverthreshold.t
+    - bytesize: 1526
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dfc006dab257ddb014787b9e10490db
+      mtime: 1217838269
+      name: t/rule/03-inputunderthreshold.t
+    - bytesize: 1350
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b4748c5a2e16dcaee60b7c1c62dcf96
+      mtime: 1217838269
+      name: t/rule/04-inputmatchingregexp.t
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eba01b47333e623dc597d3c0a7db63d
+      mtime: 1217838269
+      name: t/runloop/01-basic.t
+    - bytesize: 1401
+      file_mime_type: ~
+      line_count: ~
+      md5: 4226fd47451f64ef8041fb202cbcd331
+      mtime: 1217838269
+      name: t/runloop/02-hooks.t
+    - bytesize: 1164
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f8312579f99330b904100c1e3fe979b
+      mtime: 1217838269
+      name: t/runloop/03-rules.t
+    - bytesize: 1535
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c1ac2556631f5f7d810e340d64f8b0d
+      mtime: 1217838269
+      name: t/runloop/04-actions.t
+    - bytesize: 891
+      file_mime_type: ~
+      line_count: ~
+      md5: 965ea3d8db741f587011101fd15e521f
+      mtime: 1217838269
+      name: t/runloop/05-output.t
+    - bytesize: 673
+      file_mime_type: ~
+      line_count: ~
+      md5: c622e6672835da7864a478e5d2846e28
+      mtime: 1217838269
+      name: t/runloop/07-multiple.t
+    - bytesize: 1072
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fc89094b11a51b7defa2dcb4d1a64fd
+      mtime: 1217838269
+      name: t/runloop/08-globals.t
+    - bytesize: 1017
+      file_mime_type: ~
+      line_count: ~
+      md5: 66022c3f0c1b5b166f8282e933db6b86
+      mtime: 1217838269
+      name: t/runloop/09-skip.t
+  module_info:
+    - bytesize: 5433
+      file_mime_type: ~
+      line_count: ~
+      md5: c1de2ef3ef6dbc1a1a03627cb88d902f
+      module_name_from_file_guess: VS::RuleEngine
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine.pm
+      packages:
+        - VS::RuleEngine
+      primary_package: VS::RuleEngine
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/VS/RuleEngine.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 0.09
+    - bytesize: 801
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bbb6f2ab56c9177e68b9f8d32b23c1f
+      module_name_from_file_guess: VS::RuleEngine::Action
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Action.pm
+      packages:
+        - VS::RuleEngine::Action
+      primary_package: VS::RuleEngine::Action
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Action.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 605
+      file_mime_type: ~
+      line_count: ~
+      md5: 8df4ed6bf5226d1cea1f4698a4f6de27
+      module_name_from_file_guess: VS::RuleEngine::Action::Perl
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Action/Perl.pm
+      packages:
+        - VS::RuleEngine::Action::Perl
+      primary_package: VS::RuleEngine::Action::Perl
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Action/Perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1422
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ad1b75d6e10f328b5289348a477c926
+      module_name_from_file_guess: VS::RuleEngine::Action::SetGlobal
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Action/SetGlobal.pm
+      packages:
+        - VS::RuleEngine::Action::SetGlobal
+      primary_package: VS::RuleEngine::Action::SetGlobal
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Constants
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Action/SetGlobal.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1420
+      file_mime_type: ~
+      line_count: ~
+      md5: 68946be4540918f1fb296a1fc6226b67
+      module_name_from_file_guess: VS::RuleEngine::Action::SetLocal
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Action/SetLocal.pm
+      packages:
+        - VS::RuleEngine::Action::SetLocal
+      primary_package: VS::RuleEngine::Action::SetLocal
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Constants
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Action/SetLocal.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1359
+      file_mime_type: ~
+      line_count: ~
+      md5: eacecb6aab8fc10adf8770db13a93766
+      module_name_from_file_guess: VS::RuleEngine::Constants
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Constants.pm
+      packages:
+        - VS::RuleEngine::Constants
+      primary_package: VS::RuleEngine::Constants
+      uses:
+        - strict
+        - warnings
+        - constant
+        - Exporter
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 373
+      file_mime_type: ~
+      line_count: ~
+      md5: 821f9f52cd15fd683a9be144e75d22c3
+      module_name_from_file_guess: VS::RuleEngine::Cv
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Cv.pm
+      packages:
+        - VS::RuleEngine::Cv
+      primary_package: VS::RuleEngine::Cv
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Cv.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1847
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bf1d2f165ad74703c0fa73ab3d0b52b
+      module_name_from_file_guess: VS::RuleEngine::Data
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Data.pm
+      packages:
+        - VS::RuleEngine::Data
+      primary_package: VS::RuleEngine::Data
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Data.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9701
+      file_mime_type: ~
+      line_count: ~
+      md5: c38f88a8f8d20f542b0f730e36eb7433
+      module_name_from_file_guess: VS::RuleEngine::Declare
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Declare.pm
+      packages:
+        - VS::RuleEngine::Declare
+      primary_package: VS::RuleEngine::Declare
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - List::Util
+        - Scalar::Util
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Action::Perl
+        - VS::RuleEngine::Hook::Perl
+        - VS::RuleEngine::Input::Perl
+        - VS::RuleEngine::Output::Perl
+        - VS::RuleEngine::Rule::Perl
+        - VS::RuleEngine::Util
+        - Exporter
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Declare.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5191
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d29026ed8f41966cd9b823a7352310d
+      module_name_from_file_guess: VS::RuleEngine::Engine
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine.pm
+      packages:
+        - VS::RuleEngine::Engine
+      primary_package: VS::RuleEngine::Engine
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Scalar::Util
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Data
+        - VS::RuleEngine::Util
+        - VS::RuleEngine::Runloop
+        - VS::RuleEngine::Engine::Actions
+        - VS::RuleEngine::Engine::Defaults
+        - VS::RuleEngine::Engine::Hooks
+        - VS::RuleEngine::Engine::Inputs
+        - VS::RuleEngine::Engine::Outputs
+        - VS::RuleEngine::Engine::Rules
+        - Object::Tiny
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: eb74242053e743ac57609ba8d794ce9e
+      module_name_from_file_guess: VS::RuleEngine::Engine::Actions
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Actions.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Engine::Common
+        - VS::RuleEngine::TypeDecl
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Actions.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 997
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e25ce08ad772cd98a45148d23d0439e
+      module_name_from_file_guess: VS::RuleEngine::Engine::Common
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Common.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - VS::RuleEngine::Util
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Common.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 719
+      file_mime_type: ~
+      line_count: ~
+      md5: 80d72be7ddcc167afb6c975819d1f968
+      module_name_from_file_guess: VS::RuleEngine::Engine::Defaults
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Defaults.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Defaults.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1163
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d2cca0e135b584ea368c3ff74abe5ef
+      module_name_from_file_guess: VS::RuleEngine::Engine::Hooks
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Hooks.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Engine::Common
+        - VS::RuleEngine::TypeDecl
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Hooks.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 992
+      file_mime_type: ~
+      line_count: ~
+      md5: d4083edf956e6d42d274c0e83803c7df
+      module_name_from_file_guess: VS::RuleEngine::Engine::Inputs
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Inputs.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Engine::Common
+        - VS::RuleEngine::InputHandler
+        - VS::RuleEngine::TypeDecl
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Inputs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: 85a881e580c418d30a5dc78e8f54e363
+      module_name_from_file_guess: VS::RuleEngine::Engine::Outputs
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Outputs.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Engine::Common
+        - VS::RuleEngine::TypeDecl
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Outputs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1308
+      file_mime_type: ~
+      line_count: ~
+      md5: a02fcc4f3e91274503e059d2072c6ab7
+      module_name_from_file_guess: VS::RuleEngine::Engine::Rules
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Engine/Rules.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - VS::RuleEngine::Engine::Common
+        - VS::RuleEngine::TypeDecl
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Engine/Rules.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 841
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cda6acd3d3750c8cfee2d933cb8456e
+      module_name_from_file_guess: VS::RuleEngine::Hook
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Hook.pm
+      packages:
+        - VS::RuleEngine::Hook
+      primary_package: VS::RuleEngine::Hook
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Hook.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 596
+      file_mime_type: ~
+      line_count: ~
+      md5: a645f50a1a5e0ec8d20c7e35e5cf1774
+      module_name_from_file_guess: VS::RuleEngine::Hook::Perl
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Hook/Perl.pm
+      packages:
+        - VS::RuleEngine::Hook::Perl
+      primary_package: VS::RuleEngine::Hook::Perl
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Hook/Perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: 65f462431ea65c02b7ccc25ffc0d37d1
+      module_name_from_file_guess: VS::RuleEngine::Input
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Input.pm
+      packages:
+        - VS::RuleEngine::Input
+      primary_package: VS::RuleEngine::Input
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Input.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 598
+      file_mime_type: ~
+      line_count: ~
+      md5: 75adb07eba4722c8112e601119c21c91
+      module_name_from_file_guess: VS::RuleEngine::Input::Perl
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Input/Perl.pm
+      packages:
+        - VS::RuleEngine::Input::Perl
+      primary_package: VS::RuleEngine::Input::Perl
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Input/Perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2763
+      file_mime_type: ~
+      line_count: ~
+      md5: 428c27fe5a682576a172ad86af768597
+      module_name_from_file_guess: VS::RuleEngine::InputHandler
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/InputHandler.pm
+      packages:
+        - VS::RuleEngine::InputHandler
+      primary_package: VS::RuleEngine::InputHandler
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/VS/RuleEngine/InputHandler.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1484
+      file_mime_type: ~
+      line_count: ~
+      md5: b8fa05a321dd32dcb009311e756ee56b
+      module_name_from_file_guess: VS::RuleEngine::Output
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Output.pm
+      packages:
+        - VS::RuleEngine::Output
+      primary_package: VS::RuleEngine::Output
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Output.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: ddbe57dfac17616bab876802968b518f
+      module_name_from_file_guess: VS::RuleEngine::Output::Perl
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Output/Perl.pm
+      packages:
+        - VS::RuleEngine::Output::Perl
+      primary_package: VS::RuleEngine::Output::Perl
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Output/Perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 880
+      file_mime_type: ~
+      line_count: ~
+      md5: 7962ded46414ada050f2bac773048727
+      module_name_from_file_guess: VS::RuleEngine::Rule
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Rule.pm
+      packages:
+        - VS::RuleEngine::Rule
+      primary_package: VS::RuleEngine::Rule
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Rule.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1811
+      file_mime_type: ~
+      line_count: ~
+      md5: d90c27212e183c12e96b06f477d8d9e2
+      module_name_from_file_guess: VS::RuleEngine::Rule::InputMatchesRegexp
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+      packages:
+        - VS::RuleEngine::Rule::InputMatchesRegexp
+      primary_package: VS::RuleEngine::Rule::InputMatchesRegexp
+      uses:
+        - strict
+        - warnings
+        - VS::RuleEngine::Constants
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1993
+      file_mime_type: ~
+      line_count: ~
+      md5: 032cca2bc5af4d0176df2f22c97ebcfe
+      module_name_from_file_guess: VS::RuleEngine::Rule::InputOverThreshold
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+      packages:
+        - VS::RuleEngine::Rule::InputOverThreshold
+      primary_package: VS::RuleEngine::Rule::InputOverThreshold
+      uses:
+        - strict
+        - warnings
+        - VS::RuleEngine::Constants
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2007
+      file_mime_type: ~
+      line_count: ~
+      md5: e897edbef28d47315ed7708f6129ec43
+      module_name_from_file_guess: VS::RuleEngine::Rule::InputUnderThreshold
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+      packages:
+        - VS::RuleEngine::Rule::InputUnderThreshold
+      primary_package: VS::RuleEngine::Rule::InputUnderThreshold
+      uses:
+        - strict
+        - warnings
+        - VS::RuleEngine::Constants
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 600
+      file_mime_type: ~
+      line_count: ~
+      md5: d4b62fb3d5cda73c9108c96bb1652af0
+      module_name_from_file_guess: VS::RuleEngine::Rule::Perl
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Rule/Perl.pm
+      packages:
+        - VS::RuleEngine::Rule::Perl
+      primary_package: VS::RuleEngine::Rule::Perl
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Rule/Perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6265
+      file_mime_type: ~
+      line_count: ~
+      md5: 201c5192d791e300db11740c5ffd99ae
+      module_name_from_file_guess: VS::RuleEngine::Runloop
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Runloop.pm
+      packages:
+        - VS::RuleEngine::Runloop
+      primary_package: VS::RuleEngine::Runloop
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - List::Util
+        - Scalar::Util
+        - VS::RuleEngine::Constants
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Runloop.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2072
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f00cf596139a5d61cff3d0d1439be25
+      module_name_from_file_guess: VS::RuleEngine::TypeDecl
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/TypeDecl.pm
+      packages:
+        - VS::RuleEngine::TypeDecl
+      primary_package: VS::RuleEngine::TypeDecl
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/VS/RuleEngine/TypeDecl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: 373dc1bcdd49ed8bce0db60d0478f02b
+      module_name_from_file_guess: VS::RuleEngine::Util
+      mtime: 1217838269
+      name: blib/lib/VS/RuleEngine/Util.pm
+      packages:
+        - VS::RuleEngine::Util
+      primary_package: VS::RuleEngine::Util
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Exporter
+      version_info:
+        filename: blib/lib/VS/RuleEngine/Util.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/VS/RuleEngine.pm
+    - blib/lib/VS/RuleEngine/Action.pm
+    - blib/lib/VS/RuleEngine/Action/Perl.pm
+    - blib/lib/VS/RuleEngine/Action/SetGlobal.pm
+    - blib/lib/VS/RuleEngine/Action/SetLocal.pm
+    - blib/lib/VS/RuleEngine/Constants.pm
+    - blib/lib/VS/RuleEngine/Cv.pm
+    - blib/lib/VS/RuleEngine/Data.pm
+    - blib/lib/VS/RuleEngine/Declare.pm
+    - blib/lib/VS/RuleEngine/Engine.pm
+    - blib/lib/VS/RuleEngine/Engine/Actions.pm
+    - blib/lib/VS/RuleEngine/Engine/Common.pm
+    - blib/lib/VS/RuleEngine/Engine/Defaults.pm
+    - blib/lib/VS/RuleEngine/Engine/Hooks.pm
+    - blib/lib/VS/RuleEngine/Engine/Inputs.pm
+    - blib/lib/VS/RuleEngine/Engine/Outputs.pm
+    - blib/lib/VS/RuleEngine/Engine/Rules.pm
+    - blib/lib/VS/RuleEngine/Hook.pm
+    - blib/lib/VS/RuleEngine/Hook/Perl.pm
+    - blib/lib/VS/RuleEngine/Input.pm
+    - blib/lib/VS/RuleEngine/Input/Perl.pm
+    - blib/lib/VS/RuleEngine/InputHandler.pm
+    - blib/lib/VS/RuleEngine/Output.pm
+    - blib/lib/VS/RuleEngine/Output/Perl.pm
+    - blib/lib/VS/RuleEngine/Rule.pm
+    - blib/lib/VS/RuleEngine/Rule/InputMatchesRegexp.pm
+    - blib/lib/VS/RuleEngine/Rule/InputOverThreshold.pm
+    - blib/lib/VS/RuleEngine/Rule/InputUnderThreshold.pm
+    - blib/lib/VS/RuleEngine/Rule/Perl.pm
+    - blib/lib/VS/RuleEngine/Runloop.pm
+    - blib/lib/VS/RuleEngine/TypeDecl.pm
+    - blib/lib/VS/RuleEngine/Util.pm
+  test_info:
+    - bytesize: 708
+      file_mime_type: ~
+      line_count: ~
+      md5: 50f4600cfc06a8c0ead52876a72231ff
+      mtime: 1217838269
+      name: t/action/01-setlocal.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Declare
+    - bytesize: 716
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ba3f278c53bbc74afc6694a275a84fa
+      mtime: 1217838269
+      name: t/action/02-setglobal.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Declare
+    - bytesize: 1198
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dd0021407aa32ea5cf6298633257f6e
+      mtime: 1217838269
+      name: t/assorted/01-typedecl.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Engine
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: 9518f56fe23fda8e7e07f52b220e32eb
+      mtime: 1217838269
+      name: t/declare/01-basic.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Engine
+    - bytesize: 1156
+      file_mime_type: ~
+      line_count: ~
+      md5: 0961d35714fb147c27ef2fd89c3ecd50
+      mtime: 1217838269
+      name: t/declare/02-inputs.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - lib
+        - Test::VS::RuleEngine::Input
+    - bytesize: 1205
+      file_mime_type: ~
+      line_count: ~
+      md5: c4932ce3520bfd285350b512f367a71e
+      mtime: 1217838269
+      name: t/declare/03-outputs.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - lib
+        - Test::VS::RuleEngine::Output
+    - bytesize: 1205
+      file_mime_type: ~
+      line_count: ~
+      md5: 763273de1b0eccfba49da661965f5416
+      mtime: 1217838269
+      name: t/declare/04-actions.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - lib
+        - Test::VS::RuleEngine::Action
+    - bytesize: 2195
+      file_mime_type: ~
+      line_count: ~
+      md5: 71ec0d53a183caf69e612f12feb1e08a
+      mtime: 1217838269
+      name: t/declare/05-hooks.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - lib
+        - Test::VS::RuleEngine::Hook
+    - bytesize: 1639
+      file_mime_type: ~
+      line_count: ~
+      md5: 83bb7251b7284f61dbd803c670236882
+      mtime: 1217838269
+      name: t/declare/06-rules.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - lib
+        - Test::VS::RuleEngine::Rule
+    - bytesize: 964
+      file_mime_type: ~
+      line_count: ~
+      md5: b065ec7a15fd9f98ddd209f920f5f377
+      mtime: 1217838269
+      name: t/declare/07-defaults.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - lib
+    - bytesize: 260
+      file_mime_type: ~
+      line_count: ~
+      md5: 26e4f199363827fad104534c1a742266
+      mtime: 1217838269
+      name: t/docs/pod-coverage.t
+      uses:
+        - Test::More
+    - bytesize: 227
+      file_mime_type: ~
+      line_count: ~
+      md5: 362874bdc4a9eca18e912814a219ddc0
+      mtime: 1217838269
+      name: t/docs/pod.t
+      uses:
+        - Test::More
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 577e8efc37379705b12c3cbaac667c19
+      mtime: 1217838269
+      name: t/engine/01-basic.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+    - bytesize: 1533
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a54ce3ed1a0752f919810fbe0405b34
+      mtime: 1217838269
+      name: t/engine/02-input-add.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Engine
+        - lib
+        - Test::VS::RuleEngine::Input
+    - bytesize: 1242
+      file_mime_type: ~
+      line_count: ~
+      md5: f25984c3cca00996a3a71e70d8f811f0
+      mtime: 1217838269
+      name: t/engine/03-hook-add.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Engine
+        - lib
+        - Test::VS::RuleEngine::Hook
+    - bytesize: 703
+      file_mime_type: ~
+      line_count: ~
+      md5: cc9ecaadfed1ceb5992f479f31ea62f1
+      mtime: 1217838269
+      name: t/engine/04-prehook.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Hook::Perl
+    - bytesize: 708
+      file_mime_type: ~
+      line_count: ~
+      md5: 76fbbcca187644a00b5423eee1ec255f
+      mtime: 1217838269
+      name: t/engine/05-posthook.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Hook::Perl
+    - bytesize: 1562
+      file_mime_type: ~
+      line_count: ~
+      md5: f8395ec86acd48868fc8b950e6a1df24
+      mtime: 1217838269
+      name: t/engine/06-action-add.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Engine
+        - lib
+        - Test::VS::RuleEngine::Action
+    - bytesize: 1512
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f0f6da74b4a37dcd4a99217af2452ce
+      mtime: 1217838269
+      name: t/engine/07-rule-add.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Engine
+        - lib
+        - Test::VS::RuleEngine::Rule
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: 9758888f3cc1c4d102ed8a6be88e222b
+      mtime: 1217838269
+      name: t/engine/08-rule-order.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - VS::RuleEngine::Engine
+    - bytesize: 643
+      file_mime_type: ~
+      line_count: ~
+      md5: b642d53d4cda799e9bf65bfb94b129de
+      mtime: 1217838269
+      name: t/engine/09-rule-actions.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Rule::Perl
+        - VS::RuleEngine::Action::Perl
+    - bytesize: 1383
+      file_mime_type: ~
+      line_count: ~
+      md5: 11e591e06b13c87be903429a260ad70a
+      mtime: 1217838269
+      name: t/engine/10-inputs.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Data
+        - VS::RuleEngine::Declare
+    - bytesize: 975
+      file_mime_type: ~
+      line_count: ~
+      md5: 630cb79bb3e29cd669fd7ca7edfd848e
+      mtime: 1217838269
+      name: t/engine/11-defaults.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Test::VS::RuleEngine::Action
+        - Test::VS::RuleEngine::Hook
+        - Test::VS::RuleEngine::Input
+        - Test::VS::RuleEngine::Output
+        - Test::VS::RuleEngine::Rule
+        - VS::RuleEngine::Engine
+    - bytesize: 358
+      file_mime_type: ~
+      line_count: ~
+      md5: 26ff3ead3d881a79e9a63dbab4b3e99e
+      mtime: 1217838269
+      name: t/hook/01-base.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::AbstractMethod
+    - bytesize: 360
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b098b4f3f4865f2fff6a8a8c138b5af
+      mtime: 1217838269
+      name: t/input/01-base.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::AbstractMethod
+    - bytesize: 392
+      file_mime_type: ~
+      line_count: ~
+      md5: c019da2920cc7e8469f577b548ec3748
+      mtime: 1217838269
+      name: t/output/01-base.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::AbstractMethod
+    - bytesize: 359
+      file_mime_type: ~
+      line_count: ~
+      md5: 926fbf9dee28f6658b74c006487d6f87
+      mtime: 1217838269
+      name: t/rule/01-base.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::AbstractMethod
+    - bytesize: 1524
+      file_mime_type: ~
+      line_count: ~
+      md5: e33f71ee36413e0acf0365cffe152781
+      mtime: 1217838269
+      name: t/rule/02-inputoverthreshold.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - VS::RuleEngine::Constants
+    - bytesize: 1526
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dfc006dab257ddb014787b9e10490db
+      mtime: 1217838269
+      name: t/rule/03-inputunderthreshold.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - VS::RuleEngine::Constants
+    - bytesize: 1350
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b4748c5a2e16dcaee60b7c1c62dcf96
+      mtime: 1217838269
+      name: t/rule/04-inputmatchingregexp.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - VS::RuleEngine::Constants
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eba01b47333e623dc597d3c0a7db63d
+      mtime: 1217838269
+      name: t/runloop/01-basic.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Scalar::Util
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Engine
+    - bytesize: 1401
+      file_mime_type: ~
+      line_count: ~
+      md5: 4226fd47451f64ef8041fb202cbcd331
+      mtime: 1217838269
+      name: t/runloop/02-hooks.t
+      uses: []
+    - bytesize: 1164
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f8312579f99330b904100c1e3fe979b
+      mtime: 1217838269
+      name: t/runloop/03-rules.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Runloop
+    - bytesize: 1535
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c1ac2556631f5f7d810e340d64f8b0d
+      mtime: 1217838269
+      name: t/runloop/04-actions.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Runloop
+    - bytesize: 891
+      file_mime_type: ~
+      line_count: ~
+      md5: 965ea3d8db741f587011101fd15e521f
+      mtime: 1217838269
+      name: t/runloop/05-output.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Runloop
+    - bytesize: 673
+      file_mime_type: ~
+      line_count: ~
+      md5: c622e6672835da7864a478e5d2846e28
+      mtime: 1217838269
+      name: t/runloop/07-multiple.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Runloop
+        - VS::RuleEngine::Engine
+    - bytesize: 1072
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fc89094b11a51b7defa2dcb4d1a64fd
+      mtime: 1217838269
+      name: t/runloop/08-globals.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Constants
+        - VS::RuleEngine::Data
+        - VS::RuleEngine::Engine
+        - VS::RuleEngine::Runloop
+    - bytesize: 1017
+      file_mime_type: ~
+      line_count: ~
+      md5: 66022c3f0c1b5b166f8282e933db6b86
+      mtime: 1217838269
+      name: t/runloop/09-skip.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - VS::RuleEngine::Declare
+        - VS::RuleEngine::Constants
+  tests:
+    - t/action/01-setlocal.t
+    - t/action/02-setglobal.t
+    - t/assorted/01-typedecl.t
+    - t/declare/01-basic.t
+    - t/declare/02-inputs.t
+    - t/declare/03-outputs.t
+    - t/declare/04-actions.t
+    - t/declare/05-hooks.t
+    - t/declare/06-rules.t
+    - t/declare/07-defaults.t
+    - t/docs/pod-coverage.t
+    - t/docs/pod.t
+    - t/engine/01-basic.t
+    - t/engine/02-input-add.t
+    - t/engine/03-hook-add.t
+    - t/engine/04-prehook.t
+    - t/engine/05-posthook.t
+    - t/engine/06-action-add.t
+    - t/engine/07-rule-add.t
+    - t/engine/08-rule-order.t
+    - t/engine/09-rule-actions.t
+    - t/engine/10-inputs.t
+    - t/engine/11-defaults.t
+    - t/hook/01-base.t
+    - t/input/01-base.t
+    - t/output/01-base.t
+    - t/rule/01-base.t
+    - t/rule/02-inputoverthreshold.t
+    - t/rule/03-inputunderthreshold.t
+    - t/rule/04-inputmatchingregexp.t
+    - t/runloop/01-basic.t
+    - t/runloop/02-hooks.t
+    - t/runloop/03-rules.t
+    - t/runloop/04-actions.t
+    - t/runloop/05-output.t
+    - t/runloop/07-multiple.t
+    - t/runloop/08-globals.t
+    - t/runloop/09-skip.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-77474._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 77474
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269044579
+  examine_start_time: 1269044564
+  examine_time: 15
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 77474
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269044579
+  run_start_time: 1269044564
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

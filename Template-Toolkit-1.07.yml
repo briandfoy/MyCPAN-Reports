@@ -1,0 +1,3719 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  blib:
+    - blib/lib/Template.pm
+    - blib/lib/Template.pod
+    - blib/lib/Template/Cache.pm
+    - blib/lib/Template/Constants.pm
+    - blib/lib/Template/Context.pm
+    - blib/lib/Template/Debug.pm
+    - blib/lib/Template/Directive.pm
+    - blib/lib/Template/Exception.pm
+    - blib/lib/Template/Filters.pm
+    - blib/lib/Template/Grammar.pm
+    - blib/lib/Template/Iterator.pm
+    - blib/lib/Template/Parser.pm
+    - blib/lib/Template/Plugin.pm
+    - blib/lib/Template/Plugin/CGI.pm
+    - blib/lib/Template/Plugin/Datafile.pm
+    - blib/lib/Template/Plugin/Format.pm
+    - blib/lib/Template/Plugin/Table.pm
+    - blib/lib/Template/Plugin/URL.pm
+    - blib/lib/Template/Plugin/XML/DOM.pm
+    - blib/lib/Template/Plugin/XML/RSS.pm
+    - blib/lib/Template/Stash.pm
+    - blib/lib/Template/Test.pm
+    - blib/lib/Template/Tutorial.pod
+    - blib/lib/Template/Utils.pm
+    - blib/man1/tpage.1
+    - blib/man1/ttree.1
+    - blib/man3/Template.3
+    - blib/man3/Template::Cache.3
+    - blib/man3/Template::Constants.3
+    - blib/man3/Template::Context.3
+    - blib/man3/Template::Directive.3
+    - blib/man3/Template::Exception.3
+    - blib/man3/Template::Filters.3
+    - blib/man3/Template::Iterator.3
+    - blib/man3/Template::Parser.3
+    - blib/man3/Template::Plugin.3
+    - blib/man3/Template::Plugin::CGI.3
+    - blib/man3/Template::Plugin::Datafile.3
+    - blib/man3/Template::Plugin::Format.3
+    - blib/man3/Template::Plugin::Table.3
+    - blib/man3/Template::Plugin::URL.3
+    - blib/man3/Template::Plugin::XML::DOM.3
+    - blib/man3/Template::Plugin::XML::RSS.3
+    - blib/man3/Template::Stash.3
+    - blib/man3/Template::Test.3
+    - blib/man3/Template::Tutorial.3
+    - blib/man3/Template::Utils.3
+    - blib/script/tpage
+    - blib/script/ttree
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite AppConfig 1.52 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Template
+  build_output: |
+    cp lib/Template/Stash.pm blib/lib/Template/Stash.pm
+    cp lib/Template/Parser.pm blib/lib/Template/Parser.pm
+    cp lib/Template/Context.pm blib/lib/Template/Context.pm
+    cp lib/Template/Debug.pm blib/lib/Template/Debug.pm
+    cp lib/Template/Plugin/Format.pm blib/lib/Template/Plugin/Format.pm
+    cp lib/Template/Plugin/XML/DOM.pm blib/lib/Template/Plugin/XML/DOM.pm
+    cp lib/Template/Plugin/XML/RSS.pm blib/lib/Template/Plugin/XML/RSS.pm
+    cp lib/Template/Tutorial.pod blib/lib/Template/Tutorial.pod
+    cp lib/Template/Grammar.pm blib/lib/Template/Grammar.pm
+    cp lib/Template/Plugin.pm blib/lib/Template/Plugin.pm
+    cp lib/Template.pod blib/lib/Template.pod
+    cp lib/Template/Directive.pm blib/lib/Template/Directive.pm
+    cp lib/Template/Plugin/Datafile.pm blib/lib/Template/Plugin/Datafile.pm
+    cp lib/Template/Plugin/CGI.pm blib/lib/Template/Plugin/CGI.pm
+    cp lib/Template/Constants.pm blib/lib/Template/Constants.pm
+    cp lib/Template/Cache.pm blib/lib/Template/Cache.pm
+    cp lib/Template/Filters.pm blib/lib/Template/Filters.pm
+    cp lib/Template/Plugin/URL.pm blib/lib/Template/Plugin/URL.pm
+    cp lib/Template/Test.pm blib/lib/Template/Test.pm
+    cp lib/Template/Utils.pm blib/lib/Template/Utils.pm
+    cp lib/Template/Exception.pm blib/lib/Template/Exception.pm
+    cp lib/Template.pm blib/lib/Template.pm
+    cp lib/Template/Plugin/Table.pm blib/lib/Template/Plugin/Table.pm
+    cp lib/Template/Iterator.pm blib/lib/Template/Iterator.pm
+    cp bin/tpage blib/script/tpage
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/tpage
+    cp bin/ttree blib/script/ttree
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/ttree
+    Manifying blib/man1/tpage.1
+    Manifying blib/man1/ttree.1
+    Manifying blib/man3/Template::Stash.3
+    Manifying blib/man3/Template::Plugin::XML::DOM.3
+    Manifying blib/man3/Template::Plugin::Format.3
+    Manifying blib/man3/Template::Context.3
+    Manifying blib/man3/Template::Parser.3
+    Manifying blib/man3/Template::Plugin::XML::RSS.3
+    Manifying blib/man3/Template::Tutorial.3
+    Manifying blib/man3/Template::Plugin.3
+    Manifying blib/man3/Template::Plugin::Datafile.3
+    Manifying blib/man3/Template::Directive.3
+    Manifying blib/man3/Template.3
+    Manifying blib/man3/Template::Plugin::CGI.3
+    Manifying blib/man3/Template::Constants.3
+    Manifying blib/man3/Template::Cache.3
+    Manifying blib/man3/Template::Filters.3
+    Manifying blib/man3/Template::Plugin::URL.3
+    Manifying blib/man3/Template::Exception.3
+    Manifying blib/man3/Template::Utils.3
+    Manifying blib/man3/Template::Test.3
+    Manifying blib/man3/Template::Plugin::Table.3
+    Manifying blib/man3/Template::Iterator.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH/Template-Toolkit-1.07/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH/Template-Toolkit-1.07
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH/Template-Toolkit-1.07/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH/Template-Toolkit-1.07/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: ABW
+  dist_basename: Template-Toolkit-1.07.tar.gz
+  dist_date: 961150692
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH/Template-Toolkit-1.07
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH/Template-Toolkit-1.07
+  dist_file: /home/brian/CPAN/authors/id/A/AB/ABW/Template-Toolkit-1.07.tar.gz
+  dist_md5: fb2be642ea9dfd49574c789bffdf7bef
+  dist_size: 228910
+  manifest:
+    - Changes
+    - MANIFEST
+    - Makefile.PL
+    - README
+    - TODO
+    - bin/README
+    - bin/tpage
+    - bin/ttree
+    - doc/README
+    - doc/bin/mkdoc
+    - doc/src/README.pod
+    - doc/src/Template.pod
+    - doc/src/Tutorial.pod
+    - doc/src/acks
+    - doc/src/author
+    - doc/src/bugs
+    - doc/src/contents
+    - doc/src/copyright
+    - doc/src/description
+    - doc/src/directives
+    - doc/src/example
+    - doc/src/examples
+    - doc/src/features
+    - doc/src/files
+    - doc/src/installing
+    - doc/src/mailinfo
+    - doc/src/maillist
+    - doc/src/methods
+    - doc/src/name
+    - doc/src/overview
+    - doc/src/plugins
+    - doc/src/prereq
+    - doc/src/related
+    - doc/src/seealso
+    - doc/src/synopsis
+    - doc/src/tutorial/cgi
+    - doc/src/tutorial/description
+    - doc/src/tutorial/introduction
+    - doc/src/tutorial/modperl
+    - doc/src/tutorial/name
+    - doc/src/tutorial/plugins
+    - doc/src/tutorial/static
+    - doc/src/version
+    - lib/Template.pm
+    - lib/Template.pod
+    - lib/Template/Cache.pm
+    - lib/Template/Constants.pm
+    - lib/Template/Context.pm
+    - lib/Template/Debug.pm
+    - lib/Template/Directive.pm
+    - lib/Template/Exception.pm
+    - lib/Template/Filters.pm
+    - lib/Template/Grammar.pm
+    - lib/Template/Iterator.pm
+    - lib/Template/Parser.pm
+    - lib/Template/Plugin.pm
+    - lib/Template/Plugin/CGI.pm
+    - lib/Template/Plugin/Datafile.pm
+    - lib/Template/Plugin/Format.pm
+    - lib/Template/Plugin/Table.pm
+    - lib/Template/Plugin/URL.pm
+    - lib/Template/Plugin/XML/DOM.pm
+    - lib/Template/Plugin/XML/RSS.pm
+    - lib/Template/Stash.pm
+    - lib/Template/Test.pm
+    - lib/Template/Tutorial.pod
+    - lib/Template/Utils.pm
+    - parser/Grammar.pm.skel
+    - parser/Parser.yp
+    - parser/README
+    - parser/yc
+    - t/README
+    - t/abspaths.t
+    - t/accessor.t
+    - t/binop.t
+    - t/block.t
+    - t/break.t
+    - t/cache.t
+    - t/call.t
+    - t/case.t
+    - t/catch.t
+    - t/cgi.t
+    - t/chomp.t
+    - t/code.t
+    - t/comment.t
+    - t/constants.t
+    - t/context.t
+    - t/datafile.t
+    - t/default.t
+    - t/define.t
+    - t/directive.t
+    - t/dom.t
+    - t/error.t
+    - t/exception.t
+    - t/filter.t
+    - t/foreach.t
+    - t/foriter.t
+    - t/format.t
+    - t/get.t
+    - t/global.t
+    - t/hash.t
+    - t/if.t
+    - t/import.t
+    - t/include.t
+    - t/interp.t
+    - t/iterator.t
+    - t/list.t
+    - t/listndx.t
+    - t/literal.t
+    - t/macro.t
+    - t/multi.t
+    - t/named.t
+    - t/object.t
+    - t/output.t
+    - t/parser.t
+    - t/perl.t
+    - t/postchomp.t
+    - t/prechomp.t
+    - t/predefs.t
+    - t/preproc.t
+    - t/private.t
+    - t/process.t
+    - t/recurse.t
+    - t/ref.t
+    - t/return.t
+    - t/rss.t
+    - t/set.t
+    - t/skel.t
+    - t/stash.t
+    - t/stop.t
+    - t/table.t
+    - t/tag.t
+    - t/tags.t
+    - t/test/dest/IGNOREME
+    - t/test/example.rdf
+    - t/test/lib/footer
+    - t/test/lib/header
+    - t/test/lib/postproc
+    - t/test/lib/preproc
+    - t/test/lib/userdata1
+    - t/test/lib/userdata2
+    - t/test/src/bar/baz
+    - t/test/src/bar/baz.txt
+    - t/test/src/foo
+    - t/test/src/golf
+    - t/test/testfile.xml
+    - t/text.t
+    - t/throw.t
+    - t/unless.t
+    - t/url.t
+    - t/userdef.t
+    - t/vars.t
+    - t/while.t
+  manifest_file_info:
+    - bytesize: 45137
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 960989886
+      name: Changes
+    - bytesize: 2347
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 961065614
+      name: MANIFEST
+    - bytesize: 922
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 954265374
+      name: Makefile.PL
+    - bytesize: 9050
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 961065707
+      name: README
+    - bytesize: 4734
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 960989360
+      name: TODO
+    - bytesize: 1474
+      file_mime_type: ~
+      line_count: ~
+      md5: 016e5d4340951171a4d88146c1a557c2
+      mtime: 937397504
+      name: bin/README
+    - bytesize: 2278
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e8ea2ed01e6b955d3960895e083153
+      mtime: 934814690
+      name: bin/tpage
+    - bytesize: 19214
+      file_mime_type: ~
+      line_count: ~
+      md5: e195e7c91e2f5461ae9105d283f9a37f
+      mtime: 960989945
+      name: bin/ttree
+    - bytesize: 546
+      file_mime_type: ~
+      line_count: ~
+      md5: b064430d7458642868e30af11507a6ea
+      mtime: 954265374
+      name: doc/README
+    - bytesize: 320
+      file_mime_type: ~
+      line_count: ~
+      md5: 971c9fc5a6f206e3cdb9d088927cd9a8
+      mtime: 934485010
+      name: doc/bin/mkdoc
+    - bytesize: 161
+      file_mime_type: ~
+      line_count: ~
+      md5: 242f9dd23ef349965f015d3ef2d7118e
+      mtime: 954265374
+      name: doc/src/README.pod
+    - bytesize: 1393
+      file_mime_type: ~
+      line_count: ~
+      md5: 72b81c755f32f01eea86fbe630f8dddf
+      mtime: 954265374
+      name: doc/src/Template.pod
+    - bytesize: 1364
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fcfc5e5ca2754ae5847e1609f60f57e
+      mtime: 954265374
+      name: doc/src/Tutorial.pod
+    - bytesize: 1706
+      file_mime_type: ~
+      line_count: ~
+      md5: b23e231683a88a18097278c3a675df96
+      mtime: 954265374
+      name: doc/src/acks
+    - bytesize: 127
+      file_mime_type: ~
+      line_count: ~
+      md5: 425943ccc9f122d9caf11f25ec3f1bb7
+      mtime: 960989727
+      name: doc/src/author
+    - bytesize: 1262
+      file_mime_type: ~
+      line_count: ~
+      md5: 28e7c80d886130c5660288bd3e6f574b
+      mtime: 961065672
+      name: doc/src/bugs
+    - bytesize: 652
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f2d6f5a80132baf1b1a2f96193a1067
+      mtime: 954265374
+      name: doc/src/contents
+    - bytesize: 246
+      file_mime_type: ~
+      line_count: ~
+      md5: 13d6faa62c9ad157e99267a2f5a012d0
+      mtime: 954265374
+      name: doc/src/copyright
+    - bytesize: 61741
+      file_mime_type: ~
+      line_count: ~
+      md5: dcd5dd2ead80a6f27116c37b6b568cfb
+      mtime: 960987885
+      name: doc/src/description
+    - bytesize: 3588
+      file_mime_type: ~
+      line_count: ~
+      md5: 599d53a0304a566e0c430750aa704554
+      mtime: 958731668
+      name: doc/src/directives
+    - bytesize: 1513
+      file_mime_type: ~
+      line_count: ~
+      md5: d18d69f3679fa7c342b29d7757b3b002
+      mtime: 943552279
+      name: doc/src/example
+    - bytesize: 1947
+      file_mime_type: ~
+      line_count: ~
+      md5: 07ce762f0457d0f7afbd68cf7495fc1b
+      mtime: 934812865
+      name: doc/src/examples
+    - bytesize: 3449
+      file_mime_type: ~
+      line_count: ~
+      md5: b24b9a06761810ef7ccee73043db7e73
+      mtime: 960988053
+      name: doc/src/features
+    - bytesize: 772
+      file_mime_type: ~
+      line_count: ~
+      md5: bcc353058a7aa580721a4355a320313e
+      mtime: 934812865
+      name: doc/src/files
+    - bytesize: 1088
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fae11d0d9b29ed688418b25a3800bbc
+      mtime: 961065494
+      name: doc/src/installing
+    - bytesize: 384
+      file_mime_type: ~
+      line_count: ~
+      md5: 2274f9687cdf0250651cbd33ba45d014
+      mtime: 961065572
+      name: doc/src/mailinfo
+    - bytesize: 47
+      file_mime_type: ~
+      line_count: ~
+      md5: 60f6df6913db2c8d5099da199a5c0a06
+      mtime: 961065581
+      name: doc/src/maillist
+    - bytesize: 21764
+      file_mime_type: ~
+      line_count: ~
+      md5: 69da549b99331e0a7d1c2f09c4c88620
+      mtime: 958732642
+      name: doc/src/methods
+    - bytesize: 74
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c909fff962a50fb723d07c62aa30e9e
+      mtime: 934812865
+      name: doc/src/name
+    - bytesize: 8583
+      file_mime_type: ~
+      line_count: ~
+      md5: 776e61f26892b9185d8268de4c54384d
+      mtime: 954265374
+      name: doc/src/overview
+    - bytesize: 2729
+      file_mime_type: ~
+      line_count: ~
+      md5: 850925f2238b4337c06a7a6a732a7599
+      mtime: 954265374
+      name: doc/src/plugins
+    - bytesize: 325
+      file_mime_type: ~
+      line_count: ~
+      md5: 83e70504d0826e43fb1526754cd9e854
+      mtime: 954265374
+      name: doc/src/prereq
+    - bytesize: 1388
+      file_mime_type: ~
+      line_count: ~
+      md5: 1386f293b63875940ef10094841dc204
+      mtime: 961065445
+      name: doc/src/related
+    - bytesize: 4649
+      file_mime_type: ~
+      line_count: ~
+      md5: 96d24bf34850068e6f9f6a30bf50ae31
+      mtime: 961065593
+      name: doc/src/seealso
+    - bytesize: 681
+      file_mime_type: ~
+      line_count: ~
+      md5: 79c54081d1369764d78fd174e0568cdf
+      mtime: 954265374
+      name: doc/src/synopsis
+    - bytesize: 4265
+      file_mime_type: ~
+      line_count: ~
+      md5: c1db2e2f9c1484567c90243ad84ce0db
+      mtime: 954265374
+      name: doc/src/tutorial/cgi
+    - bytesize: 615
+      file_mime_type: ~
+      line_count: ~
+      md5: 7864a0571d3dfd548884954592f40de6
+      mtime: 954265374
+      name: doc/src/tutorial/description
+    - bytesize: 2440
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a950785782002b8edadf98ed9e785bb
+      mtime: 954265374
+      name: doc/src/tutorial/introduction
+    - bytesize: 2592
+      file_mime_type: ~
+      line_count: ~
+      md5: d62247f15c65706a8cfff49d862e29d2
+      mtime: 954265374
+      name: doc/src/tutorial/modperl
+    - bytesize: 93
+      file_mime_type: ~
+      line_count: ~
+      md5: 538c38a858cbe09d489dfef35cdf72fc
+      mtime: 954265374
+      name: doc/src/tutorial/name
+    - bytesize: 5980
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ebdc479623dff384f39569906256500
+      mtime: 954265374
+      name: doc/src/tutorial/plugins
+    - bytesize: 8476
+      file_mime_type: ~
+      line_count: ~
+      md5: a2c12e96c0ebc72bf2e4c525394a84f3
+      mtime: 954265374
+      name: doc/src/tutorial/static
+    - bytesize: 536
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b48d1733ea5062aa18742294ff8d288
+      mtime: 961065478
+      name: doc/src/version
+    - bytesize: 7438
+      file_mime_type: ~
+      line_count: ~
+      md5: f32b4014061352269f7b18aa702644d2
+      mtime: 958729103
+      name: lib/Template.pm
+    - bytesize: 113912
+      file_mime_type: ~
+      line_count: ~
+      md5: 98e37cbf25667d8d4170a20e7cc80ac8
+      mtime: 960989978
+      name: lib/Template.pod
+    - bytesize: 18039
+      file_mime_type: ~
+      line_count: ~
+      md5: 29a19acac7f435e5b27c93806a09426d
+      mtime: 960989362
+      name: lib/Template/Cache.pm
+    - bytesize: 7746
+      file_mime_type: ~
+      line_count: ~
+      md5: 31fb2adfa02a5436fcd5189eeb2a1935
+      mtime: 954265374
+      name: lib/Template/Constants.pm
+    - bytesize: 35508
+      file_mime_type: ~
+      line_count: ~
+      md5: 10cac171e8d4cf254ae0a3135e05bc57
+      mtime: 958733791
+      name: lib/Template/Context.pm
+    - bytesize: 950
+      file_mime_type: ~
+      line_count: ~
+      md5: 7eb384d96acfccd0fd5ae0aeb3c02c30
+      mtime: 934494827
+      name: lib/Template/Debug.pm
+    - bytesize: 25715
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c4b6da0b272a241ea1b8995f5d897b1
+      mtime: 954265374
+      name: lib/Template/Directive.pm
+    - bytesize: 6547
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ad9e207de5438a36dca4fa70084dbd9
+      mtime: 933161581
+      name: lib/Template/Exception.pm
+    - bytesize: 8158
+      file_mime_type: ~
+      line_count: ~
+      md5: ad78e6355a401c93856eb5e385a50390
+      mtime: 954265374
+      name: lib/Template/Filters.pm
+    - bytesize: 54989
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b96989164f8f4dc40af09ac5abc7507
+      mtime: 958729105
+      name: lib/Template/Grammar.pm
+    - bytesize: 12723
+      file_mime_type: ~
+      line_count: ~
+      md5: 63184b325978ed8f815b756b2eb0efee
+      mtime: 954265374
+      name: lib/Template/Iterator.pm
+    - bytesize: 27688
+      file_mime_type: ~
+      line_count: ~
+      md5: 8017ff8b51aecb71ae626cb5c3feb6e6
+      mtime: 958733791
+      name: lib/Template/Parser.pm
+    - bytesize: 11301
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e3aec568c202f58aeb1053e02c725a6
+      mtime: 954265374
+      name: lib/Template/Plugin.pm
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: d2eac427f1a3e44b82ab7306cc89c458
+      mtime: 954265374
+      name: lib/Template/Plugin/CGI.pm
+    - bytesize: 4267
+      file_mime_type: ~
+      line_count: ~
+      md5: a356f4c387f942eabddaf02cf518a84c
+      mtime: 954265374
+      name: lib/Template/Plugin/Datafile.pm
+    - bytesize: 2032
+      file_mime_type: ~
+      line_count: ~
+      md5: 18eb5479487672769769a681202ce34b
+      mtime: 954265374
+      name: lib/Template/Plugin/Format.pm
+    - bytesize: 11965
+      file_mime_type: ~
+      line_count: ~
+      md5: 95a2d3ffd6714f3e7054ef369d538719
+      mtime: 954265374
+      name: lib/Template/Plugin/Table.pm
+    - bytesize: 5143
+      file_mime_type: ~
+      line_count: ~
+      md5: 281f37fb28cd3b7563d2a5456c59cdb1
+      mtime: 954265374
+      name: lib/Template/Plugin/URL.pm
+    - bytesize: 3333
+      file_mime_type: ~
+      line_count: ~
+      md5: a5dd899ef313c8f17d2ff8e530fc4e5b
+      mtime: 954265374
+      name: lib/Template/Plugin/XML/DOM.pm
+    - bytesize: 4413
+      file_mime_type: ~
+      line_count: ~
+      md5: 167e6d74f9d113ea680580892580265a
+      mtime: 960989363
+      name: lib/Template/Plugin/XML/RSS.pm
+    - bytesize: 12450
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b6acf109b765d39e4e22e6be33592ee
+      mtime: 954265374
+      name: lib/Template/Stash.pm
+    - bytesize: 10629
+      file_mime_type: ~
+      line_count: ~
+      md5: 762b2093c0e43411d37e4338b50b633b
+      mtime: 954265374
+      name: lib/Template/Test.pm
+    - bytesize: 26357
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cc7a72d18ae63e75cf38fb9c560173a
+      mtime: 960989980
+      name: lib/Template/Tutorial.pod
+    - bytesize: 7469
+      file_mime_type: ~
+      line_count: ~
+      md5: 40f197ff0dbb60e1e70119c2008c298c
+      mtime: 954265374
+      name: lib/Template/Utils.pm
+    - bytesize: 3499
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dad8f9c456998faa9197b21040e0785
+      mtime: 958729106
+      name: parser/Grammar.pm.skel
+    - bytesize: 8509
+      file_mime_type: ~
+      line_count: ~
+      md5: 386915298487d7d70c5f4327d0d8bd2d
+      mtime: 954265374
+      name: parser/Parser.yp
+    - bytesize: 3332
+      file_mime_type: ~
+      line_count: ~
+      md5: 51f505d2437f4f683bfe1e80520d1099
+      mtime: 941592037
+      name: parser/README
+    - bytesize: 1372
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c4b76cefb72b90ab51cbc1bd5b03a25
+      mtime: 932379360
+      name: parser/yc
+    - bytesize: 522
+      file_mime_type: ~
+      line_count: ~
+      md5: e693a54a634fe9cc92a3bfd5a68b9098
+      mtime: 943552281
+      name: t/README
+    - bytesize: 1489
+      file_mime_type: ~
+      line_count: ~
+      md5: c46c0d6b79c1dd2351b02c795d2c7ddb
+      mtime: 943552281
+      name: t/abspaths.t
+    - bytesize: 2769
+      file_mime_type: ~
+      line_count: ~
+      md5: a6d790706c7d3b2fa97a2fea2109590d
+      mtime: 943552281
+      name: t/accessor.t
+    - bytesize: 4594
+      file_mime_type: ~
+      line_count: ~
+      md5: 3aa9c7502b090b59c47704acc08c160e
+      mtime: 943602815
+      name: t/binop.t
+    - bytesize: 1440
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fbb5f7c63ffa1e59f2e586425d65845
+      mtime: 943552282
+      name: t/block.t
+    - bytesize: 829
+      file_mime_type: ~
+      line_count: ~
+      md5: d9fc3dbfb0e018fd68ccbc3fe9b9aeaa
+      mtime: 943552282
+      name: t/break.t
+    - bytesize: 1797
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c7e837b0e101e0b9dd8af5b496276ee
+      mtime: 943552282
+      name: t/cache.t
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: 5042a46519eb0895893b17ee69c47ece
+      mtime: 954265375
+      name: t/call.t
+    - bytesize: 1082
+      file_mime_type: ~
+      line_count: ~
+      md5: 8aebb1621d8eedd628ea965b8cfb46da
+      mtime: 943552282
+      name: t/case.t
+    - bytesize: 2118
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f705fde65d7d050185c9ff0577c167e
+      mtime: 943552282
+      name: t/catch.t
+    - bytesize: 1207
+      file_mime_type: ~
+      line_count: ~
+      md5: b524d4c6d52348fbdba49ac960f6910c
+      mtime: 954265375
+      name: t/cgi.t
+    - bytesize: 1427
+      file_mime_type: ~
+      line_count: ~
+      md5: 864688f5d1a2803435bbee6af2eccaec
+      mtime: 943552283
+      name: t/chomp.t
+    - bytesize: 4602
+      file_mime_type: ~
+      line_count: ~
+      md5: 22c4306d59b5c293a215e771abf39248
+      mtime: 954265375
+      name: t/code.t
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: 1086db1d9ce868748eebb3d9410b00ac
+      mtime: 954265375
+      name: t/comment.t
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 91e7ee9e85081e66916428bd6bf64e02
+      mtime: 936896520
+      name: t/constants.t
+    - bytesize: 2201
+      file_mime_type: ~
+      line_count: ~
+      md5: 56f1f37cfe71ef873f6b20cd2aa17bc0
+      mtime: 958733791
+      name: t/context.t
+    - bytesize: 1440
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ccc9db0c71cc53cdd2ffc99b47151f2
+      mtime: 943552283
+      name: t/datafile.t
+    - bytesize: 940
+      file_mime_type: ~
+      line_count: ~
+      md5: f75926f645565b4f8e646f91a2260b70
+      mtime: 943552283
+      name: t/default.t
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: de22f947bb090762a67d2848938a2b94
+      mtime: 954265375
+      name: t/define.t
+    - bytesize: 1429
+      file_mime_type: ~
+      line_count: ~
+      md5: 41b4bf33c437050134e267f61eba1772
+      mtime: 943552283
+      name: t/directive.t
+    - bytesize: 1114
+      file_mime_type: ~
+      line_count: ~
+      md5: b5f573a3cdcde5622de7c9fc35a5f2c9
+      mtime: 954265375
+      name: t/dom.t
+    - bytesize: 858
+      file_mime_type: ~
+      line_count: ~
+      md5: 5255d299b12e8ffe4342d78738ad1155
+      mtime: 943552283
+      name: t/error.t
+    - bytesize: 2133
+      file_mime_type: ~
+      line_count: ~
+      md5: 10c9c0b1aa48b1469f8d50bc385e68d1
+      mtime: 934283352
+      name: t/exception.t
+    - bytesize: 6577
+      file_mime_type: ~
+      line_count: ~
+      md5: a0b4deef6c6ebe83e4ed3877b8e040e9
+      mtime: 958729107
+      name: t/filter.t
+    - bytesize: 3496
+      file_mime_type: ~
+      line_count: ~
+      md5: 201586a659ab1e298818ca8ead75f7c9
+      mtime: 954265375
+      name: t/foreach.t
+    - bytesize: 5703
+      file_mime_type: ~
+      line_count: ~
+      md5: df6f65451c2f7abf4f0c9c956b702e82
+      mtime: 957272363
+      name: t/foriter.t
+    - bytesize: 2273
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d3b377bc59f50950270bf2c8472047a
+      mtime: 954265375
+      name: t/format.t
+    - bytesize: 3157
+      file_mime_type: ~
+      line_count: ~
+      md5: 43ebd63696f630638ceae54183d11019
+      mtime: 957272363
+      name: t/get.t
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: fead67f9697b5c1f17cef70708ba728e
+      mtime: 943552284
+      name: t/global.t
+    - bytesize: 2769
+      file_mime_type: ~
+      line_count: ~
+      md5: 502097b59a208db05f663889f2cb8d14
+      mtime: 960989363
+      name: t/hash.t
+    - bytesize: 3005
+      file_mime_type: ~
+      line_count: ~
+      md5: 537b75e8e0683333d90cb48be8c0ba00
+      mtime: 954265375
+      name: t/if.t
+    - bytesize: 1849
+      file_mime_type: ~
+      line_count: ~
+      md5: ce4dabebf50ebd2358a279a38c053c70
+      mtime: 943552285
+      name: t/import.t
+    - bytesize: 3358
+      file_mime_type: ~
+      line_count: ~
+      md5: 4053391c3c13600157f66c1e6cffacee
+      mtime: 954265375
+      name: t/include.t
+    - bytesize: 1678
+      file_mime_type: ~
+      line_count: ~
+      md5: 35ca46cb06aace840b200a68e541da89
+      mtime: 943552285
+      name: t/interp.t
+    - bytesize: 5070
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b45a54b3089e72edf15ffcb37bc3441
+      mtime: 954265375
+      name: t/iterator.t
+    - bytesize: 2059
+      file_mime_type: ~
+      line_count: ~
+      md5: 549572e649d0e2fcf19086c8188750d0
+      mtime: 954265375
+      name: t/list.t
+    - bytesize: 1791
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fe97c00f7b6c1455fdfda1c21b77851
+      mtime: 954265375
+      name: t/listndx.t
+    - bytesize: 981
+      file_mime_type: ~
+      line_count: ~
+      md5: 36f3a35551e0e07a669e2a66ef88cd5b
+      mtime: 943552286
+      name: t/literal.t
+    - bytesize: 3069
+      file_mime_type: ~
+      line_count: ~
+      md5: 765d2525117dce0747976ee940379002
+      mtime: 943552286
+      name: t/macro.t
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 8258e0793925fe61d70ec78f7e09399b
+      mtime: 943552287
+      name: t/multi.t
+    - bytesize: 2015
+      file_mime_type: ~
+      line_count: ~
+      md5: ad263d242c9e2e489579f15ea578aaf6
+      mtime: 943552287
+      name: t/named.t
+    - bytesize: 9073
+      file_mime_type: ~
+      line_count: ~
+      md5: 373e44ed6c87511d04430a8002e31cbd
+      mtime: 954265375
+      name: t/object.t
+    - bytesize: 2340
+      file_mime_type: ~
+      line_count: ~
+      md5: 20dc262fa5e4f60ea4b38d00c29e035e
+      mtime: 943552287
+      name: t/output.t
+    - bytesize: 1421
+      file_mime_type: ~
+      line_count: ~
+      md5: b1c4000aedb08913aeefc93e2b110488
+      mtime: 934283356
+      name: t/parser.t
+    - bytesize: 1058
+      file_mime_type: ~
+      line_count: ~
+      md5: f5fe927d15a78ae160746d3e1a909c2f
+      mtime: 945786135
+      name: t/perl.t
+    - bytesize: 1154
+      file_mime_type: ~
+      line_count: ~
+      md5: c7316edc26a20a77c0f485eebf7848af
+      mtime: 943552288
+      name: t/postchomp.t
+    - bytesize: 1149
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ed3253ad972058ec04f63a02f9e151
+      mtime: 943552288
+      name: t/prechomp.t
+    - bytesize: 1074
+      file_mime_type: ~
+      line_count: ~
+      md5: b0d7fd6933a50a72eaea1eee55c13496
+      mtime: 943552288
+      name: t/predefs.t
+    - bytesize: 1070
+      file_mime_type: ~
+      line_count: ~
+      md5: 83ec87eb7c7232f3ccd771de0c104f8f
+      mtime: 945786135
+      name: t/preproc.t
+    - bytesize: 1582
+      file_mime_type: ~
+      line_count: ~
+      md5: 5874bc8301d638c879e83cb5fb262209
+      mtime: 943552288
+      name: t/private.t
+    - bytesize: 1338
+      file_mime_type: ~
+      line_count: ~
+      md5: b86070de331b9ffbd09be6341c499cb6
+      mtime: 943552288
+      name: t/process.t
+    - bytesize: 1244
+      file_mime_type: ~
+      line_count: ~
+      md5: 43d488a3f5c54dd75195da7eef6f56a6
+      mtime: 943552288
+      name: t/recurse.t
+    - bytesize: 2708
+      file_mime_type: ~
+      line_count: ~
+      md5: 18a845b9238b6200e850a465c79e6650
+      mtime: 954265376
+      name: t/ref.t
+    - bytesize: 865
+      file_mime_type: ~
+      line_count: ~
+      md5: fc0a0db1ceda63a7282dd37df16ec03a
+      mtime: 943552288
+      name: t/return.t
+    - bytesize: 1429
+      file_mime_type: ~
+      line_count: ~
+      md5: 0637cb3613532c0ee2c0fa0ba8473281
+      mtime: 954265376
+      name: t/rss.t
+    - bytesize: 1980
+      file_mime_type: ~
+      line_count: ~
+      md5: 98b138b8c4a7293fa6a4b5aaaa84765b
+      mtime: 943552289
+      name: t/set.t
+    - bytesize: 2011
+      file_mime_type: ~
+      line_count: ~
+      md5: 4128f1c23fa8cfb341671554c53107e6
+      mtime: 960989493
+      name: t/skel.t
+    - bytesize: 1360
+      file_mime_type: ~
+      line_count: ~
+      md5: 8def7409ff73388d9acc3121f0166e7e
+      mtime: 943552289
+      name: t/stash.t
+    - bytesize: 847
+      file_mime_type: ~
+      line_count: ~
+      md5: 44490d7c306df00e2384d867b981de9f
+      mtime: 943552290
+      name: t/stop.t
+    - bytesize: 2498
+      file_mime_type: ~
+      line_count: ~
+      md5: 781ad228e8ed1712318e2d3c93749bbc
+      mtime: 958733791
+      name: t/table.t
+    - bytesize: 2143
+      file_mime_type: ~
+      line_count: ~
+      md5: 71956938282e56dff801ea963993a2f6
+      mtime: 958733777
+      name: t/tag.t
+    - bytesize: 1559
+      file_mime_type: ~
+      line_count: ~
+      md5: 23b186c8d7c73e4f2ca6ff5489e7772f
+      mtime: 958733791
+      name: t/tags.t
+    - bytesize: 223
+      file_mime_type: ~
+      line_count: ~
+      md5: bad4e7fc45881e64e33917376c740279
+      mtime: 934749663
+      name: t/test/dest/IGNOREME
+    - bytesize: 662
+      file_mime_type: ~
+      line_count: ~
+      md5: e0d33ab63449d6235c2e122fb84a30ef
+      mtime: 954265376
+      name: t/test/example.rdf
+    - bytesize: 47
+      file_mime_type: ~
+      line_count: ~
+      md5: 22c6f5c73b73149a674bca8833b3c1a0
+      mtime: 934749663
+      name: t/test/lib/footer
+    - bytesize: 150
+      file_mime_type: ~
+      line_count: ~
+      md5: a5d86c99e490d85ea4c486f7502a7b09
+      mtime: 934749663
+      name: t/test/lib/header
+    - bytesize: 52
+      file_mime_type: ~
+      line_count: ~
+      md5: 8982d5eb2837b8843a25a2e8b8b5016b
+      mtime: 934749664
+      name: t/test/lib/postproc
+    - bytesize: 289
+      file_mime_type: ~
+      line_count: ~
+      md5: 483be7f3a4401adf13d2a9b2caded5ad
+      mtime: 934749664
+      name: t/test/lib/preproc
+    - bytesize: 146
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d61f2602ce256ccce78f1f5c295b83a
+      mtime: 939301747
+      name: t/test/lib/userdata1
+    - bytesize: 146
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c029489c01a932fb421d2c336f3e936
+      mtime: 939301748
+      name: t/test/lib/userdata2
+    - bytesize: 69
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d5833e3f17fd237152eb664ef4fb5e5
+      mtime: 934749665
+      name: t/test/src/bar/baz
+    - bytesize: 67
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e671e5fa5b27984c4c977761d1375af
+      mtime: 934749665
+      name: t/test/src/bar/baz.txt
+    - bytesize: 21
+      file_mime_type: ~
+      line_count: ~
+      md5: d14cefa2651aa64ee067042bd662530a
+      mtime: 934749664
+      name: t/test/src/foo
+    - bytesize: 55
+      file_mime_type: ~
+      line_count: ~
+      md5: eee4b316343ce1de4d5d4f1151bdddf1
+      mtime: 934749664
+      name: t/test/src/golf
+    - bytesize: 243
+      file_mime_type: ~
+      line_count: ~
+      md5: 8421ed1336445376e47cb56f1f5fb9cb
+      mtime: 954265376
+      name: t/test/testfile.xml
+    - bytesize: 941
+      file_mime_type: ~
+      line_count: ~
+      md5: 40464195a2ff906fa1cd18e3434f940f
+      mtime: 943552291
+      name: t/text.t
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a93965175f9fa60c822ed87edfe86a8
+      mtime: 943602816
+      name: t/throw.t
+    - bytesize: 1851
+      file_mime_type: ~
+      line_count: ~
+      md5: b6c32b4af64d97bc30dc8e015bf3cea0
+      mtime: 943552291
+      name: t/unless.t
+    - bytesize: 2424
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c18c1d77f777d54b2fc3b33d44226fc
+      mtime: 954265376
+      name: t/url.t
+    - bytesize: 2018
+      file_mime_type: ~
+      line_count: ~
+      md5: eddfd313b94200d714c4e624b160af42
+      mtime: 954265376
+      name: t/userdef.t
+    - bytesize: 2207
+      file_mime_type: ~
+      line_count: ~
+      md5: b59453348f7312db40e6a5de48f31ff5
+      mtime: 943552292
+      name: t/vars.t
+    - bytesize: 2087
+      file_mime_type: ~
+      line_count: ~
+      md5: 832433b0f556a2cbc493028719a1d13e
+      mtime: 943552292
+      name: t/while.t
+  module_info:
+    - bytesize: 7438
+      file_mime_type: ~
+      line_count: ~
+      md5: f2d76c837037677d9bbf35b4a1bc5720
+      module_name_from_file_guess: Template
+      mtime: 958729103
+      name: blib/lib/Template.pm
+      packages:
+        - Template
+      primary_package: Template
+      uses:
+        - ''
+        - strict
+        - vars
+        - Exporter
+        - Template::Constants
+        - Template::Context
+      version_info:
+        filename: blib/lib/Template.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.07
+    - bytesize: 18039
+      file_mime_type: ~
+      line_count: ~
+      md5: 82eb0fd07fff2313c9c2fdb48943cb0c
+      module_name_from_file_guess: Template::Cache
+      mtime: 960989362
+      name: blib/lib/Template/Cache.pm
+      packages:
+        - Template::Cache
+      primary_package: Template::Cache
+      uses:
+        - ''
+        - strict
+        - Template::Constants
+        - Template::Exception
+        - Template::Parser
+        - vars
+      version_info:
+        filename: blib/lib/Template/Cache.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.17
+    - bytesize: 7746
+      file_mime_type: ~
+      line_count: ~
+      md5: 447869dee02a50bfb167038fd6c7a6c2
+      module_name_from_file_guess: Template::Constants
+      mtime: 954265374
+      name: blib/lib/Template/Constants.pm
+      packages:
+        - Template::Constants
+      primary_package: Template::Constants
+      uses:
+        - ''
+        - Exporter
+        - strict
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/Template/Constants.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 1.14
+    - bytesize: 35508
+      file_mime_type: ~
+      line_count: ~
+      md5: cdec7e68547bb54197818fc8acaf6f41
+      module_name_from_file_guess: Template::Context
+      mtime: 958733791
+      name: blib/lib/Template/Context.pm
+      packages:
+        - Template::Context
+      primary_package: Template::Context
+      uses: []
+      version_info:
+        filename: blib/lib/Template/Context.pm
+        identifier: VERSION
+        line_number: 38
+        sigil: $
+        value: 1.46
+    - bytesize: 950
+      file_mime_type: ~
+      line_count: ~
+      md5: 336312552e48c0997c2e5e96eb11669c
+      module_name_from_file_guess: Template::Debug
+      mtime: 934494827
+      name: blib/lib/Template/Debug.pm
+      packages:
+        - Template::Debug
+      primary_package: Template::Debug
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Constants
+      version_info:
+        filename: blib/lib/Template/Debug.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 1.03
+    - bytesize: 25715
+      file_mime_type: ~
+      line_count: ~
+      md5: 1563259f77ec5e0ae6054ad5f4385038
+      module_name_from_file_guess: Template::Directive
+      mtime: 954265374
+      name: blib/lib/Template/Directive.pm
+      packages:
+        - Template::Directive
+        - Template::Directive::Text
+        - Template::Directive::Set
+        - Template::Directive::Get
+        - Template::Directive::Call
+        - Template::Directive::Include
+        - Template::Directive::Process
+        - Template::Directive::If
+        - Template::Directive::While
+        - Template::Directive::For
+        - Template::Directive::Filter
+        - Template::Directive::Use
+        - Template::Directive::Block
+        - Template::Directive::Throw
+        - Template::Directive::Catch
+        - Template::Directive::Error
+        - Template::Directive::Return
+        - Template::Directive::Perl
+        - Template::Directive::Macro
+        - Template::Directive::Userdef
+        - Template::Directive::Debug
+      primary_package: Template::Directive
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Constants
+        - Template::Exception
+        - Template::Iterator
+      version_info:
+        filename: blib/lib/Template/Directive.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.30
+    - bytesize: 6547
+      file_mime_type: ~
+      line_count: ~
+      md5: f51354d83467a716c3ef9f3dc0b98fe3
+      module_name_from_file_guess: Template::Exception
+      mtime: 933161581
+      name: blib/lib/Template/Exception.pm
+      packages:
+        - Template::Exception
+      primary_package: Template::Exception
+      uses:
+        - ''
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/Template/Exception.pm
+        identifier: VERSION
+        line_number: 32
+        sigil: $
+        value: 1.03
+    - bytesize: 8158
+      file_mime_type: ~
+      line_count: ~
+      md5: ef255cef3070abed8ce1532ee8f142ac
+      module_name_from_file_guess: Template::Filters
+      mtime: 954265374
+      name: blib/lib/Template/Filters.pm
+      packages:
+        - Template::Filters
+      primary_package: Template::Filters
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template
+      version_info:
+        filename: blib/lib/Template/Filters.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 1.03
+    - bytesize: 54989
+      file_mime_type: ~
+      line_count: ~
+      md5: 82207fe92a5dc7acb40fef1ef4ced7dd
+      module_name_from_file_guess: Template::Grammar
+      mtime: 958729105
+      name: blib/lib/Template/Grammar.pm
+      packages:
+        - Template::Grammar
+      primary_package: Template::Grammar
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Constants
+      version_info:
+        filename: blib/lib/Template/Grammar.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.41
+    - bytesize: 12723
+      file_mime_type: ~
+      line_count: ~
+      md5: b904e5ebf9003a0affb5f672a5c6c53d
+      module_name_from_file_guess: Template::Iterator
+      mtime: 954265374
+      name: blib/lib/Template/Iterator.pm
+      packages:
+        - Template::Iterator
+      primary_package: Template::Iterator
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Constants
+        - Template::Exception
+      version_info:
+        filename: blib/lib/Template/Iterator.pm
+        identifier: VERSION
+        line_number: 56
+        sigil: $
+        value: 1.11
+    - bytesize: 27688
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c560789eea1840ed153fb43d5cb85da
+      module_name_from_file_guess: Template::Parser
+      mtime: 958733791
+      name: blib/lib/Template/Parser.pm
+      packages:
+        - Template::Parser
+      primary_package: Template::Parser
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Constants
+        - Template::Utils
+        - Template::Directive
+        - constant
+        - Template::Grammar
+      version_info:
+        filename: blib/lib/Template/Parser.pm
+        identifier: VERSION
+        line_number: 55
+        sigil: $
+        value: 1.26
+    - bytesize: 11301
+      file_mime_type: ~
+      line_count: ~
+      md5: ecadace052090bc6986053debe25fb1d
+      module_name_from_file_guess: Template::Plugin
+      mtime: 954265374
+      name: blib/lib/Template/Plugin.pm
+      packages:
+        - Template::Plugin
+      primary_package: Template::Plugin
+      uses:
+        - ''
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/Template/Plugin.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.12
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: 0477929428239a38848035fe47cff373
+      module_name_from_file_guess: Template::Plugin::CGI
+      mtime: 954265374
+      name: blib/lib/Template/Plugin/CGI.pm
+      packages:
+        - Template::Plugin::CGI
+      primary_package: Template::Plugin::CGI
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Plugin
+        - CGI
+      version_info:
+        filename: blib/lib/Template/Plugin/CGI.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 1.06
+    - bytesize: 4267
+      file_mime_type: ~
+      line_count: ~
+      md5: ebe6b16a44e58dced7cb1173d2c00111
+      module_name_from_file_guess: Template::Plugin::Datafile
+      mtime: 954265374
+      name: blib/lib/Template/Plugin/Datafile.pm
+      packages:
+        - Template::Plugin::Datafile
+      primary_package: Template::Plugin::Datafile
+      uses:
+        - ''
+        - strict
+        - vars
+        - base
+      version_info:
+        filename: blib/lib/Template/Plugin/Datafile.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.02
+    - bytesize: 2032
+      file_mime_type: ~
+      line_count: ~
+      md5: b836d27102583db69b51889580a677d9
+      module_name_from_file_guess: Template::Plugin::Format
+      mtime: 954265374
+      name: blib/lib/Template/Plugin/Format.pm
+      packages:
+        - Template::Plugin::Format
+      primary_package: Template::Plugin::Format
+      uses:
+        - ''
+        - strict
+        - vars
+        - base
+        - CGI
+      version_info:
+        filename: blib/lib/Template/Plugin/Format.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.04
+    - bytesize: 11965
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a0f1d2f9e8e84dac2d36cfe727878de
+      module_name_from_file_guess: Template::Plugin::Table
+      mtime: 954265374
+      name: blib/lib/Template/Plugin/Table.pm
+      packages:
+        - Template::Plugin::Table
+      primary_package: Template::Plugin::Table
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Plugin
+        - CGI
+      version_info:
+        filename: blib/lib/Template/Plugin/Table.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 1.02
+    - bytesize: 5143
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f6e00dea091d73568f7b577cce4f5fa
+      module_name_from_file_guess: Template::Plugin::URL
+      mtime: 954265374
+      name: blib/lib/Template/Plugin/URL.pm
+      packages:
+        - Template::Plugin::URL
+      primary_package: Template::Plugin::URL
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Plugin
+        - CGI
+      version_info:
+        filename: blib/lib/Template/Plugin/URL.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 1.01
+    - bytesize: 3333
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a1c6350e838822a4e5234aa2c06c296
+      module_name_from_file_guess: Template::Plugin::XML::DOM
+      mtime: 954265374
+      name: blib/lib/Template/Plugin/XML/DOM.pm
+      packages:
+        - Template::Plugin::XML::DOM
+        - XML::DOM::Element
+      primary_package: Template::Plugin::XML::DOM
+      uses:
+        - ''
+        - strict
+        - vars
+        - base
+        - XML::DOM
+      version_info:
+        filename: blib/lib/Template/Plugin/XML/DOM.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 1.01
+    - bytesize: 4413
+      file_mime_type: ~
+      line_count: ~
+      md5: da2c0c763967aeb55da96c5fbd4cf47f
+      module_name_from_file_guess: Template::Plugin::XML::RSS
+      mtime: 960989363
+      name: blib/lib/Template/Plugin/XML/RSS.pm
+      packages:
+        - Template::Plugin::XML::RSS
+      primary_package: Template::Plugin::XML::RSS
+      uses:
+        - ''
+        - strict
+        - vars
+        - base
+        - XML::RSS
+      version_info:
+        filename: blib/lib/Template/Plugin/XML/RSS.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.07
+    - bytesize: 12450
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bfa98710231f5adb99c99688348894a
+      module_name_from_file_guess: Template::Stash
+      mtime: 954265374
+      name: blib/lib/Template/Stash.pm
+      packages:
+        - Template::Stash
+      primary_package: Template::Stash
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template::Constants
+        - Template::Exception
+      version_info:
+        filename: blib/lib/Template/Stash.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 1.09
+    - bytesize: 10629
+      file_mime_type: ~
+      line_count: ~
+      md5: 7afc6c8835788f5a78ae4c759e6080f9
+      module_name_from_file_guess: Template::Test
+      mtime: 954265374
+      name: blib/lib/Template/Test.pm
+      packages:
+        - Template::Test
+      primary_package: Template::Test
+      uses:
+        - ''
+        - strict
+        - vars
+        - Template
+        - Exporter
+      version_info:
+        filename: blib/lib/Template/Test.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.04
+    - bytesize: 7469
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e4f567227d10c75f8186968f9d773bd
+      module_name_from_file_guess: Template::Utils
+      mtime: 954265374
+      name: blib/lib/Template/Utils.pm
+      packages:
+        - Template::Utils
+      primary_package: Template::Utils
+      uses:
+        - ''
+        - Exporter
+        - strict
+        - vars
+        - Template::Constants
+        - File::Basename
+        - File::Path
+        - Symbol
+      version_info:
+        filename: blib/lib/Template/Utils.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: 1.08
+  modules:
+    - blib/lib/Template.pm
+    - blib/lib/Template/Cache.pm
+    - blib/lib/Template/Constants.pm
+    - blib/lib/Template/Context.pm
+    - blib/lib/Template/Debug.pm
+    - blib/lib/Template/Directive.pm
+    - blib/lib/Template/Exception.pm
+    - blib/lib/Template/Filters.pm
+    - blib/lib/Template/Grammar.pm
+    - blib/lib/Template/Iterator.pm
+    - blib/lib/Template/Parser.pm
+    - blib/lib/Template/Plugin.pm
+    - blib/lib/Template/Plugin/CGI.pm
+    - blib/lib/Template/Plugin/Datafile.pm
+    - blib/lib/Template/Plugin/Format.pm
+    - blib/lib/Template/Plugin/Table.pm
+    - blib/lib/Template/Plugin/URL.pm
+    - blib/lib/Template/Plugin/XML/DOM.pm
+    - blib/lib/Template/Plugin/XML/RSS.pm
+    - blib/lib/Template/Stash.pm
+    - blib/lib/Template/Test.pm
+    - blib/lib/Template/Utils.pm
+  test_info:
+    - bytesize: 1849
+      file_mime_type: ~
+      line_count: ~
+      md5: ce4dabebf50ebd2358a279a38c053c70
+      mtime: 943552285
+      name: t/import.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 2708
+      file_mime_type: ~
+      line_count: ~
+      md5: 18a845b9238b6200e850a465c79e6650
+      mtime: 954265376
+      name: t/ref.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+        - Template::Context
+    - bytesize: 3157
+      file_mime_type: ~
+      line_count: ~
+      md5: 43ebd63696f630638ceae54183d11019
+      mtime: 957272363
+      name: t/get.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+    - bytesize: 3358
+      file_mime_type: ~
+      line_count: ~
+      md5: 4053391c3c13600157f66c1e6cffacee
+      mtime: 954265375
+      name: t/include.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+    - bytesize: 2769
+      file_mime_type: ~
+      line_count: ~
+      md5: 502097b59a208db05f663889f2cb8d14
+      mtime: 960989363
+      name: t/hash.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+        - Template::Context
+    - bytesize: 847
+      file_mime_type: ~
+      line_count: ~
+      md5: 44490d7c306df00e2384d867b981de9f
+      mtime: 943552290
+      name: t/stop.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1791
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fe97c00f7b6c1455fdfda1c21b77851
+      mtime: 954265375
+      name: t/listndx.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1980
+      file_mime_type: ~
+      line_count: ~
+      md5: 98b138b8c4a7293fa6a4b5aaaa84765b
+      mtime: 943552289
+      name: t/set.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+    - bytesize: 3496
+      file_mime_type: ~
+      line_count: ~
+      md5: 201586a659ab1e298818ca8ead75f7c9
+      mtime: 954265375
+      name: t/foreach.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1082
+      file_mime_type: ~
+      line_count: ~
+      md5: 8aebb1621d8eedd628ea965b8cfb46da
+      mtime: 943552282
+      name: t/case.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template::Test
+    - bytesize: 1338
+      file_mime_type: ~
+      line_count: ~
+      md5: b86070de331b9ffbd09be6341c499cb6
+      mtime: 943552288
+      name: t/process.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 2118
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f705fde65d7d050185c9ff0577c167e
+      mtime: 943552282
+      name: t/catch.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template::Test
+    - bytesize: 981
+      file_mime_type: ~
+      line_count: ~
+      md5: 36f3a35551e0e07a669e2a66ef88cd5b
+      mtime: 943552286
+      name: t/literal.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 2133
+      file_mime_type: ~
+      line_count: ~
+      md5: 10c9c0b1aa48b1469f8d50bc385e68d1
+      mtime: 934283352
+      name: t/exception.t
+      uses:
+        - strict
+        - vars
+        - Template::Exception
+        - Template::Context
+        - Template::Constants
+    - bytesize: 1678
+      file_mime_type: ~
+      line_count: ~
+      md5: 35ca46cb06aace840b200a68e541da89
+      mtime: 943552285
+      name: t/interp.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 1440
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ccc9db0c71cc53cdd2ffc99b47151f2
+      mtime: 943552283
+      name: t/datafile.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 2207
+      file_mime_type: ~
+      line_count: ~
+      md5: b59453348f7312db40e6a5de48f31ff5
+      mtime: 943552292
+      name: t/vars.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: 5042a46519eb0895893b17ee69c47ece
+      mtime: 954265375
+      name: t/call.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Exception
+        - Template::Test
+    - bytesize: 940
+      file_mime_type: ~
+      line_count: ~
+      md5: f75926f645565b4f8e646f91a2260b70
+      mtime: 943552283
+      name: t/default.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1074
+      file_mime_type: ~
+      line_count: ~
+      md5: b0d7fd6933a50a72eaea1eee55c13496
+      mtime: 943552288
+      name: t/predefs.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1582
+      file_mime_type: ~
+      line_count: ~
+      md5: 5874bc8301d638c879e83cb5fb262209
+      mtime: 943552288
+      name: t/private.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Exception
+        - Template::Test
+    - bytesize: 5070
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b45a54b3089e72edf15ffcb37bc3441
+      mtime: 954265375
+      name: t/iterator.t
+      uses:
+        - strict
+        - lib
+        - Template::Iterator
+        - Template::Constants
+        - Template::Test
+    - bytesize: 858
+      file_mime_type: ~
+      line_count: ~
+      md5: 5255d299b12e8ffe4342d78738ad1155
+      mtime: 943552283
+      name: t/error.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template::Test
+    - bytesize: 2340
+      file_mime_type: ~
+      line_count: ~
+      md5: 20dc262fa5e4f60ea4b38d00c29e035e
+      mtime: 943552287
+      name: t/output.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 9073
+      file_mime_type: ~
+      line_count: ~
+      md5: 373e44ed6c87511d04430a8002e31cbd
+      mtime: 954265375
+      name: t/object.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Exception
+        - Template::Test
+        - Template::Constants
+        - vars
+    - bytesize: 4602
+      file_mime_type: ~
+      line_count: ~
+      md5: 22c4306d59b5c293a215e771abf39248
+      mtime: 954265375
+      name: t/code.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Exception
+        - Template::Test
+    - bytesize: 5703
+      file_mime_type: ~
+      line_count: ~
+      md5: df6f65451c2f7abf4f0c9c956b702e82
+      mtime: 957272363
+      name: t/foriter.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1154
+      file_mime_type: ~
+      line_count: ~
+      md5: c7316edc26a20a77c0f485eebf7848af
+      mtime: 943552288
+      name: t/postchomp.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1114
+      file_mime_type: ~
+      line_count: ~
+      md5: b5f573a3cdcde5622de7c9fc35a5f2c9
+      mtime: 954265375
+      name: t/dom.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+        - Cwd
+    - bytesize: 941
+      file_mime_type: ~
+      line_count: ~
+      md5: 40464195a2ff906fa1cd18e3434f940f
+      mtime: 943552291
+      name: t/text.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 829
+      file_mime_type: ~
+      line_count: ~
+      md5: d9fc3dbfb0e018fd68ccbc3fe9b9aeaa
+      mtime: 943552282
+      name: t/break.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 2201
+      file_mime_type: ~
+      line_count: ~
+      md5: 56f1f37cfe71ef873f6b20cd2aa17bc0
+      mtime: 958733791
+      name: t/context.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template::Context
+        - Template::Test
+    - bytesize: 2498
+      file_mime_type: ~
+      line_count: ~
+      md5: 781ad228e8ed1712318e2d3c93749bbc
+      mtime: 958733791
+      name: t/table.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1440
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fbb5f7c63ffa1e59f2e586425d65845
+      mtime: 943552282
+      name: t/block.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 3069
+      file_mime_type: ~
+      line_count: ~
+      md5: 765d2525117dce0747976ee940379002
+      mtime: 943552286
+      name: t/macro.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 2769
+      file_mime_type: ~
+      line_count: ~
+      md5: a6d790706c7d3b2fa97a2fea2109590d
+      mtime: 943552281
+      name: t/accessor.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+        - Template::Exception
+        - vars
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: 1086db1d9ce868748eebb3d9410b00ac
+      mtime: 954265375
+      name: t/comment.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1429
+      file_mime_type: ~
+      line_count: ~
+      md5: 0637cb3613532c0ee2c0fa0ba8473281
+      mtime: 954265376
+      name: t/rss.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+        - Cwd
+    - bytesize: 2059
+      file_mime_type: ~
+      line_count: ~
+      md5: 549572e649d0e2fcf19086c8188750d0
+      mtime: 954265375
+      name: t/list.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1438
+      file_mime_type: ~
+      line_count: ~
+      md5: 91e7ee9e85081e66916428bd6bf64e02
+      mtime: 936896520
+      name: t/constants.t
+      uses:
+        - strict
+        - vars
+        - Template::Constants
+        - Template
+    - bytesize: 1149
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ed3253ad972058ec04f63a02f9e151
+      mtime: 943552288
+      name: t/prechomp.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1429
+      file_mime_type: ~
+      line_count: ~
+      md5: 41b4bf33c437050134e267f61eba1772
+      mtime: 943552283
+      name: t/directive.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1360
+      file_mime_type: ~
+      line_count: ~
+      md5: 8def7409ff73388d9acc3121f0166e7e
+      mtime: 943552289
+      name: t/stash.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+    - bytesize: 2015
+      file_mime_type: ~
+      line_count: ~
+      md5: ad263d242c9e2e489579f15ea578aaf6
+      mtime: 943552287
+      name: t/named.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Exception
+        - Template::Test
+    - bytesize: 2273
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d3b377bc59f50950270bf2c8472047a
+      mtime: 954265375
+      name: t/format.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 3005
+      file_mime_type: ~
+      line_count: ~
+      md5: 537b75e8e0683333d90cb48be8c0ba00
+      mtime: 954265375
+      name: t/if.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 2011
+      file_mime_type: ~
+      line_count: ~
+      md5: 4128f1c23fa8cfb341671554c53107e6
+      mtime: 960989493
+      name: t/skel.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1058
+      file_mime_type: ~
+      line_count: ~
+      md5: f5fe927d15a78ae160746d3e1a909c2f
+      mtime: 945786135
+      name: t/perl.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a93965175f9fa60c822ed87edfe86a8
+      mtime: 943602816
+      name: t/throw.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template::Test
+    - bytesize: 1797
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c7e837b0e101e0b9dd8af5b496276ee
+      mtime: 943552282
+      name: t/cache.t
+      uses:
+        - strict
+        - lib
+        - Template::Cache
+        - Template::Test
+    - bytesize: 1489
+      file_mime_type: ~
+      line_count: ~
+      md5: c46c0d6b79c1dd2351b02c795d2c7ddb
+      mtime: 943552281
+      name: t/abspaths.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template::Test
+        - Cwd
+    - bytesize: 2087
+      file_mime_type: ~
+      line_count: ~
+      md5: 832433b0f556a2cbc493028719a1d13e
+      mtime: 943552292
+      name: t/while.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Directive
+        - Template::Test
+    - bytesize: 1070
+      file_mime_type: ~
+      line_count: ~
+      md5: 83ec87eb7c7232f3ccd771de0c104f8f
+      mtime: 945786135
+      name: t/preproc.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 2143
+      file_mime_type: ~
+      line_count: ~
+      md5: 71956938282e56dff801ea963993a2f6
+      mtime: 958733777
+      name: t/tag.t
+      uses:
+        - strict
+        - lib
+        - vars
+        - Template
+    - bytesize: 2018
+      file_mime_type: ~
+      line_count: ~
+      md5: eddfd313b94200d714c4e624b160af42
+      mtime: 954265376
+      name: t/userdef.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1559
+      file_mime_type: ~
+      line_count: ~
+      md5: 23b186c8d7c73e4f2ca6ff5489e7772f
+      mtime: 958733791
+      name: t/tags.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: fead67f9697b5c1f17cef70708ba728e
+      mtime: 943552284
+      name: t/global.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1427
+      file_mime_type: ~
+      line_count: ~
+      md5: 864688f5d1a2803435bbee6af2eccaec
+      mtime: 943552283
+      name: t/chomp.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1851
+      file_mime_type: ~
+      line_count: ~
+      md5: b6c32b4af64d97bc30dc8e015bf3cea0
+      mtime: 943552291
+      name: t/unless.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 865
+      file_mime_type: ~
+      line_count: ~
+      md5: fc0a0db1ceda63a7282dd37df16ec03a
+      mtime: 943552288
+      name: t/return.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 6577
+      file_mime_type: ~
+      line_count: ~
+      md5: a0b4deef6c6ebe83e4ed3877b8e040e9
+      mtime: 958729107
+      name: t/filter.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: de22f947bb090762a67d2848938a2b94
+      mtime: 954265375
+      name: t/define.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+        - vars
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 8258e0793925fe61d70ec78f7e09399b
+      mtime: 943552287
+      name: t/multi.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 1421
+      file_mime_type: ~
+      line_count: ~
+      md5: b1c4000aedb08913aeefc93e2b110488
+      mtime: 934283356
+      name: t/parser.t
+      uses:
+        - strict
+        - vars
+        - Template
+        - Template::Stash
+    - bytesize: 2424
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c18c1d77f777d54b2fc3b33d44226fc
+      mtime: 954265376
+      name: t/url.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 1207
+      file_mime_type: ~
+      line_count: ~
+      md5: b524d4c6d52348fbdba49ac960f6910c
+      mtime: 954265375
+      name: t/cgi.t
+      uses:
+        - strict
+        - lib
+        - Template
+        - Template::Test
+    - bytesize: 4594
+      file_mime_type: ~
+      line_count: ~
+      md5: 3aa9c7502b090b59c47704acc08c160e
+      mtime: 943602815
+      name: t/binop.t
+      uses:
+        - strict
+        - lib
+        - Template::Test
+    - bytesize: 1244
+      file_mime_type: ~
+      line_count: ~
+      md5: 43d488a3f5c54dd75195da7eef6f56a6
+      mtime: 943552288
+      name: t/recurse.t
+      uses:
+        - strict
+        - lib
+        - Template::Constants
+        - Template
+        - Template::Test
+  tests:
+    - t/import.t
+    - t/ref.t
+    - t/get.t
+    - t/include.t
+    - t/hash.t
+    - t/stop.t
+    - t/listndx.t
+    - t/set.t
+    - t/foreach.t
+    - t/case.t
+    - t/process.t
+    - t/catch.t
+    - t/literal.t
+    - t/exception.t
+    - t/interp.t
+    - t/datafile.t
+    - t/vars.t
+    - t/call.t
+    - t/default.t
+    - t/predefs.t
+    - t/private.t
+    - t/iterator.t
+    - t/error.t
+    - t/output.t
+    - t/object.t
+    - t/code.t
+    - t/foriter.t
+    - t/postchomp.t
+    - t/dom.t
+    - t/text.t
+    - t/break.t
+    - t/context.t
+    - t/table.t
+    - t/block.t
+    - t/macro.t
+    - t/accessor.t
+    - t/comment.t
+    - t/rss.t
+    - t/list.t
+    - t/constants.t
+    - t/prechomp.t
+    - t/directive.t
+    - t/stash.t
+    - t/named.t
+    - t/format.t
+    - t/if.t
+    - t/skel.t
+    - t/perl.t
+    - t/throw.t
+    - t/cache.t
+    - t/abspaths.t
+    - t/while.t
+    - t/preproc.t
+    - t/tag.t
+    - t/userdef.t
+    - t/tags.t
+    - t/global.t
+    - t/chomp.t
+    - t/unless.t
+    - t/return.t
+    - t/filter.t
+    - t/define.t
+    - t/multi.t
+    - t/parser.t
+    - t/url.t
+    - t/cgi.t
+    - t/binop.t
+    - t/recurse.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-61813.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 61813
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268852444
+  examine_start_time: 1268852400
+  examine_time: 44
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 61813
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268852444
+  run_start_time: 1268852400
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

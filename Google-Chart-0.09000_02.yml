@@ -1,0 +1,2715 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Interface to Google Charts API
+    author:
+      - Daisuke Maki C<< <daisuke@endeworks.jp> >> (current maintainer)
+    build_requires:
+      ExtUtils::MakeMaker: 6.42
+      Test::MockObject: 0
+      Test::More: 0.82
+      Test::UseAllModules: 0
+    configure_requires:
+      ExtUtils::MakeMaker: 6.42
+    distribution_type: module
+    generated_by: Module::Install version 0.91
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Google-Chart
+    no_index:
+      directory:
+        - docs
+        - inc
+        - t
+    requires:
+      LWP::UserAgent: 0
+      Moose: 0.92
+      URI: 0
+      URI::Escape: 0
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 0.09000_02
+  blib:
+    - blib/lib/Google/Chart.pm
+    - blib/lib/Google/Chart/Data.pm
+    - blib/lib/Google/Chart/DataSet.pm
+    - blib/lib/Google/Chart/Encoding.pm
+    - blib/lib/Google/Chart/Encoding/Extended.pm
+    - blib/lib/Google/Chart/Encoding/Simple.pm
+    - blib/lib/Google/Chart/Encoding/Text.pm
+    - blib/lib/Google/Chart/Title.pm
+    - blib/lib/Google/Chart/Type/Bar.pm
+    - blib/lib/Google/Chart/Type/GoogleOMeter.pm
+    - blib/lib/Google/Chart/Type/Line.pm
+    - blib/lib/Google/Chart/Type/Map.pm
+    - blib/lib/Google/Chart/Type/Pie.pm
+    - blib/lib/Google/Chart/Type/QRcode.pm
+    - blib/lib/Google/Chart/Type/Radar.pm
+    - blib/lib/Google/Chart/Type/ScatterPlot.pm
+    - blib/lib/Google/Chart/Type/SparkLine.pm
+    - blib/lib/Google/Chart/Type/Venn.pm
+    - blib/lib/Google/Chart/Type/XY.pm
+    - blib/lib/Google/Chart/Types.pm
+    - blib/lib/Google/Chart/WithAxis.pm
+    - blib/lib/Google/Chart/WithData.pm
+    - blib/lib/Google/Chart/WithGrid.pm
+    - blib/lib/Google/Chart/WithLineDrawStyle.pm
+    - blib/lib/Google/Chart/WithLineStyle.pm
+    - blib/lib/Google/Chart/WithLinearGradientFill.pm
+    - blib/lib/Google/Chart/WithLinearStripe.pm
+    - blib/lib/Google/Chart/WithMarker.pm
+    - blib/lib/Google/Chart/WithRangeFill.pm
+    - blib/lib/Google/Chart/WithRangeMarker.pm
+    - blib/lib/Google/Chart/WithSolidFill.pm
+    - blib/lib/Google/recode.pl
+    - blib/lib/Google/scrape.pl
+    - blib/man3/Google::Chart.3
+    - blib/man3/Google::Chart::Data.3
+    - blib/man3/Google::Chart::DataSet.3
+    - blib/man3/Google::Chart::Encoding::Extended.3
+    - blib/man3/Google::Chart::Encoding::Simple.3
+    - blib/man3/Google::Chart::Encoding::Text.3
+    - blib/man3/Google::Chart::Title.3
+    - blib/man3/Google::Chart::Type::Bar.3
+    - blib/man3/Google::Chart::Type::Line.3
+    - blib/man3/Google::Chart::Type::Pie.3
+    - blib/man3/Google::Chart::Type::QRcode.3
+    - blib/man3/Google::Chart::Type::Radar.3
+    - blib/man3/Google::Chart::Type::ScatterPlot.3
+    - blib/man3/Google::Chart::Type::SparkLine.3
+    - blib/man3/Google::Chart::Type::Venn.3
+    - blib/man3/Google::Chart::Type::XY.3
+    - blib/man3/Google::Chart::Types.3
+    - blib/man3/Google::Chart::WithAxis.3
+    - blib/man3/Google::Chart::WithData.3
+    - blib/man3/Google::Chart::WithGrid.3
+    - blib/man3/Google::Chart::WithLineDrawStyle.3
+    - blib/man3/Google::Chart::WithLineStyle.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Cannot determine perl version info from lib/Google/Chart.pm
+    Warning: prerequisite LWP::UserAgent 0 not found.
+    Warning: prerequisite Moose 0.92 not found.
+    Warning: prerequisite Test::MockObject 0 not found.
+    Warning: prerequisite Test::UseAllModules 0 not found.
+    Warning: prerequisite URI 0 not found.
+    Warning: prerequisite URI::Escape 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Google::Chart
+  build_output: |
+    cp lib/Google/Chart/WithGrid.pm blib/lib/Google/Chart/WithGrid.pm
+    cp lib/Google/Chart/Type/Line.pm blib/lib/Google/Chart/Type/Line.pm
+    cp lib/Google/Chart/Type/Map.pm blib/lib/Google/Chart/Type/Map.pm
+    cp lib/Google/Chart/Type/GoogleOMeter.pm blib/lib/Google/Chart/Type/GoogleOMeter.pm
+    cp lib/Google/Chart/Encoding/Simple.pm blib/lib/Google/Chart/Encoding/Simple.pm
+    cp lib/Google/Chart/Type/XY.pm blib/lib/Google/Chart/Type/XY.pm
+    cp lib/Google/Chart/WithData.pm blib/lib/Google/Chart/WithData.pm
+    cp lib/Google/Chart/Type/QRcode.pm blib/lib/Google/Chart/Type/QRcode.pm
+    cp lib/Google/Chart/WithMarker.pm blib/lib/Google/Chart/WithMarker.pm
+    cp scrape.pl blib/lib/Google/scrape.pl
+    cp lib/Google/Chart/Encoding/Extended.pm blib/lib/Google/Chart/Encoding/Extended.pm
+    cp lib/Google/Chart/Type/Venn.pm blib/lib/Google/Chart/Type/Venn.pm
+    cp lib/Google/Chart.pm blib/lib/Google/Chart.pm
+    cp lib/Google/Chart/DataSet.pm blib/lib/Google/Chart/DataSet.pm
+    cp lib/Google/Chart/Type/Pie.pm blib/lib/Google/Chart/Type/Pie.pm
+    cp lib/Google/Chart/Type/Radar.pm blib/lib/Google/Chart/Type/Radar.pm
+    cp lib/Google/Chart/Data.pm blib/lib/Google/Chart/Data.pm
+    cp lib/Google/Chart/WithSolidFill.pm blib/lib/Google/Chart/WithSolidFill.pm
+    cp lib/Google/Chart/Type/ScatterPlot.pm blib/lib/Google/Chart/Type/ScatterPlot.pm
+    cp lib/Google/Chart/Encoding/Text.pm blib/lib/Google/Chart/Encoding/Text.pm
+    cp lib/Google/Chart/Type/SparkLine.pm blib/lib/Google/Chart/Type/SparkLine.pm
+    cp lib/Google/Chart/WithRangeFill.pm blib/lib/Google/Chart/WithRangeFill.pm
+    cp lib/Google/Chart/WithLineDrawStyle.pm blib/lib/Google/Chart/WithLineDrawStyle.pm
+    cp lib/Google/Chart/Type/Bar.pm blib/lib/Google/Chart/Type/Bar.pm
+    cp lib/Google/Chart/Encoding.pm blib/lib/Google/Chart/Encoding.pm
+    cp lib/Google/Chart/WithLinearGradientFill.pm blib/lib/Google/Chart/WithLinearGradientFill.pm
+    cp recode.pl blib/lib/Google/recode.pl
+    cp lib/Google/Chart/Title.pm blib/lib/Google/Chart/Title.pm
+    cp lib/Google/Chart/WithRangeMarker.pm blib/lib/Google/Chart/WithRangeMarker.pm
+    cp lib/Google/Chart/Types.pm blib/lib/Google/Chart/Types.pm
+    cp lib/Google/Chart/WithLineStyle.pm blib/lib/Google/Chart/WithLineStyle.pm
+    cp lib/Google/Chart/WithAxis.pm blib/lib/Google/Chart/WithAxis.pm
+    cp lib/Google/Chart/WithLinearStripe.pm blib/lib/Google/Chart/WithLinearStripe.pm
+    Manifying blib/man3/Google::Chart::WithGrid.3
+    Manifying blib/man3/Google::Chart::WithLineDrawStyle.3
+    Manifying blib/man3/Google::Chart::Type::Bar.3
+    Manifying blib/man3/Google::Chart::Type::Line.3
+    Manifying blib/man3/Google::Chart::Type::XY.3
+    Manifying blib/man3/Google::Chart::Encoding::Simple.3
+    Manifying blib/man3/Google::Chart::WithData.3
+    Manifying blib/man3/Google::Chart::Type::QRcode.3
+    Manifying blib/man3/Google::Chart::Title.3
+    Manifying blib/man3/Google::Chart::Encoding::Extended.3
+    Manifying blib/man3/Google::Chart::Types.3
+    Manifying blib/man3/Google::Chart::Type::Venn.3
+    Manifying blib/man3/Google::Chart.3
+    Manifying blib/man3/Google::Chart::DataSet.3
+    Manifying blib/man3/Google::Chart::Type::Pie.3
+    Manifying blib/man3/Google::Chart::Type::Radar.3
+    Manifying blib/man3/Google::Chart::Data.3
+    Manifying blib/man3/Google::Chart::Type::ScatterPlot.3
+    Manifying blib/man3/Google::Chart::Encoding::Text.3
+    Manifying blib/man3/Google::Chart::Type::SparkLine.3
+    Manifying blib/man3/Google::Chart::WithLineStyle.3
+    Manifying blib/man3/Google::Chart::WithAxis.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa/Google-Chart-0.09000_02/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa/Google-Chart-0.09000_02
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa/Google-Chart-0.09000_02/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa/Google-Chart-0.09000_02/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.91
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: DMAKI
+  dist_basename: Google-Chart-0.09000_02.tar.gz
+  dist_date: 1256947861
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa/Google-Chart-0.09000_02
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa/Google-Chart-0.09000_02
+  dist_file: /home/brian/CPAN/authors/id/D/DM/DMAKI/Google-Chart-0.09000_02.tar.gz
+  dist_md5: be1f747a8f63e362bee570e595ce96ec
+  dist_size: 55951
+  manifest:
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - docs/samples.html
+    - inc/Module/Install.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/Google/Chart.pm
+    - lib/Google/Chart/Data.pm
+    - lib/Google/Chart/DataSet.pm
+    - lib/Google/Chart/Encoding.pm
+    - lib/Google/Chart/Encoding/Extended.pm
+    - lib/Google/Chart/Encoding/Simple.pm
+    - lib/Google/Chart/Encoding/Text.pm
+    - lib/Google/Chart/Title.pm
+    - lib/Google/Chart/Type/Bar.pm
+    - lib/Google/Chart/Type/GoogleOMeter.pm
+    - lib/Google/Chart/Type/Line.pm
+    - lib/Google/Chart/Type/Map.pm
+    - lib/Google/Chart/Type/Pie.pm
+    - lib/Google/Chart/Type/QRcode.pm
+    - lib/Google/Chart/Type/Radar.pm
+    - lib/Google/Chart/Type/ScatterPlot.pm
+    - lib/Google/Chart/Type/SparkLine.pm
+    - lib/Google/Chart/Type/Venn.pm
+    - lib/Google/Chart/Type/XY.pm
+    - lib/Google/Chart/Types.pm
+    - lib/Google/Chart/WithAxis.pm
+    - lib/Google/Chart/WithData.pm
+    - lib/Google/Chart/WithGrid.pm
+    - lib/Google/Chart/WithLineDrawStyle.pm
+    - lib/Google/Chart/WithLineStyle.pm
+    - lib/Google/Chart/WithLinearGradientFill.pm
+    - lib/Google/Chart/WithLinearStripe.pm
+    - lib/Google/Chart/WithMarker.pm
+    - lib/Google/Chart/WithRangeFill.pm
+    - lib/Google/Chart/WithRangeMarker.pm
+    - lib/Google/Chart/WithSolidFill.pm
+    - recode.pl
+    - scrape.pl
+    - t/000_compile.t
+    - t/001_tutorial.t
+    - t/101_encoding_text.t
+    - t/102_encoding_extended.t
+    - t/103_encoding_simple.t
+    - t/104_color.t
+    - t/105_legend.t
+    - t/106_grid.t
+    - t/107_axis.t
+    - t/108_env_proxy.t
+    - t/110_fill.t
+    - t/200_type_bar.t
+    - t/201_type_line.t
+    - t/202_type_pie.t
+    - t/203_type_qrcode.t
+    - t/300_live_samples.t
+    - t/900_google_developers_manual.t
+    - t/99-pod-coverage.t
+    - t/99-pod.t
+    - t/lib/Test/Google/Chart.pm
+    - t/lib/Test/Google/Chart/Samples.pm
+    - t/rt42260.t
+    - tools/generate_sample_html.pl
+  manifest_file_info:
+    - bytesize: 4516
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1256947763
+      name: Changes
+    - bytesize: 1736
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1256819759
+      name: MANIFEST
+    - bytesize: 670
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1256947779
+      name: META.yml
+    - bytesize: 863
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1256819301
+      name: Makefile.PL
+    - bytesize: 160230
+      file_mime_type: ~
+      line_count: ~
+      md5: 49eb30f6254a215aecc33d5708179135
+      mtime: 1256819151
+      name: docs/samples.html
+    - bytesize: 10316
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1256947778
+      name: inc/Module/Install.pm
+    - bytesize: 1014
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1256947779
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1256947779
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2455
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1256947779
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 7171
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1256947779
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 15044
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1256947779
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1256947779
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 1170
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1256947779
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 7300
+      file_mime_type: ~
+      line_count: ~
+      md5: 893d815375f7c557d72ef406a46648e9
+      mtime: 1256896843
+      name: lib/Google/Chart.pm
+    - bytesize: 3679
+      file_mime_type: ~
+      line_count: ~
+      md5: ea33f37627a81aac26b45da71404bef8
+      mtime: 1256814296
+      name: lib/Google/Chart/Data.pm
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: ec5b8e836c328cdb1b9e3df4f9e7f79e
+      mtime: 1256702970
+      name: lib/Google/Chart/DataSet.pm
+    - bytesize: 73
+      file_mime_type: ~
+      line_count: ~
+      md5: cfaee0ddb4a0aedfca1e0423fc1c80b4
+      mtime: 1254728891
+      name: lib/Google/Chart/Encoding.pm
+    - bytesize: 1513
+      file_mime_type: ~
+      line_count: ~
+      md5: 42bdc240a429a7c50d0639875307f12d
+      mtime: 1256622417
+      name: lib/Google/Chart/Encoding/Extended.pm
+    - bytesize: 724
+      file_mime_type: ~
+      line_count: ~
+      md5: 67c76c4bc8bc631a4ea15f50f55431a5
+      mtime: 1256622314
+      name: lib/Google/Chart/Encoding/Simple.pm
+    - bytesize: 1360
+      file_mime_type: ~
+      line_count: ~
+      md5: 564062558c6f928a1344f008a2df96ce
+      mtime: 1256702747
+      name: lib/Google/Chart/Encoding/Text.pm
+    - bytesize: 839
+      file_mime_type: ~
+      line_count: ~
+      md5: 00f3fe21c406ce1a401fdaec3d609d26
+      mtime: 1256803306
+      name: lib/Google/Chart/Title.pm
+    - bytesize: 2063
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d8e7eab25c3e06d58f6e1edc76118e6
+      mtime: 1256816335
+      name: lib/Google/Chart/Type/Bar.pm
+    - bytesize: 740
+      file_mime_type: ~
+      line_count: ~
+      md5: 27b6002b0d520c29ab6cece390b601f3
+      mtime: 1256721719
+      name: lib/Google/Chart/Type/GoogleOMeter.pm
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ef5b5eaef9d3949545663abd9f9df9b
+      mtime: 1256815323
+      name: lib/Google/Chart/Type/Line.pm
+    - bytesize: 987
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d4f20232985e222b2112166cd629868
+      mtime: 1256803834
+      name: lib/Google/Chart/Type/Map.pm
+    - bytesize: 1664
+      file_mime_type: ~
+      line_count: ~
+      md5: 07b6c7bd5928934d07a0ec20c3ebdf88
+      mtime: 1256896589
+      name: lib/Google/Chart/Type/Pie.pm
+    - bytesize: 1576
+      file_mime_type: ~
+      line_count: ~
+      md5: 07b8c5a840688c4abc21fb868ce74483
+      mtime: 1256803716
+      name: lib/Google/Chart/Type/QRcode.pm
+    - bytesize: 753
+      file_mime_type: ~
+      line_count: ~
+      md5: 4761e0c320df976ffe70974398b1dd73
+      mtime: 1256803843
+      name: lib/Google/Chart/Type/Radar.pm
+    - bytesize: 556
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e787e07054178cd2b8911705636d90d
+      mtime: 1256803847
+      name: lib/Google/Chart/Type/ScatterPlot.pm
+    - bytesize: 622
+      file_mime_type: ~
+      line_count: ~
+      md5: d6cce816b16dfbf7ecbd3b2673b39734
+      mtime: 1256815299
+      name: lib/Google/Chart/Type/SparkLine.pm
+    - bytesize: 1137
+      file_mime_type: ~
+      line_count: ~
+      md5: a4c11a42b29975c4a9ffaf14de6e7218
+      mtime: 1256803857
+      name: lib/Google/Chart/Type/Venn.pm
+    - bytesize: 655
+      file_mime_type: ~
+      line_count: ~
+      md5: 1052772707869e07df38507c4883de2e
+      mtime: 1256803862
+      name: lib/Google/Chart/Type/XY.pm
+    - bytesize: 6871
+      file_mime_type: ~
+      line_count: ~
+      md5: c5f7a5f691cb2a386a2516d347f0dedc
+      mtime: 1256645872
+      name: lib/Google/Chart/Types.pm
+    - bytesize: 3715
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bc2c4000687dff32f8315b138a6ad18
+      mtime: 1256805585
+      name: lib/Google/Chart/WithAxis.pm
+    - bytesize: 5109
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dbfe1b5a2b72ed1d61f1055d7adf27a
+      mtime: 1256814997
+      name: lib/Google/Chart/WithData.pm
+    - bytesize: 1927
+      file_mime_type: ~
+      line_count: ~
+      md5: 36df49cdbcb35bf529c1a657f952529d
+      mtime: 1256811822
+      name: lib/Google/Chart/WithGrid.pm
+    - bytesize: 1410
+      file_mime_type: ~
+      line_count: ~
+      md5: a3e97fef11136754d1db29ccc6041112
+      mtime: 1256816510
+      name: lib/Google/Chart/WithLineDrawStyle.pm
+    - bytesize: 1845
+      file_mime_type: ~
+      line_count: ~
+      md5: f89c6d9126bb228bf3d8c70bbbe2298c
+      mtime: 1256814442
+      name: lib/Google/Chart/WithLineStyle.pm
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: ecf0d4303ffd92fff458c5cd7e5f0f0f
+      mtime: 1256792598
+      name: lib/Google/Chart/WithLinearGradientFill.pm
+    - bytesize: 1231
+      file_mime_type: ~
+      line_count: ~
+      md5: b1423eba2ad22cfc969c60e748972351
+      mtime: 1256793679
+      name: lib/Google/Chart/WithLinearStripe.pm
+    - bytesize: 2381
+      file_mime_type: ~
+      line_count: ~
+      md5: d679df1327da84dfbba323341ad0e9ae
+      mtime: 1256814424
+      name: lib/Google/Chart/WithMarker.pm
+    - bytesize: 1241
+      file_mime_type: ~
+      line_count: ~
+      md5: 84fd3942646f412b0840b6fa172af276
+      mtime: 1256817931
+      name: lib/Google/Chart/WithRangeFill.pm
+    - bytesize: 1473
+      file_mime_type: ~
+      line_count: ~
+      md5: 3421bbb463089d6ffad9efd0819fde7d
+      mtime: 1256804143
+      name: lib/Google/Chart/WithRangeMarker.pm
+    - bytesize: 1076
+      file_mime_type: ~
+      line_count: ~
+      md5: 76febfd0c009fe1363ea9d07723b8efc
+      mtime: 1256782247
+      name: lib/Google/Chart/WithSolidFill.pm
+    - bytesize: 1341
+      file_mime_type: ~
+      line_count: ~
+      md5: d4b2bcf727ff2aeeb841b799441427b0
+      mtime: 1256815769
+      name: recode.pl
+    - bytesize: 343
+      file_mime_type: ~
+      line_count: ~
+      md5: 91b0875d2cd5f270c6eb4b314cea6b86
+      mtime: 1256693460
+      name: scrape.pl
+    - bytesize: 67
+      file_mime_type: ~
+      line_count: ~
+      md5: 302fe474a77a078dadfe715b2362b729
+      mtime: 1256638197
+      name: t/000_compile.t
+    - bytesize: 1160
+      file_mime_type: ~
+      line_count: ~
+      md5: f23548c5902df349b0fa219048268735
+      mtime: 1256804451
+      name: t/001_tutorial.t
+    - bytesize: 1065
+      file_mime_type: ~
+      line_count: ~
+      md5: b3d42aa5bbeafcffb76015da754e92d5
+      mtime: 1256814670
+      name: t/101_encoding_text.t
+    - bytesize: 1908
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e7c93f4d14bb8e3399a41e21ec18ea1
+      mtime: 1256814714
+      name: t/102_encoding_extended.t
+    - bytesize: 1215
+      file_mime_type: ~
+      line_count: ~
+      md5: 637699c6299639bd8a9b915131f0ad67
+      mtime: 1256814738
+      name: t/103_encoding_simple.t
+    - bytesize: 1173
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c4aa7b84d21fc0886ac4279ea23d75f
+      mtime: 1256646163
+      name: t/104_color.t
+    - bytesize: 1945
+      file_mime_type: ~
+      line_count: ~
+      md5: e0a2ad25d92fcb484f8163c7a8fcdfa1
+      mtime: 1256638197
+      name: t/105_legend.t
+    - bytesize: 983
+      file_mime_type: ~
+      line_count: ~
+      md5: f25f72bc63c34d272a9da408734825d9
+      mtime: 1256811383
+      name: t/106_grid.t
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: c119dcea9034c7348fcb2479edbf2cd4
+      mtime: 1256802606
+      name: t/107_axis.t
+    - bytesize: 952
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b11dfc47e5cc8ec405fe6ec8ad56379
+      mtime: 1256802654
+      name: t/108_env_proxy.t
+    - bytesize: 1043
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c1b03861a34218feb4a2d68c4de83fc
+      mtime: 1256802723
+      name: t/110_fill.t
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: 05929edea92229de99235dc073a8c8be
+      mtime: 1256802672
+      name: t/200_type_bar.t
+    - bytesize: 561
+      file_mime_type: ~
+      line_count: ~
+      md5: cdf05f75fd9eee5c0c1c3118dc4fe1a9
+      mtime: 1256802732
+      name: t/201_type_line.t
+    - bytesize: 675
+      file_mime_type: ~
+      line_count: ~
+      md5: d8ff7fd0afdfe2c9b054e9ff62ae117e
+      mtime: 1256896550
+      name: t/202_type_pie.t
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: 49ca398575f5a4ea1c80fc7c47cacd64
+      mtime: 1256802760
+      name: t/203_type_qrcode.t
+    - bytesize: 854
+      file_mime_type: ~
+      line_count: ~
+      md5: e6ca827cc6a67078794f5015d393681a
+      mtime: 1256820000
+      name: t/300_live_samples.t
+    - bytesize: 7674
+      file_mime_type: ~
+      line_count: ~
+      md5: 210d9e3f4bb26ec7e3ade728bf792d0f
+      mtime: 1256804783
+      name: t/900_google_developers_manual.t
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: ecaa4a5ef30c06fd133d302dc5980fc4
+      mtime: 1242628088
+      name: t/99-pod-coverage.t
+    - bytesize: 271
+      file_mime_type: ~
+      line_count: ~
+      md5: 17835dfb6b825669b6109f3f4eac1b87
+      mtime: 1242628088
+      name: t/99-pod.t
+    - bytesize: 1158
+      file_mime_type: ~
+      line_count: ~
+      md5: cd8871cc5a3abb326d084d70c7db17b0
+      mtime: 1256704510
+      name: t/lib/Test/Google/Chart.pm
+    - bytesize: 77255
+      file_mime_type: ~
+      line_count: ~
+      md5: 755b47c5525219f3f241fefbc86eddcf
+      mtime: 1256896660
+      name: t/lib/Test/Google/Chart/Samples.pm
+    - bytesize: 331
+      file_mime_type: ~
+      line_count: ~
+      md5: f564fcae52870817e65c720e7834d3b3
+      mtime: 1256638197
+      name: t/rt42260.t
+    - bytesize: 2209
+      file_mime_type: ~
+      line_count: ~
+      md5: 1262da776d0171bff4241e1fe4c80a52
+      mtime: 1256818367
+      name: tools/generate_sample_html.pl
+  module_info:
+    - bytesize: 7300
+      file_mime_type: ~
+      line_count: ~
+      md5: 038bfcc22fd817c6b4bf595f038b7e94
+      module_name_from_file_guess: Google::Chart
+      mtime: 1256896843
+      name: blib/lib/Google/Chart.pm
+      packages:
+        - Google::Chart
+      primary_package: Google::Chart
+      uses:
+        - Moose
+        - Google::Chart::Data
+        - Google::Chart::Title
+        - Google::Chart::Types
+        - LWP::UserAgent
+        - namespace::clean
+        - URI
+      version_info:
+        filename: blib/lib/Google/Chart.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 0.09000_02
+    - bytesize: 3679
+      file_mime_type: ~
+      line_count: ~
+      md5: fe954d30e3788defeb8989217305052e
+      module_name_from_file_guess: Google::Chart::Data
+      mtime: 1256814296
+      name: blib/lib/Google/Chart/Data.pm
+      packages:
+        - Google::Chart::Data
+      primary_package: Google::Chart::Data
+      uses:
+        - Moose
+        - Google::Chart::DataSet
+        - Google::Chart::Encoding::Extended
+        - Google::Chart::Encoding::Simple
+        - Google::Chart::Encoding::Text
+        - Google::Chart::Types
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Data.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: 0133a79932f9e2da93c0d42d28be69ef
+      module_name_from_file_guess: Google::Chart::DataSet
+      mtime: 1256702970
+      name: blib/lib/Google/Chart/DataSet.pm
+      packages:
+        - Google::Chart::DataSet
+      primary_package: Google::Chart::DataSet
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/DataSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 73
+      file_mime_type: ~
+      line_count: ~
+      md5: 7219663fbaf19caa01b5b54045e685ff
+      module_name_from_file_guess: Google::Chart::Encoding
+      mtime: 1254728891
+      name: blib/lib/Google/Chart/Encoding.pm
+      packages:
+        - Google::Chart::Encoding
+      primary_package: Google::Chart::Encoding
+      uses:
+        - Moose::Role
+      version_info:
+        filename: blib/lib/Google/Chart/Encoding.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1513
+      file_mime_type: ~
+      line_count: ~
+      md5: 91670885014ca15c8503d6071e4bf9cb
+      module_name_from_file_guess: Google::Chart::Encoding::Extended
+      mtime: 1256622417
+      name: blib/lib/Google/Chart/Encoding/Extended.pm
+      packages:
+        - Google::Chart::Encoding::Extended
+      primary_package: Google::Chart::Encoding::Extended
+      uses:
+        - Moose
+        - Scalar::Util
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Encoding/Extended.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 724
+      file_mime_type: ~
+      line_count: ~
+      md5: 08070140472c43e4884f7ecb8804f6a4
+      module_name_from_file_guess: Google::Chart::Encoding::Simple
+      mtime: 1256622314
+      name: blib/lib/Google/Chart/Encoding/Simple.pm
+      packages:
+        - Google::Chart::Encoding::Simple
+      primary_package: Google::Chart::Encoding::Simple
+      uses:
+        - Moose
+        - Scalar::Util
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Encoding/Simple.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1360
+      file_mime_type: ~
+      line_count: ~
+      md5: bbe5d43f6e0eb75504a6e9b7204cfaa6
+      module_name_from_file_guess: Google::Chart::Encoding::Text
+      mtime: 1256702747
+      name: blib/lib/Google/Chart/Encoding/Text.pm
+      packages:
+        - Google::Chart::Encoding::Text
+      primary_package: Google::Chart::Encoding::Text
+      uses:
+        - Moose
+        - Scalar::Util
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Encoding/Text.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 839
+      file_mime_type: ~
+      line_count: ~
+      md5: 2fa95ff24f894d7c5c909bf5eaac77b4
+      module_name_from_file_guess: Google::Chart::Title
+      mtime: 1256803306
+      name: blib/lib/Google/Chart/Title.pm
+      packages:
+        - Google::Chart::Title
+      primary_package: Google::Chart::Title
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Title.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2063
+      file_mime_type: ~
+      line_count: ~
+      md5: 5025fbe0f23422c563b32bc62705b091
+      module_name_from_file_guess: Google::Chart::Type::Bar
+      mtime: 1256816335
+      name: blib/lib/Google/Chart/Type/Bar.pm
+      packages:
+        - Google::Chart::Type::Bar
+      primary_package: Google::Chart::Type::Bar
+      uses:
+        - Moose
+        - Moose::Util::TypeConstraints
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/Bar.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 740
+      file_mime_type: ~
+      line_count: ~
+      md5: a6d82ca73f173410d68b84f2e12abd99
+      module_name_from_file_guess: Google::Chart::Type::GoogleOMeter
+      mtime: 1256721719
+      name: blib/lib/Google/Chart/Type/GoogleOMeter.pm
+      packages:
+        - Google::Chart::Type::GoogleOMeter
+      primary_package: Google::Chart::Type::GoogleOMeter
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/GoogleOMeter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: c198ae6271076fc3cbdc01f2c7dedd6b
+      module_name_from_file_guess: Google::Chart::Type::Line
+      mtime: 1256815323
+      name: blib/lib/Google/Chart/Type/Line.pm
+      packages:
+        - Google::Chart::Type::Line
+      primary_package: Google::Chart::Type::Line
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/Line.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 987
+      file_mime_type: ~
+      line_count: ~
+      md5: a47f28bb7e67916a959c93ff832488cd
+      module_name_from_file_guess: Google::Chart::Type::Map
+      mtime: 1256803834
+      name: blib/lib/Google/Chart/Type/Map.pm
+      packages:
+        - Google::Chart::Type::Map
+      primary_package: Google::Chart::Type::Map
+      uses:
+        - Moose
+        - Moose::Util::TypeConstraints
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/Map.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1664
+      file_mime_type: ~
+      line_count: ~
+      md5: 5800ad57432a28c5f24b6e1179c5fe57
+      module_name_from_file_guess: Google::Chart::Type::Pie
+      mtime: 1256896589
+      name: blib/lib/Google/Chart/Type/Pie.pm
+      packages:
+        - Google::Chart::Type::Pie
+      primary_package: Google::Chart::Type::Pie
+      uses:
+        - Moose
+        - Moose::Util::TypeConstraints
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/Pie.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1576
+      file_mime_type: ~
+      line_count: ~
+      md5: 75ef6e8cc64304d1a93360e1a3875e86
+      module_name_from_file_guess: Google::Chart::Type::QRcode
+      mtime: 1256803716
+      name: blib/lib/Google/Chart/Type/QRcode.pm
+      packages:
+        - Google::Chart::Type::QRcode
+      primary_package: Google::Chart::Type::QRcode
+      uses:
+        - Moose
+        - Moose::Util::TypeConstraints
+        - Encode
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/QRcode.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 753
+      file_mime_type: ~
+      line_count: ~
+      md5: 40a4a7a4157eea5bbdac9f0e291e7ec0
+      module_name_from_file_guess: Google::Chart::Type::Radar
+      mtime: 1256803843
+      name: blib/lib/Google/Chart/Type/Radar.pm
+      packages:
+        - Google::Chart::Type::Radar
+      primary_package: Google::Chart::Type::Radar
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/Radar.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 556
+      file_mime_type: ~
+      line_count: ~
+      md5: e869785ea3a27b0badb54b701c876e6e
+      module_name_from_file_guess: Google::Chart::Type::ScatterPlot
+      mtime: 1256803847
+      name: blib/lib/Google/Chart/Type/ScatterPlot.pm
+      packages:
+        - Google::Chart::Type::ScatterPlot
+      primary_package: Google::Chart::Type::ScatterPlot
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/ScatterPlot.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 622
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a9b649510fd94b7f22b186b986818ed
+      module_name_from_file_guess: Google::Chart::Type::SparkLine
+      mtime: 1256815299
+      name: blib/lib/Google/Chart/Type/SparkLine.pm
+      packages:
+        - Google::Chart::Type::SparkLine
+      primary_package: Google::Chart::Type::SparkLine
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/SparkLine.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1137
+      file_mime_type: ~
+      line_count: ~
+      md5: 181e087395eb6939c9b1f48f01cbfee5
+      module_name_from_file_guess: Google::Chart::Type::Venn
+      mtime: 1256803857
+      name: blib/lib/Google/Chart/Type/Venn.pm
+      packages:
+        - Google::Chart::Type::Venn
+      primary_package: Google::Chart::Type::Venn
+      uses:
+        - Moose
+        - Moose::Util::TypeConstraints
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/Venn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 655
+      file_mime_type: ~
+      line_count: ~
+      md5: f2effd8a42ddb5f6ba05d22b598b7e4a
+      module_name_from_file_guess: Google::Chart::Type::XY
+      mtime: 1256803862
+      name: blib/lib/Google/Chart/Type/XY.pm
+      packages:
+        - Google::Chart::Type::XY
+      primary_package: Google::Chart::Type::XY
+      uses:
+        - Moose
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Type/XY.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6871
+      file_mime_type: ~
+      line_count: ~
+      md5: af0301b18f6b4a28cef77158d9804cf7
+      module_name_from_file_guess: Google::Chart::Types
+      mtime: 1256645872
+      name: blib/lib/Google/Chart/Types.pm
+      packages:
+        - Google::Chart::Types
+      primary_package: Google::Chart::Types
+      uses:
+        - Moose
+        - Moose::Util::TypeConstraints
+        - Carp
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/Types.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3715
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d313955b01f9d2b9c0092e5d3dc6afb
+      module_name_from_file_guess: Google::Chart::WithAxis
+      mtime: 1256805585
+      name: blib/lib/Google/Chart/WithAxis.pm
+      packages:
+        - Google::Chart::WithAxis
+        - Google::Chart::Axis
+      primary_package: Google::Chart::WithAxis
+      uses:
+        - Moose::Role
+        - Google::Chart::Types
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithAxis.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5109
+      file_mime_type: ~
+      line_count: ~
+      md5: 6206452b3f8eaed0c277f555f06e0079
+      module_name_from_file_guess: Google::Chart::WithData
+      mtime: 1256814997
+      name: blib/lib/Google/Chart/WithData.pm
+      packages:
+        - Google::Chart::WithData
+      primary_package: Google::Chart::WithData
+      uses:
+        - Moose::Role
+        - Google::Chart::Data
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/WithData.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1927
+      file_mime_type: ~
+      line_count: ~
+      md5: dc268f7bc4efb7616bd9e02ec6593e97
+      module_name_from_file_guess: Google::Chart::WithGrid
+      mtime: 1256811822
+      name: blib/lib/Google/Chart/WithGrid.pm
+      packages:
+        - Google::Chart::WithGrid
+        - Google::Chart::Grid
+      primary_package: Google::Chart::WithGrid
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+      version_info:
+        filename: blib/lib/Google/Chart/WithGrid.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1410
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b3d77951e73708ea2ce59fa0c95d498
+      module_name_from_file_guess: Google::Chart::WithLineDrawStyle
+      mtime: 1256816510
+      name: blib/lib/Google/Chart/WithLineDrawStyle.pm
+      packages:
+        - Google::Chart::WithLineDrawStyle
+        - Google::Chart::DataSet::LineDrawStyle
+      primary_package: Google::Chart::WithLineDrawStyle
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithLineDrawStyle.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1845
+      file_mime_type: ~
+      line_count: ~
+      md5: 73a89401fbab9efcdc93c89e8664d5ad
+      module_name_from_file_guess: Google::Chart::WithLineStyle
+      mtime: 1256814442
+      name: blib/lib/Google/Chart/WithLineStyle.pm
+      packages:
+        - Google::Chart::WithLineStyle
+        - Google::Chart::DataSet::WithLineStyle
+      primary_package: Google::Chart::WithLineStyle
+      uses:
+        - Moose::Role
+        - namespace::clean
+      version_info:
+        filename: blib/lib/Google/Chart/WithLineStyle.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: bcaa803592cd497a1ad62476a9363c6f
+      module_name_from_file_guess: Google::Chart::WithLinearGradientFill
+      mtime: 1256792598
+      name: blib/lib/Google/Chart/WithLinearGradientFill.pm
+      packages:
+        - Google::Chart::WithLinearGradientFill
+        - Google::Chart::LinearGradientFill
+      primary_package: Google::Chart::WithLinearGradientFill
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithLinearGradientFill.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1231
+      file_mime_type: ~
+      line_count: ~
+      md5: ee09742a47e25a6035ca56ce739eb9af
+      module_name_from_file_guess: Google::Chart::WithLinearStripe
+      mtime: 1256793679
+      name: blib/lib/Google/Chart/WithLinearStripe.pm
+      packages:
+        - Google::Chart::WithLinearStripe
+        - Google::Chart::LinearStripe
+      primary_package: Google::Chart::WithLinearStripe
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithLinearStripe.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2381
+      file_mime_type: ~
+      line_count: ~
+      md5: 87666fd6336f89e60a3069078ea59f07
+      module_name_from_file_guess: Google::Chart::WithMarker
+      mtime: 1256814424
+      name: blib/lib/Google/Chart/WithMarker.pm
+      packages:
+        - Google::Chart::WithMarker
+        - Google::Chart::DataSet::WithMarker
+        - Google::Chart::Marker
+      primary_package: Google::Chart::WithMarker
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithMarker.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1241
+      file_mime_type: ~
+      line_count: ~
+      md5: c2ad184c285b08bf272bf7967d9e2f7e
+      module_name_from_file_guess: Google::Chart::WithRangeFill
+      mtime: 1256817931
+      name: blib/lib/Google/Chart/WithRangeFill.pm
+      packages:
+        - Google::Chart::WithRangeFill
+        - Google::Chart::RangeFill
+      primary_package: Google::Chart::WithRangeFill
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithRangeFill.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1473
+      file_mime_type: ~
+      line_count: ~
+      md5: a5063805edc7a57cb38876d71b79f7aa
+      module_name_from_file_guess: Google::Chart::WithRangeMarker
+      mtime: 1256804143
+      name: blib/lib/Google/Chart/WithRangeMarker.pm
+      packages:
+        - Google::Chart::WithRangeMarker
+        - Google::Chart::RangeMarker
+      primary_package: Google::Chart::WithRangeMarker
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithRangeMarker.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1076
+      file_mime_type: ~
+      line_count: ~
+      md5: ed996cccc53cccb090a171400c4d62a5
+      module_name_from_file_guess: Google::Chart::WithSolidFill
+      mtime: 1256782247
+      name: blib/lib/Google/Chart/WithSolidFill.pm
+      packages:
+        - Google::Chart::WithSolidFill
+        - Google::Chart::SolidFill
+      primary_package: Google::Chart::WithSolidFill
+      uses:
+        - Moose::Role
+        - namespace::clean
+        - Moose
+        - Moose::Util::TypeConstraints
+      version_info:
+        filename: blib/lib/Google/Chart/WithSolidFill.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Google/Chart.pm
+    - blib/lib/Google/Chart/Data.pm
+    - blib/lib/Google/Chart/DataSet.pm
+    - blib/lib/Google/Chart/Encoding.pm
+    - blib/lib/Google/Chart/Encoding/Extended.pm
+    - blib/lib/Google/Chart/Encoding/Simple.pm
+    - blib/lib/Google/Chart/Encoding/Text.pm
+    - blib/lib/Google/Chart/Title.pm
+    - blib/lib/Google/Chart/Type/Bar.pm
+    - blib/lib/Google/Chart/Type/GoogleOMeter.pm
+    - blib/lib/Google/Chart/Type/Line.pm
+    - blib/lib/Google/Chart/Type/Map.pm
+    - blib/lib/Google/Chart/Type/Pie.pm
+    - blib/lib/Google/Chart/Type/QRcode.pm
+    - blib/lib/Google/Chart/Type/Radar.pm
+    - blib/lib/Google/Chart/Type/ScatterPlot.pm
+    - blib/lib/Google/Chart/Type/SparkLine.pm
+    - blib/lib/Google/Chart/Type/Venn.pm
+    - blib/lib/Google/Chart/Type/XY.pm
+    - blib/lib/Google/Chart/Types.pm
+    - blib/lib/Google/Chart/WithAxis.pm
+    - blib/lib/Google/Chart/WithData.pm
+    - blib/lib/Google/Chart/WithGrid.pm
+    - blib/lib/Google/Chart/WithLineDrawStyle.pm
+    - blib/lib/Google/Chart/WithLineStyle.pm
+    - blib/lib/Google/Chart/WithLinearGradientFill.pm
+    - blib/lib/Google/Chart/WithLinearStripe.pm
+    - blib/lib/Google/Chart/WithMarker.pm
+    - blib/lib/Google/Chart/WithRangeFill.pm
+    - blib/lib/Google/Chart/WithRangeMarker.pm
+    - blib/lib/Google/Chart/WithSolidFill.pm
+  test_info:
+    - bytesize: 67
+      file_mime_type: ~
+      line_count: ~
+      md5: 302fe474a77a078dadfe715b2362b729
+      mtime: 1256638197
+      name: t/000_compile.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1160
+      file_mime_type: ~
+      line_count: ~
+      md5: f23548c5902df349b0fa219048268735
+      mtime: 1256804451
+      name: t/001_tutorial.t
+      uses:
+        - strict
+        - Test::More
+        - Google::Chart
+        - Google::Chart::Type::Bar
+        - URI::QueryParam
+    - bytesize: 1065
+      file_mime_type: ~
+      line_count: ~
+      md5: b3d42aa5bbeafcffb76015da754e92d5
+      mtime: 1256814670
+      name: t/101_encoding_text.t
+      uses:
+        - strict
+        - Test::More
+        - Test::MockObject
+    - bytesize: 1908
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e7c93f4d14bb8e3399a41e21ec18ea1
+      mtime: 1256814714
+      name: t/102_encoding_extended.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+        - Test::MockObject
+    - bytesize: 1215
+      file_mime_type: ~
+      line_count: ~
+      md5: 637699c6299639bd8a9b915131f0ad67
+      mtime: 1256814738
+      name: t/103_encoding_simple.t
+      uses:
+        - strict
+        - Test::More
+        - Test::MockObject
+    - bytesize: 1173
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c4aa7b84d21fc0886ac4279ea23d75f
+      mtime: 1256646163
+      name: t/104_color.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+    - bytesize: 1945
+      file_mime_type: ~
+      line_count: ~
+      md5: e0a2ad25d92fcb484f8163c7a8fcdfa1
+      mtime: 1256638197
+      name: t/105_legend.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+    - bytesize: 983
+      file_mime_type: ~
+      line_count: ~
+      md5: f25f72bc63c34d272a9da408734825d9
+      mtime: 1256811383
+      name: t/106_grid.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: c119dcea9034c7348fcb2479edbf2cd4
+      mtime: 1256802606
+      name: t/107_axis.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+    - bytesize: 952
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b11dfc47e5cc8ec405fe6ec8ad56379
+      mtime: 1256802654
+      name: t/108_env_proxy.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1043
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c1b03861a34218feb4a2d68c4de83fc
+      mtime: 1256802723
+      name: t/110_fill.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: 05929edea92229de99235dc073a8c8be
+      mtime: 1256802672
+      name: t/200_type_bar.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+        - Test::Google::Chart
+    - bytesize: 561
+      file_mime_type: ~
+      line_count: ~
+      md5: cdf05f75fd9eee5c0c1c3118dc4fe1a9
+      mtime: 1256802732
+      name: t/201_type_line.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+        - Test::Google::Chart
+    - bytesize: 675
+      file_mime_type: ~
+      line_count: ~
+      md5: d8ff7fd0afdfe2c9b054e9ff62ae117e
+      mtime: 1256896550
+      name: t/202_type_pie.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+        - Test::Google::Chart
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: 49ca398575f5a4ea1c80fc7c47cacd64
+      mtime: 1256802760
+      name: t/203_type_qrcode.t
+      uses:
+        - strict
+        - utf8
+        - Test::More
+        - Test::Exception
+    - bytesize: 854
+      file_mime_type: ~
+      line_count: ~
+      md5: e6ca827cc6a67078794f5015d393681a
+      mtime: 1256820000
+      name: t/300_live_samples.t
+      uses:
+        - strict
+        - lib
+        - Test::Google::Chart
+        - Test::More
+        - LWP::UserAgent
+        - Digest::MD5
+    - bytesize: 7674
+      file_mime_type: ~
+      line_count: ~
+      md5: 210d9e3f4bb26ec7e3ade728bf792d0f
+      mtime: 1256804783
+      name: t/900_google_developers_manual.t
+      uses:
+        - strict
+        - Test::More
+        - Google::Chart
+        - URI
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: ecaa4a5ef30c06fd133d302dc5980fc4
+      mtime: 1242628088
+      name: t/99-pod-coverage.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 271
+      file_mime_type: ~
+      line_count: ~
+      md5: 17835dfb6b825669b6109f3f4eac1b87
+      mtime: 1242628088
+      name: t/99-pod.t
+      uses:
+        - Test::More
+        - strict
+    - bytesize: 331
+      file_mime_type: ~
+      line_count: ~
+      md5: f564fcae52870817e65c720e7834d3b3
+      mtime: 1256638197
+      name: t/rt42260.t
+      uses:
+        - strict
+        - Test::More
+        - Google::Chart
+  tests:
+    - t/000_compile.t
+    - t/001_tutorial.t
+    - t/101_encoding_text.t
+    - t/102_encoding_extended.t
+    - t/103_encoding_simple.t
+    - t/104_color.t
+    - t/105_legend.t
+    - t/106_grid.t
+    - t/107_axis.t
+    - t/108_env_proxy.t
+    - t/110_fill.t
+    - t/200_type_bar.t
+    - t/201_type_line.t
+    - t/202_type_pie.t
+    - t/203_type_qrcode.t
+    - t/300_live_samples.t
+    - t/900_google_developers_manual.t
+    - t/99-pod-coverage.t
+    - t/99-pod.t
+    - t/rt42260.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.crLa
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270021488
+  examine_start_time: 1270021468
+  examine_time: 20
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1270021488
+  run_start_time: 1270021468
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

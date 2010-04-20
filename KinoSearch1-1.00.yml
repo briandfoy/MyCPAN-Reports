@@ -1,0 +1,5954 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: search engine library
+    author:
+      - 'Marvin Humphrey <marvin at rectangular dot com>'
+    build_requires:
+      ExtUtils::CBuilder: 0
+      ExtUtils::ParseXS: 0
+    configure_requires:
+      Module::Build: 0.36
+    generated_by: Module::Build version 0.3603
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: KinoSearch1
+    provides:
+      KinoSearch1:
+        file: lib/KinoSearch1.pm
+        version: 1.00
+      KinoSearch1::Analysis::Analyzer:
+        file: lib/KinoSearch1/Analysis/Analyzer.pm
+      KinoSearch1::Analysis::LCNormalizer:
+        file: lib/KinoSearch1/Analysis/LCNormalizer.pm
+      KinoSearch1::Analysis::PolyAnalyzer:
+        file: lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+      KinoSearch1::Analysis::Stemmer:
+        file: lib/KinoSearch1/Analysis/Stemmer.pm
+      KinoSearch1::Analysis::Stopalizer:
+        file: lib/KinoSearch1/Analysis/Stopalizer.pm
+      KinoSearch1::Analysis::Token:
+        file: lib/KinoSearch1/Analysis/Token.pm
+      KinoSearch1::Analysis::TokenBatch:
+        file: lib/KinoSearch1/Analysis/TokenBatch.pm
+      KinoSearch1::Analysis::Tokenizer:
+        file: lib/KinoSearch1/Analysis/Tokenizer.pm
+      KinoSearch1::Document::Doc:
+        file: lib/KinoSearch1/Document/Doc.pm
+      KinoSearch1::Document::Field:
+        file: lib/KinoSearch1/Document/Field.pm
+      KinoSearch1::Highlight::Encoder:
+        file: lib/KinoSearch1/Highlight/Encoder.pm
+      KinoSearch1::Highlight::Formatter:
+        file: lib/KinoSearch1/Highlight/Formatter.pm
+      KinoSearch1::Highlight::Highlighter:
+        file: lib/KinoSearch1/Highlight/Highlighter.pm
+      KinoSearch1::Highlight::SimpleHTMLEncoder:
+        file: lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+      KinoSearch1::Highlight::SimpleHTMLFormatter:
+        file: lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+      KinoSearch1::Index::CompoundFileReader:
+        file: lib/KinoSearch1/Index/CompoundFileReader.pm
+      KinoSearch1::Index::CompoundFileWriter:
+        file: lib/KinoSearch1/Index/CompoundFileWriter.pm
+      KinoSearch1::Index::DelDocs:
+        file: lib/KinoSearch1/Index/DelDocs.pm
+      KinoSearch1::Index::FieldInfos:
+        file: lib/KinoSearch1/Index/FieldInfos.pm
+      KinoSearch1::Index::FieldsReader:
+        file: lib/KinoSearch1/Index/FieldsReader.pm
+      KinoSearch1::Index::FieldsWriter:
+        file: lib/KinoSearch1/Index/FieldsWriter.pm
+      KinoSearch1::Index::IndexFileNames:
+        file: lib/KinoSearch1/Index/IndexFileNames.pm
+      KinoSearch1::Index::IndexReader:
+        file: lib/KinoSearch1/Index/IndexReader.pm
+      KinoSearch1::Index::MultiReader:
+        file: lib/KinoSearch1/Index/MultiReader.pm
+      KinoSearch1::Index::MultiTermDocs:
+        file: lib/KinoSearch1/Index/MultiTermDocs.pm
+      KinoSearch1::Index::NormsReader:
+        file: lib/KinoSearch1/Index/NormsReader.pm
+      KinoSearch1::Index::PostingsWriter:
+        file: lib/KinoSearch1/Index/PostingsWriter.pm
+      KinoSearch1::Index::SegInfo:
+        file: lib/KinoSearch1/Index/SegInfos.pm
+      KinoSearch1::Index::SegInfos:
+        file: lib/KinoSearch1/Index/SegInfos.pm
+      KinoSearch1::Index::SegReader:
+        file: lib/KinoSearch1/Index/SegReader.pm
+      KinoSearch1::Index::SegTermDocs:
+        file: lib/KinoSearch1/Index/SegTermDocs.pm
+      KinoSearch1::Index::SegTermEnum:
+        file: lib/KinoSearch1/Index/SegTermEnum.pm
+      KinoSearch1::Index::SegWriter:
+        file: lib/KinoSearch1/Index/SegWriter.pm
+      KinoSearch1::Index::Term:
+        file: lib/KinoSearch1/Index/Term.pm
+      KinoSearch1::Index::TermBuffer:
+        file: lib/KinoSearch1/Index/TermBuffer.pm
+      KinoSearch1::Index::TermDocs:
+        file: lib/KinoSearch1/Index/TermDocs.pm
+      KinoSearch1::Index::TermEnum:
+        file: lib/KinoSearch1/Index/TermEnum.pm
+      KinoSearch1::Index::TermInfo:
+        file: lib/KinoSearch1/Index/TermInfo.pm
+      KinoSearch1::Index::TermInfosReader:
+        file: lib/KinoSearch1/Index/TermInfosReader.pm
+      KinoSearch1::Index::TermInfosWriter:
+        file: lib/KinoSearch1/Index/TermInfosWriter.pm
+      KinoSearch1::Index::TermVector:
+        file: lib/KinoSearch1/Index/TermVector.pm
+      KinoSearch1::InvIndexer:
+        file: lib/KinoSearch1/InvIndexer.pm
+      KinoSearch1::QueryParser::QueryParser:
+        file: lib/KinoSearch1/QueryParser/QueryParser.pm
+      KinoSearch1::Search::BitCollector:
+        file: lib/KinoSearch1/Search/HitCollector.pm
+      KinoSearch1::Search::BooleanClause:
+        file: lib/KinoSearch1/Search/BooleanClause.pm
+      KinoSearch1::Search::BooleanQuery:
+        file: lib/KinoSearch1/Search/BooleanQuery.pm
+      KinoSearch1::Search::BooleanScorer:
+        file: lib/KinoSearch1/Search/BooleanScorer.pm
+      KinoSearch1::Search::BooleanWeight:
+        file: lib/KinoSearch1/Search/BooleanQuery.pm
+      KinoSearch1::Search::CacheDFSource:
+        file: lib/KinoSearch1/Search/MultiSearcher.pm
+      KinoSearch1::Search::FilteredCollector:
+        file: lib/KinoSearch1/Search/HitCollector.pm
+      KinoSearch1::Search::Hit:
+        file: lib/KinoSearch1/Search/Hit.pm
+      KinoSearch1::Search::HitCollector:
+        file: lib/KinoSearch1/Search/HitCollector.pm
+      KinoSearch1::Search::HitQueue:
+        file: lib/KinoSearch1/Search/HitQueue.pm
+      KinoSearch1::Search::HitQueueCollector:
+        file: lib/KinoSearch1/Search/HitCollector.pm
+      KinoSearch1::Search::Hits:
+        file: lib/KinoSearch1/Search/Hits.pm
+      KinoSearch1::Search::MultiSearcher:
+        file: lib/KinoSearch1/Search/MultiSearcher.pm
+      KinoSearch1::Search::OffsetCollector:
+        file: lib/KinoSearch1/Search/HitCollector.pm
+      KinoSearch1::Search::PhraseQuery:
+        file: lib/KinoSearch1/Search/PhraseQuery.pm
+      KinoSearch1::Search::PhraseScorer:
+        file: lib/KinoSearch1/Search/PhraseScorer.pm
+      KinoSearch1::Search::PhraseWeight:
+        file: lib/KinoSearch1/Search/PhraseQuery.pm
+      KinoSearch1::Search::Query:
+        file: lib/KinoSearch1/Search/Query.pm
+      KinoSearch1::Search::QueryFilter:
+        file: lib/KinoSearch1/Search/QueryFilter.pm
+      KinoSearch1::Search::Scorer:
+        file: lib/KinoSearch1/Search/Scorer.pm
+      KinoSearch1::Search::SearchClient:
+        file: lib/KinoSearch1/Search/SearchClient.pm
+      KinoSearch1::Search::SearchServer:
+        file: lib/KinoSearch1/Search/SearchServer.pm
+      KinoSearch1::Search::Searchable:
+        file: lib/KinoSearch1/Search/Searchable.pm
+      KinoSearch1::Search::Similarity:
+        file: lib/KinoSearch1/Search/Similarity.pm
+      KinoSearch1::Search::TermQuery:
+        file: lib/KinoSearch1/Search/TermQuery.pm
+      KinoSearch1::Search::TermScorer:
+        file: lib/KinoSearch1/Search/TermScorer.pm
+      KinoSearch1::Search::TermWeight:
+        file: lib/KinoSearch1/Search/TermQuery.pm
+      KinoSearch1::Search::TitleSimilarity:
+        file: lib/KinoSearch1/Search/Similarity.pm
+      KinoSearch1::Search::Weight:
+        file: lib/KinoSearch1/Search/Weight.pm
+      KinoSearch1::Searcher:
+        file: lib/KinoSearch1/Searcher.pm
+      KinoSearch1::Store::FSInvIndex:
+        file: lib/KinoSearch1/Store/FSInvIndex.pm
+      KinoSearch1::Store::FSLock:
+        file: lib/KinoSearch1/Store/FSLock.pm
+      KinoSearch1::Store::InStream:
+        file: lib/KinoSearch1/Store/InStream.pm
+      KinoSearch1::Store::InvIndex:
+        file: lib/KinoSearch1/Store/InvIndex.pm
+      KinoSearch1::Store::Lock:
+        file: lib/KinoSearch1/Store/Lock.pm
+      KinoSearch1::Store::OutStream:
+        file: lib/KinoSearch1/Store/OutStream.pm
+      KinoSearch1::Store::RAMInvIndex:
+        file: lib/KinoSearch1/Store/RAMInvIndex.pm
+      KinoSearch1::Store::RAMLock:
+        file: lib/KinoSearch1/Store/RAMLock.pm
+      KinoSearch1::Util::BitVector:
+        file: lib/KinoSearch1/Util/BitVector.pm
+      KinoSearch1::Util::ByteBuf:
+        file: lib/KinoSearch1/Util/ByteBuf.pm
+      KinoSearch1::Util::CClass:
+        file: lib/KinoSearch1/Util/CClass.pm
+      KinoSearch1::Util::Carp:
+        file: lib/KinoSearch1/Util/Carp.pm
+      KinoSearch1::Util::Class:
+        file: lib/KinoSearch1/Util/Class.pm
+      KinoSearch1::Util::IntMap:
+        file: lib/KinoSearch1/Util/IntMap.pm
+      KinoSearch1::Util::MathUtils:
+        file: lib/KinoSearch1/Util/MathUtils.pm
+      KinoSearch1::Util::MemManager:
+        file: lib/KinoSearch1/Util/MemManager.pm
+      KinoSearch1::Util::PriorityQueue:
+        file: lib/KinoSearch1/Util/PriorityQueue.pm
+      KinoSearch1::Util::SortExternal:
+        file: lib/KinoSearch1/Util/SortExternal.pm
+      KinoSearch1::Util::StringHelper:
+        file: lib/KinoSearch1/Util/StringHelper.pm
+      KinoSearch1::Util::ToStringUtils:
+        file: lib/KinoSearch1/Util/ToStringUtils.pm
+      KinoSearch1::Util::ToolSet:
+        file: lib/KinoSearch1/Util/ToolSet.pm
+      KinoSearch1::Util::VerifyArgs:
+        file: lib/KinoSearch1/Util/VerifyArgs.pm
+    requires:
+      Compress::Zlib: 0
+      Lingua::Stem::Snowball: 0.94
+      Lingua::StopWords: 0.02
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 1.00
+  blib:
+    - blib/arch/auto/KinoSearch1/KinoSearch1.bs
+    - blib/arch/auto/KinoSearch1/KinoSearch1.so
+    - blib/lib/KinoSearch1.pm
+    - blib/lib/KinoSearch1/Analysis/Analyzer.pm
+    - blib/lib/KinoSearch1/Analysis/LCNormalizer.pm
+    - blib/lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+    - blib/lib/KinoSearch1/Analysis/Stemmer.pm
+    - blib/lib/KinoSearch1/Analysis/Stopalizer.pm
+    - blib/lib/KinoSearch1/Analysis/Token.pm
+    - blib/lib/KinoSearch1/Analysis/TokenBatch.pm
+    - blib/lib/KinoSearch1/Analysis/Tokenizer.pm
+    - blib/lib/KinoSearch1/Docs/FileFormat.pod
+    - blib/lib/KinoSearch1/Docs/Tutorial.pod
+    - blib/lib/KinoSearch1/Document/Doc.pm
+    - blib/lib/KinoSearch1/Document/Field.pm
+    - blib/lib/KinoSearch1/Highlight/Encoder.pm
+    - blib/lib/KinoSearch1/Highlight/Formatter.pm
+    - blib/lib/KinoSearch1/Highlight/Highlighter.pm
+    - blib/lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+    - blib/lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+    - blib/lib/KinoSearch1/Index/CompoundFileReader.pm
+    - blib/lib/KinoSearch1/Index/CompoundFileWriter.pm
+    - blib/lib/KinoSearch1/Index/DelDocs.pm
+    - blib/lib/KinoSearch1/Index/FieldInfos.pm
+    - blib/lib/KinoSearch1/Index/FieldsReader.pm
+    - blib/lib/KinoSearch1/Index/FieldsWriter.pm
+    - blib/lib/KinoSearch1/Index/IndexFileNames.pm
+    - blib/lib/KinoSearch1/Index/IndexReader.pm
+    - blib/lib/KinoSearch1/Index/MultiReader.pm
+    - blib/lib/KinoSearch1/Index/MultiTermDocs.pm
+    - blib/lib/KinoSearch1/Index/NormsReader.pm
+    - blib/lib/KinoSearch1/Index/PostingsWriter.pm
+    - blib/lib/KinoSearch1/Index/SegInfos.pm
+    - blib/lib/KinoSearch1/Index/SegReader.pm
+    - blib/lib/KinoSearch1/Index/SegTermDocs.pm
+    - blib/lib/KinoSearch1/Index/SegTermEnum.pm
+    - blib/lib/KinoSearch1/Index/SegWriter.pm
+    - blib/lib/KinoSearch1/Index/Term.pm
+    - blib/lib/KinoSearch1/Index/TermBuffer.pm
+    - blib/lib/KinoSearch1/Index/TermDocs.pm
+    - blib/lib/KinoSearch1/Index/TermEnum.pm
+    - blib/lib/KinoSearch1/Index/TermInfo.pm
+    - blib/lib/KinoSearch1/Index/TermInfosReader.pm
+    - blib/lib/KinoSearch1/Index/TermInfosWriter.pm
+    - blib/lib/KinoSearch1/Index/TermVector.pm
+    - blib/lib/KinoSearch1/InvIndexer.pm
+    - blib/lib/KinoSearch1/QueryParser/QueryParser.pm
+    - blib/lib/KinoSearch1/Search/BooleanClause.pm
+    - blib/lib/KinoSearch1/Search/BooleanQuery.pm
+    - blib/lib/KinoSearch1/Search/BooleanScorer.pm
+    - blib/lib/KinoSearch1/Search/Hit.pm
+    - blib/lib/KinoSearch1/Search/HitCollector.pm
+    - blib/lib/KinoSearch1/Search/HitQueue.pm
+    - blib/lib/KinoSearch1/Search/Hits.pm
+    - blib/lib/KinoSearch1/Search/MultiSearcher.pm
+    - blib/lib/KinoSearch1/Search/PhraseQuery.pm
+    - blib/lib/KinoSearch1/Search/PhraseScorer.pm
+    - blib/lib/KinoSearch1/Search/Query.pm
+    - blib/lib/KinoSearch1/Search/QueryFilter.pm
+    - blib/lib/KinoSearch1/Search/Scorer.pm
+    - blib/lib/KinoSearch1/Search/SearchClient.pm
+    - blib/lib/KinoSearch1/Search/SearchServer.pm
+    - blib/lib/KinoSearch1/Search/Searchable.pm
+    - blib/lib/KinoSearch1/Search/Similarity.pm
+    - blib/lib/KinoSearch1/Search/TermQuery.pm
+    - blib/lib/KinoSearch1/Search/TermScorer.pm
+    - blib/lib/KinoSearch1/Search/Weight.pm
+    - blib/lib/KinoSearch1/Searcher.pm
+    - blib/lib/KinoSearch1/Store/FSInvIndex.pm
+    - blib/lib/KinoSearch1/Store/FSLock.pm
+    - blib/lib/KinoSearch1/Store/InStream.pm
+    - blib/lib/KinoSearch1/Store/InvIndex.pm
+    - blib/lib/KinoSearch1/Store/Lock.pm
+    - blib/lib/KinoSearch1/Store/OutStream.pm
+    - blib/lib/KinoSearch1/Store/RAMInvIndex.pm
+    - blib/lib/KinoSearch1/Store/RAMLock.pm
+    - blib/lib/KinoSearch1/Util/BitVector.pm
+    - blib/lib/KinoSearch1/Util/ByteBuf.pm
+    - blib/lib/KinoSearch1/Util/CClass.pm
+    - blib/lib/KinoSearch1/Util/Carp.pm
+    - blib/lib/KinoSearch1/Util/Class.pm
+    - blib/lib/KinoSearch1/Util/IntMap.pm
+    - blib/lib/KinoSearch1/Util/MathUtils.pm
+    - blib/lib/KinoSearch1/Util/MemManager.pm
+    - blib/lib/KinoSearch1/Util/PriorityQueue.pm
+    - blib/lib/KinoSearch1/Util/SortExternal.pm
+    - blib/lib/KinoSearch1/Util/StringHelper.pm
+    - blib/lib/KinoSearch1/Util/ToStringUtils.pm
+    - blib/lib/KinoSearch1/Util/ToolSet.pm
+    - blib/lib/KinoSearch1/Util/VerifyArgs.pm
+    - blib/libdoc/KinoSearch1.3
+    - blib/libdoc/KinoSearch1::Analysis::Analyzer.3
+    - blib/libdoc/KinoSearch1::Analysis::LCNormalizer.3
+    - blib/libdoc/KinoSearch1::Analysis::PolyAnalyzer.3
+    - blib/libdoc/KinoSearch1::Analysis::Stemmer.3
+    - blib/libdoc/KinoSearch1::Analysis::Stopalizer.3
+    - blib/libdoc/KinoSearch1::Analysis::Token.3
+    - blib/libdoc/KinoSearch1::Analysis::TokenBatch.3
+    - blib/libdoc/KinoSearch1::Analysis::Tokenizer.3
+    - blib/libdoc/KinoSearch1::Docs::FileFormat.3
+    - blib/libdoc/KinoSearch1::Docs::Tutorial.3
+    - blib/libdoc/KinoSearch1::Document::Doc.3
+    - blib/libdoc/KinoSearch1::Document::Field.3
+    - blib/libdoc/KinoSearch1::Highlight::Encoder.3
+    - blib/libdoc/KinoSearch1::Highlight::Formatter.3
+    - blib/libdoc/KinoSearch1::Highlight::Highlighter.3
+    - blib/libdoc/KinoSearch1::Highlight::SimpleHTMLEncoder.3
+    - blib/libdoc/KinoSearch1::Highlight::SimpleHTMLFormatter.3
+    - blib/libdoc/KinoSearch1::Index::CompoundFileReader.3
+    - blib/libdoc/KinoSearch1::Index::CompoundFileWriter.3
+    - blib/libdoc/KinoSearch1::Index::DelDocs.3
+    - blib/libdoc/KinoSearch1::Index::FieldInfos.3
+    - blib/libdoc/KinoSearch1::Index::FieldsReader.3
+    - blib/libdoc/KinoSearch1::Index::FieldsWriter.3
+    - blib/libdoc/KinoSearch1::Index::IndexFileNames.3
+    - blib/libdoc/KinoSearch1::Index::IndexReader.3
+    - blib/libdoc/KinoSearch1::Index::MultiReader.3
+    - blib/libdoc/KinoSearch1::Index::MultiTermDocs.3
+    - blib/libdoc/KinoSearch1::Index::NormsReader.3
+    - blib/libdoc/KinoSearch1::Index::PostingsWriter.3
+    - blib/libdoc/KinoSearch1::Index::SegInfos.3
+    - blib/libdoc/KinoSearch1::Index::SegReader.3
+    - blib/libdoc/KinoSearch1::Index::SegTermDocs.3
+    - blib/libdoc/KinoSearch1::Index::SegTermEnum.3
+    - blib/libdoc/KinoSearch1::Index::SegWriter.3
+    - blib/libdoc/KinoSearch1::Index::Term.3
+    - blib/libdoc/KinoSearch1::Index::TermBuffer.3
+    - blib/libdoc/KinoSearch1::Index::TermDocs.3
+    - blib/libdoc/KinoSearch1::Index::TermEnum.3
+    - blib/libdoc/KinoSearch1::Index::TermInfo.3
+    - blib/libdoc/KinoSearch1::Index::TermInfosReader.3
+    - blib/libdoc/KinoSearch1::Index::TermInfosWriter.3
+    - blib/libdoc/KinoSearch1::Index::TermVector.3
+    - blib/libdoc/KinoSearch1::InvIndexer.3
+    - blib/libdoc/KinoSearch1::QueryParser::QueryParser.3
+    - blib/libdoc/KinoSearch1::Search::BooleanClause.3
+    - blib/libdoc/KinoSearch1::Search::BooleanQuery.3
+    - blib/libdoc/KinoSearch1::Search::BooleanScorer.3
+    - blib/libdoc/KinoSearch1::Search::Hit.3
+    - blib/libdoc/KinoSearch1::Search::HitCollector.3
+    - blib/libdoc/KinoSearch1::Search::HitQueue.3
+    - blib/libdoc/KinoSearch1::Search::Hits.3
+    - blib/libdoc/KinoSearch1::Search::MultiSearcher.3
+    - blib/libdoc/KinoSearch1::Search::PhraseQuery.3
+    - blib/libdoc/KinoSearch1::Search::PhraseScorer.3
+    - blib/libdoc/KinoSearch1::Search::Query.3
+    - blib/libdoc/KinoSearch1::Search::QueryFilter.3
+    - blib/libdoc/KinoSearch1::Search::Scorer.3
+    - blib/libdoc/KinoSearch1::Search::SearchClient.3
+    - blib/libdoc/KinoSearch1::Search::SearchServer.3
+    - blib/libdoc/KinoSearch1::Search::Searchable.3
+    - blib/libdoc/KinoSearch1::Search::Similarity.3
+    - blib/libdoc/KinoSearch1::Search::TermQuery.3
+    - blib/libdoc/KinoSearch1::Search::TermScorer.3
+    - blib/libdoc/KinoSearch1::Search::Weight.3
+    - blib/libdoc/KinoSearch1::Searcher.3
+    - blib/libdoc/KinoSearch1::Store::FSInvIndex.3
+    - blib/libdoc/KinoSearch1::Store::FSLock.3
+    - blib/libdoc/KinoSearch1::Store::InStream.3
+    - blib/libdoc/KinoSearch1::Store::InvIndex.3
+    - blib/libdoc/KinoSearch1::Store::Lock.3
+    - blib/libdoc/KinoSearch1::Store::OutStream.3
+    - blib/libdoc/KinoSearch1::Store::RAMInvIndex.3
+    - blib/libdoc/KinoSearch1::Store::RAMLock.3
+    - blib/libdoc/KinoSearch1::Util::BitVector.3
+    - blib/libdoc/KinoSearch1::Util::ByteBuf.3
+    - blib/libdoc/KinoSearch1::Util::CClass.3
+    - blib/libdoc/KinoSearch1::Util::Carp.3
+    - blib/libdoc/KinoSearch1::Util::Class.3
+    - blib/libdoc/KinoSearch1::Util::IntMap.3
+    - blib/libdoc/KinoSearch1::Util::MathUtils.3
+    - blib/libdoc/KinoSearch1::Util::MemManager.3
+    - blib/libdoc/KinoSearch1::Util::PriorityQueue.3
+    - blib/libdoc/KinoSearch1::Util::SortExternal.3
+    - blib/libdoc/KinoSearch1::Util::StringHelper.3
+    - blib/libdoc/KinoSearch1::Util::ToStringUtils.3
+    - blib/libdoc/KinoSearch1::Util::VerifyArgs.3
+  build_file: Build.PL
+  build_file_output: |
+    Writing src/KinoSearch1UtilByteBuf.h
+    Writing src/KinoSearch1IndexTermInfosWriter.c
+    Writing src/KinoSearch1SearchHitQueue.h
+    Writing src/KinoSearch1IndexTermDocs.c
+    Writing src/KinoSearch1SearchTermScorer.c
+    Writing src/KinoSearch1SearchSimilarity.h
+    Writing src/KinoSearch1UtilSortExternal.h
+    Writing src/KinoSearch1IndexPostingsWriter.h
+    Writing src/KinoSearch1IndexTermInfo.h
+    Writing src/KinoSearch1IndexMultiTermDocs.c
+    Writing src/KinoSearch1SearchTermScorer.h
+    Writing src/KinoSearch1IndexMultiTermDocs.h
+    Writing KinoSearch1.xs
+    Writing src/KinoSearch1IndexTermBuffer.c
+    Writing src/KinoSearch1IndexDelDocs.c
+    Writing src/KinoSearch1SearchPhraseScorer.h
+    Writing src/KinoSearch1UtilCarp.c
+    Writing src/KinoSearch1IndexPostingsWriter.c
+    Writing src/KinoSearch1IndexSegTermDocs.c
+    Writing src/KinoSearch1UtilCarp.h
+    Writing src/KinoSearch1SearchPhraseScorer.c
+    Writing src/KinoSearch1SearchScorer.h
+    Writing src/KinoSearch1UtilStringHelper.h
+    Writing src/KinoSearch1SearchBooleanScorer.c
+    Writing src/KinoSearch1AnalysisStopalizer.c
+    Writing src/KinoSearch1UtilCClass.h
+    Writing src/KinoSearch1StoreOutStream.c
+    Writing src/KinoSearch1SearchHitCollector.h
+    Writing src/KinoSearch1UtilMemManager.c
+    Writing src/KinoSearch1UtilIntMap.h
+    Writing src/KinoSearch1UtilMathUtils.c
+    Writing src/KinoSearch1SearchHitQueue.c
+    Writing src/KinoSearch1AnalysisToken.h
+    Writing src/KinoSearch1IndexTermDocs.h
+    Writing src/KinoSearch1IndexTermInfo.c
+    Writing src/KinoSearch1IndexSegTermDocs.h
+    Writing src/KinoSearch1IndexSegTermEnum.h
+    Writing src/KinoSearch1StoreInStream.c
+    Writing src/KinoSearch1IndexTermBuffer.h
+    Writing src/KinoSearch1IndexTerm.h
+    Writing src/KinoSearch1AnalysisToken.c
+    Writing src/KinoSearch1StoreOutStream.h
+    Writing src/KinoSearch1UtilVerifyArgs.c
+    Writing src/KinoSearch1IndexSegWriter.h
+    Writing src/KinoSearch1IndexDelDocs.h
+    Writing src/KinoSearch1DocumentField.c
+    Writing src/KinoSearch1UtilBitVector.h
+    Writing src/KinoSearch1UtilPriorityQueue.c
+    Writing src/KinoSearch1DocumentField.h
+    Writing src/KinoSearch1IndexSegWriter.c
+    Writing src/KinoSearch1IndexTermInfosWriter.h
+    Writing src/KinoSearch1UtilPriorityQueue.h
+    Writing src/KinoSearch1UtilByteBuf.c
+    Writing src/KinoSearch1UtilVerifyArgs.h
+    Writing src/KinoSearch1UtilStringHelper.c
+    Writing src/KinoSearch1AnalysisStopalizer.h
+    Writing src/KinoSearch1SearchBooleanScorer.h
+    Writing src/KinoSearch1SearchSimilarity.c
+    Writing src/KinoSearch1UtilBitVector.c
+    Writing src/KinoSearch1AnalysisTokenBatch.h
+    Writing src/KinoSearch1UtilSortExternal.c
+    Writing src/KinoSearch1StoreInStream.h
+    Writing src/KinoSearch1IndexSegTermEnum.c
+    Writing src/KinoSearch1AnalysisTokenBatch.c
+    Writing src/KinoSearch1UtilMathUtils.h
+    Writing src/KinoSearch1SearchHitCollector.c
+    Writing src/KinoSearch1UtilMemManager.h
+    Writing src/KinoSearch1SearchScorer.c
+    Writing src/KinoSearch1UtilIntMap.c
+    Writing typemap
+    Checking prerequisites...
+      requires:
+        !  Lingua::Stem::Snowball is not installed
+        !  Lingua::StopWords is not installed
+    
+    ERRORS/WARNINGS FOUND IN PREREQUISITES.  You may wish to install the versions
+    of the modules indicated above before proceeding with this installation
+    
+    Run 'Build installdeps' to install missing prerequisites.
+    
+    Creating new 'MYMETA.yml' with configuration results
+    Creating new 'Build' script for 'KinoSearch1' version '1.00'
+  build_output: |
+    Building KinoSearch1
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexTermInfosWriter.o src/KinoSearch1IndexTermInfosWriter.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexTermDocs.o src/KinoSearch1IndexTermDocs.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchTermScorer.o src/KinoSearch1SearchTermScorer.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexMultiTermDocs.o src/KinoSearch1IndexMultiTermDocs.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexDelDocs.o src/KinoSearch1IndexDelDocs.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexTermBuffer.o src/KinoSearch1IndexTermBuffer.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilCarp.o src/KinoSearch1UtilCarp.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexPostingsWriter.o src/KinoSearch1IndexPostingsWriter.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexSegTermDocs.o src/KinoSearch1IndexSegTermDocs.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchPhraseScorer.o src/KinoSearch1SearchPhraseScorer.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchBooleanScorer.o src/KinoSearch1SearchBooleanScorer.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1AnalysisStopalizer.o src/KinoSearch1AnalysisStopalizer.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1StoreOutStream.o src/KinoSearch1StoreOutStream.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilMemManager.o src/KinoSearch1UtilMemManager.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilMathUtils.o src/KinoSearch1UtilMathUtils.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchHitQueue.o src/KinoSearch1SearchHitQueue.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexTermInfo.o src/KinoSearch1IndexTermInfo.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1StoreInStream.o src/KinoSearch1StoreInStream.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1AnalysisToken.o src/KinoSearch1AnalysisToken.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilVerifyArgs.o src/KinoSearch1UtilVerifyArgs.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1DocumentField.o src/KinoSearch1DocumentField.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilPriorityQueue.o src/KinoSearch1UtilPriorityQueue.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexSegWriter.o src/KinoSearch1IndexSegWriter.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilByteBuf.o src/KinoSearch1UtilByteBuf.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilStringHelper.o src/KinoSearch1UtilStringHelper.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchSimilarity.o src/KinoSearch1SearchSimilarity.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilBitVector.o src/KinoSearch1UtilBitVector.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilSortExternal.o src/KinoSearch1UtilSortExternal.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1IndexSegTermEnum.o src/KinoSearch1IndexSegTermEnum.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1AnalysisTokenBatch.o src/KinoSearch1AnalysisTokenBatch.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchHitCollector.o src/KinoSearch1SearchHitCollector.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1SearchScorer.o src/KinoSearch1SearchScorer.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o src/KinoSearch1UtilIntMap.o src/KinoSearch1UtilIntMap.c
+    cc -Isrc -I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE -DXS_VERSION="1.00" -DVERSION="1.00" -DPIC -fPIC -c -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O -o lib/KinoSearch1.o lib/KinoSearch1.c
+    ExtUtils::Mkbootstrap::Mkbootstrap('blib/arch/auto/KinoSearch1/KinoSearch1.bs')
+    cc -shared -L/usr/local/lib -fstack-protector -o blib/arch/auto/KinoSearch1/KinoSearch1.so lib/KinoSearch1.o src/KinoSearch1IndexTermInfosWriter.o src/KinoSearch1IndexTermDocs.o src/KinoSearch1SearchTermScorer.o src/KinoSearch1IndexMultiTermDocs.o src/KinoSearch1IndexDelDocs.o src/KinoSearch1IndexTermBuffer.o src/KinoSearch1UtilCarp.o src/KinoSearch1IndexPostingsWriter.o src/KinoSearch1IndexSegTermDocs.o src/KinoSearch1SearchPhraseScorer.o src/KinoSearch1SearchBooleanScorer.o src/KinoSearch1AnalysisStopalizer.o src/KinoSearch1StoreOutStream.o src/KinoSearch1UtilMemManager.o src/KinoSearch1UtilMathUtils.o src/KinoSearch1SearchHitQueue.o src/KinoSearch1IndexTermInfo.o src/KinoSearch1StoreInStream.o src/KinoSearch1AnalysisToken.o src/KinoSearch1UtilVerifyArgs.o src/KinoSearch1DocumentField.o src/KinoSearch1UtilPriorityQueue.o src/KinoSearch1IndexSegWriter.o src/KinoSearch1UtilByteBuf.o src/KinoSearch1UtilStringHelper.o src/KinoSearch1SearchSimilarity.o src/KinoSearch1UtilBitVector.o src/KinoSearch1UtilSortExternal.o src/KinoSearch1IndexSegTermEnum.o src/KinoSearch1AnalysisTokenBatch.o src/KinoSearch1SearchHitCollector.o src/KinoSearch1SearchScorer.o src/KinoSearch1UtilIntMap.o
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+      make: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Build.PL
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Makefile.PL
+    build_files:
+      Build.PL: Build.PL
+      Makefile.PL: Makefile.PL
+    build_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00
+    has_build_and_makefile: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Makefile.PL
+    has_build_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Build.PL
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: 0.3603
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: 1
+    uses_module_build_compat: 1
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: CREAMYG
+  dist_basename: KinoSearch1-1.00.tar.gz
+  dist_date: 1268874620
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi/KinoSearch1-1.00
+  dist_file: /home/brian/CPAN/authors/id/C/CR/CREAMYG/KinoSearch1-1.00.tar.gz
+  dist_md5: db638c4d74c1ff6152463fb53a5e2081
+  dist_size: 279194
+  manifest:
+    - ApacheLicense2.0.txt
+    - Build.PL
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - buildlib/KinoSearch1/Test/TestUtils.pm
+    - devel/dump_index
+    - devel/hexdebug
+    - devel/kinotidy
+    - devel/kinotidyrc
+    - devel/predit
+    - devel/scan_enum.plx
+    - devel/test_tidiness.plx
+    - devel/valgrind_test.plx
+    - lib/KinoSearch1.pm
+    - lib/KinoSearch1/Analysis/Analyzer.pm
+    - lib/KinoSearch1/Analysis/LCNormalizer.pm
+    - lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+    - lib/KinoSearch1/Analysis/Stemmer.pm
+    - lib/KinoSearch1/Analysis/Stopalizer.pm
+    - lib/KinoSearch1/Analysis/Token.pm
+    - lib/KinoSearch1/Analysis/TokenBatch.pm
+    - lib/KinoSearch1/Analysis/Tokenizer.pm
+    - lib/KinoSearch1/Docs/FileFormat.pod
+    - lib/KinoSearch1/Docs/Tutorial.pod
+    - lib/KinoSearch1/Document/Doc.pm
+    - lib/KinoSearch1/Document/Field.pm
+    - lib/KinoSearch1/Highlight/Encoder.pm
+    - lib/KinoSearch1/Highlight/Formatter.pm
+    - lib/KinoSearch1/Highlight/Highlighter.pm
+    - lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+    - lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+    - lib/KinoSearch1/Index/CompoundFileReader.pm
+    - lib/KinoSearch1/Index/CompoundFileWriter.pm
+    - lib/KinoSearch1/Index/DelDocs.pm
+    - lib/KinoSearch1/Index/FieldInfos.pm
+    - lib/KinoSearch1/Index/FieldsReader.pm
+    - lib/KinoSearch1/Index/FieldsWriter.pm
+    - lib/KinoSearch1/Index/IndexFileNames.pm
+    - lib/KinoSearch1/Index/IndexReader.pm
+    - lib/KinoSearch1/Index/MultiReader.pm
+    - lib/KinoSearch1/Index/MultiTermDocs.pm
+    - lib/KinoSearch1/Index/NormsReader.pm
+    - lib/KinoSearch1/Index/PostingsWriter.pm
+    - lib/KinoSearch1/Index/SegInfos.pm
+    - lib/KinoSearch1/Index/SegReader.pm
+    - lib/KinoSearch1/Index/SegTermDocs.pm
+    - lib/KinoSearch1/Index/SegTermEnum.pm
+    - lib/KinoSearch1/Index/SegWriter.pm
+    - lib/KinoSearch1/Index/Term.pm
+    - lib/KinoSearch1/Index/TermBuffer.pm
+    - lib/KinoSearch1/Index/TermDocs.pm
+    - lib/KinoSearch1/Index/TermEnum.pm
+    - lib/KinoSearch1/Index/TermInfo.pm
+    - lib/KinoSearch1/Index/TermInfosReader.pm
+    - lib/KinoSearch1/Index/TermInfosWriter.pm
+    - lib/KinoSearch1/Index/TermVector.pm
+    - lib/KinoSearch1/InvIndexer.pm
+    - lib/KinoSearch1/QueryParser/QueryParser.pm
+    - lib/KinoSearch1/Search/BooleanClause.pm
+    - lib/KinoSearch1/Search/BooleanQuery.pm
+    - lib/KinoSearch1/Search/BooleanScorer.pm
+    - lib/KinoSearch1/Search/Hit.pm
+    - lib/KinoSearch1/Search/HitCollector.pm
+    - lib/KinoSearch1/Search/HitQueue.pm
+    - lib/KinoSearch1/Search/Hits.pm
+    - lib/KinoSearch1/Search/MultiSearcher.pm
+    - lib/KinoSearch1/Search/PhraseQuery.pm
+    - lib/KinoSearch1/Search/PhraseScorer.pm
+    - lib/KinoSearch1/Search/Query.pm
+    - lib/KinoSearch1/Search/QueryFilter.pm
+    - lib/KinoSearch1/Search/Scorer.pm
+    - lib/KinoSearch1/Search/SearchClient.pm
+    - lib/KinoSearch1/Search/SearchServer.pm
+    - lib/KinoSearch1/Search/Searchable.pm
+    - lib/KinoSearch1/Search/Similarity.pm
+    - lib/KinoSearch1/Search/TermQuery.pm
+    - lib/KinoSearch1/Search/TermScorer.pm
+    - lib/KinoSearch1/Search/Weight.pm
+    - lib/KinoSearch1/Searcher.pm
+    - lib/KinoSearch1/Store/FSInvIndex.pm
+    - lib/KinoSearch1/Store/FSLock.pm
+    - lib/KinoSearch1/Store/InStream.pm
+    - lib/KinoSearch1/Store/InvIndex.pm
+    - lib/KinoSearch1/Store/Lock.pm
+    - lib/KinoSearch1/Store/OutStream.pm
+    - lib/KinoSearch1/Store/RAMInvIndex.pm
+    - lib/KinoSearch1/Store/RAMLock.pm
+    - lib/KinoSearch1/Util/BitVector.pm
+    - lib/KinoSearch1/Util/ByteBuf.pm
+    - lib/KinoSearch1/Util/CClass.pm
+    - lib/KinoSearch1/Util/Carp.pm
+    - lib/KinoSearch1/Util/Class.pm
+    - lib/KinoSearch1/Util/IntMap.pm
+    - lib/KinoSearch1/Util/MathUtils.pm
+    - lib/KinoSearch1/Util/MemManager.pm
+    - lib/KinoSearch1/Util/PriorityQueue.pm
+    - lib/KinoSearch1/Util/SortExternal.pm
+    - lib/KinoSearch1/Util/StringHelper.pm
+    - lib/KinoSearch1/Util/ToStringUtils.pm
+    - lib/KinoSearch1/Util/ToolSet.pm
+    - lib/KinoSearch1/Util/VerifyArgs.pm
+    - src/ppport.h
+    - t/000-load.t
+    - t/001-build_invindexes.t
+    - t/002-kinosearch.t
+    - t/010-verify_args.t
+    - t/011-class.t
+    - t/012-priority_queue.t
+    - t/013-bit_vector.t
+    - t/015-sort_external.t
+    - t/101-simple_template_io.t
+    - t/102-strings_template_io.t
+    - t/103-repeats_template_io.t
+    - t/104-parse_template_io.t
+    - t/105-invindex.t
+    - t/106-locking.t
+    - t/150-polyanalyzer.t
+    - t/152-token_batch.t
+    - t/153-lc_normalizer.t
+    - t/154-tokenizer.t
+    - t/155-stopalizer.t
+    - t/201-field_infos.t
+    - t/202-term.t
+    - t/203-compound_file_reader.t
+    - t/204-fields_reader.t
+    - t/205-seg_reader.t
+    - t/206-seg_infos.t
+    - t/207-seg_term_enum.t
+    - t/208-terminfo.t
+    - t/209-term_infos_reader.t
+    - t/210-deldocs.t
+    - t/211-seg_term_docs.t
+    - t/212-multi_term_docs.t
+    - t/213-segment_merging.t
+    - t/214-spec_field.t
+    - t/302-many_fields.t
+    - t/303-highlighter.t
+    - t/501-termquery.t
+    - t/502-phrasequery.t
+    - t/503-booleanquery.t
+    - t/504-similarity.t
+    - t/505-hit_queue.t
+    - t/506-hit_collector.t
+    - t/507-query_filter.t
+    - t/508-hits.t
+    - t/509-multi_searcher.t
+    - t/510-remote_search.t
+    - t/601-queryparser.t
+    - t/602-boosts.t
+    - t/603-query_boosts.t
+    - t/604-simple_search.t
+    - t/701-uscon.t
+    - t/999-remove_invindexes.t
+    - t/benchmarks/README.txt
+    - t/benchmarks/extract_reuters.plx
+    - t/benchmarks/indexers/BenchmarkingIndexer.pm
+    - t/benchmarks/indexers/LuceneIndexer.java
+    - t/benchmarks/indexers/kinosearch_indexer.plx
+    - t/benchmarks/indexers/plucene_indexer.plx
+    - t/pod-coverage.t
+    - t/pod.t
+    - t/us_constitution/amend1.html
+    - t/us_constitution/amend10.html
+    - t/us_constitution/amend11.html
+    - t/us_constitution/amend12.html
+    - t/us_constitution/amend13.html
+    - t/us_constitution/amend14.html
+    - t/us_constitution/amend15.html
+    - t/us_constitution/amend16.html
+    - t/us_constitution/amend17.html
+    - t/us_constitution/amend18.html
+    - t/us_constitution/amend19.html
+    - t/us_constitution/amend2.html
+    - t/us_constitution/amend20.html
+    - t/us_constitution/amend21.html
+    - t/us_constitution/amend22.html
+    - t/us_constitution/amend23.html
+    - t/us_constitution/amend24.html
+    - t/us_constitution/amend25.html
+    - t/us_constitution/amend26.html
+    - t/us_constitution/amend27.html
+    - t/us_constitution/amend3.html
+    - t/us_constitution/amend4.html
+    - t/us_constitution/amend5.html
+    - t/us_constitution/amend6.html
+    - t/us_constitution/amend7.html
+    - t/us_constitution/amend8.html
+    - t/us_constitution/amend9.html
+    - t/us_constitution/art1sec1.html
+    - t/us_constitution/art1sec10.html
+    - t/us_constitution/art1sec2.html
+    - t/us_constitution/art1sec3.html
+    - t/us_constitution/art1sec4.html
+    - t/us_constitution/art1sec5.html
+    - t/us_constitution/art1sec6.html
+    - t/us_constitution/art1sec7.html
+    - t/us_constitution/art1sec8.html
+    - t/us_constitution/art1sec9.html
+    - t/us_constitution/art2sec1.html
+    - t/us_constitution/art2sec2.html
+    - t/us_constitution/art2sec3.html
+    - t/us_constitution/art2sec4.html
+    - t/us_constitution/art3sec1.html
+    - t/us_constitution/art3sec2.html
+    - t/us_constitution/art3sec3.html
+    - t/us_constitution/art4sec1.html
+    - t/us_constitution/art4sec2.html
+    - t/us_constitution/art4sec3.html
+    - t/us_constitution/art4sec4.html
+    - t/us_constitution/art5.html
+    - t/us_constitution/art6.html
+    - t/us_constitution/art7.html
+    - t/us_constitution/index.html
+    - t/us_constitution/preamble.html
+    - t/us_constitution/uscon.css
+  manifest_file_info:
+    - bytesize: 10852
+      file_mime_type: ~
+      line_count: ~
+      md5: d52707f17dfb7fbf55be7803f1b2ccbd
+      mtime: 1268873792
+      name: ApacheLicense2.0.txt
+    - bytesize: 8000
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1268873793
+      name: Build.PL
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1268873792
+      name: Changes
+    - bytesize: 6428
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1268873792
+      name: MANIFEST
+    - bytesize: 8310
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1268873792
+      name: META.yml
+    - bytesize: 1203
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1268873792
+      name: Makefile.PL
+    - bytesize: 511
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1268873792
+      name: README
+    - bytesize: 6427
+      file_mime_type: ~
+      line_count: ~
+      md5: e9f587d0d1a953991563381fef14fa5c
+      mtime: 1268873792
+      name: buildlib/KinoSearch1/Test/TestUtils.pm
+    - bytesize: 2077
+      file_mime_type: ~
+      line_count: ~
+      md5: c2cf12743405b0dcd380620ae52af165
+      mtime: 1268873792
+      name: devel/dump_index
+    - bytesize: 379
+      file_mime_type: ~
+      line_count: ~
+      md5: 8df7cdf329fc9f52bd33756536f91573
+      mtime: 1268873792
+      name: devel/hexdebug
+    - bytesize: 207
+      file_mime_type: ~
+      line_count: ~
+      md5: 5da614f15cda769e3a28fd1a7d751f29
+      mtime: 1268873792
+      name: devel/kinotidy
+    - bytesize: 685
+      file_mime_type: ~
+      line_count: ~
+      md5: 087f4982c064cca7c04fa2bf2ee69758
+      mtime: 1268873793
+      name: devel/kinotidyrc
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: 07eae30e77c2aff12124fc92ffcaf3ec
+      mtime: 1268873792
+      name: devel/predit
+    - bytesize: 884
+      file_mime_type: ~
+      line_count: ~
+      md5: 30b7ad65fe7dcdbcd7291caba6997833
+      mtime: 1268873793
+      name: devel/scan_enum.plx
+    - bytesize: 1421
+      file_mime_type: ~
+      line_count: ~
+      md5: 73d76b31183771dbf5271e755c81d212
+      mtime: 1268873792
+      name: devel/test_tidiness.plx
+    - bytesize: 561
+      file_mime_type: ~
+      line_count: ~
+      md5: b57ae84479718772726c650fb52a1ae2
+      mtime: 1268873792
+      name: devel/valgrind_test.plx
+    - bytesize: 6903
+      file_mime_type: ~
+      line_count: ~
+      md5: 79f71b7c4547e68631c4308bc60c371c
+      mtime: 1268873793
+      name: lib/KinoSearch1.pm
+    - bytesize: 1342
+      file_mime_type: ~
+      line_count: ~
+      md5: 30be7345b20902cf4c57d7032a6aa139
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/Analyzer.pm
+    - bytesize: 1140
+      file_mime_type: ~
+      line_count: ~
+      md5: 5931d921b997017a145d3a425fee147b
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/LCNormalizer.pm
+    - bytesize: 3360
+      file_mime_type: ~
+      line_count: ~
+      md5: f31fba493ae5a4df2312fc6ddc962478
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+    - bytesize: 2025
+      file_mime_type: ~
+      line_count: ~
+      md5: ff38a03f91f1a51494f3b6aad5a4adb0
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/Stemmer.pm
+    - bytesize: 4177
+      file_mime_type: ~
+      line_count: ~
+      md5: ccc89d337092e548088314004715d4bf
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/Stopalizer.pm
+    - bytesize: 2702
+      file_mime_type: ~
+      line_count: ~
+      md5: c67a8366c33b88c81dc468a8fb7151c3
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/Token.pm
+    - bytesize: 19481
+      file_mime_type: ~
+      line_count: ~
+      md5: 5079edf85a062b0131075ebd681264f6
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/TokenBatch.pm
+    - bytesize: 3885
+      file_mime_type: ~
+      line_count: ~
+      md5: f80dc5faba3326de0fcc7fda6a4ec511
+      mtime: 1268873792
+      name: lib/KinoSearch1/Analysis/Tokenizer.pm
+    - bytesize: 9973
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ca32f99f11d0a95b9de6c690e63dceb
+      mtime: 1268873792
+      name: lib/KinoSearch1/Docs/FileFormat.pod
+    - bytesize: 9477
+      file_mime_type: ~
+      line_count: ~
+      md5: fc6e5e84474abf0f6ad7618a69bcfd78
+      mtime: 1268873792
+      name: lib/KinoSearch1/Docs/Tutorial.pod
+    - bytesize: 2384
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bd420fcc58bd285d6124287721c176c
+      mtime: 1268873793
+      name: lib/KinoSearch1/Document/Doc.pm
+    - bytesize: 7271
+      file_mime_type: ~
+      line_count: ~
+      md5: ab6a0025e460957ed445e9a5822de639
+      mtime: 1268873792
+      name: lib/KinoSearch1/Document/Field.pm
+    - bytesize: 769
+      file_mime_type: ~
+      line_count: ~
+      md5: 99fb0212541794c044d3feadddc0a88e
+      mtime: 1268873792
+      name: lib/KinoSearch1/Highlight/Encoder.pm
+    - bytesize: 852
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d2151a582c577dc7feffb50bd4cfee3
+      mtime: 1268873793
+      name: lib/KinoSearch1/Highlight/Formatter.pm
+    - bytesize: 12898
+      file_mime_type: ~
+      line_count: ~
+      md5: f5b0ad4983dd9ebe037b58b204133fe7
+      mtime: 1268873792
+      name: lib/KinoSearch1/Highlight/Highlighter.pm
+    - bytesize: 934
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e05ae12dd03239958ee79921af13247
+      mtime: 1268873792
+      name: lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+    - bytesize: 1588
+      file_mime_type: ~
+      line_count: ~
+      md5: 63b18c2a7873581aef24745f2f4be9ae
+      mtime: 1268873792
+      name: lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+    - bytesize: 2743
+      file_mime_type: ~
+      line_count: ~
+      md5: e22b06e4b48ef3b08146b376b2eda93a
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/CompoundFileReader.pm
+    - bytesize: 2572
+      file_mime_type: ~
+      line_count: ~
+      md5: 29669627106ed105cad5bb34712fa21d
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/CompoundFileWriter.pm
+    - bytesize: 5081
+      file_mime_type: ~
+      line_count: ~
+      md5: d9ea1a5eb461d9d5e98bdb49165f08d3
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/DelDocs.pm
+    - bytesize: 6435
+      file_mime_type: ~
+      line_count: ~
+      md5: 0eb66bd874ea7e0760ae83c8494f83e9
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/FieldInfos.pm
+    - bytesize: 4117
+      file_mime_type: ~
+      line_count: ~
+      md5: fa05cadd3eeeae78e7b2975bef54c8e8
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/FieldsReader.pm
+    - bytesize: 3229
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b1c938412155bc13544f6a405c2c857
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/FieldsWriter.pm
+    - bytesize: 1803
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cc76b59aa4c6bea671b7ec1667e5647
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/IndexFileNames.pm
+    - bytesize: 5539
+      file_mime_type: ~
+      line_count: ~
+      md5: 335fb6faa6bbce09755c31d8bac2d6f2
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/IndexReader.pm
+    - bytesize: 5518
+      file_mime_type: ~
+      line_count: ~
+      md5: e9640eea3a6fd8cfdb3418175350b0fe
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/MultiReader.pm
+    - bytesize: 9780
+      file_mime_type: ~
+      line_count: ~
+      md5: 75b1a4e3ed764489a2b39fa8ebc0af61
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/MultiTermDocs.pm
+    - bytesize: 1303
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f7b349566e555c9eb31ff50e4fe033e
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/NormsReader.pm
+    - bytesize: 14952
+      file_mime_type: ~
+      line_count: ~
+      md5: 74baeeb17afb93a00620c193ad7b0e40
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/PostingsWriter.pm
+    - bytesize: 3625
+      file_mime_type: ~
+      line_count: ~
+      md5: c5692f7d5ed4b002a35714ec5edb3d1c
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/SegInfos.pm
+    - bytesize: 6077
+      file_mime_type: ~
+      line_count: ~
+      md5: d8bb1460f47d786c6678b57619500a3b
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/SegReader.pm
+    - bytesize: 15128
+      file_mime_type: ~
+      line_count: ~
+      md5: b3bbbfc1e4665f34e8dc5bb39fffa619
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/SegTermDocs.pm
+    - bytesize: 16119
+      file_mime_type: ~
+      line_count: ~
+      md5: 16a05aec279b6de00b82da00737ed3fe
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/SegTermEnum.pm
+    - bytesize: 8950
+      file_mime_type: ~
+      line_count: ~
+      md5: 111f6061c77352b8271daeab036263ed
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/SegWriter.pm
+    - bytesize: 2243
+      file_mime_type: ~
+      line_count: ~
+      md5: b6e9359ae6ea855b63a3c223a39c6bdf
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/Term.pm
+    - bytesize: 5011
+      file_mime_type: ~
+      line_count: ~
+      md5: c88f95e6e437a0c89aedd10b6d356d18
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/TermBuffer.pm
+    - bytesize: 8346
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c04c2a7aca351bc9be23a7367867904
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/TermDocs.pm
+    - bytesize: 1773
+      file_mime_type: ~
+      line_count: ~
+      md5: e00c89f2c46522ec6e382d839f3e6817
+      mtime: 1268873793
+      name: lib/KinoSearch1/Index/TermEnum.pm
+    - bytesize: 4719
+      file_mime_type: ~
+      line_count: ~
+      md5: 867bf5638438b7c2ce5b70d91d9da7fb
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/TermInfo.pm
+    - bytesize: 3784
+      file_mime_type: ~
+      line_count: ~
+      md5: 8de040f985380c5bf019f6f9ae777ac1
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/TermInfosReader.pm
+    - bytesize: 8943
+      file_mime_type: ~
+      line_count: ~
+      md5: 902aa854be5a4570143da4cbd4054994
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/TermInfosWriter.pm
+    - bytesize: 991
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f5cbb8e60de0c27c13b1399721e54e1
+      mtime: 1268873792
+      name: lib/KinoSearch1/Index/TermVector.pm
+    - bytesize: 16947
+      file_mime_type: ~
+      line_count: ~
+      md5: f9d28fb7453ebe9af1519d79a320bd87
+      mtime: 1268873793
+      name: lib/KinoSearch1/InvIndexer.pm
+    - bytesize: 11531
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ad698f7ef65441ba3ccdbc3fa4a5015
+      mtime: 1268873793
+      name: lib/KinoSearch1/QueryParser/QueryParser.pm
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: f311d912d38871c93ef5dbd02baa8300
+      mtime: 1268873793
+      name: lib/KinoSearch1/Search/BooleanClause.pm
+    - bytesize: 5665
+      file_mime_type: ~
+      line_count: ~
+      md5: f686fb5b2ba38610872c6fd56c72ccf8
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/BooleanQuery.pm
+    - bytesize: 10905
+      file_mime_type: ~
+      line_count: ~
+      md5: 0390334b01dd49cbdb90ebca1a0f64bd
+      mtime: 1268873793
+      name: lib/KinoSearch1/Search/BooleanScorer.pm
+    - bytesize: 1676
+      file_mime_type: ~
+      line_count: ~
+      md5: f95e8a8890325144a1e23bbfab4a52d9
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/Hit.pm
+    - bytesize: 10484
+      file_mime_type: ~
+      line_count: ~
+      md5: 124ded629f791d566143ad92f6a8850a
+      mtime: 1268873793
+      name: lib/KinoSearch1/Search/HitCollector.pm
+    - bytesize: 2373
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a464e1c85384b219b43f6272331e834
+      mtime: 1268873793
+      name: lib/KinoSearch1/Search/HitQueue.pm
+    - bytesize: 5266
+      file_mime_type: ~
+      line_count: ~
+      md5: bd7a70789d5d36275b15e0ddb40c5ed2
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/Hits.pm
+    - bytesize: 6366
+      file_mime_type: ~
+      line_count: ~
+      md5: d2fbcfee10c0ea0026a276a69db45ca4
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/MultiSearcher.pm
+    - bytesize: 4573
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e39751eb93770dc7c2cffbb68618bd0
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/PhraseQuery.pm
+    - bytesize: 12256
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ace8be18900b56b7db746e3b769b33b
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/PhraseScorer.pm
+    - bytesize: 4297
+      file_mime_type: ~
+      line_count: ~
+      md5: 014f298d35da6bf7fbef5805562f47e5
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/Query.pm
+    - bytesize: 2296
+      file_mime_type: ~
+      line_count: ~
+      md5: 79fdd59c6e900aeb0ff8d3dffaef5bdb
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/QueryFilter.pm
+    - bytesize: 5930
+      file_mime_type: ~
+      line_count: ~
+      md5: a815aaf5e71d2df28305c79a07050c4f
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/Scorer.pm
+    - bytesize: 4933
+      file_mime_type: ~
+      line_count: ~
+      md5: ebc75588c9bbdcd43d325aa8ada49074
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/SearchClient.pm
+    - bytesize: 6294
+      file_mime_type: ~
+      line_count: ~
+      md5: 0951f1686b9010df2cae908b887af6e2
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/SearchServer.pm
+    - bytesize: 2944
+      file_mime_type: ~
+      line_count: ~
+      md5: b883de3a1100541e260856dd4d436538
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/Searchable.pm
+    - bytesize: 7675
+      file_mime_type: ~
+      line_count: ~
+      md5: aa0cbcbf4db612845d312df55f1db305
+      mtime: 1268873793
+      name: lib/KinoSearch1/Search/Similarity.pm
+    - bytesize: 3287
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f820952c62f141e7565517a19daa80e
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/TermQuery.pm
+    - bytesize: 10213
+      file_mime_type: ~
+      line_count: ~
+      md5: ec6781cc8abf572204068f7424d40d2e
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/TermScorer.pm
+    - bytesize: 2299
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ed19d7d54c609fe25e79da30c183488
+      mtime: 1268873792
+      name: lib/KinoSearch1/Search/Weight.pm
+    - bytesize: 7039
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a06d20224cf05acc96174ce1961cf07
+      mtime: 1268873792
+      name: lib/KinoSearch1/Searcher.pm
+    - bytesize: 5431
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f76c5739a47be6fea09952895aaf635
+      mtime: 1268873792
+      name: lib/KinoSearch1/Store/FSInvIndex.pm
+    - bytesize: 2312
+      file_mime_type: ~
+      line_count: ~
+      md5: b65713f42cca6c812556622c8a8be348
+      mtime: 1268873793
+      name: lib/KinoSearch1/Store/FSLock.pm
+    - bytesize: 17483
+      file_mime_type: ~
+      line_count: ~
+      md5: 44070c52c4c4ea2310a3711bdd18d015
+      mtime: 1268873792
+      name: lib/KinoSearch1/Store/InStream.pm
+    - bytesize: 3634
+      file_mime_type: ~
+      line_count: ~
+      md5: 52fa9f439699ee024470ce935a45cb54
+      mtime: 1268873792
+      name: lib/KinoSearch1/Store/InvIndex.pm
+    - bytesize: 2084
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f5ea537a0e981680d539773fc05a846
+      mtime: 1268873793
+      name: lib/KinoSearch1/Store/Lock.pm
+    - bytesize: 17418
+      file_mime_type: ~
+      line_count: ~
+      md5: 44ef7e9e0830656f16c36b32884ab76c
+      mtime: 1268873793
+      name: lib/KinoSearch1/Store/OutStream.pm
+    - bytesize: 3767
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f664eb0d5d5412a1630a5bad02522c6
+      mtime: 1268873792
+      name: lib/KinoSearch1/Store/RAMInvIndex.pm
+    - bytesize: 1040
+      file_mime_type: ~
+      line_count: ~
+      md5: e0cae2a76aee6ea618e4e145fd367364
+      mtime: 1268873792
+      name: lib/KinoSearch1/Store/RAMLock.pm
+    - bytesize: 15190
+      file_mime_type: ~
+      line_count: ~
+      md5: d5f59f9aaa89df2b84b30ae1a8cb7a83
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/BitVector.pm
+    - bytesize: 5124
+      file_mime_type: ~
+      line_count: ~
+      md5: 9265219a7e43400e9d45b50924bed829
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/ByteBuf.pm
+    - bytesize: 3474
+      file_mime_type: ~
+      line_count: ~
+      md5: 494ec7b1faeb6d013622205e7d582d51
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/CClass.pm
+    - bytesize: 1118
+      file_mime_type: ~
+      line_count: ~
+      md5: 70876fbb9f4303829f489669d3558766
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/Carp.pm
+    - bytesize: 7479
+      file_mime_type: ~
+      line_count: ~
+      md5: a06fc72b017c92a0682e6b506ff9ff0d
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/Class.pm
+    - bytesize: 1625
+      file_mime_type: ~
+      line_count: ~
+      md5: 09b1b56a5fbb90d2e03c75286ab7b7bb
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/IntMap.pm
+    - bytesize: 1994
+      file_mime_type: ~
+      line_count: ~
+      md5: aa10e4e69b71ea38bb7b21fbe0e0a549
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/MathUtils.pm
+    - bytesize: 2413
+      file_mime_type: ~
+      line_count: ~
+      md5: c18725090fbab587a661cfc49b56dfc4
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/MemManager.pm
+    - bytesize: 9736
+      file_mime_type: ~
+      line_count: ~
+      md5: 88ced9d4f7039b879e61b5e947c76293
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/PriorityQueue.pm
+    - bytesize: 23854
+      file_mime_type: ~
+      line_count: ~
+      md5: d9462e8e0436c5f3f5226f081440a1eb
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/SortExternal.pm
+    - bytesize: 1910
+      file_mime_type: ~
+      line_count: ~
+      md5: 69c4a95f7504811011a37ba8ed0be033
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/StringHelper.pm
+    - bytesize: 658
+      file_mime_type: ~
+      line_count: ~
+      md5: 37621b2ad9d0b627f67c2b7fafff1e2a
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/ToStringUtils.pm
+    - bytesize: 942
+      file_mime_type: ~
+      line_count: ~
+      md5: ea20381cab0525457d0ba9f665ff6e9c
+      mtime: 1268873792
+      name: lib/KinoSearch1/Util/ToolSet.pm
+    - bytesize: 4105
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ae236cf768e9ebc5939f9f93828a0ee
+      mtime: 1268873793
+      name: lib/KinoSearch1/Util/VerifyArgs.pm
+    - bytesize: 156706
+      file_mime_type: ~
+      line_count: ~
+      md5: 535f2116e2886e6624859a93537bc7bd
+      mtime: 1268873792
+      name: src/ppport.h
+    - bytesize: 430
+      file_mime_type: ~
+      line_count: ~
+      md5: 056f8c84f4816f63132d80219a24a80e
+      mtime: 1268873792
+      name: t/000-load.t
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: 28cc5c98a30a0f7c19b5d298bae52d41
+      mtime: 1268873793
+      name: t/001-build_invindexes.t
+    - bytesize: 242
+      file_mime_type: ~
+      line_count: ~
+      md5: 1004f1b631e39138b679935c3fd64b9e
+      mtime: 1268873793
+      name: t/002-kinosearch.t
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: 72435eab4eaee3e1c42a7b59905099a5
+      mtime: 1268873792
+      name: t/010-verify_args.t
+    - bytesize: 1821
+      file_mime_type: ~
+      line_count: ~
+      md5: 61080c3916e5243a3a3f1f4afa52f9d6
+      mtime: 1268873793
+      name: t/011-class.t
+    - bytesize: 1095
+      file_mime_type: ~
+      line_count: ~
+      md5: ba079fc9d6247947e01ea94da0f13831
+      mtime: 1268873792
+      name: t/012-priority_queue.t
+    - bytesize: 2371
+      file_mime_type: ~
+      line_count: ~
+      md5: 31fcc7e3593acc72abcc97b741f22398
+      mtime: 1268873793
+      name: t/013-bit_vector.t
+    - bytesize: 2877
+      file_mime_type: ~
+      line_count: ~
+      md5: 936f776e1242210cda1ff20203336d7f
+      mtime: 1268873792
+      name: t/015-sort_external.t
+    - bytesize: 1968
+      file_mime_type: ~
+      line_count: ~
+      md5: 93680c0d0984e9afb77982c1d6846548
+      mtime: 1268873792
+      name: t/101-simple_template_io.t
+    - bytesize: 961
+      file_mime_type: ~
+      line_count: ~
+      md5: aaea1ba5e468b675fd98164f0bea15df
+      mtime: 1268873793
+      name: t/102-strings_template_io.t
+    - bytesize: 1424
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a71f2f0a7ddf837f282197098a604fd
+      mtime: 1268873792
+      name: t/103-repeats_template_io.t
+    - bytesize: 922
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f7d0a07e5da34555e7cddacafc7dd72
+      mtime: 1268873792
+      name: t/104-parse_template_io.t
+    - bytesize: 2997
+      file_mime_type: ~
+      line_count: ~
+      md5: 82afe5415ae0695dc9eb888f1724c20b
+      mtime: 1268873792
+      name: t/105-invindex.t
+    - bytesize: 1836
+      file_mime_type: ~
+      line_count: ~
+      md5: 626b65a3b31a1dc51a23fcf87c20e9ce
+      mtime: 1268873792
+      name: t/106-locking.t
+    - bytesize: 1759
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e0593c65459625ea4d79eaf45b3b258
+      mtime: 1268873792
+      name: t/150-polyanalyzer.t
+    - bytesize: 879
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fb4342ae8d4ac665947716d5974e9a3
+      mtime: 1268873792
+      name: t/152-token_batch.t
+    - bytesize: 723
+      file_mime_type: ~
+      line_count: ~
+      md5: 71f08c56661051efc204a402e7d17dd6
+      mtime: 1268873792
+      name: t/153-lc_normalizer.t
+    - bytesize: 1390
+      file_mime_type: ~
+      line_count: ~
+      md5: a8b8e6dc33a39c3510f97daa81891d2c
+      mtime: 1268873792
+      name: t/154-tokenizer.t
+    - bytesize: 674
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b7f5e1687b54bc79db152540f98ae5
+      mtime: 1268873792
+      name: t/155-stopalizer.t
+    - bytesize: 2490
+      file_mime_type: ~
+      line_count: ~
+      md5: 7de55b0e2db9affeddf2e562f71528ca
+      mtime: 1268873793
+      name: t/201-field_infos.t
+    - bytesize: 418
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aa1319533458edf61ff29bd681df3a7
+      mtime: 1268873793
+      name: t/202-term.t
+    - bytesize: 946
+      file_mime_type: ~
+      line_count: ~
+      md5: 9556774631ab67d1b232e26221be82b6
+      mtime: 1268873792
+      name: t/203-compound_file_reader.t
+    - bytesize: 2550
+      file_mime_type: ~
+      line_count: ~
+      md5: 0eba4e75b2651903d51964493d52f89f
+      mtime: 1268873793
+      name: t/204-fields_reader.t
+    - bytesize: 1085
+      file_mime_type: ~
+      line_count: ~
+      md5: 2afe89264cb8bf2e0437b56d372391c3
+      mtime: 1268873792
+      name: t/205-seg_reader.t
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: 634c25a94a9d9a581878d4ce12132337
+      mtime: 1268873792
+      name: t/206-seg_infos.t
+    - bytesize: 2141
+      file_mime_type: ~
+      line_count: ~
+      md5: 34209c3d355ffa083e19de0e8188d698
+      mtime: 1268873792
+      name: t/207-seg_term_enum.t
+    - bytesize: 1509
+      file_mime_type: ~
+      line_count: ~
+      md5: 071ae58b7d94fa2b539370f324dd20e1
+      mtime: 1268873793
+      name: t/208-terminfo.t
+    - bytesize: 1514
+      file_mime_type: ~
+      line_count: ~
+      md5: f3aabff966d12eb09227b94f86195f84
+      mtime: 1268873792
+      name: t/209-term_infos_reader.t
+    - bytesize: 1834
+      file_mime_type: ~
+      line_count: ~
+      md5: e62c66858bd10b17d826ea841a8b0a15
+      mtime: 1268873792
+      name: t/210-deldocs.t
+    - bytesize: 1550
+      file_mime_type: ~
+      line_count: ~
+      md5: 42db2f8511516c2050effb649b39b934
+      mtime: 1268873792
+      name: t/211-seg_term_docs.t
+    - bytesize: 2315
+      file_mime_type: ~
+      line_count: ~
+      md5: 28e9131b2378bd976ac6a89a3db28b30
+      mtime: 1268873792
+      name: t/212-multi_term_docs.t
+    - bytesize: 3210
+      file_mime_type: ~
+      line_count: ~
+      md5: e219161c02e73927d9041127b524822c
+      mtime: 1268873793
+      name: t/213-segment_merging.t
+    - bytesize: 2683
+      file_mime_type: ~
+      line_count: ~
+      md5: c6b8fc90fb04791f7903c3a0f9e8b915
+      mtime: 1268873793
+      name: t/214-spec_field.t
+    - bytesize: 1308
+      file_mime_type: ~
+      line_count: ~
+      md5: 485490a462ed477dc2bb3b44e1382a4c
+      mtime: 1268873793
+      name: t/302-many_fields.t
+    - bytesize: 2394
+      file_mime_type: ~
+      line_count: ~
+      md5: fe94b7130b50b637a906c39c7c234f42
+      mtime: 1268873792
+      name: t/303-highlighter.t
+    - bytesize: 980
+      file_mime_type: ~
+      line_count: ~
+      md5: 0636b7d1f0af6ab5c29aaf9b4baa476d
+      mtime: 1268873793
+      name: t/501-termquery.t
+    - bytesize: 1455
+      file_mime_type: ~
+      line_count: ~
+      md5: b52d56e04325f711ebdd2aa150911d82
+      mtime: 1268873793
+      name: t/502-phrasequery.t
+    - bytesize: 2155
+      file_mime_type: ~
+      line_count: ~
+      md5: a40d36db75d8d236451820dd09971a0d
+      mtime: 1268873792
+      name: t/503-booleanquery.t
+    - bytesize: 2206
+      file_mime_type: ~
+      line_count: ~
+      md5: a9de544e2f1cb8223cde43db15a2fcc3
+      mtime: 1268873793
+      name: t/504-similarity.t
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: 02915a4031256cca26a11da9a3cf1870
+      mtime: 1268873793
+      name: t/505-hit_queue.t
+    - bytesize: 765
+      file_mime_type: ~
+      line_count: ~
+      md5: ddbe843e37fcec9d6815f445440d9d65
+      mtime: 1268873792
+      name: t/506-hit_collector.t
+    - bytesize: 913
+      file_mime_type: ~
+      line_count: ~
+      md5: f2c273c549602fda4d011309fbbc7bae
+      mtime: 1268873792
+      name: t/507-query_filter.t
+    - bytesize: 1100
+      file_mime_type: ~
+      line_count: ~
+      md5: fc85a5d64702db813daa94c4cc260f1f
+      mtime: 1268873793
+      name: t/508-hits.t
+    - bytesize: 1083
+      file_mime_type: ~
+      line_count: ~
+      md5: a4689a772ef256bbebc9ebb8ba549596
+      mtime: 1268873792
+      name: t/509-multi_searcher.t
+    - bytesize: 2508
+      file_mime_type: ~
+      line_count: ~
+      md5: e16a39ea061ab308441d8b6a54d7af62
+      mtime: 1268873793
+      name: t/510-remote_search.t
+    - bytesize: 5466
+      file_mime_type: ~
+      line_count: ~
+      md5: cd5a872fbf71b27705e04ac45cf1df17
+      mtime: 1268873792
+      name: t/601-queryparser.t
+    - bytesize: 3722
+      file_mime_type: ~
+      line_count: ~
+      md5: a1fdc78909c687e00fd65e9ff2553baf
+      mtime: 1268873793
+      name: t/602-boosts.t
+    - bytesize: 1634
+      file_mime_type: ~
+      line_count: ~
+      md5: a2406068680be548cc2b0a2010d8ac5b
+      mtime: 1268873793
+      name: t/603-query_boosts.t
+    - bytesize: 2127
+      file_mime_type: ~
+      line_count: ~
+      md5: c7ac888e339e9b5fee2de16167e7b3c0
+      mtime: 1268873793
+      name: t/604-simple_search.t
+    - bytesize: 968
+      file_mime_type: ~
+      line_count: ~
+      md5: 7062e5617752aff554263d9f24c202e4
+      mtime: 1268873793
+      name: t/701-uscon.t
+    - bytesize: 237
+      file_mime_type: ~
+      line_count: ~
+      md5: 9522a41a3517c21664be29dfac37c9c0
+      mtime: 1268873793
+      name: t/999-remove_invindexes.t
+    - bytesize: 1729
+      file_mime_type: ~
+      line_count: ~
+      md5: 17c7b184e122fd24c06251a05c50415a
+      mtime: 1268873792
+      name: t/benchmarks/README.txt
+    - bytesize: 3635
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ba2a40105f793373045e17c686fbccc
+      mtime: 1268873793
+      name: t/benchmarks/extract_reuters.plx
+    - bytesize: 8147
+      file_mime_type: ~
+      line_count: ~
+      md5: d68ad7ace3c9170c21c37b0329c1fd2d
+      mtime: 1268873792
+      name: t/benchmarks/indexers/BenchmarkingIndexer.pm
+    - bytesize: 7645
+      file_mime_type: ~
+      line_count: ~
+      md5: 69782cf61de9a18b8b042bb00dcb57b6
+      mtime: 1268873793
+      name: t/benchmarks/indexers/LuceneIndexer.java
+    - bytesize: 1965
+      file_mime_type: ~
+      line_count: ~
+      md5: 871911e1cd3d566b9a022f1c6689a010
+      mtime: 1268873792
+      name: t/benchmarks/indexers/kinosearch_indexer.plx
+    - bytesize: 1960
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c9e4aa2a388a019189c9634f69c8747
+      mtime: 1268873792
+      name: t/benchmarks/indexers/plucene_indexer.plx
+    - bytesize: 294
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1268873792
+      name: t/pod-coverage.t
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1268873792
+      name: t/pod.t
+    - bytesize: 820
+      file_mime_type: ~
+      line_count: ~
+      md5: d4578d1a6b294d0b5be183131421307e
+      mtime: 1268873793
+      name: t/us_constitution/amend1.html
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 88b6a6f40cc05cd42ea4e9ac4dbd2a85
+      mtime: 1268873792
+      name: t/us_constitution/amend10.html
+    - bytesize: 788
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b776e8262dec1545703a9c20ada156e
+      mtime: 1268873793
+      name: t/us_constitution/amend11.html
+    - bytesize: 2922
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fa08d0be8b5caa877da2f42512c2ade
+      mtime: 1268873792
+      name: t/us_constitution/amend12.html
+    - bytesize: 857
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d4ed3580a294b3d672ba96fdef2b2f4
+      mtime: 1268873792
+      name: t/us_constitution/amend13.html
+    - bytesize: 3142
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c1c4d408e88593e6aff279dc108f76e
+      mtime: 1268873792
+      name: t/us_constitution/amend14.html
+    - bytesize: 832
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6d14240c4ae241f64a904c76288f0d
+      mtime: 1268873793
+      name: t/us_constitution/amend15.html
+    - bytesize: 746
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f5e88ecbac219ccc0948362ab191218
+      mtime: 1268873792
+      name: t/us_constitution/amend16.html
+    - bytesize: 1381
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fef9b2b4280e0f832280ea23fc06662
+      mtime: 1268873792
+      name: t/us_constitution/amend17.html
+    - bytesize: 1278
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d8a5642ccf425c2f64f1c4fe70842f6
+      mtime: 1268873793
+      name: t/us_constitution/amend18.html
+    - bytesize: 780
+      file_mime_type: ~
+      line_count: ~
+      md5: 4792389864f1ef027459e51454d90e4b
+      mtime: 1268873792
+      name: t/us_constitution/amend19.html
+    - bytesize: 696
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e1e7401f554dbd1d76dbe5979954d41
+      mtime: 1268873792
+      name: t/us_constitution/amend2.html
+    - bytesize: 2526
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ecaf6971cc678eff4aacceef40a63e1
+      mtime: 1268873792
+      name: t/us_constitution/amend20.html
+    - bytesize: 1150
+      file_mime_type: ~
+      line_count: ~
+      md5: 68f0dc334aa7115b4ef6b8a1823bafbe
+      mtime: 1268873792
+      name: t/us_constitution/amend21.html
+    - bytesize: 1498
+      file_mime_type: ~
+      line_count: ~
+      md5: 011aeab1bcc94841265c85e1833985f9
+      mtime: 1268873792
+      name: t/us_constitution/amend22.html
+    - bytesize: 1319
+      file_mime_type: ~
+      line_count: ~
+      md5: 493abb3bca7f13e70efaa00a74a234cf
+      mtime: 1268873792
+      name: t/us_constitution/amend23.html
+    - bytesize: 983
+      file_mime_type: ~
+      line_count: ~
+      md5: 85de23545d277f82fd015af0708b7ca6
+      mtime: 1268873793
+      name: t/us_constitution/amend24.html
+    - bytesize: 2963
+      file_mime_type: ~
+      line_count: ~
+      md5: dae506f833d049415e52684f35972d08
+      mtime: 1268873792
+      name: t/us_constitution/amend25.html
+    - bytesize: 833
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ab5cc0ea58558992148cd29c0b5de88
+      mtime: 1268873792
+      name: t/us_constitution/amend26.html
+    - bytesize: 721
+      file_mime_type: ~
+      line_count: ~
+      md5: 593e70704e325b81ccfa9917f6a1bc62
+      mtime: 1268873792
+      name: t/us_constitution/amend27.html
+    - bytesize: 708
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a5aea200593d02459224f1ac2c17924
+      mtime: 1268873792
+      name: t/us_constitution/amend3.html
+    - bytesize: 882
+      file_mime_type: ~
+      line_count: ~
+      md5: 43ce8007aedcb823d5a5bece5964e0c0
+      mtime: 1268873793
+      name: t/us_constitution/amend4.html
+    - bytesize: 1137
+      file_mime_type: ~
+      line_count: ~
+      md5: bfac8f478dba205136c48dae56be8919
+      mtime: 1268873792
+      name: t/us_constitution/amend5.html
+    - bytesize: 1028
+      file_mime_type: ~
+      line_count: ~
+      md5: b14e24eeef32b161fb99a2296cdc148e
+      mtime: 1268873793
+      name: t/us_constitution/amend6.html
+    - bytesize: 824
+      file_mime_type: ~
+      line_count: ~
+      md5: 83c324f13946688ee5a42aa9849b337a
+      mtime: 1268873792
+      name: t/us_constitution/amend7.html
+    - bytesize: 665
+      file_mime_type: ~
+      line_count: ~
+      md5: 1874c96d3fbd71754dc978d82e27b4e5
+      mtime: 1268873792
+      name: t/us_constitution/amend8.html
+    - bytesize: 680
+      file_mime_type: ~
+      line_count: ~
+      md5: 566e61dda054610c2d46de4ee4f8edf9
+      mtime: 1268873792
+      name: t/us_constitution/amend9.html
+    - bytesize: 712
+      file_mime_type: ~
+      line_count: ~
+      md5: 65d264238e2ba1b76b700436ac4fc978
+      mtime: 1268873792
+      name: t/us_constitution/art1sec1.html
+    - bytesize: 1624
+      file_mime_type: ~
+      line_count: ~
+      md5: 73a69f1a62437c62ee52b790ed65ffb4
+      mtime: 1268873792
+      name: t/us_constitution/art1sec10.html
+    - bytesize: 2424
+      file_mime_type: ~
+      line_count: ~
+      md5: 17811396ce275f0497bdac0cf76d308d
+      mtime: 1268873792
+      name: t/us_constitution/art1sec2.html
+    - bytesize: 2631
+      file_mime_type: ~
+      line_count: ~
+      md5: 0db39bc83b7e54c5b26ffdfb83af85ef
+      mtime: 1268873793
+      name: t/us_constitution/art1sec3.html
+    - bytesize: 999
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bf0999c6cfa538f2f780bed525fb09d
+      mtime: 1268873792
+      name: t/us_constitution/art1sec4.html
+    - bytesize: 1595
+      file_mime_type: ~
+      line_count: ~
+      md5: 508ad5fce225ee72dd2500ccd0371a0b
+      mtime: 1268873792
+      name: t/us_constitution/art1sec5.html
+    - bytesize: 1415
+      file_mime_type: ~
+      line_count: ~
+      md5: 1dea25b8a7f256a247f47728b047f7ee
+      mtime: 1268873792
+      name: t/us_constitution/art1sec6.html
+    - bytesize: 2336
+      file_mime_type: ~
+      line_count: ~
+      md5: dffd0bd449bdb466ab208c6d7d433bc4
+      mtime: 1268873793
+      name: t/us_constitution/art1sec7.html
+    - bytesize: 3370
+      file_mime_type: ~
+      line_count: ~
+      md5: f6226b71fe8e1f292f008fd0f89bc8e8
+      mtime: 1268873792
+      name: t/us_constitution/art1sec8.html
+    - bytesize: 2064
+      file_mime_type: ~
+      line_count: ~
+      md5: e87b3a42c7c1b7060eb4941b49953a59
+      mtime: 1268873792
+      name: t/us_constitution/art1sec9.html
+    - bytesize: 4429
+      file_mime_type: ~
+      line_count: ~
+      md5: a5004fb9c81bba4d00510a1f75d8e8db
+      mtime: 1268873792
+      name: t/us_constitution/art2sec1.html
+    - bytesize: 1879
+      file_mime_type: ~
+      line_count: ~
+      md5: 936cc3ce5c997bd8ea8bbdba462cffb1
+      mtime: 1268873792
+      name: t/us_constitution/art2sec2.html
+    - bytesize: 1134
+      file_mime_type: ~
+      line_count: ~
+      md5: e22512febbf9c867b165c85d172ea3b8
+      mtime: 1268873793
+      name: t/us_constitution/art2sec3.html
+    - bytesize: 761
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d54c218b8fce473d698c44565faaa39
+      mtime: 1268873793
+      name: t/us_constitution/art2sec4.html
+    - bytesize: 966
+      file_mime_type: ~
+      line_count: ~
+      md5: d2bc8c0cb3ef8c70b39325e010273df4
+      mtime: 1268873792
+      name: t/us_constitution/art3sec1.html
+    - bytesize: 1922
+      file_mime_type: ~
+      line_count: ~
+      md5: 51ace4ed1fabee771638e75eee4c322c
+      mtime: 1268873792
+      name: t/us_constitution/art3sec2.html
+    - bytesize: 1047
+      file_mime_type: ~
+      line_count: ~
+      md5: c353f41448cc2669d494edd068d40898
+      mtime: 1268873793
+      name: t/us_constitution/art3sec3.html
+    - bytesize: 832
+      file_mime_type: ~
+      line_count: ~
+      md5: 94a8ac787d4308d5b605133181c37a5d
+      mtime: 1268873792
+      name: t/us_constitution/art4sec1.html
+    - bytesize: 1267
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bb12a40b9f234a9b8c55f48bd5846b9
+      mtime: 1268873793
+      name: t/us_constitution/art4sec2.html
+    - bytesize: 1191
+      file_mime_type: ~
+      line_count: ~
+      md5: 074f45ac102b4e2f3f4cf3f406e175d9
+      mtime: 1268873792
+      name: t/us_constitution/art4sec3.html
+    - bytesize: 835
+      file_mime_type: ~
+      line_count: ~
+      md5: c66199630b974df7ecdf4dd04aee16c9
+      mtime: 1268873792
+      name: t/us_constitution/art4sec4.html
+    - bytesize: 1379
+      file_mime_type: ~
+      line_count: ~
+      md5: 03f65399cc248c4138eb0a21636488c9
+      mtime: 1268873792
+      name: t/us_constitution/art5.html
+    - bytesize: 1501
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c806a240e89b0bae201f73b9282cc12
+      mtime: 1268873792
+      name: t/us_constitution/art6.html
+    - bytesize: 2008
+      file_mime_type: ~
+      line_count: ~
+      md5: b5e0dcc74aafec7c50708d2d3874cfaa
+      mtime: 1268873792
+      name: t/us_constitution/art7.html
+    - bytesize: 3996
+      file_mime_type: ~
+      line_count: ~
+      md5: 14450a77099fcce53f1d58b7fc62c0cd
+      mtime: 1268873793
+      name: t/us_constitution/index.html
+    - bytesize: 819
+      file_mime_type: ~
+      line_count: ~
+      md5: c0606d0f224924ac98cf8e7ab7c76d02
+      mtime: 1268873793
+      name: t/us_constitution/preamble.html
+    - bytesize: 402
+      file_mime_type: ~
+      line_count: ~
+      md5: d870067da6694ce74dc6cd0421688c48
+      mtime: 1268873793
+      name: t/us_constitution/uscon.css
+  module_info:
+    - bytesize: 6903
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ab1521cd7c9330210297fbb537c2435
+      module_name_from_file_guess: KinoSearch1
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1.pm
+      packages:
+        - KinoSearch1
+      primary_package: KinoSearch1
+      uses:
+        - strict
+        - warnings
+        - ''
+        - constant
+        - XSLoader
+        - base
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/KinoSearch1.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 1.00
+    - bytesize: 1342
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bc75f54f26c6559ce082d56fcc643e2
+      module_name_from_file_guess: KinoSearch1::Analysis::Analyzer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/Analyzer.pm
+      packages:
+        - KinoSearch1::Analysis::Analyzer
+      primary_package: KinoSearch1::Analysis::Analyzer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/Analyzer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1140
+      file_mime_type: ~
+      line_count: ~
+      md5: ab0ca0ea672a9eb6e192166402cf40a0
+      module_name_from_file_guess: KinoSearch1::Analysis::LCNormalizer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/LCNormalizer.pm
+      packages:
+        - KinoSearch1::Analysis::LCNormalizer
+      primary_package: KinoSearch1::Analysis::LCNormalizer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - locale
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/LCNormalizer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3360
+      file_mime_type: ~
+      line_count: ~
+      md5: d3537054508b80c66da64077e85deaff
+      module_name_from_file_guess: KinoSearch1::Analysis::PolyAnalyzer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+      packages:
+        - KinoSearch1::Analysis::PolyAnalyzer
+      primary_package: KinoSearch1::Analysis::PolyAnalyzer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Analysis::LCNormalizer
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Analysis::Stemmer
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2025
+      file_mime_type: ~
+      line_count: ~
+      md5: 29c4db2dba840312a112af845e841e95
+      module_name_from_file_guess: KinoSearch1::Analysis::Stemmer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/Stemmer.pm
+      packages:
+        - KinoSearch1::Analysis::Stemmer
+      primary_package: KinoSearch1::Analysis::Stemmer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - Lingua::Stem::Snowball
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/Stemmer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4177
+      file_mime_type: ~
+      line_count: ~
+      md5: e6194f53e1a49ff38b6f9faf00df350f
+      module_name_from_file_guess: KinoSearch1::Analysis::Stopalizer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/Stopalizer.pm
+      packages:
+        - KinoSearch1::Analysis::Stopalizer
+      primary_package: KinoSearch1::Analysis::Stopalizer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - Lingua::StopWords
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/Stopalizer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2702
+      file_mime_type: ~
+      line_count: ~
+      md5: 124879b560c75f630283c5124f2104c1
+      module_name_from_file_guess: KinoSearch1::Analysis::Token
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/Token.pm
+      packages:
+        - KinoSearch1::Analysis::Token
+      primary_package: KinoSearch1::Analysis::Token
+      uses: []
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/Token.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 19481
+      file_mime_type: ~
+      line_count: ~
+      md5: 54427d9a41fb6961d6ad728407ebcddc
+      module_name_from_file_guess: KinoSearch1::Analysis::TokenBatch
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/TokenBatch.pm
+      packages:
+        - KinoSearch1::Analysis::TokenBatch
+      primary_package: KinoSearch1::Analysis::TokenBatch
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/TokenBatch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3885
+      file_mime_type: ~
+      line_count: ~
+      md5: 260b99acec795c4f146d98ce114486d8
+      module_name_from_file_guess: KinoSearch1::Analysis::Tokenizer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Analysis/Tokenizer.pm
+      packages:
+        - KinoSearch1::Analysis::Tokenizer
+      primary_package: KinoSearch1::Analysis::Tokenizer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - locale
+        - KinoSearch1::Analysis::TokenBatch
+      version_info:
+        filename: blib/lib/KinoSearch1/Analysis/Tokenizer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2384
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c8299437644f5b50de0869f052f143f
+      module_name_from_file_guess: KinoSearch1::Document::Doc
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Document/Doc.pm
+      packages:
+        - KinoSearch1::Document::Doc
+      primary_package: KinoSearch1::Document::Doc
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Document/Doc.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7271
+      file_mime_type: ~
+      line_count: ~
+      md5: 12d05e33079cc608ecec18cdd761451a
+      module_name_from_file_guess: KinoSearch1::Document::Field
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Document/Field.pm
+      packages:
+        - KinoSearch1::Document::Field
+      primary_package: KinoSearch1::Document::Field
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Index::FieldsReader
+        - KinoSearch1::Index::FieldInfos
+        - KinoSearch1::Index::TermVector
+        - Storable
+      version_info:
+        filename: blib/lib/KinoSearch1/Document/Field.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 769
+      file_mime_type: ~
+      line_count: ~
+      md5: 54d3f8e1e8f0255564dcf98df42c7b9e
+      module_name_from_file_guess: KinoSearch1::Highlight::Encoder
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Highlight/Encoder.pm
+      packages:
+        - KinoSearch1::Highlight::Encoder
+      primary_package: KinoSearch1::Highlight::Encoder
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Highlight/Encoder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 852
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fa473631f2d777c833a9472da1bdb64
+      module_name_from_file_guess: KinoSearch1::Highlight::Formatter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Highlight/Formatter.pm
+      packages:
+        - KinoSearch1::Highlight::Formatter
+      primary_package: KinoSearch1::Highlight::Formatter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Highlight/Formatter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12898
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e221b7906bd69f1db121ef410870a1b
+      module_name_from_file_guess: KinoSearch1::Highlight::Highlighter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Highlight/Highlighter.pm
+      packages:
+        - KinoSearch1::Highlight::Highlighter
+      primary_package: KinoSearch1::Highlight::Highlighter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - locale
+        - KinoSearch1::Highlight::SimpleHTMLFormatter
+        - KinoSearch1::Highlight::SimpleHTMLEncoder
+      version_info:
+        filename: blib/lib/KinoSearch1/Highlight/Highlighter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 934
+      file_mime_type: ~
+      line_count: ~
+      md5: 0476b0acbd17083fe604fedc69bbe042
+      module_name_from_file_guess: KinoSearch1::Highlight::SimpleHTMLEncoder
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+      packages:
+        - KinoSearch1::Highlight::SimpleHTMLEncoder
+      primary_package: KinoSearch1::Highlight::SimpleHTMLEncoder
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1588
+      file_mime_type: ~
+      line_count: ~
+      md5: df51a32b7da8a7e8034ba66ada248e74
+      module_name_from_file_guess: KinoSearch1::Highlight::SimpleHTMLFormatter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+      packages:
+        - KinoSearch1::Highlight::SimpleHTMLFormatter
+      primary_package: KinoSearch1::Highlight::SimpleHTMLFormatter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2743
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d28ec27ee104df22be0924e9892de09
+      module_name_from_file_guess: KinoSearch1::Index::CompoundFileReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/CompoundFileReader.pm
+      packages:
+        - KinoSearch1::Index::CompoundFileReader
+      primary_package: KinoSearch1::Index::CompoundFileReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Store::InStream
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/CompoundFileReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2572
+      file_mime_type: ~
+      line_count: ~
+      md5: ca3f20c7beb8d429c834089c434569d8
+      module_name_from_file_guess: KinoSearch1::Index::CompoundFileWriter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/CompoundFileWriter.pm
+      packages:
+        - KinoSearch1::Index::CompoundFileWriter
+      primary_package: KinoSearch1::Index::CompoundFileWriter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/CompoundFileWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5081
+      file_mime_type: ~
+      line_count: ~
+      md5: ef651c3a95ba9174944b1561cffa232b
+      module_name_from_file_guess: KinoSearch1::Index::DelDocs
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/DelDocs.pm
+      packages:
+        - KinoSearch1::Index::DelDocs
+      primary_package: KinoSearch1::Index::DelDocs
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Util::IntMap
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/DelDocs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6435
+      file_mime_type: ~
+      line_count: ~
+      md5: e83426ca46a175829065fff94397b8c7
+      module_name_from_file_guess: KinoSearch1::Index::FieldInfos
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/FieldInfos.pm
+      packages:
+        - KinoSearch1::Index::FieldInfos
+      primary_package: KinoSearch1::Index::FieldInfos
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - constant
+        - KinoSearch1::Document::Field
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/FieldInfos.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4117
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fac483bddda518415d5f902c6d589d8
+      module_name_from_file_guess: KinoSearch1::Index::FieldsReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/FieldsReader.pm
+      packages:
+        - KinoSearch1::Index::FieldsReader
+      primary_package: KinoSearch1::Index::FieldsReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - constant
+        - Compress::Zlib
+        - KinoSearch1::Document::Field
+        - KinoSearch1::Document::Doc
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/FieldsReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3229
+      file_mime_type: ~
+      line_count: ~
+      md5: 76bcbea51fdbe30b5696d46a2015effe
+      module_name_from_file_guess: KinoSearch1::Index::FieldsWriter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/FieldsWriter.pm
+      packages:
+        - KinoSearch1::Index::FieldsWriter
+      primary_package: KinoSearch1::Index::FieldsWriter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - Compress::Zlib
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/FieldsWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1803
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fdcde9f79c4d9c21c3cc49138bfb69e
+      module_name_from_file_guess: KinoSearch1::Index::IndexFileNames
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/IndexFileNames.pm
+      packages:
+        - KinoSearch1::Index::IndexFileNames
+      primary_package: KinoSearch1::Index::IndexFileNames
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/IndexFileNames.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5539
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f830981bd5b37813cfebe8b08483430
+      module_name_from_file_guess: KinoSearch1::Index::IndexReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/IndexReader.pm
+      packages:
+        - KinoSearch1::Index::IndexReader
+      primary_package: KinoSearch1::Index::IndexReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Store::FSInvIndex
+        - KinoSearch1::Index::SegReader
+        - KinoSearch1::Index::MultiReader
+        - KinoSearch1::Index::SegInfos
+        - KinoSearch1::Index::IndexFileNames
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/IndexReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5518
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f871f305eee6c98637a017bb8e1ef9c
+      module_name_from_file_guess: KinoSearch1::Index::MultiReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/MultiReader.pm
+      packages:
+        - KinoSearch1::Index::MultiReader
+      primary_package: KinoSearch1::Index::MultiReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Index::FieldInfos
+        - KinoSearch1::Index::SegReader
+        - KinoSearch1::Index::MultiTermDocs
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/MultiReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9780
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ee731162b0cb57a89c930eddc299fdb
+      module_name_from_file_guess: KinoSearch1::Index::MultiTermDocs
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/MultiTermDocs.pm
+      packages:
+        - KinoSearch1::Index::MultiTermDocs
+      primary_package: KinoSearch1::Index::MultiTermDocs
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/MultiTermDocs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1303
+      file_mime_type: ~
+      line_count: ~
+      md5: 84df8da16725309174f8f8176f01eb4f
+      module_name_from_file_guess: KinoSearch1::Index::NormsReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/NormsReader.pm
+      packages:
+        - KinoSearch1::Index::NormsReader
+      primary_package: KinoSearch1::Index::NormsReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/NormsReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14952
+      file_mime_type: ~
+      line_count: ~
+      md5: 3bc410af39e6ff8ea66d870c86f68938
+      module_name_from_file_guess: KinoSearch1::Index::PostingsWriter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/PostingsWriter.pm
+      packages:
+        - KinoSearch1::Index::PostingsWriter
+      primary_package: KinoSearch1::Index::PostingsWriter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Index::TermInfo
+        - KinoSearch1::Index::TermInfosWriter
+        - KinoSearch1::Util::SortExternal
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/PostingsWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3625
+      file_mime_type: ~
+      line_count: ~
+      md5: 354f3ebe8ebd7d10bfadc9a723e25d5a
+      module_name_from_file_guess: KinoSearch1::Index::SegInfos
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/SegInfos.pm
+      packages:
+        - KinoSearch1::Index::SegInfos
+        - KinoSearch1::Index::SegInfo
+      primary_package: KinoSearch1::Index::SegInfos
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - constant
+        - Time::HiRes
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/SegInfos.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6077
+      file_mime_type: ~
+      line_count: ~
+      md5: 8045c16adb18fafc96e431836a099316
+      module_name_from_file_guess: KinoSearch1::Index::SegReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/SegReader.pm
+      packages:
+        - KinoSearch1::Index::SegReader
+      primary_package: KinoSearch1::Index::SegReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Index::CompoundFileReader
+        - KinoSearch1::Index::TermInfosReader
+        - KinoSearch1::Index::FieldsReader
+        - KinoSearch1::Index::FieldInfos
+        - KinoSearch1::Index::NormsReader
+        - KinoSearch1::Index::SegTermDocs
+        - KinoSearch1::Index::DelDocs
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/SegReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 15128
+      file_mime_type: ~
+      line_count: ~
+      md5: 11a62d43854a30914792b2d415e10410
+      module_name_from_file_guess: KinoSearch1::Index::SegTermDocs
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/SegTermDocs.pm
+      packages:
+        - KinoSearch1::Index::SegTermDocs
+      primary_package: KinoSearch1::Index::SegTermDocs
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/SegTermDocs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 16119
+      file_mime_type: ~
+      line_count: ~
+      md5: 85dea0ab5d8da0ec5a2738b08d8c766e
+      module_name_from_file_guess: KinoSearch1::Index::SegTermEnum
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/SegTermEnum.pm
+      packages:
+        - KinoSearch1::Index::SegTermEnum
+      primary_package: KinoSearch1::Index::SegTermEnum
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Index::Term
+        - KinoSearch1::Index::TermInfo
+        - KinoSearch1::Index::TermBuffer
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/SegTermEnum.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8950
+      file_mime_type: ~
+      line_count: ~
+      md5: 116f867fa1ee3b8e5cd6f640bcc91d9d
+      module_name_from_file_guess: KinoSearch1::Index::SegWriter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/SegWriter.pm
+      packages:
+        - KinoSearch1::Index::SegWriter
+      primary_package: KinoSearch1::Index::SegWriter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Analysis::TokenBatch
+        - KinoSearch1::Index::FieldsWriter
+        - KinoSearch1::Index::PostingsWriter
+        - KinoSearch1::Index::CompoundFileWriter
+        - KinoSearch1::Index::IndexFileNames
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/SegWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2243
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a8e34a4319a617633468776ed7345f5
+      module_name_from_file_guess: KinoSearch1::Index::Term
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/Term.pm
+      packages:
+        - KinoSearch1::Index::Term
+      primary_package: KinoSearch1::Index::Term
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/Term.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5011
+      file_mime_type: ~
+      line_count: ~
+      md5: 9331a52135f2d8f87d2650a8bfbabcd7
+      module_name_from_file_guess: KinoSearch1::Index::TermBuffer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermBuffer.pm
+      packages:
+        - KinoSearch1::Index::TermBuffer
+      primary_package: KinoSearch1::Index::TermBuffer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermBuffer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8346
+      file_mime_type: ~
+      line_count: ~
+      md5: c9cadf9dc10bcb88cd3eb34aaeccfca5
+      module_name_from_file_guess: KinoSearch1::Index::TermDocs
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermDocs.pm
+      packages:
+        - KinoSearch1::Index::TermDocs
+      primary_package: KinoSearch1::Index::TermDocs
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermDocs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1773
+      file_mime_type: ~
+      line_count: ~
+      md5: 70ac8950582283db2329bc6beefb109a
+      module_name_from_file_guess: KinoSearch1::Index::TermEnum
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermEnum.pm
+      packages:
+        - KinoSearch1::Index::TermEnum
+      primary_package: KinoSearch1::Index::TermEnum
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermEnum.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4719
+      file_mime_type: ~
+      line_count: ~
+      md5: 1887c5bfcd22d764af47845234bd07a6
+      module_name_from_file_guess: KinoSearch1::Index::TermInfo
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermInfo.pm
+      packages:
+        - KinoSearch1::Index::TermInfo
+      primary_package: KinoSearch1::Index::TermInfo
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermInfo.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3784
+      file_mime_type: ~
+      line_count: ~
+      md5: fd4d74332b93b54b6c93c4fa5c40840f
+      module_name_from_file_guess: KinoSearch1::Index::TermInfosReader
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermInfosReader.pm
+      packages:
+        - KinoSearch1::Index::TermInfosReader
+      primary_package: KinoSearch1::Index::TermInfosReader
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Index::SegTermEnum
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermInfosReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8943
+      file_mime_type: ~
+      line_count: ~
+      md5: fa5b7023f21df9d62e51eab49f3576d4
+      module_name_from_file_guess: KinoSearch1::Index::TermInfosWriter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermInfosWriter.pm
+      packages:
+        - KinoSearch1::Index::TermInfosWriter
+      primary_package: KinoSearch1::Index::TermInfosWriter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermInfosWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 991
+      file_mime_type: ~
+      line_count: ~
+      md5: 9970f07c8807daad4998ce643075e4e2
+      module_name_from_file_guess: KinoSearch1::Index::TermVector
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Index/TermVector.pm
+      packages:
+        - KinoSearch1::Index::TermVector
+      primary_package: KinoSearch1::Index::TermVector
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Index/TermVector.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 16947
+      file_mime_type: ~
+      line_count: ~
+      md5: 910c57819b6c13481ec48609be050a50
+      module_name_from_file_guess: KinoSearch1::InvIndexer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/InvIndexer.pm
+      packages:
+        - KinoSearch1::InvIndexer
+      primary_package: KinoSearch1::InvIndexer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - constant
+        - Storable
+        - File::Spec::Functions
+        - KinoSearch1::Document::Doc
+        - KinoSearch1::Document::Field
+        - KinoSearch1::Analysis::Analyzer
+        - KinoSearch1::Store::FSInvIndex
+        - KinoSearch1::Index::FieldInfos
+        - KinoSearch1::Index::FieldsReader
+        - KinoSearch1::Index::IndexReader
+        - KinoSearch1::Index::SegInfos
+        - KinoSearch1::Index::SegWriter
+        - KinoSearch1::Index::IndexFileNames
+        - KinoSearch1::Search::Similarity
+      version_info:
+        filename: blib/lib/KinoSearch1/InvIndexer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11531
+      file_mime_type: ~
+      line_count: ~
+      md5: ad0d05d832cc5bf1c2d9832fc07028b7
+      module_name_from_file_guess: KinoSearch1::QueryParser::QueryParser
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/QueryParser/QueryParser.pm
+      packages:
+        - KinoSearch1::QueryParser::QueryParser
+      primary_package: KinoSearch1::QueryParser::QueryParser
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Analysis::TokenBatch
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Search::BooleanQuery
+        - KinoSearch1::Search::PhraseQuery
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Index::Term
+      version_info:
+        filename: blib/lib/KinoSearch1/QueryParser/QueryParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 7948c02c46e9fff492ba73962e25ae42
+      module_name_from_file_guess: KinoSearch1::Search::BooleanClause
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/BooleanClause.pm
+      packages:
+        - KinoSearch1::Search::BooleanClause
+      primary_package: KinoSearch1::Search::BooleanClause
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/BooleanClause.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5665
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d4209c6ddf4d00cbb5ecb9e58961f9b
+      module_name_from_file_guess: KinoSearch1::Search::BooleanQuery
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/BooleanQuery.pm
+      packages:
+        - KinoSearch1::Search::BooleanQuery
+        - KinoSearch1::Search::BooleanWeight
+      primary_package: KinoSearch1::Search::BooleanQuery
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::BooleanClause
+        - KinoSearch1::Search::BooleanScorer
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/BooleanQuery.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10905
+      file_mime_type: ~
+      line_count: ~
+      md5: c151c74d59362f14d17870d1748debfa
+      module_name_from_file_guess: KinoSearch1::Search::BooleanScorer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/BooleanScorer.pm
+      packages:
+        - KinoSearch1::Search::BooleanScorer
+      primary_package: KinoSearch1::Search::BooleanScorer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/BooleanScorer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1676
+      file_mime_type: ~
+      line_count: ~
+      md5: 02420ca3e77975668a1c3b3f86a764fd
+      module_name_from_file_guess: KinoSearch1::Search::Hit
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Hit.pm
+      packages:
+        - KinoSearch1::Search::Hit
+      primary_package: KinoSearch1::Search::Hit
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Hit.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10484
+      file_mime_type: ~
+      line_count: ~
+      md5: c45a0459275d9a30cda3a0026b44095d
+      module_name_from_file_guess: KinoSearch1::Search::HitCollector
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/HitCollector.pm
+      packages:
+        - KinoSearch1::Search::HitCollector
+        - KinoSearch1::Search::HitQueueCollector
+        - KinoSearch1::Search::BitCollector
+        - KinoSearch1::Search::FilteredCollector
+        - KinoSearch1::Search::OffsetCollector
+      primary_package: KinoSearch1::Search::HitCollector
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::HitQueue
+        - KinoSearch1::Util::BitVector
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/HitCollector.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2373
+      file_mime_type: ~
+      line_count: ~
+      md5: 2494eeba8ffca7ad501064e67be9a576
+      module_name_from_file_guess: KinoSearch1::Search::HitQueue
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/HitQueue.pm
+      packages:
+        - KinoSearch1::Search::HitQueue
+      primary_package: KinoSearch1::Search::HitQueue
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::Hit
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/HitQueue.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5266
+      file_mime_type: ~
+      line_count: ~
+      md5: 992f5b2d39832f490bd0fc7016978af2
+      module_name_from_file_guess: KinoSearch1::Search::Hits
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Hits.pm
+      packages:
+        - KinoSearch1::Search::Hits
+      primary_package: KinoSearch1::Search::Hits
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Highlight::Highlighter
+        - KinoSearch1::Search::HitCollector
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Hits.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6366
+      file_mime_type: ~
+      line_count: ~
+      md5: 2affd85455eda2989734e0d72386cfd5
+      module_name_from_file_guess: KinoSearch1::Search::MultiSearcher
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/MultiSearcher.pm
+      packages:
+        - KinoSearch1::Search::MultiSearcher
+        - KinoSearch1::Search::CacheDFSource
+      primary_package: KinoSearch1::Search::MultiSearcher
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::Similarity
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/MultiSearcher.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4573
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a15b45fcc45262f899d1106ab8216a4
+      module_name_from_file_guess: KinoSearch1::Search::PhraseQuery
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/PhraseQuery.pm
+      packages:
+        - KinoSearch1::Search::PhraseQuery
+        - KinoSearch1::Search::PhraseWeight
+      primary_package: KinoSearch1::Search::PhraseQuery
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Document::Field
+        - KinoSearch1::Util::ToStringUtils
+        - KinoSearch1::Search::PhraseScorer
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/PhraseQuery.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12256
+      file_mime_type: ~
+      line_count: ~
+      md5: 51d9896970093516122af01b9d19b2ac
+      module_name_from_file_guess: KinoSearch1::Search::PhraseScorer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/PhraseScorer.pm
+      packages:
+        - KinoSearch1::Search::PhraseScorer
+      primary_package: KinoSearch1::Search::PhraseScorer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/PhraseScorer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4297
+      file_mime_type: ~
+      line_count: ~
+      md5: fceeca734ec12bdf3ab6d307585a5b48
+      module_name_from_file_guess: KinoSearch1::Search::Query
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Query.pm
+      packages:
+        - KinoSearch1::Search::Query
+      primary_package: KinoSearch1::Search::Query
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Query.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2296
+      file_mime_type: ~
+      line_count: ~
+      md5: 8475dfba9bc092ee173f771364e01506
+      module_name_from_file_guess: KinoSearch1::Search::QueryFilter
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/QueryFilter.pm
+      packages:
+        - KinoSearch1::Search::QueryFilter
+      primary_package: KinoSearch1::Search::QueryFilter
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::HitCollector
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/QueryFilter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5930
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a476ad62ac0d716e0826dc135237152
+      module_name_from_file_guess: KinoSearch1::Search::Scorer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Scorer.pm
+      packages:
+        - KinoSearch1::Search::Scorer
+      primary_package: KinoSearch1::Search::Scorer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Scorer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4933
+      file_mime_type: ~
+      line_count: ~
+      md5: b51408a8b3ddc9e073b3c97867711367
+      module_name_from_file_guess: KinoSearch1::Search::SearchClient
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/SearchClient.pm
+      packages:
+        - KinoSearch1::Search::SearchClient
+      primary_package: KinoSearch1::Search::SearchClient
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - Storable
+        - IO::Socket::INET
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/SearchClient.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6294
+      file_mime_type: ~
+      line_count: ~
+      md5: 9107240d4aa11f52ed40f24eb10ae19f
+      module_name_from_file_guess: KinoSearch1::Search::SearchServer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/SearchServer.pm
+      packages:
+        - KinoSearch1::Search::SearchServer
+      primary_package: KinoSearch1::Search::SearchServer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - IO::Socket::INET
+        - IO::Select
+        - Storable
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/SearchServer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2944
+      file_mime_type: ~
+      line_count: ~
+      md5: f5435646208ef4c992e8afa81582c479
+      module_name_from_file_guess: KinoSearch1::Search::Searchable
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Searchable.pm
+      packages:
+        - KinoSearch1::Search::Searchable
+      primary_package: KinoSearch1::Search::Searchable
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::Similarity
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Searchable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7675
+      file_mime_type: ~
+      line_count: ~
+      md5: 41e861c468206be33ce4b0aae3c0ee3a
+      module_name_from_file_guess: KinoSearch1::Search::Similarity
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Similarity.pm
+      packages:
+        - KinoSearch1::Search::Similarity
+        - KinoSearch1::Search::TitleSimilarity
+      primary_package: KinoSearch1::Search::Similarity
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Similarity.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3287
+      file_mime_type: ~
+      line_count: ~
+      md5: 04106e3bd979fd0a507218cf591dd01b
+      module_name_from_file_guess: KinoSearch1::Search::TermQuery
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/TermQuery.pm
+      packages:
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Search::TermWeight
+      primary_package: KinoSearch1::Search::TermQuery
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Util::ToStringUtils
+        - KinoSearch1::Search::TermScorer
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/TermQuery.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10213
+      file_mime_type: ~
+      line_count: ~
+      md5: a6668870102fc7127965939727803930
+      module_name_from_file_guess: KinoSearch1::Search::TermScorer
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/TermScorer.pm
+      packages:
+        - KinoSearch1::Search::TermScorer
+      primary_package: KinoSearch1::Search::TermScorer
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Search::Scorer
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/TermScorer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2299
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a35e55ef16b7664e8a8b4065af4a56a
+      module_name_from_file_guess: KinoSearch1::Search::Weight
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Search/Weight.pm
+      packages:
+        - KinoSearch1::Search::Weight
+      primary_package: KinoSearch1::Search::Weight
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Search/Weight.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7039
+      file_mime_type: ~
+      line_count: ~
+      md5: 57cdcd223d9a55c9ad75ac0ebc8e101f
+      module_name_from_file_guess: KinoSearch1::Searcher
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Searcher.pm
+      packages:
+        - KinoSearch1::Searcher
+      primary_package: KinoSearch1::Searcher
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - KinoSearch1::Store::FSInvIndex
+        - KinoSearch1::Index::IndexReader
+        - KinoSearch1::Search::Hits
+        - KinoSearch1::Search::HitCollector
+        - KinoSearch1::Search::Similarity
+        - KinoSearch1::QueryParser::QueryParser
+        - KinoSearch1::Search::BooleanQuery
+        - KinoSearch1::Analysis::Analyzer
+      version_info:
+        filename: blib/lib/KinoSearch1/Searcher.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5431
+      file_mime_type: ~
+      line_count: ~
+      md5: 902d5ed672d2d751da261eac7243e208
+      module_name_from_file_guess: KinoSearch1::Store::FSInvIndex
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/FSInvIndex.pm
+      packages:
+        - KinoSearch1::Store::FSInvIndex
+      primary_package: KinoSearch1::Store::FSInvIndex
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - File::Spec::Functions
+        - Fcntl
+        - Digest::MD5
+        - KinoSearch1::Store::InStream
+        - KinoSearch1::Store::OutStream
+        - KinoSearch1::Store::FSLock
+        - KinoSearch1::Index::IndexFileNames
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/FSInvIndex.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2312
+      file_mime_type: ~
+      line_count: ~
+      md5: 44db46cfb68505c2745172cf17cd042b
+      module_name_from_file_guess: KinoSearch1::Store::FSLock
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/FSLock.pm
+      packages:
+        - KinoSearch1::Store::FSLock
+      primary_package: KinoSearch1::Store::FSLock
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - Fcntl
+        - File::Spec::Functions
+        - KinoSearch1::Store::FSInvIndex
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/FSLock.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17483
+      file_mime_type: ~
+      line_count: ~
+      md5: 95ab79b2043a68c2994e14f2b89eb356
+      module_name_from_file_guess: KinoSearch1::Store::InStream
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/InStream.pm
+      packages:
+        - KinoSearch1::Store::InStream
+      primary_package: KinoSearch1::Store::InStream
+      uses:
+        - base
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/InStream.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3634
+      file_mime_type: ~
+      line_count: ~
+      md5: d1a998aca1f4970e95fccfcc37e181f1
+      module_name_from_file_guess: KinoSearch1::Store::InvIndex
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/InvIndex.pm
+      packages:
+        - KinoSearch1::Store::InvIndex
+      primary_package: KinoSearch1::Store::InvIndex
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/InvIndex.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2084
+      file_mime_type: ~
+      line_count: ~
+      md5: 1888b688c426534c4ae020d3c4c616c3
+      module_name_from_file_guess: KinoSearch1::Store::Lock
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/Lock.pm
+      packages:
+        - KinoSearch1::Store::Lock
+      primary_package: KinoSearch1::Store::Lock
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/Lock.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17418
+      file_mime_type: ~
+      line_count: ~
+      md5: 70f770bd23c58aad43ce91be83c35251
+      module_name_from_file_guess: KinoSearch1::Store::OutStream
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/OutStream.pm
+      packages:
+        - KinoSearch1::Store::OutStream
+      primary_package: KinoSearch1::Store::OutStream
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/OutStream.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3767
+      file_mime_type: ~
+      line_count: ~
+      md5: 96e32098d206ede921b365a96ad42912
+      module_name_from_file_guess: KinoSearch1::Store::RAMInvIndex
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/RAMInvIndex.pm
+      packages:
+        - KinoSearch1::Store::RAMInvIndex
+      primary_package: KinoSearch1::Store::RAMInvIndex
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+        - Digest::MD5
+        - KinoSearch1::Store::FSInvIndex
+        - KinoSearch1::Store::InStream
+        - KinoSearch1::Store::OutStream
+        - KinoSearch1::Store::RAMLock
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/RAMInvIndex.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1040
+      file_mime_type: ~
+      line_count: ~
+      md5: 43570993a105f2aa18f280e79cd44425
+      module_name_from_file_guess: KinoSearch1::Store::RAMLock
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Store/RAMLock.pm
+      packages:
+        - KinoSearch1::Store::RAMLock
+      primary_package: KinoSearch1::Store::RAMLock
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Store/RAMLock.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 15190
+      file_mime_type: ~
+      line_count: ~
+      md5: 083fc538d6e86203d314accd88df4e66
+      module_name_from_file_guess: KinoSearch1::Util::BitVector
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/BitVector.pm
+      packages:
+        - KinoSearch1::Util::BitVector
+      primary_package: KinoSearch1::Util::BitVector
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/BitVector.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5124
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e4f8e0431279e1e9030b596b82e0644
+      module_name_from_file_guess: KinoSearch1::Util::ByteBuf
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/ByteBuf.pm
+      packages:
+        - KinoSearch1::Util::ByteBuf
+      primary_package: KinoSearch1::Util::ByteBuf
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/ByteBuf.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3474
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d15d0c1275ea192d30139ddfe89a264
+      module_name_from_file_guess: KinoSearch1::Util::CClass
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/CClass.pm
+      packages:
+        - KinoSearch1::Util::CClass
+      primary_package: KinoSearch1::Util::CClass
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/CClass.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1118
+      file_mime_type: ~
+      line_count: ~
+      md5: 4360a0c0434e9f2846619bc2363b21c3
+      module_name_from_file_guess: KinoSearch1::Util::Carp
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/Carp.pm
+      packages:
+        - KinoSearch1::Util::Carp
+      primary_package: KinoSearch1::Util::Carp
+      uses: []
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/Carp.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7479
+      file_mime_type: ~
+      line_count: ~
+      md5: b84f04f2a46edb0fca6b352eaae5b88b
+      module_name_from_file_guess: KinoSearch1::Util::Class
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/Class.pm
+      packages:
+        - KinoSearch1::Util::Class
+      primary_package: KinoSearch1::Util::Class
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - KinoSearch1::Util::VerifyArgs
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/Class.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1625
+      file_mime_type: ~
+      line_count: ~
+      md5: 684a0c96e3450cefb226d9b62f76730e
+      module_name_from_file_guess: KinoSearch1::Util::IntMap
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/IntMap.pm
+      packages:
+        - KinoSearch1::Util::IntMap
+      primary_package: KinoSearch1::Util::IntMap
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/IntMap.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1994
+      file_mime_type: ~
+      line_count: ~
+      md5: ca3c9d9d06c3f2e07f205f912dd617f7
+      module_name_from_file_guess: KinoSearch1::Util::MathUtils
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/MathUtils.pm
+      packages:
+        - KinoSearch1::Util::MathUtils
+      primary_package: KinoSearch1::Util::MathUtils
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/MathUtils.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2413
+      file_mime_type: ~
+      line_count: ~
+      md5: 48c1fd45464488b303a3f8ab16d239d3
+      module_name_from_file_guess: KinoSearch1::Util::MemManager
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/MemManager.pm
+      packages:
+        - KinoSearch1::Util::MemManager
+      primary_package: KinoSearch1::Util::MemManager
+      uses: []
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/MemManager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9736
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dd78f0329a118cf22a55eb5f7f64c96
+      module_name_from_file_guess: KinoSearch1::Util::PriorityQueue
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/PriorityQueue.pm
+      packages:
+        - KinoSearch1::Util::PriorityQueue
+      primary_package: KinoSearch1::Util::PriorityQueue
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/PriorityQueue.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 23854
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f01bef135954e62fbeb008776cb6f09
+      module_name_from_file_guess: KinoSearch1::Util::SortExternal
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/SortExternal.pm
+      packages:
+        - KinoSearch1::Util::SortExternal
+      primary_package: KinoSearch1::Util::SortExternal
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/SortExternal.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1910
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cdecbd782a624410f4772bfe429223c
+      module_name_from_file_guess: KinoSearch1::Util::StringHelper
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/StringHelper.pm
+      packages:
+        - KinoSearch1::Util::StringHelper
+      primary_package: KinoSearch1::Util::StringHelper
+      uses: []
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/StringHelper.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 658
+      file_mime_type: ~
+      line_count: ~
+      md5: 031efc31ff6ef0ad6aa91244c0a1d964
+      module_name_from_file_guess: KinoSearch1::Util::ToStringUtils
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/ToStringUtils.pm
+      packages:
+        - KinoSearch1::Util::ToStringUtils
+      primary_package: KinoSearch1::Util::ToStringUtils
+      uses:
+        - strict
+        - warnings
+        - KinoSearch1::Util::ToolSet
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/ToStringUtils.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 942
+      file_mime_type: ~
+      line_count: ~
+      md5: f086b249cef4acda29deebf9a17cdb19
+      module_name_from_file_guess: KinoSearch1::Util::ToolSet
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/ToolSet.pm
+      packages:
+        - KinoSearch1::Util::ToolSet
+      primary_package: KinoSearch1::Util::ToolSet
+      uses:
+        - strict
+        - warnings
+        - bytes
+        - base
+        - Carp
+        - Scalar::Util
+        - KinoSearch1
+        - KinoSearch1::Util::VerifyArgs
+        - KinoSearch1::Util::MathUtils
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/ToolSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4105
+      file_mime_type: ~
+      line_count: ~
+      md5: ea07e0c7347cc38f71d9549eae9b4e87
+      module_name_from_file_guess: KinoSearch1::Util::VerifyArgs
+      mtime: 1269996887
+      name: blib/lib/KinoSearch1/Util/VerifyArgs.pm
+      packages:
+        - KinoSearch1::Util::VerifyArgs
+      primary_package: KinoSearch1::Util::VerifyArgs
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/KinoSearch1/Util/VerifyArgs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/KinoSearch1.pm
+    - blib/lib/KinoSearch1/Analysis/Analyzer.pm
+    - blib/lib/KinoSearch1/Analysis/LCNormalizer.pm
+    - blib/lib/KinoSearch1/Analysis/PolyAnalyzer.pm
+    - blib/lib/KinoSearch1/Analysis/Stemmer.pm
+    - blib/lib/KinoSearch1/Analysis/Stopalizer.pm
+    - blib/lib/KinoSearch1/Analysis/Token.pm
+    - blib/lib/KinoSearch1/Analysis/TokenBatch.pm
+    - blib/lib/KinoSearch1/Analysis/Tokenizer.pm
+    - blib/lib/KinoSearch1/Document/Doc.pm
+    - blib/lib/KinoSearch1/Document/Field.pm
+    - blib/lib/KinoSearch1/Highlight/Encoder.pm
+    - blib/lib/KinoSearch1/Highlight/Formatter.pm
+    - blib/lib/KinoSearch1/Highlight/Highlighter.pm
+    - blib/lib/KinoSearch1/Highlight/SimpleHTMLEncoder.pm
+    - blib/lib/KinoSearch1/Highlight/SimpleHTMLFormatter.pm
+    - blib/lib/KinoSearch1/Index/CompoundFileReader.pm
+    - blib/lib/KinoSearch1/Index/CompoundFileWriter.pm
+    - blib/lib/KinoSearch1/Index/DelDocs.pm
+    - blib/lib/KinoSearch1/Index/FieldInfos.pm
+    - blib/lib/KinoSearch1/Index/FieldsReader.pm
+    - blib/lib/KinoSearch1/Index/FieldsWriter.pm
+    - blib/lib/KinoSearch1/Index/IndexFileNames.pm
+    - blib/lib/KinoSearch1/Index/IndexReader.pm
+    - blib/lib/KinoSearch1/Index/MultiReader.pm
+    - blib/lib/KinoSearch1/Index/MultiTermDocs.pm
+    - blib/lib/KinoSearch1/Index/NormsReader.pm
+    - blib/lib/KinoSearch1/Index/PostingsWriter.pm
+    - blib/lib/KinoSearch1/Index/SegInfos.pm
+    - blib/lib/KinoSearch1/Index/SegReader.pm
+    - blib/lib/KinoSearch1/Index/SegTermDocs.pm
+    - blib/lib/KinoSearch1/Index/SegTermEnum.pm
+    - blib/lib/KinoSearch1/Index/SegWriter.pm
+    - blib/lib/KinoSearch1/Index/Term.pm
+    - blib/lib/KinoSearch1/Index/TermBuffer.pm
+    - blib/lib/KinoSearch1/Index/TermDocs.pm
+    - blib/lib/KinoSearch1/Index/TermEnum.pm
+    - blib/lib/KinoSearch1/Index/TermInfo.pm
+    - blib/lib/KinoSearch1/Index/TermInfosReader.pm
+    - blib/lib/KinoSearch1/Index/TermInfosWriter.pm
+    - blib/lib/KinoSearch1/Index/TermVector.pm
+    - blib/lib/KinoSearch1/InvIndexer.pm
+    - blib/lib/KinoSearch1/QueryParser/QueryParser.pm
+    - blib/lib/KinoSearch1/Search/BooleanClause.pm
+    - blib/lib/KinoSearch1/Search/BooleanQuery.pm
+    - blib/lib/KinoSearch1/Search/BooleanScorer.pm
+    - blib/lib/KinoSearch1/Search/Hit.pm
+    - blib/lib/KinoSearch1/Search/HitCollector.pm
+    - blib/lib/KinoSearch1/Search/HitQueue.pm
+    - blib/lib/KinoSearch1/Search/Hits.pm
+    - blib/lib/KinoSearch1/Search/MultiSearcher.pm
+    - blib/lib/KinoSearch1/Search/PhraseQuery.pm
+    - blib/lib/KinoSearch1/Search/PhraseScorer.pm
+    - blib/lib/KinoSearch1/Search/Query.pm
+    - blib/lib/KinoSearch1/Search/QueryFilter.pm
+    - blib/lib/KinoSearch1/Search/Scorer.pm
+    - blib/lib/KinoSearch1/Search/SearchClient.pm
+    - blib/lib/KinoSearch1/Search/SearchServer.pm
+    - blib/lib/KinoSearch1/Search/Searchable.pm
+    - blib/lib/KinoSearch1/Search/Similarity.pm
+    - blib/lib/KinoSearch1/Search/TermQuery.pm
+    - blib/lib/KinoSearch1/Search/TermScorer.pm
+    - blib/lib/KinoSearch1/Search/Weight.pm
+    - blib/lib/KinoSearch1/Searcher.pm
+    - blib/lib/KinoSearch1/Store/FSInvIndex.pm
+    - blib/lib/KinoSearch1/Store/FSLock.pm
+    - blib/lib/KinoSearch1/Store/InStream.pm
+    - blib/lib/KinoSearch1/Store/InvIndex.pm
+    - blib/lib/KinoSearch1/Store/Lock.pm
+    - blib/lib/KinoSearch1/Store/OutStream.pm
+    - blib/lib/KinoSearch1/Store/RAMInvIndex.pm
+    - blib/lib/KinoSearch1/Store/RAMLock.pm
+    - blib/lib/KinoSearch1/Util/BitVector.pm
+    - blib/lib/KinoSearch1/Util/ByteBuf.pm
+    - blib/lib/KinoSearch1/Util/CClass.pm
+    - blib/lib/KinoSearch1/Util/Carp.pm
+    - blib/lib/KinoSearch1/Util/Class.pm
+    - blib/lib/KinoSearch1/Util/IntMap.pm
+    - blib/lib/KinoSearch1/Util/MathUtils.pm
+    - blib/lib/KinoSearch1/Util/MemManager.pm
+    - blib/lib/KinoSearch1/Util/PriorityQueue.pm
+    - blib/lib/KinoSearch1/Util/SortExternal.pm
+    - blib/lib/KinoSearch1/Util/StringHelper.pm
+    - blib/lib/KinoSearch1/Util/ToStringUtils.pm
+    - blib/lib/KinoSearch1/Util/ToolSet.pm
+    - blib/lib/KinoSearch1/Util/VerifyArgs.pm
+  test_info:
+    - bytesize: 913
+      file_mime_type: ~
+      line_count: ~
+      md5: f2c273c549602fda4d011309fbbc7bae
+      mtime: 1268873792
+      name: t/507-query_filter.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Search::HitCollector
+        - KinoSearch1::Searcher
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Index::Term
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 1085
+      file_mime_type: ~
+      line_count: ~
+      md5: 2afe89264cb8bf2e0437b56d372391c3
+      mtime: 1268873792
+      name: t/205-seg_reader.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 3210
+      file_mime_type: ~
+      line_count: ~
+      md5: e219161c02e73927d9041127b524822c
+      mtime: 1268873793
+      name: t/213-segment_merging.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Path
+        - File::Spec::Functions
+        - File::stat
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 1083
+      file_mime_type: ~
+      line_count: ~
+      md5: a4689a772ef256bbebc9ebb8ba549596
+      mtime: 1268873792
+      name: t/509-multi_searcher.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - KinoSearch1::Searcher
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 961
+      file_mime_type: ~
+      line_count: ~
+      md5: aaea1ba5e468b675fd98164f0bea15df
+      mtime: 1268873793
+      name: t/102-strings_template_io.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1100
+      file_mime_type: ~
+      line_count: ~
+      md5: fc85a5d64702db813daa94c4cc260f1f
+      mtime: 1268873793
+      name: t/508-hits.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Searcher
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 1550
+      file_mime_type: ~
+      line_count: ~
+      md5: 42db2f8511516c2050effb649b39b934
+      mtime: 1268873792
+      name: t/211-seg_term_docs.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 2315
+      file_mime_type: ~
+      line_count: ~
+      md5: 28e9131b2378bd976ac6a89a3db28b30
+      mtime: 1268873792
+      name: t/212-multi_term_docs.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 2155
+      file_mime_type: ~
+      line_count: ~
+      md5: a40d36db75d8d236451820dd09971a0d
+      mtime: 1268873792
+      name: t/503-booleanquery.t
+      uses:
+        - lib
+        - Test::More
+        - File::Spec::Functions
+        - KinoSearch1::Test::TestUtils
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Index::Term
+        - KinoSearch1::Searcher
+        - KinoSearch1::Analysis::Tokenizer
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: 28cc5c98a30a0f7c19b5d298bae52d41
+      mtime: 1268873793
+      name: t/001-build_invindexes.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Spec::Functions
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: 02915a4031256cca26a11da9a3cf1870
+      mtime: 1268873793
+      name: t/505-hit_queue.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Scalar::Util
+    - bytesize: 1821
+      file_mime_type: ~
+      line_count: ~
+      md5: 61080c3916e5243a3a3f1f4afa52f9d6
+      mtime: 1268873793
+      name: t/011-class.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - base
+    - bytesize: 922
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f7d0a07e5da34555e7cddacafc7dd72
+      mtime: 1268873792
+      name: t/104-parse_template_io.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1634
+      file_mime_type: ~
+      line_count: ~
+      md5: a2406068680be548cc2b0a2010d8ac5b
+      mtime: 1268873793
+      name: t/603-query_boosts.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+        - KinoSearch1::Searcher
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Search::PhraseQuery
+        - KinoSearch1::Search::BooleanQuery
+        - KinoSearch1::Index::Term
+    - bytesize: 5466
+      file_mime_type: ~
+      line_count: ~
+      md5: cd5a872fbf71b27705e04ac45cf1df17
+      mtime: 1268873792
+      name: t/601-queryparser.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - KinoSearch1
+        - Test::More
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Searcher
+        - KinoSearch1::Store::RAMInvIndex
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Analysis::Stopalizer
+        - KinoSearch1::Analysis::PolyAnalyzer
+    - bytesize: 1308
+      file_mime_type: ~
+      line_count: ~
+      md5: 485490a462ed477dc2bb3b44e1382a4c
+      mtime: 1268873793
+      name: t/302-many_fields.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - KinoSearch1::Store::RAMInvIndex
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Searcher
+    - bytesize: 2550
+      file_mime_type: ~
+      line_count: ~
+      md5: 0eba4e75b2651903d51964493d52f89f
+      mtime: 1268873793
+      name: t/204-fields_reader.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 2206
+      file_mime_type: ~
+      line_count: ~
+      md5: a9de544e2f1cb8223cde43db15a2fcc3
+      mtime: 1268873793
+      name: t/504-similarity.t
+      uses:
+        - Test::More
+        - KinoSearch1::Store::RAMInvIndex
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Searcher
+    - bytesize: 3722
+      file_mime_type: ~
+      line_count: ~
+      md5: a1fdc78909c687e00fd65e9ff2553baf
+      mtime: 1268873793
+      name: t/602-boosts.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Store::RAMInvIndex
+        - KinoSearch1::Searcher
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Analysis::Tokenizer
+    - bytesize: 1514
+      file_mime_type: ~
+      line_count: ~
+      md5: f3aabff966d12eb09227b94f86195f84
+      mtime: 1268873792
+      name: t/209-term_infos_reader.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 1834
+      file_mime_type: ~
+      line_count: ~
+      md5: e62c66858bd10b17d826ea841a8b0a15
+      mtime: 1268873792
+      name: t/210-deldocs.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 1095
+      file_mime_type: ~
+      line_count: ~
+      md5: ba079fc9d6247947e01ea94da0f13831
+      mtime: 1268873792
+      name: t/012-priority_queue.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1455
+      file_mime_type: ~
+      line_count: ~
+      md5: b52d56e04325f711ebdd2aa150911d82
+      mtime: 1268873793
+      name: t/502-phrasequery.t
+      uses:
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+        - KinoSearch1::Index::Term
+        - KinoSearch1::Searcher
+    - bytesize: 2490
+      file_mime_type: ~
+      line_count: ~
+      md5: 7de55b0e2db9affeddf2e562f71528ca
+      mtime: 1268873793
+      name: t/201-field_infos.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Spec::Functions
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 2141
+      file_mime_type: ~
+      line_count: ~
+      md5: 34209c3d355ffa083e19de0e8188d698
+      mtime: 1268873792
+      name: t/207-seg_term_enum.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 294
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1268873792
+      name: t/pod-coverage.t
+      uses:
+        - constant
+        - Test::More
+    - bytesize: 2394
+      file_mime_type: ~
+      line_count: ~
+      md5: fe94b7130b50b637a906c39c7c234f42
+      mtime: 1268873792
+      name: t/303-highlighter.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Store::RAMInvIndex
+    - bytesize: 1424
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a71f2f0a7ddf837f282197098a604fd
+      mtime: 1268873792
+      name: t/103-repeats_template_io.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 723
+      file_mime_type: ~
+      line_count: ~
+      md5: 71f08c56661051efc204a402e7d17dd6
+      mtime: 1268873792
+      name: t/153-lc_normalizer.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - KinoSearch1::Analysis::TokenBatch
+    - bytesize: 430
+      file_mime_type: ~
+      line_count: ~
+      md5: 056f8c84f4816f63132d80219a24a80e
+      mtime: 1268873792
+      name: t/000-load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - File::Find
+    - bytesize: 2877
+      file_mime_type: ~
+      line_count: ~
+      md5: 936f776e1242210cda1ff20203336d7f
+      mtime: 1268873792
+      name: t/015-sort_external.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Spec
+        - List::Util
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: 72435eab4eaee3e1c42a7b59905099a5
+      mtime: 1268873792
+      name: t/010-verify_args.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 879
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fb4342ae8d4ac665947716d5974e9a3
+      mtime: 1268873792
+      name: t/152-token_batch.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+        - KinoSearch1::Analysis::Token
+    - bytesize: 2127
+      file_mime_type: ~
+      line_count: ~
+      md5: c7ac888e339e9b5fee2de16167e7b3c0
+      mtime: 1268873793
+      name: t/604-simple_search.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - KinoSearch1::Searcher
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Store::RAMInvIndex
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::QueryParser::QueryParser
+    - bytesize: 237
+      file_mime_type: ~
+      line_count: ~
+      md5: 9522a41a3517c21664be29dfac37c9c0
+      mtime: 1268873793
+      name: t/999-remove_invindexes.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 980
+      file_mime_type: ~
+      line_count: ~
+      md5: 0636b7d1f0af6ab5c29aaf9b4baa476d
+      mtime: 1268873793
+      name: t/501-termquery.t
+      uses:
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 1759
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e0593c65459625ea4d79eaf45b3b258
+      mtime: 1268873792
+      name: t/150-polyanalyzer.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+        - KinoSearch1::Analysis::LCNormalizer
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Analysis::Stopalizer
+        - KinoSearch1::Analysis::Stemmer
+        - KinoSearch1::Analysis::PolyAnalyzer
+        - KinoSearch1::Analysis::TokenBatch
+    - bytesize: 1968
+      file_mime_type: ~
+      line_count: ~
+      md5: 93680c0d0984e9afb77982c1d6846548
+      mtime: 1268873792
+      name: t/101-simple_template_io.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 418
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aa1319533458edf61ff29bd681df3a7
+      mtime: 1268873793
+      name: t/202-term.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - List::Util
+    - bytesize: 1836
+      file_mime_type: ~
+      line_count: ~
+      md5: 626b65a3b31a1dc51a23fcf87c20e9ce
+      mtime: 1268873792
+      name: t/106-locking.t
+      uses:
+        - strict
+        - warnings
+        - Time::HiRes
+        - Test::More
+        - KinoSearch1::Store::FSInvIndex
+    - bytesize: 2683
+      file_mime_type: ~
+      line_count: ~
+      md5: c6b8fc90fb04791f7903c3a0f9e8b915
+      mtime: 1268873793
+      name: t/214-spec_field.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - KinoSearch1::Store::RAMInvIndex
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Analysis::PolyAnalyzer
+        - KinoSearch1::InvIndexer
+        - KinoSearch1::Searcher
+        - KinoSearch1::Search::TermQuery
+        - KinoSearch1::Index::Term
+    - bytesize: 242
+      file_mime_type: ~
+      line_count: ~
+      md5: 1004f1b631e39138b679935c3fd64b9e
+      mtime: 1268873793
+      name: t/002-kinosearch.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1390
+      file_mime_type: ~
+      line_count: ~
+      md5: a8b8e6dc33a39c3510f97daa81891d2c
+      mtime: 1268873792
+      name: t/154-tokenizer.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - KinoSearch1::Analysis::TokenBatch
+    - bytesize: 674
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b7f5e1687b54bc79db152540f98ae5
+      mtime: 1268873792
+      name: t/155-stopalizer.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - KinoSearch1::Analysis::TokenBatch
+        - KinoSearch1::Analysis::Tokenizer
+    - bytesize: 2508
+      file_mime_type: ~
+      line_count: ~
+      md5: e16a39ea061ab308441d8b6a54d7af62
+      mtime: 1268873793
+      name: t/510-remote_search.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Time::HiRes
+        - IO::Socket::INET
+        - lib
+        - KinoSearch1::Search::SearchServer
+        - KinoSearch1::Search::SearchClient
+        - KinoSearch1::Searcher
+        - KinoSearch1::Analysis::Tokenizer
+        - KinoSearch1::Search::MultiSearcher
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 765
+      file_mime_type: ~
+      line_count: ~
+      md5: ddbe843e37fcec9d6815f445440d9d65
+      mtime: 1268873792
+      name: t/506-hit_collector.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1268873792
+      name: t/pod.t
+      uses:
+        - Test::More
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: 634c25a94a9d9a581878d4ce12132337
+      mtime: 1268873792
+      name: t/206-seg_infos.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Spec::Functions
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 968
+      file_mime_type: ~
+      line_count: ~
+      md5: 7062e5617752aff554263d9f24c202e4
+      mtime: 1268873793
+      name: t/701-uscon.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 946
+      file_mime_type: ~
+      line_count: ~
+      md5: 9556774631ab67d1b232e26221be82b6
+      mtime: 1268873792
+      name: t/203-compound_file_reader.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Spec::Functions
+        - KinoSearch1::Test::TestUtils
+    - bytesize: 2371
+      file_mime_type: ~
+      line_count: ~
+      md5: 31fcc7e3593acc72abcc97b741f22398
+      mtime: 1268873793
+      name: t/013-bit_vector.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - List::Util
+    - bytesize: 1509
+      file_mime_type: ~
+      line_count: ~
+      md5: 071ae58b7d94fa2b539370f324dd20e1
+      mtime: 1268873793
+      name: t/208-terminfo.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 2997
+      file_mime_type: ~
+      line_count: ~
+      md5: 82afe5415ae0695dc9eb888f1724c20b
+      mtime: 1268873792
+      name: t/105-invindex.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+        - File::Spec::Functions
+        - File::Path
+        - Fcntl
+        - KinoSearch1::Test::TestUtils
+  tests:
+    - t/507-query_filter.t
+    - t/205-seg_reader.t
+    - t/213-segment_merging.t
+    - t/509-multi_searcher.t
+    - t/102-strings_template_io.t
+    - t/508-hits.t
+    - t/211-seg_term_docs.t
+    - t/212-multi_term_docs.t
+    - t/503-booleanquery.t
+    - t/001-build_invindexes.t
+    - t/505-hit_queue.t
+    - t/011-class.t
+    - t/104-parse_template_io.t
+    - t/603-query_boosts.t
+    - t/601-queryparser.t
+    - t/302-many_fields.t
+    - t/204-fields_reader.t
+    - t/504-similarity.t
+    - t/602-boosts.t
+    - t/209-term_infos_reader.t
+    - t/210-deldocs.t
+    - t/012-priority_queue.t
+    - t/502-phrasequery.t
+    - t/201-field_infos.t
+    - t/207-seg_term_enum.t
+    - t/pod-coverage.t
+    - t/303-highlighter.t
+    - t/103-repeats_template_io.t
+    - t/153-lc_normalizer.t
+    - t/000-load.t
+    - t/015-sort_external.t
+    - t/010-verify_args.t
+    - t/152-token_batch.t
+    - t/604-simple_search.t
+    - t/999-remove_invindexes.t
+    - t/501-termquery.t
+    - t/150-polyanalyzer.t
+    - t/101-simple_template_io.t
+    - t/202-term.t
+    - t/106-locking.t
+    - t/214-spec_field.t
+    - t/002-kinosearch.t
+    - t/154-tokenizer.t
+    - t/155-stopalizer.t
+    - t/510-remote_search.t
+    - t/506-hit_collector.t
+    - t/pod.t
+    - t/206-seg_infos.t
+    - t/701-uscon.t
+    - t/203-compound_file_reader.t
+    - t/013-bit_vector.t
+    - t/208-terminfo.t
+    - t/105-invindex.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.hMSi
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1269996936
+  examine_start_time: 1269996857
+  examine_time: 79
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1269996936
+  run_start_time: 1269996857
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

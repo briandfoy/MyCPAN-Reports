@@ -1,0 +1,2908 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    author: 'Alceu Rodrigues de Freitas Junior <arfreitas@cpan.org>'
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.30
+    installdirs: site
+    license: GNU GPL
+    name: DTS
+    requires:
+      Carp: 1.04
+      Class::Accessor: 0.25
+      Class::Publisher: 0.2
+      DateTime: 0.35
+      Hash::Util: 0.05
+      Win32::OLE: 0.1704
+    resources:
+      bugtracker: http://code.google.com/p/perldts/issues/list
+      homepage: http://code.google.com/p/perldts/
+      license: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+      repository: http://code.google.com/p/perldts/source/browse/
+    version: 0.08
+    version_from: lib/Win32/SqlServer/DTS.pm
+  blib:
+    - blib/lib/Win32/SqlServer/DTS.pm
+    - blib/lib/Win32/SqlServer/DTS/Application.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/INI.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Query.pm
+    - blib/lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+    - blib/lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+    - blib/lib/Win32/SqlServer/DTS/Connection.pm
+    - blib/lib/Win32/SqlServer/DTS/Credential.pm
+    - blib/lib/Win32/SqlServer/DTS/DateTime.pm
+    - blib/lib/Win32/SqlServer/DTS/Package.pm
+    - blib/lib/Win32/SqlServer/DTS/Package/Step.pm
+    - blib/lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+    - blib/lib/Win32/SqlServer/DTS/Task.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/DataPump.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+    - blib/lib/Win32/SqlServer/DTS/TaskFactory.pm
+    - blib/lib/Win32/SqlServer/DTS/TaskTypes.pm
+    - blib/man3/Win32::SqlServer::DTS.3
+    - blib/man3/Win32::SqlServer::DTS::Application.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Constant.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::DataFile.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Destination.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Destination::Connection.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Destination::GlobalVar.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Destination::Package.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Destination::Task.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::DestinationFactory.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::EnvVar.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::GlobalVar.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::INI.3
+    - blib/man3/Win32::SqlServer::DTS::Assignment::Query.3
+    - blib/man3/Win32::SqlServer::DTS::AssignmentFactory.3
+    - blib/man3/Win32::SqlServer::DTS::AssignmentTypes.3
+    - blib/man3/Win32::SqlServer::DTS::Connection.3
+    - blib/man3/Win32::SqlServer::DTS::Credential.3
+    - blib/man3/Win32::SqlServer::DTS::DateTime.3
+    - blib/man3/Win32::SqlServer::DTS::Package.3
+    - blib/man3/Win32::SqlServer::DTS::Package::Step.3
+    - blib/man3/Win32::SqlServer::DTS::Package::Step::Result.3
+    - blib/man3/Win32::SqlServer::DTS::Task.3
+    - blib/man3/Win32::SqlServer::DTS::Task::DataPump.3
+    - blib/man3/Win32::SqlServer::DTS::Task::DynamicProperty.3
+    - blib/man3/Win32::SqlServer::DTS::Task::ExecutePackage.3
+    - blib/man3/Win32::SqlServer::DTS::Task::SendEmail.3
+    - blib/man3/Win32::SqlServer::DTS::TaskFactory.3
+    - blib/man3/Win32::SqlServer::DTS::TaskTypes.3
+  build_file: Makefile.PL
+  build_file_output: |
+    You can enable extended tests if the environment was prior configured. See README for more information
+    Do you want to enable extended tests? [no] no
+    Warning: prerequisite Class::Accessor 0.25 not found.
+    Warning: prerequisite Class::Publisher 0.2 not found.
+    Warning: prerequisite DateTime 0.35 not found.
+    Warning: prerequisite Devel::AssertOS 0 not found.
+    Warning: prerequisite Win32::OLE 0.1704 not found.
+    Skipping extended tests.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Win32::SqlServer::DTS
+  build_output: |
+    cp lib/Win32/SqlServer/DTS/Task.pm blib/lib/Win32/SqlServer/DTS/Task.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm blib/lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+    cp lib/Win32/SqlServer/DTS.pm blib/lib/Win32/SqlServer/DTS.pm
+    cp lib/Win32/SqlServer/DTS/Credential.pm blib/lib/Win32/SqlServer/DTS/Credential.pm
+    cp lib/Win32/SqlServer/DTS/Package/Step.pm blib/lib/Win32/SqlServer/DTS/Package/Step.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm blib/lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Destination.pm blib/lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+    cp lib/Win32/SqlServer/DTS/Connection.pm blib/lib/Win32/SqlServer/DTS/Connection.pm
+    cp lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm blib/lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+    cp lib/Win32/SqlServer/DTS/TaskFactory.pm blib/lib/Win32/SqlServer/DTS/TaskFactory.pm
+    cp lib/Win32/SqlServer/DTS/Task/SendEmail.pm blib/lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm blib/lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm blib/lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/INI.pm blib/lib/Win32/SqlServer/DTS/Assignment/INI.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+    cp lib/Win32/SqlServer/DTS/AssignmentTypes.pm blib/lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+    cp lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm blib/lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+    cp lib/Win32/SqlServer/DTS/Package/Step/Result.pm blib/lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+    cp lib/Win32/SqlServer/DTS/Application.pm blib/lib/Win32/SqlServer/DTS/Application.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Constant.pm blib/lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/Query.pm blib/lib/Win32/SqlServer/DTS/Assignment/Query.pm
+    cp lib/Win32/SqlServer/DTS/AssignmentFactory.pm blib/lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+    cp lib/Win32/SqlServer/DTS/Task/DataPump.pm blib/lib/Win32/SqlServer/DTS/Task/DataPump.pm
+    cp lib/Win32/SqlServer/DTS/TaskTypes.pm blib/lib/Win32/SqlServer/DTS/TaskTypes.pm
+    cp lib/Win32/SqlServer/DTS/Package.pm blib/lib/Win32/SqlServer/DTS/Package.pm
+    cp lib/Win32/SqlServer/DTS/Assignment.pm blib/lib/Win32/SqlServer/DTS/Assignment.pm
+    cp lib/Win32/SqlServer/DTS/DateTime.pm blib/lib/Win32/SqlServer/DTS/DateTime.pm
+    cp lib/Win32/SqlServer/DTS/Assignment/DataFile.pm blib/lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Destination::GlobalVar.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Task.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Credential.3
+    Manifying blib/man3/Win32::SqlServer::DTS.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Package::Step.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::DestinationFactory.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Destination.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Connection.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Task::ExecutePackage.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Task::SendEmail.3
+    Manifying blib/man3/Win32::SqlServer::DTS::TaskFactory.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::GlobalVar.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::EnvVar.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::INI.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Destination::Task.3
+    Manifying blib/man3/Win32::SqlServer::DTS::AssignmentTypes.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Destination::Package.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Task::DynamicProperty.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Package::Step::Result.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Destination::Connection.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Application.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Query.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::Constant.3
+    Manifying blib/man3/Win32::SqlServer::DTS::AssignmentFactory.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Task::DataPump.3
+    Manifying blib/man3/Win32::SqlServer::DTS::DateTime.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Package.3
+    Manifying blib/man3/Win32::SqlServer::DTS::TaskTypes.3
+    Manifying blib/man3/Win32::SqlServer::DTS::Assignment::DataFile.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV/Win32-SqlServer-DTS-0.08/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV/Win32-SqlServer-DTS-0.08
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV/Win32-SqlServer-DTS-0.08/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV/Win32-SqlServer-DTS-0.08/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: ARFREITAS
+  dist_basename: Win32-SqlServer-DTS-0.08.tar.gz
+  dist_date: 1227576239
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV/Win32-SqlServer-DTS-0.08
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV/Win32-SqlServer-DTS-0.08
+  dist_file: /home/brian/CPAN/authors/id/A/AR/ARFREITAS/Win32-SqlServer-DTS-0.08.tar.gz
+  dist_md5: 63e16fe6b9c159a7062762bf8219206e
+  dist_size: 103678
+  manifest:
+    - CHANGELOG
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - Win32-SqlServer-DTS.ppd
+    - examples/README.txt
+    - examples/benchmark.pl
+    - examples/list.pl
+    - examples/modify.pl
+    - examples/modify.xml
+    - examples/save_pkgs.pl
+    - lib/Win32/SqlServer/DTS.pm
+    - lib/Win32/SqlServer/DTS/Application.pm
+    - lib/Win32/SqlServer/DTS/Assignment.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+    - lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+    - lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+    - lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+    - lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+    - lib/Win32/SqlServer/DTS/Assignment/INI.pm
+    - lib/Win32/SqlServer/DTS/Assignment/Query.pm
+    - lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+    - lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+    - lib/Win32/SqlServer/DTS/Connection.pm
+    - lib/Win32/SqlServer/DTS/Credential.pm
+    - lib/Win32/SqlServer/DTS/DateTime.pm
+    - lib/Win32/SqlServer/DTS/Package.pm
+    - lib/Win32/SqlServer/DTS/Package/Step.pm
+    - lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+    - lib/Win32/SqlServer/DTS/Task.pm
+    - lib/Win32/SqlServer/DTS/Task/DataPump.pm
+    - lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+    - lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+    - lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+    - lib/Win32/SqlServer/DTS/TaskFactory.pm
+    - lib/Win32/SqlServer/DTS/TaskTypes.pm
+    - region.txt
+    - t/Application.t
+    - t/Assignment-Constant.t
+    - t/Assignment-DataFile.t
+    - t/Assignment-Destination.t
+    - t/Assignment-EnvVar.t
+    - t/Assignment.t
+    - t/AssignmentFactory.t
+    - t/AssignmentTypes.t
+    - t/Connection.t
+    - t/Credential.t
+    - t/DateTime.t
+    - t/Destination-Connection.t
+    - t/Package.t
+    - t/Task-DataPump.t
+    - t/Task-DynamicProperty.t
+    - t/Task-ExecutePackage.t
+    - t/Task-SendEmail.t
+    - t/Task.t
+    - t/TaskFactory.t
+    - t/extended/Application.t
+    - t/extended/Assignment-Constant.t
+    - t/extended/Assignment-DataFile.t
+    - t/extended/Assignment-EnvVar.t
+    - t/extended/Assignment-GlobalVar.t
+    - t/extended/Assignment-INI.t
+    - t/extended/Assignment-Query.t
+    - t/extended/Assignment.t
+    - t/extended/Package.t
+    - t/extended/Task-Datapump.t
+    - t/extended/Task-SendEmail.t
+    - test-all.dts
+    - test-all.ini
+    - test-all.txt
+    - test-conf.dtd
+    - test-config.xml
+  manifest_file_info:
+    - bytesize: 12261
+      file_mime_type: ~
+      line_count: ~
+      md5: d3bb3391c79904494c60ee2ac2f33070
+      mtime: 1227224826
+      name: CHANGELOG
+    - bytesize: 2365
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1227223113
+      name: MANIFEST
+    - bytesize: 826
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1227148703
+      name: META.yml
+    - bytesize: 2013
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1227144496
+      name: Makefile.PL
+    - bytesize: 1159
+      file_mime_type: ~
+      line_count: ~
+      md5: 74757dd2128b8f27ab9c4b4156f34345
+      mtime: 1227144120
+      name: Win32-SqlServer-DTS.ppd
+    - bytesize: 161
+      file_mime_type: ~
+      line_count: ~
+      md5: eb6c86c0ca7a9105ee1b714d9171b248
+      mtime: 1222179917
+      name: examples/README.txt
+    - bytesize: 2324
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e39147e97a76db9e85cc143b31f0440
+      mtime: 1227147887
+      name: examples/benchmark.pl
+    - bytesize: 469
+      file_mime_type: ~
+      line_count: ~
+      md5: 358767c78e508b53df7587308e88841c
+      mtime: 1227147887
+      name: examples/list.pl
+    - bytesize: 1209
+      file_mime_type: ~
+      line_count: ~
+      md5: efd1d2d0cf5adbed126a69e8d97a3ec8
+      mtime: 1227147887
+      name: examples/modify.pl
+    - bytesize: 260
+      file_mime_type: ~
+      line_count: ~
+      md5: 7be9cfb0dec8a6e57d6c9a64cc4086a3
+      mtime: 1222179917
+      name: examples/modify.xml
+    - bytesize: 2161
+      file_mime_type: ~
+      line_count: ~
+      md5: ce91416d9190deb582337d4072489b7c
+      mtime: 1227147887
+      name: examples/save_pkgs.pl
+    - bytesize: 8436
+      file_mime_type: ~
+      line_count: ~
+      md5: 10c47ba06e52f767e94010b55d71dbe8
+      mtime: 1227149596
+      name: lib/Win32/SqlServer/DTS.pm
+    - bytesize: 8114
+      file_mime_type: ~
+      line_count: ~
+      md5: eeffa72eddff2c6d89a594b87b1a198e
+      mtime: 1227149644
+      name: lib/Win32/SqlServer/DTS/Application.pm
+    - bytesize: 6735
+      file_mime_type: ~
+      line_count: ~
+      md5: bd3379dc178351381abc13ea15dd3cea
+      mtime: 1227149662
+      name: lib/Win32/SqlServer/DTS/Assignment.pm
+    - bytesize: 3242
+      file_mime_type: ~
+      line_count: ~
+      md5: 66663739ff065a99d65830a5b12bda9b
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+    - bytesize: 3138
+      file_mime_type: ~
+      line_count: ~
+      md5: 37b64993f09c8abb21fcc975f4c3b7cb
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+    - bytesize: 7190
+      file_mime_type: ~
+      line_count: ~
+      md5: b318074574f617a02804c946f88de3dc
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+    - bytesize: 3129
+      file_mime_type: ~
+      line_count: ~
+      md5: 597d2191ee89b82c363a822b96349a8a
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+    - bytesize: 2891
+      file_mime_type: ~
+      line_count: ~
+      md5: e57ea12bf8fbdea273295abddbdd9722
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+    - bytesize: 2837
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bb9a29b73811f5ae35d7ab87e1f743e
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+    - bytesize: 3216
+      file_mime_type: ~
+      line_count: ~
+      md5: b48ce3cd9c6436313c54e64355f54892
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+    - bytesize: 3760
+      file_mime_type: ~
+      line_count: ~
+      md5: 65bdeb7b7f95c60a4a6ce1673faef362
+      mtime: 1227150756
+      name: lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+    - bytesize: 3275
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f050cbe12298428dfbc6f49e1e955a1
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+    - bytesize: 3374
+      file_mime_type: ~
+      line_count: ~
+      md5: 05fb8962030c2fb1a73ce3c26ca77a22
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+    - bytesize: 4358
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e53a964c860dfe0f316053a140ad334
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/INI.pm
+    - bytesize: 4124
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c318a8f903dcda6dde929e8d6c3b073
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Assignment/Query.pm
+    - bytesize: 2729
+      file_mime_type: ~
+      line_count: ~
+      md5: 6da4185e7da8cf2741d498c5d616ed42
+      mtime: 1227150679
+      name: lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+    - bytesize: 4576
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e97c4e46db6e492c147a3d735c8cd21
+      mtime: 1227149596
+      name: lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+    - bytesize: 7461
+      file_mime_type: ~
+      line_count: ~
+      md5: e094feece58cc444b15adce96ab29a5b
+      mtime: 1227149701
+      name: lib/Win32/SqlServer/DTS/Connection.pm
+    - bytesize: 4573
+      file_mime_type: ~
+      line_count: ~
+      md5: c434db8b447285dbb579a802644d4b56
+      mtime: 1227149596
+      name: lib/Win32/SqlServer/DTS/Credential.pm
+    - bytesize: 2537
+      file_mime_type: ~
+      line_count: ~
+      md5: b3e8d227ec92ca2d400742d1c95697a4
+      mtime: 1227149596
+      name: lib/Win32/SqlServer/DTS/DateTime.pm
+    - bytesize: 23294
+      file_mime_type: ~
+      line_count: ~
+      md5: 91d9610dcc579240832971d4e1bc4e97
+      mtime: 1227149723
+      name: lib/Win32/SqlServer/DTS/Package.pm
+    - bytesize: 12773
+      file_mime_type: ~
+      line_count: ~
+      md5: 425db74e79173d29f2c9668520149458
+      mtime: 1227150382
+      name: lib/Win32/SqlServer/DTS/Package/Step.pm
+    - bytesize: 2993
+      file_mime_type: ~
+      line_count: ~
+      md5: f9dc7df04197a89449886548783f181d
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+    - bytesize: 4160
+      file_mime_type: ~
+      line_count: ~
+      md5: 2383fa2adfd89b8a0eeaea2c713d6865
+      mtime: 1227149621
+      name: lib/Win32/SqlServer/DTS/Task.pm
+    - bytesize: 19717
+      file_mime_type: ~
+      line_count: ~
+      md5: 264aa7f8ac61755052129bf4326e2f8a
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Task/DataPump.pm
+    - bytesize: 4041
+      file_mime_type: ~
+      line_count: ~
+      md5: 51e692a7794d2c533cf40e592827721b
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+    - bytesize: 7750
+      file_mime_type: ~
+      line_count: ~
+      md5: bef943fd9d8e3922219cb95443a183ee
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+    - bytesize: 5261
+      file_mime_type: ~
+      line_count: ~
+      md5: 156c697445ff03a8967097ed4d39fca5
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+    - bytesize: 2422
+      file_mime_type: ~
+      line_count: ~
+      md5: dba2da70808ead9db046da273a3e807c
+      mtime: 1227150598
+      name: lib/Win32/SqlServer/DTS/TaskFactory.pm
+    - bytesize: 3072
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d5201598a217f30c0e70d49fdfb1ee0
+      mtime: 1227149597
+      name: lib/Win32/SqlServer/DTS/TaskTypes.pm
+    - bytesize: 224
+      file_mime_type: ~
+      line_count: ~
+      md5: c7b5b403c46098e4638a300271a1956a
+      mtime: 1222179919
+      name: region.txt
+    - bytesize: 634
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cf184c292813ac8ebbaf52d4dbd4ebe
+      mtime: 1227149329
+      name: t/Application.t
+    - bytesize: 231
+      file_mime_type: ~
+      line_count: ~
+      md5: bd476f1ef9e4a6e67b69109a82c41119
+      mtime: 1227149329
+      name: t/Assignment-Constant.t
+    - bytesize: 231
+      file_mime_type: ~
+      line_count: ~
+      md5: e74c38e56182082fa51bbaa45829139c
+      mtime: 1227149329
+      name: t/Assignment-DataFile.t
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: a01e4bbc75817d7aa74cc5a1902eda21
+      mtime: 1227149329
+      name: t/Assignment-Destination.t
+    - bytesize: 227
+      file_mime_type: ~
+      line_count: ~
+      md5: bd080c5f7cfd8de43172260b217333f4
+      mtime: 1227149329
+      name: t/Assignment-EnvVar.t
+    - bytesize: 209
+      file_mime_type: ~
+      line_count: ~
+      md5: a8296d90c2fbcdc6548463347ef729b7
+      mtime: 1227149329
+      name: t/Assignment.t
+    - bytesize: 161
+      file_mime_type: ~
+      line_count: ~
+      md5: f6bf9953cbe15d3a72cedbc810913626
+      mtime: 1227149329
+      name: t/AssignmentFactory.t
+    - bytesize: 593
+      file_mime_type: ~
+      line_count: ~
+      md5: 428f7ba98ba8d78ed9cb68c4b52a6141
+      mtime: 1227149329
+      name: t/AssignmentTypes.t
+    - bytesize: 283
+      file_mime_type: ~
+      line_count: ~
+      md5: b97646bb2a8b8b8c7ba8790952e95a22
+      mtime: 1227149329
+      name: t/Connection.t
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: 83933b604d073234c8077e6be16756aa
+      mtime: 1227149329
+      name: t/Credential.t
+    - bytesize: 262
+      file_mime_type: ~
+      line_count: ~
+      md5: 74f65ef97df5cc207e0bb02370edbec9
+      mtime: 1227149329
+      name: t/DateTime.t
+    - bytesize: 1206
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d9fc037fc86fa737a9b1bbcb155c217
+      mtime: 1227149329
+      name: t/Destination-Connection.t
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: 89085d53c68daabb0710c88d8941501f
+      mtime: 1227149329
+      name: t/Package.t
+    - bytesize: 874
+      file_mime_type: ~
+      line_count: ~
+      md5: a64b26ddff9fd8f9051d785a806896d2
+      mtime: 1227149329
+      name: t/Task-DataPump.t
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: dd448289fe438326acff1aa8aecfb399
+      mtime: 1227149329
+      name: t/Task-DynamicProperty.t
+    - bytesize: 443
+      file_mime_type: ~
+      line_count: ~
+      md5: 5592df2eb560bab0b454a5ac37886195
+      mtime: 1227149329
+      name: t/Task-ExecutePackage.t
+    - bytesize: 345
+      file_mime_type: ~
+      line_count: ~
+      md5: d189f8f2465dec9ed16d9ef17a3d9a55
+      mtime: 1227149329
+      name: t/Task-SendEmail.t
+    - bytesize: 178
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fe3f5cd6464c0b5c3dd168d81ed9a1c
+      mtime: 1227149329
+      name: t/Task.t
+    - bytesize: 143
+      file_mime_type: ~
+      line_count: ~
+      md5: 01f6588edd78c485bcddff6d3a11182c
+      mtime: 1227149329
+      name: t/TaskFactory.t
+    - bytesize: 973
+      file_mime_type: ~
+      line_count: ~
+      md5: 4de0c4e667c94c895bfc1056f9c51d0f
+      mtime: 1227149329
+      name: t/extended/Application.t
+    - bytesize: 1464
+      file_mime_type: ~
+      line_count: ~
+      md5: dcc12e4557f9e07a3e082538256c9ef1
+      mtime: 1227149329
+      name: t/extended/Assignment-Constant.t
+    - bytesize: 1593
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d7bed823906c38473e48610a74a1a81
+      mtime: 1227149329
+      name: t/extended/Assignment-DataFile.t
+    - bytesize: 1655
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f806ada6e7b4da09455ba0d25ff716c
+      mtime: 1227149329
+      name: t/extended/Assignment-EnvVar.t
+    - bytesize: 1669
+      file_mime_type: ~
+      line_count: ~
+      md5: 9966f97757f0aa3dd3cb951ae00ac0de
+      mtime: 1227149329
+      name: t/extended/Assignment-GlobalVar.t
+    - bytesize: 1640
+      file_mime_type: ~
+      line_count: ~
+      md5: 31dbe2729e0af03960bb37fa701d04cf
+      mtime: 1227149329
+      name: t/extended/Assignment-INI.t
+    - bytesize: 1763
+      file_mime_type: ~
+      line_count: ~
+      md5: 553369d7a93e767e7a84a54a61a8b3c3
+      mtime: 1227149329
+      name: t/extended/Assignment-Query.t
+    - bytesize: 1578
+      file_mime_type: ~
+      line_count: ~
+      md5: b193698c899eb787eee90d8dddf41f29
+      mtime: 1227149329
+      name: t/extended/Assignment.t
+    - bytesize: 2758
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ec2a576c6d21fb505b2e0bdb871aa20
+      mtime: 1227149329
+      name: t/extended/Package.t
+    - bytesize: 2220
+      file_mime_type: ~
+      line_count: ~
+      md5: 67e07613675604e898252a19a2654dc7
+      mtime: 1227149329
+      name: t/extended/Task-Datapump.t
+    - bytesize: 1270
+      file_mime_type: ~
+      line_count: ~
+      md5: 59343c8a8088728f2c7c7796a3fd7b94
+      mtime: 1227150476
+      name: t/extended/Task-SendEmail.t
+    - bytesize: 91136
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ca928d2a62f95784c6c4bb3f7fb43bd
+      mtime: 1225838344
+      name: test-all.dts
+    - bytesize: 52
+      file_mime_type: ~
+      line_count: ~
+      md5: f9642978a5bb81ec180bd1554ca084ce
+      mtime: 1222179919
+      name: test-all.ini
+    - bytesize: 10
+      file_mime_type: ~
+      line_count: ~
+      md5: 8527b2bd9a4fcc52c516cdc15e20c81c
+      mtime: 1222179919
+      name: test-all.txt
+    - bytesize: 277
+      file_mime_type: ~
+      line_count: ~
+      md5: c172553e3829593998438fa3137e08da
+      mtime: 1222179919
+      name: test-conf.dtd
+    - bytesize: 262
+      file_mime_type: ~
+      line_count: ~
+      md5: 27a07e212c4f6242ae1f432e99e45a62
+      mtime: 1222179919
+      name: test-config.xml
+  module_info:
+    - bytesize: 8436
+      file_mime_type: ~
+      line_count: ~
+      md5: 06e8dab58a663430b77a8b4a7456c853
+      module_name_from_file_guess: Win32::SqlServer::DTS
+      mtime: 1227149596
+      name: blib/lib/Win32/SqlServer/DTS.pm
+      packages:
+        - Win32::SqlServer::DTS
+      primary_package: Win32::SqlServer::DTS
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Data::Dumper
+        - Carp
+        - Devel::AssertOS
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS.pm
+        identifier: VERSION
+        line_number: 51
+        sigil: $
+        value: 0.08
+    - bytesize: 8114
+      file_mime_type: ~
+      line_count: ~
+      md5: 140e8caa82fe3af979c39ce01446b619
+      module_name_from_file_guess: Win32::SqlServer::DTS::Application
+      mtime: 1227149644
+      name: blib/lib/Win32/SqlServer/DTS/Application.pm
+      packages:
+        - Win32::SqlServer::DTS::Application
+      primary_package: Win32::SqlServer::DTS::Application
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Win32::OLE
+        - Win32::SqlServer::DTS::Package
+        - Win32::SqlServer::DTS::Credential
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Application.pm
+        identifier: VERSION
+        line_number: 53
+        sigil: $
+        value: 0.03
+    - bytesize: 6735
+      file_mime_type: ~
+      line_count: ~
+      md5: 99126fb229ea0a2cd10599a40dabddbd
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment
+      mtime: 1227149662
+      name: blib/lib/Win32/SqlServer/DTS/Assignment.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment
+      primary_package: Win32::SqlServer::DTS::Assignment
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Carp
+        - Win32::SqlServer::DTS::AssignmentTypes
+        - Win32::SqlServer::DTS::Assignment::DestinationFactory
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 0.03
+    - bytesize: 3242
+      file_mime_type: ~
+      line_count: ~
+      md5: c6ceb676278f1d127e82c5c240ab747d
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Constant
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Constant
+      primary_package: Win32::SqlServer::DTS::Assignment::Constant
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+        identifier: VERSION
+        line_number: 60
+        sigil: $
+        value: 0.02
+    - bytesize: 3138
+      file_mime_type: ~
+      line_count: ~
+      md5: db5e9b8928650a1661971209fcd68674
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::DataFile
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::DataFile
+      primary_package: Win32::SqlServer::DTS::Assignment::DataFile
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+        identifier: VERSION
+        line_number: 59
+        sigil: $
+        value: 0.02
+    - bytesize: 7190
+      file_mime_type: ~
+      line_count: ~
+      md5: c8bac591c14ef680831b3a9a596a6ec6
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Destination
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Destination
+      primary_package: Win32::SqlServer::DTS::Assignment::Destination
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Carp
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+        identifier: VERSION
+        line_number: 67
+        sigil: $
+        value: 0.02
+    - bytesize: 3129
+      file_mime_type: ~
+      line_count: ~
+      md5: 09bb377f8e3768e23b048981ecf1d747
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Destination::Connection
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Destination::Connection
+      primary_package: Win32::SqlServer::DTS::Assignment::Destination::Connection
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+        identifier: VERSION
+        line_number: 63
+        sigil: $
+        value: 0.01
+    - bytesize: 2891
+      file_mime_type: ~
+      line_count: ~
+      md5: 7abadf4be6fde0408a0d833509a3ae12
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Destination::GlobalVar
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Destination::GlobalVar
+      primary_package: Win32::SqlServer::DTS::Assignment::Destination::GlobalVar
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+        identifier: VERSION
+        line_number: 62
+        sigil: $
+        value: 0.01
+    - bytesize: 2837
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cafc19563d08928cb3367ea35c8bfcb
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Destination::Package
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Destination::Package
+      primary_package: Win32::SqlServer::DTS::Assignment::Destination::Package
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+        identifier: VERSION
+        line_number: 64
+        sigil: $
+        value: 0.01
+    - bytesize: 3216
+      file_mime_type: ~
+      line_count: ~
+      md5: f2aa34f91ba3d2403b5eebacfc48e527
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Destination::Task
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Destination::Task
+      primary_package: Win32::SqlServer::DTS::Assignment::Destination::Task
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+        identifier: VERSION
+        line_number: 64
+        sigil: $
+        value: 0.01
+    - bytesize: 3760
+      file_mime_type: ~
+      line_count: ~
+      md5: 65aefc81593e8e45522a17c8e5dc5a56
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::DestinationFactory
+      mtime: 1227150756
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::DestinationFactory
+      primary_package: Win32::SqlServer::DTS::Assignment::DestinationFactory
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 0.01
+    - bytesize: 3275
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bb9821c56ca8cc28ab165f08793ed90
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::EnvVar
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::EnvVar
+      primary_package: Win32::SqlServer::DTS::Assignment::EnvVar
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+        identifier: VERSION
+        line_number: 60
+        sigil: $
+        value: 0.01
+    - bytesize: 3374
+      file_mime_type: ~
+      line_count: ~
+      md5: e63293721bd58859245d06d940de3744
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::GlobalVar
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::GlobalVar
+      primary_package: Win32::SqlServer::DTS::Assignment::GlobalVar
+      uses:
+        - ''
+        - strict
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+        identifier: VERSION
+        line_number: 59
+        sigil: $
+        value: 0.02
+    - bytesize: 4358
+      file_mime_type: ~
+      line_count: ~
+      md5: 271a5d440a8c4b00f0c7fb68f8912655
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::INI
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/INI.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::INI
+      primary_package: Win32::SqlServer::DTS::Assignment::INI
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/INI.pm
+        identifier: VERSION
+        line_number: 63
+        sigil: $
+        value: 0.02
+    - bytesize: 4124
+      file_mime_type: ~
+      line_count: ~
+      md5: 397827d64c14164a21fcd05cde440a79
+      module_name_from_file_guess: Win32::SqlServer::DTS::Assignment::Query
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Assignment/Query.pm
+      packages:
+        - Win32::SqlServer::DTS::Assignment::Query
+      primary_package: Win32::SqlServer::DTS::Assignment::Query
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Assignment/Query.pm
+        identifier: VERSION
+        line_number: 61
+        sigil: $
+        value: 0.02
+    - bytesize: 2729
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e92621ba379d723cb4772a64af7d9e1
+      module_name_from_file_guess: Win32::SqlServer::DTS::AssignmentFactory
+      mtime: 1227150679
+      name: blib/lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+      packages:
+        - Win32::SqlServer::DTS::AssignmentFactory
+      primary_package: Win32::SqlServer::DTS::AssignmentFactory
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Win32::SqlServer::DTS::AssignmentTypes
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 0.02
+    - bytesize: 4576
+      file_mime_type: ~
+      line_count: ~
+      md5: 267058b9a7ada3a4d376abb32fec5ef5
+      module_name_from_file_guess: Win32::SqlServer::DTS::AssignmentTypes
+      mtime: 1227149596
+      name: blib/lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+      packages:
+        - Win32::SqlServer::DTS::AssignmentTypes
+      primary_package: Win32::SqlServer::DTS::AssignmentTypes
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+        identifier: VERSION
+        line_number: 32
+        sigil: $
+        value: 0.01
+    - bytesize: 7461
+      file_mime_type: ~
+      line_count: ~
+      md5: c2a1b16b214a4f372949d2d5554af657
+      module_name_from_file_guess: Win32::SqlServer::DTS::Connection
+      mtime: 1227149701
+      name: blib/lib/Win32/SqlServer/DTS/Connection.pm
+      packages:
+        - Win32::SqlServer::DTS::Connection
+      primary_package: Win32::SqlServer::DTS::Connection
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Win32::OLE
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Connection.pm
+        identifier: VERSION
+        line_number: 60
+        sigil: $
+        value: 0.02
+    - bytesize: 4573
+      file_mime_type: ~
+      line_count: ~
+      md5: 040fb09f207eeeeb456edb18c6316034
+      module_name_from_file_guess: Win32::SqlServer::DTS::Credential
+      mtime: 1227149596
+      name: blib/lib/Win32/SqlServer/DTS/Credential.pm
+      packages:
+        - Win32::SqlServer::DTS::Credential
+      primary_package: Win32::SqlServer::DTS::Credential
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Credential.pm
+        identifier: VERSION
+        line_number: 51
+        sigil: $
+        value: 0.02
+    - bytesize: 2537
+      file_mime_type: ~
+      line_count: ~
+      md5: c143c429c371fca19c789bb4ad063aad
+      module_name_from_file_guess: Win32::SqlServer::DTS::DateTime
+      mtime: 1227149596
+      name: blib/lib/Win32/SqlServer/DTS/DateTime.pm
+      packages:
+        - Win32::SqlServer::DTS::DateTime
+      primary_package: Win32::SqlServer::DTS::DateTime
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Params::Validate
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/DateTime.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 0.01
+    - bytesize: 23294
+      file_mime_type: ~
+      line_count: ~
+      md5: 96fb524d73d1c4ef05a33312d89c9104
+      module_name_from_file_guess: Win32::SqlServer::DTS::Package
+      mtime: 1227149723
+      name: blib/lib/Win32/SqlServer/DTS/Package.pm
+      packages:
+        - Win32::SqlServer::DTS::Package
+      primary_package: Win32::SqlServer::DTS::Package
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Win32::SqlServer::DTS::TaskFactory
+        - Win32::SqlServer::DTS::Connection
+        - Win32::OLE
+        - Win32::SqlServer::DTS::DateTime
+        - Win32::SqlServer::DTS::Package::Step
+        - Hash::Util
+        - File::Spec
+        - Win32::SqlServer::DTS::TaskTypes
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Package.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 0.04
+    - bytesize: 12773
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f3cd0e25c1a73e50afa5db2cc4f7175
+      module_name_from_file_guess: Win32::SqlServer::DTS::Package::Step
+      mtime: 1227150382
+      name: blib/lib/Win32/SqlServer/DTS/Package/Step.pm
+      packages:
+        - Win32::SqlServer::DTS::Package::Step
+      primary_package: Win32::SqlServer::DTS::Package::Step
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Carp
+        - Win32::OLE::Variant
+        - Win32::SqlServer::DTS::Package::Step::Result
+        - Win32::SqlServer::DTS::DateTime
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Package/Step.pm
+        identifier: VERSION
+        line_number: 53
+        sigil: $
+        value: 0.01
+    - bytesize: 2993
+      file_mime_type: ~
+      line_count: ~
+      md5: fcc676eb3854aa50cb205a5a83c1fdfe
+      module_name_from_file_guess: Win32::SqlServer::DTS::Package::Step::Result
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+      packages:
+        - Win32::SqlServer::DTS::Package::Step::Result
+      primary_package: Win32::SqlServer::DTS::Package::Step::Result
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Carp
+        - XML::Simple
+        - Params::Validate
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: 0.01
+    - bytesize: 4160
+      file_mime_type: ~
+      line_count: ~
+      md5: 29e798e0c276536d3886a8e586ebd116
+      module_name_from_file_guess: Win32::SqlServer::DTS::Task
+      mtime: 1227149621
+      name: blib/lib/Win32/SqlServer/DTS/Task.pm
+      packages:
+        - Win32::SqlServer::DTS::Task
+      primary_package: Win32::SqlServer::DTS::Task
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Win32::SqlServer::DTS::TaskTypes
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Task.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 0.02
+    - bytesize: 19717
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f9da4ffe13a3db2f3fbdcf72161a95a
+      module_name_from_file_guess: Win32::SqlServer::DTS::Task::DataPump
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Task/DataPump.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Task/DataPump.pm
+        identifier: VERSION
+        line_number: 55
+        sigil: $
+        value: 0.04
+    - bytesize: 4041
+      file_mime_type: ~
+      line_count: ~
+      md5: 8783a2c01d0052325b7542499ff11df3
+      module_name_from_file_guess: Win32::SqlServer::DTS::Task::DynamicProperty
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+      packages:
+        - Win32::SqlServer::DTS::Task::DynamicProperty
+      primary_package: Win32::SqlServer::DTS::Task::DynamicProperty
+      uses:
+        - ''
+        - strict
+        - warnings
+        - base
+        - Carp
+        - Win32::OLE
+        - Win32::SqlServer::DTS::AssignmentFactory
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+        identifier: VERSION
+        line_number: 60
+        sigil: $
+        value: 0.02
+    - bytesize: 7750
+      file_mime_type: ~
+      line_count: ~
+      md5: 71c24169e994ad198fb18815b0525660
+      module_name_from_file_guess: Win32::SqlServer::DTS::Task::ExecutePackage
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+      packages:
+        - Win32::SqlServer::DTS::Task::ExecutePackage
+      primary_package: Win32::SqlServer::DTS::Task::ExecutePackage
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+        identifier: VERSION
+        line_number: 67
+        sigil: $
+        value: 0.02
+    - bytesize: 5261
+      file_mime_type: ~
+      line_count: ~
+      md5: b650b5759c1fcc5884b348030aa973d8
+      module_name_from_file_guess: Win32::SqlServer::DTS::Task::SendEmail
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+      packages:
+        - Win32::SqlServer::DTS::Task::SendEmail
+      primary_package: Win32::SqlServer::DTS::Task::SendEmail
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - base
+        - Hash::Util
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+        identifier: VERSION
+        line_number: 55
+        sigil: $
+        value: 0.02
+    - bytesize: 2422
+      file_mime_type: ~
+      line_count: ~
+      md5: bde5d687b4c84ecaf2deff485f1f6679
+      module_name_from_file_guess: Win32::SqlServer::DTS::TaskFactory
+      mtime: 1227150598
+      name: blib/lib/Win32/SqlServer/DTS/TaskFactory.pm
+      packages:
+        - Win32::SqlServer::DTS::TaskFactory
+      primary_package: Win32::SqlServer::DTS::TaskFactory
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Win32::SqlServer::DTS::TaskTypes
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/TaskFactory.pm
+        identifier: VERSION
+        line_number: 32
+        sigil: $
+        value: 0.02
+    - bytesize: 3072
+      file_mime_type: ~
+      line_count: ~
+      md5: 04b2a0a8d36601a4776c274919b2a790
+      module_name_from_file_guess: Win32::SqlServer::DTS::TaskTypes
+      mtime: 1227149597
+      name: blib/lib/Win32/SqlServer/DTS/TaskTypes.pm
+      packages:
+        - Win32::SqlServer::DTS::TaskTypes
+      primary_package: Win32::SqlServer::DTS::TaskTypes
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/Win32/SqlServer/DTS/TaskTypes.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 0.03
+  modules:
+    - blib/lib/Win32/SqlServer/DTS.pm
+    - blib/lib/Win32/SqlServer/DTS/Application.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Constant.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/DataFile.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Connection.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/GlobalVar.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Package.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Destination/Task.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/DestinationFactory.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/EnvVar.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/GlobalVar.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/INI.pm
+    - blib/lib/Win32/SqlServer/DTS/Assignment/Query.pm
+    - blib/lib/Win32/SqlServer/DTS/AssignmentFactory.pm
+    - blib/lib/Win32/SqlServer/DTS/AssignmentTypes.pm
+    - blib/lib/Win32/SqlServer/DTS/Connection.pm
+    - blib/lib/Win32/SqlServer/DTS/Credential.pm
+    - blib/lib/Win32/SqlServer/DTS/DateTime.pm
+    - blib/lib/Win32/SqlServer/DTS/Package.pm
+    - blib/lib/Win32/SqlServer/DTS/Package/Step.pm
+    - blib/lib/Win32/SqlServer/DTS/Package/Step/Result.pm
+    - blib/lib/Win32/SqlServer/DTS/Task.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/DataPump.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/DynamicProperty.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/ExecutePackage.pm
+    - blib/lib/Win32/SqlServer/DTS/Task/SendEmail.pm
+    - blib/lib/Win32/SqlServer/DTS/TaskFactory.pm
+    - blib/lib/Win32/SqlServer/DTS/TaskTypes.pm
+  test_info:
+    - bytesize: 634
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cf184c292813ac8ebbaf52d4dbd4ebe
+      mtime: 1227149329
+      name: t/Application.t
+      uses:
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 231
+      file_mime_type: ~
+      line_count: ~
+      md5: bd476f1ef9e4a6e67b69109a82c41119
+      mtime: 1227149329
+      name: t/Assignment-Constant.t
+      uses:
+        - Test::More
+    - bytesize: 231
+      file_mime_type: ~
+      line_count: ~
+      md5: e74c38e56182082fa51bbaa45829139c
+      mtime: 1227149329
+      name: t/Assignment-DataFile.t
+      uses:
+        - Test::More
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: a01e4bbc75817d7aa74cc5a1902eda21
+      mtime: 1227149329
+      name: t/Assignment-Destination.t
+      uses:
+        - Test::More
+    - bytesize: 227
+      file_mime_type: ~
+      line_count: ~
+      md5: bd080c5f7cfd8de43172260b217333f4
+      mtime: 1227149329
+      name: t/Assignment-EnvVar.t
+      uses:
+        - Test::More
+    - bytesize: 209
+      file_mime_type: ~
+      line_count: ~
+      md5: a8296d90c2fbcdc6548463347ef729b7
+      mtime: 1227149329
+      name: t/Assignment.t
+      uses:
+        - Test::More
+    - bytesize: 161
+      file_mime_type: ~
+      line_count: ~
+      md5: f6bf9953cbe15d3a72cedbc810913626
+      mtime: 1227149329
+      name: t/AssignmentFactory.t
+      uses:
+        - Test::More
+    - bytesize: 593
+      file_mime_type: ~
+      line_count: ~
+      md5: 428f7ba98ba8d78ed9cb68c4b52a6141
+      mtime: 1227149329
+      name: t/AssignmentTypes.t
+      uses:
+        - Test::More
+    - bytesize: 283
+      file_mime_type: ~
+      line_count: ~
+      md5: b97646bb2a8b8b8c7ba8790952e95a22
+      mtime: 1227149329
+      name: t/Connection.t
+      uses:
+        - Test::More
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: 83933b604d073234c8077e6be16756aa
+      mtime: 1227149329
+      name: t/Credential.t
+      uses:
+        - Test::More
+        - Win32::SqlServer::DTS::Credential
+    - bytesize: 262
+      file_mime_type: ~
+      line_count: ~
+      md5: 74f65ef97df5cc207e0bb02370edbec9
+      mtime: 1227149329
+      name: t/DateTime.t
+      uses:
+        - Test::More
+        - Win32::OLE::Variant
+    - bytesize: 1206
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d9fc037fc86fa737a9b1bbcb155c217
+      mtime: 1227149329
+      name: t/Destination-Connection.t
+      uses:
+        - Test::More
+        - Test::Exception
+        - Win32::SqlServer::DTS::Assignment::Destination::Connection
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: 89085d53c68daabb0710c88d8941501f
+      mtime: 1227149329
+      name: t/Package.t
+      uses:
+        - Test::More
+    - bytesize: 874
+      file_mime_type: ~
+      line_count: ~
+      md5: a64b26ddff9fd8f9051d785a806896d2
+      mtime: 1227149329
+      name: t/Task-DataPump.t
+      uses:
+        - Test::More
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: dd448289fe438326acff1aa8aecfb399
+      mtime: 1227149329
+      name: t/Task-DynamicProperty.t
+      uses:
+        - Test::More
+    - bytesize: 443
+      file_mime_type: ~
+      line_count: ~
+      md5: 5592df2eb560bab0b454a5ac37886195
+      mtime: 1227149329
+      name: t/Task-ExecutePackage.t
+      uses:
+        - Test::More
+    - bytesize: 178
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fe3f5cd6464c0b5c3dd168d81ed9a1c
+      mtime: 1227149329
+      name: t/Task.t
+      uses:
+        - Test::More
+    - bytesize: 345
+      file_mime_type: ~
+      line_count: ~
+      md5: d189f8f2465dec9ed16d9ef17a3d9a55
+      mtime: 1227149329
+      name: t/Task-SendEmail.t
+      uses:
+        - Test::More
+    - bytesize: 143
+      file_mime_type: ~
+      line_count: ~
+      md5: 01f6588edd78c485bcddff6d3a11182c
+      mtime: 1227149329
+      name: t/TaskFactory.t
+      uses:
+        - Test::More
+    - bytesize: 973
+      file_mime_type: ~
+      line_count: ~
+      md5: 4de0c4e667c94c895bfc1056f9c51d0f
+      mtime: 1227149329
+      name: t/extended/Application.t
+      uses:
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1464
+      file_mime_type: ~
+      line_count: ~
+      md5: dcc12e4557f9e07a3e082538256c9ef1
+      mtime: 1227149329
+      name: t/extended/Assignment-Constant.t
+      uses:
+        - strict
+        - warnings
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1593
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d7bed823906c38473e48610a74a1a81
+      mtime: 1227149329
+      name: t/extended/Assignment-DataFile.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - XML::Simple
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1655
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f806ada6e7b4da09455ba0d25ff716c
+      mtime: 1227149329
+      name: t/extended/Assignment-EnvVar.t
+      uses:
+        - strict
+        - warnings
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1669
+      file_mime_type: ~
+      line_count: ~
+      md5: 9966f97757f0aa3dd3cb951ae00ac0de
+      mtime: 1227149329
+      name: t/extended/Assignment-GlobalVar.t
+      uses:
+        - strict
+        - warnings
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1640
+      file_mime_type: ~
+      line_count: ~
+      md5: 31dbe2729e0af03960bb37fa701d04cf
+      mtime: 1227149329
+      name: t/extended/Assignment-INI.t
+      uses:
+        - warnings
+        - strict
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1763
+      file_mime_type: ~
+      line_count: ~
+      md5: 553369d7a93e767e7a84a54a61a8b3c3
+      mtime: 1227149329
+      name: t/extended/Assignment-Query.t
+      uses:
+        - warnings
+        - strict
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+    - bytesize: 1578
+      file_mime_type: ~
+      line_count: ~
+      md5: b193698c899eb787eee90d8dddf41f29
+      mtime: 1227149329
+      name: t/extended/Assignment.t
+      uses:
+        - XML::Simple
+        - Test::More
+        - Test::Exception
+        - Win32::SqlServer::DTS::Application
+        - Win32::SqlServer::DTS::Assignment
+        - Win32::OLE
+    - bytesize: 2758
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ec2a576c6d21fb505b2e0bdb871aa20
+      mtime: 1227149329
+      name: t/extended/Package.t
+      uses:
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+        - Win32::OLE
+    - bytesize: 2220
+      file_mime_type: ~
+      line_count: ~
+      md5: 67e07613675604e898252a19a2654dc7
+      mtime: 1227149329
+      name: t/extended/Task-Datapump.t
+      uses:
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+        - Win32::SqlServer::DTS::Assignment::Query
+    - bytesize: 1270
+      file_mime_type: ~
+      line_count: ~
+      md5: 59343c8a8088728f2c7c7796a3fd7b94
+      mtime: 1227150476
+      name: t/extended/Task-SendEmail.t
+      uses:
+        - XML::Simple
+        - Test::More
+        - Win32::SqlServer::DTS::Application
+  tests:
+    - t/Application.t
+    - t/Assignment-Constant.t
+    - t/Assignment-DataFile.t
+    - t/Assignment-Destination.t
+    - t/Assignment-EnvVar.t
+    - t/Assignment.t
+    - t/AssignmentFactory.t
+    - t/AssignmentTypes.t
+    - t/Connection.t
+    - t/Credential.t
+    - t/DateTime.t
+    - t/Destination-Connection.t
+    - t/Package.t
+    - t/Task-DataPump.t
+    - t/Task-DynamicProperty.t
+    - t/Task-ExecutePackage.t
+    - t/Task.t
+    - t/Task-SendEmail.t
+    - t/TaskFactory.t
+    - t/extended/Application.t
+    - t/extended/Assignment-Constant.t
+    - t/extended/Assignment-DataFile.t
+    - t/extended/Assignment-EnvVar.t
+    - t/extended/Assignment-GlobalVar.t
+    - t/extended/Assignment-INI.t
+    - t/extended/Assignment-Query.t
+    - t/extended/Assignment.t
+    - t/extended/Package.t
+    - t/extended/Task-Datapump.t
+    - t/extended/Task-SendEmail.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-87612._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 87612
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268966755
+  examine_start_time: 1268966737
+  examine_time: 18
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 87612
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1268966755
+  run_start_time: 1268966737
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

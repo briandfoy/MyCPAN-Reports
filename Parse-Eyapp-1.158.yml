@@ -1,0 +1,4845 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Bottom up parser generator
+    author:
+      - 'Casiano Rodriguez-Leon <casiano@ull.es>'
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.48
+    license: unknown
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Parse-Eyapp
+    no_index:
+      directory:
+        - t
+        - inc
+    requires:
+      Data::Dumper: 1.0
+      List::Util: 1.0
+      Pod::Usage: 1.0
+    version: 1.158
+  blib:
+    - blib/lib/Parse/Eyapp.pm
+    - blib/lib/Parse/Eyapp.pod
+    - blib/lib/Parse/Eyapp/Base.pm
+    - blib/lib/Parse/Eyapp/Base.pod
+    - blib/lib/Parse/Eyapp/Cleaner.pm
+    - blib/lib/Parse/Eyapp/Driver.pm
+    - blib/lib/Parse/Eyapp/Driver.pod
+    - blib/lib/Parse/Eyapp/Grammar.pm
+    - blib/lib/Parse/Eyapp/Lalr.pm
+    - blib/lib/Parse/Eyapp/Makefile
+    - blib/lib/Parse/Eyapp/MatchingTrees.pod
+    - blib/lib/Parse/Eyapp/Node.pm
+    - blib/lib/Parse/Eyapp/Node.pod
+    - blib/lib/Parse/Eyapp/Options.pm
+    - blib/lib/Parse/Eyapp/Output.pm
+    - blib/lib/Parse/Eyapp/Parse.pm
+    - blib/lib/Parse/Eyapp/Parse.pod
+    - blib/lib/Parse/Eyapp/Parse.yp
+    - blib/lib/Parse/Eyapp/Scope.pm
+    - blib/lib/Parse/Eyapp/Scope.pod
+    - blib/lib/Parse/Eyapp/TokenGen.pm
+    - blib/lib/Parse/Eyapp/TokenGen.pod
+    - blib/lib/Parse/Eyapp/Treeregexp.pm
+    - blib/lib/Parse/Eyapp/Treeregexp.pod
+    - blib/lib/Parse/Eyapp/Treeregexp.yp
+    - blib/lib/Parse/Eyapp/YATW.pm
+    - blib/lib/Parse/Eyapp/YATW.pod
+    - blib/lib/Parse/Eyapp/_TreeregexpSupport.pm
+    - blib/lib/Parse/Eyapp/datagenerationtut.pod
+    - blib/lib/Parse/Eyapp/debuggingtut.pod
+    - blib/lib/Parse/Eyapp/defaultactionsintro.pod
+    - blib/lib/Parse/Eyapp/eyappintro.pod
+    - blib/lib/Parse/Eyapp/eyapplanguageref.pod
+    - blib/lib/Parse/Eyapp/translationschemestut.pod
+    - blib/man1/eyapp.1
+    - blib/man1/treereg.1
+    - blib/man1/vgg.1
+    - blib/man3/Parse::Eyapp.3
+    - blib/man3/Parse::Eyapp::Base.3
+    - blib/man3/Parse::Eyapp::Driver.3
+    - blib/man3/Parse::Eyapp::MatchingTrees.3
+    - blib/man3/Parse::Eyapp::Node.3
+    - blib/man3/Parse::Eyapp::Parse.3
+    - blib/man3/Parse::Eyapp::Scope.3
+    - blib/man3/Parse::Eyapp::TokenGen.3
+    - blib/man3/Parse::Eyapp::Treeregexp.3
+    - blib/man3/Parse::Eyapp::YATW.3
+    - blib/man3/Parse::Eyapp::datagenerationtut.3
+    - blib/man3/Parse::Eyapp::debuggingtut.3
+    - blib/man3/Parse::Eyapp::defaultactionsintro.3
+    - blib/man3/Parse::Eyapp::eyappintro.3
+    - blib/man3/Parse::Eyapp::eyapplanguageref.3
+    - blib/man3/Parse::Eyapp::translationschemestut.3
+    - blib/script/eyapp
+    - blib/script/treereg
+    - blib/script/vgg
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Parse::Eyapp
+  build_output: |
+    cp lib/Parse/Eyapp/Parse.pm blib/lib/Parse/Eyapp/Parse.pm
+    cp lib/Parse/Eyapp.pm blib/lib/Parse/Eyapp.pm
+    cp lib/Parse/Eyapp/Scope.pod blib/lib/Parse/Eyapp/Scope.pod
+    cp lib/Parse/Eyapp/Driver.pm blib/lib/Parse/Eyapp/Driver.pm
+    cp lib/Parse/Eyapp/translationschemestut.pod blib/lib/Parse/Eyapp/translationschemestut.pod
+    cp lib/Parse/Eyapp/Base.pod blib/lib/Parse/Eyapp/Base.pod
+    cp lib/Parse/Eyapp/debuggingtut.pod blib/lib/Parse/Eyapp/debuggingtut.pod
+    cp lib/Parse/Eyapp/eyappintro.pod blib/lib/Parse/Eyapp/eyappintro.pod
+    cp lib/Parse/Eyapp/eyapplanguageref.pod blib/lib/Parse/Eyapp/eyapplanguageref.pod
+    cp lib/Parse/Eyapp/Lalr.pm blib/lib/Parse/Eyapp/Lalr.pm
+    cp lib/Parse/Eyapp/Options.pm blib/lib/Parse/Eyapp/Options.pm
+    cp lib/Parse/Eyapp/TokenGen.pod blib/lib/Parse/Eyapp/TokenGen.pod
+    cp lib/Parse/Eyapp/Output.pm blib/lib/Parse/Eyapp/Output.pm
+    cp lib/Parse/Eyapp/Cleaner.pm blib/lib/Parse/Eyapp/Cleaner.pm
+    cp lib/Parse/Eyapp/YATW.pod blib/lib/Parse/Eyapp/YATW.pod
+    cp lib/Parse/Eyapp/Driver.pod blib/lib/Parse/Eyapp/Driver.pod
+    cp lib/Parse/Eyapp/Parse.yp blib/lib/Parse/Eyapp/Parse.yp
+    cp lib/Parse/Eyapp/Node.pod blib/lib/Parse/Eyapp/Node.pod
+    cp lib/Parse/Eyapp/Makefile blib/lib/Parse/Eyapp/Makefile
+    cp lib/Parse/Eyapp/Parse.pod blib/lib/Parse/Eyapp/Parse.pod
+    cp lib/Parse/Eyapp/YATW.pm blib/lib/Parse/Eyapp/YATW.pm
+    cp lib/Parse/Eyapp/Treeregexp.pm blib/lib/Parse/Eyapp/Treeregexp.pm
+    cp lib/Parse/Eyapp/defaultactionsintro.pod blib/lib/Parse/Eyapp/defaultactionsintro.pod
+    cp lib/Parse/Eyapp/MatchingTrees.pod blib/lib/Parse/Eyapp/MatchingTrees.pod
+    cp lib/Parse/Eyapp/Node.pm blib/lib/Parse/Eyapp/Node.pm
+    cp lib/Parse/Eyapp/Grammar.pm blib/lib/Parse/Eyapp/Grammar.pm
+    cp lib/Parse/Eyapp.pod blib/lib/Parse/Eyapp.pod
+    cp lib/Parse/Eyapp/Base.pm blib/lib/Parse/Eyapp/Base.pm
+    cp lib/Parse/Eyapp/_TreeregexpSupport.pm blib/lib/Parse/Eyapp/_TreeregexpSupport.pm
+    cp lib/Parse/Eyapp/Treeregexp.pod blib/lib/Parse/Eyapp/Treeregexp.pod
+    cp lib/Parse/Eyapp/Scope.pm blib/lib/Parse/Eyapp/Scope.pm
+    cp lib/Parse/Eyapp/Treeregexp.yp blib/lib/Parse/Eyapp/Treeregexp.yp
+    cp lib/Parse/Eyapp/datagenerationtut.pod blib/lib/Parse/Eyapp/datagenerationtut.pod
+    cp lib/Parse/Eyapp/TokenGen.pm blib/lib/Parse/Eyapp/TokenGen.pm
+    cp vgg blib/script/vgg
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/vgg
+    cp eyapp blib/script/eyapp
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/eyapp
+    cp treereg blib/script/treereg
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/treereg
+    Manifying blib/man1/vgg.1
+    Manifying blib/man1/eyapp.1
+    Manifying blib/man1/treereg.1
+    Manifying blib/man3/Parse::Eyapp::eyapplanguageref.3
+    Manifying blib/man3/Parse::Eyapp::Parse.3
+    Manifying blib/man3/Parse::Eyapp::datagenerationtut.3
+    Manifying blib/man3/Parse::Eyapp::TokenGen.3
+    Manifying blib/man3/Parse::Eyapp::Scope.3
+    Manifying blib/man3/Parse::Eyapp::defaultactionsintro.3
+    Manifying blib/man3/Parse::Eyapp::MatchingTrees.3
+    Manifying blib/man3/Parse::Eyapp::YATW.3
+    Manifying blib/man3/Parse::Eyapp.3
+    Manifying blib/man3/Parse::Eyapp::Driver.3
+    Manifying blib/man3/Parse::Eyapp::translationschemestut.3
+    Manifying blib/man3/Parse::Eyapp::Base.3
+    Manifying blib/man3/Parse::Eyapp::Node.3
+    Manifying blib/man3/Parse::Eyapp::debuggingtut.3
+    Manifying blib/man3/Parse::Eyapp::Treeregexp.3
+    Manifying blib/man3/Parse::Eyapp::eyappintro.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1/Parse-Eyapp-1.158/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1/Parse-Eyapp-1.158
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1/Parse-Eyapp-1.158/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1/Parse-Eyapp-1.158/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: CASIANO
+  dist_basename: Parse-Eyapp-1.158.tar.gz
+  dist_date: 1269960209
+  dist_dir: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1/Parse-Eyapp-1.158
+  dist_extract_path: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1/Parse-Eyapp-1.158
+  dist_file: /home/brian/CPAN/authors/id/C/CA/CASIANO/Parse-Eyapp-1.158.tar.gz
+  dist_md5: 46ea07cc43fe7bb165c69a7896b35e44
+  dist_size: 648360
+  manifest:
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - TODO
+    - examples/Calculator/Changes
+    - examples/Calculator/MANIFEST
+    - examples/Calculator/Makefile.PL
+    - examples/Calculator/README
+    - examples/Calculator/etc/setperl5lib
+    - examples/Calculator/lib/Math/Calc.eyp
+    - examples/Calculator/lib/Math/Calc.pod
+    - examples/Calculator/lib/Math/Tail.pm
+    - examples/Calculator/scripts/calc.pl
+    - examples/Calculator/scripts/expressions1
+    - examples/Calculator/scripts/witherrors
+    - examples/Calculator/t/01smoke.t
+    - examples/Calculator/t/02semanticerrors.t
+    - examples/Calculator/t/03syntacticerrors.t
+    - examples/Driver/Postfix.eyp
+    - examples/Driver/Rule3.yp
+    - examples/Driver/aSb.yp
+    - examples/Driver/use_aSb.pl
+    - examples/Driver/userule3.pl
+    - examples/Eyapp/Lhs1.yp
+    - examples/Eyapp/Postfix.eyp
+    - examples/Eyapp/PostfixWithSeparatedLexer.eyp
+    - examples/Eyapp/README
+    - examples/Eyapp/Rule3.yp
+    - examples/Eyapp/Rule5.yp
+    - examples/Eyapp/Rule9.yp
+    - examples/Eyapp/Shift.trg
+    - examples/Eyapp/Tail2.pm
+    - examples/Eyapp/TailModule.pm
+    - examples/Eyapp/Transform4.trg
+    - examples/Eyapp/foldand0rule9_4.pl
+    - examples/Eyapp/synopsis.pl
+    - examples/Eyapp/uselhs1.pl
+    - examples/Eyapp/usepostfix.pl
+    - examples/Eyapp/userule3.pl
+    - examples/Eyapp/useruleandshift.pl
+    - examples/MatchingTrees/Rule6.yp
+    - examples/MatchingTrees/m2.pl
+    - examples/MatchingTrees/numchildren.pl
+    - examples/MatchingTrees/synopsis.pl
+    - examples/Node/28foldwithnewwithvars.pl
+    - examples/Node/TSPostfix3.eyp
+    - examples/Node/TSwithtreetransformations2.eyp
+    - examples/Node/Tail2.pm
+    - examples/Node/alias_and_yyprefix.pl
+    - examples/Node/builder.pl
+    - examples/Node/equal.pl
+    - examples/Node/moveinvariantoutofloopcomplexformula.pl
+    - examples/Node/synopsis.pl
+    - examples/Node/testequal.pl
+    - examples/Node/trans_scheme_default_action.pl
+    - examples/Node/ts_with_ast.pl
+    - examples/Node/usetspostfix3.pl
+    - examples/Node/usetswithtreetransformations2.pl
+    - examples/ParsingStringsAndTrees/I2PIR.trg
+    - examples/ParsingStringsAndTrees/Infix.eyp
+    - examples/ParsingStringsAndTrees/Makefile
+    - examples/ParsingStringsAndTrees/README
+    - examples/ParsingStringsAndTrees/fold.inf
+    - examples/ParsingStringsAndTrees/infix2pir.pl
+    - examples/ParsingStringsAndTrees/input1.inf
+    - examples/ParsingStringsAndTrees/simple.inf
+    - examples/ParsingStringsAndTrees/simple2.inf
+    - examples/ParsingStringsAndTrees/simple3.inf
+    - examples/ParsingStringsAndTrees/simple4.inf
+    - examples/ParsingStringsAndTrees/simple5.inf
+    - examples/ParsingStringsAndTrees/simple6.inf
+    - examples/YATW/12ts_simplify_with_s.pl
+    - examples/YATW/13ts_simplify_with_delete.pl
+    - examples/YATW/26delete_with_trreereg.pl
+    - examples/YATW/Rule6.yp
+    - examples/YATW/Tail2.pm
+    - examples/YATW/foldrule6.pl
+    - examples/YATW/m2.pl
+    - examples/YATW/moveinvariantoutofloopcomplexformula.pl
+    - examples/debuggingtut/Cplusplus.eyp
+    - examples/debuggingtut/Cplusplus2.eyp
+    - examples/debuggingtut/Debug.eyp
+    - examples/debuggingtut/Debug1.eyp
+    - examples/debuggingtut/Debug2.eyp
+    - examples/debuggingtut/DebugDynamicResolution.eyp
+    - examples/debuggingtut/DebugLookForward.eyp
+    - examples/debuggingtut/DebugTail.pm
+    - examples/debuggingtut/DynamicallyChangingTheParser.eyp
+    - examples/debuggingtut/DynamicallyChangingTheParser2.eyp
+    - examples/debuggingtut/DynamicallyChangingTheParser3.eyp
+    - examples/debuggingtut/PL_I_conflict.eyp
+    - examples/debuggingtut/Precedencia.eyp
+    - examples/debuggingtut/RRTail.pm
+    - examples/debuggingtut/SemanticInfoInTokens.eyp
+    - examples/debuggingtut/SimplifiedCplusplusAmbiguity.eyp
+    - examples/debuggingtut/Tail.pm
+    - examples/debuggingtut/Tieins.eyp
+    - examples/debuggingtut/aSb.yp
+    - examples/debuggingtut/bugyapp2.eyp
+    - examples/debuggingtut/bugyapp3.eyp
+    - examples/debuggingtut/confusing.eyp
+    - examples/debuggingtut/confusingsolveddynamic.eyp
+    - examples/debuggingtut/confusingsolvedstatic.eyp
+    - examples/debuggingtut/confusingsolvedstatic2.eyp
+    - examples/debuggingtut/correcttypicalrr.eyp
+    - examples/debuggingtut/lr_1_grammar.eyp
+    - examples/debuggingtut/minimalrr.eyp
+    - examples/debuggingtut/minimalrr2.eyp
+    - examples/debuggingtut/nolr_k_grammar.eyp
+    - examples/debuggingtut/nolr_k_grammarsolveddynamic.eyp
+    - examples/debuggingtut/nonslrgrammar.eyp
+    - examples/debuggingtut/pascalenumeratedvsrange.eyp
+    - examples/debuggingtut/pascalenumeratedvsrangesolvedvialex.eyp
+    - examples/debuggingtut/reducereduceconflict.eyp
+    - examples/debuggingtut/reducereduceconflict_fix1.eyp
+    - examples/debuggingtut/reducereduceconflict_fix2.eyp
+    - examples/debuggingtut/rrconflictnamefirst.eyp
+    - examples/debuggingtut/rrconflictnamefirst_fix1.eyp
+    - examples/debuggingtut/shiftreduceconflict.eyp
+    - examples/debuggingtut/shiftreduceconflict_fixed.eyp
+    - examples/debuggingtut/typicalrr.eyp
+    - examples/debuggingtut/typicalrr2.eyp
+    - examples/debuggingtut/typicalrr_fixed.eyp
+    - examples/debuggingtut/typicalrr_fixed_rightrecursive.eyp
+    - examples/debuggingtut/typicalrrwithprec.eyp
+    - examples/eyappintro/InputFromStream.eyp
+    - examples/eyappintro/Postfix.eyp
+    - examples/eyapplanguageref/15treewithsyntactictoken.pl
+    - examples/eyapplanguageref/Calc.eyp
+    - examples/eyapplanguageref/CalcUsingTail.eyp
+    - examples/eyapplanguageref/CalcwithAttributeGrammar.pl
+    - examples/eyapplanguageref/CsBetweenCommansAndD.eyp
+    - examples/eyapplanguageref/CsBetweenCommansAndDWithNames.eyp
+    - examples/eyapplanguageref/Lhs.eyp
+    - examples/eyapplanguageref/List2.yp
+    - examples/eyapplanguageref/List3.yp
+    - examples/eyapplanguageref/List3_tree.yp
+    - examples/eyapplanguageref/List3_tree_d_sem.yp
+    - examples/eyapplanguageref/List5.yp
+    - examples/eyapplanguageref/ListAndAction.eyp
+    - examples/eyapplanguageref/ListWithRefs.eyp
+    - examples/eyapplanguageref/ListWithRefs1.eyp
+    - examples/eyapplanguageref/ListWithRefs2.eyp
+    - examples/eyapplanguageref/Makefile
+    - examples/eyapplanguageref/Parenthesis.eyp
+    - examples/eyapplanguageref/Postfix.eyp
+    - examples/eyapplanguageref/README
+    - examples/eyapplanguageref/Tail.pm
+    - examples/eyapplanguageref/YYNameDynamic.eyp
+    - examples/eyapplanguageref/alias_and_yyprefix.pl
+    - examples/eyapplanguageref/bugyapp2.eyp
+    - examples/eyapplanguageref/bugyapp3.eyp
+    - examples/eyapplanguageref/bypass.pl
+    - examples/eyapplanguageref/dynamicyyprefix_and_alias.pl
+    - examples/eyapplanguageref/intermediateaction2.yp
+    - examples/eyapplanguageref/intermediateactiontree.yp
+    - examples/eyapplanguageref/returnnonode.yp
+    - examples/eyapplanguageref/synopsis.pl
+    - examples/eyapplanguageref/treewithnames.pl
+    - examples/eyapplanguageref/treewithoutnames.pl
+    - examples/eyapplanguageref/use_csbetweencommansandd.pl
+    - examples/eyapplanguageref/use_csbetweencommansanddwithnames.pl
+    - examples/eyapplanguageref/use_list2.pl
+    - examples/eyapplanguageref/use_list3.pl
+    - examples/eyapplanguageref/use_list3_tree.pl
+    - examples/eyapplanguageref/use_list3_tree_d_dem.pl
+    - examples/eyapplanguageref/use_list5.pl
+    - examples/eyapplanguageref/use_listandaction.pl
+    - examples/eyapplanguageref/use_listwithrefs.pl
+    - examples/eyapplanguageref/use_listwithrefs1.pl
+    - examples/eyapplanguageref/use_listwithrefs2.pl
+    - examples/eyapplanguageref/use_parenthesis.pl
+    - examples/eyapplanguageref/usecalc.pl
+    - examples/eyapplanguageref/usecalcusingtail.pl
+    - examples/eyapplanguageref/useintermediateaction2.pl
+    - examples/eyapplanguageref/useintermediateactiontree.pl
+    - examples/eyapplanguageref/uselhs.pl
+    - examples/eyapplanguageref/usepostfix.pl
+    - examples/eyapplanguageref/usereturnnonode.pl
+    - examples/eyapplanguageref/useyynamedynamic.pl
+    - examples/generator/GenSupport.pm
+    - examples/generator/Generator.eyp
+    - examples/languages/C/ansic.eyp
+    - examples/languages/C/boolean.c
+    - examples/languages/C/booleanlist.c
+    - examples/languages/C/charpointer.c
+    - examples/languages/C/charpointer2.c
+    - examples/languages/C/functypedef.c
+    - examples/languages/C/linkedlists.c
+    - examples/languages/C/prueba.c
+    - examples/languages/C/typedef.c
+    - examples/languages/pascal/arrayreftest.p
+    - examples/languages/pascal/arraytest.p
+    - examples/languages/pascal/hello.p
+    - examples/languages/pascal/hello2.p
+    - examples/languages/pascal/pascal.eyp
+    - examples/languages/pascal/proctest.p
+    - examples/languages/pascal/types.p
+    - examples/naming/GiveNamesToCalc.eyp
+    - examples/naming/Tail.pm
+    - examples/naming/default_naming_scheme.eyp
+    - examples/naming/explicit_default_naming_scheme.eyp
+    - examples/naming/give_names_to_tokens.eyp
+    - examples/naming/give_token_names.eyp
+    - examples/recycle/CommonTail.pm
+    - examples/recycle/ManualTree.yp
+    - examples/recycle/NoacInh.eyp
+    - examples/recycle/NoacYYDelegateaction.eyp
+    - examples/recycle/Noactions.eyp
+    - examples/recycle/Postfix.eyp
+    - examples/recycle/PostfixWithActions.eyp
+    - examples/recycle/README
+    - examples/recycle/calcu.pl
+    - examples/recycle/calcu_and_post.pl
+    - examples/recycle/icalcu.pl
+    - examples/recycle/icalcu_and_ipost.pl
+    - examples/recycle/icalcu_and_ipost_yydel.pl
+    - examples/recycle/ipostf.pl
+    - examples/recycle/postf.pl
+    - examples/recycle/rewritepostfixwithactions.pl
+    - examples/translationschemestut/README
+    - examples/translationschemestut/trans_scheme_default_action.pl
+    - examples/translationschemestut/trans_scheme_simple_decls4.pl
+    - examples/typechecking/README
+    - examples/typechecking/Simple-Types-0.4.tar.gz
+    - eyapp
+    - lib/Parse/Eyapp.pm
+    - lib/Parse/Eyapp.pod
+    - lib/Parse/Eyapp/Base.pm
+    - lib/Parse/Eyapp/Base.pod
+    - lib/Parse/Eyapp/Cleaner.pm
+    - lib/Parse/Eyapp/Driver.pm
+    - lib/Parse/Eyapp/Driver.pod
+    - lib/Parse/Eyapp/Grammar.pm
+    - lib/Parse/Eyapp/Lalr.pm
+    - lib/Parse/Eyapp/Makefile
+    - lib/Parse/Eyapp/MatchingTrees.pod
+    - lib/Parse/Eyapp/Node.pm
+    - lib/Parse/Eyapp/Node.pod
+    - lib/Parse/Eyapp/Options.pm
+    - lib/Parse/Eyapp/Output.pm
+    - lib/Parse/Eyapp/Parse.pm
+    - lib/Parse/Eyapp/Parse.pod
+    - lib/Parse/Eyapp/Parse.yp
+    - lib/Parse/Eyapp/Scope.pm
+    - lib/Parse/Eyapp/Scope.pod
+    - lib/Parse/Eyapp/TokenGen.pm
+    - lib/Parse/Eyapp/TokenGen.pod
+    - lib/Parse/Eyapp/Treeregexp.pm
+    - lib/Parse/Eyapp/Treeregexp.pod
+    - lib/Parse/Eyapp/Treeregexp.yp
+    - lib/Parse/Eyapp/YATW.pm
+    - lib/Parse/Eyapp/YATW.pod
+    - lib/Parse/Eyapp/_TreeregexpSupport.pm
+    - lib/Parse/Eyapp/datagenerationtut.pod
+    - lib/Parse/Eyapp/debuggingtut.pod
+    - lib/Parse/Eyapp/defaultactionsintro.pod
+    - lib/Parse/Eyapp/eyappintro.pod
+    - lib/Parse/Eyapp/eyapplanguageref.pod
+    - lib/Parse/Eyapp/translationschemestut.pod
+    - t/01calc.t
+    - t/03newgrammar.t
+    - t/04foldandzero.t
+    - t/05treewithvars.t
+    - t/06meta.t
+    - t/07translationschemetype.t
+    - t/08tschemetypestar.t
+    - t/09ts_with_defaultaction.t
+    - t/10ts_with_treereg.t
+    - t/11ts_simplify_codes.t
+    - t/12ts_simplify_with_s.t
+    - t/13ts_simplify_with_delete.t
+    - t/14ts_simplify_with_trreereg.t
+    - t/15treeregswith2arrays.t
+    - t/16treeregswitharrayattheend.t
+    - t/17fatherisscalar.t
+    - t/18fatherpatternwitharrays.t
+    - t/19treeregswitharrays2transf.t
+    - t/20treeregswitharrays2transf.t
+    - t/21fatherisdot.t
+    - t/22treeregswithregexpwithid.t
+    - t/23treeregswitharraysandregexps.t
+    - t/24prefixes.t
+    - t/25foldwithnew.t
+    - t/26foldwithnewwithvars.t
+    - t/27unshiftinmyself.t
+    - t/28unshifttwoitems.t
+    - t/29foldinglistsofexpressions.t
+    - t/30complextreereg.t
+    - t/32deletenodewithwarn.t
+    - t/33moveinvariantoutofloop.t
+    - t/34moveinvariantoutofloopcomplexformula.t
+    - t/35match.t
+    - t/36tswithmultipledefact.t
+    - t/37tsplus.t
+    - t/38tspostfix_resultisarray.t
+    - t/39tspostfix.t
+    - t/40wrongoptionforTreeregexp_new.t
+    - t/41indexbug.t
+    - t/42pod.t
+    - t/43dotandscalar.t
+    - t/44repeatedarray.t
+    - t/45starandarray.t
+    - t/46starandstar.t
+    - t/47ruleindex.t
+    - t/48yyprefix.t
+    - t/49conflicts.t
+    - t/50SimpleChalfscope.t
+    - t/52accesors.t
+    - t/53accessorsskip.t
+    - t/54alias_and_yyprefix.t
+    - t/55builder.t
+    - t/56equal.t
+    - t/57testequal.t
+    - t/58standalone.t
+    - t/59newgrammarerrors.t
+    - t/60dynamicyyprefix_and_alias.t
+    - t/61standalonegift.t
+    - t/62docinsideeyapp.t
+    - t/63docwithdoublecut.t
+    - t/64standalonegiftandeyapp.t
+    - t/65yydebugandpod.t
+    - t/66yydebugstandaloneandpod.t
+    - t/67outputfile.t
+    - t/68cleangrammar.t
+    - t/69cleanwithvgrammar.t
+    - t/70dos2unix.t
+    - t/71dynamicconflictresolution.t
+    - t/72mixedstandaloneanddynamicload.t
+    - t/73dynamicshiftreduceconflictresolution.t
+    - t/74lalrdependanttest.t
+    - t/75tokenandvariablewiththesamename.t
+    - t/98nopm.t
+    - t/99Cplusplusgrammar.t
+    - t/Calc.eyp
+    - t/Debug2.eyp
+    - t/Gift.yp
+    - t/pascal.yp
+    - treereg
+    - vgg
+  manifest_file_info:
+    - bytesize: 12508
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1265553765
+      name: Changes
+    - bytesize: 11402
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1269960099
+      name: MANIFEST
+    - bytesize: 558
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1269960099
+      name: META.yml
+    - bytesize: 10609
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1265106574
+      name: Makefile.PL
+    - bytesize: 2682
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1257527888
+      name: README
+    - bytesize: 11833
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1265555216
+      name: TODO
+    - bytesize: 156
+      file_mime_type: ~
+      line_count: ~
+      md5: b5c47db476cd6a7755ccc15e256798aa
+      mtime: 1257527863
+      name: examples/Calculator/Changes
+    - bytesize: 217
+      file_mime_type: ~
+      line_count: ~
+      md5: a638e933c24b1ece65b7a42dfcf24f04
+      mtime: 1257527863
+      name: examples/Calculator/MANIFEST
+    - bytesize: 1843
+      file_mime_type: ~
+      line_count: ~
+      md5: f6fab1400beecbfc84c2255282322be1
+      mtime: 1259911973
+      name: examples/Calculator/Makefile.PL
+    - bytesize: 678
+      file_mime_type: ~
+      line_count: ~
+      md5: 324db120f0c475b95861ab2e5539ddde
+      mtime: 1257527863
+      name: examples/Calculator/README
+    - bytesize: 671
+      file_mime_type: ~
+      line_count: ~
+      md5: e3b51c0ac18fa3aee33d0b1ecd15ada5
+      mtime: 1259911973
+      name: examples/Calculator/etc/setperl5lib
+    - bytesize: 1197
+      file_mime_type: ~
+      line_count: ~
+      md5: 3db04f29ed5dd07fc9418cd2ec7bbc7e
+      mtime: 1260840352
+      name: examples/Calculator/lib/Math/Calc.eyp
+    - bytesize: 4412
+      file_mime_type: ~
+      line_count: ~
+      md5: d622a8bf39b7e9ead33c50078479da21
+      mtime: 1257527862
+      name: examples/Calculator/lib/Math/Calc.pod
+    - bytesize: 812
+      file_mime_type: ~
+      line_count: ~
+      md5: bce7ff56cfb41ec6b3a3a9f0ea87d8ab
+      mtime: 1261434372
+      name: examples/Calculator/lib/Math/Tail.pm
+    - bytesize: 1175
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e66fe8b11324a828ad9f18c15e85725
+      mtime: 1259911973
+      name: examples/Calculator/scripts/calc.pl
+    - bytesize: 27
+      file_mime_type: ~
+      line_count: ~
+      md5: 6dda153f5b247ab35288f69bf9168a54
+      mtime: 1257527862
+      name: examples/Calculator/scripts/expressions1
+    - bytesize: 21
+      file_mime_type: ~
+      line_count: ~
+      md5: d629c6edb34fa34e3a5f2a150d9949a6
+      mtime: 1257527862
+      name: examples/Calculator/scripts/witherrors
+    - bytesize: 394
+      file_mime_type: ~
+      line_count: ~
+      md5: f2bbce029a2ec7bdef4f61a7a8656daa
+      mtime: 1260841120
+      name: examples/Calculator/t/01smoke.t
+    - bytesize: 614
+      file_mime_type: ~
+      line_count: ~
+      md5: b0ef43f3238e255efa13283e43f3d999
+      mtime: 1260841735
+      name: examples/Calculator/t/02semanticerrors.t
+    - bytesize: 430
+      file_mime_type: ~
+      line_count: ~
+      md5: 48de999503342030c0cf82ff5ba59277
+      mtime: 1260842231
+      name: examples/Calculator/t/03syntacticerrors.t
+    - bytesize: 941
+      file_mime_type: ~
+      line_count: ~
+      md5: e767d48b445f5e442cdac84f47acc424
+      mtime: 1261499458
+      name: examples/Driver/Postfix.eyp
+    - bytesize: 1436
+      file_mime_type: ~
+      line_count: ~
+      md5: 7654dda615ec2d4cad03796c4d40bcde
+      mtime: 1265457195
+      name: examples/Driver/Rule3.yp
+    - bytesize: 216
+      file_mime_type: ~
+      line_count: ~
+      md5: 580380c42fd3af6b4ea7081373272474
+      mtime: 1265456185
+      name: examples/Driver/aSb.yp
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: 69db25ad79db10fd10784e926ca25aca
+      mtime: 1265456169
+      name: examples/Driver/use_aSb.pl
+    - bytesize: 220
+      file_mime_type: ~
+      line_count: ~
+      md5: 58266ac276424cf55665cee4deb7c380
+      mtime: 1265457280
+      name: examples/Driver/userule3.pl
+    - bytesize: 961
+      file_mime_type: ~
+      line_count: ~
+      md5: 96fb28f33a7204cfcc20b89f8b65d4cd
+      mtime: 1265095417
+      name: examples/Eyapp/Lhs1.yp
+    - bytesize: 1239
+      file_mime_type: ~
+      line_count: ~
+      md5: a80b505e36ace9847980b738865c7b12
+      mtime: 1261355258
+      name: examples/Eyapp/Postfix.eyp
+    - bytesize: 693
+      file_mime_type: ~
+      line_count: ~
+      md5: 031c62ee4cd2238cc01ccd497974599e
+      mtime: 1269959442
+      name: examples/Eyapp/PostfixWithSeparatedLexer.eyp
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: 44497d08707fcae4734c0785b098a796
+      mtime: 1257527888
+      name: examples/Eyapp/README
+    - bytesize: 1881
+      file_mime_type: ~
+      line_count: ~
+      md5: 0014e14376aa548d63b2cfe222d4d7fe
+      mtime: 1265039325
+      name: examples/Eyapp/Rule3.yp
+    - bytesize: 781
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d7f2d9fbbb9f2417f766dea493eb495
+      mtime: 1265458851
+      name: examples/Eyapp/Rule5.yp
+    - bytesize: 1034
+      file_mime_type: ~
+      line_count: ~
+      md5: 967888e4f868e8b34cb017a0e8a1324a
+      mtime: 1265039325
+      name: examples/Eyapp/Rule9.yp
+    - bytesize: 492
+      file_mime_type: ~
+      line_count: ~
+      md5: d3ec79692b1989828315953014196389
+      mtime: 1261001327
+      name: examples/Eyapp/Shift.trg
+    - bytesize: 1228
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c9c4c3cb73c31ad44ad533fee9d3e6a
+      mtime: 1257527888
+      name: examples/Eyapp/Tail2.pm
+    - bytesize: 731
+      file_mime_type: ~
+      line_count: ~
+      md5: 8de9103169ecd6c9c2334c00276ef979
+      mtime: 1269959412
+      name: examples/Eyapp/TailModule.pm
+    - bytesize: 610
+      file_mime_type: ~
+      line_count: ~
+      md5: c26c7719d99481a92228d6524f9f459f
+      mtime: 1261001327
+      name: examples/Eyapp/Transform4.trg
+    - bytesize: 819
+      file_mime_type: ~
+      line_count: ~
+      md5: 996b3575df3b199e9367718f98815be5
+      mtime: 1265457671
+      name: examples/Eyapp/foldand0rule9_4.pl
+    - bytesize: 2673
+      file_mime_type: ~
+      line_count: ~
+      md5: 6633357053b8db209a3dde86409eba78
+      mtime: 1265008072
+      name: examples/Eyapp/synopsis.pl
+    - bytesize: 50
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c1c087847ba327c5d2a6e8121cccf7a
+      mtime: 1265095364
+      name: examples/Eyapp/uselhs1.pl
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 325a1ecf2c81c0a9831bde36003bfef7
+      mtime: 1257527888
+      name: examples/Eyapp/usepostfix.pl
+    - bytesize: 83
+      file_mime_type: ~
+      line_count: ~
+      md5: 9aba673157074de3c6c85beb410f0764
+      mtime: 1257527888
+      name: examples/Eyapp/userule3.pl
+    - bytesize: 657
+      file_mime_type: ~
+      line_count: ~
+      md5: 3492dbf9d5e2bd5a3e71cdad97bc625f
+      mtime: 1265458577
+      name: examples/Eyapp/useruleandshift.pl
+    - bytesize: 733
+      file_mime_type: ~
+      line_count: ~
+      md5: 855b0bfd3b06e55c82fa60db9e87e70d
+      mtime: 1261502142
+      name: examples/MatchingTrees/Rule6.yp
+    - bytesize: 898
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cca722c6943ca99b69681a24fc852b7
+      mtime: 1261504074
+      name: examples/MatchingTrees/m2.pl
+    - bytesize: 881
+      file_mime_type: ~
+      line_count: ~
+      md5: 468654999b8433f6e648057409cb9372
+      mtime: 1261504546
+      name: examples/MatchingTrees/numchildren.pl
+    - bytesize: 2672
+      file_mime_type: ~
+      line_count: ~
+      md5: d962d16966b24d328263b5aad8fbc598
+      mtime: 1261501958
+      name: examples/MatchingTrees/synopsis.pl
+    - bytesize: 2720
+      file_mime_type: ~
+      line_count: ~
+      md5: b73c7267596fec8a891602b13426bc49
+      mtime: 1257527860
+      name: examples/Node/28foldwithnewwithvars.pl
+    - bytesize: 2086
+      file_mime_type: ~
+      line_count: ~
+      md5: e0b616acd15d7d16603f1c639d9a2df6
+      mtime: 1261506002
+      name: examples/Node/TSPostfix3.eyp
+    - bytesize: 3968
+      file_mime_type: ~
+      line_count: ~
+      md5: f804a1d4dd518ae2c43ac5370dd202b2
+      mtime: 1261507894
+      name: examples/Node/TSwithtreetransformations2.eyp
+    - bytesize: 1228
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a33240b297795cd069a89dba51e3001
+      mtime: 1257527860
+      name: examples/Node/Tail2.pm
+    - bytesize: 1397
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f3a924f0588b558c486893308ff2b2a
+      mtime: 1261360844
+      name: examples/Node/alias_and_yyprefix.pl
+    - bytesize: 379
+      file_mime_type: ~
+      line_count: ~
+      md5: fec46c9c75f0c1c114c1daa66e8c8c60
+      mtime: 1257527860
+      name: examples/Node/builder.pl
+    - bytesize: 632
+      file_mime_type: ~
+      line_count: ~
+      md5: f285acd43ed6551da0f0159e9ecc3d36
+      mtime: 1257527860
+      name: examples/Node/equal.pl
+    - bytesize: 2266
+      file_mime_type: ~
+      line_count: ~
+      md5: ed98d9c6f9f9cff3be7d04222b355662
+      mtime: 1257527860
+      name: examples/Node/moveinvariantoutofloopcomplexformula.pl
+    - bytesize: 3120
+      file_mime_type: ~
+      line_count: ~
+      md5: 1725acd5cd6740fe9e8deb6026f17038
+      mtime: 1257527860
+      name: examples/Node/synopsis.pl
+    - bytesize: 5122
+      file_mime_type: ~
+      line_count: ~
+      md5: 1086308d2ffe86fed4350424dfc4ad09
+      mtime: 1257527860
+      name: examples/Node/testequal.pl
+    - bytesize: 2134
+      file_mime_type: ~
+      line_count: ~
+      md5: 72b27c35ad48184771d9ae96a3001ca8
+      mtime: 1265459618
+      name: examples/Node/trans_scheme_default_action.pl
+    - bytesize: 2012
+      file_mime_type: ~
+      line_count: ~
+      md5: a9099cd4f47e018a4c1adbb5bd27094a
+      mtime: 1257527860
+      name: examples/Node/ts_with_ast.pl
+    - bytesize: 100
+      file_mime_type: ~
+      line_count: ~
+      md5: f2c22577facfbaa6867c4c45c5c34a6c
+      mtime: 1261358665
+      name: examples/Node/usetspostfix3.pl
+    - bytesize: 156
+      file_mime_type: ~
+      line_count: ~
+      md5: a2fd94c83b72155098c690dc8beeb4a9
+      mtime: 1257527860
+      name: examples/Node/usetswithtreetransformations2.pl
+    - bytesize: 2176
+      file_mime_type: ~
+      line_count: ~
+      md5: ef5fb09374e8ed6627278d13f64c4fcb
+      mtime: 1261823473
+      name: examples/ParsingStringsAndTrees/I2PIR.trg
+    - bytesize: 723
+      file_mime_type: ~
+      line_count: ~
+      md5: 0637345c030985e1a54bdbc3225c7eee
+      mtime: 1265006447
+      name: examples/ParsingStringsAndTrees/Infix.eyp
+    - bytesize: 539
+      file_mime_type: ~
+      line_count: ~
+      md5: c33d445707e01738262aa85003d51ee8
+      mtime: 1265006447
+      name: examples/ParsingStringsAndTrees/Makefile
+    - bytesize: 306
+      file_mime_type: ~
+      line_count: ~
+      md5: d0bac3ff18ab81e7ecedced93df7b2a8
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/README
+    - bytesize: 20
+      file_mime_type: ~
+      line_count: ~
+      md5: e169040baa70695aa1ab5f3f7995d456
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/fold.inf
+    - bytesize: 1035
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e22957ed8316036ffb5096b53c5e198
+      mtime: 1261821066
+      name: examples/ParsingStringsAndTrees/infix2pir.pl
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: cd3fba39e36f603255d0ff5d1fb27824
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/input1.inf
+    - bytesize: 17
+      file_mime_type: ~
+      line_count: ~
+      md5: 5633c783029d8317acc2e359720433fa
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/simple.inf
+    - bytesize: 34
+      file_mime_type: ~
+      line_count: ~
+      md5: d1e1814c714b1c2d27eee2f32da30485
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/simple2.inf
+    - bytesize: 8
+      file_mime_type: ~
+      line_count: ~
+      md5: b00ef2664bf2d8ba894f06ad27ea1fe3
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/simple3.inf
+    - bytesize: 8
+      file_mime_type: ~
+      line_count: ~
+      md5: 948ec9135e889efc7c8339ca3da5dcfa
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/simple4.inf
+    - bytesize: 5
+      file_mime_type: ~
+      line_count: ~
+      md5: fa268e7805eeea7242dbe73bd916b22d
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/simple5.inf
+    - bytesize: 10
+      file_mime_type: ~
+      line_count: ~
+      md5: c0673e4a66e4ddd00fe4002872bddbd3
+      mtime: 1261819416
+      name: examples/ParsingStringsAndTrees/simple6.inf
+    - bytesize: 1803
+      file_mime_type: ~
+      line_count: ~
+      md5: b85d91b6859ae1ee5d5605a73dad7ec0
+      mtime: 1265460313
+      name: examples/YATW/12ts_simplify_with_s.pl
+    - bytesize: 1758
+      file_mime_type: ~
+      line_count: ~
+      md5: 1967abb924dc1e3a82e39781ac1ca0c0
+      mtime: 1265460315
+      name: examples/YATW/13ts_simplify_with_delete.pl
+    - bytesize: 2110
+      file_mime_type: ~
+      line_count: ~
+      md5: 801c1f2d306c4f8694b2286e6d5f7749
+      mtime: 1257527859
+      name: examples/YATW/26delete_with_trreereg.pl
+    - bytesize: 657
+      file_mime_type: ~
+      line_count: ~
+      md5: 4032dcbd8e92ddd1a7c36114c3dfeaa4
+      mtime: 1261997875
+      name: examples/YATW/Rule6.yp
+    - bytesize: 1228
+      file_mime_type: ~
+      line_count: ~
+      md5: 164da6c6c2430f2cc273f67a3873bee5
+      mtime: 1257527859
+      name: examples/YATW/Tail2.pm
+    - bytesize: 997
+      file_mime_type: ~
+      line_count: ~
+      md5: 87461a4039d9102233216805d3453768
+      mtime: 1261998052
+      name: examples/YATW/foldrule6.pl
+    - bytesize: 542
+      file_mime_type: ~
+      line_count: ~
+      md5: 17027c90ce331079a5bdb13fbadb8d51
+      mtime: 1261998166
+      name: examples/YATW/m2.pl
+    - bytesize: 2266
+      file_mime_type: ~
+      line_count: ~
+      md5: f8e08e4738e9f82c8805a82061bb8f89
+      mtime: 1257527859
+      name: examples/YATW/moveinvariantoutofloopcomplexformula.pl
+    - bytesize: 3198
+      file_mime_type: ~
+      line_count: ~
+      md5: f53a2033446278973b027abd8d3d2f07
+      mtime: 1262518714
+      name: examples/debuggingtut/Cplusplus.eyp
+    - bytesize: 3021
+      file_mime_type: ~
+      line_count: ~
+      md5: b04ceca602418a29d76ea1bf0325226c
+      mtime: 1260826833
+      name: examples/debuggingtut/Cplusplus2.eyp
+    - bytesize: 838
+      file_mime_type: ~
+      line_count: ~
+      md5: f7c8f72c3a720d5b2b636126cd093a0e
+      mtime: 1262866932
+      name: examples/debuggingtut/Debug.eyp
+    - bytesize: 1220
+      file_mime_type: ~
+      line_count: ~
+      md5: 56a64be26a0641a45547a76d70e657af
+      mtime: 1261348347
+      name: examples/debuggingtut/Debug1.eyp
+    - bytesize: 836
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c6c983d7dd52af3082de31b5f3bf54e
+      mtime: 1261389213
+      name: examples/debuggingtut/Debug2.eyp
+    - bytesize: 1145
+      file_mime_type: ~
+      line_count: ~
+      md5: 53ce7273cb4204be5f4d3f9b83358fab
+      mtime: 1262866145
+      name: examples/debuggingtut/DebugDynamicResolution.eyp
+    - bytesize: 827
+      file_mime_type: ~
+      line_count: ~
+      md5: fb17efdcbcd7abebc0c06548bffc2bfb
+      mtime: 1265103678
+      name: examples/debuggingtut/DebugLookForward.eyp
+    - bytesize: 227
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b5a703e541a35c5708efb2503ebad22
+      mtime: 1262268985
+      name: examples/debuggingtut/DebugTail.pm
+    - bytesize: 218
+      file_mime_type: ~
+      line_count: ~
+      md5: df71196e42b99f08bc4456e692db5b1a
+      mtime: 1265386057
+      name: examples/debuggingtut/DynamicallyChangingTheParser.eyp
+    - bytesize: 1572
+      file_mime_type: ~
+      line_count: ~
+      md5: b5e6b60aa3384b1bb00f34ce2a33d9af
+      mtime: 1260833729
+      name: examples/debuggingtut/DynamicallyChangingTheParser2.eyp
+    - bytesize: 1280
+      file_mime_type: ~
+      line_count: ~
+      md5: da5f614c38a55cbc50dd548503f7d725
+      mtime: 1260833738
+      name: examples/debuggingtut/DynamicallyChangingTheParser3.eyp
+    - bytesize: 1481
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c444e5a23ec475b387ba4a131be55d3
+      mtime: 1260835081
+      name: examples/debuggingtut/PL_I_conflict.eyp
+    - bytesize: 901
+      file_mime_type: ~
+      line_count: ~
+      md5: 195186bb6121a4e2addb22eacd36f7ac
+      mtime: 1261434930
+      name: examples/debuggingtut/Precedencia.eyp
+    - bytesize: 333
+      file_mime_type: ~
+      line_count: ~
+      md5: 748d7a5595aead29e51e8cf3cffcf55a
+      mtime: 1260480289
+      name: examples/debuggingtut/RRTail.pm
+    - bytesize: 3726
+      file_mime_type: ~
+      line_count: ~
+      md5: 531b35281587b7554aecf609d40447a0
+      mtime: 1260826833
+      name: examples/debuggingtut/SemanticInfoInTokens.eyp
+    - bytesize: 1046
+      file_mime_type: ~
+      line_count: ~
+      md5: e8589084496f81d32dff19d4a7809de0
+      mtime: 1257527862
+      name: examples/debuggingtut/SimplifiedCplusplusAmbiguity.eyp
+    - bytesize: 2575
+      file_mime_type: ~
+      line_count: ~
+      md5: 7158c3cb8d96ee65defe6f54d9a0b370
+      mtime: 1260694530
+      name: examples/debuggingtut/Tail.pm
+    - bytesize: 2317
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e201aee36f26a29916863d92ec4f6ec
+      mtime: 1260826833
+      name: examples/debuggingtut/Tieins.eyp
+    - bytesize: 226
+      file_mime_type: ~
+      line_count: ~
+      md5: cdc30fc431be028f225792dcce365e5a
+      mtime: 1260606521
+      name: examples/debuggingtut/aSb.yp
+    - bytesize: 166
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ce350f4cb8b2e88cb4fbde58de22f77
+      mtime: 1257527862
+      name: examples/debuggingtut/bugyapp2.eyp
+    - bytesize: 177
+      file_mime_type: ~
+      line_count: ~
+      md5: 87a89299597330afefb968c8f4d4efaa
+      mtime: 1257527862
+      name: examples/debuggingtut/bugyapp3.eyp
+    - bytesize: 1137
+      file_mime_type: ~
+      line_count: ~
+      md5: 159e5d6e22aa455e4db235396ac07ddc
+      mtime: 1260480289
+      name: examples/debuggingtut/confusing.eyp
+    - bytesize: 1099
+      file_mime_type: ~
+      line_count: ~
+      md5: b4f2b70677560c6f646c6264618cc922
+      mtime: 1262003025
+      name: examples/debuggingtut/confusingsolveddynamic.eyp
+    - bytesize: 279
+      file_mime_type: ~
+      line_count: ~
+      md5: d4d8a0d4af489259bae8f335c8a83c53
+      mtime: 1260480289
+      name: examples/debuggingtut/confusingsolvedstatic.eyp
+    - bytesize: 306
+      file_mime_type: ~
+      line_count: ~
+      md5: f2e57c09bd2d4327a78cfba6edea5a07
+      mtime: 1260480289
+      name: examples/debuggingtut/confusingsolvedstatic2.eyp
+    - bytesize: 124
+      file_mime_type: ~
+      line_count: ~
+      md5: 987cd8b56255efa1be8d0aa589545731
+      mtime: 1260480289
+      name: examples/debuggingtut/correcttypicalrr.eyp
+    - bytesize: 600
+      file_mime_type: ~
+      line_count: ~
+      md5: aa5015bc5ed3debee451df7ba12ec3be
+      mtime: 1260480289
+      name: examples/debuggingtut/lr_1_grammar.eyp
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: f65d21045925c953b6ac6105461fc6a3
+      mtime: 1260480289
+      name: examples/debuggingtut/minimalrr.eyp
+    - bytesize: 447
+      file_mime_type: ~
+      line_count: ~
+      md5: c78cf674dcae796892f2c1f79b6c3c7a
+      mtime: 1260481498
+      name: examples/debuggingtut/minimalrr2.eyp
+    - bytesize: 879
+      file_mime_type: ~
+      line_count: ~
+      md5: 68c536ad11b9797d7b30a3d638ca033f
+      mtime: 1260480289
+      name: examples/debuggingtut/nolr_k_grammar.eyp
+    - bytesize: 1304
+      file_mime_type: ~
+      line_count: ~
+      md5: 80b309c3a6196e751e4bb505f76920dd
+      mtime: 1260480289
+      name: examples/debuggingtut/nolr_k_grammarsolveddynamic.eyp
+    - bytesize: 545
+      file_mime_type: ~
+      line_count: ~
+      md5: 8563abe80e4639eefb42f9cfba4b2233
+      mtime: 1257527862
+      name: examples/debuggingtut/nonslrgrammar.eyp
+    - bytesize: 2249
+      file_mime_type: ~
+      line_count: ~
+      md5: f0a0bb19f1d1932f7d918b385612eaf3
+      mtime: 1260617432
+      name: examples/debuggingtut/pascalenumeratedvsrange.eyp
+    - bytesize: 2448
+      file_mime_type: ~
+      line_count: ~
+      md5: 742d28b37b408a1beaf924a2647bdf28
+      mtime: 1260624599
+      name: examples/debuggingtut/pascalenumeratedvsrangesolvedvialex.eyp
+    - bytesize: 767
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cd7d8a8b542847c6098a0c16378c9a7
+      mtime: 1263575097
+      name: examples/debuggingtut/reducereduceconflict.eyp
+    - bytesize: 585
+      file_mime_type: ~
+      line_count: ~
+      md5: 319eab24844270d6e3664dcb618cda7e
+      mtime: 1263575097
+      name: examples/debuggingtut/reducereduceconflict_fix1.eyp
+    - bytesize: 343
+      file_mime_type: ~
+      line_count: ~
+      md5: 43b190c329ae3a3d42d874f51ac3f559
+      mtime: 1257527862
+      name: examples/debuggingtut/reducereduceconflict_fix2.eyp
+    - bytesize: 1264
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b3eff1a20cc32fc2cf3258504ddb886
+      mtime: 1263575097
+      name: examples/debuggingtut/rrconflictnamefirst.eyp
+    - bytesize: 1454
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c59bc7cef230cede2b1a32313b8204b
+      mtime: 1263575097
+      name: examples/debuggingtut/rrconflictnamefirst_fix1.eyp
+    - bytesize: 172
+      file_mime_type: ~
+      line_count: ~
+      md5: 617399c35d6d042985f0c11a85779d7e
+      mtime: 1257527862
+      name: examples/debuggingtut/shiftreduceconflict.eyp
+    - bytesize: 184
+      file_mime_type: ~
+      line_count: ~
+      md5: 05077b7ed069127a6dab8b539033711d
+      mtime: 1257527862
+      name: examples/debuggingtut/shiftreduceconflict_fixed.eyp
+    - bytesize: 1848
+      file_mime_type: ~
+      line_count: ~
+      md5: cc54e09c44e26f197a20ce7eb89d2d60
+      mtime: 1260480289
+      name: examples/debuggingtut/typicalrr.eyp
+    - bytesize: 842
+      file_mime_type: ~
+      line_count: ~
+      md5: 4334b0258201f89754d875d3ae50401f
+      mtime: 1260481498
+      name: examples/debuggingtut/typicalrr2.eyp
+    - bytesize: 728
+      file_mime_type: ~
+      line_count: ~
+      md5: 63845fec6bc9bcd8db2b88311df61152
+      mtime: 1260611869
+      name: examples/debuggingtut/typicalrr_fixed.eyp
+    - bytesize: 712
+      file_mime_type: ~
+      line_count: ~
+      md5: eecc80c31f740b70faf963dbaf20c206
+      mtime: 1260611895
+      name: examples/debuggingtut/typicalrr_fixed_rightrecursive.eyp
+    - bytesize: 1240
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cd4045944a5961cebccdd59542c762d
+      mtime: 1260480289
+      name: examples/debuggingtut/typicalrrwithprec.eyp
+    - bytesize: 771
+      file_mime_type: ~
+      line_count: ~
+      md5: 368e64f91cd24c908680ee89c6d1aa4d
+      mtime: 1265455182
+      name: examples/eyappintro/InputFromStream.eyp
+    - bytesize: 745
+      file_mime_type: ~
+      line_count: ~
+      md5: a7a862f22501c017269c20f608141aa2
+      mtime: 1265386063
+      name: examples/eyappintro/Postfix.eyp
+    - bytesize: 1356
+      file_mime_type: ~
+      line_count: ~
+      md5: a0d5597e4a8a73a2f0b9d875eba7b161
+      mtime: 1257527859
+      name: examples/eyapplanguageref/15treewithsyntactictoken.pl
+    - bytesize: 1225
+      file_mime_type: ~
+      line_count: ~
+      md5: c549390b785016f1eda914af944d1e12
+      mtime: 1264929940
+      name: examples/eyapplanguageref/Calc.eyp
+    - bytesize: 1510
+      file_mime_type: ~
+      line_count: ~
+      md5: 89246f10d7ca672a02b8e3787b3fed09
+      mtime: 1264846029
+      name: examples/eyapplanguageref/CalcUsingTail.eyp
+    - bytesize: 2266
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e8eae10c3deb81455c413b74c4f834e
+      mtime: 1257527859
+      name: examples/eyapplanguageref/CalcwithAttributeGrammar.pl
+    - bytesize: 405
+      file_mime_type: ~
+      line_count: ~
+      md5: cd082920ff7edbf63eb070a13dd422db
+      mtime: 1261001326
+      name: examples/eyapplanguageref/CsBetweenCommansAndD.eyp
+    - bytesize: 585
+      file_mime_type: ~
+      line_count: ~
+      md5: c68239ae56c4e5628159b0dc27b79f39
+      mtime: 1261001326
+      name: examples/eyapplanguageref/CsBetweenCommansAndDWithNames.eyp
+    - bytesize: 1545
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f5652794d99f39ae77756ae9c469677
+      mtime: 1265039325
+      name: examples/eyapplanguageref/Lhs.eyp
+    - bytesize: 619
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ad5d1e2f7ac78f27da1079a6de16298
+      mtime: 1261001326
+      name: examples/eyapplanguageref/List2.yp
+    - bytesize: 198
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a3381354c655c27382d448468d2ac0c
+      mtime: 1264852159
+      name: examples/eyapplanguageref/List3.yp
+    - bytesize: 256
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f9c1a43270968cb37347a98b415f13
+      mtime: 1261001326
+      name: examples/eyapplanguageref/List3_tree.yp
+    - bytesize: 636
+      file_mime_type: ~
+      line_count: ~
+      md5: 1802a17af3696df6de71903d784f599d
+      mtime: 1264849002
+      name: examples/eyapplanguageref/List3_tree_d_sem.yp
+    - bytesize: 204
+      file_mime_type: ~
+      line_count: ~
+      md5: eb9a5bb707f74f09e6330f95a829b5f1
+      mtime: 1261001326
+      name: examples/eyapplanguageref/List5.yp
+    - bytesize: 331
+      file_mime_type: ~
+      line_count: ~
+      md5: 74026c065f62e13a7fbad9b142cbef7f
+      mtime: 1261001326
+      name: examples/eyapplanguageref/ListAndAction.eyp
+    - bytesize: 333
+      file_mime_type: ~
+      line_count: ~
+      md5: 2522e2f8dea60543b918e25bc3a1de88
+      mtime: 1264857404
+      name: examples/eyapplanguageref/ListWithRefs.eyp
+    - bytesize: 368
+      file_mime_type: ~
+      line_count: ~
+      md5: a838c0772fc99e8155b5d3cd575457f0
+      mtime: 1264857268
+      name: examples/eyapplanguageref/ListWithRefs1.eyp
+    - bytesize: 553
+      file_mime_type: ~
+      line_count: ~
+      md5: e043b754560cbb94c6f4f937e9f08f7a
+      mtime: 1264857822
+      name: examples/eyapplanguageref/ListWithRefs2.eyp
+    - bytesize: 28
+      file_mime_type: ~
+      line_count: ~
+      md5: d94c42031949c7b196251933dbbca228
+      mtime: 1257527859
+      name: examples/eyapplanguageref/Makefile
+    - bytesize: 233
+      file_mime_type: ~
+      line_count: ~
+      md5: 8894d1a57ca31c217835892551a3a646
+      mtime: 1261001326
+      name: examples/eyapplanguageref/Parenthesis.eyp
+    - bytesize: 729
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0a7cfcfc83938d14ddd68f60c84cc0
+      mtime: 1265039325
+      name: examples/eyapplanguageref/Postfix.eyp
+    - bytesize: 133
+      file_mime_type: ~
+      line_count: ~
+      md5: 5054627b5700b479cecafd12a8a2bdf2
+      mtime: 1257527859
+      name: examples/eyapplanguageref/README
+    - bytesize: 204
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e878c0ce040d3772531bfe685f6bc46
+      mtime: 1264846249
+      name: examples/eyapplanguageref/Tail.pm
+    - bytesize: 1824
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b55e6d3d540c67cd674227e44787ee1
+      mtime: 1257527859
+      name: examples/eyapplanguageref/YYNameDynamic.eyp
+    - bytesize: 1983
+      file_mime_type: ~
+      line_count: ~
+      md5: 797b1780ead7491626b2b47ce2f9b14d
+      mtime: 1257527859
+      name: examples/eyapplanguageref/alias_and_yyprefix.pl
+    - bytesize: 25
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a1a4612d069c5e5f9ae7650c92610e7
+      mtime: 1257527859
+      name: examples/eyapplanguageref/bugyapp2.eyp
+    - bytesize: 36
+      file_mime_type: ~
+      line_count: ~
+      md5: 57379597a6cc0204b41cd51d9c8888a7
+      mtime: 1257527859
+      name: examples/eyapplanguageref/bugyapp3.eyp
+    - bytesize: 2849
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b6b9d3e863ffe9c829808665a3337f5
+      mtime: 1257527859
+      name: examples/eyapplanguageref/bypass.pl
+    - bytesize: 3760
+      file_mime_type: ~
+      line_count: ~
+      md5: d9cb00ca0d928312565c51fdc4ffc46d
+      mtime: 1257527859
+      name: examples/eyapplanguageref/dynamicyyprefix_and_alias.pl
+    - bytesize: 76
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a457306bdc983f9ba710353588f15eb
+      mtime: 1264845278
+      name: examples/eyapplanguageref/intermediateaction2.yp
+    - bytesize: 840
+      file_mime_type: ~
+      line_count: ~
+      md5: 06cead3b210fe9e807732e35d8a21d75
+      mtime: 1257527859
+      name: examples/eyapplanguageref/intermediateactiontree.yp
+    - bytesize: 803
+      file_mime_type: ~
+      line_count: ~
+      md5: d3325fea28d86850d003aad9537abdd8
+      mtime: 1257527859
+      name: examples/eyapplanguageref/returnnonode.yp
+    - bytesize: 3119
+      file_mime_type: ~
+      line_count: ~
+      md5: 8051648540b3ddd60add46d679c5aa1c
+      mtime: 1257527859
+      name: examples/eyapplanguageref/synopsis.pl
+    - bytesize: 1896
+      file_mime_type: ~
+      line_count: ~
+      md5: 67197169f8b0a17ec069c1fbca622601
+      mtime: 1257527859
+      name: examples/eyapplanguageref/treewithnames.pl
+    - bytesize: 1786
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e03eb6f8d1b2b537240e6416c52902d
+      mtime: 1257527859
+      name: examples/eyapplanguageref/treewithoutnames.pl
+    - bytesize: 159
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d91b98c5a5ed5dbf65cc60a49cfff45
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_csbetweencommansandd.pl
+    - bytesize: 176
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d66c8465ba7d2f01e3170ce3e9d8bfc
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_csbetweencommansanddwithnames.pl
+    - bytesize: 127
+      file_mime_type: ~
+      line_count: ~
+      md5: a36f1d56c4c05d85004e014741f6462c
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_list2.pl
+    - bytesize: 126
+      file_mime_type: ~
+      line_count: ~
+      md5: d285f83388504d0d04de6a9741f78051
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_list3.pl
+    - bytesize: 136
+      file_mime_type: ~
+      line_count: ~
+      md5: 115ac39a3b25375b3dab140a35563df8
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_list3_tree.pl
+    - bytesize: 114
+      file_mime_type: ~
+      line_count: ~
+      md5: e6d091b83649d41741fcb338507fb4d5
+      mtime: 1264848746
+      name: examples/eyapplanguageref/use_list3_tree_d_dem.pl
+    - bytesize: 172
+      file_mime_type: ~
+      line_count: ~
+      md5: 135687eb1b0251301976bacec24d9303
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_list5.pl
+    - bytesize: 218
+      file_mime_type: ~
+      line_count: ~
+      md5: 1049bfa1c60126214b86f99b4c41914b
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_listandaction.pl
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 66611bc05c317d17f9cae0d87747dcc2
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_listwithrefs.pl
+    - bytesize: 142
+      file_mime_type: ~
+      line_count: ~
+      md5: c5bd81fbf6556418f0280758edf02f7f
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_listwithrefs1.pl
+    - bytesize: 143
+      file_mime_type: ~
+      line_count: ~
+      md5: b62becc4501912cb995307fa9a45d573
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_listwithrefs2.pl
+    - bytesize: 214
+      file_mime_type: ~
+      line_count: ~
+      md5: ea781e42f474a6947d2f1b23e61e5cc4
+      mtime: 1261001326
+      name: examples/eyapplanguageref/use_parenthesis.pl
+    - bytesize: 346
+      file_mime_type: ~
+      line_count: ~
+      md5: daa21434c1e304030c6bbaf46ee69ca8
+      mtime: 1264930158
+      name: examples/eyapplanguageref/usecalc.pl
+    - bytesize: 74
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b6450946da8fbaf855f42887258f1a5
+      mtime: 1260918641
+      name: examples/eyapplanguageref/usecalcusingtail.pl
+    - bytesize: 175
+      file_mime_type: ~
+      line_count: ~
+      md5: d9df9e688e8dd1c1567d3c7dded925df
+      mtime: 1261001326
+      name: examples/eyapplanguageref/useintermediateaction2.pl
+    - bytesize: 207
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fcb6ccc83a1bd2cc0ad1d8bf9446557
+      mtime: 1257527859
+      name: examples/eyapplanguageref/useintermediateactiontree.pl
+    - bytesize: 42
+      file_mime_type: ~
+      line_count: ~
+      md5: 58edde458308a8fd40ef8175a60c3a5d
+      mtime: 1260917579
+      name: examples/eyapplanguageref/uselhs.pl
+    - bytesize: 60
+      file_mime_type: ~
+      line_count: ~
+      md5: f54c574295499994c7566f29621064e3
+      mtime: 1260916281
+      name: examples/eyapplanguageref/usepostfix.pl
+    - bytesize: 180
+      file_mime_type: ~
+      line_count: ~
+      md5: d6dd63e556e62b534b4b674f058b25f7
+      mtime: 1257527859
+      name: examples/eyapplanguageref/usereturnnonode.pl
+    - bytesize: 227
+      file_mime_type: ~
+      line_count: ~
+      md5: 41a514da95760a1c9543b3b056dcf0d9
+      mtime: 1257527859
+      name: examples/eyapplanguageref/useyynamedynamic.pl
+    - bytesize: 2840
+      file_mime_type: ~
+      line_count: ~
+      md5: 98b903e390fc366306def6421006ffaa
+      mtime: 1261498549
+      name: examples/generator/GenSupport.pm
+    - bytesize: 1115
+      file_mime_type: ~
+      line_count: ~
+      md5: b988e91dcdc23ba81e1023b7879ce49c
+      mtime: 1261498586
+      name: examples/generator/Generator.eyp
+    - bytesize: 18384
+      file_mime_type: ~
+      line_count: ~
+      md5: dd42d07d55b0d940e84ad632595fbbb0
+      mtime: 1257527874
+      name: examples/languages/C/ansic.eyp
+    - bytesize: 75
+      file_mime_type: ~
+      line_count: ~
+      md5: e53fa5e1fdc25048cbeb9cd6c0d7c72f
+      mtime: 1257527874
+      name: examples/languages/C/boolean.c
+    - bytesize: 40
+      file_mime_type: ~
+      line_count: ~
+      md5: c679cf0f1181ff8ded66d2b777455147
+      mtime: 1257527874
+      name: examples/languages/C/booleanlist.c
+    - bytesize: 99
+      file_mime_type: ~
+      line_count: ~
+      md5: 8105983384f0d8e41fa3b6682447127e
+      mtime: 1257527874
+      name: examples/languages/C/charpointer.c
+    - bytesize: 112
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a9c3664c2ff0dd9d35347ba95432aeb
+      mtime: 1257527874
+      name: examples/languages/C/charpointer2.c
+    - bytesize: 553
+      file_mime_type: ~
+      line_count: ~
+      md5: d2dc7b312b664a64cb7e1c7ed11ca10e
+      mtime: 1257527874
+      name: examples/languages/C/functypedef.c
+    - bytesize: 2027
+      file_mime_type: ~
+      line_count: ~
+      md5: c3a531217b8db6ab941c504e1e202c24
+      mtime: 1257527874
+      name: examples/languages/C/linkedlists.c
+    - bytesize: 32
+      file_mime_type: ~
+      line_count: ~
+      md5: bfd6aba042275243d20be33c62c199c1
+      mtime: 1257527874
+      name: examples/languages/C/prueba.c
+    - bytesize: 78
+      file_mime_type: ~
+      line_count: ~
+      md5: 0be3fb20802b4bf5e5c52ffd404dfb5b
+      mtime: 1257527874
+      name: examples/languages/C/typedef.c
+    - bytesize: 160
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c0b64f2d70015ea8e00e1cd4a305b86
+      mtime: 1257527874
+      name: examples/languages/pascal/arrayreftest.p
+    - bytesize: 308
+      file_mime_type: ~
+      line_count: ~
+      md5: 249908686e4dc177cbb61b01d475f7fb
+      mtime: 1257527874
+      name: examples/languages/pascal/arraytest.p
+    - bytesize: 54
+      file_mime_type: ~
+      line_count: ~
+      md5: d228a692436243da17157a050fd06abe
+      mtime: 1257527874
+      name: examples/languages/pascal/hello.p
+    - bytesize: 80
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b328855c90759fbe1a7ac42aed60cec
+      mtime: 1257527874
+      name: examples/languages/pascal/hello2.p
+    - bytesize: 15544
+      file_mime_type: ~
+      line_count: ~
+      md5: 84f0e7c48f2bde6984a3809b40050bbc
+      mtime: 1257527874
+      name: examples/languages/pascal/pascal.eyp
+    - bytesize: 329
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ce3bca971b61b9583cc3f64a4066f0c
+      mtime: 1257527874
+      name: examples/languages/pascal/proctest.p
+    - bytesize: 207
+      file_mime_type: ~
+      line_count: ~
+      md5: 661aec5e174413b5ce08c89bba959924
+      mtime: 1257527874
+      name: examples/languages/pascal/types.p
+    - bytesize: 1310
+      file_mime_type: ~
+      line_count: ~
+      md5: 57da850c6fbc11660748333a118462ea
+      mtime: 1261954938
+      name: examples/naming/GiveNamesToCalc.eyp
+    - bytesize: 830
+      file_mime_type: ~
+      line_count: ~
+      md5: db5b8df12bd3afa643b27e4b213e1bf5
+      mtime: 1261954056
+      name: examples/naming/Tail.pm
+    - bytesize: 511
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d701d69deea7e8000b78f7988801502
+      mtime: 1261956464
+      name: examples/naming/default_naming_scheme.eyp
+    - bytesize: 678
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f606bd0827c3b816c2c9712a71ca7c2
+      mtime: 1261956706
+      name: examples/naming/explicit_default_naming_scheme.eyp
+    - bytesize: 1240
+      file_mime_type: ~
+      line_count: ~
+      md5: bd6ada953a31fbf2f2fc357d8fafcf02
+      mtime: 1261957417
+      name: examples/naming/give_names_to_tokens.eyp
+    - bytesize: 1095
+      file_mime_type: ~
+      line_count: ~
+      md5: f192f2ebee7719ba1e8df83efe796725
+      mtime: 1261957470
+      name: examples/naming/give_token_names.eyp
+    - bytesize: 461
+      file_mime_type: ~
+      line_count: ~
+      md5: 59c7c30957a7604629bb80430557678d
+      mtime: 1261482762
+      name: examples/recycle/CommonTail.pm
+    - bytesize: 1514
+      file_mime_type: ~
+      line_count: ~
+      md5: 677e59bf9c76bb4a071384bff627cd60
+      mtime: 1261497671
+      name: examples/recycle/ManualTree.yp
+    - bytesize: 521
+      file_mime_type: ~
+      line_count: ~
+      md5: 5defd89fc7802d291f92c9507fde09aa
+      mtime: 1261479393
+      name: examples/recycle/NoacInh.eyp
+    - bytesize: 469
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ff5e87d590eff175c8bb895a98f8b32
+      mtime: 1261484299
+      name: examples/recycle/NoacYYDelegateaction.eyp
+    - bytesize: 721
+      file_mime_type: ~
+      line_count: ~
+      md5: 1620188a263fcdc9c35bfd0a3fb11442
+      mtime: 1261482161
+      name: examples/recycle/Noactions.eyp
+    - bytesize: 587
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c97d59be50273b5ef0d730a2dc22020
+      mtime: 1261205832
+      name: examples/recycle/Postfix.eyp
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: cad580d07bd0db0c275029603ff8ad7c
+      mtime: 1262007399
+      name: examples/recycle/PostfixWithActions.eyp
+    - bytesize: 44
+      file_mime_type: ~
+      line_count: ~
+      md5: 5989d8ca17e9690c11666ca1e2b17bcd
+      mtime: 1257527860
+      name: examples/recycle/README
+    - bytesize: 376
+      file_mime_type: ~
+      line_count: ~
+      md5: 0680815d9f8bb231c6e288071fbd5514
+      mtime: 1261205832
+      name: examples/recycle/calcu.pl
+    - bytesize: 635
+      file_mime_type: ~
+      line_count: ~
+      md5: 49664b7b6f2f4590047e9cfb41b38096
+      mtime: 1261205832
+      name: examples/recycle/calcu_and_post.pl
+    - bytesize: 476
+      file_mime_type: ~
+      line_count: ~
+      md5: 46b53309a845cb1add70bfba5fed99b6
+      mtime: 1261481984
+      name: examples/recycle/icalcu.pl
+    - bytesize: 604
+      file_mime_type: ~
+      line_count: ~
+      md5: 457e177e602c3531c060e16ab0fd72d5
+      mtime: 1261205832
+      name: examples/recycle/icalcu_and_ipost.pl
+    - bytesize: 682
+      file_mime_type: ~
+      line_count: ~
+      md5: 6675110c4061679e335efef31bbaf1d6
+      mtime: 1261484522
+      name: examples/recycle/icalcu_and_ipost_yydel.pl
+    - bytesize: 480
+      file_mime_type: ~
+      line_count: ~
+      md5: 95ed2965ffbc11ac9a1181e44925c132
+      mtime: 1261205832
+      name: examples/recycle/ipostf.pl
+    - bytesize: 386
+      file_mime_type: ~
+      line_count: ~
+      md5: f586e77b83c376b397aa06391f7669a1
+      mtime: 1261482129
+      name: examples/recycle/postf.pl
+    - bytesize: 1273
+      file_mime_type: ~
+      line_count: ~
+      md5: b57e8e30f4422297102829739d992069
+      mtime: 1262007346
+      name: examples/recycle/rewritepostfixwithactions.pl
+    - bytesize: 81
+      file_mime_type: ~
+      line_count: ~
+      md5: ceec3b9c807f3c641f0227df28630dd0
+      mtime: 1257527873
+      name: examples/translationschemestut/README
+    - bytesize: 2182
+      file_mime_type: ~
+      line_count: ~
+      md5: dfccd9a587f806a59c96346509de58df
+      mtime: 1261930016
+      name: examples/translationschemestut/trans_scheme_default_action.pl
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: 6828a02219763f05265cb1cac9bc7ab3
+      mtime: 1261929549
+      name: examples/translationschemestut/trans_scheme_simple_decls4.pl
+    - bytesize: 353
+      file_mime_type: ~
+      line_count: ~
+      md5: 922307fb224bae99892f3c1ff73e766c
+      mtime: 1257527877
+      name: examples/typechecking/README
+    - bytesize: 22609
+      file_mime_type: ~
+      line_count: ~
+      md5: ee99f2be2c07e9a129de16204d5d827e
+      mtime: 1257527877
+      name: examples/typechecking/Simple-Types-0.4.tar.gz
+    - bytesize: 10298
+      file_mime_type: ~
+      line_count: ~
+      md5: 34342a52d9d79a596c8f0e4d62ecd97d
+      mtime: 1265106812
+      name: eyapp
+    - bytesize: 313
+      file_mime_type: ~
+      line_count: ~
+      md5: ed66a1f4e249a683bb9dbc785f190ddd
+      mtime: 1269959714
+      name: lib/Parse/Eyapp.pm
+    - bytesize: 152696
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a6cf98c370899cd6b616c037bfc670d
+      mtime: 1269960036
+      name: lib/Parse/Eyapp.pod
+    - bytesize: 6677
+      file_mime_type: ~
+      line_count: ~
+      md5: 39358f3d5ffd7457a2bcc72f7412cd4a
+      mtime: 1262344864
+      name: lib/Parse/Eyapp/Base.pm
+    - bytesize: 15505
+      file_mime_type: ~
+      line_count: ~
+      md5: 489f80a110cffedb2850fda11b21de24
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/Base.pod
+    - bytesize: 10885
+      file_mime_type: ~
+      line_count: ~
+      md5: 029c0fffa6b4e6ba48b99f2337ff8610
+      mtime: 1265042059
+      name: lib/Parse/Eyapp/Cleaner.pm
+    - bytesize: 44445
+      file_mime_type: ~
+      line_count: ~
+      md5: fcf0d2f5747d3bc63c10309b926c0aea
+      mtime: 1269959736
+      name: lib/Parse/Eyapp/Driver.pm
+    - bytesize: 29401
+      file_mime_type: ~
+      line_count: ~
+      md5: 11e10a17e8a91ef8a260b6a42213dba4
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/Driver.pod
+    - bytesize: 17182
+      file_mime_type: ~
+      line_count: ~
+      md5: c3d574a3bb121a02e6ce3ea7f8320d75
+      mtime: 1265454478
+      name: lib/Parse/Eyapp/Grammar.pm
+    - bytesize: 28427
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a1f2c10366099412b0f1b660fea50d4
+      mtime: 1264783341
+      name: lib/Parse/Eyapp/Lalr.pm
+    - bytesize: 778
+      file_mime_type: ~
+      line_count: ~
+      md5: bc5ad0cac2184f8515f2ef181e2dd555
+      mtime: 1257527856
+      name: lib/Parse/Eyapp/Makefile
+    - bytesize: 13483
+      file_mime_type: ~
+      line_count: ~
+      md5: ee324788d0e893cbe029f5801d4e7e56
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/MatchingTrees.pod
+    - bytesize: 26849
+      file_mime_type: ~
+      line_count: ~
+      md5: 72a404c2985f4b10e8bcb9253d036d67
+      mtime: 1265386056
+      name: lib/Parse/Eyapp/Node.pm
+    - bytesize: 59816
+      file_mime_type: ~
+      line_count: ~
+      md5: 7abf719c909c5e0114a8975dd6962773
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/Node.pod
+    - bytesize: 5282
+      file_mime_type: ~
+      line_count: ~
+      md5: e77d1378d423b8d8dee29b808b6da1a4
+      mtime: 1265105907
+      name: lib/Parse/Eyapp/Options.pm
+    - bytesize: 12570
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c96585d5dfeb781a35de31ea47bf7cf
+      mtime: 1265453886
+      name: lib/Parse/Eyapp/Output.pm
+    - bytesize: 69552
+      file_mime_type: ~
+      line_count: ~
+      md5: f856501b2de6a276d2357da78be21ede
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/Parse.pm
+    - bytesize: 135001
+      file_mime_type: ~
+      line_count: ~
+      md5: be0488a05e1c9c5b0d8bc4c4dc782ae0
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/Parse.pod
+    - bytesize: 41307
+      file_mime_type: ~
+      line_count: ~
+      md5: 0470c7308125035a2b3214340ffb1fc3
+      mtime: 1265451734
+      name: lib/Parse/Eyapp/Parse.yp
+    - bytesize: 4349
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b2eaabefdc5bae8e7fd1ce26febcc29
+      mtime: 1257527856
+      name: lib/Parse/Eyapp/Scope.pm
+    - bytesize: 18673
+      file_mime_type: ~
+      line_count: ~
+      md5: bf91b86d8f6f5bfcc963f71aaf380252
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/Scope.pod
+    - bytesize: 2204
+      file_mime_type: ~
+      line_count: ~
+      md5: 04cad5cff98dc7fc5ebffae760ad9479
+      mtime: 1257527856
+      name: lib/Parse/Eyapp/TokenGen.pm
+    - bytesize: 5192
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a64cbc62d364635a791cec2b2e07706
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/TokenGen.pod
+    - bytesize: 51629
+      file_mime_type: ~
+      line_count: ~
+      md5: 4da92dfab1e11e097f7628c1cdf16510
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/Treeregexp.pm
+    - bytesize: 19821
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a5e4d6eb62415079b9d3936f458a555
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/Treeregexp.pod
+    - bytesize: 30788
+      file_mime_type: ~
+      line_count: ~
+      md5: d15ab03a47cdfd60b760566a425b6418
+      mtime: 1257527856
+      name: lib/Parse/Eyapp/Treeregexp.yp
+    - bytesize: 8280
+      file_mime_type: ~
+      line_count: ~
+      md5: b33201991e498d7f398e0c1dc1a3ce40
+      mtime: 1261655631
+      name: lib/Parse/Eyapp/YATW.pm
+    - bytesize: 18541
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f0d3e160eca7130a10ac49927575b4c
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/YATW.pod
+    - bytesize: 1378
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d9b7a7ee4ab7a0b0876247a0fa9e866
+      mtime: 1257527856
+      name: lib/Parse/Eyapp/_TreeregexpSupport.pm
+    - bytesize: 25322
+      file_mime_type: ~
+      line_count: ~
+      md5: 660e4e33c882f090383a45d6438c28bf
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/datagenerationtut.pod
+    - bytesize: 101609
+      file_mime_type: ~
+      line_count: ~
+      md5: cc291cc173652abbc106114a9fa4ce64
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/debuggingtut.pod
+    - bytesize: 24256
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a612d9ace937f432a5d15cd00ed5862
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/defaultactionsintro.pod
+    - bytesize: 26778
+      file_mime_type: ~
+      line_count: ~
+      md5: e4e8eb24a5bfa439ad809efb99f4105a
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/eyappintro.pod
+    - bytesize: 134487
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a99346f7c145283b413df94c2f3166e
+      mtime: 1269960035
+      name: lib/Parse/Eyapp/eyapplanguageref.pod
+    - bytesize: 14985
+      file_mime_type: ~
+      line_count: ~
+      md5: fc17151e1391baae0cd52e82b012c8e8
+      mtime: 1269960036
+      name: lib/Parse/Eyapp/translationschemestut.pod
+    - bytesize: 2664
+      file_mime_type: ~
+      line_count: ~
+      md5: a3c76cf47a1013c46f3728100b710ffe
+      mtime: 1257527855
+      name: t/01calc.t
+    - bytesize: 1995
+      file_mime_type: ~
+      line_count: ~
+      md5: e1cdce0a91c7bf5cd04356faeb9807be
+      mtime: 1257527855
+      name: t/03newgrammar.t
+    - bytesize: 2862
+      file_mime_type: ~
+      line_count: ~
+      md5: a3fc623f740b4b20fa89cad5347bd286
+      mtime: 1257527855
+      name: t/04foldandzero.t
+    - bytesize: 2760
+      file_mime_type: ~
+      line_count: ~
+      md5: a3a9b72b3e879a7e579b671d3b51745c
+      mtime: 1257527855
+      name: t/05treewithvars.t
+    - bytesize: 2799
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a276288e8dd1e7c63983aab4295cb25
+      mtime: 1257527855
+      name: t/06meta.t
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: 12ea9299b69148930e7bdd8315578e90
+      mtime: 1257527855
+      name: t/07translationschemetype.t
+    - bytesize: 2407
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e751a5656a87f0c3977b99310ffeed5
+      mtime: 1257527855
+      name: t/08tschemetypestar.t
+    - bytesize: 2224
+      file_mime_type: ~
+      line_count: ~
+      md5: ea9c5f7b013a94268ffe7aa1884d0a15
+      mtime: 1257527855
+      name: t/09ts_with_defaultaction.t
+    - bytesize: 3299
+      file_mime_type: ~
+      line_count: ~
+      md5: 06fcad84a62bba1b4d2905cd14913fb2
+      mtime: 1257527855
+      name: t/10ts_with_treereg.t
+    - bytesize: 2713
+      file_mime_type: ~
+      line_count: ~
+      md5: f09a0aeaf7af0fa4221e325a981ee209
+      mtime: 1257527855
+      name: t/11ts_simplify_codes.t
+    - bytesize: 3291
+      file_mime_type: ~
+      line_count: ~
+      md5: dc34ff8c217e8ad0765a2aa5442bf957
+      mtime: 1257527855
+      name: t/12ts_simplify_with_s.t
+    - bytesize: 3599
+      file_mime_type: ~
+      line_count: ~
+      md5: 14295dffebfe81ff7b6edd39b658a8f4
+      mtime: 1257527855
+      name: t/13ts_simplify_with_delete.t
+    - bytesize: 3539
+      file_mime_type: ~
+      line_count: ~
+      md5: efd30d9936b9923deacc582435737b49
+      mtime: 1257527855
+      name: t/14ts_simplify_with_trreereg.t
+    - bytesize: 1660
+      file_mime_type: ~
+      line_count: ~
+      md5: 009b03148459076109b88384ba9b1b01
+      mtime: 1257527855
+      name: t/15treeregswith2arrays.t
+    - bytesize: 1609
+      file_mime_type: ~
+      line_count: ~
+      md5: 831c99084595dc1b7e015d553c664e0d
+      mtime: 1257527855
+      name: t/16treeregswitharrayattheend.t
+    - bytesize: 1975
+      file_mime_type: ~
+      line_count: ~
+      md5: c55d92e8f843aadc959cf1eeea51aa8d
+      mtime: 1257527855
+      name: t/17fatherisscalar.t
+    - bytesize: 2017
+      file_mime_type: ~
+      line_count: ~
+      md5: 49948377275264f6df9f1e57981e8202
+      mtime: 1257527855
+      name: t/18fatherpatternwitharrays.t
+    - bytesize: 2068
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cb5fdd98588abc4204fb813f5d69549
+      mtime: 1257527855
+      name: t/19treeregswitharrays2transf.t
+    - bytesize: 2107
+      file_mime_type: ~
+      line_count: ~
+      md5: 79e11f4f901334219bc3bfac4fbad0ef
+      mtime: 1257527855
+      name: t/20treeregswitharrays2transf.t
+    - bytesize: 1950
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fbb95e17f97b0fe5599b3c175c5bf59
+      mtime: 1257527855
+      name: t/21fatherisdot.t
+    - bytesize: 1976
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e5c321dbfbb1cc992ad333047e38b9
+      mtime: 1257527855
+      name: t/22treeregswithregexpwithid.t
+    - bytesize: 1974
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d954f8d39d533454bff71f4c806041a
+      mtime: 1257527855
+      name: t/23treeregswitharraysandregexps.t
+    - bytesize: 2263
+      file_mime_type: ~
+      line_count: ~
+      md5: 7294d8e1fb2f8556e73b6df4284b4cd0
+      mtime: 1257527855
+      name: t/24prefixes.t
+    - bytesize: 2570
+      file_mime_type: ~
+      line_count: ~
+      md5: 02b03ac5410081e797c862108e1255e0
+      mtime: 1257527855
+      name: t/25foldwithnew.t
+    - bytesize: 2660
+      file_mime_type: ~
+      line_count: ~
+      md5: 43ee78711124a44df88932c078c4edd1
+      mtime: 1257527855
+      name: t/26foldwithnewwithvars.t
+    - bytesize: 3749
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f1a272adffbabd3679145ded5b5a7b4
+      mtime: 1257527855
+      name: t/27unshiftinmyself.t
+    - bytesize: 3837
+      file_mime_type: ~
+      line_count: ~
+      md5: a996e73663ec3fcb35373c3620a90855
+      mtime: 1257527855
+      name: t/28unshifttwoitems.t
+    - bytesize: 2772
+      file_mime_type: ~
+      line_count: ~
+      md5: 68a135975e40eb3f97e546244551ee4a
+      mtime: 1257527855
+      name: t/29foldinglistsofexpressions.t
+    - bytesize: 4490
+      file_mime_type: ~
+      line_count: ~
+      md5: eb7eeec5d400efaab570c6b7d4c29485
+      mtime: 1257527855
+      name: t/30complextreereg.t
+    - bytesize: 5513
+      file_mime_type: ~
+      line_count: ~
+      md5: cec9d63759d8d5e7f06b662109e7c9b8
+      mtime: 1257527855
+      name: t/32deletenodewithwarn.t
+    - bytesize: 5060
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b4b4ab91d61bc0228e55bebcf8cf9f4
+      mtime: 1257527855
+      name: t/33moveinvariantoutofloop.t
+    - bytesize: 6599
+      file_mime_type: ~
+      line_count: ~
+      md5: 492c0f3cedaaddf8b8d66d3ad18aab59
+      mtime: 1257527855
+      name: t/34moveinvariantoutofloopcomplexformula.t
+    - bytesize: 3692
+      file_mime_type: ~
+      line_count: ~
+      md5: 366216b5bdb0094a972ec5eaaf307f93
+      mtime: 1257527855
+      name: t/35match.t
+    - bytesize: 3221
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c1ffacf2769d2dec2a3866338187169
+      mtime: 1257527855
+      name: t/36tswithmultipledefact.t
+    - bytesize: 2930
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e34f4b39b2c57a93d783426a822f379
+      mtime: 1257527855
+      name: t/37tsplus.t
+    - bytesize: 2981
+      file_mime_type: ~
+      line_count: ~
+      md5: b58f58498598b1172f11ffbd8800405e
+      mtime: 1257527855
+      name: t/38tspostfix_resultisarray.t
+    - bytesize: 2296
+      file_mime_type: ~
+      line_count: ~
+      md5: 9263dd9f6897eb7e16b76547414807a7
+      mtime: 1257527855
+      name: t/39tspostfix.t
+    - bytesize: 1763
+      file_mime_type: ~
+      line_count: ~
+      md5: f807c0b755d117cafda41eb71728b6b7
+      mtime: 1257527855
+      name: t/40wrongoptionforTreeregexp_new.t
+    - bytesize: 5541
+      file_mime_type: ~
+      line_count: ~
+      md5: c3ddf9337cd54bb8ed9ec75190dbfe27
+      mtime: 1257527855
+      name: t/41indexbug.t
+    - bytesize: 691
+      file_mime_type: ~
+      line_count: ~
+      md5: 498f4a385b6ea35e73513da4797a4fe8
+      mtime: 1257527855
+      name: t/42pod.t
+    - bytesize: 4224
+      file_mime_type: ~
+      line_count: ~
+      md5: 5272aa2b30611a8c15d710cee1ab39ea
+      mtime: 1257527855
+      name: t/43dotandscalar.t
+    - bytesize: 2855
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f5191964250edf796792ff9776ea5fb
+      mtime: 1257527855
+      name: t/44repeatedarray.t
+    - bytesize: 3049
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ce7a13a2b1e4678888128ece0e4a1c4
+      mtime: 1257527855
+      name: t/45starandarray.t
+    - bytesize: 5508
+      file_mime_type: ~
+      line_count: ~
+      md5: db578cdfe15e844cb85d462b6f41173a
+      mtime: 1257527855
+      name: t/46starandstar.t
+    - bytesize: 4481
+      file_mime_type: ~
+      line_count: ~
+      md5: 459e69d3c0b4cf90c9c318db78e597b5
+      mtime: 1257527855
+      name: t/47ruleindex.t
+    - bytesize: 4289
+      file_mime_type: ~
+      line_count: ~
+      md5: d2c96c4ba9f18cd85eacadbd3e128f31
+      mtime: 1257527855
+      name: t/48yyprefix.t
+    - bytesize: 6768
+      file_mime_type: ~
+      line_count: ~
+      md5: a7025bf96ef2ecbeaf7a2f1ba1e4c627
+      mtime: 1257527855
+      name: t/49conflicts.t
+    - bytesize: 16367
+      file_mime_type: ~
+      line_count: ~
+      md5: c6c7edcc3e8625030ebd954bf055d9a3
+      mtime: 1257527855
+      name: t/50SimpleChalfscope.t
+    - bytesize: 1932
+      file_mime_type: ~
+      line_count: ~
+      md5: ebb77d6e94065729ff8412fc91e57d5c
+      mtime: 1257527855
+      name: t/52accesors.t
+    - bytesize: 1939
+      file_mime_type: ~
+      line_count: ~
+      md5: abe3783e7fd567ac0f65d7842ef8af8a
+      mtime: 1257527855
+      name: t/53accessorsskip.t
+    - bytesize: 3757
+      file_mime_type: ~
+      line_count: ~
+      md5: da8485af2111f5564fcef91a58c33cb9
+      mtime: 1257527855
+      name: t/54alias_and_yyprefix.t
+    - bytesize: 1873
+      file_mime_type: ~
+      line_count: ~
+      md5: 367f990a4d35789f132c52d74b40cdfb
+      mtime: 1257527855
+      name: t/55builder.t
+    - bytesize: 498
+      file_mime_type: ~
+      line_count: ~
+      md5: 98eb0e756cf618d5310b2826048f5873
+      mtime: 1257527855
+      name: t/56equal.t
+    - bytesize: 5165
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d3d7a9dbcfc105a0f8899fe5ec4c7e0
+      mtime: 1257527855
+      name: t/57testequal.t
+    - bytesize: 1027
+      file_mime_type: ~
+      line_count: ~
+      md5: 964a297f7bb5d02221c16fa937a30aff
+      mtime: 1257527855
+      name: t/58standalone.t
+    - bytesize: 1435
+      file_mime_type: ~
+      line_count: ~
+      md5: c2a175f8aa3d066a47d91ef5d38bda65
+      mtime: 1257527855
+      name: t/59newgrammarerrors.t
+    - bytesize: 3761
+      file_mime_type: ~
+      line_count: ~
+      md5: c05210e080441f701c9c6a8cc81efbc4
+      mtime: 1257527855
+      name: t/60dynamicyyprefix_and_alias.t
+    - bytesize: 551
+      file_mime_type: ~
+      line_count: ~
+      md5: b931dad01a62adf3b8eff10bb5366664
+      mtime: 1257527855
+      name: t/61standalonegift.t
+    - bytesize: 4718
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f468c459a4f0ae2036c8dcee372e0c7
+      mtime: 1257527855
+      name: t/62docinsideeyapp.t
+    - bytesize: 4678
+      file_mime_type: ~
+      line_count: ~
+      md5: c1bf16f059a6d7bc9b7d3246850c2895
+      mtime: 1257527855
+      name: t/63docwithdoublecut.t
+    - bytesize: 584
+      file_mime_type: ~
+      line_count: ~
+      md5: 67ef9126b56b6ef3f5c877c20b28cef9
+      mtime: 1257527855
+      name: t/64standalonegiftandeyapp.t
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 405f09986981c06636433636dee57d25
+      mtime: 1263971246
+      name: t/65yydebugandpod.t
+    - bytesize: 1019
+      file_mime_type: ~
+      line_count: ~
+      md5: cd35db818155d58e3b6c5bf9c16b5e15
+      mtime: 1263971246
+      name: t/66yydebugstandaloneandpod.t
+    - bytesize: 4696
+      file_mime_type: ~
+      line_count: ~
+      md5: 35cde14901826af5a188e91893bae8d9
+      mtime: 1257527855
+      name: t/67outputfile.t
+    - bytesize: 1078
+      file_mime_type: ~
+      line_count: ~
+      md5: 969a9dad4aafd6bd789ca2dac13f15b6
+      mtime: 1257527855
+      name: t/68cleangrammar.t
+    - bytesize: 1070
+      file_mime_type: ~
+      line_count: ~
+      md5: 38c3f7dc512b265fcb20f56c67e4ac6d
+      mtime: 1257527855
+      name: t/69cleanwithvgrammar.t
+    - bytesize: 458
+      file_mime_type: ~
+      line_count: ~
+      md5: 24ba6038b1921655d463b464b481093f
+      mtime: 1257527855
+      name: t/70dos2unix.t
+    - bytesize: 2809
+      file_mime_type: ~
+      line_count: ~
+      md5: c1b5d897c931294be6e8d982c60d4c3d
+      mtime: 1264783340
+      name: t/71dynamicconflictresolution.t
+    - bytesize: 731
+      file_mime_type: ~
+      line_count: ~
+      md5: bf7f60f80f4ecfc5ee11acdea05f20a9
+      mtime: 1261659822
+      name: t/72mixedstandaloneanddynamicload.t
+    - bytesize: 1586
+      file_mime_type: ~
+      line_count: ~
+      md5: 771f286da9114674893d7757e5132f01
+      mtime: 1261657955
+      name: t/73dynamicshiftreduceconflictresolution.t
+    - bytesize: 2935
+      file_mime_type: ~
+      line_count: ~
+      md5: c417e47a8fdeece3b1d2f01c67ba0369
+      mtime: 1262008574
+      name: t/74lalrdependanttest.t
+    - bytesize: 1224
+      file_mime_type: ~
+      line_count: ~
+      md5: a3647dab380c2fdef708b59602c15ae6
+      mtime: 1264783340
+      name: t/75tokenandvariablewiththesamename.t
+    - bytesize: 234
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fc1e911be338fc77dd604526e2a58d8
+      mtime: 1257527855
+      name: t/98nopm.t
+    - bytesize: 5281101
+      file_mime_type: ~
+      line_count: ~
+      md5: d017d11e914f12ea34463b04e8d1a524
+      mtime: 1257527855
+      name: t/99Cplusplusgrammar.t
+    - bytesize: 1992
+      file_mime_type: ~
+      line_count: ~
+      md5: 98ca398123ee92dd2dd81118b0f77691
+      mtime: 1257527855
+      name: t/Calc.eyp
+    - bytesize: 779
+      file_mime_type: ~
+      line_count: ~
+      md5: 890a8d69adb2612b1b337d625cafb14d
+      mtime: 1257527855
+      name: t/Debug2.eyp
+    - bytesize: 34747
+      file_mime_type: ~
+      line_count: ~
+      md5: 99ef41a57db8bf4688c45566c6bc712f
+      mtime: 1257527855
+      name: t/Gift.yp
+    - bytesize: 11357
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b1e0f8d5ce2215476d22fa210902c23
+      mtime: 1257527855
+      name: t/pascal.yp
+    - bytesize: 10248
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a1f744af06b082b261cc586ffafc7f8
+      mtime: 1257527888
+      name: treereg
+    - bytesize: 4895
+      file_mime_type: ~
+      line_count: ~
+      md5: 2202ef49c3af5c3b6072b0c9dcb9d70c
+      mtime: 1263577968
+      name: vgg
+  module_info:
+    - bytesize: 313
+      file_mime_type: ~
+      line_count: ~
+      md5: 75323ca63c0b00ce3cfaa49446e2ba02
+      module_name_from_file_guess: Parse::Eyapp
+      mtime: 1269959714
+      name: blib/lib/Parse/Eyapp.pm
+      packages:
+        - Parse::Eyapp
+      primary_package: Parse::Eyapp
+      uses:
+        - ''
+        - strict
+        - Parse::Eyapp::Output
+      version_info:
+        filename: blib/lib/Parse/Eyapp.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 1.158
+    - bytesize: 6677
+      file_mime_type: ~
+      line_count: ~
+      md5: 553f5659d71105269efd83a51ae23678
+      module_name_from_file_guess: Parse::Eyapp::Base
+      mtime: 1262344864
+      name: blib/lib/Parse/Eyapp/Base.pm
+      packages:
+        - Parse::Eyapp::Base
+      primary_package: Parse::Eyapp::Base
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - List::Util
+        - base
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10885
+      file_mime_type: ~
+      line_count: ~
+      md5: 7af6c6ee4cc3286adfdf5ee8f94a0c22
+      module_name_from_file_guess: Parse::Eyapp::Cleaner
+      mtime: 1265042059
+      name: blib/lib/Parse/Eyapp/Cleaner.pm
+      packages:
+        - Parse::Eyapp::Cleaner
+      primary_package: Parse::Eyapp::Cleaner
+      uses:
+        - warnings
+        - strict
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Cleaner.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 44445
+      file_mime_type: ~
+      line_count: ~
+      md5: 47c52de60bdf36490988f1e5e356f869
+      module_name_from_file_guess: Parse::Eyapp::Driver
+      mtime: 1269959736
+      name: blib/lib/Parse/Eyapp/Driver.pm
+      packages:
+        - Parse::Eyapp::Driver
+      primary_package: Parse::Eyapp::Driver
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Scalar::Util
+        - Getopt::Long
+        - Pod::Usage
+        - Data::Dumper
+        - YAML
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Driver.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 1.158
+    - bytesize: 17182
+      file_mime_type: ~
+      line_count: ~
+      md5: d5e10189a0ee7d0d51acc39d85b775db
+      module_name_from_file_guess: Parse::Eyapp::Grammar
+      mtime: 1265454478
+      name: blib/lib/Parse/Eyapp/Grammar.pm
+      packages:
+        - Parse::Eyapp::Grammar
+      primary_package: Parse::Eyapp::Grammar
+      uses:
+        - ''
+        - Carp
+        - strict
+        - Parse::Eyapp::Options
+        - Parse::Eyapp::Parse
+        - Scalar::Util
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Grammar.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 28427
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d4c4c70cd64946d2c139423b4d35639
+      module_name_from_file_guess: Parse::Eyapp::Lalr
+      mtime: 1264783341
+      name: blib/lib/Parse/Eyapp/Lalr.pm
+      packages:
+        - Parse::Eyapp::Lalr
+      primary_package: Parse::Eyapp::Lalr
+      uses:
+        - ''
+        - Parse::Eyapp::Grammar
+        - Data::Dumper
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Lalr.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 26849
+      file_mime_type: ~
+      line_count: ~
+      md5: 788186dc6df96d13c903fff0eb462859
+      module_name_from_file_guess: Parse::Eyapp::Node
+      mtime: 1265386056
+      name: blib/lib/Parse/Eyapp/Node.pm
+      packages:
+        - Parse::Eyapp::Node
+        - Parse::Eyapp::Node::Match
+      primary_package: Parse::Eyapp::Node
+      uses:
+        - strict
+        - Carp
+        - Parse::Eyapp::YATW
+        - List::Util
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Node.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5282
+      file_mime_type: ~
+      line_count: ~
+      md5: fad3d9fe9755d6c622c7dfbdddd445cb
+      module_name_from_file_guess: Parse::Eyapp::Options
+      mtime: 1265105907
+      name: blib/lib/Parse/Eyapp/Options.pm
+      packages:
+        - Parse::Eyapp::Options
+      primary_package: Parse::Eyapp::Options
+      uses:
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Options.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12570
+      file_mime_type: ~
+      line_count: ~
+      md5: 03d2a02fd926d0912b22a77f49cbe56c
+      module_name_from_file_guess: Parse::Eyapp::Output
+      mtime: 1265453886
+      name: blib/lib/Parse/Eyapp/Output.pm
+      packages:
+        - Parse::Eyapp::Output
+      primary_package: Parse::Eyapp::Output
+      uses:
+        - strict
+        - ''
+        - Parse::Eyapp::Base
+        - Parse::Eyapp::Lalr
+        - Parse::Eyapp::Driver
+        - Parse::Eyapp::Node
+        - File::Basename
+        - List::Util
+        - Carp
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Output.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 69552
+      file_mime_type: ~
+      line_count: ~
+      md5: 22a2b4630835f5809192aa93888eef6d
+      module_name_from_file_guess: Parse::Eyapp::Parse
+      mtime: 1269960035
+      name: blib/lib/Parse/Eyapp/Parse.pm
+      packages:
+        - Parse::Eyapp::Parse
+      primary_package: Parse::Eyapp::Parse
+      uses:
+        - strict
+        - Parse::Eyapp::Driver
+        - Parse::Eyapp::Node
+        - ''
+        - Carp
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Parse.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4349
+      file_mime_type: ~
+      line_count: ~
+      md5: 401aba83d57a706f18ec791c90d744d0
+      module_name_from_file_guess: Parse::Eyapp::Scope
+      mtime: 1257527856
+      name: blib/lib/Parse/Eyapp/Scope.pm
+      packages:
+        - Parse::Eyapp::Scope
+      primary_package: Parse::Eyapp::Scope
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Parse::Eyapp::Base
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Scope.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2204
+      file_mime_type: ~
+      line_count: ~
+      md5: 13b1a114309577d2c12c523d5c7ccf8a
+      module_name_from_file_guess: Parse::Eyapp::TokenGen
+      mtime: 1257527856
+      name: blib/lib/Parse/Eyapp/TokenGen.pm
+      packages:
+        - Parse::Eyapp::TokenGen
+      primary_package: Parse::Eyapp::TokenGen
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Parse/Eyapp/TokenGen.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 51629
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ef65fbe24526104f0daa263ff668b5e
+      module_name_from_file_guess: Parse::Eyapp::Treeregexp
+      mtime: 1269960035
+      name: blib/lib/Parse/Eyapp/Treeregexp.pm
+      packages:
+        - Parse::Eyapp::Treeregparser
+        - Parse::Eyapp::Treeregexp
+      primary_package: Parse::Eyapp::Treeregexp
+      uses:
+        - strict
+        - Parse::Eyapp::Driver
+        - Parse::Eyapp::Node
+        - Carp
+        - Data::Dumper
+        - List::Util
+        - Parse::Eyapp::Base
+        - ''
+      version_info:
+        filename: blib/lib/Parse/Eyapp/Treeregexp.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: ~
+    - bytesize: 8280
+      file_mime_type: ~
+      line_count: ~
+      md5: 5336417b5fde4717883dcaef726b4d17
+      module_name_from_file_guess: Parse::Eyapp::YATW
+      mtime: 1261655631
+      name: blib/lib/Parse/Eyapp/YATW.pm
+      packages:
+        - Parse::Eyapp::YATW
+      primary_package: Parse::Eyapp::YATW
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Data::Dumper
+        - List::Util
+      version_info:
+        filename: blib/lib/Parse/Eyapp/YATW.pm
+        identifier: VERSION
+        line_number: 37
+        sigil: $
+        value: ~
+    - bytesize: 1378
+      file_mime_type: ~
+      line_count: ~
+      md5: cb87e8d05c6b9bf6baf03fb93c934387
+      module_name_from_file_guess: Parse::Eyapp::_TreeregexpSupport
+      mtime: 1257527856
+      name: blib/lib/Parse/Eyapp/_TreeregexpSupport.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - Carp
+        - Parse::Eyapp::Node
+        - base
+      version_info:
+        filename: blib/lib/Parse/Eyapp/_TreeregexpSupport.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Parse/Eyapp.pm
+    - blib/lib/Parse/Eyapp/Base.pm
+    - blib/lib/Parse/Eyapp/Cleaner.pm
+    - blib/lib/Parse/Eyapp/Driver.pm
+    - blib/lib/Parse/Eyapp/Grammar.pm
+    - blib/lib/Parse/Eyapp/Lalr.pm
+    - blib/lib/Parse/Eyapp/Node.pm
+    - blib/lib/Parse/Eyapp/Options.pm
+    - blib/lib/Parse/Eyapp/Output.pm
+    - blib/lib/Parse/Eyapp/Parse.pm
+    - blib/lib/Parse/Eyapp/Scope.pm
+    - blib/lib/Parse/Eyapp/TokenGen.pm
+    - blib/lib/Parse/Eyapp/Treeregexp.pm
+    - blib/lib/Parse/Eyapp/YATW.pm
+    - blib/lib/Parse/Eyapp/_TreeregexpSupport.pm
+  test_info:
+    - bytesize: 2664
+      file_mime_type: ~
+      line_count: ~
+      md5: a3c76cf47a1013c46f3728100b710ffe
+      mtime: 1257527855
+      name: t/01calc.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+    - bytesize: 1995
+      file_mime_type: ~
+      line_count: ~
+      md5: e1cdce0a91c7bf5cd04356faeb9807be
+      mtime: 1257527855
+      name: t/03newgrammar.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2862
+      file_mime_type: ~
+      line_count: ~
+      md5: a3fc623f740b4b20fa89cad5347bd286
+      mtime: 1257527855
+      name: t/04foldandzero.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2760
+      file_mime_type: ~
+      line_count: ~
+      md5: a3a9b72b3e879a7e579b671d3b51745c
+      mtime: 1257527855
+      name: t/05treewithvars.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2799
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a276288e8dd1e7c63983aab4295cb25
+      mtime: 1257527855
+      name: t/06meta.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Test::More
+    - bytesize: 2428
+      file_mime_type: ~
+      line_count: ~
+      md5: 12ea9299b69148930e7bdd8315578e90
+      mtime: 1257527855
+      name: t/07translationschemetype.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Test::More
+    - bytesize: 2407
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e751a5656a87f0c3977b99310ffeed5
+      mtime: 1257527855
+      name: t/08tschemetypestar.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Test::More
+    - bytesize: 2224
+      file_mime_type: ~
+      line_count: ~
+      md5: ea9c5f7b013a94268ffe7aa1884d0a15
+      mtime: 1257527855
+      name: t/09ts_with_defaultaction.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3299
+      file_mime_type: ~
+      line_count: ~
+      md5: 06fcad84a62bba1b4d2905cd14913fb2
+      mtime: 1257527855
+      name: t/10ts_with_treereg.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2713
+      file_mime_type: ~
+      line_count: ~
+      md5: f09a0aeaf7af0fa4221e325a981ee209
+      mtime: 1257527855
+      name: t/11ts_simplify_codes.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3291
+      file_mime_type: ~
+      line_count: ~
+      md5: dc34ff8c217e8ad0765a2aa5442bf957
+      mtime: 1257527855
+      name: t/12ts_simplify_with_s.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3599
+      file_mime_type: ~
+      line_count: ~
+      md5: 14295dffebfe81ff7b6edd39b658a8f4
+      mtime: 1257527855
+      name: t/13ts_simplify_with_delete.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3539
+      file_mime_type: ~
+      line_count: ~
+      md5: efd30d9936b9923deacc582435737b49
+      mtime: 1257527855
+      name: t/14ts_simplify_with_trreereg.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1660
+      file_mime_type: ~
+      line_count: ~
+      md5: 009b03148459076109b88384ba9b1b01
+      mtime: 1257527855
+      name: t/15treeregswith2arrays.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1609
+      file_mime_type: ~
+      line_count: ~
+      md5: 831c99084595dc1b7e015d553c664e0d
+      mtime: 1257527855
+      name: t/16treeregswitharrayattheend.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1975
+      file_mime_type: ~
+      line_count: ~
+      md5: c55d92e8f843aadc959cf1eeea51aa8d
+      mtime: 1257527855
+      name: t/17fatherisscalar.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2017
+      file_mime_type: ~
+      line_count: ~
+      md5: 49948377275264f6df9f1e57981e8202
+      mtime: 1257527855
+      name: t/18fatherpatternwitharrays.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2068
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cb5fdd98588abc4204fb813f5d69549
+      mtime: 1257527855
+      name: t/19treeregswitharrays2transf.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2107
+      file_mime_type: ~
+      line_count: ~
+      md5: 79e11f4f901334219bc3bfac4fbad0ef
+      mtime: 1257527855
+      name: t/20treeregswitharrays2transf.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1950
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fbb95e17f97b0fe5599b3c175c5bf59
+      mtime: 1257527855
+      name: t/21fatherisdot.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1976
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e5c321dbfbb1cc992ad333047e38b9
+      mtime: 1257527855
+      name: t/22treeregswithregexpwithid.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1974
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d954f8d39d533454bff71f4c806041a
+      mtime: 1257527855
+      name: t/23treeregswitharraysandregexps.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2263
+      file_mime_type: ~
+      line_count: ~
+      md5: 7294d8e1fb2f8556e73b6df4284b4cd0
+      mtime: 1257527855
+      name: t/24prefixes.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2570
+      file_mime_type: ~
+      line_count: ~
+      md5: 02b03ac5410081e797c862108e1255e0
+      mtime: 1257527855
+      name: t/25foldwithnew.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2660
+      file_mime_type: ~
+      line_count: ~
+      md5: 43ee78711124a44df88932c078c4edd1
+      mtime: 1257527855
+      name: t/26foldwithnewwithvars.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3749
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f1a272adffbabd3679145ded5b5a7b4
+      mtime: 1257527855
+      name: t/27unshiftinmyself.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3837
+      file_mime_type: ~
+      line_count: ~
+      md5: a996e73663ec3fcb35373c3620a90855
+      mtime: 1257527855
+      name: t/28unshifttwoitems.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2772
+      file_mime_type: ~
+      line_count: ~
+      md5: 68a135975e40eb3f97e546244551ee4a
+      mtime: 1257527855
+      name: t/29foldinglistsofexpressions.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 4490
+      file_mime_type: ~
+      line_count: ~
+      md5: eb7eeec5d400efaab570c6b7d4c29485
+      mtime: 1257527855
+      name: t/30complextreereg.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 5513
+      file_mime_type: ~
+      line_count: ~
+      md5: cec9d63759d8d5e7f06b662109e7c9b8
+      mtime: 1257527855
+      name: t/32deletenodewithwarn.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Warn
+        - Parse::Eyapp
+        - Parse::Eyapp::Treeregexp
+        - Data::Dumper
+    - bytesize: 5060
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b4b4ab91d61bc0228e55bebcf8cf9f4
+      mtime: 1257527855
+      name: t/33moveinvariantoutofloop.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 691
+      file_mime_type: ~
+      line_count: ~
+      md5: 498f4a385b6ea35e73513da4797a4fe8
+      mtime: 1257527855
+      name: t/42pod.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 6599
+      file_mime_type: ~
+      line_count: ~
+      md5: 492c0f3cedaaddf8b8d66d3ad18aab59
+      mtime: 1257527855
+      name: t/34moveinvariantoutofloopcomplexformula.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Dumper
+    - bytesize: 3692
+      file_mime_type: ~
+      line_count: ~
+      md5: 366216b5bdb0094a972ec5eaaf307f93
+      mtime: 1257527855
+      name: t/35match.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Dumper
+    - bytesize: 3221
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c1ffacf2769d2dec2a3866338187169
+      mtime: 1257527855
+      name: t/36tswithmultipledefact.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+        - Data::Dumper
+    - bytesize: 2930
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e34f4b39b2c57a93d783426a822f379
+      mtime: 1257527855
+      name: t/37tsplus.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2981
+      file_mime_type: ~
+      line_count: ~
+      md5: b58f58498598b1172f11ffbd8800405e
+      mtime: 1257527855
+      name: t/38tspostfix_resultisarray.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Test::More
+    - bytesize: 2296
+      file_mime_type: ~
+      line_count: ~
+      md5: 9263dd9f6897eb7e16b76547414807a7
+      mtime: 1257527855
+      name: t/39tspostfix.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Test::More
+    - bytesize: 1763
+      file_mime_type: ~
+      line_count: ~
+      md5: f807c0b755d117cafda41eb71728b6b7
+      mtime: 1257527855
+      name: t/40wrongoptionforTreeregexp_new.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+    - bytesize: 5541
+      file_mime_type: ~
+      line_count: ~
+      md5: c3ddf9337cd54bb8ed9ec75190dbfe27
+      mtime: 1257527855
+      name: t/41indexbug.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 4224
+      file_mime_type: ~
+      line_count: ~
+      md5: 5272aa2b30611a8c15d710cee1ab39ea
+      mtime: 1257527855
+      name: t/43dotandscalar.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2855
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f5191964250edf796792ff9776ea5fb
+      mtime: 1257527855
+      name: t/44repeatedarray.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+        - Data::Dumper
+    - bytesize: 3049
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ce7a13a2b1e4678888128ece0e4a1c4
+      mtime: 1257527855
+      name: t/45starandarray.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Exception
+        - Data::Dumper
+    - bytesize: 5508
+      file_mime_type: ~
+      line_count: ~
+      md5: db578cdfe15e844cb85d462b6f41173a
+      mtime: 1257527855
+      name: t/46starandstar.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Dumper
+    - bytesize: 4481
+      file_mime_type: ~
+      line_count: ~
+      md5: 459e69d3c0b4cf90c9c318db78e597b5
+      mtime: 1257527855
+      name: t/47ruleindex.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Test::More
+    - bytesize: 4289
+      file_mime_type: ~
+      line_count: ~
+      md5: d2c96c4ba9f18cd85eacadbd3e128f31
+      mtime: 1257527855
+      name: t/48yyprefix.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 6768
+      file_mime_type: ~
+      line_count: ~
+      md5: a7025bf96ef2ecbeaf7a2f1ba1e4c627
+      mtime: 1257527855
+      name: t/49conflicts.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 16367
+      file_mime_type: ~
+      line_count: ~
+      md5: c6c7edcc3e8625030ebd954bf055d9a3
+      mtime: 1257527855
+      name: t/50SimpleChalfscope.t
+      uses:
+        - strict
+        - Data::Dumper
+        - Parse::Eyapp
+        - Parse::Eyapp::Treeregexp
+        - Test::More
+    - bytesize: 1932
+      file_mime_type: ~
+      line_count: ~
+      md5: ebb77d6e94065729ff8412fc91e57d5c
+      mtime: 1257527855
+      name: t/52accesors.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1873
+      file_mime_type: ~
+      line_count: ~
+      md5: 367f990a4d35789f132c52d74b40cdfb
+      mtime: 1257527855
+      name: t/55builder.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1939
+      file_mime_type: ~
+      line_count: ~
+      md5: abe3783e7fd567ac0f65d7842ef8af8a
+      mtime: 1257527855
+      name: t/53accessorsskip.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3757
+      file_mime_type: ~
+      line_count: ~
+      md5: da8485af2111f5564fcef91a58c33cb9
+      mtime: 1257527855
+      name: t/54alias_and_yyprefix.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Dumper
+    - bytesize: 498
+      file_mime_type: ~
+      line_count: ~
+      md5: 98eb0e756cf618d5310b2826048f5873
+      mtime: 1257527855
+      name: t/56equal.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 5165
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d3d7a9dbcfc105a0f8899fe5ec4c7e0
+      mtime: 1257527855
+      name: t/57testequal.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Compare
+    - bytesize: 1027
+      file_mime_type: ~
+      line_count: ~
+      md5: 964a297f7bb5d02221c16fa937a30aff
+      mtime: 1257527855
+      name: t/58standalone.t
+      uses:
+        - strict
+        - Test::More
+        - ''
+    - bytesize: 1435
+      file_mime_type: ~
+      line_count: ~
+      md5: c2a175f8aa3d066a47d91ef5d38bda65
+      mtime: 1257527855
+      name: t/59newgrammarerrors.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3761
+      file_mime_type: ~
+      line_count: ~
+      md5: c05210e080441f701c9c6a8cc81efbc4
+      mtime: 1257527855
+      name: t/60dynamicyyprefix_and_alias.t
+      uses:
+        - strict
+        - Test::More
+        - Data::Dumper
+    - bytesize: 551
+      file_mime_type: ~
+      line_count: ~
+      md5: b931dad01a62adf3b8eff10bb5366664
+      mtime: 1257527855
+      name: t/61standalonegift.t
+      uses:
+        - strict
+        - Test::More
+        - ''
+    - bytesize: 4718
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f468c459a4f0ae2036c8dcee372e0c7
+      mtime: 1257527855
+      name: t/62docinsideeyapp.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Pod
+    - bytesize: 4678
+      file_mime_type: ~
+      line_count: ~
+      md5: c1bf16f059a6d7bc9b7d3246850c2895
+      mtime: 1257527855
+      name: t/63docwithdoublecut.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Pod
+    - bytesize: 584
+      file_mime_type: ~
+      line_count: ~
+      md5: 67ef9126b56b6ef3f5c877c20b28cef9
+      mtime: 1257527855
+      name: t/64standalonegiftandeyapp.t
+      uses:
+        - strict
+        - Test::More
+        - ''
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 405f09986981c06636433636dee57d25
+      mtime: 1263971246
+      name: t/65yydebugandpod.t
+      uses:
+        - strict
+        - Test::More
+        - Debug2
+    - bytesize: 1019
+      file_mime_type: ~
+      line_count: ~
+      md5: cd35db818155d58e3b6c5bf9c16b5e15
+      mtime: 1263971246
+      name: t/66yydebugstandaloneandpod.t
+      uses:
+        - strict
+        - Test::More
+        - ''
+    - bytesize: 4696
+      file_mime_type: ~
+      line_count: ~
+      md5: 35cde14901826af5a188e91893bae8d9
+      mtime: 1257527855
+      name: t/67outputfile.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Pod
+    - bytesize: 1078
+      file_mime_type: ~
+      line_count: ~
+      md5: 969a9dad4aafd6bd789ca2dac13f15b6
+      mtime: 1257527855
+      name: t/68cleangrammar.t
+      uses:
+        - strict
+        - File::Basename
+        - Test::More
+    - bytesize: 1070
+      file_mime_type: ~
+      line_count: ~
+      md5: 38c3f7dc512b265fcb20f56c67e4ac6d
+      mtime: 1257527855
+      name: t/69cleanwithvgrammar.t
+      uses:
+        - strict
+        - File::Basename
+        - Test::More
+    - bytesize: 458
+      file_mime_type: ~
+      line_count: ~
+      md5: 24ba6038b1921655d463b464b481093f
+      mtime: 1257527855
+      name: t/70dos2unix.t
+      uses:
+        - strict
+        - Test::More
+        - ''
+    - bytesize: 2809
+      file_mime_type: ~
+      line_count: ~
+      md5: c1b5d897c931294be6e8d982c60d4c3d
+      mtime: 1264783340
+      name: t/71dynamicconflictresolution.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 731
+      file_mime_type: ~
+      line_count: ~
+      md5: bf7f60f80f4ecfc5ee11acdea05f20a9
+      mtime: 1261659822
+      name: t/72mixedstandaloneanddynamicload.t
+      uses:
+        - strict
+        - Test::More
+        - ''
+    - bytesize: 1586
+      file_mime_type: ~
+      line_count: ~
+      md5: 771f286da9114674893d7757e5132f01
+      mtime: 1261657955
+      name: t/73dynamicshiftreduceconflictresolution.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 2935
+      file_mime_type: ~
+      line_count: ~
+      md5: c417e47a8fdeece3b1d2f01c67ba0369
+      mtime: 1262008574
+      name: t/74lalrdependanttest.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1224
+      file_mime_type: ~
+      line_count: ~
+      md5: a3647dab380c2fdef708b59602c15ae6
+      mtime: 1264783340
+      name: t/75tokenandvariablewiththesamename.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 234
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fc1e911be338fc77dd604526e2a58d8
+      mtime: 1257527855
+      name: t/98nopm.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 5281101
+      file_mime_type: ~
+      line_count: ~
+      md5: d017d11e914f12ea34463b04e8d1a524
+      mtime: 1257527855
+      name: t/99Cplusplusgrammar.t
+      uses: []
+  tests:
+    - t/01calc.t
+    - t/03newgrammar.t
+    - t/04foldandzero.t
+    - t/05treewithvars.t
+    - t/06meta.t
+    - t/07translationschemetype.t
+    - t/08tschemetypestar.t
+    - t/09ts_with_defaultaction.t
+    - t/10ts_with_treereg.t
+    - t/11ts_simplify_codes.t
+    - t/12ts_simplify_with_s.t
+    - t/13ts_simplify_with_delete.t
+    - t/14ts_simplify_with_trreereg.t
+    - t/15treeregswith2arrays.t
+    - t/16treeregswitharrayattheend.t
+    - t/17fatherisscalar.t
+    - t/18fatherpatternwitharrays.t
+    - t/19treeregswitharrays2transf.t
+    - t/20treeregswitharrays2transf.t
+    - t/21fatherisdot.t
+    - t/22treeregswithregexpwithid.t
+    - t/23treeregswitharraysandregexps.t
+    - t/24prefixes.t
+    - t/25foldwithnew.t
+    - t/26foldwithnewwithvars.t
+    - t/27unshiftinmyself.t
+    - t/28unshifttwoitems.t
+    - t/29foldinglistsofexpressions.t
+    - t/30complextreereg.t
+    - t/32deletenodewithwarn.t
+    - t/33moveinvariantoutofloop.t
+    - t/42pod.t
+    - t/34moveinvariantoutofloopcomplexformula.t
+    - t/35match.t
+    - t/36tswithmultipledefact.t
+    - t/37tsplus.t
+    - t/38tspostfix_resultisarray.t
+    - t/39tspostfix.t
+    - t/40wrongoptionforTreeregexp_new.t
+    - t/41indexbug.t
+    - t/43dotandscalar.t
+    - t/44repeatedarray.t
+    - t/45starandarray.t
+    - t/46starandstar.t
+    - t/47ruleindex.t
+    - t/48yyprefix.t
+    - t/49conflicts.t
+    - t/50SimpleChalfscope.t
+    - t/52accesors.t
+    - t/55builder.t
+    - t/53accessorsskip.t
+    - t/54alias_and_yyprefix.t
+    - t/56equal.t
+    - t/57testequal.t
+    - t/58standalone.t
+    - t/59newgrammarerrors.t
+    - t/60dynamicyyprefix_and_alias.t
+    - t/61standalonegift.t
+    - t/62docinsideeyapp.t
+    - t/63docwithdoublecut.t
+    - t/64standalonegiftandeyapp.t
+    - t/65yydebugandpod.t
+    - t/66yydebugstandaloneandpod.t
+    - t/67outputfile.t
+    - t/68cleangrammar.t
+    - t/69cleanwithvgrammar.t
+    - t/70dos2unix.t
+    - t/71dynamicconflictresolution.t
+    - t/72mixedstandaloneanddynamicload.t
+    - t/73dynamicshiftreduceconflictresolution.t
+    - t/74lalrdependanttest.t
+    - t/75tokenandvariablewiththesamename.t
+    - t/98nopm.t
+    - t/99Cplusplusgrammar.t
+  unpack_dir: /usr/home/brian/UNvrWQ3JNR/MyCPAN-Indexer-88127.fKi1
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 88127
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270102015
+  examine_start_time: 1270101929
+  examine_time: 86
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87852
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 88127
+  ppid: 87852
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/UNvrWQ3JNR
+  run_end_time: 1270102015
+  run_start_time: 1270101929
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/UNvrWQ3JNR
+  uuid: EFDE7126-3D53-11DF-B4BB-0BBDE9F9184E
+  worker_class: MyCPAN::Indexer::Worker

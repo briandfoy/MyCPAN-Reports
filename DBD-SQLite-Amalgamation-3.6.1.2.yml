@@ -1,0 +1,2598 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: DBD-SQLite-Amalgamation
+    no_index:
+      file:
+        - lib/DBD/SQLite.pm
+      package:
+        - DBD::SQLite
+    requires:
+      DBI: 1.21
+    version: 3.6.1
+  blib:
+    - blib/lib/DBD/SQLite.pm
+    - blib/lib/DBD/SQLite/Amalgamation.pm
+  build_file: Makefile.PL
+  build_file_output: |
+    Can't locate DBI.pm in @INC (@INC contains: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/5.10.1 /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1 .) at Makefile.PL line 3.
+    Warning: prerequisite DBI 1.21 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for DBD::SQLite
+  build_output: |
+    cp lib/DBD/SQLite.pm blib/lib/DBD/SQLite.pm
+    cp lib/DBD/SQLite/Amalgamation.pm blib/lib/DBD/SQLite/Amalgamation.pm
+    /home/brian/bin/perl5.10.1 /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/xsubpp  -typemap /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/typemap  SQLite.xs > SQLite.xsc && mv SQLite.xsc SQLite.c
+    cc -c  -I. -I  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O3    -DVERSION=\"1.14001\"  -DXS_VERSION=\"1.14001\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DSQLITE_ENABLE_FTS3=1 -DSQLITE_CORE -DNDEBUG=1 -DSQLITE_PTR_SZ=4 -DHAVE_USLEEP=1 -Dno_last_insert_id -DTHREADSAFE=0 SQLite.c
+    In file included from SQLite.xs:3:
+    SQLiteXS.h:9:19: error: DBIXS.h: No such file or directory
+    In file included from SQLiteXS.h:10,
+                     from SQLite.xs:3:
+    dbdimp.h:14: error: expected specifier-qualifier-list before 'dbih_drc_t'
+    dbdimp.h:20: error: expected specifier-qualifier-list before 'dbih_dbc_t'
+    dbdimp.h:33: error: expected specifier-qualifier-list before 'dbih_stc_t'
+    dbdimp.h:77: error: expected ')' before '*' token
+    dbdimp.h:78: error: expected ')' before '*' token
+    dbdimp.h:79: error: expected ')' before '*' token
+    dbdimp.h:80: error: expected ')' before '*' token
+    SQLiteXS.h:11:21: error: dbd_xsh.h: No such file or directory
+    In file included from SQLiteXS.h:14,
+                     from SQLite.xs:3:
+    ppport.h:3824: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    ppport.h:4018: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    ppport.h:4057: error: expected ')' before 'flags'
+    ppport.h:4129: error: expected ')' before 'flags'
+    ppport.h:4160: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    ppport.h:4763: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    ppport.h:4798: error: expected ')' before '*' token
+    ppport.h:4869: error: expected ')' before '*' token
+    ppport.h:4941: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    ppport.h:5178: error: expected ')' before 'err'
+    ppport.h:5702: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    ppport.h:5758: error: expected declaration specifiers or '...' before 'STRLEN'
+    ppport.h:5758: error: expected declaration specifiers or '...' before 'UV'
+    ppport.h:5758: error: 'CAT2' declared as function returning a function
+    ppport.h:5758: warning: parameter names (without types) in function declaration
+    ppport.h:5972: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    ppport.h:6074: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    ppport.h:6176: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    ppport.h:6269: error: expected ';', ',' or ')' before 'len'
+    ppport.h:6319: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    ppport.h:6349: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'CAT2'
+    SQLite.xs:5: warning: data definition has no type or storage class
+    SQLite.c:25: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
+    SQLite.c:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'void'
+    SQLite.c:70: warning: data definition has no type or storage class
+    SQLite.c:70: warning: parameter names (without types) in function declaration
+    SQLite.c: In function 'XS':
+    SQLite.c:74: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:74: error: (Each undeclared identifier is reported only once
+    SQLite.c:74: error: for each function it appears in.)
+    SQLite.c:78: error: 'items' undeclared (first use in this function)
+    SQLite.c:79: error: 'cv' undeclared (first use in this function)
+    SQLite.c:81: error: 'SV' undeclared (first use in this function)
+    SQLite.c:81: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:82: error: 'AV' undeclared (first use in this function)
+    SQLite.c:82: error: 'RETVAL' undeclared (first use in this function)
+    SQLite.c:88: error: expected expression before ')' token
+    SQLite.c:88: error: lvalue required as left operand of assignment
+    SQLite.c: At top level:
+    SQLite.c:95: warning: data definition has no type or storage class
+    SQLite.c:95: warning: parameter names (without types) in function declaration
+    SQLite.c:97: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:99: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:103: error: 'items' undeclared (first use in this function)
+    SQLite.c:104: error: 'cv' undeclared (first use in this function)
+    SQLite.c:106: error: 'SV' undeclared (first use in this function)
+    SQLite.c:106: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:108: error: 'targ' undeclared (first use in this function)
+    SQLite.xs:30: error: 'imp_dbh' undeclared (first use in this function)
+    SQLite.c:115: error: 'sp' undeclared (first use in this function)
+    SQLite.c:115: error: 'PL_stack_base' undeclared (first use in this function)
+    SQLite.c:115: error: 'ax' undeclared (first use in this function)
+    SQLite.c:115: error: 'IV' undeclared (first use in this function)
+    SQLite.c:115: error: expected ')' before 'RETVAL'
+    SQLite.c: At top level:
+    SQLite.c:121: warning: data definition has no type or storage class
+    SQLite.c:121: warning: parameter names (without types) in function declaration
+    SQLite.c:123: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:125: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:129: error: 'items' undeclared (first use in this function)
+    SQLite.c:130: error: 'cv' undeclared (first use in this function)
+    SQLite.c:132: error: 'SV' undeclared (first use in this function)
+    SQLite.c:132: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:133: error: 'SVf_POK' undeclared (first use in this function)
+    SQLite.c:135: error: 'func' undeclared (first use in this function)
+    SQLite.c:142: error: 'XSRETURN_EMPTY' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:146: warning: data definition has no type or storage class
+    SQLite.c:146: warning: parameter names (without types) in function declaration
+    SQLite.c:148: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:150: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:154: error: 'items' undeclared (first use in this function)
+    SQLite.c:155: error: 'cv' undeclared (first use in this function)
+    SQLite.c:157: error: 'SV' undeclared (first use in this function)
+    SQLite.c:157: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:158: error: 'SVf_POK' undeclared (first use in this function)
+    SQLite.c:160: error: 'aggr' undeclared (first use in this function)
+    SQLite.c:167: error: 'XSRETURN_EMPTY' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:171: warning: data definition has no type or storage class
+    SQLite.c:171: warning: parameter names (without types) in function declaration
+    SQLite.c:173: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:175: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:179: error: 'items' undeclared (first use in this function)
+    SQLite.c:180: error: 'cv' undeclared (first use in this function)
+    SQLite.c:182: error: 'SV' undeclared (first use in this function)
+    SQLite.c:182: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:183: error: 'SVf_POK' undeclared (first use in this function)
+    SQLite.c:184: error: 'func' undeclared (first use in this function)
+    SQLite.c:191: error: 'XSRETURN_EMPTY' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:195: warning: data definition has no type or storage class
+    SQLite.c:195: warning: parameter names (without types) in function declaration
+    SQLite.c:197: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:199: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:203: error: 'items' undeclared (first use in this function)
+    SQLite.c:204: error: 'cv' undeclared (first use in this function)
+    SQLite.c:206: error: 'SV' undeclared (first use in this function)
+    SQLite.c:206: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:208: error: 'handler' undeclared (first use in this function)
+    SQLite.c:215: error: 'XSRETURN_EMPTY' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:219: warning: data definition has no type or storage class
+    SQLite.c:219: warning: parameter names (without types) in function declaration
+    SQLite.c:221: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:223: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:227: error: 'items' undeclared (first use in this function)
+    SQLite.c:228: error: 'cv' undeclared (first use in this function)
+    SQLite.c:230: error: 'SV' undeclared (first use in this function)
+    SQLite.c:230: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:233: error: 'targ' undeclared (first use in this function)
+    SQLite.c:243: error: 'sp' undeclared (first use in this function)
+    SQLite.c:243: error: 'PL_stack_base' undeclared (first use in this function)
+    SQLite.c:243: error: 'ax' undeclared (first use in this function)
+    SQLite.c:243: error: 'IV' undeclared (first use in this function)
+    SQLite.c:243: error: expected ')' before 'RETVAL'
+    SQLite.c: At top level:
+    SQLite.c:249: warning: data definition has no type or storage class
+    SQLite.c:249: warning: parameter names (without types) in function declaration
+    SQLite.c:251: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:253: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:257: error: 'items' undeclared (first use in this function)
+    SQLite.c:258: error: 'cv' undeclared (first use in this function)
+    SQLite.c:260: error: 'SV' undeclared (first use in this function)
+    SQLite.c:260: error: 'sth' undeclared (first use in this function)
+    SQLite.c:267: error: 'XSRETURN_EMPTY' undeclared (first use in this function)
+    SQLite.c:273:24: error: Driver_xst.h: No such file or directory
+    SQLite.c: At top level:
+    SQLite.c:278: warning: data definition has no type or storage class
+    SQLite.c:278: warning: parameter names (without types) in function declaration
+    SQLite.c:280: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:282: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:286: error: 'dXSI32' undeclared (first use in this function)
+    SQLite.c:287: error: 'items' undeclared (first use in this function)
+    SQLite.c:288: error: 'cv' undeclared (first use in this function)
+    SQLite.c:290: error: 'SV' undeclared (first use in this function)
+    SQLite.c:290: error: 'drh' undeclared (first use in this function)
+    ./SQLite.xsi:43: error: 'ix' undeclared (first use in this function)
+    ./SQLite.xsi:44: error: 'imp_drh' undeclared (first use in this function)
+    ./SQLite.xsi:44: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:44: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:347: warning: data definition has no type or storage class
+    SQLite.c:347: warning: parameter names (without types) in function declaration
+    SQLite.c:349: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:351: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:355: error: 'items' undeclared (first use in this function)
+    SQLite.c:356: error: 'cv' undeclared (first use in this function)
+    SQLite.c:358: error: 'SV' undeclared (first use in this function)
+    SQLite.c:358: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:359: error: 'SVf_POK' undeclared (first use in this function)
+    SQLite.c:360: error: 'username' undeclared (first use in this function)
+    SQLite.c:361: error: 'password' undeclared (first use in this function)
+    SQLite.c:362: error: 'attribs' undeclared (first use in this function)
+    SQLite.c:365: error: 'Nullsv' undeclared (first use in this function)
+    ./SQLite.xsi:87: error: 'STRLEN' undeclared (first use in this function)
+    ./SQLite.xsi:87: error: expected ';' before 'lna'
+    ./SQLite.xsi:89: error: 'lna' undeclared (first use in this function)
+    ./SQLite.xsi:89: warning: pointer/integer type mismatch in conditional expression
+    ./SQLite.xsi:90: warning: pointer/integer type mismatch in conditional expression
+    ./SQLite.xsi:94: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:94: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:94: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:387: warning: data definition has no type or storage class
+    SQLite.c:387: warning: parameter names (without types) in function declaration
+    SQLite.c:389: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:391: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:395: error: 'cv' undeclared (first use in this function)
+    ./SQLite.xsi:102: error: 'SV' undeclared (first use in this function)
+    ./SQLite.xsi:102: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:103: error: 'maxrows_svp' undeclared (first use in this function)
+    ./SQLite.xsi:104: error: 'tmp_svp' undeclared (first use in this function)
+    ./SQLite.xsi:105: error: 'attr' undeclared (first use in this function)
+    ./SQLite.xsi:105: error: 'PL_sv_undef' undeclared (first use in this function)
+    ./SQLite.xsi:106: error: 'imp_sth_t' undeclared (first use in this function)
+    ./SQLite.xsi:106: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:108: error: 'items' undeclared (first use in this function)
+    ./SQLite.xsi:114: error: 'tmp' undeclared (first use in this function)
+    ./SQLite.xsi:115: error: 'SPAGAIN' undeclared (first use in this function)
+    ./SQLite.xsi:126: error: 'SP' undeclared (first use in this function)
+    ./SQLite.xsi:128: error: 'XSRETURN_UNDEF' undeclared (first use in this function)
+    ./SQLite.xsi:130: error: invalid type argument of '->'
+    ./SQLite.xsi:132: error: expected expression before ')' token
+    ./SQLite.xsi:135: error: 'ax' undeclared (first use in this function)
+    ./SQLite.xsi:140: error: lvalue required as left operand of assignment
+    ./SQLite.xsi:146: error: lvalue required as left operand of assignment
+    SQLite.c: At top level:
+    SQLite.c:450: warning: data definition has no type or storage class
+    SQLite.c:450: warning: parameter names (without types) in function declaration
+    SQLite.c:452: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:454: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:458: error: 'dXSI32' undeclared (first use in this function)
+    SQLite.c:459: error: 'cv' undeclared (first use in this function)
+    SQLite.c:460: error: 'ax' undeclared (first use in this function)
+    SQLite.c:461: error: 'SP' undeclared (first use in this function)
+    SQLite.c:461: error: 'items' undeclared (first use in this function)
+    ./SQLite.xsi:154: error: 'ix' undeclared (first use in this function)
+    ./SQLite.xsi:155: error: 'imp_sth_t' undeclared (first use in this function)
+    ./SQLite.xsi:155: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:156: error: 'SV' undeclared (first use in this function)
+    ./SQLite.xsi:156: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:157: error: 'AV' undeclared (first use in this function)
+    ./SQLite.xsi:157: error: 'row_av' undeclared (first use in this function)
+    ./SQLite.xsi:165: error: 'SPAGAIN' undeclared (first use in this function)
+    ./SQLite.xsi:167: error: 'XSRETURN_EMPTY' undeclared (first use in this function)
+    ./SQLite.xsi:167: error: 'XSRETURN_UNDEF' undeclared (first use in this function)
+    ./SQLite.xsi:170: error: invalid type argument of '->'
+    ./SQLite.xsi:172: error: expected expression before ')' token
+    ./SQLite.xsi:180: error: lvalue required as left operand of assignment
+    ./SQLite.xsi:187: error: 'GIMME' undeclared (first use in this function)
+    ./SQLite.xsi:187: error: 'G_SCALAR' undeclared (first use in this function)
+    ./SQLite.xsi:188: error: 'PL_sv_undef' undeclared (first use in this function)
+    ./SQLite.xsi:195: error: 'sp' undeclared (first use in this function)
+    ./SQLite.xsi:197: error: subscripted value is neither array nor pointer
+    ./SQLite.xsi:201: error: expected expression before ')' token
+    SQLite.c:521: error: 'PUTBACK' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:608: warning: data definition has no type or storage class
+    SQLite.c:608: warning: parameter names (without types) in function declaration
+    SQLite.c:610: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:612: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:616: error: 'items' undeclared (first use in this function)
+    SQLite.c:617: error: 'cv' undeclared (first use in this function)
+    SQLite.c:619: error: 'SV' undeclared (first use in this function)
+    SQLite.c:619: error: 'dbh' undeclared (first use in this function)
+    ./SQLite.xsi:259: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:259: error: 'DBIcf_AutoCommit' undeclared (first use in this function)
+    ./SQLite.xsi:261: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:261: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:631: warning: data definition has no type or storage class
+    SQLite.c:631: warning: parameter names (without types) in function declaration
+    SQLite.c:633: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:635: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:639: error: 'items' undeclared (first use in this function)
+    SQLite.c:640: error: 'cv' undeclared (first use in this function)
+    SQLite.c:642: error: 'SV' undeclared (first use in this function)
+    SQLite.c:642: error: 'dbh' undeclared (first use in this function)
+    ./SQLite.xsi:269: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:269: error: 'DBIcf_AutoCommit' undeclared (first use in this function)
+    ./SQLite.xsi:271: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:271: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:654: warning: data definition has no type or storage class
+    SQLite.c:654: warning: parameter names (without types) in function declaration
+    SQLite.c:656: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:658: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:662: error: 'items' undeclared (first use in this function)
+    SQLite.c:663: error: 'cv' undeclared (first use in this function)
+    SQLite.c:665: error: 'SV' undeclared (first use in this function)
+    SQLite.c:665: error: 'dbh' undeclared (first use in this function)
+    ./SQLite.xsi:279: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:280: error: 'XSRETURN_YES' undeclared (first use in this function)
+    ./SQLite.xsi:284: error: 'dirty' undeclared (first use in this function)
+    ./SQLite.xsi:285: error: 'STRLEN' undeclared (first use in this function)
+    ./SQLite.xsi:285: error: expected ';' before 'lna'
+    ./SQLite.xsi:288: error: 'lna' undeclared (first use in this function)
+    ./SQLite.xsi:291: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:291: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:688: warning: data definition has no type or storage class
+    SQLite.c:688: warning: parameter names (without types) in function declaration
+    SQLite.c:690: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:692: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:696: error: 'items' undeclared (first use in this function)
+    SQLite.c:697: error: 'cv' undeclared (first use in this function)
+    SQLite.c:699: error: 'SV' undeclared (first use in this function)
+    SQLite.c:699: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:700: error: 'keysv' undeclared (first use in this function)
+    SQLite.c:701: error: 'valuesv' undeclared (first use in this function)
+    ./SQLite.xsi:304: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:305: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:306: error: invalid type argument of '->'
+    ./SQLite.xsi:307: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:716: warning: data definition has no type or storage class
+    SQLite.c:716: warning: parameter names (without types) in function declaration
+    SQLite.c:718: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:720: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:724: error: 'items' undeclared (first use in this function)
+    SQLite.c:725: error: 'cv' undeclared (first use in this function)
+    SQLite.c:727: error: 'SV' undeclared (first use in this function)
+    SQLite.c:727: error: 'dbh' undeclared (first use in this function)
+    SQLite.c:728: error: 'keysv' undeclared (first use in this function)
+    ./SQLite.xsi:316: error: 'valuesv' undeclared (first use in this function)
+    ./SQLite.xsi:316: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:318: error: invalid type argument of '->'
+    SQLite.c: At top level:
+    SQLite.c:741: warning: data definition has no type or storage class
+    SQLite.c:741: warning: parameter names (without types) in function declaration
+    SQLite.c:743: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:745: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:749: error: 'items' undeclared (first use in this function)
+    SQLite.c:750: error: 'cv' undeclared (first use in this function)
+    SQLite.c:751: error: 'ax' undeclared (first use in this function)
+    SQLite.c:752: error: 'SP' undeclared (first use in this function)
+    SQLite.c:754: error: 'SV' undeclared (first use in this function)
+    SQLite.c:754: error: 'dbh' undeclared (first use in this function)
+    ./SQLite.xsi:328: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:329: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:330: error: 'STRLEN' undeclared (first use in this function)
+    ./SQLite.xsi:330: error: expected ';' before 'lna'
+    ./SQLite.xsi:331: error: 'dirty' undeclared (first use in this function)
+    ./SQLite.xsi:331: error: invalid type argument of '->'
+    ./SQLite.xsi:334: error: 'lna' undeclared (first use in this function)
+    ./SQLite.xsi:339: error: invalid type argument of '->'
+    ./SQLite.xsi:340: error: 'SVf_POK' undeclared (first use in this function)
+    ./SQLite.xsi:343: error: 'DBIcf_AutoCommit' undeclared (first use in this function)
+    ./SQLite.xsi:359: error: 'DBIcf_Executed' undeclared (first use in this function)
+    ./SQLite.xsi:360: error: invalid type argument of '->'
+    SQLite.c:801: error: 'PUTBACK' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:889: warning: data definition has no type or storage class
+    SQLite.c:889: warning: parameter names (without types) in function declaration
+    SQLite.c:891: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:893: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:897: error: 'items' undeclared (first use in this function)
+    SQLite.c:898: error: 'cv' undeclared (first use in this function)
+    SQLite.c:900: error: 'SV' undeclared (first use in this function)
+    SQLite.c:900: error: 'sth' undeclared (first use in this function)
+    SQLite.c:901: error: 'statement' undeclared (first use in this function)
+    SQLite.c:902: error: 'attribs' undeclared (first use in this function)
+    SQLite.c:905: error: 'Nullsv' undeclared (first use in this function)
+    ./SQLite.xsi:437: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:437: error: 'SVf_POK' undeclared (first use in this function)
+    ./SQLite.xsi:437: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:437: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:928: warning: data definition has no type or storage class
+    SQLite.c:928: warning: parameter names (without types) in function declaration
+    SQLite.c:930: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:932: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:936: error: 'items' undeclared (first use in this function)
+    SQLite.c:937: error: 'cv' undeclared (first use in this function)
+    SQLite.c:939: error: 'SV' undeclared (first use in this function)
+    SQLite.c:939: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:449: error: 'imp_sth' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:953: warning: data definition has no type or storage class
+    SQLite.c:953: warning: parameter names (without types) in function declaration
+    SQLite.c:955: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:957: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:961: error: 'items' undeclared (first use in this function)
+    SQLite.c:962: error: 'cv' undeclared (first use in this function)
+    SQLite.c:964: error: 'SV' undeclared (first use in this function)
+    SQLite.c:964: error: 'sth' undeclared (first use in this function)
+    SQLite.c:965: error: 'col' undeclared (first use in this function)
+    SQLite.c:966: error: 'ref' undeclared (first use in this function)
+    SQLite.c:967: error: 'attribs' undeclared (first use in this function)
+    SQLite.c:970: error: 'Nullsv' undeclared (first use in this function)
+    ./SQLite.xsi:464: error: 'IV' undeclared (first use in this function)
+    ./SQLite.xsi:464: error: expected ';' before 'sql_type'
+    ./SQLite.xsi:470: error: 'sql_type' undeclared (first use in this function)
+    ./SQLite.xsi:474: error: 'svp' undeclared (first use in this function)
+    ./SQLite.xsi:480: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:481: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:484: error: invalid type argument of '->'
+    ./SQLite.xsi:485: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1010: warning: data definition has no type or storage class
+    SQLite.c:1010: warning: parameter names (without types) in function declaration
+    SQLite.c:1012: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1014: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1018: error: 'items' undeclared (first use in this function)
+    SQLite.c:1019: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1021: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1021: error: 'sth' undeclared (first use in this function)
+    SQLite.c:1022: error: 'param' undeclared (first use in this function)
+    SQLite.c:1023: error: 'value' undeclared (first use in this function)
+    SQLite.c:1024: error: 'attribs' undeclared (first use in this function)
+    SQLite.c:1027: error: 'Nullsv' undeclared (first use in this function)
+    ./SQLite.xsi:502: error: 'IV' undeclared (first use in this function)
+    ./SQLite.xsi:502: error: expected ';' before 'sql_type'
+    ./SQLite.xsi:508: error: 'sql_type' undeclared (first use in this function)
+    ./SQLite.xsi:512: error: 'svp' undeclared (first use in this function)
+    ./SQLite.xsi:518: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:518: error: 'FALSE' undeclared (first use in this function)
+    ./SQLite.xsi:519: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:519: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1058: warning: data definition has no type or storage class
+    SQLite.c:1058: warning: parameter names (without types) in function declaration
+    SQLite.c:1060: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1062: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1066: error: 'items' undeclared (first use in this function)
+    SQLite.c:1067: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1069: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1069: error: 'sth' undeclared (first use in this function)
+    SQLite.c:1070: error: 'param' undeclared (first use in this function)
+    SQLite.c:1071: error: 'value_ref' undeclared (first use in this function)
+    SQLite.c:1072: error: 'IV' undeclared (first use in this function)
+    SQLite.c:1072: error: expected ';' before 'maxlen'
+    SQLite.c:1073: error: 'attribs' undeclared (first use in this function)
+    SQLite.c:1076: error: 'Nullsv' undeclared (first use in this function)
+    ./SQLite.xsi:532: error: expected ';' before 'sql_type'
+    ./SQLite.xsi:534: error: 'value' undeclared (first use in this function)
+    ./SQLite.xsi:535: error: 'SVt_PVMG' undeclared (first use in this function)
+    ./SQLite.xsi:544: error: 'sql_type' undeclared (first use in this function)
+    ./SQLite.xsi:548: error: 'svp' undeclared (first use in this function)
+    ./SQLite.xsi:553: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:553: error: 'TRUE' undeclared (first use in this function)
+    ./SQLite.xsi:553: error: 'maxlen' undeclared (first use in this function)
+    ./SQLite.xsi:554: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:554: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1112: warning: data definition has no type or storage class
+    SQLite.c:1112: warning: parameter names (without types) in function declaration
+    SQLite.c:1114: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1116: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1120: error: 'items' undeclared (first use in this function)
+    SQLite.c:1121: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1123: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1123: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:565: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:565: error: 'ax' undeclared (first use in this function)
+    ./SQLite.xsi:566: error: 'XSRETURN_UNDEF' undeclared (first use in this function)
+    ./SQLite.xsi:571: error: lvalue required as left operand of assignment
+    SQLite.c: At top level:
+    SQLite.c:1184: warning: data definition has no type or storage class
+    SQLite.c:1184: warning: parameter names (without types) in function declaration
+    SQLite.c:1186: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1188: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1192: error: 'dXSI32' undeclared (first use in this function)
+    SQLite.c:1193: error: 'items' undeclared (first use in this function)
+    SQLite.c:1194: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1196: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1196: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:606: error: 'AV' undeclared (first use in this function)
+    ./SQLite.xsi:606: error: 'av' undeclared (first use in this function)
+    ./SQLite.xsi:607: error: 'ix' undeclared (first use in this function)
+    ./SQLite.xsi:608: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:609: error: expected expression before ')' token
+    ./SQLite.xsi:609: error: 'PL_sv_undef' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1209: warning: data definition has no type or storage class
+    SQLite.c:1209: warning: parameter names (without types) in function declaration
+    SQLite.c:1211: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1213: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1217: error: 'dXSI32' undeclared (first use in this function)
+    SQLite.c:1218: error: 'items' undeclared (first use in this function)
+    SQLite.c:1219: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1220: error: 'ax' undeclared (first use in this function)
+    SQLite.c:1221: error: 'SP' undeclared (first use in this function)
+    SQLite.c:1223: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1223: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:619: error: 'AV' undeclared (first use in this function)
+    ./SQLite.xsi:619: error: 'av' undeclared (first use in this function)
+    ./SQLite.xsi:620: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:624: error: 'sp' undeclared (first use in this function)
+    ./SQLite.xsi:626: error: subscripted value is neither array nor pointer
+    ./SQLite.xsi:628: error: 'ix' undeclared (first use in this function)
+    SQLite.c:1238: error: 'PUTBACK' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1244: warning: data definition has no type or storage class
+    SQLite.c:1244: warning: parameter names (without types) in function declaration
+    SQLite.c:1246: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1248: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1252: error: 'items' undeclared (first use in this function)
+    SQLite.c:1253: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1255: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1255: error: 'sth' undeclared (first use in this function)
+    SQLite.c:1256: error: 'slice' undeclared (first use in this function)
+    SQLite.c:1257: error: 'batch_row_count' undeclared (first use in this function)
+    SQLite.c:1260: error: 'PL_sv_undef' undeclared (first use in this function)
+    ./SQLite.xsi:639: error: 'tmp' undeclared (first use in this function)
+    ./SQLite.xsi:640: error: 'SPAGAIN' undeclared (first use in this function)
+    ./SQLite.xsi:644: error: lvalue required as left operand of assignment
+    SQLite.c: At top level:
+    SQLite.c:1285: warning: data definition has no type or storage class
+    SQLite.c:1285: warning: parameter names (without types) in function declaration
+    SQLite.c:1287: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1289: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1293: error: 'items' undeclared (first use in this function)
+    SQLite.c:1294: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1296: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1296: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:653: error: 'D_imp_dbh_from_sth' undeclared (first use in this function)
+    ./SQLite.xsi:654: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:656: error: 'XSRETURN_YES' undeclared (first use in this function)
+    ./SQLite.xsi:658: error: 'imp_dbh' undeclared (first use in this function)
+    ./SQLite.xsi:665: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:665: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1321: warning: data definition has no type or storage class
+    SQLite.c:1321: warning: parameter names (without types) in function declaration
+    SQLite.c:1323: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1325: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1329: error: 'items' undeclared (first use in this function)
+    SQLite.c:1330: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1332: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1332: error: 'sth' undeclared (first use in this function)
+    SQLite.c:1336: error: 'destrv' undeclared (first use in this function)
+    SQLite.c:1340: error: 'Nullsv' undeclared (first use in this function)
+    ./SQLite.xsi:684: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:685: error: lvalue required as left operand of assignment
+    ./SQLite.xsi:686: error: 'PL_sv_undef' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1365: warning: data definition has no type or storage class
+    SQLite.c:1365: warning: parameter names (without types) in function declaration
+    SQLite.c:1367: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1369: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1373: error: 'items' undeclared (first use in this function)
+    SQLite.c:1374: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1376: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1376: error: 'sth' undeclared (first use in this function)
+    SQLite.c:1377: error: 'keysv' undeclared (first use in this function)
+    SQLite.c:1378: error: 'valuesv' undeclared (first use in this function)
+    ./SQLite.xsi:699: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:700: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:701: error: invalid type argument of '->'
+    ./SQLite.xsi:702: error: 'sv_no' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1393: warning: data definition has no type or storage class
+    SQLite.c:1393: warning: parameter names (without types) in function declaration
+    SQLite.c:1395: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1397: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1401: error: 'dXSI32' undeclared (first use in this function)
+    SQLite.c:1402: error: 'items' undeclared (first use in this function)
+    SQLite.c:1403: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1405: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1405: error: 'sth' undeclared (first use in this function)
+    SQLite.c:1406: error: 'keysv' undeclared (first use in this function)
+    ./SQLite.xsi:714: error: 'valuesv' undeclared (first use in this function)
+    ./SQLite.xsi:715: error: 'ix' undeclared (first use in this function)
+    ./SQLite.xsi:716: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:718: error: invalid type argument of '->'
+    SQLite.c: At top level:
+    SQLite.c:1421: warning: data definition has no type or storage class
+    SQLite.c:1421: warning: parameter names (without types) in function declaration
+    SQLite.c:1423: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1425: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1429: error: 'items' undeclared (first use in this function)
+    SQLite.c:1430: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1431: error: 'ax' undeclared (first use in this function)
+    SQLite.c:1432: error: 'SP' undeclared (first use in this function)
+    SQLite.c:1434: error: 'SV' undeclared (first use in this function)
+    SQLite.c:1434: error: 'sth' undeclared (first use in this function)
+    ./SQLite.xsi:728: error: 'sv_yes' undeclared (first use in this function)
+    ./SQLite.xsi:729: error: 'imp_sth' undeclared (first use in this function)
+    ./SQLite.xsi:730: error: 'STRLEN' undeclared (first use in this function)
+    ./SQLite.xsi:730: error: expected ';' before 'lna'
+    ./SQLite.xsi:731: error: 'dirty' undeclared (first use in this function)
+    ./SQLite.xsi:731: error: invalid type argument of '->'
+    ./SQLite.xsi:734: error: 'lna' undeclared (first use in this function)
+    ./SQLite.xsi:739: error: invalid type argument of '->'
+    ./SQLite.xsi:740: error: 'SVf_POK' undeclared (first use in this function)
+    ./SQLite.xsi:743: error: 'D_imp_dbh_from_sth' undeclared (first use in this function)
+    ./SQLite.xsi:744: error: 'imp_dbh' undeclared (first use in this function)
+    SQLite.c:1468: error: 'PUTBACK' undeclared (first use in this function)
+    SQLite.c: At top level:
+    SQLite.c:1479: warning: data definition has no type or storage class
+    SQLite.c:1479: warning: parameter names (without types) in function declaration
+    SQLite.c:1481: error: redefinition of 'XS'
+    SQLite.c:72: error: previous definition of 'XS' was here
+    SQLite.c: In function 'XS':
+    SQLite.c:1483: error: 'dXSARGS' undeclared (first use in this function)
+    SQLite.c:1493: error: 'cv' undeclared (first use in this function)
+    SQLite.c:1494: error: 'items' undeclared (first use in this function)
+    SQLite.c:1495: error: 'XS_VERSION_BOOTCHECK' undeclared (first use in this function)
+    SQLite.c:1498: error: 'CV' undeclared (first use in this function)
+    SQLite.c:1500: error: 'XS_DBD__SQLite__db_list_tables' undeclared (first use in this function)
+    SQLite.c:1501: error: 'XS_DBD__SQLite__db_last_insert_rowid' undeclared (first use in this function)
+    SQLite.c:1502: error: 'XS_DBD__SQLite__db_create_function' undeclared (first use in this function)
+    SQLite.c:1503: error: 'XS_DBD__SQLite__db_create_aggregate' undeclared (first use in this function)
+    SQLite.c:1504: error: 'XS_DBD__SQLite__db_create_collation' undeclared (first use in this function)
+    SQLite.c:1505: error: 'XS_DBD__SQLite__db_progress_handler' undeclared (first use in this function)
+    SQLite.c:1506: error: 'XS_DBD__SQLite__db_busy_timeout' undeclared (first use in this function)
+    SQLite.c:1507: error: 'XS_DBD__SQLite__st_reset' undeclared (first use in this function)
+    SQLite.c:1509: error: 'XS_DBD__SQLite__dr_discon_all_' undeclared (first use in this function)
+    SQLite.c:1510: error: 'XSANY' undeclared (first use in this function)
+    SQLite.c:1517: error: 'XS_DBD__SQLite__db__login' undeclared (first use in this function)
+    SQLite.c:1518: error: 'XS_DBD__SQLite__db_selectall_arrayref' undeclared (first use in this function)
+    SQLite.c:1519: error: 'XS_DBD__SQLite__db_selectrow_arrayref' undeclared (first use in this function)
+    SQLite.c:1529: error: 'XS_DBD__SQLite__db_commit' undeclared (first use in this function)
+    SQLite.c:1530: error: 'XS_DBD__SQLite__db_rollback' undeclared (first use in this function)
+    SQLite.c:1531: error: 'XS_DBD__SQLite__db_disconnect' undeclared (first use in this function)
+    SQLite.c:1532: error: 'XS_DBD__SQLite__db_STORE' undeclared (first use in this function)
+    SQLite.c:1533: error: 'XS_DBD__SQLite__db_FETCH' undeclared (first use in this function)
+    SQLite.c:1534: error: 'XS_DBD__SQLite__db_DESTROY' undeclared (first use in this function)
+    SQLite.c:1541: error: 'XS_DBD__SQLite__st__prepare' undeclared (first use in this function)
+    SQLite.c:1543: error: 'XS_DBD__SQLite__st_rows' undeclared (first use in this function)
+    SQLite.c:1546: error: 'XS_DBD__SQLite__st_bind_col' undeclared (first use in this function)
+    SQLite.c:1548: error: 'XS_DBD__SQLite__st_bind_param' undeclared (first use in this function)
+    SQLite.c:1549: error: 'XS_DBD__SQLite__st_bind_param_inout' undeclared (first use in this function)
+    SQLite.c:1550: error: 'XS_DBD__SQLite__st_execute' undeclared (first use in this function)
+    SQLite.c:1554: error: 'XS_DBD__SQLite__st_fetchrow_arrayref' undeclared (first use in this function)
+    SQLite.c:1558: error: 'XS_DBD__SQLite__st_fetchrow_array' undeclared (first use in this function)
+    SQLite.c:1562: error: 'XS_DBD__SQLite__st_fetchall_arrayref' undeclared (first use in this function)
+    SQLite.c:1563: error: 'XS_DBD__SQLite__st_finish' undeclared (first use in this function)
+    SQLite.c:1564: error: 'XS_DBD__SQLite__st_blob_read' undeclared (first use in this function)
+    SQLite.c:1565: error: 'XS_DBD__SQLite__st_STORE' undeclared (first use in this function)
+    SQLite.c:1566: error: 'XS_DBD__SQLite__st_FETCH_attrib' undeclared (first use in this function)
+    SQLite.c:1570: error: 'XS_DBD__SQLite__st_DESTROY' undeclared (first use in this function)
+    SQLite.xs:12: error: 'TRUE' undeclared (first use in this function)
+    ./SQLite.xsi:19: error: 'DBISTATE_INIT' undeclared (first use in this function)
+    ./SQLite.xsi:21: error: 'imp_drh_t' undeclared (first use in this function)
+    ./SQLite.xsi:22: error: 'imp_dbh_t' undeclared (first use in this function)
+    ./SQLite.xsi:23: error: 'imp_sth_t' undeclared (first use in this function)
+    ./SQLite.xsi:24: error: 'DBIS' undeclared (first use in this function)
+    SQLite.c:1610: error: 'PL_unitcheckav' undeclared (first use in this function)
+    SQLite.c:1611: error: 'PL_scopestack_ix' undeclared (first use in this function)
+    SQLite.c:1613: error: 'XSRETURN_YES' undeclared (first use in this function)
+    *** Error code 1
+    
+    Stop in /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2.
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: AUDREYT
+  dist_basename: DBD-SQLite-Amalgamation-3.6.1.2.tar.gz
+  dist_date: 1218898375
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV/DBD-SQLite-Amalgamation-3.6.1.2
+  dist_file: /home/brian/CPAN/authors/id/A/AU/AUDREYT/DBD-SQLite-Amalgamation-3.6.1.2.tar.gz
+  dist_md5: 949ac6e1ae98551c5d47dc4eb00cf35f
+  dist_size: 983318
+  manifest:
+    - Changes
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - Makefile.PL
+    - README
+    - SQLite.xs
+    - SQLite.xsi
+    - SQLiteXS.h
+    - dbdimp.c
+    - dbdimp.h
+    - getsqlite.pl
+    - lib/DBD/SQLite.pm
+    - lib/DBD/SQLite/Amalgamation.pm
+    - ppport.h
+    - sqlite-amalgamation.c
+    - sqlite3.h
+    - sqlite3ext.h
+    - t/00basic.t
+    - t/01logon.t
+    - t/02cr_table.t
+    - t/03insert.t
+    - t/04select.t
+    - t/05tran.t
+    - t/06error.t
+    - t/08create_function.t
+    - t/09create_aggregate.t
+    - t/10dsnlist.t
+    - t/11unicode.t
+    - t/12create_collation.t
+    - t/13progress_handler.t
+    - t/20createdrop.t
+    - t/30insertfetch.t
+    - t/40bindparam.t
+    - t/40blobs.t
+    - t/40blobtext.t
+    - t/40listfields.t
+    - t/40nulls.t
+    - t/40numrows.t
+    - t/40prepcached.t
+    - t/50chopblanks.t
+    - t/50commit.t
+    - t/60metadata.t
+    - t/90cppcomments.t
+    - t/99cleanup.t
+    - t/SQLite.dbtest
+    - t/ak-dbd.t
+    - t/column-info.t
+    - t/dbdadmin.t
+    - t/lib.pl
+  manifest_file_info:
+    - bytesize: 937
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1218898047
+      name: Changes
+    - bytesize: 733
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1218898013
+      name: MANIFEST
+    - bytesize: 170
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1218737397
+      name: MANIFEST.SKIP
+    - bytesize: 249
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1218101255
+      name: META.yml
+    - bytesize: 5319
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1218795745
+      name: Makefile.PL
+    - bytesize: 871
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1210868454
+      name: README
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: 2755b9271013521c1643b4b6ef456df1
+      mtime: 1218734383
+      name: SQLite.xs
+    - bytesize: 19306
+      file_mime_type: ~
+      line_count: ~
+      md5: 6aef56d95d1a70c68f366631b04a5f66
+      mtime: 1218737172
+      name: SQLite.xsi
+    - bytesize: 383
+      file_mime_type: ~
+      line_count: ~
+      md5: 67d704303186b284c299346eed63662d
+      mtime: 1187827267
+      name: SQLiteXS.h
+    - bytesize: 33296
+      file_mime_type: ~
+      line_count: ~
+      md5: 910bff34a0a9cc85c863b926e3fe02b9
+      mtime: 1218734383
+      name: dbdimp.c
+    - bytesize: 3048
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b21e290375c812570a60df397857c71
+      mtime: 1218734383
+      name: dbdimp.h
+    - bytesize: 1108
+      file_mime_type: ~
+      line_count: ~
+      md5: c31dae87308b0a17f4d9706b206cf35e
+      mtime: 1187827267
+      name: getsqlite.pl
+    - bytesize: 20575
+      file_mime_type: ~
+      line_count: ~
+      md5: ea88fdf1d9450fc0ef5cc2233d56257c
+      mtime: 1218897995
+      name: lib/DBD/SQLite.pm
+    - bytesize: 1023
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a2c656e64d5a22dd422da33019bb9ed
+      mtime: 1218795740
+      name: lib/DBD/SQLite/Amalgamation.pm
+    - bytesize: 154956
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b6bab0f2880616983951107ca9596e8
+      mtime: 1210868329
+      name: ppport.h
+    - bytesize: 3224802
+      file_mime_type: ~
+      line_count: ~
+      md5: be9e431d1d85d4f6491b894240be1270
+      mtime: 1218094597
+      name: sqlite-amalgamation.c
+    - bytesize: 290142
+      file_mime_type: ~
+      line_count: ~
+      md5: 57744fcf13b202cac00c1630eb2942b6
+      mtime: 1218094579
+      name: sqlite3.h
+    - bytesize: 20608
+      file_mime_type: ~
+      line_count: ~
+      md5: ccfdd787473b0eb7a494298ebdb3b35d
+      mtime: 1218094579
+      name: sqlite3ext.h
+    - bytesize: 152
+      file_mime_type: ~
+      line_count: ~
+      md5: edf41dca28ad477ac4fc0fb47d1a4e6a
+      mtime: 1187827266
+      name: t/00basic.t
+    - bytesize: 450
+      file_mime_type: ~
+      line_count: ~
+      md5: 23d7737eaedbc7b78c4572cc4b4f4279
+      mtime: 1187827266
+      name: t/01logon.t
+    - bytesize: 454
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cddc3b4d9d9bd78b7c2ac0bc5e85cfe
+      mtime: 1187827266
+      name: t/02cr_table.t
+    - bytesize: 824
+      file_mime_type: ~
+      line_count: ~
+      md5: 883492ec60bed2d174da83d19d17e187
+      mtime: 1218735158
+      name: t/03insert.t
+    - bytesize: 1311
+      file_mime_type: ~
+      line_count: ~
+      md5: ebbac545c9caf3168f518c956f615ab0
+      mtime: 1187835325
+      name: t/04select.t
+    - bytesize: 1038
+      file_mime_type: ~
+      line_count: ~
+      md5: 210a308d2da11ee3ff4d318983fe6028
+      mtime: 1187827266
+      name: t/05tran.t
+    - bytesize: 483
+      file_mime_type: ~
+      line_count: ~
+      md5: 25644bac64811e63b6519baccadab80d
+      mtime: 1187827266
+      name: t/06error.t
+    - bytesize: 2959
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a9c116736a6d9c14162858cdabb7c11
+      mtime: 1187827266
+      name: t/08create_function.t
+    - bytesize: 3862
+      file_mime_type: ~
+      line_count: ~
+      md5: 3719db07dbd9939cba2148bb16147390
+      mtime: 1187827266
+      name: t/09create_aggregate.t
+    - bytesize: 2026
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cb079c96e66b06988a547667f6f1b67
+      mtime: 1187827266
+      name: t/10dsnlist.t
+    - bytesize: 3933
+      file_mime_type: ~
+      line_count: ~
+      md5: 780d4b061a9a64f60c26d4961790e180
+      mtime: 1187835325
+      name: t/11unicode.t
+    - bytesize: 2567
+      file_mime_type: ~
+      line_count: ~
+      md5: 9493b270a86ba7e42445d437323f923e
+      mtime: 1218795875
+      name: t/12create_collation.t
+    - bytesize: 1250
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c9f3f06023399dbedae56baaa307a25
+      mtime: 1218734383
+      name: t/13progress_handler.t
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: 21b1998f6768c3bc9039f6a5d5046875
+      mtime: 1187827266
+      name: t/20createdrop.t
+    - bytesize: 4050
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bba150fd2cb442b3a2c220a73f8bf9c
+      mtime: 1187827266
+      name: t/30insertfetch.t
+    - bytesize: 5785
+      file_mime_type: ~
+      line_count: ~
+      md5: ae9bce46018c124bfa59686ed106a94b
+      mtime: 1187827266
+      name: t/40bindparam.t
+    - bytesize: 4110
+      file_mime_type: ~
+      line_count: ~
+      md5: 5255432a3c663cce6aa83d8596688bbc
+      mtime: 1187827266
+      name: t/40blobs.t
+    - bytesize: 1466
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eb6d26f308b48c12c43ee5259809489
+      mtime: 1187827266
+      name: t/40blobtext.t
+    - bytesize: 3360
+      file_mime_type: ~
+      line_count: ~
+      md5: f9bea71754d841e97c825f6079b2cec9
+      mtime: 1187827266
+      name: t/40listfields.t
+    - bytesize: 2627
+      file_mime_type: ~
+      line_count: ~
+      md5: 088750a05dd505947ef97401ea38e58a
+      mtime: 1187827266
+      name: t/40nulls.t
+    - bytesize: 3893
+      file_mime_type: ~
+      line_count: ~
+      md5: 16a5e1224bbe3ef88270f6a9371de194
+      mtime: 1187827266
+      name: t/40numrows.t
+    - bytesize: 3459
+      file_mime_type: ~
+      line_count: ~
+      md5: 63250b02621829b96e8021efacdff0c0
+      mtime: 1187827266
+      name: t/40prepcached.t
+    - bytesize: 3936
+      file_mime_type: ~
+      line_count: ~
+      md5: b77111c9ce1dd17c39b846d3da22bc82
+      mtime: 1187827266
+      name: t/50chopblanks.t
+    - bytesize: 6432
+      file_mime_type: ~
+      line_count: ~
+      md5: dce6a3bb052586690bfce4fcdfe833c0
+      mtime: 1187827266
+      name: t/50commit.t
+    - bytesize: 1613
+      file_mime_type: ~
+      line_count: ~
+      md5: 93543e13ec1ce715e8038a62894d306d
+      mtime: 1187827266
+      name: t/60metadata.t
+    - bytesize: 517
+      file_mime_type: ~
+      line_count: ~
+      md5: 782760db990a05f7b43b1e161c44156f
+      mtime: 1202383558
+      name: t/90cppcomments.t
+    - bytesize: 81
+      file_mime_type: ~
+      line_count: ~
+      md5: b691bcb249b7733b36ac3037e009b248
+      mtime: 1187827266
+      name: t/99cleanup.t
+    - bytesize: 2972
+      file_mime_type: ~
+      line_count: ~
+      md5: c184acf491ed8b6a783b5a62120aee2c
+      mtime: 1187827266
+      name: t/SQLite.dbtest
+    - bytesize: 13494
+      file_mime_type: ~
+      line_count: ~
+      md5: 0558abfc55256032e85f02e194fbe93d
+      mtime: 1187827266
+      name: t/ak-dbd.t
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: cb255886f79f9a4abdaf3d5647dd4dbd
+      mtime: 1218898006
+      name: t/column-info.t
+    - bytesize: 5585
+      file_mime_type: ~
+      line_count: ~
+      md5: f5850a0de2ef1f11a24b5fa0f83c0b43
+      mtime: 1187827266
+      name: t/dbdadmin.t
+    - bytesize: 6346
+      file_mime_type: ~
+      line_count: ~
+      md5: 82e33d1564b5d0161daabe385fef6d0a
+      mtime: 1187835325
+      name: t/lib.pl
+  module_info:
+    - bytesize: 20575
+      file_mime_type: ~
+      line_count: ~
+      md5: 408ffefbf816f9586a58d044cb7a1ee9
+      module_name_from_file_guess: DBD::SQLite
+      mtime: 1218897995
+      name: blib/lib/DBD/SQLite.pm
+      packages:
+        - DBD::SQLite
+        - DBD::SQLite::dr
+        - DBD::SQLite::db
+      primary_package: DBD::SQLite
+      uses:
+        - strict
+        - DBI
+        - vars
+        - DynaLoader
+        - locale
+      version_info:
+        filename: blib/lib/DBD/SQLite.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 1.14001
+    - bytesize: 1023
+      file_mime_type: ~
+      line_count: ~
+      md5: b254bf27a9b3bfa19b9027da7e8989f7
+      module_name_from_file_guess: DBD::SQLite::Amalgamation
+      mtime: 1218795740
+      name: blib/lib/DBD/SQLite/Amalgamation.pm
+      packages:
+        - DBD::SQLite::Amalgamation
+      primary_package: DBD::SQLite::Amalgamation
+      uses:
+        - ''
+        - strict
+        - warnings
+        - version
+        - DBD::SQLite
+      version_info:
+        filename: blib/lib/DBD/SQLite/Amalgamation.pm
+        identifier: VERSION
+        line_number: 5
+        sigil: $
+        value: !!perl/hash:version
+          original: 3.6.1.2
+          qv: 1
+          version:
+            - 3
+            - 6
+            - 1
+            - 2
+  modules:
+    - blib/lib/DBD/SQLite.pm
+    - blib/lib/DBD/SQLite/Amalgamation.pm
+  test_info:
+    - bytesize: 152
+      file_mime_type: ~
+      line_count: ~
+      md5: edf41dca28ad477ac4fc0fb47d1a4e6a
+      mtime: 1187827266
+      name: t/00basic.t
+      uses:
+        - Test
+        - DBD::SQLite
+    - bytesize: 450
+      file_mime_type: ~
+      line_count: ~
+      md5: 23d7737eaedbc7b78c4572cc4b4f4279
+      mtime: 1187827266
+      name: t/01logon.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 454
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cddc3b4d9d9bd78b7c2ac0bc5e85cfe
+      mtime: 1187827266
+      name: t/02cr_table.t
+      uses:
+        - strict
+        - Test
+        - DBI
+    - bytesize: 824
+      file_mime_type: ~
+      line_count: ~
+      md5: 883492ec60bed2d174da83d19d17e187
+      mtime: 1218735158
+      name: t/03insert.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 1311
+      file_mime_type: ~
+      line_count: ~
+      md5: ebbac545c9caf3168f518c956f615ab0
+      mtime: 1187835325
+      name: t/04select.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 1038
+      file_mime_type: ~
+      line_count: ~
+      md5: 210a308d2da11ee3ff4d318983fe6028
+      mtime: 1187827266
+      name: t/05tran.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 483
+      file_mime_type: ~
+      line_count: ~
+      md5: 25644bac64811e63b6519baccadab80d
+      mtime: 1187827266
+      name: t/06error.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 2959
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a9c116736a6d9c14162858cdabb7c11
+      mtime: 1187827266
+      name: t/08create_function.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 3862
+      file_mime_type: ~
+      line_count: ~
+      md5: 3719db07dbd9939cba2148bb16147390
+      mtime: 1187827266
+      name: t/09create_aggregate.t
+      uses:
+        - strict
+        - Test
+        - DBI
+    - bytesize: 2026
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cb079c96e66b06988a547667f6f1b67
+      mtime: 1187827266
+      name: t/10dsnlist.t
+      uses:
+        - DBI
+    - bytesize: 3933
+      file_mime_type: ~
+      line_count: ~
+      md5: 780d4b061a9a64f60c26d4961790e180
+      mtime: 1187835325
+      name: t/11unicode.t
+      uses:
+        - strict
+        - Carp
+        - DBI
+    - bytesize: 2567
+      file_mime_type: ~
+      line_count: ~
+      md5: 9493b270a86ba7e42445d437323f923e
+      mtime: 1218795875
+      name: t/12create_collation.t
+      uses:
+        - Test::More
+        - Encode
+        - DBI
+        - locale
+    - bytesize: 1250
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c9f3f06023399dbedae56baaa307a25
+      mtime: 1218734383
+      name: t/13progress_handler.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: 21b1998f6768c3bc9039f6a5d5046875
+      mtime: 1187827266
+      name: t/20createdrop.t
+      uses:
+        - strict
+        - vars
+        - DBI
+    - bytesize: 4050
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bba150fd2cb442b3a2c220a73f8bf9c
+      mtime: 1187827266
+      name: t/30insertfetch.t
+      uses:
+        - DBI
+    - bytesize: 5785
+      file_mime_type: ~
+      line_count: ~
+      md5: ae9bce46018c124bfa59686ed106a94b
+      mtime: 1187827266
+      name: t/40bindparam.t
+      uses:
+        - DBI
+        - vars
+    - bytesize: 4110
+      file_mime_type: ~
+      line_count: ~
+      md5: 5255432a3c663cce6aa83d8596688bbc
+      mtime: 1187827266
+      name: t/40blobs.t
+      uses:
+        - DBI
+    - bytesize: 1466
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eb6d26f308b48c12c43ee5259809489
+      mtime: 1187827266
+      name: t/40blobtext.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 3360
+      file_mime_type: ~
+      line_count: ~
+      md5: f9bea71754d841e97c825f6079b2cec9
+      mtime: 1187827266
+      name: t/40listfields.t
+      uses:
+        - DBI
+        - vars
+    - bytesize: 2627
+      file_mime_type: ~
+      line_count: ~
+      md5: 088750a05dd505947ef97401ea38e58a
+      mtime: 1187827266
+      name: t/40nulls.t
+      uses:
+        - DBI
+        - vars
+    - bytesize: 3893
+      file_mime_type: ~
+      line_count: ~
+      md5: 16a5e1224bbe3ef88270f6a9371de194
+      mtime: 1187827266
+      name: t/40numrows.t
+      uses:
+        - DBI
+    - bytesize: 3459
+      file_mime_type: ~
+      line_count: ~
+      md5: 63250b02621829b96e8021efacdff0c0
+      mtime: 1187827266
+      name: t/40prepcached.t
+      uses:
+        - DBI
+    - bytesize: 3936
+      file_mime_type: ~
+      line_count: ~
+      md5: b77111c9ce1dd17c39b846d3da22bc82
+      mtime: 1187827266
+      name: t/50chopblanks.t
+      uses:
+        - vars
+        - DBI
+        - strict
+    - bytesize: 6432
+      file_mime_type: ~
+      line_count: ~
+      md5: dce6a3bb052586690bfce4fcdfe833c0
+      mtime: 1187827266
+      name: t/50commit.t
+      uses:
+        - DBI
+        - vars
+    - bytesize: 1613
+      file_mime_type: ~
+      line_count: ~
+      md5: 93543e13ec1ce715e8038a62894d306d
+      mtime: 1187827266
+      name: t/60metadata.t
+      uses:
+        - Test
+        - DBI
+    - bytesize: 517
+      file_mime_type: ~
+      line_count: ~
+      md5: 782760db990a05f7b43b1e161c44156f
+      mtime: 1202383558
+      name: t/90cppcomments.t
+      uses:
+        - Test
+        - DBI
+        - Fatal
+    - bytesize: 81
+      file_mime_type: ~
+      line_count: ~
+      md5: b691bcb249b7733b36ac3037e009b248
+      mtime: 1187827266
+      name: t/99cleanup.t
+      uses:
+        - Test
+    - bytesize: 13494
+      file_mime_type: ~
+      line_count: ~
+      md5: 0558abfc55256032e85f02e194fbe93d
+      mtime: 1187827266
+      name: t/ak-dbd.t
+      uses: []
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: cb255886f79f9a4abdaf3d5647dd4dbd
+      mtime: 1218898006
+      name: t/column-info.t
+      uses:
+        - Test::More
+        - strict
+        - DBI
+    - bytesize: 5585
+      file_mime_type: ~
+      line_count: ~
+      md5: f5850a0de2ef1f11a24b5fa0f83c0b43
+      mtime: 1187827266
+      name: t/dbdadmin.t
+      uses:
+        - DBI
+  tests:
+    - t/00basic.t
+    - t/01logon.t
+    - t/02cr_table.t
+    - t/03insert.t
+    - t/04select.t
+    - t/05tran.t
+    - t/06error.t
+    - t/08create_function.t
+    - t/09create_aggregate.t
+    - t/10dsnlist.t
+    - t/11unicode.t
+    - t/12create_collation.t
+    - t/13progress_handler.t
+    - t/20createdrop.t
+    - t/30insertfetch.t
+    - t/40bindparam.t
+    - t/40blobs.t
+    - t/40blobtext.t
+    - t/40listfields.t
+    - t/40nulls.t
+    - t/40numrows.t
+    - t/40prepcached.t
+    - t/50chopblanks.t
+    - t/50commit.t
+    - t/60metadata.t
+    - t/90cppcomments.t
+    - t/99cleanup.t
+    - t/ak-dbd.t
+    - t/column-info.t
+    - t/dbdadmin.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-50270._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 50270
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268974749
+  examine_start_time: 1268974734
+  examine_time: 15
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 50270
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1268974749
+  run_start_time: 1268974734
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

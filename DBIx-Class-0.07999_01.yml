@@ -1,0 +1,6184 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Extensible and flexible object <-> relational mapper.
+    author:
+      - 'mst: Matt S. Trout <mst@shadowcatsystems.co.uk>'
+    build_requires:
+      DBD::SQLite: 1.11
+    generated_by: Module::Build version 0.2805
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.2.html
+      version: 1.2
+    name: DBIx-Class
+    provides:
+      DBIC::SQL::Abstract:
+        file: lib/DBIx/Class/Storage/DBI.pm
+      DBIx::Class:
+        file: lib/DBIx/Class.pm
+        version: 0.07999_01
+      DBIx::Class::AccessorGroup:
+        file: lib/DBIx/Class/AccessorGroup.pm
+      DBIx::Class::CDBICompat:
+        file: lib/DBIx/Class/CDBICompat.pm
+      DBIx::Class::CDBICompat::ColumnGroups::GrouperShim:
+        file: lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+      DBIx::Class::Core:
+        file: lib/DBIx/Class/Core.pm
+      DBIx::Class::Cursor:
+        file: lib/DBIx/Class/Cursor.pm
+      DBIx::Class::DB:
+        file: lib/DBIx/Class/DB.pm
+      DBIx::Class::InflateColumn:
+        file: lib/DBIx/Class/InflateColumn.pm
+      DBIx::Class::InflateColumn::DateTime:
+        file: lib/DBIx/Class/InflateColumn/DateTime.pm
+      DBIx::Class::Ordered:
+        file: lib/DBIx/Class/Ordered.pm
+      DBIx::Class::PK:
+        file: lib/DBIx/Class/PK.pm
+      DBIx::Class::PK::Auto:
+        file: lib/DBIx/Class/PK/Auto.pm
+      DBIx::Class::PK::Auto::DB2:
+        file: lib/DBIx/Class/PK/Auto/DB2.pm
+      DBIx::Class::PK::Auto::MSSQL:
+        file: lib/DBIx/Class/PK/Auto/MSSQL.pm
+      DBIx::Class::PK::Auto::MySQL:
+        file: lib/DBIx/Class/PK/Auto/MySQL.pm
+      DBIx::Class::PK::Auto::Oracle:
+        file: lib/DBIx/Class/PK/Auto/Oracle.pm
+      DBIx::Class::PK::Auto::Pg:
+        file: lib/DBIx/Class/PK/Auto/Pg.pm
+      DBIx::Class::PK::Auto::SQLite:
+        file: lib/DBIx/Class/PK/Auto/SQLite.pm
+      DBIx::Class::Relationship:
+        file: lib/DBIx/Class/Relationship.pm
+      DBIx::Class::Relationship::Base:
+        file: lib/DBIx/Class/Relationship/Base.pm
+      DBIx::Class::ResultSet:
+        file: lib/DBIx/Class/ResultSet.pm
+      DBIx::Class::ResultSetColumn:
+        file: lib/DBIx/Class/ResultSetColumn.pm
+      DBIx::Class::ResultSetManager:
+        file: lib/DBIx/Class/ResultSetManager.pm
+      DBIx::Class::ResultSource:
+        file: lib/DBIx/Class/ResultSource.pm
+      DBIx::Class::ResultSource::Table:
+        file: lib/DBIx/Class/ResultSource/Table.pm
+      DBIx::Class::ResultSourceProxy::Table:
+        file: lib/DBIx/Class/ResultSourceProxy/Table.pm
+      DBIx::Class::Row:
+        file: lib/DBIx/Class/Row.pm
+      DBIx::Class::Schema:
+        file: lib/DBIx/Class/Schema.pm
+      DBIx::Class::Serialize::Storable:
+        file: lib/DBIx/Class/Serialize/Storable.pm
+      DBIx::Class::Storage:
+        file: lib/DBIx/Class/Storage.pm
+      DBIx::Class::Storage::DBI:
+        file: lib/DBIx/Class/Storage/DBI.pm
+      DBIx::Class::Storage::DBI::Cursor:
+        file: lib/DBIx/Class/Storage/DBI/Cursor.pm
+      DBIx::Class::Storage::DBI::DB2:
+        file: lib/DBIx/Class/Storage/DBI/DB2.pm
+      DBIx::Class::Storage::DBI::MSSQL:
+        file: lib/DBIx/Class/Storage/DBI/MSSQL.pm
+      DBIx::Class::Storage::DBI::MultiDistinctEmulation:
+        file: lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+      DBIx::Class::Storage::DBI::NoBindVars:
+        file: lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+      DBIx::Class::Storage::DBI::ODBC:
+        file: lib/DBIx/Class/Storage/DBI/ODBC.pm
+      DBIx::Class::Storage::DBI::ODBC::DB2_400_SQL:
+        file: lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+      DBIx::Class::Storage::DBI::Oracle:
+        file: lib/DBIx/Class/Storage/DBI/Oracle.pm
+      DBIx::Class::Storage::DBI::Pg:
+        file: lib/DBIx/Class/Storage/DBI/Pg.pm
+      DBIx::Class::Storage::DBI::SQLite:
+        file: lib/DBIx/Class/Storage/DBI/SQLite.pm
+      DBIx::Class::Storage::DBI::Sybase:
+        file: lib/DBIx/Class/Storage/DBI/Sybase.pm
+      DBIx::Class::Storage::DBI::Sybase::MSSQL:
+        file: lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+      DBIx::Class::Storage::DBI::mysql:
+        file: lib/DBIx/Class/Storage/DBI/mysql.pm
+      DBIx::Class::Storage::Statistics:
+        file: lib/DBIx/Class/Storage/Statistics.pm
+      DBIx::Class::Test::SQLite:
+        file: lib/DBIx/Class/Test/SQLite.pm
+      DBIx::Class::UTF8Columns:
+        file: lib/DBIx/Class/UTF8Columns.pm
+      DBIx::ContextualFetch::st:
+        file: lib/DBIx/Class/CDBICompat/ImaDBI.pm
+      SQL::Translator::Producer::DBIx::Class::File:
+        file: lib/SQL/Translator/Producer/DBIx/Class/File.pm
+        version: 0.1
+    requires:
+      Carp::Clan: 0
+      Class::C3: 0.13
+      Class::Data::Accessor: 0.01
+      Class::Inspector: 0
+      Cwd: 3.19
+      DBI: 1.4
+      Data::Page: 2
+      Module::Find: 0
+      SQL::Abstract: 1.2
+      SQL::Abstract::Limit: 0.101
+      Scalar::Util: 0
+      Storable: 0
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 0.07999_01
+  blib:
+    - blib/bindoc/dbicadmin.1
+    - blib/lib/DBIx/Class.pm
+    - blib/lib/DBIx/Class/AccessorGroup.pm
+    - blib/lib/DBIx/Class/CDBICompat.pm
+    - blib/lib/DBIx/Class/CDBICompat/AccessorMapping.pm
+    - blib/lib/DBIx/Class/CDBICompat/AttributeAPI.pm
+    - blib/lib/DBIx/Class/CDBICompat/AutoUpdate.pm
+    - blib/lib/DBIx/Class/CDBICompat/ColumnCase.pm
+    - blib/lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+    - blib/lib/DBIx/Class/CDBICompat/Constraints.pm
+    - blib/lib/DBIx/Class/CDBICompat/Constructor.pm
+    - blib/lib/DBIx/Class/CDBICompat/DestroyWarning.pm
+    - blib/lib/DBIx/Class/CDBICompat/GetSet.pm
+    - blib/lib/DBIx/Class/CDBICompat/HasA.pm
+    - blib/lib/DBIx/Class/CDBICompat/HasMany.pm
+    - blib/lib/DBIx/Class/CDBICompat/ImaDBI.pm
+    - blib/lib/DBIx/Class/CDBICompat/LazyLoading.pm
+    - blib/lib/DBIx/Class/CDBICompat/LiveObjectIndex.pm
+    - blib/lib/DBIx/Class/CDBICompat/MightHave.pm
+    - blib/lib/DBIx/Class/CDBICompat/ObjIndexStubs.pm
+    - blib/lib/DBIx/Class/CDBICompat/Pager.pm
+    - blib/lib/DBIx/Class/CDBICompat/ReadOnly.pm
+    - blib/lib/DBIx/Class/CDBICompat/Retrieve.pm
+    - blib/lib/DBIx/Class/CDBICompat/Stringify.pm
+    - blib/lib/DBIx/Class/CDBICompat/TempColumns.pm
+    - blib/lib/DBIx/Class/CDBICompat/Triggers.pm
+    - blib/lib/DBIx/Class/ClassResolver/PassThrough.pm
+    - blib/lib/DBIx/Class/Componentised.pm
+    - blib/lib/DBIx/Class/Core.pm
+    - blib/lib/DBIx/Class/Cursor.pm
+    - blib/lib/DBIx/Class/DB.pm
+    - blib/lib/DBIx/Class/InflateColumn.pm
+    - blib/lib/DBIx/Class/InflateColumn/DateTime.pm
+    - blib/lib/DBIx/Class/Manual.pod
+    - blib/lib/DBIx/Class/Manual/Component.pod
+    - blib/lib/DBIx/Class/Manual/Cookbook.pod
+    - blib/lib/DBIx/Class/Manual/DocMap.pod
+    - blib/lib/DBIx/Class/Manual/Example.pod
+    - blib/lib/DBIx/Class/Manual/FAQ.pod
+    - blib/lib/DBIx/Class/Manual/Glossary.pod
+    - blib/lib/DBIx/Class/Manual/Intro.pod
+    - blib/lib/DBIx/Class/Manual/Troubleshooting.pod
+    - blib/lib/DBIx/Class/Ordered.pm
+    - blib/lib/DBIx/Class/PK.pm
+    - blib/lib/DBIx/Class/PK/Auto.pm
+    - blib/lib/DBIx/Class/PK/Auto/DB2.pm
+    - blib/lib/DBIx/Class/PK/Auto/MSSQL.pm
+    - blib/lib/DBIx/Class/PK/Auto/MySQL.pm
+    - blib/lib/DBIx/Class/PK/Auto/Oracle.pm
+    - blib/lib/DBIx/Class/PK/Auto/Pg.pm
+    - blib/lib/DBIx/Class/PK/Auto/SQLite.pm
+    - blib/lib/DBIx/Class/Relationship.pm
+    - blib/lib/DBIx/Class/Relationship/Accessor.pm
+    - blib/lib/DBIx/Class/Relationship/Base.pm
+    - blib/lib/DBIx/Class/Relationship/BelongsTo.pm
+    - blib/lib/DBIx/Class/Relationship/CascadeActions.pm
+    - blib/lib/DBIx/Class/Relationship/HasMany.pm
+    - blib/lib/DBIx/Class/Relationship/HasOne.pm
+    - blib/lib/DBIx/Class/Relationship/Helpers.pm
+    - blib/lib/DBIx/Class/Relationship/ManyToMany.pm
+    - blib/lib/DBIx/Class/Relationship/ProxyMethods.pm
+    - blib/lib/DBIx/Class/ResultSet.pm
+    - blib/lib/DBIx/Class/ResultSetColumn.pm
+    - blib/lib/DBIx/Class/ResultSetManager.pm
+    - blib/lib/DBIx/Class/ResultSetProxy.pm
+    - blib/lib/DBIx/Class/ResultSource.pm
+    - blib/lib/DBIx/Class/ResultSource/Table.pm
+    - blib/lib/DBIx/Class/ResultSourceProxy.pm
+    - blib/lib/DBIx/Class/ResultSourceProxy/Table.pm
+    - blib/lib/DBIx/Class/Row.pm
+    - blib/lib/DBIx/Class/Schema.pm
+    - blib/lib/DBIx/Class/Serialize/Storable.pm
+    - blib/lib/DBIx/Class/Storage.pm
+    - blib/lib/DBIx/Class/Storage/DBI.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Cursor.pm
+    - blib/lib/DBIx/Class/Storage/DBI/DB2.pm
+    - blib/lib/DBIx/Class/Storage/DBI/MSSQL.pm
+    - blib/lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+    - blib/lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+    - blib/lib/DBIx/Class/Storage/DBI/ODBC.pm
+    - blib/lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Oracle.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Pg.pm
+    - blib/lib/DBIx/Class/Storage/DBI/SQLite.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Sybase.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+    - blib/lib/DBIx/Class/Storage/DBI/mysql.pm
+    - blib/lib/DBIx/Class/Storage/Statistics.pm
+    - blib/lib/DBIx/Class/Test/SQLite.pm
+    - blib/lib/DBIx/Class/UTF8Columns.pm
+    - blib/lib/SQL/Translator/Parser/DBIx/Class.pm
+    - blib/lib/SQL/Translator/Producer/DBIx/Class/File.pm
+    - blib/libdoc/DBIx::Class.3
+    - blib/libdoc/DBIx::Class::AccessorGroup.3
+    - blib/libdoc/DBIx::Class::CDBICompat.3
+    - blib/libdoc/DBIx::Class::Core.3
+    - blib/libdoc/DBIx::Class::Cursor.3
+    - blib/libdoc/DBIx::Class::DB.3
+    - blib/libdoc/DBIx::Class::InflateColumn.3
+    - blib/libdoc/DBIx::Class::InflateColumn::DateTime.3
+    - blib/libdoc/DBIx::Class::Manual.3
+    - blib/libdoc/DBIx::Class::Manual::Component.3
+    - blib/libdoc/DBIx::Class::Manual::Cookbook.3
+    - blib/libdoc/DBIx::Class::Manual::DocMap.3
+    - blib/libdoc/DBIx::Class::Manual::Example.3
+    - blib/libdoc/DBIx::Class::Manual::FAQ.3
+    - blib/libdoc/DBIx::Class::Manual::Glossary.3
+    - blib/libdoc/DBIx::Class::Manual::Intro.3
+    - blib/libdoc/DBIx::Class::Manual::Troubleshooting.3
+    - blib/libdoc/DBIx::Class::Ordered.3
+    - blib/libdoc/DBIx::Class::PK.3
+    - blib/libdoc/DBIx::Class::PK::Auto.3
+    - blib/libdoc/DBIx::Class::PK::Auto::DB2.3
+    - blib/libdoc/DBIx::Class::PK::Auto::MSSQL.3
+    - blib/libdoc/DBIx::Class::PK::Auto::MySQL.3
+    - blib/libdoc/DBIx::Class::PK::Auto::Oracle.3
+    - blib/libdoc/DBIx::Class::PK::Auto::Pg.3
+    - blib/libdoc/DBIx::Class::PK::Auto::SQLite.3
+    - blib/libdoc/DBIx::Class::Relationship.3
+    - blib/libdoc/DBIx::Class::Relationship::Base.3
+    - blib/libdoc/DBIx::Class::Relationship::BelongsTo.3
+    - blib/libdoc/DBIx::Class::ResultSet.3
+    - blib/libdoc/DBIx::Class::ResultSetColumn.3
+    - blib/libdoc/DBIx::Class::ResultSetManager.3
+    - blib/libdoc/DBIx::Class::ResultSource.3
+    - blib/libdoc/DBIx::Class::ResultSource::Table.3
+    - blib/libdoc/DBIx::Class::ResultSourceProxy::Table.3
+    - blib/libdoc/DBIx::Class::Row.3
+    - blib/libdoc/DBIx::Class::Schema.3
+    - blib/libdoc/DBIx::Class::Serialize::Storable.3
+    - blib/libdoc/DBIx::Class::Storage.3
+    - blib/libdoc/DBIx::Class::Storage::DBI.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::Cursor.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::DB2.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::MSSQL.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::MultiDistinctEmulation.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::NoBindVars.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::ODBC.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::ODBC::DB2_400_SQL.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::Oracle.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::Pg.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::SQLite.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::Sybase.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::Sybase::MSSQL.3
+    - blib/libdoc/DBIx::Class::Storage::DBI::mysql.3
+    - blib/libdoc/DBIx::Class::Storage::Statistics.3
+    - blib/libdoc/DBIx::Class::Test::SQLite.3
+    - blib/libdoc/DBIx::Class::UTF8Columns.3
+    - blib/libdoc/SQL::Translator::Producer::DBIx::Class::File.3
+    - blib/script/dbicadmin
+  build_file: Build.PL
+  build_file_output: |
+    Checking prerequisites...
+      requires:
+        !  Carp::Clan is not installed
+        !  Class::C3 is not installed
+        !  Class::Data::Accessor is not installed
+        !  DBI is not installed
+        !  Data::Page is not installed
+        !  Module::Find is not installed
+        !  SQL::Abstract is not installed
+        !  SQL::Abstract::Limit is not installed
+      build_requires:
+        !  DBD::SQLite is not installed
+    
+    ERRORS/WARNINGS FOUND IN PREREQUISITES.  You may wish to install the versions
+    of the modules indicated above before proceeding with this installation
+    
+    Run 'Build installdeps' to install missing prerequisites.
+    
+    Creating new 'MYMETA.yml' with configuration results
+    Creating new 'Build' script for 'DBIx-Class' version '0.07999_01'
+  build_output: "Building DBIx-Class\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+      make: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Build.PL
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Makefile.PL
+    build_files:
+      Build.PL: Build.PL
+      Makefile.PL: Makefile.PL
+    build_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01
+    has_build_and_makefile: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Makefile.PL
+    has_build_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Build.PL
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: 0.3603
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: 1
+    uses_module_build_compat: 1
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: BLBLACK
+  dist_basename: DBIx-Class-0.07999_01.tar.gz
+  dist_date: 1160100951
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV/DBIx-Class-0.07999_01
+  dist_file: /home/brian/CPAN/authors/id/B/BL/BLBLACK/DBIx-Class-0.07999_01.tar.gz
+  dist_md5: f4b0a152e3b60eb213eb862ac42975c1
+  dist_size: 244154
+  manifest:
+    - Build.PL
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - lib/DBIx/Class.pm
+    - lib/DBIx/Class/AccessorGroup.pm
+    - lib/DBIx/Class/CDBICompat.pm
+    - lib/DBIx/Class/CDBICompat/AccessorMapping.pm
+    - lib/DBIx/Class/CDBICompat/AttributeAPI.pm
+    - lib/DBIx/Class/CDBICompat/AutoUpdate.pm
+    - lib/DBIx/Class/CDBICompat/ColumnCase.pm
+    - lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+    - lib/DBIx/Class/CDBICompat/Constraints.pm
+    - lib/DBIx/Class/CDBICompat/Constructor.pm
+    - lib/DBIx/Class/CDBICompat/DestroyWarning.pm
+    - lib/DBIx/Class/CDBICompat/GetSet.pm
+    - lib/DBIx/Class/CDBICompat/HasA.pm
+    - lib/DBIx/Class/CDBICompat/HasMany.pm
+    - lib/DBIx/Class/CDBICompat/ImaDBI.pm
+    - lib/DBIx/Class/CDBICompat/LazyLoading.pm
+    - lib/DBIx/Class/CDBICompat/LiveObjectIndex.pm
+    - lib/DBIx/Class/CDBICompat/MightHave.pm
+    - lib/DBIx/Class/CDBICompat/ObjIndexStubs.pm
+    - lib/DBIx/Class/CDBICompat/Pager.pm
+    - lib/DBIx/Class/CDBICompat/ReadOnly.pm
+    - lib/DBIx/Class/CDBICompat/Retrieve.pm
+    - lib/DBIx/Class/CDBICompat/Stringify.pm
+    - lib/DBIx/Class/CDBICompat/TempColumns.pm
+    - lib/DBIx/Class/CDBICompat/Triggers.pm
+    - lib/DBIx/Class/ClassResolver/PassThrough.pm
+    - lib/DBIx/Class/Componentised.pm
+    - lib/DBIx/Class/Core.pm
+    - lib/DBIx/Class/Cursor.pm
+    - lib/DBIx/Class/DB.pm
+    - lib/DBIx/Class/InflateColumn.pm
+    - lib/DBIx/Class/InflateColumn/DateTime.pm
+    - lib/DBIx/Class/Manual.pod
+    - lib/DBIx/Class/Manual/Component.pod
+    - lib/DBIx/Class/Manual/Cookbook.pod
+    - lib/DBIx/Class/Manual/DocMap.pod
+    - lib/DBIx/Class/Manual/Example.pod
+    - lib/DBIx/Class/Manual/FAQ.pod
+    - lib/DBIx/Class/Manual/Glossary.pod
+    - lib/DBIx/Class/Manual/Intro.pod
+    - lib/DBIx/Class/Manual/Troubleshooting.pod
+    - lib/DBIx/Class/Ordered.pm
+    - lib/DBIx/Class/PK.pm
+    - lib/DBIx/Class/PK/Auto.pm
+    - lib/DBIx/Class/PK/Auto/DB2.pm
+    - lib/DBIx/Class/PK/Auto/MSSQL.pm
+    - lib/DBIx/Class/PK/Auto/MySQL.pm
+    - lib/DBIx/Class/PK/Auto/Oracle.pm
+    - lib/DBIx/Class/PK/Auto/Pg.pm
+    - lib/DBIx/Class/PK/Auto/SQLite.pm
+    - lib/DBIx/Class/Relationship.pm
+    - lib/DBIx/Class/Relationship/Accessor.pm
+    - lib/DBIx/Class/Relationship/Base.pm
+    - lib/DBIx/Class/Relationship/BelongsTo.pm
+    - lib/DBIx/Class/Relationship/CascadeActions.pm
+    - lib/DBIx/Class/Relationship/HasMany.pm
+    - lib/DBIx/Class/Relationship/HasOne.pm
+    - lib/DBIx/Class/Relationship/Helpers.pm
+    - lib/DBIx/Class/Relationship/ManyToMany.pm
+    - lib/DBIx/Class/Relationship/ProxyMethods.pm
+    - lib/DBIx/Class/ResultSet.pm
+    - lib/DBIx/Class/ResultSetColumn.pm
+    - lib/DBIx/Class/ResultSetManager.pm
+    - lib/DBIx/Class/ResultSetProxy.pm
+    - lib/DBIx/Class/ResultSource.pm
+    - lib/DBIx/Class/ResultSource/Table.pm
+    - lib/DBIx/Class/ResultSourceProxy.pm
+    - lib/DBIx/Class/ResultSourceProxy/Table.pm
+    - lib/DBIx/Class/Row.pm
+    - lib/DBIx/Class/Schema.pm
+    - lib/DBIx/Class/Serialize/Storable.pm
+    - lib/DBIx/Class/Storage.pm
+    - lib/DBIx/Class/Storage/DBI.pm
+    - lib/DBIx/Class/Storage/DBI/Cursor.pm
+    - lib/DBIx/Class/Storage/DBI/DB2.pm
+    - lib/DBIx/Class/Storage/DBI/MSSQL.pm
+    - lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+    - lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+    - lib/DBIx/Class/Storage/DBI/ODBC.pm
+    - lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+    - lib/DBIx/Class/Storage/DBI/Oracle.pm
+    - lib/DBIx/Class/Storage/DBI/Pg.pm
+    - lib/DBIx/Class/Storage/DBI/SQLite.pm
+    - lib/DBIx/Class/Storage/DBI/Sybase.pm
+    - lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+    - lib/DBIx/Class/Storage/DBI/mysql.pm
+    - lib/DBIx/Class/Storage/Statistics.pm
+    - lib/DBIx/Class/Test/SQLite.pm
+    - lib/DBIx/Class/UTF8Columns.pm
+    - lib/SQL/Translator/Parser/DBIx/Class.pm
+    - lib/SQL/Translator/Producer/DBIx/Class/File.pm
+    - script/dbicadmin
+    - t/02pod.t
+    - t/03podcoverage.t
+    - t/04dont_break_c3.t
+    - t/05components.t
+    - t/100populate.t
+    - t/18inserterror.t
+    - t/19quotes.t
+    - t/19quotes_newstyle.t
+    - t/20setuperrors.t
+    - t/26dumper.t
+    - t/30dbicplain.t
+    - t/31stats.t
+    - t/32connect_code_ref.t
+    - t/33storage_reconnect.t
+    - t/34exception_action.t
+    - t/35disable_sth_caching.t
+    - t/39load_namespaces_1.t
+    - t/39load_namespaces_2.t
+    - t/39load_namespaces_3.t
+    - t/39load_namespaces_4.t
+    - t/40resultsetmanager.t
+    - t/41orrible.t
+    - t/42toplimit.t
+    - t/46where_attribute.t
+    - t/50fork.t
+    - t/51threads.t
+    - t/52cycle.t
+    - t/53delete_related.t
+    - t/55storage_stress.t
+    - t/60core.t
+    - t/64db.t
+    - t/65multipk.t
+    - t/66relationship.t
+    - t/67pager.t
+    - t/68inflate.t
+    - t/68inflate_has_a.t
+    - t/68inflate_serialize.t
+    - t/69update.t
+    - t/70auto.t
+    - t/71mysql.t
+    - t/72pg.t
+    - t/73oracle.t
+    - t/745db2.t
+    - t/746db2_400.t
+    - t/74mssql.t
+    - t/75limit.t
+    - t/76joins.t
+    - t/77join_count.t
+    - t/78self_referencial.t
+    - t/79aliasing.t
+    - t/80unique.t
+    - t/81transactions.t
+    - t/82cascade_copy.t
+    - t/83cache.t
+    - t/84serialize.t
+    - t/85utf8.t
+    - t/86might_have.t
+    - t/86sqlt.t
+    - t/87ordered.t
+    - t/88result_set_column.t
+    - t/89dbicadmin.t
+    - t/89inflate_datetime.t
+    - t/90ensure_class_loaded.t
+    - t/90join_torture.t
+    - t/91debug.t
+    - t/92storage.t
+    - t/93nobindvars.t
+    - t/cdbi-sweet-t/08pager.t
+    - t/cdbi-t/01-columns.t
+    - t/cdbi-t/02-Film.t
+    - t/cdbi-t/03-subclassing.t
+    - t/cdbi-t/04-lazy.t
+    - t/cdbi-t/06-hasa.t
+    - t/cdbi-t/09-has_many.t
+    - t/cdbi-t/11-triggers.t
+    - t/cdbi-t/12-filter.t
+    - t/cdbi-t/13-constraint.t
+    - t/cdbi-t/14-might_have.t
+    - t/cdbi-t/15-accessor.t
+    - t/cdbi-t/16-reserved.t
+    - t/cdbi-t/18-has_a.t
+    - t/cdbi-t/19-set_sql.t
+    - t/cdbi-t/21-iterator.t
+    - t/cdbi-t/22-self_referential.t
+    - t/cdbi-t/30-pager.t
+    - t/cdbi-t/98-failure.t
+    - t/examples/Schema/MyDatabase/Main.pm
+    - t/examples/Schema/MyDatabase/Main/Artist.pm
+    - t/examples/Schema/MyDatabase/Main/Cd.pm
+    - t/examples/Schema/MyDatabase/Main/Track.pm
+    - t/examples/Schema/db/example.sql
+    - t/examples/Schema/insertdb.pl
+    - t/examples/Schema/testdb.pl
+    - t/lib/DBICNSTest/OtherRslt/D.pm
+    - t/lib/DBICNSTest/RSBase.pm
+    - t/lib/DBICNSTest/RSet/A.pm
+    - t/lib/DBICNSTest/RSet/C.pm
+    - t/lib/DBICNSTest/Result/A.pm
+    - t/lib/DBICNSTest/Result/B.pm
+    - t/lib/DBICNSTest/ResultSet/A.pm
+    - t/lib/DBICNSTest/ResultSet/C.pm
+    - t/lib/DBICNSTest/Rslt/A.pm
+    - t/lib/DBICNSTest/Rslt/B.pm
+    - t/lib/DBICTest.pm
+    - t/lib/DBICTest/ErrorComponent.pm
+    - t/lib/DBICTest/FakeComponent.pm
+    - t/lib/DBICTest/ForeignComponent.pm
+    - t/lib/DBICTest/ForeignComponent/TestComp.pm
+    - t/lib/DBICTest/OptionalComponent.pm
+    - t/lib/DBICTest/Plain.pm
+    - t/lib/DBICTest/Plain/Test.pm
+    - t/lib/DBICTest/ResultSetManager.pm
+    - t/lib/DBICTest/ResultSetManager/Foo.pm
+    - t/lib/DBICTest/Schema.pm
+    - t/lib/DBICTest/Schema/Artist.pm
+    - t/lib/DBICTest/Schema/ArtistSourceName.pm
+    - t/lib/DBICTest/Schema/ArtistSubclass.pm
+    - t/lib/DBICTest/Schema/ArtistUndirectedMap.pm
+    - t/lib/DBICTest/Schema/Bookmark.pm
+    - t/lib/DBICTest/Schema/BooksInLibrary.pm
+    - t/lib/DBICTest/Schema/CD.pm
+    - t/lib/DBICTest/Schema/CD_to_Producer.pm
+    - t/lib/DBICTest/Schema/Collection.pm
+    - t/lib/DBICTest/Schema/CollectionObject.pm
+    - t/lib/DBICTest/Schema/Employee.pm
+    - t/lib/DBICTest/Schema/Event.pm
+    - t/lib/DBICTest/Schema/FourKeys.pm
+    - t/lib/DBICTest/Schema/FourKeys_to_TwoKeys.pm
+    - t/lib/DBICTest/Schema/LinerNotes.pm
+    - t/lib/DBICTest/Schema/Link.pm
+    - t/lib/DBICTest/Schema/NoPrimaryKey.pm
+    - t/lib/DBICTest/Schema/OneKey.pm
+    - t/lib/DBICTest/Schema/Owners.pm
+    - t/lib/DBICTest/Schema/Producer.pm
+    - t/lib/DBICTest/Schema/SelfRef.pm
+    - t/lib/DBICTest/Schema/SelfRefAlias.pm
+    - t/lib/DBICTest/Schema/Serialized.pm
+    - t/lib/DBICTest/Schema/Tag.pm
+    - t/lib/DBICTest/Schema/Track.pm
+    - t/lib/DBICTest/Schema/TreeLike.pm
+    - t/lib/DBICTest/Schema/TwoKeyTreeLike.pm
+    - t/lib/DBICTest/Schema/TwoKeys.pm
+    - t/lib/DBICTest/Schema/TypedObject.pm
+    - t/lib/DBICTest/SyntaxErrorComponent1.pm
+    - t/lib/DBICTest/SyntaxErrorComponent2.pm
+    - t/lib/sqlite.sql
+    - t/testlib/Actor.pm
+    - t/testlib/ActorAlias.pm
+    - t/testlib/Binary.pm
+    - t/testlib/Blurb.pm
+    - t/testlib/CDBase.pm
+    - t/testlib/Director.pm
+    - t/testlib/Film.pm
+    - t/testlib/Lazy.pm
+    - t/testlib/Log.pm
+    - t/testlib/MyBase.pm
+    - t/testlib/MyFilm.pm
+    - t/testlib/MyFoo.pm
+    - t/testlib/MyStar.pm
+    - t/testlib/MyStarLink.pm
+    - t/testlib/MyStarLinkMCPK.pm
+    - t/testlib/Order.pm
+    - t/testlib/OtherFilm.pm
+    - t/testlib/PgBase.pm
+  manifest_file_info:
+    - bytesize: 1034
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1160100517
+      name: Build.PL
+    - bytesize: 18734
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1160100517
+      name: Changes
+    - bytesize: 7278
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1160100517
+      name: MANIFEST
+    - bytesize: 4453
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1160100517
+      name: META.yml
+    - bytesize: 1101
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1160100517
+      name: Makefile.PL
+    - bytesize: 6627
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1160100517
+      name: README
+    - bytesize: 7059
+      file_mime_type: ~
+      line_count: ~
+      md5: 19e579bc315f02736320e3c57c24771e
+      mtime: 1160100518
+      name: lib/DBIx/Class.pm
+    - bytesize: 6519
+      file_mime_type: ~
+      line_count: ~
+      md5: 521c4abb5fa04050c5c5db0588c2c579
+      mtime: 1160100517
+      name: lib/DBIx/Class/AccessorGroup.pm
+    - bytesize: 2251
+      file_mime_type: ~
+      line_count: ~
+      md5: b1488f7dbd312453b09cbfc157c21bc8
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat.pm
+    - bytesize: 1411
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d4c2f1df236c474d9a2d1c6e4729e9b
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/AccessorMapping.pm
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fc16507331fb795219bbe6848367180
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/AttributeAPI.pm
+    - bytesize: 900
+      file_mime_type: ~
+      line_count: ~
+      md5: 61929b3cb456f8ad729354bc7345f5d9
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/AutoUpdate.pm
+    - bytesize: 2408
+      file_mime_type: ~
+      line_count: ~
+      md5: b820343e3ee1385f334311f14b62c347
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/ColumnCase.pm
+    - bytesize: 2100
+      file_mime_type: ~
+      line_count: ~
+      md5: e97b8e09fa225e6b285e6fa002d47f96
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+    - bytesize: 1762
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d79f326f4422e1c3571cdc460274a65
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/Constraints.pm
+    - bytesize: 339
+      file_mime_type: ~
+      line_count: ~
+      md5: 7881b33a6b48ab31a088e0ebc299acb3
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/Constructor.pm
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: e761c022f52cd995d650b767fe69cc86
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/DestroyWarning.pm
+    - bytesize: 329
+      file_mime_type: ~
+      line_count: ~
+      md5: 39a46d733a3d7adef907edca98ac4098
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/GetSet.pm
+    - bytesize: 1219
+      file_mime_type: ~
+      line_count: ~
+      md5: f84092d09bba86713b7d412a7d4896a2
+      mtime: 1160100518
+      name: lib/DBIx/Class/CDBICompat/HasA.pm
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: 1272e87c7d3c40179e2bf409eff05b70
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/HasMany.pm
+    - bytesize: 3535
+      file_mime_type: ~
+      line_count: ~
+      md5: 92ddcbf3f46ebe8bea44b89c8a5edf49
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/ImaDBI.pm
+    - bytesize: 1504
+      file_mime_type: ~
+      line_count: ~
+      md5: 45f31e5c2c2ed24dbf7a06f2c9473331
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/LazyLoading.pm
+    - bytesize: 2396
+      file_mime_type: ~
+      line_count: ~
+      md5: 0472d222a1a7a1567c70febb99568e9b
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/LiveObjectIndex.pm
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 84a1b82e99af579b11af39be790bbb1d
+      mtime: 1160100518
+      name: lib/DBIx/Class/CDBICompat/MightHave.pm
+    - bytesize: 163
+      file_mime_type: ~
+      line_count: ~
+      md5: 9880e6c283d984382c756fc0f24d2c2c
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/ObjIndexStubs.pm
+    - bytesize: 288
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bee48903f178e2907af65ef819fe458
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/Pager.pm
+    - bytesize: 288
+      file_mime_type: ~
+      line_count: ~
+      md5: f272ee481d00d05106c9e3e3276f84f8
+      mtime: 1160100518
+      name: lib/DBIx/Class/CDBICompat/ReadOnly.pm
+    - bytesize: 1074
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f024aa76230a0f052368966d933daa3
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/Retrieve.pm
+    - bytesize: 451
+      file_mime_type: ~
+      line_count: ~
+      md5: eadac8c173fac56d4924dd28cba4f1e5
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/Stringify.pm
+    - bytesize: 1703
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b8fa9ed80b2172a0f4a9c5211c2e994
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/TempColumns.pm
+    - bytesize: 924
+      file_mime_type: ~
+      line_count: ~
+      md5: d25d74b6628d8ea28cf4ddd579c3c0ee
+      mtime: 1160100517
+      name: lib/DBIx/Class/CDBICompat/Triggers.pm
+    - bytesize: 142
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a513dda8462531c7a6c196fdbdd9ce9
+      mtime: 1160100517
+      name: lib/DBIx/Class/ClassResolver/PassThrough.pm
+    - bytesize: 3157
+      file_mime_type: ~
+      line_count: ~
+      md5: 09794a874710d0b60fc3f21957d3a969
+      mtime: 1160100517
+      name: lib/DBIx/Class/Componentised.pm
+    - bytesize: 1046
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c364a08f9f02dbf3ae8baa1ea3f9138
+      mtime: 1160100517
+      name: lib/DBIx/Class/Core.pm
+    - bytesize: 1300
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b6fce9c5fb2429b2c5498826b84d5e1
+      mtime: 1160100517
+      name: lib/DBIx/Class/Cursor.pm
+    - bytesize: 4092
+      file_mime_type: ~
+      line_count: ~
+      md5: 58c21aba2be643317ab4030f8f0e1c01
+      mtime: 1160100517
+      name: lib/DBIx/Class/DB.pm
+    - bytesize: 7541
+      file_mime_type: ~
+      line_count: ~
+      md5: c0ac4d18653383e0da57abcfb28cb880
+      mtime: 1160100517
+      name: lib/DBIx/Class/InflateColumn.pm
+    - bytesize: 2683
+      file_mime_type: ~
+      line_count: ~
+      md5: 700c4158ee98c953070cbd3168639c50
+      mtime: 1160100518
+      name: lib/DBIx/Class/InflateColumn/DateTime.pm
+    - bytesize: 1028
+      file_mime_type: ~
+      line_count: ~
+      md5: ba3a42bdd7164d602420f54873b0deb3
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual.pod
+    - bytesize: 4833
+      file_mime_type: ~
+      line_count: ~
+      md5: a02b0d0fde0971d269a25d27c81924d2
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/Component.pod
+    - bytesize: 29970
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dcf7db1899e73e317d20b0b84806f9c
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/Cookbook.pod
+    - bytesize: 2085
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c415ac2e18214bde7dd599d651f87e9
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/DocMap.pod
+    - bytesize: 7916
+      file_mime_type: ~
+      line_count: ~
+      md5: 22b84c13747ea2bc69dd765c0fc11bc0
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/Example.pod
+    - bytesize: 11540
+      file_mime_type: ~
+      line_count: ~
+      md5: 57082a351cc265effc0e67638c083054
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/FAQ.pod
+    - bytesize: 2011
+      file_mime_type: ~
+      line_count: ~
+      md5: cf061ec36a766a60662d2a594794be8d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/Glossary.pod
+    - bytesize: 12529
+      file_mime_type: ~
+      line_count: ~
+      md5: d04785b356d5d4025075f5b5ae2404c4
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/Intro.pod
+    - bytesize: 1505
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cc9b6c1f1ab174afb6d571b40b6e4cb
+      mtime: 1160100517
+      name: lib/DBIx/Class/Manual/Troubleshooting.pod
+    - bytesize: 10240
+      file_mime_type: ~
+      line_count: ~
+      md5: 732e2b3d0738ec968961ce1e7ceba8e1
+      mtime: 1160100517
+      name: lib/DBIx/Class/Ordered.pm
+    - bytesize: 2441
+      file_mime_type: ~
+      line_count: ~
+      md5: 912127ff911878dc30faf67b33ca00ce
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK.pm
+    - bytesize: 2128
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d4056c93602a72c10f05a0ddc914b8e
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK/Auto.pm
+    - bytesize: 461
+      file_mime_type: ~
+      line_count: ~
+      md5: 45886bd94752504ed79da019273e46c7
+      mtime: 1160100518
+      name: lib/DBIx/Class/PK/Auto/DB2.pm
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: ad14eee57ec989cd34125cf15aae85bb
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK/Auto/MSSQL.pm
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: 042113a95cacb76631cc79afc42bb992
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK/Auto/MySQL.pm
+    - bytesize: 470
+      file_mime_type: ~
+      line_count: ~
+      md5: 933b06cd539ad790bb9f003881cbf849
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK/Auto/Oracle.pm
+    - bytesize: 458
+      file_mime_type: ~
+      line_count: ~
+      md5: 89308b31ffafd88ae386116aea4e5da0
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK/Auto/Pg.pm
+    - bytesize: 470
+      file_mime_type: ~
+      line_count: ~
+      md5: 4819950363f5bdd467ceb24c65b5f653
+      mtime: 1160100517
+      name: lib/DBIx/Class/PK/Auto/SQLite.pm
+    - bytesize: 12629
+      file_mime_type: ~
+      line_count: ~
+      md5: a54e41ce935d32a33a1f6d1695c0f388
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship.pm
+    - bytesize: 1983
+      file_mime_type: ~
+      line_count: ~
+      md5: 869dae76e57f4950b9b3d1537c5b09d0
+      mtime: 1160100518
+      name: lib/DBIx/Class/Relationship/Accessor.pm
+    - bytesize: 13180
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e9b958c6207a23755984f2eeb0ae9d9
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/Base.pm
+    - bytesize: 2122
+      file_mime_type: ~
+      line_count: ~
+      md5: d7e6295334c4d44f334be7abb147a262
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/BelongsTo.pm
+    - bytesize: 1330
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f121bc0cdda23a11e89a69e4619f0f4
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/CascadeActions.pm
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: 60e9d0e2373d0ab808bc547146dce8ac
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/HasMany.pm
+    - bytesize: 1622
+      file_mime_type: ~
+      line_count: ~
+      md5: 89b8061357ca162ff59f822bc57955c0
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/HasOne.pm
+    - bytesize: 270
+      file_mime_type: ~
+      line_count: ~
+      md5: aeff5d5fc6580e848e98b7dd3c8c5bce
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/Helpers.pm
+    - bytesize: 2571
+      file_mime_type: ~
+      line_count: ~
+      md5: edb976350cf11024081a034a43b27a93
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/ManyToMany.pm
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: 60d0a8f7640e0a38406d98a0db2f53ab
+      mtime: 1160100517
+      name: lib/DBIx/Class/Relationship/ProxyMethods.pm
+    - bytesize: 52686
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c086f1a6d1ac54926c39c849635b355
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSet.pm
+    - bytesize: 3599
+      file_mime_type: ~
+      line_count: ~
+      md5: 4857316ed01605d292f35f46eed01aa6
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSetColumn.pm
+    - bytesize: 3866
+      file_mime_type: ~
+      line_count: ~
+      md5: c739b86a1d58071e6f14c9ac91452757
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSetManager.pm
+    - bytesize: 858
+      file_mime_type: ~
+      line_count: ~
+      md5: a6ef022be0e7838932a3d896845f823e
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSetProxy.pm
+    - bytesize: 25109
+      file_mime_type: ~
+      line_count: ~
+      md5: 14a995427a39511927479ae4ffbbb9c7
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSource.pm
+    - bytesize: 610
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d54a5cda5dd957c63a0dcb8146c1039
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSource/Table.pm
+    - bytesize: 2148
+      file_mime_type: ~
+      line_count: ~
+      md5: 50842a17090a5d96b33e16eb37efd394
+      mtime: 1160100518
+      name: lib/DBIx/Class/ResultSourceProxy.pm
+    - bytesize: 2061
+      file_mime_type: ~
+      line_count: ~
+      md5: 05cb1e8b647cdfc5424de5e957d13ef3
+      mtime: 1160100517
+      name: lib/DBIx/Class/ResultSourceProxy/Table.pm
+    - bytesize: 12274
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c1362c6dc5c3facf80b5e7b38c5c5ed
+      mtime: 1160100517
+      name: lib/DBIx/Class/Row.pm
+    - bytesize: 24315
+      file_mime_type: ~
+      line_count: ~
+      md5: 307ba25e2389746e168f0aa40073ed60
+      mtime: 1160100517
+      name: lib/DBIx/Class/Schema.pm
+    - bytesize: 1637
+      file_mime_type: ~
+      line_count: ~
+      md5: b23404f0ed7bf1ae9152cfdcd178f9b5
+      mtime: 1160100517
+      name: lib/DBIx/Class/Serialize/Storable.pm
+    - bytesize: 9182
+      file_mime_type: ~
+      line_count: ~
+      md5: 42dad2b79e2b5fc88d796af8f0d270e4
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage.pm
+    - bytesize: 33862
+      file_mime_type: ~
+      line_count: ~
+      md5: 60797a60571c11bd2ae811a1415a111d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI.pm
+    - bytesize: 3425
+      file_mime_type: ~
+      line_count: ~
+      md5: d7393be8d5686c702065b9d46a5c7881
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/Cursor.pm
+    - bytesize: 860
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d27ff1015507659ca6f493b7036f24d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/DB2.pm
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: ec09a3db622e0bbed3bcd86d72745d47
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/MSSQL.pm
+    - bytesize: 1291
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f1931bc1f77593342c91e2030997220
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+    - bytesize: 1195
+      file_mime_type: ~
+      line_count: ~
+      md5: ac24f5a491bbb1750b6f802c259c492d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+    - bytesize: 953
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d5cee0e1fa3dd6530f98ab9e11f9f8d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/ODBC.pm
+    - bytesize: 1456
+      file_mime_type: ~
+      line_count: ~
+      md5: b483739a474b3aecff843335b819d9ed
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+    - bytesize: 1905
+      file_mime_type: ~
+      line_count: ~
+      md5: f557e041563b2b9fab2dd14268673e0c
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/Oracle.pm
+    - bytesize: 1959
+      file_mime_type: ~
+      line_count: ~
+      md5: 48d2b6da7f983da656ccdced03fe99e9
+      mtime: 1160100518
+      name: lib/DBIx/Class/Storage/DBI/Pg.pm
+    - bytesize: 680
+      file_mime_type: ~
+      line_count: ~
+      md5: 58187a4d7d12ff7fc918ce87cf96a42d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/SQLite.pm
+    - bytesize: 540
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c83a368a2dc8018fcd96c53e3ff398a
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/Sybase.pm
+    - bytesize: 586
+      file_mime_type: ~
+      line_count: ~
+      md5: 84dd56d637dc82fe64d27e2da859924f
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+    - bytesize: 731
+      file_mime_type: ~
+      line_count: ~
+      md5: f524df0faf39134a73b988c5d169a6b6
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/DBI/mysql.pm
+    - bytesize: 2300
+      file_mime_type: ~
+      line_count: ~
+      md5: 24b09845f008572a17a0399515be5d4d
+      mtime: 1160100517
+      name: lib/DBIx/Class/Storage/Statistics.pm
+    - bytesize: 2213
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c88f5805ca57eeccfd2e1be4a0dd098
+      mtime: 1160100517
+      name: lib/DBIx/Class/Test/SQLite.pm
+    - bytesize: 2839
+      file_mime_type: ~
+      line_count: ~
+      md5: b84b3b72443e604f90ce79c1a4846e40
+      mtime: 1160100517
+      name: lib/DBIx/Class/UTF8Columns.pm
+    - bytesize: 5053
+      file_mime_type: ~
+      line_count: ~
+      md5: e76804af3b8de54ca244fbbc9d2d799d
+      mtime: 1160100518
+      name: lib/SQL/Translator/Parser/DBIx/Class.pm
+    - bytesize: 4679
+      file_mime_type: ~
+      line_count: ~
+      md5: c68be5d1ee31f54ea766f0d6e3ff28d2
+      mtime: 1160100517
+      name: lib/SQL/Translator/Producer/DBIx/Class/File.pm
+    - bytesize: 5970
+      file_mime_type: ~
+      line_count: ~
+      md5: 364feb825bd21fbb378209804ce34935
+      mtime: 1160100517
+      name: script/dbicadmin
+    - bytesize: 115
+      file_mime_type: ~
+      line_count: ~
+      md5: ae18cd50a4dd26e01b58ebcc2d868a3e
+      mtime: 1160100517
+      name: t/02pod.t
+    - bytesize: 4843
+      file_mime_type: ~
+      line_count: ~
+      md5: 82a82cc097e4a650bad76d49ed3b4fcf
+      mtime: 1160100517
+      name: t/03podcoverage.t
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: 310b46887f8fcfc0f58150f50ca9944a
+      mtime: 1160100517
+      name: t/04dont_break_c3.t
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: aa94353d67f88074b10af9d92c74161b
+      mtime: 1160100517
+      name: t/05components.t
+    - bytesize: 170207
+      file_mime_type: ~
+      line_count: ~
+      md5: babc05c077ede1d96f121fd177f0fc4c
+      mtime: 1160100517
+      name: t/100populate.t
+    - bytesize: 504
+      file_mime_type: ~
+      line_count: ~
+      md5: 37d6fa7b624c84c2c08c415edd045256
+      mtime: 1160100517
+      name: t/18inserterror.t
+    - bytesize: 2380
+      file_mime_type: ~
+      line_count: ~
+      md5: 62056cd4e9bd9e865459fb66da58e0c6
+      mtime: 1160100517
+      name: t/19quotes.t
+    - bytesize: 2434
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b543de25629e9f1fc6fa1e3ab0eb113
+      mtime: 1160100518
+      name: t/19quotes_newstyle.t
+    - bytesize: 331
+      file_mime_type: ~
+      line_count: ~
+      md5: f1ad23f3418e42c45ebecb63a41a0281
+      mtime: 1160100517
+      name: t/20setuperrors.t
+    - bytesize: 769
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a6b14c75ef135ce7a713841db4fca2f
+      mtime: 1160100517
+      name: t/26dumper.t
+    - bytesize: 196
+      file_mime_type: ~
+      line_count: ~
+      md5: ae9cec8985088541e60728658cc07a8b
+      mtime: 1160100517
+      name: t/30dbicplain.t
+    - bytesize: 2142
+      file_mime_type: ~
+      line_count: ~
+      md5: 987cf48449c68ccb9f1ffc96cfd45860
+      mtime: 1160100517
+      name: t/31stats.t
+    - bytesize: 752
+      file_mime_type: ~
+      line_count: ~
+      md5: a341b0325d9e5d45be6c79ae653d7da4
+      mtime: 1160100517
+      name: t/32connect_code_ref.t
+    - bytesize: 849
+      file_mime_type: ~
+      line_count: ~
+      md5: 375eadf634b757bc568e13876a9d02d9
+      mtime: 1160100517
+      name: t/33storage_reconnect.t
+    - bytesize: 1708
+      file_mime_type: ~
+      line_count: ~
+      md5: dbd13f12400ff7cbb584e3f1fb49bce6
+      mtime: 1160100517
+      name: t/34exception_action.t
+    - bytesize: 488
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e15f6595af3ae997e8fcebd0b85d9b6
+      mtime: 1160100517
+      name: t/35disable_sth_caching.t
+    - bytesize: 763
+      file_mime_type: ~
+      line_count: ~
+      md5: a265262a60e0ab93a4c88a7309696c6e
+      mtime: 1160100517
+      name: t/39load_namespaces_1.t
+    - bytesize: 840
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ea22d67aee48a6380ea4b4185337b4f
+      mtime: 1160100517
+      name: t/39load_namespaces_2.t
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: e8a0321c80a1fca9ab3f315b64bc4336
+      mtime: 1160100517
+      name: t/39load_namespaces_3.t
+    - bytesize: 798
+      file_mime_type: ~
+      line_count: ~
+      md5: 205ff5895982591f44d704d3a4cd0da7
+      mtime: 1160100517
+      name: t/39load_namespaces_4.t
+    - bytesize: 716
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a710753ce02599d1a021f5855057966
+      mtime: 1160100517
+      name: t/40resultsetmanager.t
+    - bytesize: 544
+      file_mime_type: ~
+      line_count: ~
+      md5: b93fbd113ba0b45179b12f9c617c43f6
+      mtime: 1160100517
+      name: t/41orrible.t
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: ac8d692b4397dc0606d78f55e47cffea
+      mtime: 1160100517
+      name: t/42toplimit.t
+    - bytesize: 3800
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b6a8f7e3496a7dd6caa7d43dac438df
+      mtime: 1160100517
+      name: t/46where_attribute.t
+    - bytesize: 2346
+      file_mime_type: ~
+      line_count: ~
+      md5: 03c27ace244805e91add66b6022347ec
+      mtime: 1160100517
+      name: t/50fork.t
+    - bytesize: 2735
+      file_mime_type: ~
+      line_count: ~
+      md5: d78685a6d32aabb5cfec90984a5e560c
+      mtime: 1160100517
+      name: t/51threads.t
+    - bytesize: 366
+      file_mime_type: ~
+      line_count: ~
+      md5: 6102f0c7569c3fbd700e8ccfa14efa19
+      mtime: 1160100517
+      name: t/52cycle.t
+    - bytesize: 1081
+      file_mime_type: ~
+      line_count: ~
+      md5: 55da634000415e132b6b0c94fab1a4e1
+      mtime: 1160100517
+      name: t/53delete_related.t
+    - bytesize: 1530
+      file_mime_type: ~
+      line_count: ~
+      md5: da5660b15187bc6cf754fee120dcfa6a
+      mtime: 1160100517
+      name: t/55storage_stress.t
+    - bytesize: 9421
+      file_mime_type: ~
+      line_count: ~
+      md5: 67c31f5c5517bf32489213d3ee0eef10
+      mtime: 1160100517
+      name: t/60core.t
+    - bytesize: 1431
+      file_mime_type: ~
+      line_count: ~
+      md5: 1abb4ca78bcc35a3ef6a2f3198ef9efb
+      mtime: 1160100517
+      name: t/64db.t
+    - bytesize: 749
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ba303b5d69ad958921e89ed055edb1a
+      mtime: 1160100518
+      name: t/65multipk.t
+    - bytesize: 8937
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ffd7a10931c2dab0c35cd2f8a08cf52
+      mtime: 1160100517
+      name: t/66relationship.t
+    - bytesize: 1579
+      file_mime_type: ~
+      line_count: ~
+      md5: cdb08827ade9200bab6a0a2a1d0cd16f
+      mtime: 1160100517
+      name: t/67pager.t
+    - bytesize: 846
+      file_mime_type: ~
+      line_count: ~
+      md5: 6456028e01577abdec1cb13edf8ecefa
+      mtime: 1160100517
+      name: t/68inflate.t
+    - bytesize: 1345
+      file_mime_type: ~
+      line_count: ~
+      md5: b86556077a0e7eadf8ddca7c36aed3ee
+      mtime: 1160100517
+      name: t/68inflate_has_a.t
+    - bytesize: 1675
+      file_mime_type: ~
+      line_count: ~
+      md5: fbe89d73b566c66fa8e1634bd3e6b569
+      mtime: 1160100517
+      name: t/68inflate_serialize.t
+    - bytesize: 698
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a3a5febbbbb2f433ff9a8e4be16a034
+      mtime: 1160100517
+      name: t/69update.t
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: 594de843a9643654d238cb561d55467e
+      mtime: 1160100517
+      name: t/70auto.t
+    - bytesize: 2368
+      file_mime_type: ~
+      line_count: ~
+      md5: e00417a4a38abdc3b54209bf29d75760
+      mtime: 1160100517
+      name: t/71mysql.t
+    - bytesize: 2867
+      file_mime_type: ~
+      line_count: ~
+      md5: 271139c2e5df4c097f41a648133ef953
+      mtime: 1160100517
+      name: t/72pg.t
+    - bytesize: 2917
+      file_mime_type: ~
+      line_count: ~
+      md5: c92b05479abbab6471f7988820016b47
+      mtime: 1160100517
+      name: t/73oracle.t
+    - bytesize: 1849
+      file_mime_type: ~
+      line_count: ~
+      md5: 965c32524fb3d34b0578839fc0ddb435
+      mtime: 1160100517
+      name: t/745db2.t
+    - bytesize: 1944
+      file_mime_type: ~
+      line_count: ~
+      md5: a34287183d4455bcafc234777bf2b4c4
+      mtime: 1160100517
+      name: t/746db2_400.t
+    - bytesize: 1350
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e604fc9b2d693f9d41caf184ca05d29
+      mtime: 1160100517
+      name: t/74mssql.t
+    - bytesize: 1726
+      file_mime_type: ~
+      line_count: ~
+      md5: 29f0b00f68082a4562473b8e46db84c7
+      mtime: 1160100517
+      name: t/75limit.t
+    - bytesize: 11653
+      file_mime_type: ~
+      line_count: ~
+      md5: 600b53103df3736e4f93c2b60f76493b
+      mtime: 1160100517
+      name: t/76joins.t
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f4b9a8823507e525cfd3c1a2a464c1
+      mtime: 1160100517
+      name: t/77join_count.t
+    - bytesize: 1049
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fe9654ff84660788a1159f86732846a
+      mtime: 1160100517
+      name: t/78self_referencial.t
+    - bytesize: 1903
+      file_mime_type: ~
+      line_count: ~
+      md5: a3dddb501b142c93ca91ba3dac8f6ca7
+      mtime: 1160100517
+      name: t/79aliasing.t
+    - bytesize: 4894
+      file_mime_type: ~
+      line_count: ~
+      md5: 22d23db556b1a3b094f794f9035cfabd
+      mtime: 1160100517
+      name: t/80unique.t
+    - bytesize: 4813
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c3ce635e8c3169e7fc287820419be2f
+      mtime: 1160100517
+      name: t/81transactions.t
+    - bytesize: 900
+      file_mime_type: ~
+      line_count: ~
+      md5: 832f2abf7399092bc17264d43cb79365
+      mtime: 1160100517
+      name: t/82cascade_copy.t
+    - bytesize: 4716
+      file_mime_type: ~
+      line_count: ~
+      md5: 42e291a5f73b60886a4280e48bf3267f
+      mtime: 1160100517
+      name: t/83cache.t
+    - bytesize: 307
+      file_mime_type: ~
+      line_count: ~
+      md5: 46112e4e24df69e133f2e2f4210ff2a5
+      mtime: 1160100517
+      name: t/84serialize.t
+    - bytesize: 1163
+      file_mime_type: ~
+      line_count: ~
+      md5: e760b67d839a76e5a78a07a0c3a5d72d
+      mtime: 1160100517
+      name: t/85utf8.t
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: abb73c006293e554b6033652a3f7eabf
+      mtime: 1160100517
+      name: t/86might_have.t
+    - bytesize: 9115
+      file_mime_type: ~
+      line_count: ~
+      md5: cc382e3d768972329153cd023a24e3f1
+      mtime: 1160100517
+      name: t/86sqlt.t
+    - bytesize: 3025
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e1ef175a6d75cc165316d65110d32b
+      mtime: 1160100518
+      name: t/87ordered.t
+    - bytesize: 1090
+      file_mime_type: ~
+      line_count: ~
+      md5: 75e221aabbd85e5bf4420dd4351b2923
+      mtime: 1160100517
+      name: t/88result_set_column.t
+    - bytesize: 1267
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d3451c19a2321a4514f308e6d880682
+      mtime: 1160100517
+      name: t/89dbicadmin.t
+    - bytesize: 1300
+      file_mime_type: ~
+      line_count: ~
+      md5: 85f10e2b6d56bf978741d37f0a14fe85
+      mtime: 1160100517
+      name: t/89inflate_datetime.t
+    - bytesize: 2835
+      file_mime_type: ~
+      line_count: ~
+      md5: a3e636d2ae3becd56f352584a0ce8c6a
+      mtime: 1160100517
+      name: t/90ensure_class_loaded.t
+    - bytesize: 4642
+      file_mime_type: ~
+      line_count: ~
+      md5: af6097e2fd58d2b5802d4bdd7869b821
+      mtime: 1160100517
+      name: t/90join_torture.t
+    - bytesize: 314
+      file_mime_type: ~
+      line_count: ~
+      md5: cebaaf12e33503b89588df61b681fb21
+      mtime: 1160100517
+      name: t/91debug.t
+    - bytesize: 280
+      file_mime_type: ~
+      line_count: ~
+      md5: 182812bf05cf90cb615c835406dad341
+      mtime: 1160100517
+      name: t/92storage.t
+    - bytesize: 1899
+      file_mime_type: ~
+      line_count: ~
+      md5: 945c00485d5b47d82f04b3d1c591c526
+      mtime: 1160100517
+      name: t/93nobindvars.t
+    - bytesize: 1604
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c757c6c96d9fae31f525ef57ee5ca59
+      mtime: 1160100518
+      name: t/cdbi-sweet-t/08pager.t
+    - bytesize: 4503
+      file_mime_type: ~
+      line_count: ~
+      md5: 043e1fc768c10f17faaeaff60580d544
+      mtime: 1160100517
+      name: t/cdbi-t/01-columns.t
+    - bytesize: 11961
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e8f1531d2f41adade3db4d143aed551
+      mtime: 1160100517
+      name: t/cdbi-t/02-Film.t
+    - bytesize: 915
+      file_mime_type: ~
+      line_count: ~
+      md5: e086fe42a6466747525c698f528974e0
+      mtime: 1160100518
+      name: t/cdbi-t/03-subclassing.t
+    - bytesize: 2539
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c955345bbaed28781ec570af6e96982
+      mtime: 1160100517
+      name: t/cdbi-t/04-lazy.t
+    - bytesize: 3880
+      file_mime_type: ~
+      line_count: ~
+      md5: a65909db6f1aff7d0e2080d0d0ad42b8
+      mtime: 1160100517
+      name: t/cdbi-t/06-hasa.t
+    - bytesize: 2817
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ec88420c7382053860bdc52ca3fe9db
+      mtime: 1160100517
+      name: t/cdbi-t/09-has_many.t
+    - bytesize: 1728
+      file_mime_type: ~
+      line_count: ~
+      md5: 261a37c1cacd927f7b6c405ec816b8ef
+      mtime: 1160100517
+      name: t/cdbi-t/11-triggers.t
+    - bytesize: 3915
+      file_mime_type: ~
+      line_count: ~
+      md5: 6712aa0237c1b97e60f5a42578685fd4
+      mtime: 1160100517
+      name: t/cdbi-t/12-filter.t
+    - bytesize: 3244
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a9243df0266bae8939a1fba60bde76c
+      mtime: 1160100518
+      name: t/cdbi-t/13-constraint.t
+    - bytesize: 1727
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e2a33e77b1b9a4ef940864b8450dcac
+      mtime: 1160100517
+      name: t/cdbi-t/14-might_have.t
+    - bytesize: 5160
+      file_mime_type: ~
+      line_count: ~
+      md5: 8726d0b03305793bea1e74739f098554
+      mtime: 1160100517
+      name: t/cdbi-t/15-accessor.t
+    - bytesize: 752
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d11afa47f7632665b736e1032f8d98f
+      mtime: 1160100518
+      name: t/cdbi-t/16-reserved.t
+    - bytesize: 6079
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e92876876aa395283736dcbc487d30f
+      mtime: 1160100517
+      name: t/cdbi-t/18-has_a.t
+    - bytesize: 2671
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f8f906983ff9add907ae07decdc54b9
+      mtime: 1160100517
+      name: t/cdbi-t/19-set_sql.t
+    - bytesize: 2556
+      file_mime_type: ~
+      line_count: ~
+      md5: e83e372f90a8305572351103b272c601
+      mtime: 1160100517
+      name: t/cdbi-t/21-iterator.t
+    - bytesize: 613
+      file_mime_type: ~
+      line_count: ~
+      md5: 67bde205231d1660f3397e5f0a822ad8
+      mtime: 1160100517
+      name: t/cdbi-t/22-self_referential.t
+    - bytesize: 1135
+      file_mime_type: ~
+      line_count: ~
+      md5: 17c665d47a3ea23a6374504e08cca1c2
+      mtime: 1160100517
+      name: t/cdbi-t/30-pager.t
+    - bytesize: 1704
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cdbb19849727532f139f15ec980b1d2
+      mtime: 1160100517
+      name: t/cdbi-t/98-failure.t
+    - bytesize: 112
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d135804bd8b1372c9c2140175635303
+      mtime: 1160100517
+      name: t/examples/Schema/MyDatabase/Main.pm
+    - bytesize: 289
+      file_mime_type: ~
+      line_count: ~
+      md5: 18829ded3850fd46d779421a81eea1da
+      mtime: 1160100517
+      name: t/examples/Schema/MyDatabase/Main/Artist.pm
+    - bytesize: 350
+      file_mime_type: ~
+      line_count: ~
+      md5: 4856ff005bd2a6919fa5498b52042a05
+      mtime: 1160100517
+      name: t/examples/Schema/MyDatabase/Main/Cd.pm
+    - bytesize: 288
+      file_mime_type: ~
+      line_count: ~
+      md5: 646298010c84250280d9788a0031d3c4
+      mtime: 1160100517
+      name: t/examples/Schema/MyDatabase/Main/Track.pm
+    - bytesize: 326
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b34b829dc98d5fa11290d688ee7f16b
+      mtime: 1160100517
+      name: t/examples/Schema/db/example.sql
+    - bytesize: 1328
+      file_mime_type: ~
+      line_count: ~
+      md5: e7d6838050d298df13a101e2e9bfc638
+      mtime: 1160100517
+      name: t/examples/Schema/insertdb.pl
+    - bytesize: 2702
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b149f32efba4e4856c15601a7dc3196
+      mtime: 1160100518
+      name: t/examples/Schema/testdb.pl
+    - bytesize: 168
+      file_mime_type: ~
+      line_count: ~
+      md5: 52d8f354c1361de6a5e0363ac7c62fc3
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/OtherRslt/D.pm
+    - bytesize: 68
+      file_mime_type: ~
+      line_count: ~
+      md5: be5d250c081bbcb09c4ffcfdc92444a6
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/RSBase.pm
+    - bytesize: 69
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ffeebf752fc0f1465fb47cdeb933bac
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/RSet/A.pm
+    - bytesize: 69
+      file_mime_type: ~
+      line_count: ~
+      md5: 078b98e06394e6a69dca126877782870
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/RSet/C.pm
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e9df7b6b88ca7d2181f3cfc7abbee61
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/Result/A.pm
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: df7f40a1f1b8b9771d30867d53b970a2
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/Result/B.pm
+    - bytesize: 74
+      file_mime_type: ~
+      line_count: ~
+      md5: 614145bc90e79076efb31e3f42d8db58
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/ResultSet/A.pm
+    - bytesize: 74
+      file_mime_type: ~
+      line_count: ~
+      md5: cb75155d0b5a9c6c21ee99892df8185a
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/ResultSet/C.pm
+    - bytesize: 163
+      file_mime_type: ~
+      line_count: ~
+      md5: e6c47075f414b8de703f6b3f61da33ea
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/Rslt/A.pm
+    - bytesize: 163
+      file_mime_type: ~
+      line_count: ~
+      md5: 15e9cc07dc6803d0d70ad271f14c3186
+      mtime: 1160100517
+      name: t/lib/DBICNSTest/Rslt/B.pm
+    - bytesize: 6683
+      file_mime_type: ~
+      line_count: ~
+      md5: 7187d12eee0941e03bffaa08d3856061
+      mtime: 1160100517
+      name: t/lib/DBICTest.pm
+    - bytesize: 164
+      file_mime_type: ~
+      line_count: ~
+      md5: a89ddbfff10a73325eac3f635222ef93
+      mtime: 1160100517
+      name: t/lib/DBICTest/ErrorComponent.pm
+    - bytesize: 132
+      file_mime_type: ~
+      line_count: ~
+      md5: e48ffce6df0407320311bf21d47abba3
+      mtime: 1160100517
+      name: t/lib/DBICTest/FakeComponent.pm
+    - bytesize: 228
+      file_mime_type: ~
+      line_count: ~
+      md5: 737b98024750b878987c81e5519c089b
+      mtime: 1160100517
+      name: t/lib/DBICTest/ForeignComponent.pm
+    - bytesize: 161
+      file_mime_type: ~
+      line_count: ~
+      md5: a83c4a57cd8a4d61f88f43dd799c0662
+      mtime: 1160100517
+      name: t/lib/DBICTest/ForeignComponent/TestComp.pm
+    - bytesize: 136
+      file_mime_type: ~
+      line_count: ~
+      md5: 14a55bdb5e5868a4147433e63d77e1c3
+      mtime: 1160100517
+      name: t/lib/DBICTest/OptionalComponent.pm
+    - bytesize: 657
+      file_mime_type: ~
+      line_count: ~
+      md5: a3b6ef9ee78c30caa8ae0dfb9bc1d2e0
+      mtime: 1160100517
+      name: t/lib/DBICTest/Plain.pm
+    - bytesize: 302
+      file_mime_type: ~
+      line_count: ~
+      md5: 83e045bbe8dd87c2709d66a95ec2cb34
+      mtime: 1160100517
+      name: t/lib/DBICTest/Plain/Test.pm
+    - bytesize: 130
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bef1bc0a68918872ea9d70dee7facd5
+      mtime: 1160100517
+      name: t/lib/DBICTest/ResultSetManager.pm
+    - bytesize: 211
+      file_mime_type: ~
+      line_count: ~
+      md5: 59620ae047e15148305e3f109f1338f6
+      mtime: 1160100517
+      name: t/lib/DBICTest/ResultSetManager/Foo.pm
+    - bytesize: 645
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ad75d5c422518688f20973b3e7bb954
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema.pm
+    - bytesize: 1121
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ea32c1bf5b58841fba80902d805c41a
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Artist.pm
+    - bytesize: 156
+      file_mime_type: ~
+      line_count: ~
+      md5: fcfc9f3f6d8f1a6a5f20c8b843f2ef0e
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/ArtistSourceName.pm
+    - bytesize: 146
+      file_mime_type: ~
+      line_count: ~
+      md5: ff859af4b31f6b6162f73a5c7506d5a2
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/ArtistSubclass.pm
+    - bytesize: 599
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a94fed9b1567714a4170b714795b243
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/ArtistUndirectedMap.pm
+    - bytesize: 462
+      file_mime_type: ~
+      line_count: ~
+      md5: 24007bfab56e65a798af7af2af3cda28
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Bookmark.pm
+    - bytesize: 564
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ab61ee3cfcc53449c7bf106ab3d6912
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/BooksInLibrary.pm
+    - bytesize: 1132
+      file_mime_type: ~
+      line_count: ~
+      md5: a337daec589fbaa8b672f6e23641c9a5
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/CD.pm
+    - bytesize: 507
+      file_mime_type: ~
+      line_count: ~
+      md5: fd608f2eba318593a9c79e9fec2393b4
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/CD_to_Producer.pm
+    - bytesize: 986
+      file_mime_type: ~
+      line_count: ~
+      md5: 582e132453203fe5e7af3af28d87321d
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Collection.pm
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: e254ef23af38f54a7b7e9bf090d507ab
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/CollectionObject.pm
+    - bytesize: 907
+      file_mime_type: ~
+      line_count: ~
+      md5: d1a192c0a476458918616429de849507
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Employee.pm
+    - bytesize: 402
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c3fa2d98de80b7525aac7bd3a8be8bd
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Event.pm
+    - bytesize: 821
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ce2d56dcc4d8131200b5984dfa43e0f
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/FourKeys.pm
+    - bytesize: 920
+      file_mime_type: ~
+      line_count: ~
+      md5: 739fb6b00b92d94c87702a6bdc2f6c44
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/FourKeys_to_TwoKeys.pm
+    - bytesize: 377
+      file_mime_type: ~
+      line_count: ~
+      md5: aa69f7029f0f364b268e00aae19a757b
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/LinerNotes.pm
+    - bytesize: 564
+      file_mime_type: ~
+      line_count: ~
+      md5: d28d03b3607be0381f18dae2684a1727
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Link.pm
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b1e2eeb4ea54fe67e629678dce4e8c5
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/NoPrimaryKey.pm
+    - bytesize: 395
+      file_mime_type: ~
+      line_count: ~
+      md5: 32bb9165bb79c6a3600017e8b5980055
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/OneKey.pm
+    - bytesize: 443
+      file_mime_type: ~
+      line_count: ~
+      md5: b14ae2055a4c8a59c97d9d5a9c09d753
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Owners.pm
+    - bytesize: 412
+      file_mime_type: ~
+      line_count: ~
+      md5: cfe8405be0157464fa46756e9ad43dfe
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Producer.pm
+    - bytesize: 439
+      file_mime_type: ~
+      line_count: ~
+      md5: ab52d92cb36019c6857023d1c6bff8f7
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/SelfRef.pm
+    - bytesize: 469
+      file_mime_type: ~
+      line_count: ~
+      md5: bb816c5926280793b46a5d0be45d923d
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/SelfRefAlias.pm
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: abaf7f6038e5bea1dc1bfb5e63b80c16
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Serialized.pm
+    - bytesize: 435
+      file_mime_type: ~
+      line_count: ~
+      md5: aca680050c15c836eefd4728fd850032
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Tag.pm
+    - bytesize: 694
+      file_mime_type: ~
+      line_count: ~
+      md5: 712d8ba667d170c3365a78388742bbb3
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/Track.pm
+    - bytesize: 554
+      file_mime_type: ~
+      line_count: ~
+      md5: b40193120e4f7a8e50e7dc4f2bf7573d
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/TreeLike.pm
+    - bytesize: 673
+      file_mime_type: ~
+      line_count: ~
+      md5: 706c5a3900946ac75efc2bd3147289c3
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/TwoKeyTreeLike.pm
+    - bytesize: 651
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c4be19db7d91860f44f863e45659dae
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/TwoKeys.pm
+    - bytesize: 676
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f88428f28260f5a1e3dce8a93083fc3
+      mtime: 1160100517
+      name: t/lib/DBICTest/Schema/TypedObject.pm
+    - bytesize: 168
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ed68ca528d5a5b5b27713e41edf4ba4
+      mtime: 1160100517
+      name: t/lib/DBICTest/SyntaxErrorComponent1.pm
+    - bytesize: 168
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ef882e597e3a9b90b277bd429e0ba62
+      mtime: 1160100517
+      name: t/lib/DBICTest/SyntaxErrorComponent2.pm
+    - bytesize: 4563
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b1508bd5d786ebd0622f37d2a901799
+      mtime: 1160100517
+      name: t/lib/sqlite.sql
+    - bytesize: 570
+      file_mime_type: ~
+      line_count: ~
+      md5: fc62ca8ebedaca829cb5a4f737c3e086
+      mtime: 1160100517
+      name: t/testlib/Actor.pm
+    - bytesize: 495
+      file_mime_type: ~
+      line_count: ~
+      md5: 7472d75d1add61f0fec7d576a98c87dc
+      mtime: 1160100517
+      name: t/testlib/ActorAlias.pm
+    - bytesize: 331
+      file_mime_type: ~
+      line_count: ~
+      md5: c7a30521f6c130d7fd9f0fc75425576f
+      mtime: 1160100517
+      name: t/testlib/Binary.pm
+    - bytesize: 393
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bfbeba1ba044229917678383fb162ea
+      mtime: 1160100518
+      name: t/testlib/Blurb.pm
+    - bytesize: 96
+      file_mime_type: ~
+      line_count: ~
+      md5: a00f2af124949889c5f3722ea280380f
+      mtime: 1160100517
+      name: t/testlib/CDBase.pm
+    - bytesize: 383
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f4574bc2f3c30ecfe8e9b7ee889ebc9
+      mtime: 1160100517
+      name: t/testlib/Director.pm
+    - bytesize: 912
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c8fcf179e5c7ef9eb4c8d448be99f83
+      mtime: 1160100517
+      name: t/testlib/Film.pm
+    - bytesize: 533
+      file_mime_type: ~
+      line_count: ~
+      md5: ba70865183b9406463ea78cdbb915562
+      mtime: 1160100517
+      name: t/testlib/Lazy.pm
+    - bytesize: 736
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a51acff548f7183681f211965fb1e8b
+      mtime: 1160100518
+      name: t/testlib/Log.pm
+    - bytesize: 785
+      file_mime_type: ~
+      line_count: ~
+      md5: 3149e70efb8dfa22a2ae0f741f44a689
+      mtime: 1160100517
+      name: t/testlib/MyBase.pm
+    - bytesize: 474
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a4b39e8965a1899925f487f9d135406
+      mtime: 1160100517
+      name: t/testlib/MyFilm.pm
+    - bytesize: 575
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d88a64f707a4f309ff9def2e9340878
+      mtime: 1160100517
+      name: t/testlib/MyFoo.pm
+    - bytesize: 405
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b55cda6e157f3e0d72c4039a4fa18da
+      mtime: 1160100517
+      name: t/testlib/MyStar.pm
+    - bytesize: 429
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ba73be6d41b5e10b0724e402d43f3f5
+      mtime: 1160100517
+      name: t/testlib/MyStarLink.pm
+    - bytesize: 612
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a688114bef94fdf2fec1a5d10977d84
+      mtime: 1160100517
+      name: t/testlib/MyStarLinkMCPK.pm
+    - bytesize: 371
+      file_mime_type: ~
+      line_count: ~
+      md5: c5cf86db18fe9d9c85549d041fa9f17b
+      mtime: 1160100517
+      name: t/testlib/Order.pm
+    - bytesize: 378
+      file_mime_type: ~
+      line_count: ~
+      md5: c7a8bac3d7fa76d7122a99b51ebe3cbd
+      mtime: 1160100517
+      name: t/testlib/OtherFilm.pm
+    - bytesize: 573
+      file_mime_type: ~
+      line_count: ~
+      md5: c96815c6044904115a22613fee844290
+      mtime: 1160100517
+      name: t/testlib/PgBase.pm
+  module_info:
+    - bytesize: 7059
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a89f2133d0caf6739360d4b4d69442b
+      module_name_from_file_guess: DBIx::Class
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class.pm
+      packages:
+        - DBIx::Class
+      primary_package: DBIx::Class
+      uses:
+        - strict
+        - warnings
+        - vars
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.07999_01
+    - bytesize: 6519
+      file_mime_type: ~
+      line_count: ~
+      md5: 00a0e80e1df5751581f317cb1eb66834
+      module_name_from_file_guess: DBIx::Class::AccessorGroup
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/AccessorGroup.pm
+      packages:
+        - DBIx::Class::AccessorGroup
+      primary_package: DBIx::Class::AccessorGroup
+      uses:
+        - strict
+        - warnings
+        - Carp::Clan
+      version_info:
+        filename: blib/lib/DBIx/Class/AccessorGroup.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2251
+      file_mime_type: ~
+      line_count: ~
+      md5: e37c5e8c9b8b1b2d3d92b152ddc72791
+      module_name_from_file_guess: DBIx::Class::CDBICompat
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat.pm
+      packages:
+        - DBIx::Class::CDBICompat
+      primary_package: DBIx::Class::CDBICompat
+      uses:
+        - strict
+        - warnings
+        - base
+        - Carp::Clan
+        - Class::Trigger
+        - DBIx::ContextualFetch
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1411
+      file_mime_type: ~
+      line_count: ~
+      md5: 3be5bdfa2d525486b5b2fd48923eb7df
+      module_name_from_file_guess: DBIx::Class::CDBICompat::AccessorMapping
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/AccessorMapping.pm
+      packages:
+        - DBIx::Class::CDBICompat::AccessorMapping
+      primary_package: DBIx::Class::CDBICompat::AccessorMapping
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/AccessorMapping.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: 977ba3700f1fb883a5ada4a70fae034e
+      module_name_from_file_guess: DBIx::Class::CDBICompat::AttributeAPI
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/AttributeAPI.pm
+      packages:
+        - DBIx::Class::CDBICompat::AttributeAPI
+      primary_package: DBIx::Class::CDBICompat::AttributeAPI
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/AttributeAPI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 900
+      file_mime_type: ~
+      line_count: ~
+      md5: f908221c853fec621ad7412c0d8aaa03
+      module_name_from_file_guess: DBIx::Class::CDBICompat::AutoUpdate
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/AutoUpdate.pm
+      packages:
+        - DBIx::Class::CDBICompat::AutoUpdate
+      primary_package: DBIx::Class::CDBICompat::AutoUpdate
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/AutoUpdate.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2408
+      file_mime_type: ~
+      line_count: ~
+      md5: 651601e27862d0be4cc4ed9e36cc957f
+      module_name_from_file_guess: DBIx::Class::CDBICompat::ColumnCase
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/ColumnCase.pm
+      packages:
+        - DBIx::Class::CDBICompat::ColumnCase
+      primary_package: DBIx::Class::CDBICompat::ColumnCase
+      uses: []
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/ColumnCase.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2100
+      file_mime_type: ~
+      line_count: ~
+      md5: 739973cab3100ebc2a5df82602d32630
+      module_name_from_file_guess: DBIx::Class::CDBICompat::ColumnGroups
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+      packages:
+        - DBIx::Class::CDBICompat::ColumnGroups
+        - DBIx::Class::CDBICompat::ColumnGroups::GrouperShim
+      primary_package: DBIx::Class::CDBICompat::ColumnGroups
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1762
+      file_mime_type: ~
+      line_count: ~
+      md5: fb0b5fa0d0fbd7dec1af51ab76447149
+      module_name_from_file_guess: DBIx::Class::CDBICompat::Constraints
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/Constraints.pm
+      packages:
+        - DBIx::Class::CDBICompat::Constraints
+      primary_package: DBIx::Class::CDBICompat::Constraints
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/Constraints.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 339
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ba9aa68682a575d7dc2e5263f4834ec
+      module_name_from_file_guess: DBIx::Class::CDBICompat::Constructor
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/Constructor.pm
+      packages:
+        - DBIx::Class::CDBICompat::Constructor
+      primary_package: DBIx::Class::CDBICompat::Constructor
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/Constructor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: 5225b62affaa72b67eeadb4212e253d2
+      module_name_from_file_guess: DBIx::Class::CDBICompat::DestroyWarning
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/DestroyWarning.pm
+      packages:
+        - DBIx::Class::CDBICompat::DestroyWarning
+      primary_package: DBIx::Class::CDBICompat::DestroyWarning
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/DestroyWarning.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 329
+      file_mime_type: ~
+      line_count: ~
+      md5: 56b8bf381ebe59dc2f59b3b123065813
+      module_name_from_file_guess: DBIx::Class::CDBICompat::GetSet
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/GetSet.pm
+      packages:
+        - DBIx::Class::CDBICompat::GetSet
+      primary_package: DBIx::Class::CDBICompat::GetSet
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/GetSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1219
+      file_mime_type: ~
+      line_count: ~
+      md5: b13e7ef989905e712b20eaf36864be08
+      module_name_from_file_guess: DBIx::Class::CDBICompat::HasA
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/HasA.pm
+      packages:
+        - DBIx::Class::CDBICompat::HasA
+      primary_package: DBIx::Class::CDBICompat::HasA
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/HasA.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 845
+      file_mime_type: ~
+      line_count: ~
+      md5: a75bcf0423209a98fbae8804959104d6
+      module_name_from_file_guess: DBIx::Class::CDBICompat::HasMany
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/HasMany.pm
+      packages:
+        - DBIx::Class::CDBICompat::HasMany
+      primary_package: DBIx::Class::CDBICompat::HasMany
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/HasMany.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3535
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ed18ccd546bbb54f034799a2470a1e5
+      module_name_from_file_guess: DBIx::Class::CDBICompat::ImaDBI
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/ImaDBI.pm
+      packages:
+        - DBIx::Class::CDBICompat::ImaDBI
+        - DBIx::ContextualFetch::st
+      primary_package: DBIx::Class::CDBICompat::ImaDBI
+      uses:
+        - strict
+        - warnings
+        - DBIx::ContextualFetch
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/ImaDBI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1504
+      file_mime_type: ~
+      line_count: ~
+      md5: 810f7bee7b95e3e8dfda5a1e9d67d121
+      module_name_from_file_guess: DBIx::Class::CDBICompat::LazyLoading
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/LazyLoading.pm
+      packages:
+        - DBIx::Class::CDBICompat::LazyLoading
+      primary_package: DBIx::Class::CDBICompat::LazyLoading
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/LazyLoading.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2396
+      file_mime_type: ~
+      line_count: ~
+      md5: 022440682b89bf626421e754b94616fd
+      module_name_from_file_guess: DBIx::Class::CDBICompat::LiveObjectIndex
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/LiveObjectIndex.pm
+      packages:
+        - DBIx::Class::CDBICompat::LiveObjectIndex
+      primary_package: DBIx::Class::CDBICompat::LiveObjectIndex
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/LiveObjectIndex.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 247525b44520addcd3d869b2f0dbf64e
+      module_name_from_file_guess: DBIx::Class::CDBICompat::MightHave
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/MightHave.pm
+      packages:
+        - DBIx::Class::CDBICompat::MightHave
+      primary_package: DBIx::Class::CDBICompat::MightHave
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/MightHave.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 163
+      file_mime_type: ~
+      line_count: ~
+      md5: 50134c934dc5b04d0308f789a21875e1
+      module_name_from_file_guess: DBIx::Class::CDBICompat::ObjIndexStubs
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/ObjIndexStubs.pm
+      packages:
+        - DBIx::Class::CDBICompat::ObjIndexStubs
+      primary_package: DBIx::Class::CDBICompat::ObjIndexStubs
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/ObjIndexStubs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 288
+      file_mime_type: ~
+      line_count: ~
+      md5: e175e45b545bde7c32f117ad04430d95
+      module_name_from_file_guess: DBIx::Class::CDBICompat::Pager
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/Pager.pm
+      packages:
+        - DBIx::Class::CDBICompat::Pager
+      primary_package: DBIx::Class::CDBICompat::Pager
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/Pager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 288
+      file_mime_type: ~
+      line_count: ~
+      md5: e9b0ebe1bedfd8e8a00b594a78831677
+      module_name_from_file_guess: DBIx::Class::CDBICompat::ReadOnly
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/ReadOnly.pm
+      packages:
+        - DBIx::Class::CDBICompat::ReadOnly
+      primary_package: DBIx::Class::CDBICompat::ReadOnly
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/ReadOnly.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1074
+      file_mime_type: ~
+      line_count: ~
+      md5: b2ae061747f480900e56b1cc22637466
+      module_name_from_file_guess: DBIx::Class::CDBICompat::Retrieve
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/Retrieve.pm
+      packages:
+        - DBIx::Class::CDBICompat::Retrieve
+      primary_package: DBIx::Class::CDBICompat::Retrieve
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/Retrieve.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 451
+      file_mime_type: ~
+      line_count: ~
+      md5: d91192f141868e14f6e9be5395f04e5e
+      module_name_from_file_guess: DBIx::Class::CDBICompat::Stringify
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/Stringify.pm
+      packages:
+        - DBIx::Class::CDBICompat::Stringify
+      primary_package: DBIx::Class::CDBICompat::Stringify
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - overload
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/Stringify.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1703
+      file_mime_type: ~
+      line_count: ~
+      md5: 687b392db4ded1959c15e013b08001e5
+      module_name_from_file_guess: DBIx::Class::CDBICompat::TempColumns
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/TempColumns.pm
+      packages:
+        - DBIx::Class::CDBICompat::TempColumns
+      primary_package: DBIx::Class::CDBICompat::TempColumns
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/TempColumns.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 924
+      file_mime_type: ~
+      line_count: ~
+      md5: a9b52c9cff0e5ab72eadabe08b871940
+      module_name_from_file_guess: DBIx::Class::CDBICompat::Triggers
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/CDBICompat/Triggers.pm
+      packages:
+        - DBIx::Class::CDBICompat::Triggers
+      primary_package: DBIx::Class::CDBICompat::Triggers
+      uses:
+        - strict
+        - warnings
+        - Class::Trigger
+      version_info:
+        filename: blib/lib/DBIx/Class/CDBICompat/Triggers.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 142
+      file_mime_type: ~
+      line_count: ~
+      md5: a8943b5bcda0272183a925e7669d0c3c
+      module_name_from_file_guess: DBIx::Class::ClassResolver::PassThrough
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ClassResolver/PassThrough.pm
+      packages:
+        - DBIx::Class::ClassResolver::PassThrough
+      primary_package: DBIx::Class::ClassResolver::PassThrough
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/ClassResolver/PassThrough.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3157
+      file_mime_type: ~
+      line_count: ~
+      md5: 73b9e0ee217120633656b6019520dfcb
+      module_name_from_file_guess: DBIx::Class::Componentised
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Componentised.pm
+      packages:
+        - DBIx::Class::Componentised
+      primary_package: DBIx::Class::Componentised
+      uses:
+        - strict
+        - warnings
+        - Class::C3
+        - Class::Inspector
+        - Carp::Clan
+      version_info:
+        filename: blib/lib/DBIx/Class/Componentised.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1046
+      file_mime_type: ~
+      line_count: ~
+      md5: 284dc0fb2a7acb0d25ca008a8591568d
+      module_name_from_file_guess: DBIx::Class::Core
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Core.pm
+      packages:
+        - DBIx::Class::Core
+      primary_package: DBIx::Class::Core
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Core.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1300
+      file_mime_type: ~
+      line_count: ~
+      md5: 6693f1dbb62dab73c0e3f57d1eb4d8e5
+      module_name_from_file_guess: DBIx::Class::Cursor
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Cursor.pm
+      packages:
+        - DBIx::Class::Cursor
+      primary_package: DBIx::Class::Cursor
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Cursor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4092
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a52b5d4ca35fd09be9c4046c1383215
+      module_name_from_file_guess: DBIx::Class::DB
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/DB.pm
+      packages:
+        - DBIx::Class::DB
+      primary_package: DBIx::Class::DB
+      uses:
+        - strict
+        - warnings
+        - base
+        - DBIx::Class::Schema
+        - DBIx::Class::Storage::DBI
+        - DBIx::Class::ClassResolver::PassThrough
+        - DBI
+      version_info:
+        filename: blib/lib/DBIx/Class/DB.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7541
+      file_mime_type: ~
+      line_count: ~
+      md5: 83aa6609a1cbc66516fc05cb6f936b19
+      module_name_from_file_guess: DBIx::Class::InflateColumn
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/InflateColumn.pm
+      packages:
+        - DBIx::Class::InflateColumn
+      primary_package: DBIx::Class::InflateColumn
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/InflateColumn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2683
+      file_mime_type: ~
+      line_count: ~
+      md5: cb5817874b84ecd69fed27ad5d25fab4
+      module_name_from_file_guess: DBIx::Class::InflateColumn::DateTime
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/InflateColumn/DateTime.pm
+      packages:
+        - DBIx::Class::InflateColumn::DateTime
+      primary_package: DBIx::Class::InflateColumn::DateTime
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/InflateColumn/DateTime.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10240
+      file_mime_type: ~
+      line_count: ~
+      md5: 02356cace1ec66de6089f5d1a33d09c5
+      module_name_from_file_guess: DBIx::Class::Ordered
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Ordered.pm
+      packages:
+        - DBIx::Class::Ordered
+      primary_package: DBIx::Class::Ordered
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Ordered.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2441
+      file_mime_type: ~
+      line_count: ~
+      md5: b97ff5100df4ef8091c8e7d3f95f3b8e
+      module_name_from_file_guess: DBIx::Class::PK
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK.pm
+      packages:
+        - DBIx::Class::PK
+      primary_package: DBIx::Class::PK
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2128
+      file_mime_type: ~
+      line_count: ~
+      md5: 5656f530ea0b63bf88c8a4a1d1bcf799
+      module_name_from_file_guess: DBIx::Class::PK::Auto
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto.pm
+      packages:
+        - DBIx::Class::PK::Auto
+      primary_package: DBIx::Class::PK::Auto
+      uses:
+        - base
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 461
+      file_mime_type: ~
+      line_count: ~
+      md5: 41b713ed1adf5bfda0d65f4872a3c457
+      module_name_from_file_guess: DBIx::Class::PK::Auto::DB2
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto/DB2.pm
+      packages:
+        - DBIx::Class::PK::Auto::DB2
+      primary_package: DBIx::Class::PK::Auto::DB2
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto/DB2.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: 35920156b50eee33d088c8e4cc3fd48f
+      module_name_from_file_guess: DBIx::Class::PK::Auto::MSSQL
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto/MSSQL.pm
+      packages:
+        - DBIx::Class::PK::Auto::MSSQL
+      primary_package: DBIx::Class::PK::Auto::MSSQL
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto/MSSQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: 62a7abdd5948b6cdff5ade88069caad7
+      module_name_from_file_guess: DBIx::Class::PK::Auto::MySQL
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto/MySQL.pm
+      packages:
+        - DBIx::Class::PK::Auto::MySQL
+      primary_package: DBIx::Class::PK::Auto::MySQL
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto/MySQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 470
+      file_mime_type: ~
+      line_count: ~
+      md5: 75336030f4773155a85bf4409f1e06d3
+      module_name_from_file_guess: DBIx::Class::PK::Auto::Oracle
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto/Oracle.pm
+      packages:
+        - DBIx::Class::PK::Auto::Oracle
+      primary_package: DBIx::Class::PK::Auto::Oracle
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto/Oracle.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 458
+      file_mime_type: ~
+      line_count: ~
+      md5: 258a6e2c8367c18734b55aa1f617ccfd
+      module_name_from_file_guess: DBIx::Class::PK::Auto::Pg
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto/Pg.pm
+      packages:
+        - DBIx::Class::PK::Auto::Pg
+      primary_package: DBIx::Class::PK::Auto::Pg
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto/Pg.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 470
+      file_mime_type: ~
+      line_count: ~
+      md5: b8d77fb705c89c83286495ee6c78d12d
+      module_name_from_file_guess: DBIx::Class::PK::Auto::SQLite
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/PK/Auto/SQLite.pm
+      packages:
+        - DBIx::Class::PK::Auto::SQLite
+      primary_package: DBIx::Class::PK::Auto::SQLite
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/PK/Auto/SQLite.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12629
+      file_mime_type: ~
+      line_count: ~
+      md5: bb1f1b5ca93e7881d40b29d27293ec9a
+      module_name_from_file_guess: DBIx::Class::Relationship
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship.pm
+      packages:
+        - DBIx::Class::Relationship
+      primary_package: DBIx::Class::Relationship
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1983
+      file_mime_type: ~
+      line_count: ~
+      md5: e21f52a0790f94d6220359c864636fc9
+      module_name_from_file_guess: DBIx::Class::Relationship::Accessor
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/Accessor.pm
+      packages:
+        - DBIx::Class::Relationship::Accessor
+      primary_package: DBIx::Class::Relationship::Accessor
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/Accessor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13180
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e6fb7740d468b17e007bc00078bddaf
+      module_name_from_file_guess: DBIx::Class::Relationship::Base
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/Base.pm
+      packages:
+        - DBIx::Class::Relationship::Base
+      primary_package: DBIx::Class::Relationship::Base
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2122
+      file_mime_type: ~
+      line_count: ~
+      md5: 46c860c58038130b712aa12a8e34b932
+      module_name_from_file_guess: DBIx::Class::Relationship::BelongsTo
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/BelongsTo.pm
+      packages:
+        - DBIx::Class::Relationship::BelongsTo
+      primary_package: DBIx::Class::Relationship::BelongsTo
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/BelongsTo.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1330
+      file_mime_type: ~
+      line_count: ~
+      md5: 517af87593636876aad55f38c3a97388
+      module_name_from_file_guess: DBIx::Class::Relationship::CascadeActions
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/CascadeActions.pm
+      packages:
+        - DBIx::Class::Relationship::CascadeActions
+      primary_package: DBIx::Class::Relationship::CascadeActions
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/CascadeActions.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ad60268f2de995704ed9c8c2bce0dd0
+      module_name_from_file_guess: DBIx::Class::Relationship::HasMany
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/HasMany.pm
+      packages:
+        - DBIx::Class::Relationship::HasMany
+      primary_package: DBIx::Class::Relationship::HasMany
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/HasMany.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1622
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fd09003e7bf436ba032617abed0cf46
+      module_name_from_file_guess: DBIx::Class::Relationship::HasOne
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/HasOne.pm
+      packages:
+        - DBIx::Class::Relationship::HasOne
+      primary_package: DBIx::Class::Relationship::HasOne
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/HasOne.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 270
+      file_mime_type: ~
+      line_count: ~
+      md5: 93836f3c1102db37eac92f5aaee686e8
+      module_name_from_file_guess: DBIx::Class::Relationship::Helpers
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/Helpers.pm
+      packages:
+        - DBIx::Class::Relationship::Helpers
+      primary_package: DBIx::Class::Relationship::Helpers
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/Helpers.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2571
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bea24e4e52897b4afd442499279a8d8
+      module_name_from_file_guess: DBIx::Class::Relationship::ManyToMany
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/ManyToMany.pm
+      packages:
+        - DBIx::Class::Relationship::ManyToMany
+      primary_package: DBIx::Class::Relationship::ManyToMany
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/ManyToMany.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d97c50f5af483365d8ec9b4f2347436
+      module_name_from_file_guess: DBIx::Class::Relationship::ProxyMethods
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Relationship/ProxyMethods.pm
+      packages:
+        - DBIx::Class::Relationship::ProxyMethods
+      primary_package: DBIx::Class::Relationship::ProxyMethods
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Relationship/ProxyMethods.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 52686
+      file_mime_type: ~
+      line_count: ~
+      md5: eed9597a2c7e35934629fb0eb2dfa8c8
+      module_name_from_file_guess: DBIx::Class::ResultSet
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSet.pm
+      packages:
+        - DBIx::Class::ResultSet
+      primary_package: DBIx::Class::ResultSet
+      uses:
+        - strict
+        - warnings
+        - overload
+        - Carp::Clan
+        - Data::Page
+        - Storable
+        - DBIx::Class::ResultSetColumn
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3599
+      file_mime_type: ~
+      line_count: ~
+      md5: 0082133f093c269f6abd2a58d1d5573b
+      module_name_from_file_guess: DBIx::Class::ResultSetColumn
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSetColumn.pm
+      packages:
+        - DBIx::Class::ResultSetColumn
+      primary_package: DBIx::Class::ResultSetColumn
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSetColumn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3866
+      file_mime_type: ~
+      line_count: ~
+      md5: 9090b77e8ce792efa7f5d9ac70d8e374
+      module_name_from_file_guess: DBIx::Class::ResultSetManager
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSetManager.pm
+      packages:
+        - DBIx::Class::ResultSetManager
+      primary_package: DBIx::Class::ResultSetManager
+      uses:
+        - strict
+        - warnings
+        - base
+        - Class::Inspector
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSetManager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 858
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c7f5643d04ea5a922946e201080a080
+      module_name_from_file_guess: DBIx::Class::ResultSetProxy
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSetProxy.pm
+      packages:
+        - DBIx::Class::ResultSetProxy
+      primary_package: DBIx::Class::ResultSetProxy
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSetProxy.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 25109
+      file_mime_type: ~
+      line_count: ~
+      md5: 3abd06cddc7f2567495e36ceed5286e7
+      module_name_from_file_guess: DBIx::Class::ResultSource
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSource.pm
+      packages:
+        - DBIx::Class::ResultSource
+      primary_package: DBIx::Class::ResultSource
+      uses:
+        - strict
+        - warnings
+        - DBIx::Class::ResultSet
+        - Carp::Clan
+        - Storable
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSource.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 610
+      file_mime_type: ~
+      line_count: ~
+      md5: b45a7757fade8dacafcc2fe4aed574fa
+      module_name_from_file_guess: DBIx::Class::ResultSource::Table
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSource/Table.pm
+      packages:
+        - DBIx::Class::ResultSource::Table
+      primary_package: DBIx::Class::ResultSource::Table
+      uses:
+        - strict
+        - warnings
+        - DBIx::Class::ResultSet
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSource/Table.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2148
+      file_mime_type: ~
+      line_count: ~
+      md5: 80ba545bf7bebc1b3ec515d0a73d161b
+      module_name_from_file_guess: DBIx::Class::ResultSourceProxy
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSourceProxy.pm
+      packages:
+        - DBIx::Class::ResultSourceProxy
+      primary_package: DBIx::Class::ResultSourceProxy
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSourceProxy.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2061
+      file_mime_type: ~
+      line_count: ~
+      md5: dd9c6b8829820fce62175cc167dd1e4b
+      module_name_from_file_guess: DBIx::Class::ResultSourceProxy::Table
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/ResultSourceProxy/Table.pm
+      packages:
+        - DBIx::Class::ResultSourceProxy::Table
+      primary_package: DBIx::Class::ResultSourceProxy::Table
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/ResultSourceProxy/Table.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12274
+      file_mime_type: ~
+      line_count: ~
+      md5: aca0112f21517f9266283e5bf708662f
+      module_name_from_file_guess: DBIx::Class::Row
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Row.pm
+      packages:
+        - DBIx::Class::Row
+      primary_package: DBIx::Class::Row
+      uses:
+        - strict
+        - warnings
+        - base
+        - Carp::Clan
+      version_info:
+        filename: blib/lib/DBIx/Class/Row.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 24315
+      file_mime_type: ~
+      line_count: ~
+      md5: f74802bc7bfbf6c237d9ae1f7df8539e
+      module_name_from_file_guess: DBIx::Class::Schema
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Schema.pm
+      packages:
+        - DBIx::Class::Schema
+      primary_package: DBIx::Class::Schema
+      uses:
+        - strict
+        - warnings
+        - Carp::Clan
+        - Scalar::Util
+        - Module::Find
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Schema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1637
+      file_mime_type: ~
+      line_count: ~
+      md5: 520a702b6ab1ed8538e4896550880f3e
+      module_name_from_file_guess: DBIx::Class::Serialize::Storable
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Serialize/Storable.pm
+      packages:
+        - DBIx::Class::Serialize::Storable
+      primary_package: DBIx::Class::Serialize::Storable
+      uses:
+        - strict
+        - warnings
+        - Storable
+      version_info:
+        filename: blib/lib/DBIx/Class/Serialize/Storable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9182
+      file_mime_type: ~
+      line_count: ~
+      md5: 716da9c153f84e50006b3efb7691ac5a
+      module_name_from_file_guess: DBIx::Class::Storage
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage.pm
+      packages:
+        - DBIx::Class::Storage
+        - DBIx::Class::Storage::NESTED_ROLLBACK_EXCEPTION
+        - DBIx::Class::Storage
+      primary_package: DBIx::Class::Storage
+      uses:
+        - strict
+        - warnings
+        - base
+        - Scalar::Util
+        - Carp::Clan
+        - overload
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 33862
+      file_mime_type: ~
+      line_count: ~
+      md5: e4e34edd386751739b454083f188b7f2
+      module_name_from_file_guess: DBIx::Class::Storage::DBI
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI.pm
+      packages:
+        - DBIx::Class::Storage::DBI
+        - DBIC::SQL::Abstract
+      primary_package: DBIx::Class::Storage::DBI
+      uses:
+        - base
+        - strict
+        - warnings
+        - DBI
+        - SQL::Abstract::Limit
+        - DBIx::Class::Storage::DBI::Cursor
+        - DBIx::Class::Storage::Statistics
+        - IO::File
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3425
+      file_mime_type: ~
+      line_count: ~
+      md5: d151dc5ded76c25546aeddef144b0f71
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::Cursor
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/Cursor.pm
+      packages:
+        - DBIx::Class::Storage::DBI::Cursor
+      primary_package: DBIx::Class::Storage::DBI::Cursor
+      uses:
+        - base
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/Cursor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 860
+      file_mime_type: ~
+      line_count: ~
+      md5: 8233b29c9ccff7cefac3405c3216f440
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::DB2
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/DB2.pm
+      packages:
+        - DBIx::Class::Storage::DBI::DB2
+      primary_package: DBIx::Class::Storage::DBI::DB2
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/DB2.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: ba918fddb72a2f090452f15550c75d89
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::MSSQL
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/MSSQL.pm
+      packages:
+        - DBIx::Class::Storage::DBI::MSSQL
+      primary_package: DBIx::Class::Storage::DBI::MSSQL
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/MSSQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1291
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b833dbe7fb07c8184ca7cfdaa181309
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::MultiDistinctEmulation
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+      packages:
+        - DBIx::Class::Storage::DBI::MultiDistinctEmulation
+      primary_package: DBIx::Class::Storage::DBI::MultiDistinctEmulation
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1195
+      file_mime_type: ~
+      line_count: ~
+      md5: cdc6ca6436c3cd441b2630bc58222c59
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::NoBindVars
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+      packages:
+        - DBIx::Class::Storage::DBI::NoBindVars
+      primary_package: DBIx::Class::Storage::DBI::NoBindVars
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 953
+      file_mime_type: ~
+      line_count: ~
+      md5: 41b3dfaf85ee6094bc026fa588113577
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::ODBC
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/ODBC.pm
+      packages:
+        - DBIx::Class::Storage::DBI::ODBC
+      primary_package: DBIx::Class::Storage::DBI::ODBC
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/ODBC.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1456
+      file_mime_type: ~
+      line_count: ~
+      md5: 16d6464d4501435619b35c957f9ea6ae
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::ODBC::DB2_400_SQL
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+      packages:
+        - DBIx::Class::Storage::DBI::ODBC::DB2_400_SQL
+      primary_package: DBIx::Class::Storage::DBI::ODBC::DB2_400_SQL
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1905
+      file_mime_type: ~
+      line_count: ~
+      md5: a260d0bdf394c810c5fead72497aba20
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::Oracle
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/Oracle.pm
+      packages:
+        - DBIx::Class::Storage::DBI::Oracle
+      primary_package: DBIx::Class::Storage::DBI::Oracle
+      uses:
+        - strict
+        - warnings
+        - Carp::Clan
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/Oracle.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1959
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cb8b471d666e1e184fe9c34f0ac7740
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::Pg
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/Pg.pm
+      packages:
+        - DBIx::Class::Storage::DBI::Pg
+      primary_package: DBIx::Class::Storage::DBI::Pg
+      uses:
+        - strict
+        - warnings
+        - DBD::Pg
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/Pg.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 680
+      file_mime_type: ~
+      line_count: ~
+      md5: d51f4c66e7d6b262ca46b562b29303a9
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::SQLite
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/SQLite.pm
+      packages:
+        - DBIx::Class::Storage::DBI::SQLite
+      primary_package: DBIx::Class::Storage::DBI::SQLite
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/SQLite.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 540
+      file_mime_type: ~
+      line_count: ~
+      md5: 52e1542c565f5cc1bd3eb150ddae89fa
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::Sybase
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/Sybase.pm
+      packages:
+        - DBIx::Class::Storage::DBI::Sybase
+      primary_package: DBIx::Class::Storage::DBI::Sybase
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/Sybase.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 586
+      file_mime_type: ~
+      line_count: ~
+      md5: 5825f2ff369ed845650d9c0a7f1a9cc3
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::Sybase::MSSQL
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+      packages:
+        - DBIx::Class::Storage::DBI::Sybase::MSSQL
+      primary_package: DBIx::Class::Storage::DBI::Sybase::MSSQL
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 731
+      file_mime_type: ~
+      line_count: ~
+      md5: fc1d4d00f4008a074adc75f5546f599e
+      module_name_from_file_guess: DBIx::Class::Storage::DBI::mysql
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/DBI/mysql.pm
+      packages:
+        - DBIx::Class::Storage::DBI::mysql
+      primary_package: DBIx::Class::Storage::DBI::mysql
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/DBI/mysql.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2300
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d94d2398acd51fbe0c56f867f06b34a
+      module_name_from_file_guess: DBIx::Class::Storage::Statistics
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Storage/Statistics.pm
+      packages:
+        - DBIx::Class::Storage::Statistics
+      primary_package: DBIx::Class::Storage::Statistics
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DBIx/Class/Storage/Statistics.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2213
+      file_mime_type: ~
+      line_count: ~
+      md5: 19b2a986bc5362c384ace96687065487
+      module_name_from_file_guess: DBIx::Class::Test::SQLite
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/Test/SQLite.pm
+      packages:
+        - DBIx::Class::Test::SQLite
+      primary_package: DBIx::Class::Test::SQLite
+      uses:
+        - strict
+        - warnings
+        - base
+        - File::Temp
+      version_info:
+        filename: blib/lib/DBIx/Class/Test/SQLite.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2839
+      file_mime_type: ~
+      line_count: ~
+      md5: f81dd9787667ccf73bcd4f5dbb172c27
+      module_name_from_file_guess: DBIx::Class::UTF8Columns
+      mtime: 1268999547
+      name: blib/lib/DBIx/Class/UTF8Columns.pm
+      packages:
+        - DBIx::Class::UTF8Columns
+      primary_package: DBIx::Class::UTF8Columns
+      uses:
+        - strict
+        - warnings
+        - base
+        - Encode
+        - utf8
+      version_info:
+        filename: blib/lib/DBIx/Class/UTF8Columns.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5053
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cdbb159c5bd210c08f8f50d8f36d4a5
+      module_name_from_file_guess: SQL::Translator::Parser::DBIx::Class
+      mtime: 1268999547
+      name: blib/lib/SQL/Translator/Parser/DBIx/Class.pm
+      packages:
+        - SQL::Translator::Parser::DBIx::Class
+      primary_package: SQL::Translator::Parser::DBIx::Class
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - Data::Dumper
+        - SQL::Translator::Utils
+        - base
+      version_info:
+        filename: blib/lib/SQL/Translator/Parser/DBIx/Class.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 1.00
+    - bytesize: 4679
+      file_mime_type: ~
+      line_count: ~
+      md5: 068add41ae665a2ba3d53695cd88c78d
+      module_name_from_file_guess: SQL::Translator::Producer::DBIx::Class::File
+      mtime: 1268999547
+      name: blib/lib/SQL/Translator/Producer/DBIx/Class/File.pm
+      packages:
+        - SQL::Translator::Producer::DBIx::Class::File
+      primary_package: SQL::Translator::Producer::DBIx::Class::File
+      uses:
+        - strict
+        - vars
+        - SQL::Translator::Schema::Constants
+        - SQL::Translator::Utils
+      version_info:
+        filename: blib/lib/SQL/Translator/Producer/DBIx/Class/File.pm
+        identifier: VERSION
+        line_number: 23
+        sigil: $
+        value: 0.1
+  modules:
+    - blib/lib/DBIx/Class.pm
+    - blib/lib/DBIx/Class/AccessorGroup.pm
+    - blib/lib/DBIx/Class/CDBICompat.pm
+    - blib/lib/DBIx/Class/CDBICompat/AccessorMapping.pm
+    - blib/lib/DBIx/Class/CDBICompat/AttributeAPI.pm
+    - blib/lib/DBIx/Class/CDBICompat/AutoUpdate.pm
+    - blib/lib/DBIx/Class/CDBICompat/ColumnCase.pm
+    - blib/lib/DBIx/Class/CDBICompat/ColumnGroups.pm
+    - blib/lib/DBIx/Class/CDBICompat/Constraints.pm
+    - blib/lib/DBIx/Class/CDBICompat/Constructor.pm
+    - blib/lib/DBIx/Class/CDBICompat/DestroyWarning.pm
+    - blib/lib/DBIx/Class/CDBICompat/GetSet.pm
+    - blib/lib/DBIx/Class/CDBICompat/HasA.pm
+    - blib/lib/DBIx/Class/CDBICompat/HasMany.pm
+    - blib/lib/DBIx/Class/CDBICompat/ImaDBI.pm
+    - blib/lib/DBIx/Class/CDBICompat/LazyLoading.pm
+    - blib/lib/DBIx/Class/CDBICompat/LiveObjectIndex.pm
+    - blib/lib/DBIx/Class/CDBICompat/MightHave.pm
+    - blib/lib/DBIx/Class/CDBICompat/ObjIndexStubs.pm
+    - blib/lib/DBIx/Class/CDBICompat/Pager.pm
+    - blib/lib/DBIx/Class/CDBICompat/ReadOnly.pm
+    - blib/lib/DBIx/Class/CDBICompat/Retrieve.pm
+    - blib/lib/DBIx/Class/CDBICompat/Stringify.pm
+    - blib/lib/DBIx/Class/CDBICompat/TempColumns.pm
+    - blib/lib/DBIx/Class/CDBICompat/Triggers.pm
+    - blib/lib/DBIx/Class/ClassResolver/PassThrough.pm
+    - blib/lib/DBIx/Class/Componentised.pm
+    - blib/lib/DBIx/Class/Core.pm
+    - blib/lib/DBIx/Class/Cursor.pm
+    - blib/lib/DBIx/Class/DB.pm
+    - blib/lib/DBIx/Class/InflateColumn.pm
+    - blib/lib/DBIx/Class/InflateColumn/DateTime.pm
+    - blib/lib/DBIx/Class/Ordered.pm
+    - blib/lib/DBIx/Class/PK.pm
+    - blib/lib/DBIx/Class/PK/Auto.pm
+    - blib/lib/DBIx/Class/PK/Auto/DB2.pm
+    - blib/lib/DBIx/Class/PK/Auto/MSSQL.pm
+    - blib/lib/DBIx/Class/PK/Auto/MySQL.pm
+    - blib/lib/DBIx/Class/PK/Auto/Oracle.pm
+    - blib/lib/DBIx/Class/PK/Auto/Pg.pm
+    - blib/lib/DBIx/Class/PK/Auto/SQLite.pm
+    - blib/lib/DBIx/Class/Relationship.pm
+    - blib/lib/DBIx/Class/Relationship/Accessor.pm
+    - blib/lib/DBIx/Class/Relationship/Base.pm
+    - blib/lib/DBIx/Class/Relationship/BelongsTo.pm
+    - blib/lib/DBIx/Class/Relationship/CascadeActions.pm
+    - blib/lib/DBIx/Class/Relationship/HasMany.pm
+    - blib/lib/DBIx/Class/Relationship/HasOne.pm
+    - blib/lib/DBIx/Class/Relationship/Helpers.pm
+    - blib/lib/DBIx/Class/Relationship/ManyToMany.pm
+    - blib/lib/DBIx/Class/Relationship/ProxyMethods.pm
+    - blib/lib/DBIx/Class/ResultSet.pm
+    - blib/lib/DBIx/Class/ResultSetColumn.pm
+    - blib/lib/DBIx/Class/ResultSetManager.pm
+    - blib/lib/DBIx/Class/ResultSetProxy.pm
+    - blib/lib/DBIx/Class/ResultSource.pm
+    - blib/lib/DBIx/Class/ResultSource/Table.pm
+    - blib/lib/DBIx/Class/ResultSourceProxy.pm
+    - blib/lib/DBIx/Class/ResultSourceProxy/Table.pm
+    - blib/lib/DBIx/Class/Row.pm
+    - blib/lib/DBIx/Class/Schema.pm
+    - blib/lib/DBIx/Class/Serialize/Storable.pm
+    - blib/lib/DBIx/Class/Storage.pm
+    - blib/lib/DBIx/Class/Storage/DBI.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Cursor.pm
+    - blib/lib/DBIx/Class/Storage/DBI/DB2.pm
+    - blib/lib/DBIx/Class/Storage/DBI/MSSQL.pm
+    - blib/lib/DBIx/Class/Storage/DBI/MultiDistinctEmulation.pm
+    - blib/lib/DBIx/Class/Storage/DBI/NoBindVars.pm
+    - blib/lib/DBIx/Class/Storage/DBI/ODBC.pm
+    - blib/lib/DBIx/Class/Storage/DBI/ODBC/DB2_400_SQL.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Oracle.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Pg.pm
+    - blib/lib/DBIx/Class/Storage/DBI/SQLite.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Sybase.pm
+    - blib/lib/DBIx/Class/Storage/DBI/Sybase/MSSQL.pm
+    - blib/lib/DBIx/Class/Storage/DBI/mysql.pm
+    - blib/lib/DBIx/Class/Storage/Statistics.pm
+    - blib/lib/DBIx/Class/Test/SQLite.pm
+    - blib/lib/DBIx/Class/UTF8Columns.pm
+    - blib/lib/SQL/Translator/Parser/DBIx/Class.pm
+    - blib/lib/SQL/Translator/Producer/DBIx/Class/File.pm
+  test_info:
+    - bytesize: 2917
+      file_mime_type: ~
+      line_count: ~
+      md5: c92b05479abbab6471f7988820016b47
+      mtime: 1160100517
+      name: t/73oracle.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 488
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e15f6595af3ae997e8fcebd0b85d9b6
+      mtime: 1160100517
+      name: t/35disable_sth_caching.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 849
+      file_mime_type: ~
+      line_count: ~
+      md5: 375eadf634b757bc568e13876a9d02d9
+      mtime: 1160100517
+      name: t/33storage_reconnect.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1081
+      file_mime_type: ~
+      line_count: ~
+      md5: 55da634000415e132b6b0c94fab1a4e1
+      mtime: 1160100517
+      name: t/53delete_related.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - lib
+        - DBICTest
+    - bytesize: 1899
+      file_mime_type: ~
+      line_count: ~
+      md5: 945c00485d5b47d82f04b3d1c591c526
+      mtime: 1160100517
+      name: t/93nobindvars.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - DBI::Const::GetInfoType
+        - base
+    - bytesize: 840
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ea22d67aee48a6380ea4b4185337b4f
+      mtime: 1160100517
+      name: t/39load_namespaces_2.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - base
+    - bytesize: 1300
+      file_mime_type: ~
+      line_count: ~
+      md5: 85f10e2b6d56bf978741d37f0a14fe85
+      mtime: 1160100517
+      name: t/89inflate_datetime.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - DateTime::Format::MySQL
+    - bytesize: 8937
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ffd7a10931c2dab0c35cd2f8a08cf52
+      mtime: 1160100517
+      name: t/66relationship.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 3800
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b6a8f7e3496a7dd6caa7d43dac438df
+      mtime: 1160100517
+      name: t/46where_attribute.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Data::Dumper
+        - lib
+        - DBICTest
+    - bytesize: 963
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f4b9a8823507e525cfd3c1a2a464c1
+      mtime: 1160100517
+      name: t/77join_count.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1267
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d3451c19a2321a4514f308e6d880682
+      mtime: 1160100517
+      name: t/89dbicadmin.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 698
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a3a5febbbbb2f433ff9a8e4be16a034
+      mtime: 1160100517
+      name: t/69update.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 769
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a6b14c75ef135ce7a713841db4fca2f
+      mtime: 1160100517
+      name: t/26dumper.t
+      uses:
+        - strict
+        - Test::More
+        - IO::File
+        - Data::Dumper
+        - lib
+    - bytesize: 314
+      file_mime_type: ~
+      line_count: ~
+      md5: cebaaf12e33503b89588df61b681fb21
+      mtime: 1160100517
+      name: t/91debug.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 4843
+      file_mime_type: ~
+      line_count: ~
+      md5: 82a82cc097e4a650bad76d49ed3b4fcf
+      mtime: 1160100517
+      name: t/03podcoverage.t
+      uses:
+        - Test::More
+    - bytesize: 170207
+      file_mime_type: ~
+      line_count: ~
+      md5: babc05c077ede1d96f121fd177f0fc4c
+      mtime: 1160100517
+      name: t/100populate.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 544
+      file_mime_type: ~
+      line_count: ~
+      md5: b93fbd113ba0b45179b12f9c617c43f6
+      mtime: 1160100517
+      name: t/41orrible.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - DBIx::Class::Storage::DBI
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: 594de843a9643654d238cb561d55467e
+      mtime: 1160100517
+      name: t/70auto.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 11653
+      file_mime_type: ~
+      line_count: ~
+      md5: 600b53103df3736e4f93c2b60f76493b
+      mtime: 1160100517
+      name: t/76joins.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - Data::Dumper
+        - IO::File
+    - bytesize: 196
+      file_mime_type: ~
+      line_count: ~
+      md5: ae9cec8985088541e60728658cc07a8b
+      mtime: 1160100517
+      name: t/30dbicplain.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest::Plain
+    - bytesize: 763
+      file_mime_type: ~
+      line_count: ~
+      md5: a265262a60e0ab93a4c88a7309696c6e
+      mtime: 1160100517
+      name: t/39load_namespaces_1.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - base
+    - bytesize: 280
+      file_mime_type: ~
+      line_count: ~
+      md5: 182812bf05cf90cb615c835406dad341
+      mtime: 1160100517
+      name: t/92storage.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1675
+      file_mime_type: ~
+      line_count: ~
+      md5: fbe89d73b566c66fa8e1634bd3e6b569
+      mtime: 1160100517
+      name: t/68inflate_serialize.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - Data::Dumper
+        - ''
+    - bytesize: 1726
+      file_mime_type: ~
+      line_count: ~
+      md5: 29f0b00f68082a4562473b8e46db84c7
+      mtime: 1160100517
+      name: t/75limit.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1049
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fe9654ff84660788a1159f86732846a
+      mtime: 1160100517
+      name: t/78self_referencial.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1090
+      file_mime_type: ~
+      line_count: ~
+      md5: 75e221aabbd85e5bf4420dd4351b2923
+      mtime: 1160100517
+      name: t/88result_set_column.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 504
+      file_mime_type: ~
+      line_count: ~
+      md5: 37d6fa7b624c84c2c08c415edd045256
+      mtime: 1160100517
+      name: t/18inserterror.t
+      uses:
+        - Class::C3
+        - strict
+        - Test::More
+        - warnings
+        - lib
+    - bytesize: 1350
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e604fc9b2d693f9d41caf184ca05d29
+      mtime: 1160100517
+      name: t/74mssql.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 115
+      file_mime_type: ~
+      line_count: ~
+      md5: ae18cd50a4dd26e01b58ebcc2d868a3e
+      mtime: 1160100517
+      name: t/02pod.t
+      uses:
+        - Test::More
+    - bytesize: 752
+      file_mime_type: ~
+      line_count: ~
+      md5: a341b0325d9e5d45be6c79ae653d7da4
+      mtime: 1160100517
+      name: t/32connect_code_ref.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 716
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a710753ce02599d1a021f5855057966
+      mtime: 1160100517
+      name: t/40resultsetmanager.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - Class::Inspector
+        - DBICTest::ResultSetManager
+    - bytesize: 4642
+      file_mime_type: ~
+      line_count: ~
+      md5: af6097e2fd58d2b5802d4bdd7869b821
+      mtime: 1160100517
+      name: t/90join_torture.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - Data::Dumper
+    - bytesize: 366
+      file_mime_type: ~
+      line_count: ~
+      md5: 6102f0c7569c3fbd700e8ccfa14efa19
+      mtime: 1160100517
+      name: t/52cycle.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - Test::Memory::Cycle
+        - DBICTest
+        - DBICTest::Schema
+    - bytesize: 1708
+      file_mime_type: ~
+      line_count: ~
+      md5: dbd13f12400ff7cbb584e3f1fb49bce6
+      mtime: 1160100517
+      name: t/34exception_action.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - overload
+    - bytesize: 1849
+      file_mime_type: ~
+      line_count: ~
+      md5: 965c32524fb3d34b0578839fc0ddb435
+      mtime: 1160100517
+      name: t/745db2.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 331
+      file_mime_type: ~
+      line_count: ~
+      md5: f1ad23f3418e42c45ebecb63a41a0281
+      mtime: 1160100517
+      name: t/20setuperrors.t
+      uses:
+        - Test::More
+        - base
+    - bytesize: 798
+      file_mime_type: ~
+      line_count: ~
+      md5: 205ff5895982591f44d704d3a4cd0da7
+      mtime: 1160100517
+      name: t/39load_namespaces_4.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - base
+    - bytesize: 1944
+      file_mime_type: ~
+      line_count: ~
+      md5: a34287183d4455bcafc234777bf2b4c4
+      mtime: 1160100517
+      name: t/746db2_400.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1903
+      file_mime_type: ~
+      line_count: ~
+      md5: a3dddb501b142c93ca91ba3dac8f6ca7
+      mtime: 1160100517
+      name: t/79aliasing.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 307
+      file_mime_type: ~
+      line_count: ~
+      md5: 46112e4e24df69e133f2e2f4210ff2a5
+      mtime: 1160100517
+      name: t/84serialize.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - Storable
+    - bytesize: 2867
+      file_mime_type: ~
+      line_count: ~
+      md5: 271139c2e5df4c097f41a648133ef953
+      mtime: 1160100517
+      name: t/72pg.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - base
+    - bytesize: 4894
+      file_mime_type: ~
+      line_count: ~
+      md5: 22d23db556b1a3b094f794f9035cfabd
+      mtime: 1160100517
+      name: t/80unique.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1431
+      file_mime_type: ~
+      line_count: ~
+      md5: 1abb4ca78bcc35a3ef6a2f3198ef9efb
+      mtime: 1160100517
+      name: t/64db.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 2835
+      file_mime_type: ~
+      line_count: ~
+      md5: a3e636d2ae3becd56f352584a0ce8c6a
+      mtime: 1160100517
+      name: t/90ensure_class_loaded.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - Class::Inspector
+    - bytesize: 900
+      file_mime_type: ~
+      line_count: ~
+      md5: 832f2abf7399092bc17264d43cb79365
+      mtime: 1160100517
+      name: t/82cascade_copy.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 846
+      file_mime_type: ~
+      line_count: ~
+      md5: 6456028e01577abdec1cb13edf8ecefa
+      mtime: 1160100517
+      name: t/68inflate.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - DateTime
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: 310b46887f8fcfc0f58150f50ca9944a
+      mtime: 1160100517
+      name: t/04dont_break_c3.t
+      uses:
+        - strict
+        - Test::More
+        - base
+    - bytesize: 2346
+      file_mime_type: ~
+      line_count: ~
+      md5: 03c27ace244805e91add66b6022347ec
+      mtime: 1160100517
+      name: t/50fork.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+    - bytesize: 1579
+      file_mime_type: ~
+      line_count: ~
+      md5: cdb08827ade9200bab6a0a2a1d0cd16f
+      mtime: 1160100517
+      name: t/67pager.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1022
+      file_mime_type: ~
+      line_count: ~
+      md5: e8a0321c80a1fca9ab3f315b64bc4336
+      mtime: 1160100517
+      name: t/39load_namespaces_3.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - base
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: ac8d692b4397dc0606d78f55e47cffea
+      mtime: 1160100517
+      name: t/42toplimit.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - DBIx::Class::Storage::DBI
+    - bytesize: 2142
+      file_mime_type: ~
+      line_count: ~
+      md5: 987cf48449c68ccb9f1ffc96cfd45860
+      mtime: 1160100517
+      name: t/31stats.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+    - bytesize: 2735
+      file_mime_type: ~
+      line_count: ~
+      md5: d78685a6d32aabb5cfec90984a5e560c
+      mtime: 1160100517
+      name: t/51threads.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Config
+        - threads
+        - lib
+    - bytesize: 1530
+      file_mime_type: ~
+      line_count: ~
+      md5: da5660b15187bc6cf754fee120dcfa6a
+      mtime: 1160100517
+      name: t/55storage_stress.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+    - bytesize: 4716
+      file_mime_type: ~
+      line_count: ~
+      md5: 42e291a5f73b60886a4280e48bf3267f
+      mtime: 1160100517
+      name: t/83cache.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - Data::Dumper
+    - bytesize: 1345
+      file_mime_type: ~
+      line_count: ~
+      md5: b86556077a0e7eadf8ddca7c36aed3ee
+      mtime: 1160100517
+      name: t/68inflate_has_a.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - DateTime
+    - bytesize: 1163
+      file_mime_type: ~
+      line_count: ~
+      md5: e760b67d839a76e5a78a07a0c3a5d72d
+      mtime: 1160100517
+      name: t/85utf8.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: aa94353d67f88074b10af9d92c74161b
+      mtime: 1160100517
+      name: t/05components.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest::ForeignComponent
+        - base
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: abb73c006293e554b6033652a3f7eabf
+      mtime: 1160100517
+      name: t/86might_have.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 2380
+      file_mime_type: ~
+      line_count: ~
+      md5: 62056cd4e9bd9e865459fb66da58e0c6
+      mtime: 1160100517
+      name: t/19quotes.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - IO::File
+        - lib
+    - bytesize: 9421
+      file_mime_type: ~
+      line_count: ~
+      md5: 67c31f5c5517bf32489213d3ee0eef10
+      mtime: 1160100517
+      name: t/60core.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 4813
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c3ce635e8c3169e7fc287820419be2f
+      mtime: 1160100517
+      name: t/81transactions.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 2368
+      file_mime_type: ~
+      line_count: ~
+      md5: e00417a4a38abdc3b54209bf29d75760
+      mtime: 1160100517
+      name: t/71mysql.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+        - DBI::Const::GetInfoType
+    - bytesize: 9115
+      file_mime_type: ~
+      line_count: ~
+      md5: cc382e3d768972329153cd023a24e3f1
+      mtime: 1160100517
+      name: t/86sqlt.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 749
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ba303b5d69ad958921e89ed055edb1a
+      mtime: 1160100518
+      name: t/65multipk.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 2434
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b543de25629e9f1fc6fa1e3ab0eb113
+      mtime: 1160100518
+      name: t/19quotes_newstyle.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - IO::File
+        - lib
+    - bytesize: 3025
+      file_mime_type: ~
+      line_count: ~
+      md5: a6e1ef175a6d75cc165316d65110d32b
+      mtime: 1160100518
+      name: t/87ordered.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+        - DBICTest
+    - bytesize: 3880
+      file_mime_type: ~
+      line_count: ~
+      md5: a65909db6f1aff7d0e2080d0d0ad42b8
+      mtime: 1160100517
+      name: t/cdbi-t/06-hasa.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Director
+        - base
+    - bytesize: 1704
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cdbb19849727532f139f15ec980b1d2
+      mtime: 1160100517
+      name: t/cdbi-t/98-failure.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 3915
+      file_mime_type: ~
+      line_count: ~
+      md5: 6712aa0237c1b97e60f5a42578685fd4
+      mtime: 1160100517
+      name: t/cdbi-t/12-filter.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Actor
+        - Film
+        - vars
+    - bytesize: 4503
+      file_mime_type: ~
+      line_count: ~
+      md5: 043e1fc768c10f17faaeaff60580d544
+      mtime: 1160100517
+      name: t/cdbi-t/01-columns.t
+      uses:
+        - strict
+        - Test::More
+        - base
+    - bytesize: 1135
+      file_mime_type: ~
+      line_count: ~
+      md5: 17c665d47a3ea23a6374504e08cca1c2
+      mtime: 1160100517
+      name: t/cdbi-t/30-pager.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 2671
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f8f906983ff9add907ae07decdc54b9
+      mtime: 1160100517
+      name: t/cdbi-t/19-set_sql.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Actor
+    - bytesize: 1727
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e2a33e77b1b9a4ef940864b8450dcac
+      mtime: 1160100517
+      name: t/cdbi-t/14-might_have.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Blurb
+    - bytesize: 2556
+      file_mime_type: ~
+      line_count: ~
+      md5: e83e372f90a8305572351103b272c601
+      mtime: 1160100517
+      name: t/cdbi-t/21-iterator.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 5160
+      file_mime_type: ~
+      line_count: ~
+      md5: 8726d0b03305793bea1e74739f098554
+      mtime: 1160100517
+      name: t/cdbi-t/15-accessor.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Actor
+    - bytesize: 2817
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ec88420c7382053860bdc52ca3fe9db
+      mtime: 1160100517
+      name: t/cdbi-t/09-has_many.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Actor
+    - bytesize: 11961
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e8f1531d2f41adade3db4d143aed551
+      mtime: 1160100517
+      name: t/cdbi-t/02-Film.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 6079
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e92876876aa395283736dcbc487d30f
+      mtime: 1160100517
+      name: t/cdbi-t/18-has_a.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Director
+    - bytesize: 2539
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c955345bbaed28781ec570af6e96982
+      mtime: 1160100517
+      name: t/cdbi-t/04-lazy.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Lazy
+    - bytesize: 1728
+      file_mime_type: ~
+      line_count: ~
+      md5: 261a37c1cacd927f7b6c405ec816b8ef
+      mtime: 1160100517
+      name: t/cdbi-t/11-triggers.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 613
+      file_mime_type: ~
+      line_count: ~
+      md5: 67bde205231d1660f3397e5f0a822ad8
+      mtime: 1160100517
+      name: t/cdbi-t/22-self_referential.t
+      uses:
+        - Test::More
+        - strict
+        - lib
+        - Actor
+        - ActorAlias
+    - bytesize: 752
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d11afa47f7632665b736e1032f8d98f
+      mtime: 1160100518
+      name: t/cdbi-t/16-reserved.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+        - Order
+    - bytesize: 915
+      file_mime_type: ~
+      line_count: ~
+      md5: e086fe42a6466747525c698f528974e0
+      mtime: 1160100518
+      name: t/cdbi-t/03-subclassing.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 3244
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a9243df0266bae8939a1fba60bde76c
+      mtime: 1160100518
+      name: t/cdbi-t/13-constraint.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - Film
+    - bytesize: 1604
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c757c6c96d9fae31f525ef57ee5ca59
+      mtime: 1160100518
+      name: t/cdbi-sweet-t/08pager.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - lib
+  tests:
+    - t/73oracle.t
+    - t/35disable_sth_caching.t
+    - t/33storage_reconnect.t
+    - t/53delete_related.t
+    - t/93nobindvars.t
+    - t/39load_namespaces_2.t
+    - t/89inflate_datetime.t
+    - t/66relationship.t
+    - t/46where_attribute.t
+    - t/77join_count.t
+    - t/89dbicadmin.t
+    - t/69update.t
+    - t/26dumper.t
+    - t/91debug.t
+    - t/03podcoverage.t
+    - t/100populate.t
+    - t/41orrible.t
+    - t/70auto.t
+    - t/76joins.t
+    - t/30dbicplain.t
+    - t/39load_namespaces_1.t
+    - t/92storage.t
+    - t/68inflate_serialize.t
+    - t/75limit.t
+    - t/78self_referencial.t
+    - t/88result_set_column.t
+    - t/18inserterror.t
+    - t/74mssql.t
+    - t/02pod.t
+    - t/32connect_code_ref.t
+    - t/40resultsetmanager.t
+    - t/90join_torture.t
+    - t/52cycle.t
+    - t/34exception_action.t
+    - t/745db2.t
+    - t/20setuperrors.t
+    - t/39load_namespaces_4.t
+    - t/746db2_400.t
+    - t/79aliasing.t
+    - t/84serialize.t
+    - t/72pg.t
+    - t/80unique.t
+    - t/64db.t
+    - t/90ensure_class_loaded.t
+    - t/82cascade_copy.t
+    - t/68inflate.t
+    - t/04dont_break_c3.t
+    - t/50fork.t
+    - t/67pager.t
+    - t/39load_namespaces_3.t
+    - t/42toplimit.t
+    - t/31stats.t
+    - t/51threads.t
+    - t/55storage_stress.t
+    - t/83cache.t
+    - t/68inflate_has_a.t
+    - t/85utf8.t
+    - t/05components.t
+    - t/86might_have.t
+    - t/19quotes.t
+    - t/60core.t
+    - t/81transactions.t
+    - t/71mysql.t
+    - t/86sqlt.t
+    - t/65multipk.t
+    - t/19quotes_newstyle.t
+    - t/87ordered.t
+    - t/cdbi-t/06-hasa.t
+    - t/cdbi-t/98-failure.t
+    - t/cdbi-t/12-filter.t
+    - t/cdbi-t/01-columns.t
+    - t/cdbi-t/30-pager.t
+    - t/cdbi-t/19-set_sql.t
+    - t/cdbi-t/14-might_have.t
+    - t/cdbi-t/21-iterator.t
+    - t/cdbi-t/15-accessor.t
+    - t/cdbi-t/09-has_many.t
+    - t/cdbi-t/02-Film.t
+    - t/cdbi-t/18-has_a.t
+    - t/cdbi-t/04-lazy.t
+    - t/cdbi-t/11-triggers.t
+    - t/cdbi-t/22-self_referential.t
+    - t/cdbi-t/16-reserved.t
+    - t/cdbi-t/03-subclassing.t
+    - t/cdbi-t/13-constraint.t
+    - t/cdbi-sweet-t/08pager.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-99919._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 99919
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268999634
+  examine_start_time: 1268999537
+  examine_time: 97
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 99919
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1268999634
+  run_start_time: 1268999537
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

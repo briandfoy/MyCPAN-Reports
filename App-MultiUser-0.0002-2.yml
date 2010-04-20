@@ -1,0 +1,2427 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Base framework for an application with users and roles.
+    author:
+      - 'Chad Granum <exodist7@gmail.com>'
+    build_requires:
+      DBD::SQLite: 1
+      Test::Database: 1.07
+      Test::Exception: 0
+      Test::More: 0
+    configure_requires:
+      Module::Build: 0.35
+    generated_by: Module::Build version 0.35
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: App-MultiUser
+    provides:
+      App::MultiUser:
+        file: lib/App/MultiUser.pm
+        version: 0.0002
+      App::MultiUser::Account:
+        file: lib/App/MultiUser/Account.pm
+      App::MultiUser::Base:
+        file: lib/App/MultiUser/Base.pm
+      App::MultiUser::Cache:
+        file: lib/App/MultiUser/Cache.pm
+      App::MultiUser::DB:
+        file: lib/App/MultiUser/DB.pm
+      App::MultiUser::DB::EntityTable:
+        file: lib/App/MultiUser/DB/EntityTable.pm
+      App::MultiUser::DB::Handle:
+        file: lib/App/MultiUser/DB/Handle.pm
+      App::MultiUser::DB::Migration:
+        file: lib/App/MultiUser/DB/Migration.pm
+      App::MultiUser::DB::Migration::000InitialSchema:
+        file: lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+      App::MultiUser::DB::Schema:
+        file: lib/App/MultiUser/DB/Schema.pm
+      App::MultiUser::Entity:
+        file: lib/App/MultiUser/Entity.pm
+      App::MultiUser::Entity::Property:
+        file: lib/App/MultiUser/Entity/Property.pm
+      App::MultiUser::Entity::Role:
+        file: lib/App/MultiUser/Entity/Role.pm
+      App::MultiUser::Permission:
+        file: lib/App/MultiUser/Permission.pm
+      App::MultiUser::Privilege:
+        file: lib/App/MultiUser/Privilege.pm
+      App::MultiUser::Privilege::Chain:
+        file: lib/App/MultiUser/Privilege/Chain.pm
+      App::MultiUser::Property:
+        file: lib/App/MultiUser/Property.pm
+      App::MultiUser::Role:
+        file: lib/App/MultiUser/Role.pm
+      App::MultiUser::Role::Membership:
+        file: lib/App/MultiUser/Role/Membership.pm
+      App::MultiUser::Test:
+        file: lib/App/MultiUser/Test.pm
+      App::MultiUser::Version:
+        file: lib/App/MultiUser/Version.pm
+    requires:
+      Carp: 0
+      Data::Dumper: 0
+      Fey: 0
+      Fey::DBIManager: 0
+      Fey::Loader: 0.11
+      Fey::ORM: 0
+      Module::Pluggable: 0
+      Moose: 0
+      Moose::Role: 0
+      MooseX::ClassAttribute: 0
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 0.0002
+  blib:
+    - blib/lib/App/MultiUser.pm
+    - blib/lib/App/MultiUser/Account.pm
+    - blib/lib/App/MultiUser/Base.pm
+    - blib/lib/App/MultiUser/Cache.pm
+    - blib/lib/App/MultiUser/DB.pm
+    - blib/lib/App/MultiUser/DB/EntityTable.pm
+    - blib/lib/App/MultiUser/DB/Handle.pm
+    - blib/lib/App/MultiUser/DB/Migration.pm
+    - blib/lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+    - blib/lib/App/MultiUser/DB/Schema.pm
+    - blib/lib/App/MultiUser/Entity.pm
+    - blib/lib/App/MultiUser/Entity/Property.pm
+    - blib/lib/App/MultiUser/Entity/Role.pm
+    - blib/lib/App/MultiUser/Permission.pm
+    - blib/lib/App/MultiUser/Privilege.pm
+    - blib/lib/App/MultiUser/Privilege/Chain.pm
+    - blib/lib/App/MultiUser/Property.pm
+    - blib/lib/App/MultiUser/Role.pm
+    - blib/lib/App/MultiUser/Role/Membership.pm
+    - blib/lib/App/MultiUser/Test.pm
+    - blib/lib/App/MultiUser/Version.pm
+    - blib/libdoc/App::MultiUser.3
+  build_file: Build.PL
+  build_file_output: |
+    Checking prerequisites...
+      requires:
+        !  Fey is not installed
+        !  Fey::DBIManager is not installed
+        !  Fey::Loader is not installed
+        !  Fey::ORM is not installed
+        !  Moose is not installed
+        !  Moose::Role is not installed
+        !  MooseX::ClassAttribute is not installed
+      build_requires:
+        !  DBD::SQLite is not installed
+        !  Test::Database is not installed
+        !  Test::Exception is not installed
+    
+    ERRORS/WARNINGS FOUND IN PREREQUISITES.  You may wish to install the versions
+    of the modules indicated above before proceeding with this installation
+    
+    Run 'Build installdeps' to install missing prerequisites.
+    
+    Creating new 'MYMETA.yml' with configuration results
+    Creating new 'Build' script for 'App-MultiUser' version '0.0002'
+  build_output: "Building App-MultiUser\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b/App-MultiUser-0.0002/Build.PL
+    build_files:
+      Build.PL: Build.PL
+    build_pl_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b/App-MultiUser-0.0002/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b/App-MultiUser-0.0002
+    has_build_and_makefile: ~
+    has_build_pl: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b/App-MultiUser-0.0002/Build.PL
+    has_makefile_pl: ~
+    make_command: ~
+    makefile_pl_path: ~
+    makemaker_version: ~
+    module_build_version: 0.3603
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: ~
+    uses_module_build: 1
+    uses_module_build_compat: ~
+    uses_module_install: ~
+  dist_archive_type: tgz
+  dist_author: EXODIST
+  dist_basename: App-MultiUser-0.0002-2.tar.gz
+  dist_date: 1258520568
+  dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b/App-MultiUser-0.0002
+  dist_extract_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b/App-MultiUser-0.0002
+  dist_file: /home/brian/CPAN/authors/id/E/EX/EXODIST/App-MultiUser-0.0002-2.tar.gz
+  dist_md5: 750a55c9415a0e977ac4860b501e9887
+  dist_size: 21412
+  manifest:
+    - Build.PL
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - README
+    - lib/App/MultiUser.pm
+    - lib/App/MultiUser/Account.pm
+    - lib/App/MultiUser/Base.pm
+    - lib/App/MultiUser/Cache.pm
+    - lib/App/MultiUser/DB.pm
+    - lib/App/MultiUser/DB/EntityTable.pm
+    - lib/App/MultiUser/DB/Handle.pm
+    - lib/App/MultiUser/DB/Migration.pm
+    - lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+    - lib/App/MultiUser/DB/Schema.pm
+    - lib/App/MultiUser/Entity.pm
+    - lib/App/MultiUser/Entity/Property.pm
+    - lib/App/MultiUser/Entity/Role.pm
+    - lib/App/MultiUser/Permission.pm
+    - lib/App/MultiUser/Privilege.pm
+    - lib/App/MultiUser/Privilege/Chain.pm
+    - lib/App/MultiUser/Property.pm
+    - lib/App/MultiUser/Role.pm
+    - lib/App/MultiUser/Role/Membership.pm
+    - lib/App/MultiUser/Test.pm
+    - lib/App/MultiUser/Version.pm
+    - t/000-MultiUser.t
+    - t/005-Handle.t
+    - t/010-Migration.t
+    - t/015-Test.t
+    - t/020-MySQL.t
+    - t/020-PGSQL.t
+    - t/020-SQLite.t
+    - t/030-Base.t
+    - t/040-Cache.t
+    - t/100-DB-EntityTable.t
+    - t/105-Entity.t
+    - t/110-Role-Membership.t
+    - t/120-Entity-Role.t
+    - t/125-Permission.t
+    - t/130-Privilege.t
+    - t/135-Entity.t
+    - t/140-Role.t
+    - t/145-Privilege-Chain.t
+    - t/155-Property.t
+    - t/160-Version.t
+    - t/165-Account.t
+    - t/170-Property.t
+    - t/lib/AppMultiUserTests/DBTests/000MultiUser.pm
+    - t/lib/AppMultiUserTests/DBTests/001DB.pm
+    - t/lib/AppMultiUserTests/DBTests/002Test.pm
+    - t/lib/AppMultiUserTests/DBTests/003Entities.pm
+  manifest_file_info:
+    - bytesize: 734
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1258520483
+      name: Build.PL
+    - bytesize: 1275
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1258520483
+      name: MANIFEST
+    - bytesize: 804
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1258520483
+      name: MANIFEST.SKIP
+    - bytesize: 2184
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1258520483
+      name: META.yml
+    - bytesize: 6091
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1258520483
+      name: README
+    - bytesize: 7426
+      file_mime_type: ~
+      line_count: ~
+      md5: a0b3908491a36f49d6f2bcf3bc6f6579
+      mtime: 1258520483
+      name: lib/App/MultiUser.pm
+    - bytesize: 293
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d1922c73c16d49d66ecaa9d07a0c3e8
+      mtime: 1258520483
+      name: lib/App/MultiUser/Account.pm
+    - bytesize: 224
+      file_mime_type: ~
+      line_count: ~
+      md5: f748ece7a8c5e7331eac8c243712d2d2
+      mtime: 1258520483
+      name: lib/App/MultiUser/Base.pm
+    - bytesize: 779
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d197d9e78d698c1058ecf979cffe622
+      mtime: 1258520483
+      name: lib/App/MultiUser/Cache.pm
+    - bytesize: 1105
+      file_mime_type: ~
+      line_count: ~
+      md5: 010710ad1b32b2fded0f75d841d6af2f
+      mtime: 1258520483
+      name: lib/App/MultiUser/DB.pm
+    - bytesize: 1151
+      file_mime_type: ~
+      line_count: ~
+      md5: b2e036a1b9f6f4afcfc064fc53c3f6e8
+      mtime: 1258520483
+      name: lib/App/MultiUser/DB/EntityTable.pm
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 7becfc122df8ad81125a015595c8dc28
+      mtime: 1258520483
+      name: lib/App/MultiUser/DB/Handle.pm
+    - bytesize: 1562
+      file_mime_type: ~
+      line_count: ~
+      md5: 42b9a938acd3af427e8c0568dc625190
+      mtime: 1258520483
+      name: lib/App/MultiUser/DB/Migration.pm
+    - bytesize: 9579
+      file_mime_type: ~
+      line_count: ~
+      md5: 48050dc8ceac0ca29e1758c8bce6ada4
+      mtime: 1258520483
+      name: lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+    - bytesize: 1619
+      file_mime_type: ~
+      line_count: ~
+      md5: 10836f129ec9c581d8a60ece57dd311e
+      mtime: 1258520483
+      name: lib/App/MultiUser/DB/Schema.pm
+    - bytesize: 551
+      file_mime_type: ~
+      line_count: ~
+      md5: 522d85ad1da52c56d2ff0c1d8f929657
+      mtime: 1258520483
+      name: lib/App/MultiUser/Entity.pm
+    - bytesize: 198
+      file_mime_type: ~
+      line_count: ~
+      md5: e27cf6c6869f6aee6aed2f9620dabaec
+      mtime: 1258520483
+      name: lib/App/MultiUser/Entity/Property.pm
+    - bytesize: 2607
+      file_mime_type: ~
+      line_count: ~
+      md5: c9a27c1996fb42f1c90fccc78d437660
+      mtime: 1258520483
+      name: lib/App/MultiUser/Entity/Role.pm
+    - bytesize: 154
+      file_mime_type: ~
+      line_count: ~
+      md5: eb91989af900d66593c9c451375d6260
+      mtime: 1258520483
+      name: lib/App/MultiUser/Permission.pm
+    - bytesize: 261
+      file_mime_type: ~
+      line_count: ~
+      md5: c6669142df114bbc4e06f85fcff276f1
+      mtime: 1258520483
+      name: lib/App/MultiUser/Privilege.pm
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: eb73d673d73027e5a7eb0fa26d296f0a
+      mtime: 1258520483
+      name: lib/App/MultiUser/Privilege/Chain.pm
+    - bytesize: 148
+      file_mime_type: ~
+      line_count: ~
+      md5: e78de45cc655acd5c441ffbf4f0594f9
+      mtime: 1258520483
+      name: lib/App/MultiUser/Property.pm
+    - bytesize: 247
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f0dc559a53efcb3c1e9d1b3eba7ca70
+      mtime: 1258520483
+      name: lib/App/MultiUser/Role.pm
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: 50e6fdd33da767cc85a0d1617d8f24d8
+      mtime: 1258520483
+      name: lib/App/MultiUser/Role/Membership.pm
+    - bytesize: 4640
+      file_mime_type: ~
+      line_count: ~
+      md5: 94c18d183edb6518e520a07ad5a238aa
+      mtime: 1258520483
+      name: lib/App/MultiUser/Test.pm
+    - bytesize: 183
+      file_mime_type: ~
+      line_count: ~
+      md5: 272ad551ae32c4a96f09e148415ce205
+      mtime: 1258520483
+      name: lib/App/MultiUser/Version.pm
+    - bytesize: 1230
+      file_mime_type: ~
+      line_count: ~
+      md5: 99f6180b0a6f135f0b230afb03773717
+      mtime: 1258520483
+      name: t/000-MultiUser.t
+    - bytesize: 775
+      file_mime_type: ~
+      line_count: ~
+      md5: 040df30d7cf705307dee015ffc068a7d
+      mtime: 1258520483
+      name: t/005-Handle.t
+    - bytesize: 660
+      file_mime_type: ~
+      line_count: ~
+      md5: 18e15ed4a0ade4ccf72b456e79b7015e
+      mtime: 1258520483
+      name: t/010-Migration.t
+    - bytesize: 2236
+      file_mime_type: ~
+      line_count: ~
+      md5: d47b95d41eaef66c25f0c4bce34ce5b3
+      mtime: 1258520483
+      name: t/015-Test.t
+    - bytesize: 220
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e120ef52cfcc84ab05ddd06bf255d4e
+      mtime: 1258520483
+      name: t/020-MySQL.t
+    - bytesize: 217
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d4cb46eed831b144aabc161099c27ed
+      mtime: 1258520483
+      name: t/020-PGSQL.t
+    - bytesize: 222
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b2991d679663c1d90f154202dd0b1f
+      mtime: 1258520483
+      name: t/020-SQLite.t
+    - bytesize: 475
+      file_mime_type: ~
+      line_count: ~
+      md5: 0aca0f6ea67bf6ad37a89fd32faf1f8f
+      mtime: 1258520483
+      name: t/030-Base.t
+    - bytesize: 1767
+      file_mime_type: ~
+      line_count: ~
+      md5: f7218b1e62f17835bed1953870678e29
+      mtime: 1258520483
+      name: t/040-Cache.t
+    - bytesize: 1789
+      file_mime_type: ~
+      line_count: ~
+      md5: 78c3fedc08af7dcddb92202aea485d2d
+      mtime: 1258520483
+      name: t/100-DB-EntityTable.t
+    - bytesize: 483
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e0e4ee4a1571421805c736ea03abdef
+      mtime: 1258520483
+      name: t/105-Entity.t
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cf73dc81e1a733c441d69c28069786c
+      mtime: 1258520483
+      name: t/110-Role-Membership.t
+    - bytesize: 2023
+      file_mime_type: ~
+      line_count: ~
+      md5: fe7ff7b6f7e6431f1465df9c4758a666
+      mtime: 1258520483
+      name: t/120-Entity-Role.t
+    - bytesize: 380
+      file_mime_type: ~
+      line_count: ~
+      md5: 789998108f232abe32797fb91f196df1
+      mtime: 1258520483
+      name: t/125-Permission.t
+    - bytesize: 377
+      file_mime_type: ~
+      line_count: ~
+      md5: 76a01650138a337bceabf0a50913d38f
+      mtime: 1258520483
+      name: t/130-Privilege.t
+    - bytesize: 602
+      file_mime_type: ~
+      line_count: ~
+      md5: dd9d6c26219e30c10a1667f9fbe3284f
+      mtime: 1258520483
+      name: t/135-Entity.t
+    - bytesize: 202
+      file_mime_type: ~
+      line_count: ~
+      md5: bcd036acc17ed40d1e6c414fba3a044a
+      mtime: 1258520483
+      name: t/140-Role.t
+    - bytesize: 397
+      file_mime_type: ~
+      line_count: ~
+      md5: b6afb42dff0d36bd6c6883fab36e609d
+      mtime: 1258520483
+      name: t/145-Privilege-Chain.t
+    - bytesize: 364
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ef72b6ef785408e3fc3b57289826f32
+      mtime: 1258520483
+      name: t/155-Property.t
+    - bytesize: 409
+      file_mime_type: ~
+      line_count: ~
+      md5: bab953e1f08fd40b8ab9beb042a02abd
+      mtime: 1258520483
+      name: t/160-Version.t
+    - bytesize: 364
+      file_mime_type: ~
+      line_count: ~
+      md5: 927144292defe1bc5d4e80ac8ca4e391
+      mtime: 1258520483
+      name: t/165-Account.t
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: a33bd8f4e7c2a7737287ebb7ea325fe6
+      mtime: 1258520483
+      name: t/170-Property.t
+    - bytesize: 336
+      file_mime_type: ~
+      line_count: ~
+      md5: ccc4d03fe17466dd5275e8934596a28b
+      mtime: 1258520483
+      name: t/lib/AppMultiUserTests/DBTests/000MultiUser.pm
+    - bytesize: 2008
+      file_mime_type: ~
+      line_count: ~
+      md5: f67f639d826e978b02e706a7d785df51
+      mtime: 1258520483
+      name: t/lib/AppMultiUserTests/DBTests/001DB.pm
+    - bytesize: 268
+      file_mime_type: ~
+      line_count: ~
+      md5: 002e2871cf8226a98184fca3bc427aa5
+      mtime: 1258520483
+      name: t/lib/AppMultiUserTests/DBTests/002Test.pm
+    - bytesize: 4375
+      file_mime_type: ~
+      line_count: ~
+      md5: 189f3e37722328f2f195c436eccf8e5d
+      mtime: 1258520483
+      name: t/lib/AppMultiUserTests/DBTests/003Entities.pm
+  module_info:
+    - bytesize: 7426
+      file_mime_type: ~
+      line_count: ~
+      md5: 54cb68a88fd6bc9a521518725775a017
+      module_name_from_file_guess: App::MultiUser
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser.pm
+      packages:
+        - App::MultiUser
+      primary_package: App::MultiUser
+      uses:
+        - strict
+        - warnings
+        - Moose
+        - MooseX::ClassAttribute
+        - Carp
+        - App::MultiUser::DB
+        - App::MultiUser::DB::Schema
+      version_info:
+        filename: blib/lib/App/MultiUser.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 0.0002
+    - bytesize: 293
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ef31eeb8093c9dafa29a2abf9f937f8
+      module_name_from_file_guess: App::MultiUser::Account
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Account.pm
+      packages:
+        - App::MultiUser::Account
+      primary_package: App::MultiUser::Account
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Account.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 224
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b8bd664b0e55357f62ad46f4b384853
+      module_name_from_file_guess: App::MultiUser::Base
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Base.pm
+      packages:
+        - App::MultiUser::Base
+      primary_package: App::MultiUser::Base
+      uses:
+        - strict
+        - warnings
+        - Moose::Role
+        - App::MultiUser
+      version_info:
+        filename: blib/lib/App/MultiUser/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 779
+      file_mime_type: ~
+      line_count: ~
+      md5: d9314206ff9773746542e0ee5c0a2216
+      module_name_from_file_guess: App::MultiUser::Cache
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Cache.pm
+      packages:
+        - App::MultiUser::Cache
+      primary_package: App::MultiUser::Cache
+      uses:
+        - strict
+        - warnings
+        - Moose
+        - MooseX::ClassAttribute
+        - base
+      version_info:
+        filename: blib/lib/App/MultiUser/Cache.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1105
+      file_mime_type: ~
+      line_count: ~
+      md5: c45d917f01a996a032357529afc78760
+      module_name_from_file_guess: App::MultiUser::DB
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/DB.pm
+      packages:
+        - App::MultiUser::DB
+      primary_package: App::MultiUser::DB
+      uses:
+        - strict
+        - warnings
+        - Moose
+        - App::MultiUser
+        - App::MultiUser::DB::Migration
+        - App::MultiUser::DB::Handle
+        - DBI
+      version_info:
+        filename: blib/lib/App/MultiUser/DB.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1151
+      file_mime_type: ~
+      line_count: ~
+      md5: b41a9ba9e074669cf0f0bbe756561d96
+      module_name_from_file_guess: App::MultiUser::DB::EntityTable
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/DB/EntityTable.pm
+      packages:
+        - App::MultiUser::DB::EntityTable
+      primary_package: App::MultiUser::DB::EntityTable
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/DB/EntityTable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 416969c538f33e8db255d06ce00fbb84
+      module_name_from_file_guess: App::MultiUser::DB::Handle
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/DB/Handle.pm
+      packages:
+        - App::MultiUser::DB::Handle
+      primary_package: App::MultiUser::DB::Handle
+      uses:
+        - strict
+        - warnings
+        - MooseX::ClassAttribute
+        - Moose
+      version_info:
+        filename: blib/lib/App/MultiUser/DB/Handle.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1562
+      file_mime_type: ~
+      line_count: ~
+      md5: af54f27c99a9ac4abd04d07e8cad4e12
+      module_name_from_file_guess: App::MultiUser::DB::Migration
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/DB/Migration.pm
+      packages:
+        - App::MultiUser::DB::Migration
+      primary_package: App::MultiUser::DB::Migration
+      uses:
+        - strict
+        - warnings
+        - MooseX::ClassAttribute
+        - App::MultiUser
+        - Module::Pluggable
+        - base
+      version_info:
+        filename: blib/lib/App/MultiUser/DB/Migration.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9579
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b9567f5cf72e7520a47e128265dcd8b
+      module_name_from_file_guess: App::MultiUser::DB::Migration::000InitialSchema
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+      packages:
+        - App::MultiUser::DB::Migration::000InitialSchema
+      primary_package: App::MultiUser::DB::Migration::000InitialSchema
+      uses:
+        - strict
+        - warnings
+        - Moose
+        - App::MultiUser
+        - App::MultiUser::DB::Migration
+      version_info:
+        filename: blib/lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1619
+      file_mime_type: ~
+      line_count: ~
+      md5: cdf407ed9454f1fb73f094546a47fe4d
+      module_name_from_file_guess: App::MultiUser::DB::Schema
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/DB/Schema.pm
+      packages:
+        - App::MultiUser::DB::Schema
+      primary_package: App::MultiUser::DB::Schema
+      uses:
+        - strict
+        - warnings
+        - Fey
+        - Fey::Loader
+        - Fey::ORM::Schema
+        - Fey::DBIManager
+        - Fey::DBIManager::Source
+        - App::MultiUser::DB::EntityTable
+      version_info:
+        filename: blib/lib/App/MultiUser/DB/Schema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 551
+      file_mime_type: ~
+      line_count: ~
+      md5: 1777fe18097b7e32f4bda79fc0467b33
+      module_name_from_file_guess: App::MultiUser::Entity
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Entity.pm
+      packages:
+        - App::MultiUser::Entity
+      primary_package: App::MultiUser::Entity
+      uses:
+        - strict
+        - warnings
+        - Fey::ORM::Table
+        - App::MultiUser
+        - Moose
+      version_info:
+        filename: blib/lib/App/MultiUser/Entity.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 198
+      file_mime_type: ~
+      line_count: ~
+      md5: c3630bf5a0df69565e40e5e0d938f84c
+      module_name_from_file_guess: App::MultiUser::Entity::Property
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Entity/Property.pm
+      packages:
+        - App::MultiUser::Entity::Property
+      primary_package: App::MultiUser::Entity::Property
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Entity/Property.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2607
+      file_mime_type: ~
+      line_count: ~
+      md5: d694950795b5a2e282f9e1b69b32050a
+      module_name_from_file_guess: App::MultiUser::Entity::Role
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Entity/Role.pm
+      packages:
+        - App::MultiUser::Entity::Role
+      primary_package: App::MultiUser::Entity::Role
+      uses:
+        - strict
+        - warnings
+        - Fey::DBIManager::Source
+        - App::MultiUser
+        - App::MultiUser::Entity
+        - App::MultiUser::Entity::Property
+        - Moose::Role
+        - Carp
+      version_info:
+        filename: blib/lib/App/MultiUser/Entity/Role.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 154
+      file_mime_type: ~
+      line_count: ~
+      md5: ca02ac6d9a6a9ad09b46d56166e63a92
+      module_name_from_file_guess: App::MultiUser::Permission
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Permission.pm
+      packages:
+        - App::MultiUser::Permission
+      primary_package: App::MultiUser::Permission
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Permission.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 261
+      file_mime_type: ~
+      line_count: ~
+      md5: 15c24ca1699c7d172052415b31891f1f
+      module_name_from_file_guess: App::MultiUser::Privilege
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Privilege.pm
+      packages:
+        - App::MultiUser::Privilege
+      primary_package: App::MultiUser::Privilege
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Privilege.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: 6957a7c030883e4b4af0f9accd61905b
+      module_name_from_file_guess: App::MultiUser::Privilege::Chain
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Privilege/Chain.pm
+      packages:
+        - App::MultiUser::Privilege::Chain
+      primary_package: App::MultiUser::Privilege::Chain
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Privilege/Chain.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 148
+      file_mime_type: ~
+      line_count: ~
+      md5: 6544a215046bd22e0d86d210f6299dbd
+      module_name_from_file_guess: App::MultiUser::Property
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Property.pm
+      packages:
+        - App::MultiUser::Property
+      primary_package: App::MultiUser::Property
+      uses:
+        - strict
+        - warnings
+        - Fey::ORM::Table
+        - App::MultiUser
+      version_info:
+        filename: blib/lib/App/MultiUser/Property.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 247
+      file_mime_type: ~
+      line_count: ~
+      md5: 853aade0be94aa5d14b387a0ad4348b0
+      module_name_from_file_guess: App::MultiUser::Role
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Role.pm
+      packages:
+        - App::MultiUser::Role
+      primary_package: App::MultiUser::Role
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Role.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: cd63516eb42385a2d7cb215bddbde62f
+      module_name_from_file_guess: App::MultiUser::Role::Membership
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Role/Membership.pm
+      packages:
+        - App::MultiUser::Role::Membership
+      primary_package: App::MultiUser::Role::Membership
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Role/Membership.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4640
+      file_mime_type: ~
+      line_count: ~
+      md5: a8179d3718987666b3a4222b4ceca55b
+      module_name_from_file_guess: App::MultiUser::Test
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Test.pm
+      packages:
+        - App::MultiUser::Test
+      primary_package: App::MultiUser::Test
+      uses:
+        - strict
+        - warnings
+        - Moose
+        - MooseX::ClassAttribute
+        - Test::Database
+        - App::MultiUser
+        - App::MultiUser::DB
+        - Carp
+        - Test::More
+        - Data::Dumper
+        - Module::Pluggable
+      version_info:
+        filename: blib/lib/App/MultiUser/Test.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 183
+      file_mime_type: ~
+      line_count: ~
+      md5: f631b8550337701b2bb742e3bd99fe84
+      module_name_from_file_guess: App::MultiUser::Version
+      mtime: 1270154488
+      name: blib/lib/App/MultiUser/Version.pm
+      packages:
+        - App::MultiUser::Version
+      primary_package: App::MultiUser::Version
+      uses:
+        - strict
+        - warnings
+        - App::MultiUser
+        - Fey::ORM::Table
+      version_info:
+        filename: blib/lib/App/MultiUser/Version.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/App/MultiUser.pm
+    - blib/lib/App/MultiUser/Account.pm
+    - blib/lib/App/MultiUser/Base.pm
+    - blib/lib/App/MultiUser/Cache.pm
+    - blib/lib/App/MultiUser/DB.pm
+    - blib/lib/App/MultiUser/DB/EntityTable.pm
+    - blib/lib/App/MultiUser/DB/Handle.pm
+    - blib/lib/App/MultiUser/DB/Migration.pm
+    - blib/lib/App/MultiUser/DB/Migration/000InitialSchema.pm
+    - blib/lib/App/MultiUser/DB/Schema.pm
+    - blib/lib/App/MultiUser/Entity.pm
+    - blib/lib/App/MultiUser/Entity/Property.pm
+    - blib/lib/App/MultiUser/Entity/Role.pm
+    - blib/lib/App/MultiUser/Permission.pm
+    - blib/lib/App/MultiUser/Privilege.pm
+    - blib/lib/App/MultiUser/Privilege/Chain.pm
+    - blib/lib/App/MultiUser/Property.pm
+    - blib/lib/App/MultiUser/Role.pm
+    - blib/lib/App/MultiUser/Role/Membership.pm
+    - blib/lib/App/MultiUser/Test.pm
+    - blib/lib/App/MultiUser/Version.pm
+  test_info:
+    - bytesize: 202
+      file_mime_type: ~
+      line_count: ~
+      md5: bcd036acc17ed40d1e6c414fba3a044a
+      mtime: 1258520483
+      name: t/140-Role.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 397
+      file_mime_type: ~
+      line_count: ~
+      md5: b6afb42dff0d36bd6c6883fab36e609d
+      mtime: 1258520483
+      name: t/145-Privilege-Chain.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 2236
+      file_mime_type: ~
+      line_count: ~
+      md5: d47b95d41eaef66c25f0c4bce34ce5b3
+      mtime: 1258520483
+      name: t/015-Test.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Fey
+        - Fey::Loader
+        - Test::Database
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cf73dc81e1a733c441d69c28069786c
+      mtime: 1258520483
+      name: t/110-Role-Membership.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 775
+      file_mime_type: ~
+      line_count: ~
+      md5: 040df30d7cf705307dee015ffc068a7d
+      mtime: 1258520483
+      name: t/005-Handle.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 380
+      file_mime_type: ~
+      line_count: ~
+      md5: 789998108f232abe32797fb91f196df1
+      mtime: 1258520483
+      name: t/125-Permission.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 222
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b2991d679663c1d90f154202dd0b1f
+      mtime: 1258520483
+      name: t/020-SQLite.t
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - App::MultiUser::Test
+    - bytesize: 2023
+      file_mime_type: ~
+      line_count: ~
+      md5: fe7ff7b6f7e6431f1465df9c4758a666
+      mtime: 1258520483
+      name: t/120-Entity-Role.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 409
+      file_mime_type: ~
+      line_count: ~
+      md5: bab953e1f08fd40b8ab9beb042a02abd
+      mtime: 1258520483
+      name: t/160-Version.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 220
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e120ef52cfcc84ab05ddd06bf255d4e
+      mtime: 1258520483
+      name: t/020-MySQL.t
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - App::MultiUser::Test
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: a33bd8f4e7c2a7737287ebb7ea325fe6
+      mtime: 1258520483
+      name: t/170-Property.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 364
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ef72b6ef785408e3fc3b57289826f32
+      mtime: 1258520483
+      name: t/155-Property.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 483
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e0e4ee4a1571421805c736ea03abdef
+      mtime: 1258520483
+      name: t/105-Entity.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+        - App::MultiUser::DB::EntityTable
+    - bytesize: 377
+      file_mime_type: ~
+      line_count: ~
+      md5: 76a01650138a337bceabf0a50913d38f
+      mtime: 1258520483
+      name: t/130-Privilege.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 364
+      file_mime_type: ~
+      line_count: ~
+      md5: 927144292defe1bc5d4e80ac8ca4e391
+      mtime: 1258520483
+      name: t/165-Account.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 602
+      file_mime_type: ~
+      line_count: ~
+      md5: dd9d6c26219e30c10a1667f9fbe3284f
+      mtime: 1258520483
+      name: t/135-Entity.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 1789
+      file_mime_type: ~
+      line_count: ~
+      md5: 78c3fedc08af7dcddb92202aea485d2d
+      mtime: 1258520483
+      name: t/100-DB-EntityTable.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser::Test
+    - bytesize: 660
+      file_mime_type: ~
+      line_count: ~
+      md5: 18e15ed4a0ade4ccf72b456e79b7015e
+      mtime: 1258520483
+      name: t/010-Migration.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1230
+      file_mime_type: ~
+      line_count: ~
+      md5: 99f6180b0a6f135f0b230afb03773717
+      mtime: 1258520483
+      name: t/000-MultiUser.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - App::MultiUser::Test
+        - File::Temp
+        - App::MultiUser
+    - bytesize: 475
+      file_mime_type: ~
+      line_count: ~
+      md5: 0aca0f6ea67bf6ad37a89fd32faf1f8f
+      mtime: 1258520483
+      name: t/030-Base.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - App::MultiUser
+        - App::MultiUser::Test
+        - Moose
+    - bytesize: 1767
+      file_mime_type: ~
+      line_count: ~
+      md5: f7218b1e62f17835bed1953870678e29
+      mtime: 1258520483
+      name: t/040-Cache.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 217
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d4cb46eed831b144aabc161099c27ed
+      mtime: 1258520483
+      name: t/020-PGSQL.t
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - App::MultiUser::Test
+  tests:
+    - t/140-Role.t
+    - t/145-Privilege-Chain.t
+    - t/015-Test.t
+    - t/110-Role-Membership.t
+    - t/005-Handle.t
+    - t/125-Permission.t
+    - t/020-SQLite.t
+    - t/120-Entity-Role.t
+    - t/160-Version.t
+    - t/020-MySQL.t
+    - t/170-Property.t
+    - t/155-Property.t
+    - t/105-Entity.t
+    - t/130-Privilege.t
+    - t/165-Account.t
+    - t/135-Entity.t
+    - t/100-DB-EntityTable.t
+    - t/010-Migration.t
+    - t/000-MultiUser.t
+    - t/030-Base.t
+    - t/040-Cache.t
+    - t/020-PGSQL.t
+  unpack_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.hV3b
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 1055
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270154494
+  examine_start_time: 1270154483
+  examine_time: 11
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1029
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 1055
+  ppid: 1029
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/0AlPIU22Ym
+  run_end_time: 1270154494
+  run_start_time: 1270154483
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/0AlPIU22Ym
+  uuid: 1F94478C-3D73-11DF-9C68-EB68E8F9184E
+  worker_class: MyCPAN::Indexer::Worker

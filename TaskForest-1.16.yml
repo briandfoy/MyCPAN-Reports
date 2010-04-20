@@ -1,0 +1,3064 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: 'Simple, powerful task scheduler'
+    author:
+      - Aijaz A. Ansari (v-cpan@enoor.com)
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.48
+    license: unknown
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: TaskForest
+    no_index:
+      directory:
+        - t
+        - inc
+    requires:
+      Config::General: 2.38
+      DateTime: 0
+      HTTP::Daemon: 5.818
+      HTTP::Request: 5.818
+      HTTP::Response: 5.82
+      HTTP::Status: 5.817
+      Log::Log4perl: 1.16
+      Test::Simple: 0.44
+    version: 1.16
+  blib:
+    - blib/lib/TaskForest.pm
+    - blib/lib/TaskForest/ErrLogger.pm
+    - blib/lib/TaskForest/Family.pm
+    - blib/lib/TaskForest/Job.pm
+    - blib/lib/TaskForest/LogDir.pm
+    - blib/lib/TaskForest/Logs.pm
+    - blib/lib/TaskForest/Mark.pm
+    - blib/lib/TaskForest/Options.pm
+    - blib/lib/TaskForest/OutLogger.pm
+    - blib/lib/TaskForest/REST.pm
+    - blib/lib/TaskForest/REST/Families.pm
+    - blib/lib/TaskForest/REST/FamilyList.pm
+    - blib/lib/TaskForest/REST/JobList.pm
+    - blib/lib/TaskForest/REST/Jobs.pm
+    - blib/lib/TaskForest/REST/PassThrough.pm
+    - blib/lib/TaskForest/REST/Request.pm
+    - blib/lib/TaskForest/REST/Status.pm
+    - blib/lib/TaskForest/Rerun.pm
+    - blib/lib/TaskForest/StringHandle.pm
+    - blib/lib/TaskForest/StringHandleTier.pm
+    - blib/lib/TaskForest/Template.pm
+    - blib/lib/TaskForest/Test.pm
+    - blib/lib/TaskForest/TimeDependency.pm
+    - blib/man3/TaskForest.3
+    - blib/man3/TaskForest::ErrLogger.3
+    - blib/man3/TaskForest::Family.3
+    - blib/man3/TaskForest::Job.3
+    - blib/man3/TaskForest::LogDir.3
+    - blib/man3/TaskForest::Logs.3
+    - blib/man3/TaskForest::Mark.3
+    - blib/man3/TaskForest::Options.3
+    - blib/man3/TaskForest::OutLogger.3
+    - blib/man3/TaskForest::Rerun.3
+    - blib/man3/TaskForest::StringHandle.3
+    - blib/man3/TaskForest::StringHandleTier.3
+    - blib/man3/TaskForest::TimeDependency.3
+    - blib/script/gen_passwd
+    - blib/script/mark
+    - blib/script/rerun
+    - blib/script/run
+    - blib/script/status
+    - blib/script/taskforest
+    - blib/script/taskforestd
+    - blib/script/taskforestdssl
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Config::General 2.38 not found.
+    Warning: prerequisite DateTime 0 not found.
+    Warning: prerequisite HTTP::Daemon 5.818 not found.
+    Warning: prerequisite HTTP::Request 5.818 not found.
+    Warning: prerequisite HTTP::Response 5.82 not found.
+    Warning: prerequisite HTTP::Status 5.817 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for TaskForest
+  build_output: |
+    cp lib/TaskForest/StringHandleTier.pm blib/lib/TaskForest/StringHandleTier.pm
+    cp lib/TaskForest/Mark.pm blib/lib/TaskForest/Mark.pm
+    cp lib/TaskForest/Logs.pm blib/lib/TaskForest/Logs.pm
+    cp lib/TaskForest/REST/PassThrough.pm blib/lib/TaskForest/REST/PassThrough.pm
+    cp lib/TaskForest/Rerun.pm blib/lib/TaskForest/Rerun.pm
+    cp lib/TaskForest/OutLogger.pm blib/lib/TaskForest/OutLogger.pm
+    cp lib/TaskForest/Test.pm blib/lib/TaskForest/Test.pm
+    cp lib/TaskForest/Options.pm blib/lib/TaskForest/Options.pm
+    cp lib/TaskForest/ErrLogger.pm blib/lib/TaskForest/ErrLogger.pm
+    cp lib/TaskForest/Family.pm blib/lib/TaskForest/Family.pm
+    cp lib/TaskForest/LogDir.pm blib/lib/TaskForest/LogDir.pm
+    cp lib/TaskForest/REST/Request.pm blib/lib/TaskForest/REST/Request.pm
+    cp lib/TaskForest/REST/JobList.pm blib/lib/TaskForest/REST/JobList.pm
+    cp lib/TaskForest.pm blib/lib/TaskForest.pm
+    cp lib/TaskForest/Job.pm blib/lib/TaskForest/Job.pm
+    cp lib/TaskForest/StringHandle.pm blib/lib/TaskForest/StringHandle.pm
+    cp lib/TaskForest/REST/Status.pm blib/lib/TaskForest/REST/Status.pm
+    cp lib/TaskForest/Template.pm blib/lib/TaskForest/Template.pm
+    cp lib/TaskForest/REST/Families.pm blib/lib/TaskForest/REST/Families.pm
+    cp lib/TaskForest/REST/Jobs.pm blib/lib/TaskForest/REST/Jobs.pm
+    cp lib/TaskForest/REST/FamilyList.pm blib/lib/TaskForest/REST/FamilyList.pm
+    cp lib/TaskForest/REST.pm blib/lib/TaskForest/REST.pm
+    cp lib/TaskForest/TimeDependency.pm blib/lib/TaskForest/TimeDependency.pm
+    cp status blib/script/status
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/status
+    cp rerun blib/script/rerun
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/rerun
+    cp taskforestdssl blib/script/taskforestdssl
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/taskforestdssl
+    cp mark blib/script/mark
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/mark
+    cp run blib/script/run
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/run
+    cp taskforest blib/script/taskforest
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/taskforest
+    cp taskforestd blib/script/taskforestd
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/taskforestd
+    cp gen_passwd blib/script/gen_passwd
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/gen_passwd
+    Manifying blib/man3/TaskForest::StringHandleTier.3
+    Manifying blib/man3/TaskForest::ErrLogger.3
+    Manifying blib/man3/TaskForest::Mark.3
+    Manifying blib/man3/TaskForest::Family.3
+    Manifying blib/man3/TaskForest::LogDir.3
+    Manifying blib/man3/TaskForest.3
+    Manifying blib/man3/TaskForest::Job.3
+    Manifying blib/man3/TaskForest::StringHandle.3
+    Manifying blib/man3/TaskForest::Logs.3
+    Manifying blib/man3/TaskForest::OutLogger.3
+    Manifying blib/man3/TaskForest::Rerun.3
+    Manifying blib/man3/TaskForest::Options.3
+    Manifying blib/man3/TaskForest::TimeDependency.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88/TaskForest-1.16/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88/TaskForest-1.16
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88/TaskForest-1.16/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88/TaskForest-1.16/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: ENOOR
+  dist_basename: TaskForest-1.16.tar.gz
+  dist_date: 1235003829
+  dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88/TaskForest-1.16
+  dist_extract_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88/TaskForest-1.16
+  dist_file: /home/brian/CPAN/authors/id/E/EN/ENOOR/TaskForest/TaskForest-1.16.tar.gz
+  dist_md5: cb811e96bda64008b77fbdba7e79c042
+  dist_size: 88042
+  manifest:
+    - Changes
+    - INSTALL
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - Todo
+    - gen_passwd
+    - htdocs/css/styles.css
+    - htdocs/families.html
+    - htdocs/families2.html
+    - htdocs/familyList.html
+    - htdocs/familyList2.html
+    - htdocs/favicon.ico
+    - htdocs/foot.html
+    - htdocs/head.html
+    - htdocs/index.html
+    - htdocs/jobList.html
+    - htdocs/jobList2.html
+    - htdocs/jobs.html
+    - htdocs/jobs2.html
+    - htdocs/logs.html
+    - htdocs/logs2.html
+    - htdocs/request.html
+    - htdocs/request2.html
+    - htdocs/rest/1.0/families.html
+    - htdocs/rest/1.0/families2.html
+    - htdocs/rest/1.0/familyList.html
+    - htdocs/rest/1.0/familyList2.html
+    - htdocs/rest/1.0/foot.html
+    - htdocs/rest/1.0/head.html
+    - htdocs/rest/1.0/jobList.html
+    - htdocs/rest/1.0/jobList2.html
+    - htdocs/rest/1.0/jobs.html
+    - htdocs/rest/1.0/jobs2.html
+    - htdocs/rest/1.0/logs.html
+    - htdocs/rest/1.0/logs2.html
+    - htdocs/rest/1.0/request.html
+    - htdocs/rest/1.0/request2.html
+    - htdocs/rest/1.0/status.html
+    - htdocs/rest/1.0/status2.html
+    - htdocs/status.html
+    - htdocs/status2.html
+    - lib/TaskForest.pm
+    - lib/TaskForest/ErrLogger.pm
+    - lib/TaskForest/Family.pm
+    - lib/TaskForest/Job.pm
+    - lib/TaskForest/LogDir.pm
+    - lib/TaskForest/Logs.pm
+    - lib/TaskForest/Mark.pm
+    - lib/TaskForest/Options.pm
+    - lib/TaskForest/OutLogger.pm
+    - lib/TaskForest/REST.pm
+    - lib/TaskForest/REST/Families.pm
+    - lib/TaskForest/REST/FamilyList.pm
+    - lib/TaskForest/REST/JobList.pm
+    - lib/TaskForest/REST/Jobs.pm
+    - lib/TaskForest/REST/PassThrough.pm
+    - lib/TaskForest/REST/Request.pm
+    - lib/TaskForest/REST/Status.pm
+    - lib/TaskForest/Rerun.pm
+    - lib/TaskForest/StringHandle.pm
+    - lib/TaskForest/StringHandleTier.pm
+    - lib/TaskForest/Template.pm
+    - lib/TaskForest/Test.pm
+    - lib/TaskForest/TimeDependency.pm
+    - mark
+    - rerun
+    - run
+    - status
+    - t/001_DateTime.t
+    - t/002_TimeDependency.t
+    - t/003_Options.t
+    - t/004_LogDir.t
+    - t/005_Job.t
+    - t/0065_StringHandle.t
+    - t/006_Family.t
+    - t/007_TaskForest.t
+    - t/008_Repeat.t
+    - t/009_Display.t
+    - t/010_LongRunningJobs.t
+    - t/011_NotEnoughTime.t
+    - t/012_Collapse.t
+    - t/013_Rerun.t
+    - t/014_Mark.t
+    - t/015_Syntax.t
+    - t/016_Cascade.t
+    - t/017_IgnoreRegex.t
+    - t/018TaskForestDaemon.t
+    - t/019_FamilyRemoval.t
+    - t/family_archive/CASCADE
+    - t/family_archive/COLLAPSE
+    - t/family_archive/IGNORE01
+    - t/family_archive/IGNORE02
+    - t/family_archive/IGNORE03.bak
+    - t/family_archive/IGNORE04_HASH
+    - t/family_archive/IGNORE05_TILDE
+    - t/family_archive/LONG_RUNNING
+    - t/family_archive/NOT_ENOUGH_TIME
+    - t/family_archive/REPEAT
+    - t/family_archive/SIMPLE
+    - t/family_archive/SMALL_CASCADE
+    - t/family_archive/SYNTAX_1
+    - t/family_archive/SYNTAX_2
+    - t/family_archive/SYNTAX_3
+    - t/family_archive/SYNTAX_4
+    - t/family_archive/SYNTAX_5
+    - t/family_archive/SYNTAX_6
+    - t/jobs/J1
+    - t/jobs/J10
+    - t/jobs/J11
+    - t/jobs/J12
+    - t/jobs/J13
+    - t/jobs/J2
+    - t/jobs/J3
+    - t/jobs/J4
+    - t/jobs/J5
+    - t/jobs/J6
+    - t/jobs/J7
+    - t/jobs/J8
+    - t/jobs/J9
+    - t/jobs/JLongRunning
+    - t/logs/empty_file
+    - taskforest
+    - taskforest.cfg
+    - taskforest.test.cfg
+    - taskforestd
+    - taskforestd.cfg
+    - taskforestd.test.cfg
+    - taskforestdssl
+  manifest_file_info:
+    - bytesize: 7326
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1234998638
+      name: Changes
+    - bytesize: 245
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1210728244
+      name: INSTALL
+    - bytesize: 5333
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1210728244
+      name: LICENSE
+    - bytesize: 2814
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1235003669
+      name: MANIFEST
+    - bytesize: 703
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1235003669
+      name: META.yml
+    - bytesize: 1130
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1234799789
+      name: Makefile.PL
+    - bytesize: 61430
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1235002856
+      name: README
+    - bytesize: 284
+      file_mime_type: ~
+      line_count: ~
+      md5: bc97e12414b8ea00107c66aa552029ae
+      mtime: 1210728244
+      name: Todo
+    - bytesize: 585
+      file_mime_type: ~
+      line_count: ~
+      md5: 945bd87cb2423d2c85dc6404b66b14d4
+      mtime: 1234131794
+      name: gen_passwd
+    - bytesize: 2060
+      file_mime_type: ~
+      line_count: ~
+      md5: b14c26364924d30a4f6efe530303218e
+      mtime: 1234270204
+      name: htdocs/css/styles.css
+    - bytesize: 56
+      file_mime_type: ~
+      line_count: ~
+      md5: 46da7cd9203b74326d875bd0bd261a06
+      mtime: 1234233805
+      name: htdocs/families.html
+    - bytesize: 527
+      file_mime_type: ~
+      line_count: ~
+      md5: 84496078cd8e316c6aaaec8c3e01a844
+      mtime: 1234236776
+      name: htdocs/families2.html
+    - bytesize: 60
+      file_mime_type: ~
+      line_count: ~
+      md5: 92e65f04d6b5bdd138a523e419ef5dee
+      mtime: 1234233805
+      name: htdocs/familyList.html
+    - bytesize: 278
+      file_mime_type: ~
+      line_count: ~
+      md5: f7e8c79840731987223dc03e9198f2f1
+      mtime: 1234235260
+      name: htdocs/familyList2.html
+    - bytesize: 318
+      file_mime_type: ~
+      line_count: ~
+      md5: d24b01832a8c13b598df4c1a98291d73
+      mtime: 1234143487
+      name: htdocs/favicon.ico
+    - bytesize: 49
+      file_mime_type: ~
+      line_count: ~
+      md5: 254262360bd7d600a95c3034b6503fcd
+      mtime: 1234233805
+      name: htdocs/foot.html
+    - bytesize: 2187
+      file_mime_type: ~
+      line_count: ~
+      md5: 78e6deca6bb8e040fe03644bade38fcc
+      mtime: 1234240537
+      name: htdocs/head.html
+    - bytesize: 138
+      file_mime_type: ~
+      line_count: ~
+      md5: c57fbd41e82f80e66b05593566b1531a
+      mtime: 1234233805
+      name: htdocs/index.html
+    - bytesize: 54
+      file_mime_type: ~
+      line_count: ~
+      md5: 04049acbe37f5efcc02b068c615c1393
+      mtime: 1234233805
+      name: htdocs/jobList.html
+    - bytesize: 265
+      file_mime_type: ~
+      line_count: ~
+      md5: 2daf24ec057820efdedcdd8e10f7af98
+      mtime: 1234235273
+      name: htdocs/jobList2.html
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 15fb1606e96bd13301e95eb330f8dcd2
+      mtime: 1234233805
+      name: htdocs/jobs.html
+    - bytesize: 508
+      file_mime_type: ~
+      line_count: ~
+      md5: 4dd33745bdff1c09a086105ad59fc92a
+      mtime: 1234236774
+      name: htdocs/jobs2.html
+    - bytesize: 50
+      file_mime_type: ~
+      line_count: ~
+      md5: f9b695090789045c295f2ee55f11c843
+      mtime: 1234240370
+      name: htdocs/logs.html
+    - bytesize: 732
+      file_mime_type: ~
+      line_count: ~
+      md5: d39bcf20b3600c35bb410cd3c0024395
+      mtime: 1234671263
+      name: htdocs/logs2.html
+    - bytesize: 54
+      file_mime_type: ~
+      line_count: ~
+      md5: 2099078290530f492bf3beaf27d56f3b
+      mtime: 1234233805
+      name: htdocs/request.html
+    - bytesize: 254
+      file_mime_type: ~
+      line_count: ~
+      md5: e9ab6a2389ba9a2fe28d443052ebc2a4
+      mtime: 1234274141
+      name: htdocs/request2.html
+    - bytesize: 65
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d079c736c358f177e07cf05d1c385fe
+      mtime: 1234147241
+      name: htdocs/rest/1.0/families.html
+    - bytesize: 555
+      file_mime_type: ~
+      line_count: ~
+      md5: b1d87e5ee54df77552009556426d465d
+      mtime: 1234147241
+      name: htdocs/rest/1.0/families2.html
+    - bytesize: 69
+      file_mime_type: ~
+      line_count: ~
+      md5: bf87cffdf37ce1ca4eb10b78c893531c
+      mtime: 1234147259
+      name: htdocs/rest/1.0/familyList.html
+    - bytesize: 267
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dacdd1347c80dea7e747b518bfef3da
+      mtime: 1234147241
+      name: htdocs/rest/1.0/familyList2.html
+    - bytesize: 17
+      file_mime_type: ~
+      line_count: ~
+      md5: b65cfb9854c988f102a49531ebef6e73
+      mtime: 1234147241
+      name: htdocs/rest/1.0/foot.html
+    - bytesize: 2016
+      file_mime_type: ~
+      line_count: ~
+      md5: 67c3f6ea35aa5e3459657dc15c812498
+      mtime: 1234673031
+      name: htdocs/rest/1.0/head.html
+    - bytesize: 63
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cd65c681e7eda3e86074042f3d21ef3
+      mtime: 1234147241
+      name: htdocs/rest/1.0/jobList.html
+    - bytesize: 257
+      file_mime_type: ~
+      line_count: ~
+      md5: d153840a9d88522802ac5d034f5fa677
+      mtime: 1234147241
+      name: htdocs/rest/1.0/jobList2.html
+    - bytesize: 57
+      file_mime_type: ~
+      line_count: ~
+      md5: 944470548d37dcfcc2fa164916948908
+      mtime: 1234147241
+      name: htdocs/rest/1.0/jobs.html
+    - bytesize: 536
+      file_mime_type: ~
+      line_count: ~
+      md5: a711da907d68e07f060c2ce5d68127ea
+      mtime: 1234147241
+      name: htdocs/rest/1.0/jobs2.html
+    - bytesize: 58
+      file_mime_type: ~
+      line_count: ~
+      md5: 202e7ee40bf1603cb1511ee529de565e
+      mtime: 1234672964
+      name: htdocs/rest/1.0/logs.html
+    - bytesize: 648
+      file_mime_type: ~
+      line_count: ~
+      md5: ba8d92ccedee9cda05c6ec51f4284310
+      mtime: 1234673911
+      name: htdocs/rest/1.0/logs2.html
+    - bytesize: 63
+      file_mime_type: ~
+      line_count: ~
+      md5: 59a8e1321feb4c84e6efeea3bdc97432
+      mtime: 1234147241
+      name: htdocs/rest/1.0/request.html
+    - bytesize: 144
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c11f58b8dbf6f41eff2142d0aae6e6b
+      mtime: 1234147241
+      name: htdocs/rest/1.0/request2.html
+    - bytesize: 61
+      file_mime_type: ~
+      line_count: ~
+      md5: a896bd4765985c0815a550138518d7f5
+      mtime: 1234147241
+      name: htdocs/rest/1.0/status.html
+    - bytesize: 700
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f6b9671e85d04e3fad142c18f37f7f2
+      mtime: 1234673539
+      name: htdocs/rest/1.0/status2.html
+    - bytesize: 52
+      file_mime_type: ~
+      line_count: ~
+      md5: 1605617c1733af2473fef908669d812b
+      mtime: 1234233805
+      name: htdocs/status.html
+    - bytesize: 789
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c7463f29b4213f42e44d5768ba1e874
+      mtime: 1234671267
+      name: htdocs/status2.html
+    - bytesize: 74868
+      file_mime_type: ~
+      line_count: ~
+      md5: cf8eb3c1772a475f93edbfbb2ceee6a4
+      mtime: 1235002677
+      name: lib/TaskForest.pm
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: bcefefd4ce98c01175dd6659650b2abc
+      mtime: 1235002677
+      name: lib/TaskForest/ErrLogger.pm
+    - bytesize: 35231
+      file_mime_type: ~
+      line_count: ~
+      md5: 1453c8d7c2ad33c5c951590324fb0600
+      mtime: 1235002677
+      name: lib/TaskForest/Family.pm
+    - bytesize: 4406
+      file_mime_type: ~
+      line_count: ~
+      md5: ef9209246c66158f0ec3b47ff6d76a45
+      mtime: 1235002677
+      name: lib/TaskForest/Job.pm
+    - bytesize: 2285
+      file_mime_type: ~
+      line_count: ~
+      md5: f86c74b8eacb43de17f5b37e35c83534
+      mtime: 1235002677
+      name: lib/TaskForest/LogDir.pm
+    - bytesize: 3983
+      file_mime_type: ~
+      line_count: ~
+      md5: 78f04b628cb64987d01e03095ba638a3
+      mtime: 1235002677
+      name: lib/TaskForest/Logs.pm
+    - bytesize: 3399
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f7216b068ed11da906910cd8e751908
+      mtime: 1235002677
+      name: lib/TaskForest/Mark.pm
+    - bytesize: 12418
+      file_mime_type: ~
+      line_count: ~
+      md5: ce16587208ae6923d1b2f378085baa04
+      mtime: 1235002677
+      name: lib/TaskForest/Options.pm
+    - bytesize: 854
+      file_mime_type: ~
+      line_count: ~
+      md5: c05c236692c763817349ee5caf3274b7
+      mtime: 1235002677
+      name: lib/TaskForest/OutLogger.pm
+    - bytesize: 6480
+      file_mime_type: ~
+      line_count: ~
+      md5: 10c65dc671ede1620a6d61c211eea8bb
+      mtime: 1234999045
+      name: lib/TaskForest/REST.pm
+    - bytesize: 3385
+      file_mime_type: ~
+      line_count: ~
+      md5: ff66b35227c205749a101c16d761f468
+      mtime: 1233968547
+      name: lib/TaskForest/REST/Families.pm
+    - bytesize: 1351
+      file_mime_type: ~
+      line_count: ~
+      md5: 9aba697fc5be603e88d0898ee4f755e4
+      mtime: 1234274120
+      name: lib/TaskForest/REST/FamilyList.pm
+    - bytesize: 1348
+      file_mime_type: ~
+      line_count: ~
+      md5: b98f6cb595f77da19c048e28d24dbfba
+      mtime: 1233530143
+      name: lib/TaskForest/REST/JobList.pm
+    - bytesize: 3366
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bc4875470b149af2272bea812927b97
+      mtime: 1233968575
+      name: lib/TaskForest/REST/Jobs.pm
+    - bytesize: 346
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bf18a9bc12f6578c1f93ea72ade0bf6
+      mtime: 1233112336
+      name: lib/TaskForest/REST/PassThrough.pm
+    - bytesize: 2864
+      file_mime_type: ~
+      line_count: ~
+      md5: d9c4afdc45e5dd600cfb37ceb67c0763
+      mtime: 1234679017
+      name: lib/TaskForest/REST/Request.pm
+    - bytesize: 2206
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d7ee1ad2715ed34a3dd3cd69a93a3c3
+      mtime: 1234671118
+      name: lib/TaskForest/REST/Status.pm
+    - bytesize: 4345
+      file_mime_type: ~
+      line_count: ~
+      md5: 5db696449a836b54ae5583b856ad775d
+      mtime: 1235002677
+      name: lib/TaskForest/Rerun.pm
+    - bytesize: 1776
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cc0b454d0d0fa1a45fcff1b6b7f8fcd
+      mtime: 1235002677
+      name: lib/TaskForest/StringHandle.pm
+    - bytesize: 1357
+      file_mime_type: ~
+      line_count: ~
+      md5: d9fb4fb22e8b620f0b5684bede6e9990
+      mtime: 1235002677
+      name: lib/TaskForest/StringHandleTier.pm
+    - bytesize: 3818
+      file_mime_type: ~
+      line_count: ~
+      md5: c5f20f1979c2f8feb2b0f5fa0ee9e3cd
+      mtime: 1234999045
+      name: lib/TaskForest/Template.pm
+    - bytesize: 5410
+      file_mime_type: ~
+      line_count: ~
+      md5: dce04c6b819c82d6016a3560496cde1a
+      mtime: 1234999045
+      name: lib/TaskForest/Test.pm
+    - bytesize: 4439
+      file_mime_type: ~
+      line_count: ~
+      md5: d261e1c670bcd2291b1cf22c175dd836
+      mtime: 1235002677
+      name: lib/TaskForest/TimeDependency.pm
+    - bytesize: 2268
+      file_mime_type: ~
+      line_count: ~
+      md5: ea82410c7a9991816b5eeeebe195e20a
+      mtime: 1211833601
+      name: mark
+    - bytesize: 2109
+      file_mime_type: ~
+      line_count: ~
+      md5: 53705a4b7825299b3a7a1b19b81af306
+      mtime: 1211833614
+      name: rerun
+    - bytesize: 1298
+      file_mime_type: ~
+      line_count: ~
+      md5: a53108f7543b75adbb34afc035d4cdf6
+      mtime: 1210728244
+      name: run
+    - bytesize: 841
+      file_mime_type: ~
+      line_count: ~
+      md5: 9acb44549b41563697bb490144ec6258
+      mtime: 1234240846
+      name: status
+    - bytesize: 724
+      file_mime_type: ~
+      line_count: ~
+      md5: 962c2024e3f96c679ac71f79b8a9981c
+      mtime: 1233628923
+      name: t/001_DateTime.t
+    - bytesize: 1611
+      file_mime_type: ~
+      line_count: ~
+      md5: ccaa2ae73874645bbb90045af340a783
+      mtime: 1233628923
+      name: t/002_TimeDependency.t
+    - bytesize: 1888
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e6713580b31b182a71cbdc30c399e7b
+      mtime: 1233628923
+      name: t/003_Options.t
+    - bytesize: 925
+      file_mime_type: ~
+      line_count: ~
+      md5: 53551ef04c678ec5718e4a9a4be49db6
+      mtime: 1233628923
+      name: t/004_LogDir.t
+    - bytesize: 438
+      file_mime_type: ~
+      line_count: ~
+      md5: ce8c4cc02c70bfb028c6e1bd9921f90a
+      mtime: 1233628923
+      name: t/005_Job.t
+    - bytesize: 2417
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f16d224f20fcd0465f5d467e333f209
+      mtime: 1233628923
+      name: t/0065_StringHandle.t
+    - bytesize: 4025
+      file_mime_type: ~
+      line_count: ~
+      md5: ada671a305fb1136d4e08ac10e5e1545
+      mtime: 1233973101
+      name: t/006_Family.t
+    - bytesize: 2049
+      file_mime_type: ~
+      line_count: ~
+      md5: 7efe2c944bb051e33d40497d1275ad3d
+      mtime: 1233971890
+      name: t/007_TaskForest.t
+    - bytesize: 2454
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bbad32398fc3e549e4a7456cfdf237c
+      mtime: 1233972008
+      name: t/008_Repeat.t
+    - bytesize: 3320
+      file_mime_type: ~
+      line_count: ~
+      md5: 7562a74430748af4cd1c54652012b4c6
+      mtime: 1233974657
+      name: t/009_Display.t
+    - bytesize: 1928
+      file_mime_type: ~
+      line_count: ~
+      md5: eb016d83530e5808e4b7d08dadedc81d
+      mtime: 1233975247
+      name: t/010_LongRunningJobs.t
+    - bytesize: 2255
+      file_mime_type: ~
+      line_count: ~
+      md5: 8896bdd07bbc0014bf36e0d524d56b37
+      mtime: 1233975322
+      name: t/011_NotEnoughTime.t
+    - bytesize: 1634
+      file_mime_type: ~
+      line_count: ~
+      md5: d5c7c71c910be23911a7c7deeebfb701
+      mtime: 1233975602
+      name: t/012_Collapse.t
+    - bytesize: 3341
+      file_mime_type: ~
+      line_count: ~
+      md5: 6647cbf02dfac4ce8613630fe9d8bf82
+      mtime: 1233979276
+      name: t/013_Rerun.t
+    - bytesize: 4298
+      file_mime_type: ~
+      line_count: ~
+      md5: 6313eda25931074fb61a85302c7cb6b9
+      mtime: 1233982358
+      name: t/014_Mark.t
+    - bytesize: 4305
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ef449ee8e02ead9a6b9161ae5a51f4
+      mtime: 1233979858
+      name: t/015_Syntax.t
+    - bytesize: 1463
+      file_mime_type: ~
+      line_count: ~
+      md5: acfeb07f39036e31044a9db2733f3f40
+      mtime: 1233979930
+      name: t/016_Cascade.t
+    - bytesize: 3420
+      file_mime_type: ~
+      line_count: ~
+      md5: a004b4bf5ff47fd82ff075fafaa92d6c
+      mtime: 1233980876
+      name: t/017_IgnoreRegex.t
+    - bytesize: 21993
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ee75d514cf2eb184054526a46356279
+      mtime: 1234999045
+      name: t/018TaskForestDaemon.t
+    - bytesize: 3146
+      file_mime_type: ~
+      line_count: ~
+      md5: d6cffd235b7b74d1bcba2e8aec78a23f
+      mtime: 1233982258
+      name: t/019_FamilyRemoval.t
+    - bytesize: 228
+      file_mime_type: ~
+      line_count: ~
+      md5: edf7a4f7d3587ad664771128a9a20913
+      mtime: 1233628923
+      name: t/family_archive/CASCADE
+    - bytesize: 151
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f5fec1c08c010e0080cae682019fd92
+      mtime: 1233628923
+      name: t/family_archive/COLLAPSE
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 36d8fc5b36e614423ce8f6024ff63702
+      mtime: 1233628923
+      name: t/family_archive/IGNORE01
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 216a3fff3602c785ba2de4e7fe5a7a59
+      mtime: 1233628923
+      name: t/family_archive/IGNORE02
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 5966e89fc0ba8d6e6113752ce6cd7f6e
+      mtime: 1233628923
+      name: t/family_archive/IGNORE03.bak
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: e3bb1481b2b2c918c51ab23e09fcd4be
+      mtime: 1233628923
+      name: t/family_archive/IGNORE04_HASH
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f21755f2ffeec577ff98fbc0f76767a
+      mtime: 1233628923
+      name: t/family_archive/IGNORE05_TILDE
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: f6065173984ba3e1dee266efd99b2da4
+      mtime: 1233628923
+      name: t/family_archive/LONG_RUNNING
+    - bytesize: 152
+      file_mime_type: ~
+      line_count: ~
+      md5: 27fbbca14934d866e0a113965198e237
+      mtime: 1233628923
+      name: t/family_archive/NOT_ENOUGH_TIME
+    - bytesize: 147
+      file_mime_type: ~
+      line_count: ~
+      md5: 6815b4c93802fcf0f3f96dbd38382d96
+      mtime: 1233628923
+      name: t/family_archive/REPEAT
+    - bytesize: 437
+      file_mime_type: ~
+      line_count: ~
+      md5: 98e1c57e3cf3f33162daedc7d81b0a36
+      mtime: 1233628923
+      name: t/family_archive/SIMPLE
+    - bytesize: 97
+      file_mime_type: ~
+      line_count: ~
+      md5: 097dd4ecd3859fe6e4a31a5606338f4e
+      mtime: 1233883980
+      name: t/family_archive/SMALL_CASCADE
+    - bytesize: 89
+      file_mime_type: ~
+      line_count: ~
+      md5: 91f52d2f848fdcd55f5da4af5a049204
+      mtime: 1233628923
+      name: t/family_archive/SYNTAX_1
+    - bytesize: 88
+      file_mime_type: ~
+      line_count: ~
+      md5: 90e4d15b8a45e2cea458261fb98d5ab7
+      mtime: 1233628923
+      name: t/family_archive/SYNTAX_2
+    - bytesize: 88
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bd8c641687c5f5587b1b915de593dcf
+      mtime: 1233628923
+      name: t/family_archive/SYNTAX_3
+    - bytesize: 90
+      file_mime_type: ~
+      line_count: ~
+      md5: e221ba00c3eefda6ac41eb326f51f64d
+      mtime: 1233628923
+      name: t/family_archive/SYNTAX_4
+    - bytesize: 457
+      file_mime_type: ~
+      line_count: ~
+      md5: 725af7a7b33b074ed3e8ff46c8b33db0
+      mtime: 1233628923
+      name: t/family_archive/SYNTAX_5
+    - bytesize: 118
+      file_mime_type: ~
+      line_count: ~
+      md5: 2578dfbbaa5120db00f7dfa4f555dd3a
+      mtime: 1233628923
+      name: t/family_archive/SYNTAX_6
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: a2f6903d9f517dee56d23e093ac85468
+      mtime: 1235003415
+      name: t/jobs/J1
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 140b319e1e3aa7641030d552d52a495f
+      mtime: 1233628923
+      name: t/jobs/J10
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a5879123723bd3db9e43abfa2e70a53
+      mtime: 1233628923
+      name: t/jobs/J11
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: c4236c9a6a1d11a4d3443484d85709ba
+      mtime: 1233628923
+      name: t/jobs/J12
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 27ab8c686840d4a5a722216a31125b6b
+      mtime: 1233628923
+      name: t/jobs/J13
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 8749bacd50b5861d6ad553f429881c52
+      mtime: 1233628923
+      name: t/jobs/J2
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 8527583c4eee3b2adac9ac851083b7ed
+      mtime: 1233628923
+      name: t/jobs/J3
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: b0e4cbb01359b3eca5e11f9992f64b14
+      mtime: 1233628923
+      name: t/jobs/J4
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: f790dfffb9a6e3070070a2c3b2d26ffd
+      mtime: 1233628923
+      name: t/jobs/J5
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: b145e3def54e5d20fef0a3a78a0f0c75
+      mtime: 1233628923
+      name: t/jobs/J6
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 483e10572d4a38b711563ec58397d3d2
+      mtime: 1233628923
+      name: t/jobs/J7
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 15947e25f67b03ee8ac37fbcf62714db
+      mtime: 1233628923
+      name: t/jobs/J8
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: b8c58a51f10cd2ba659ba389d00d9ac3
+      mtime: 1233628923
+      name: t/jobs/J9
+    - bytesize: 47
+      file_mime_type: ~
+      line_count: ~
+      md5: cba06aa67cbabf5543bd1b8745954e6d
+      mtime: 1233628923
+      name: t/jobs/JLongRunning
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c6c2984f1329360fd0c2bd4a5739f372
+      mtime: 1233628923
+      name: t/logs/empty_file
+    - bytesize: 368
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b88c5b040a00f37d2421ea442d21792
+      mtime: 1211832789
+      name: taskforest
+    - bytesize: 1869
+      file_mime_type: ~
+      line_count: ~
+      md5: 126b808da150822de1a3370230a7eada
+      mtime: 1233789133
+      name: taskforest.cfg
+    - bytesize: 1691
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ac6dd2856e9c937d9c8c62cfa0c88d7
+      mtime: 1233976551
+      name: taskforest.test.cfg
+    - bytesize: 20892
+      file_mime_type: ~
+      line_count: ~
+      md5: f6fed14a35fe1758915c81e80588cee7
+      mtime: 1234999045
+      name: taskforestd
+    - bytesize: 2549
+      file_mime_type: ~
+      line_count: ~
+      md5: 25bc3514661a09a7172fcb0caab1fd0c
+      mtime: 1234735141
+      name: taskforestd.cfg
+    - bytesize: 1881
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f091237866c7a80d1fe402d63bd30b0
+      mtime: 1234055539
+      name: taskforestd.test.cfg
+    - bytesize: 21042
+      file_mime_type: ~
+      line_count: ~
+      md5: 96173de693950a1d0afd12b5d9e5cd0c
+      mtime: 1234999045
+      name: taskforestdssl
+  module_info:
+    - bytesize: 74868
+      file_mime_type: ~
+      line_count: ~
+      md5: 048ab3b897472f896e61613babeec2ee
+      module_name_from_file_guess: TaskForest
+      mtime: 1235002677
+      name: blib/lib/TaskForest.pm
+      packages:
+        - TaskForest
+      primary_package: TaskForest
+      uses:
+        - strict
+        - warnings
+        - POSIX
+        - Data::Dumper
+        - TaskForest::Family
+        - TaskForest::Options
+        - TaskForest::Logs
+        - File::Basename
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest.pm
+        identifier: VERSION
+        line_number: 23
+        sigil: $
+        value: 1.16
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: 188423544221a28b5873bba618476e29
+      module_name_from_file_guess: TaskForest::ErrLogger
+      mtime: 1235002677
+      name: blib/lib/TaskForest/ErrLogger.pm
+      packages:
+        - TaskForest::ErrLogger
+      primary_package: TaskForest::ErrLogger
+      uses:
+        - strict
+        - warnings
+        - TaskForest::Logs
+        - Log::Log4perl
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/ErrLogger.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 1.16
+    - bytesize: 35231
+      file_mime_type: ~
+      line_count: ~
+      md5: 74f901ec6927d825cee00f574ca12f60
+      module_name_from_file_guess: TaskForest::Family
+      mtime: 1235002677
+      name: blib/lib/TaskForest/Family.pm
+      packages:
+        - TaskForest::Family
+      primary_package: TaskForest::Family
+      uses:
+        - strict
+        - warnings
+        - TaskForest::Job
+        - Data::Dumper
+        - TaskForest::TimeDependency
+        - TaskForest::Options
+        - TaskForest::LogDir
+        - English
+        - FileHandle
+        - Carp
+        - Time::Local
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/Family.pm
+        identifier: VERSION
+        line_number: 180
+        sigil: $
+        value: 1.16
+    - bytesize: 4406
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a8122fa85fe7a14934b0d2d15ecd4b1
+      module_name_from_file_guess: TaskForest::Job
+      mtime: 1235002677
+      name: blib/lib/TaskForest/Job.pm
+      packages:
+        - TaskForest::Job
+      primary_package: TaskForest::Job
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/Job.pm
+        identifier: VERSION
+        line_number: 119
+        sigil: $
+        value: 1.16
+    - bytesize: 2285
+      file_mime_type: ~
+      line_count: ~
+      md5: e22ff66a438544f6e4d3effeb3f85ba0
+      module_name_from_file_guess: TaskForest::LogDir
+      mtime: 1235002677
+      name: blib/lib/TaskForest/LogDir.pm
+      packages:
+        - TaskForest::LogDir
+      primary_package: TaskForest::LogDir
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/LogDir.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 1.16
+    - bytesize: 3983
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f09bef8e068d7f32c1b8f817fc90a6
+      module_name_from_file_guess: TaskForest::Logs
+      mtime: 1235002677
+      name: blib/lib/TaskForest/Logs.pm
+      packages:
+        - TaskForest::Logs
+      primary_package: TaskForest::Logs
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - Data::Dumper
+        - Log::Log4perl
+        - Log::Log4perl::Layout
+        - Log::Log4perl::Level
+        - TaskForest::OutLogger
+        - TaskForest::ErrLogger
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/Logs.pm
+        identifier: VERSION
+        line_number: 58
+        sigil: $
+        value: 1.16
+    - bytesize: 3399
+      file_mime_type: ~
+      line_count: ~
+      md5: c90263b73d0c65f26a9b6ec39da4938e
+      module_name_from_file_guess: TaskForest::Mark
+      mtime: 1235002677
+      name: blib/lib/TaskForest/Mark.pm
+      packages:
+        - TaskForest::Mark
+      primary_package: TaskForest::Mark
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::Copy
+        - TaskForest::Family
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/Mark.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.16
+    - bytesize: 12418
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d3c686b95cbb869ba28e1a4c804fea9
+      module_name_from_file_guess: TaskForest::Options
+      mtime: 1235002677
+      name: blib/lib/TaskForest/Options.pm
+      packages:
+        - TaskForest::Options
+      primary_package: TaskForest::Options
+      uses:
+        - strict
+        - warnings
+        - Getopt::Long
+        - Data::Dumper
+        - Carp
+        - Config::General
+        - Log::Log4perl
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/Options.pm
+        identifier: VERSION
+        line_number: 51
+        sigil: $
+        value: 1.16
+    - bytesize: 854
+      file_mime_type: ~
+      line_count: ~
+      md5: 25af04468c365c6ace25722dd92a026c
+      module_name_from_file_guess: TaskForest::OutLogger
+      mtime: 1235002677
+      name: blib/lib/TaskForest/OutLogger.pm
+      packages:
+        - TaskForest::OutLogger
+      primary_package: TaskForest::OutLogger
+      uses:
+        - strict
+        - warnings
+        - TaskForest::Logs
+        - Log::Log4perl
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/OutLogger.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 1.16
+    - bytesize: 6480
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f8e5d1ef0ba08596da0e7729b756c6c
+      module_name_from_file_guess: TaskForest::REST
+      mtime: 1234999045
+      name: blib/lib/TaskForest/REST.pm
+      packages:
+        - TaskForest::REST
+      primary_package: TaskForest::REST
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3385
+      file_mime_type: ~
+      line_count: ~
+      md5: a6fb9bebad48ea8d1d0ce083c130ee72
+      module_name_from_file_guess: TaskForest::REST::Families
+      mtime: 1233968547
+      name: blib/lib/TaskForest/REST/Families.pm
+      packages:
+        - TaskForest::REST::Families
+      primary_package: TaskForest::REST::Families
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - TaskForest::REST
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST/Families.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1351
+      file_mime_type: ~
+      line_count: ~
+      md5: f78ebb029fe6423bf75acb8ba6602db0
+      module_name_from_file_guess: TaskForest::REST::FamilyList
+      mtime: 1234274120
+      name: blib/lib/TaskForest/REST/FamilyList.pm
+      packages:
+        - TaskForest::REST::FamilyList
+      primary_package: TaskForest::REST::FamilyList
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - TaskForest::REST
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST/FamilyList.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1348
+      file_mime_type: ~
+      line_count: ~
+      md5: a1d01823fcc42af31876a8c322c0f80a
+      module_name_from_file_guess: TaskForest::REST::JobList
+      mtime: 1233530143
+      name: blib/lib/TaskForest/REST/JobList.pm
+      packages:
+        - TaskForest::REST::JobList
+      primary_package: TaskForest::REST::JobList
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - TaskForest::REST
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST/JobList.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3366
+      file_mime_type: ~
+      line_count: ~
+      md5: 02e2fdc0849ef3b60933bca160da9a73
+      module_name_from_file_guess: TaskForest::REST::Jobs
+      mtime: 1233968575
+      name: blib/lib/TaskForest/REST/Jobs.pm
+      packages:
+        - TaskForest::REST::Jobs
+      primary_package: TaskForest::REST::Jobs
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - TaskForest::REST
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST/Jobs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 346
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e9d2420460c58f3fb76572f08d7cb88
+      module_name_from_file_guess: TaskForest::REST::PassThrough
+      mtime: 1233112336
+      name: blib/lib/TaskForest/REST/PassThrough.pm
+      packages:
+        - TaskForest::REST::PassThrough
+      primary_package: TaskForest::REST::PassThrough
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/TaskForest/REST/PassThrough.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2864
+      file_mime_type: ~
+      line_count: ~
+      md5: d071f4630b6b2189a358d45d32d24bc0
+      module_name_from_file_guess: TaskForest::REST::Request
+      mtime: 1234679017
+      name: blib/lib/TaskForest/REST/Request.pm
+      packages:
+        - TaskForest::REST::Request
+      primary_package: TaskForest::REST::Request
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - TaskForest::REST
+        - TaskForest::LogDir
+        - TaskForest::Rerun
+        - TaskForest::Mark
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST/Request.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2206
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c9c8838cea81c96f2ccdb878b36320d
+      module_name_from_file_guess: TaskForest::REST::Status
+      mtime: 1234671118
+      name: blib/lib/TaskForest/REST/Status.pm
+      packages:
+        - TaskForest::REST::Status
+      primary_package: TaskForest::REST::Status
+      uses:
+        - strict
+        - warnings
+        - HTTP::Status
+        - TaskForest
+        - TaskForest::REST
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/TaskForest/REST/Status.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4345
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bbafe1e311a58aeac6b2873dfb8471f
+      module_name_from_file_guess: TaskForest::Rerun
+      mtime: 1235002677
+      name: blib/lib/TaskForest/Rerun.pm
+      packages:
+        - TaskForest::Rerun
+      primary_package: TaskForest::Rerun
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::Copy
+        - TaskForest::Family
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/Rerun.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.16
+    - bytesize: 1776
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f508a2f07e38d2ceb42a367b48fdd53
+      module_name_from_file_guess: TaskForest::StringHandle
+      mtime: 1235002677
+      name: blib/lib/TaskForest/StringHandle.pm
+      packages:
+        - TaskForest::StringHandle
+      primary_package: TaskForest::StringHandle
+      uses:
+        - strict
+        - warnings
+        - TaskForest::StringHandleTier
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/StringHandle.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.16
+    - bytesize: 1357
+      file_mime_type: ~
+      line_count: ~
+      md5: 239dc8ca8c3df620c0e2d249b64d063c
+      module_name_from_file_guess: TaskForest::StringHandleTier
+      mtime: 1235002677
+      name: blib/lib/TaskForest/StringHandleTier.pm
+      packages:
+        - TaskForest::StringHandleTier
+      primary_package: TaskForest::StringHandleTier
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/StringHandleTier.pm
+        identifier: VERSION
+        line_number: 36
+        sigil: $
+        value: 1.16
+    - bytesize: 3818
+      file_mime_type: ~
+      line_count: ~
+      md5: c2cad4792851f7a6ab5e5823412ae610
+      module_name_from_file_guess: TaskForest::Template
+      mtime: 1234999045
+      name: blib/lib/TaskForest/Template.pm
+      packages:
+        - TaskForest::Template
+      primary_package: TaskForest::Template
+      uses:
+        - Data::Dumper
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/TaskForest/Template.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5410
+      file_mime_type: ~
+      line_count: ~
+      md5: e44e0ce19ce3e72b81379411c9fea5e3
+      module_name_from_file_guess: TaskForest::Test
+      mtime: 1234999045
+      name: blib/lib/TaskForest/Test.pm
+      packages:
+        - TaskForest::Test
+      primary_package: TaskForest::Test
+      uses:
+        - strict
+        - warnings
+        - Test::More
+      version_info:
+        filename: blib/lib/TaskForest/Test.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4439
+      file_mime_type: ~
+      line_count: ~
+      md5: 72f71169c53591a176f3f260a1e181ff
+      module_name_from_file_guess: TaskForest::TimeDependency
+      mtime: 1235002677
+      name: blib/lib/TaskForest/TimeDependency.pm
+      packages:
+        - TaskForest::TimeDependency
+      primary_package: TaskForest::TimeDependency
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - DateTime
+        - Carp
+        - vars
+      version_info:
+        filename: blib/lib/TaskForest/TimeDependency.pm
+        identifier: VERSION
+        line_number: 64
+        sigil: $
+        value: 1.16
+  modules:
+    - blib/lib/TaskForest.pm
+    - blib/lib/TaskForest/ErrLogger.pm
+    - blib/lib/TaskForest/Family.pm
+    - blib/lib/TaskForest/Job.pm
+    - blib/lib/TaskForest/LogDir.pm
+    - blib/lib/TaskForest/Logs.pm
+    - blib/lib/TaskForest/Mark.pm
+    - blib/lib/TaskForest/Options.pm
+    - blib/lib/TaskForest/OutLogger.pm
+    - blib/lib/TaskForest/REST.pm
+    - blib/lib/TaskForest/REST/Families.pm
+    - blib/lib/TaskForest/REST/FamilyList.pm
+    - blib/lib/TaskForest/REST/JobList.pm
+    - blib/lib/TaskForest/REST/Jobs.pm
+    - blib/lib/TaskForest/REST/PassThrough.pm
+    - blib/lib/TaskForest/REST/Request.pm
+    - blib/lib/TaskForest/REST/Status.pm
+    - blib/lib/TaskForest/Rerun.pm
+    - blib/lib/TaskForest/StringHandle.pm
+    - blib/lib/TaskForest/StringHandleTier.pm
+    - blib/lib/TaskForest/Template.pm
+    - blib/lib/TaskForest/Test.pm
+    - blib/lib/TaskForest/TimeDependency.pm
+  test_info:
+    - bytesize: 724
+      file_mime_type: ~
+      line_count: ~
+      md5: 962c2024e3f96c679ac71f79b8a9981c
+      mtime: 1233628923
+      name: t/001_DateTime.t
+      uses:
+        - Test::More
+    - bytesize: 1611
+      file_mime_type: ~
+      line_count: ~
+      md5: ccaa2ae73874645bbb90045af340a783
+      mtime: 1233628923
+      name: t/002_TimeDependency.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+    - bytesize: 1888
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e6713580b31b182a71cbdc30c399e7b
+      mtime: 1233628923
+      name: t/003_Options.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+    - bytesize: 925
+      file_mime_type: ~
+      line_count: ~
+      md5: 53551ef04c678ec5718e4a9a4be49db6
+      mtime: 1233628923
+      name: t/004_LogDir.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+    - bytesize: 438
+      file_mime_type: ~
+      line_count: ~
+      md5: ce8c4cc02c70bfb028c6e1bd9921f90a
+      mtime: 1233628923
+      name: t/005_Job.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+    - bytesize: 2417
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f16d224f20fcd0465f5d467e333f209
+      mtime: 1233628923
+      name: t/0065_StringHandle.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+    - bytesize: 4025
+      file_mime_type: ~
+      line_count: ~
+      md5: ada671a305fb1136d4e08ac10e5e1545
+      mtime: 1233973101
+      name: t/006_Family.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 2049
+      file_mime_type: ~
+      line_count: ~
+      md5: 7efe2c944bb051e33d40497d1275ad3d
+      mtime: 1233971890
+      name: t/007_TaskForest.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 2454
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bbad32398fc3e549e4a7456cfdf237c
+      mtime: 1233972008
+      name: t/008_Repeat.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 3320
+      file_mime_type: ~
+      line_count: ~
+      md5: 7562a74430748af4cd1c54652012b4c6
+      mtime: 1233974657
+      name: t/009_Display.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 1928
+      file_mime_type: ~
+      line_count: ~
+      md5: eb016d83530e5808e4b7d08dadedc81d
+      mtime: 1233975247
+      name: t/010_LongRunningJobs.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 2255
+      file_mime_type: ~
+      line_count: ~
+      md5: 8896bdd07bbc0014bf36e0d524d56b37
+      mtime: 1233975322
+      name: t/011_NotEnoughTime.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 1634
+      file_mime_type: ~
+      line_count: ~
+      md5: d5c7c71c910be23911a7c7deeebfb701
+      mtime: 1233975602
+      name: t/012_Collapse.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 3341
+      file_mime_type: ~
+      line_count: ~
+      md5: 6647cbf02dfac4ce8613630fe9d8bf82
+      mtime: 1233979276
+      name: t/013_Rerun.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 4298
+      file_mime_type: ~
+      line_count: ~
+      md5: 6313eda25931074fb61a85302c7cb6b9
+      mtime: 1233982358
+      name: t/014_Mark.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Mark
+        - TaskForest::Test
+    - bytesize: 4305
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ef449ee8e02ead9a6b9161ae5a51f4
+      mtime: 1233979858
+      name: t/015_Syntax.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Mark
+        - TaskForest::Test
+    - bytesize: 1463
+      file_mime_type: ~
+      line_count: ~
+      md5: acfeb07f39036e31044a9db2733f3f40
+      mtime: 1233979930
+      name: t/016_Cascade.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 3420
+      file_mime_type: ~
+      line_count: ~
+      md5: a004b4bf5ff47fd82ff075fafaa92d6c
+      mtime: 1233980876
+      name: t/017_IgnoreRegex.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+    - bytesize: 21993
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ee75d514cf2eb184054526a46356279
+      mtime: 1234999045
+      name: t/018TaskForestDaemon.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Cwd
+        - File::Copy
+        - LWP::UserAgent
+        - HTTP::Status
+        - HTTP::Request::Common
+        - TaskForest::LogDir
+        - Data::Dumper
+        - TaskForest::Test
+        - vars
+    - bytesize: 3146
+      file_mime_type: ~
+      line_count: ~
+      md5: d6cffd235b7b74d1bcba2e8aec78a23f
+      mtime: 1233982258
+      name: t/019_FamilyRemoval.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+        - Cwd
+        - File::Copy
+        - TaskForest::Test
+  tests:
+    - t/001_DateTime.t
+    - t/002_TimeDependency.t
+    - t/003_Options.t
+    - t/004_LogDir.t
+    - t/005_Job.t
+    - t/0065_StringHandle.t
+    - t/006_Family.t
+    - t/007_TaskForest.t
+    - t/008_Repeat.t
+    - t/009_Display.t
+    - t/010_LongRunningJobs.t
+    - t/011_NotEnoughTime.t
+    - t/012_Collapse.t
+    - t/013_Rerun.t
+    - t/014_Mark.t
+    - t/015_Syntax.t
+    - t/016_Cascade.t
+    - t/017_IgnoreRegex.t
+    - t/018TaskForestDaemon.t
+    - t/019_FamilyRemoval.t
+  unpack_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.LK88
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 1055
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270142099
+  examine_start_time: 1270142067
+  examine_time: 32
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1029
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 1055
+  ppid: 1029
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/0AlPIU22Ym
+  run_end_time: 1270142099
+  run_start_time: 1270142067
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/0AlPIU22Ym
+  uuid: 1F94478C-3D73-11DF-9C68-EB68E8F9184E
+  worker_class: MyCPAN::Indexer::Worker

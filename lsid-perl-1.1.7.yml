@@ -1,0 +1,3908 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Perl module for building clients and servers which resolve and perform metadata queries on LSIDs.
+    author: 'IBM <http://lsid.sourceforge.net/>'
+    distribution_type: module
+    generated_by: Module::Install version 0.67
+    license: cpl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: lsid-perl
+    no_index:
+      directory:
+        - examples
+        - inc
+        - t
+    requires:
+      Carp: 0
+      Compress::Zlib: 1.22
+      Error: 0.15
+      File::Copy: 2.01
+      File::Temp: 0.12
+      LWP: 5.53
+      MIME::Base64: 2.12
+      MIME::Tools: 6.106
+      Net::DNS: 0.28
+      Net::FTP: 2.65
+      RDF::Core: 0.30
+      SOAP::Lite: 0.69
+      Time::HiRes: 1.20
+      URI: 1.21
+      XML::XPath: 1.12
+      perl: 5.6.0
+    version: 1.1.6
+  blib:
+    - blib/lib/LS.pm
+    - blib/lib/LS/Assigning/Client.pm
+    - blib/lib/LS/Assigning/Serializer.pm
+    - blib/lib/LS/Assigning/Service.pm
+    - blib/lib/LS/Assigning/WSDL/LSIDAssigningPortType.wsdl
+    - blib/lib/LS/Assigning/WSDL/LSIDAssigningSOAPBinding.wsdl
+    - blib/lib/LS/Authority.pm
+    - blib/lib/LS/Authority/Mappings.pm
+    - blib/lib/LS/Authority/WSDL.pm
+    - blib/lib/LS/Authority/WSDL/Bindings.pm
+    - blib/lib/LS/Authority/WSDL/Constants.pm
+    - blib/lib/LS/Authority/WSDL/LSIDAuthorityServiceHTTPBindings.wsdl
+    - blib/lib/LS/Authority/WSDL/LSIDAuthorityServiceSOAPBindings.wsdl
+    - blib/lib/LS/Authority/WSDL/LSIDDataServiceFTPBindings.wsdl
+    - blib/lib/LS/Authority/WSDL/LSIDDataServiceFileBindings.wsdl
+    - blib/lib/LS/Authority/WSDL/LSIDDataServiceHTTPBindings.wsdl
+    - blib/lib/LS/Authority/WSDL/LSIDDataServiceSOAPBindings.wsdl
+    - blib/lib/LS/Authority/WSDL/LSIDPortTypes.wsdl
+    - blib/lib/LS/Authority/WSDL/Location.pm
+    - blib/lib/LS/Authority/WSDL/Services.pm
+    - blib/lib/LS/Authority/WSDL/Simple.pm
+    - blib/lib/LS/Cache/Config.pm
+    - blib/lib/LS/Cache/Logger.pm
+    - blib/lib/LS/Cache/Manager.pm
+    - blib/lib/LS/Client.pm
+    - blib/lib/LS/Client/BasicResolver.pm
+    - blib/lib/LS/Client/FTP.pm
+    - blib/lib/LS/Client/HTTP.pm
+    - blib/lib/LS/Client/SOAP.pm
+    - blib/lib/LS/Config.pm
+    - blib/lib/LS/HTTP/Service.pm
+    - blib/lib/LS/ID.pm
+    - blib/lib/LS/Locator.pm
+    - blib/lib/LS/RDF/ComplexDocument.pm
+    - blib/lib/LS/RDF/Constants.pm
+    - blib/lib/LS/RDF/Metadata.pm
+    - blib/lib/LS/RDF/SimpleDocument.pm
+    - blib/lib/LS/Resource.pm
+    - blib/lib/LS/SOAP/Fault.pm
+    - blib/lib/LS/SOAP/Serializer.pm
+    - blib/lib/LS/SOAP/Service.pm
+    - blib/lib/LS/Service.pm
+    - blib/lib/LS/Service/AdvancedDataService.pm
+    - blib/lib/LS/Service/Authority.pm
+    - blib/lib/LS/Service/DataService.pm
+    - blib/lib/LS/Service/Fault.pm
+    - blib/lib/LS/Service/Namespace.pm
+    - blib/lib/LS/Service/Response.pm
+    - blib/man3/LS.3
+    - blib/man3/LS::Authority.3
+    - blib/man3/LS::Authority::WSDL.3
+    - blib/man3/LS::Authority::WSDL::Constants.3
+    - blib/man3/LS::Authority::WSDL::Services.3
+    - blib/man3/LS::Cache::Config.3
+    - blib/man3/LS::Cache::Logger.3
+    - blib/man3/LS::Cache::Manager.3
+    - blib/man3/LS::Client.3
+    - blib/man3/LS::Client::BasicResolver.3
+    - blib/man3/LS::Client::HTTP.3
+    - blib/man3/LS::Client::SOAP.3
+    - blib/man3/LS::Config.3
+    - blib/man3/LS::HTTP::Service.3
+    - blib/man3/LS::ID.3
+    - blib/man3/LS::Locator.3
+    - blib/man3/LS::RDF::ComplexDocument.3
+    - blib/man3/LS::RDF::Metadata.3
+    - blib/man3/LS::RDF::SimpleDocument.3
+    - blib/man3/LS::Resource.3
+    - blib/man3/LS::SOAP::Fault.3
+    - blib/man3/LS::SOAP::Service.3
+    - blib/man3/LS::Service.3
+    - blib/man3/LS::Service::Authority.3
+    - blib/man3/LS::Service::DataService.3
+    - blib/man3/LS::Service::Fault.3
+    - blib/man3/LS::Service::Namespace.3
+    - blib/man3/LS::Service::Response.3
+  build_file: Makefile.PL
+  build_file_output: |
+    *** Module::AutoInstall version 1.03
+    *** Checking for Perl dependencies...
+    [Core Features]
+    - Carp           ...loaded. (1.11)
+    - SOAP::Lite     ...missing. (would need 0.69)
+    - Compress::Zlib ...loaded. (2.02 >= 1.22)
+    - URI            ...missing. (would need 1.21)
+    - LWP            ...missing. (would need 5.53)
+    - Net::FTP       ...loaded. (2.77 >= 2.65)
+    - Net::DNS       ...missing. (would need 0.28)
+    - XML::XPath     ...missing. (would need 1.12)
+    - MIME::Base64   ...loaded. (3.08 >= 2.12)
+    - File::Temp     ...loaded. (0.22 >= 0.12)
+    - File::Copy     ...loaded. (2.14 >= 2.01)
+    - RDF::Core      ...missing. (would need 0.30)
+    - Time::HiRes    ...loaded. (1.9719 >= 1.20)
+    - MIME::Tools    ...missing. (would need 6.106)
+    - Error          ...missing. (would need 0.15)
+    ==> Auto-install the 8 mandatory module(s) from CPAN? [Y/n] y
+    *** Dependencies will be installed the next time you type 'make'.
+        (You may need to do that as the 'root' user.)
+    *** Module::AutoInstall configuration finished.
+    Warning: prerequisite Error 0.15 not found.
+    Warning: prerequisite LWP 5.53 not found.
+    Warning: prerequisite MIME::Tools 6.106 not found.
+    Warning: prerequisite Net::DNS 0.28 not found.
+    Warning: prerequisite RDF::Core 0.30 not found.
+    Warning: prerequisite SOAP::Lite 0.69 not found.
+    Warning: prerequisite URI 1.21 not found.
+    Warning: prerequisite XML::XPath 1.12 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for lsid::perl
+  build_output: |
+    cp lib/LS/HTTP/Service.pm blib/lib/LS/HTTP/Service.pm
+    cp lib/LS/Authority.pm blib/lib/LS/Authority.pm
+    cp lib/LS/Service/Namespace.pm blib/lib/LS/Service/Namespace.pm
+    cp lib/LS/Locator.pm blib/lib/LS/Locator.pm
+    cp lib/LS/Authority/WSDL/Bindings.pm blib/lib/LS/Authority/WSDL/Bindings.pm
+    cp lib/LS/Authority/WSDL/LSIDPortTypes.wsdl blib/lib/LS/Authority/WSDL/LSIDPortTypes.wsdl
+    cp lib/LS/Assigning/WSDL/LSIDAssigningPortType.wsdl blib/lib/LS/Assigning/WSDL/LSIDAssigningPortType.wsdl
+    cp lib/LS/RDF/ComplexDocument.pm blib/lib/LS/RDF/ComplexDocument.pm
+    cp lib/LS/SOAP/Fault.pm blib/lib/LS/SOAP/Fault.pm
+    cp lib/LS/Cache/Config.pm blib/lib/LS/Cache/Config.pm
+    cp lib/LS/Client/FTP.pm blib/lib/LS/Client/FTP.pm
+    cp lib/LS/Config.pm blib/lib/LS/Config.pm
+    cp lib/LS/Authority/WSDL/LSIDDataServiceSOAPBindings.wsdl blib/lib/LS/Authority/WSDL/LSIDDataServiceSOAPBindings.wsdl
+    cp lib/LS/Authority/WSDL.pm blib/lib/LS/Authority/WSDL.pm
+    cp lib/LS/Authority/WSDL/Simple.pm blib/lib/LS/Authority/WSDL/Simple.pm
+    cp lib/LS/Authority/WSDL/Location.pm blib/lib/LS/Authority/WSDL/Location.pm
+    cp lib/LS/Service.pm blib/lib/LS/Service.pm
+    cp lib/LS/Client.pm blib/lib/LS/Client.pm
+    cp lib/LS/Authority/WSDL/LSIDAuthorityServiceSOAPBindings.wsdl blib/lib/LS/Authority/WSDL/LSIDAuthorityServiceSOAPBindings.wsdl
+    cp lib/LS/Assigning/Service.pm blib/lib/LS/Assigning/Service.pm
+    cp lib/LS/Assigning/Client.pm blib/lib/LS/Assigning/Client.pm
+    cp lib/LS/Resource.pm blib/lib/LS/Resource.pm
+    cp lib/LS/Cache/Logger.pm blib/lib/LS/Cache/Logger.pm
+    cp lib/LS/SOAP/Serializer.pm blib/lib/LS/SOAP/Serializer.pm
+    cp lib/LS/Service/DataService.pm blib/lib/LS/Service/DataService.pm
+    cp lib/LS/RDF/Metadata.pm blib/lib/LS/RDF/Metadata.pm
+    cp lib/LS/SOAP/Service.pm blib/lib/LS/SOAP/Service.pm
+    cp lib/LS/Client/SOAP.pm blib/lib/LS/Client/SOAP.pm
+    cp lib/LS/Authority/WSDL/LSIDDataServiceHTTPBindings.wsdl blib/lib/LS/Authority/WSDL/LSIDDataServiceHTTPBindings.wsdl
+    cp lib/LS/Authority/WSDL/LSIDAuthorityServiceHTTPBindings.wsdl blib/lib/LS/Authority/WSDL/LSIDAuthorityServiceHTTPBindings.wsdl
+    cp lib/LS/Authority/WSDL/Services.pm blib/lib/LS/Authority/WSDL/Services.pm
+    cp lib/LS.pm blib/lib/LS.pm
+    cp lib/LS/Authority/Mappings.pm blib/lib/LS/Authority/Mappings.pm
+    cp lib/LS/Service/Authority.pm blib/lib/LS/Service/Authority.pm
+    cp lib/LS/Service/Response.pm blib/lib/LS/Service/Response.pm
+    cp lib/LS/Authority/WSDL/LSIDDataServiceFileBindings.wsdl blib/lib/LS/Authority/WSDL/LSIDDataServiceFileBindings.wsdl
+    cp lib/LS/Client/BasicResolver.pm blib/lib/LS/Client/BasicResolver.pm
+    cp lib/LS/Assigning/Serializer.pm blib/lib/LS/Assigning/Serializer.pm
+    cp lib/LS/RDF/Constants.pm blib/lib/LS/RDF/Constants.pm
+    cp lib/LS/Service/AdvancedDataService.pm blib/lib/LS/Service/AdvancedDataService.pm
+    cp lib/LS/Cache/Manager.pm blib/lib/LS/Cache/Manager.pm
+    cp lib/LS/Authority/WSDL/Constants.pm blib/lib/LS/Authority/WSDL/Constants.pm
+    cp lib/LS/RDF/SimpleDocument.pm blib/lib/LS/RDF/SimpleDocument.pm
+    cp lib/LS/ID.pm blib/lib/LS/ID.pm
+    cp lib/LS/Authority/WSDL/LSIDDataServiceFTPBindings.wsdl blib/lib/LS/Authority/WSDL/LSIDDataServiceFTPBindings.wsdl
+    cp lib/LS/Assigning/WSDL/LSIDAssigningSOAPBinding.wsdl blib/lib/LS/Assigning/WSDL/LSIDAssigningSOAPBinding.wsdl
+    cp lib/LS/Client/HTTP.pm blib/lib/LS/Client/HTTP.pm
+    cp lib/LS/Service/Fault.pm blib/lib/LS/Service/Fault.pm
+    /home/brian/bin/perl5.10.1 "-Iinc" Makefile.PL --config= --installdeps=SOAP::Lite,0.69,URI,1.21,LWP,5.53,Net::DNS,0.28,XML::XPath,1.12,RDF::Core,0.30,MIME::Tools,6.106,Error,0.15
+    *** Installing dependencies...
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    *** Installing SOAP::Lite...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'SOAP::Lite' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** SOAP::Lite installation cancelled.
+    *** Installing URI...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'URI' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** URI installation cancelled.
+    *** Installing LWP...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'LWP' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** LWP installation cancelled.
+    *** Installing Net::DNS...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Net::DNS' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Net::DNS installation cancelled.
+    *** Installing XML::XPath...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'XML::XPath' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** XML::XPath installation cancelled.
+    *** Installing RDF::Core...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'RDF::Core' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** RDF::Core installation cancelled.
+    *** Installing MIME::Tools...
+    *** Could not find a version 6.106 or above for MIME::Tools; skipping.
+    *** Installing Error...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Error' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Error installation cancelled.
+    *** Module::AutoInstall installation finished.
+    Manifying blib/man3/LS::HTTP::Service.3
+    Manifying blib/man3/LS::Service::DataService.3
+    Manifying blib/man3/LS::RDF::Metadata.3
+    Manifying blib/man3/LS::Service::Namespace.3
+    Manifying blib/man3/LS::Authority.3
+    Manifying blib/man3/LS::Locator.3
+    Manifying blib/man3/LS::SOAP::Service.3
+    Manifying blib/man3/LS::SOAP::Fault.3
+    Manifying blib/man3/LS::RDF::ComplexDocument.3
+    Manifying blib/man3/LS::Cache::Config.3
+    Manifying blib/man3/LS::Client::SOAP.3
+    Manifying blib/man3/LS::Config.3
+    Manifying blib/man3/LS::Authority::WSDL.3
+    Manifying blib/man3/LS::Authority::WSDL::Services.3
+    Manifying blib/man3/LS.3
+    Manifying blib/man3/LS::Service::Response.3
+    Manifying blib/man3/LS::Service::Authority.3
+    Manifying blib/man3/LS::Client::BasicResolver.3
+    Manifying blib/man3/LS::Service.3
+    Manifying blib/man3/LS::Client.3
+    Manifying blib/man3/LS::Cache::Manager.3
+    Manifying blib/man3/LS::RDF::SimpleDocument.3
+    Manifying blib/man3/LS::Authority::WSDL::Constants.3
+    Manifying blib/man3/LS::ID.3
+    Manifying blib/man3/LS::Resource.3
+    Manifying blib/man3/LS::Service::Fault.3
+    Manifying blib/man3/LS::Client::HTTP.3
+    Manifying blib/man3/LS::Cache::Logger.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo/lsid-perl-1.1.7/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo/lsid-perl-1.1.7
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo/lsid-perl-1.1.7/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo/lsid-perl-1.1.7/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.67
+    perl_command: ~
+    uses_auto_install: 1
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: EKAWAS
+  dist_basename: lsid-perl-1.1.7.tar.gz
+  dist_date: 1194291532
+  dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo/lsid-perl-1.1.7
+  dist_extract_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo/lsid-perl-1.1.7
+  dist_file: /home/brian/CPAN/authors/id/E/EK/EKAWAS/lsid-perl-1.1.7.tar.gz
+  dist_md5: 845973d4fc1f0d6f662325db270e5016
+  dist_size: 180925
+  manifest:
+    - Changes
+    - License.html
+    - License.txt
+    - LicenseFAQ.pdf
+    - LicenseFAQ.txt
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - README.Authentication
+    - TODO
+    - examples/README
+    - examples/assigning/assignClient.pl
+    - examples/assigning/assigningService.pl
+    - examples/assigning/testAssigningAuth.pm
+    - examples/client/authorities
+    - examples/client/lsid_client.pl
+    - examples/configs/lsid-cache.properties
+    - examples/configs/lsid-client.xml
+    - examples/designer/Designer.pm
+    - examples/designer/Namespaces.tt
+    - examples/designer/authority.tt
+    - examples/designer/index.cgi
+    - examples/designer/style.css
+    - examples/designer/templates/configuration.html.template
+    - examples/designer/templates/footer.html.template
+    - examples/designer/templates/header.html.template
+    - examples/designer/templates/instructions.html.template
+    - examples/designer/templates/javascript.html.template
+    - examples/designer/templates/ports.html.template
+    - examples/designer/templates/services.html.template
+    - examples/designer/templates/start.html.template
+    - examples/designer/templates/view.html.template
+    - examples/designer/templates/view_menu.html.template
+    - examples/http_metadata/formats/csv.metadata
+    - examples/http_metadata/formats/fasta.metadata
+    - examples/http_metadata/formats/gif.metadata
+    - examples/http_metadata/formats/html.metadata
+    - examples/http_metadata/formats/jpg.metadata
+    - examples/http_metadata/formats/locuslink_full.metadata
+    - examples/http_metadata/formats/mmcif.metadata
+    - examples/http_metadata/formats/pdb.metadata
+    - examples/http_metadata/formats/pdf.metadata
+    - examples/http_metadata/formats/png.metadata
+    - examples/http_metadata/formats/sprot.metadata
+    - examples/http_metadata/formats/text.metadata
+    - examples/http_metadata/http.conf.EXAMPLE
+    - examples/http_metadata/i3c_authority.pl
+    - examples/http_metadata/i3c_metadata.cgi
+    - examples/http_metadata/predicates/hasextension.metadata
+    - examples/http_metadata/predicates/storedas.metadata
+    - examples/http_metadata/types/content.metadata
+    - examples/http_metadata/types/format.metadata
+    - examples/hugo_authority/data/hugo.txt
+    - examples/hugo_authority/http.conf.EXAMPLE
+    - examples/hugo_authority/hugoNamespaces.pm
+    - examples/hugo_authority/hugo_authority.pl
+    - examples/hugo_authority/predicates/aliases.metadata
+    - examples/hugo_authority/predicates/external_link.metadata
+    - examples/hugo_authority/predicates/location.metadata
+    - examples/hugo_authority/predicates/prev_gene_name.metadata
+    - examples/hugo_authority/predicates/seq_accessionid.metadata
+    - examples/hugo_authority/predicates/status.metadata
+    - examples/hugo_authority/scripts/create_database.sh
+    - examples/hugo_authority/sql/create_hugo_table.sql
+    - examples/i3c_authority/formats/csv.metadata
+    - examples/i3c_authority/formats/fasta.metadata
+    - examples/i3c_authority/formats/gif.metadata
+    - examples/i3c_authority/formats/html.metadata
+    - examples/i3c_authority/formats/jpg.metadata
+    - examples/i3c_authority/formats/locuslink_full.metadata
+    - examples/i3c_authority/formats/mmcif.metadata
+    - examples/i3c_authority/formats/pdb.metadata
+    - examples/i3c_authority/formats/pdf.metadata
+    - examples/i3c_authority/formats/png.metadata
+    - examples/i3c_authority/formats/sprot.metadata
+    - examples/i3c_authority/formats/text.metadata
+    - examples/i3c_authority/http.conf.EXAMPLE
+    - examples/i3c_authority/i3cNamespaces.pm
+    - examples/i3c_authority/i3c_authority.pl
+    - examples/i3c_authority/predicates/hasextension.metadata
+    - examples/i3c_authority/predicates/storedas.metadata
+    - examples/i3c_authority/types/content.metadata
+    - examples/i3c_authority/types/format.metadata
+    - examples/proxy_resolver/Namespaces.pm
+    - examples/proxy_resolver/proxy_authority.pl
+    - examples/tools/AssigningSvcTemplate.pm
+    - examples/tools/wsdl_parser.pl
+    - examples/webresolver/Metadata.pm
+    - examples/webresolver/README.Apache
+    - examples/webresolver/WebResolver.pm
+    - examples/webresolver/authorities
+    - examples/webresolver/images/arrow.gif
+    - examples/webresolver/images/banner.gif
+    - examples/webresolver/index.cgi
+    - examples/webresolver/style.css
+    - examples/webresolver/templates/advanced.html.template
+    - examples/webresolver/templates/authority.html.template
+    - examples/webresolver/templates/fetch.html.template
+    - examples/webresolver/templates/footer.html.template
+    - examples/webresolver/templates/header.html.template
+    - examples/webresolver/templates/image.html.template
+    - examples/webresolver/templates/javascript.html.template
+    - examples/webresolver/templates/start.html.template
+    - examples/webresolver/templates/summary.html.template
+    - inc/Module/AutoInstall.pm
+    - inc/Module/Install.pm
+    - inc/Module/Install/AutoInstall.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/LS.pm
+    - lib/LS/Assigning/Client.pm
+    - lib/LS/Assigning/Serializer.pm
+    - lib/LS/Assigning/Service.pm
+    - lib/LS/Assigning/WSDL/LSIDAssigningPortType.wsdl
+    - lib/LS/Assigning/WSDL/LSIDAssigningSOAPBinding.wsdl
+    - lib/LS/Authority.pm
+    - lib/LS/Authority/Mappings.pm
+    - lib/LS/Authority/WSDL.pm
+    - lib/LS/Authority/WSDL/Bindings.pm
+    - lib/LS/Authority/WSDL/Constants.pm
+    - lib/LS/Authority/WSDL/LSIDAuthorityServiceHTTPBindings.wsdl
+    - lib/LS/Authority/WSDL/LSIDAuthorityServiceSOAPBindings.wsdl
+    - lib/LS/Authority/WSDL/LSIDDataServiceFTPBindings.wsdl
+    - lib/LS/Authority/WSDL/LSIDDataServiceFileBindings.wsdl
+    - lib/LS/Authority/WSDL/LSIDDataServiceHTTPBindings.wsdl
+    - lib/LS/Authority/WSDL/LSIDDataServiceSOAPBindings.wsdl
+    - lib/LS/Authority/WSDL/LSIDPortTypes.wsdl
+    - lib/LS/Authority/WSDL/Location.pm
+    - lib/LS/Authority/WSDL/Services.pm
+    - lib/LS/Authority/WSDL/Simple.pm
+    - lib/LS/Cache/Config.pm
+    - lib/LS/Cache/Logger.pm
+    - lib/LS/Cache/Manager.pm
+    - lib/LS/Client.pm
+    - lib/LS/Client/BasicResolver.pm
+    - lib/LS/Client/FTP.pm
+    - lib/LS/Client/HTTP.pm
+    - lib/LS/Client/SOAP.pm
+    - lib/LS/Config.pm
+    - lib/LS/HTTP/Service.pm
+    - lib/LS/ID.pm
+    - lib/LS/Locator.pm
+    - lib/LS/RDF/ComplexDocument.pm
+    - lib/LS/RDF/Constants.pm
+    - lib/LS/RDF/Metadata.pm
+    - lib/LS/RDF/SimpleDocument.pm
+    - lib/LS/Resource.pm
+    - lib/LS/SOAP/Fault.pm
+    - lib/LS/SOAP/Serializer.pm
+    - lib/LS/SOAP/Service.pm
+    - lib/LS/Service.pm
+    - lib/LS/Service/AdvancedDataService.pm
+    - lib/LS/Service/Authority.pm
+    - lib/LS/Service/DataService.pm
+    - lib/LS/Service/Fault.pm
+    - lib/LS/Service/Namespace.pm
+    - lib/LS/Service/Response.pm
+    - rfcfan.txt
+    - t/1.t
+    - t/Authority.t
+    - t/ID.t
+    - t/Locator.t
+    - t/WSDL01.t
+    - t/WSDL02.t
+    - t/WSDL03.t
+    - t/WSDL04.t
+    - t/WSDL05.t
+    - t/WSDL_ns01.t
+    - t/WSDL_ns02.t
+    - t/authorities
+    - t/authority01.wsdl
+    - t/authority02.wsdl
+    - t/authority03.wsdl
+    - t/authority04.wsdl
+    - t/authority05.wsdl
+    - t/authorityns01.wsdl
+    - t/authorityns02.wsdl
+  manifest_file_info:
+    - bytesize: 5399
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1194291198
+      name: Changes
+    - bytesize: 15263
+      file_mime_type: ~
+      line_count: ~
+      md5: 25e7a8d4c5c3428e9e29b02ad599ffd2
+      mtime: 1193921633
+      name: License.html
+    - bytesize: 11575
+      file_mime_type: ~
+      line_count: ~
+      md5: dc5cde275269b574b34b1204b9221cb2
+      mtime: 1193921633
+      name: License.txt
+    - bytesize: 34572
+      file_mime_type: ~
+      line_count: ~
+      md5: 299611a2a3f5bcc04901d011484f62b4
+      mtime: 1193921633
+      name: LicenseFAQ.pdf
+    - bytesize: 8878
+      file_mime_type: ~
+      line_count: ~
+      md5: a75383550234cdd75d259e079e64646a
+      mtime: 1193921633
+      name: LicenseFAQ.txt
+    - bytesize: 6543
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1193921892
+      name: MANIFEST
+    - bytesize: 737
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1193921829
+      name: META.yml
+    - bytesize: 1184
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1194290871
+      name: Makefile.PL
+    - bytesize: 4145
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1193921633
+      name: README
+    - bytesize: 755
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d0350ed72afa0b2391a99ecbb6e2246
+      mtime: 1193921633
+      name: README.Authentication
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1193921633
+      name: TODO
+    - bytesize: 1514
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a79bdf9710789d1fe47f13dc195d129
+      mtime: 1193921633
+      name: examples/README
+    - bytesize: 1574
+      file_mime_type: ~
+      line_count: ~
+      md5: 02fb82c482eb8b1c5a11b7296a8466a0
+      mtime: 1193921632
+      name: examples/assigning/assignClient.pl
+    - bytesize: 688
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b71e15396744bb8780e6ee08e08557c
+      mtime: 1193921632
+      name: examples/assigning/assigningService.pl
+    - bytesize: 2145
+      file_mime_type: ~
+      line_count: ~
+      md5: 0495314492fdf257b086545bb02aefc6
+      mtime: 1193921632
+      name: examples/assigning/testAssigningAuth.pm
+    - bytesize: 634
+      file_mime_type: ~
+      line_count: ~
+      md5: 88eb16809ac18f8d29ebc79bffbe8bfa
+      mtime: 1193921633
+      name: examples/client/authorities
+    - bytesize: 8910
+      file_mime_type: ~
+      line_count: ~
+      md5: d721c163bb431ed173b9dec70ea677fc
+      mtime: 1193921633
+      name: examples/client/lsid_client.pl
+    - bytesize: 486
+      file_mime_type: ~
+      line_count: ~
+      md5: dc903dda5470b105f85414a0b8355dc3
+      mtime: 1193921632
+      name: examples/configs/lsid-cache.properties
+    - bytesize: 2272
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d9c88e925d9c7bb98fdd542026a896d
+      mtime: 1193921632
+      name: examples/configs/lsid-client.xml
+    - bytesize: 14017
+      file_mime_type: ~
+      line_count: ~
+      md5: 91cfa48e60f4ee9aedcbf39327e12276
+      mtime: 1193921631
+      name: examples/designer/Designer.pm
+    - bytesize: 2232
+      file_mime_type: ~
+      line_count: ~
+      md5: f0c01ada7dcdacb55f86a76af05eb511
+      mtime: 1193921631
+      name: examples/designer/Namespaces.tt
+    - bytesize: 2916
+      file_mime_type: ~
+      line_count: ~
+      md5: 00068bc4a098a7461029d987e647e0eb
+      mtime: 1193921631
+      name: examples/designer/authority.tt
+    - bytesize: 81
+      file_mime_type: ~
+      line_count: ~
+      md5: bf2442b7d16a72db26ee30ff33be8096
+      mtime: 1193921631
+      name: examples/designer/index.cgi
+    - bytesize: 1729
+      file_mime_type: ~
+      line_count: ~
+      md5: e643b3e5ca97818dde19cce54be73ceb
+      mtime: 1193921631
+      name: examples/designer/style.css
+    - bytesize: 3264
+      file_mime_type: ~
+      line_count: ~
+      md5: 5eacce08b6e3dc2da7b4db852772eb8a
+      mtime: 1193921631
+      name: examples/designer/templates/configuration.html.template
+    - bytesize: 29
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e5baeeacc239bc1ddde0fb07a88d1d6
+      mtime: 1193921631
+      name: examples/designer/templates/footer.html.template
+    - bytesize: 17
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f6be2acaa1847cdf9e1d8d70d9a24ef
+      mtime: 1193921631
+      name: examples/designer/templates/header.html.template
+    - bytesize: 2127
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b14f6b53a918df823021dabfa91e7e6
+      mtime: 1193921631
+      name: examples/designer/templates/instructions.html.template
+    - bytesize: 4166
+      file_mime_type: ~
+      line_count: ~
+      md5: 248bc60359e46fece65b408bc62b61b1
+      mtime: 1193921631
+      name: examples/designer/templates/javascript.html.template
+    - bytesize: 2338
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f41047c1590511343002791a888cb35
+      mtime: 1193921631
+      name: examples/designer/templates/ports.html.template
+    - bytesize: 2067
+      file_mime_type: ~
+      line_count: ~
+      md5: fd28513aa57b5b778427d9b6524d9636
+      mtime: 1193921631
+      name: examples/designer/templates/services.html.template
+    - bytesize: 935
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b0f81c91ebfcfeb5afe83a861ecc94f
+      mtime: 1193921631
+      name: examples/designer/templates/start.html.template
+    - bytesize: 601
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d177442044f1766b1494f00975215ff
+      mtime: 1193921631
+      name: examples/designer/templates/view.html.template
+    - bytesize: 497
+      file_mime_type: ~
+      line_count: ~
+      md5: 927624169558b8086b5738f755b26be4
+      mtime: 1193921631
+      name: examples/designer/templates/view_menu.html.template
+    - bytesize: 502
+      file_mime_type: ~
+      line_count: ~
+      md5: d6247fe014c7b1bcfba6bde46a136186
+      mtime: 1193921630
+      name: examples/http_metadata/formats/csv.metadata
+    - bytesize: 488
+      file_mime_type: ~
+      line_count: ~
+      md5: 50795e1d407a6c45cef892ad114880c7
+      mtime: 1193921630
+      name: examples/http_metadata/formats/fasta.metadata
+    - bytesize: 490
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0045f59cb909a43d32ebbecd258486
+      mtime: 1193921630
+      name: examples/http_metadata/formats/gif.metadata
+    - bytesize: 533
+      file_mime_type: ~
+      line_count: ~
+      md5: 38d77973f0058f0d5543d12c0a90840a
+      mtime: 1193921630
+      name: examples/http_metadata/formats/html.metadata
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: b8f38e7f9cafebb165a2d6bbc9a1a97c
+      mtime: 1193921630
+      name: examples/http_metadata/formats/jpg.metadata
+    - bytesize: 462
+      file_mime_type: ~
+      line_count: ~
+      md5: f7f71e91eedcb187ae0fc3b4ebfb286b
+      mtime: 1193921630
+      name: examples/http_metadata/formats/locuslink_full.metadata
+    - bytesize: 488
+      file_mime_type: ~
+      line_count: ~
+      md5: ecbb63423461e3035562d194143d00c0
+      mtime: 1193921630
+      name: examples/http_metadata/formats/mmcif.metadata
+    - bytesize: 484
+      file_mime_type: ~
+      line_count: ~
+      md5: d125c16364b57e2fd7931ede7658681f
+      mtime: 1193921630
+      name: examples/http_metadata/formats/pdb.metadata
+    - bytesize: 498
+      file_mime_type: ~
+      line_count: ~
+      md5: 3016c272b1d60ceca40fccdc8cb19856
+      mtime: 1193921630
+      name: examples/http_metadata/formats/pdf.metadata
+    - bytesize: 490
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c7ce3c6f4b9f4e0db4027ed748e6533
+      mtime: 1193921630
+      name: examples/http_metadata/formats/png.metadata
+    - bytesize: 453
+      file_mime_type: ~
+      line_count: ~
+      md5: 35ffbbceae2420492e395978ddbe2358
+      mtime: 1193921630
+      name: examples/http_metadata/formats/sprot.metadata
+    - bytesize: 492
+      file_mime_type: ~
+      line_count: ~
+      md5: 59c04b890609d610ff48c2f94a6e1263
+      mtime: 1193921630
+      name: examples/http_metadata/formats/text.metadata
+    - bytesize: 844
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b65bfcc88472a3b41c32f5eb430eb3d
+      mtime: 1193921630
+      name: examples/http_metadata/http.conf.EXAMPLE
+    - bytesize: 4442
+      file_mime_type: ~
+      line_count: ~
+      md5: 125f9e8ae1b0d4fb9be709a4fb690525
+      mtime: 1193921630
+      name: examples/http_metadata/i3c_authority.pl
+    - bytesize: 1500
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fd6161dfa4992aea16bff1fa70c175e
+      mtime: 1193921630
+      name: examples/http_metadata/i3c_metadata.cgi
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bc9c66b8cabe23ecb65307e28226c8b
+      mtime: 1193921629
+      name: examples/http_metadata/predicates/hasextension.metadata
+    - bytesize: 625
+      file_mime_type: ~
+      line_count: ~
+      md5: 5026de90820b8be085ed4ca8fa6c7ca7
+      mtime: 1193921629
+      name: examples/http_metadata/predicates/storedas.metadata
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ca18f53a40a2c61d5b26e14c31309a1
+      mtime: 1193921630
+      name: examples/http_metadata/types/content.metadata
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: 221cc317b70f20ffd3ea79ef57e93c3e
+      mtime: 1193921630
+      name: examples/http_metadata/types/format.metadata
+    - bytesize: 96
+      file_mime_type: ~
+      line_count: ~
+      md5: 72587f7d2fe6430c5f1a464755f74935
+      mtime: 1193921633
+      name: examples/hugo_authority/data/hugo.txt
+    - bytesize: 2137
+      file_mime_type: ~
+      line_count: ~
+      md5: 0179728636e9047c6ceb343935642873
+      mtime: 1193921633
+      name: examples/hugo_authority/http.conf.EXAMPLE
+    - bytesize: 6058
+      file_mime_type: ~
+      line_count: ~
+      md5: 0075c6f414698d8d49aca2199dd79a40
+      mtime: 1193921633
+      name: examples/hugo_authority/hugoNamespaces.pm
+    - bytesize: 2596
+      file_mime_type: ~
+      line_count: ~
+      md5: 01f72e901120182f847137bafea5b93b
+      mtime: 1193921633
+      name: examples/hugo_authority/hugo_authority.pl
+    - bytesize: 474
+      file_mime_type: ~
+      line_count: ~
+      md5: 57d51d82dfab9b9f666595c3f232023e
+      mtime: 1193921633
+      name: examples/hugo_authority/predicates/aliases.metadata
+    - bytesize: 499
+      file_mime_type: ~
+      line_count: ~
+      md5: af6d22a245353503a0b47626f520f245
+      mtime: 1193921633
+      name: examples/hugo_authority/predicates/external_link.metadata
+    - bytesize: 474
+      file_mime_type: ~
+      line_count: ~
+      md5: 95faa3a535157edf55bab65efffb76cc
+      mtime: 1193921633
+      name: examples/hugo_authority/predicates/location.metadata
+    - bytesize: 501
+      file_mime_type: ~
+      line_count: ~
+      md5: 2366dad663ec8c025ddc060fb977d64e
+      mtime: 1193921633
+      name: examples/hugo_authority/predicates/prev_gene_name.metadata
+    - bytesize: 520
+      file_mime_type: ~
+      line_count: ~
+      md5: f1e352f05c7bcf6a21d5c45e8f5be085
+      mtime: 1193921633
+      name: examples/hugo_authority/predicates/seq_accessionid.metadata
+    - bytesize: 483
+      file_mime_type: ~
+      line_count: ~
+      md5: 6de6f378bfd6f18dc4cac4316b0c6e46
+      mtime: 1193921633
+      name: examples/hugo_authority/predicates/status.metadata
+    - bytesize: 465
+      file_mime_type: ~
+      line_count: ~
+      md5: cabb4db84d27d39691000d380449ba11
+      mtime: 1193921633
+      name: examples/hugo_authority/scripts/create_database.sh
+    - bytesize: 508
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b30ba28574141237f0d95d4e274a0a8
+      mtime: 1193921633
+      name: examples/hugo_authority/sql/create_hugo_table.sql
+    - bytesize: 502
+      file_mime_type: ~
+      line_count: ~
+      md5: 9208a42af8c98b384af53eef90815012
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/csv.metadata
+    - bytesize: 488
+      file_mime_type: ~
+      line_count: ~
+      md5: cf8f99a8818806782b541b8cc630f93b
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/fasta.metadata
+    - bytesize: 490
+      file_mime_type: ~
+      line_count: ~
+      md5: 47de3135e6f7a0399fc6ff6fd5aac156
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/gif.metadata
+    - bytesize: 533
+      file_mime_type: ~
+      line_count: ~
+      md5: bba046020b908266f3ba5798413efadb
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/html.metadata
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: d689fa90dc3ac1a0e21264c8346a49cf
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/jpg.metadata
+    - bytesize: 462
+      file_mime_type: ~
+      line_count: ~
+      md5: 03c0a768ef9e6665bf966187c8231c3e
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/locuslink_full.metadata
+    - bytesize: 488
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e8a8ad758c5f413965aadf0d67cd813
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/mmcif.metadata
+    - bytesize: 484
+      file_mime_type: ~
+      line_count: ~
+      md5: 3da9c1b38a2077c981a7655c22eed84d
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/pdb.metadata
+    - bytesize: 498
+      file_mime_type: ~
+      line_count: ~
+      md5: d4bc2a490149a1f9c39ad9afa3a325e4
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/pdf.metadata
+    - bytesize: 490
+      file_mime_type: ~
+      line_count: ~
+      md5: b24513c2908a7280aa3a0d4769930620
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/png.metadata
+    - bytesize: 453
+      file_mime_type: ~
+      line_count: ~
+      md5: 316352ec2f98ccfaa5fd7994b208c75f
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/sprot.metadata
+    - bytesize: 492
+      file_mime_type: ~
+      line_count: ~
+      md5: 891b53405c88ad6a806be10e990c36b5
+      mtime: 1193921632
+      name: examples/i3c_authority/formats/text.metadata
+    - bytesize: 864
+      file_mime_type: ~
+      line_count: ~
+      md5: 853c9d7d42b76e42bfb41d6dfb90df7d
+      mtime: 1193921632
+      name: examples/i3c_authority/http.conf.EXAMPLE
+    - bytesize: 3121
+      file_mime_type: ~
+      line_count: ~
+      md5: bb1076bbd94960b0d7ad085ed2d8ecee
+      mtime: 1193921632
+      name: examples/i3c_authority/i3cNamespaces.pm
+    - bytesize: 3080
+      file_mime_type: ~
+      line_count: ~
+      md5: 44ec9dbb37456b9d94cac889294c3db4
+      mtime: 1193921632
+      name: examples/i3c_authority/i3c_authority.pl
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: 53256cf43a06c4136bacb4240f47f709
+      mtime: 1193921632
+      name: examples/i3c_authority/predicates/hasextension.metadata
+    - bytesize: 625
+      file_mime_type: ~
+      line_count: ~
+      md5: cc2b8d5b243dfb1d47ca8824eebdcb07
+      mtime: 1193921632
+      name: examples/i3c_authority/predicates/storedas.metadata
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: bd2d957bcee3ada30b8276435bdaf45f
+      mtime: 1193921632
+      name: examples/i3c_authority/types/content.metadata
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: 1adb27f314b1a2899ba4f8223b4b2e85
+      mtime: 1193921632
+      name: examples/i3c_authority/types/format.metadata
+    - bytesize: 2634
+      file_mime_type: ~
+      line_count: ~
+      md5: 48a6ca2c9bd7d522d1be59ae0ac4f60a
+      mtime: 1193921632
+      name: examples/proxy_resolver/Namespaces.pm
+    - bytesize: 3058
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ff0a9ce77b231c9621b0832d8014ab8
+      mtime: 1193921632
+      name: examples/proxy_resolver/proxy_authority.pl
+    - bytesize: 4360
+      file_mime_type: ~
+      line_count: ~
+      md5: 881a9c42fca59ace5600fe4a7206f491
+      mtime: 1193921631
+      name: examples/tools/AssigningSvcTemplate.pm
+    - bytesize: 3421
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a852eebda2f643166a4f8c267f52f2b
+      mtime: 1193921631
+      name: examples/tools/wsdl_parser.pl
+    - bytesize: 7602
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c808eb48c1df6fc4e9b302f64ffe85f
+      mtime: 1193921631
+      name: examples/webresolver/Metadata.pm
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b1f61d5c114c7287a71694dd21d9e29
+      mtime: 1193921631
+      name: examples/webresolver/README.Apache
+    - bytesize: 15486
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a03a8d8c56085f61a707708cd8bedd7
+      mtime: 1193921631
+      name: examples/webresolver/WebResolver.pm
+    - bytesize: 622
+      file_mime_type: ~
+      line_count: ~
+      md5: fc9833b4a7b4ec3c31781edc299de4d5
+      mtime: 1193921631
+      name: examples/webresolver/authorities
+    - bytesize: 89
+      file_mime_type: ~
+      line_count: ~
+      md5: 13c053e38f6632994b92ab24309975a9
+      mtime: 1193921630
+      name: examples/webresolver/images/arrow.gif
+    - bytesize: 20069
+      file_mime_type: ~
+      line_count: ~
+      md5: c369ced4951c7b4616e4b6130dbd80d3
+      mtime: 1193921630
+      name: examples/webresolver/images/banner.gif
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 05641b6cad91634e01ad977625666c04
+      mtime: 1193921631
+      name: examples/webresolver/index.cgi
+    - bytesize: 665
+      file_mime_type: ~
+      line_count: ~
+      md5: 839b4636d794455a629406c37c1a828a
+      mtime: 1193921631
+      name: examples/webresolver/style.css
+    - bytesize: 2198
+      file_mime_type: ~
+      line_count: ~
+      md5: ced6efb475a1ed4b6fc3cde3aa64aa23
+      mtime: 1193921631
+      name: examples/webresolver/templates/advanced.html.template
+    - bytesize: 1932
+      file_mime_type: ~
+      line_count: ~
+      md5: c3866f01a020fcd62cd45e637b9541e9
+      mtime: 1193921631
+      name: examples/webresolver/templates/authority.html.template
+    - bytesize: 262
+      file_mime_type: ~
+      line_count: ~
+      md5: be1cb24c8d42f5461dbbe7a8608a3709
+      mtime: 1193921631
+      name: examples/webresolver/templates/fetch.html.template
+    - bytesize: 21
+      file_mime_type: ~
+      line_count: ~
+      md5: 7620a7723ed90d8b45143f0330dc74a6
+      mtime: 1193921631
+      name: examples/webresolver/templates/footer.html.template
+    - bytesize: 16
+      file_mime_type: ~
+      line_count: ~
+      md5: c8da28a23829254fac8a1bd7b8641145
+      mtime: 1193921631
+      name: examples/webresolver/templates/header.html.template
+    - bytesize: 546
+      file_mime_type: ~
+      line_count: ~
+      md5: 1538406bfe3c984ed24e217e2cf4ee9f
+      mtime: 1193921631
+      name: examples/webresolver/templates/image.html.template
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: 52410de7e0ee48a2ba4cf3c1bbee933f
+      mtime: 1193921631
+      name: examples/webresolver/templates/javascript.html.template
+    - bytesize: 629
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e567c7c36ef6658d0a000f8ef19340f
+      mtime: 1193921631
+      name: examples/webresolver/templates/start.html.template
+    - bytesize: 639
+      file_mime_type: ~
+      line_count: ~
+      md5: 18505421d588b21d788a3dfdca81d335
+      mtime: 1193921631
+      name: examples/webresolver/templates/summary.html.template
+    - bytesize: 21754
+      file_mime_type: ~
+      line_count: ~
+      md5: 5df3a53b195a607829bddc376dbf459e
+      mtime: 1194291230
+      name: inc/Module/AutoInstall.pm
+    - bytesize: 8354
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1194291230
+      name: inc/Module/Install.pm
+    - bytesize: 1271
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fbb135dedaecade08ee4b691de9234
+      mtime: 1194291230
+      name: inc/Module/Install/AutoInstall.pm
+    - bytesize: 1123
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1194291230
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1870
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1194291235
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2549
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1194291235
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 558
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1194291230
+      name: inc/Module/Install/Include.pm
+    - bytesize: 6198
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1194291235
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 9383
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1194291230
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1194291235
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 959
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1194291235
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 7704
+      file_mime_type: ~
+      line_count: ~
+      md5: 387a069ccfc0e3480bbf66a2a49feca7
+      mtime: 1194291158
+      name: lib/LS.pm
+    - bytesize: 8059
+      file_mime_type: ~
+      line_count: ~
+      md5: 669f6912fdcd7cd478689e54dff27393
+      mtime: 1194290391
+      name: lib/LS/Assigning/Client.pm
+    - bytesize: 5232
+      file_mime_type: ~
+      line_count: ~
+      md5: f6d749457d011f8bba6354195acf4a94
+      mtime: 1194290391
+      name: lib/LS/Assigning/Serializer.pm
+    - bytesize: 7905
+      file_mime_type: ~
+      line_count: ~
+      md5: 154a7709a419602617138d930b2b5155
+      mtime: 1194290391
+      name: lib/LS/Assigning/Service.pm
+    - bytesize: 5223
+      file_mime_type: ~
+      line_count: ~
+      md5: 775ebb95d0fb35544530ba259927b5d7
+      mtime: 1194290391
+      name: lib/LS/Assigning/WSDL/LSIDAssigningPortType.wsdl
+    - bytesize: 3193
+      file_mime_type: ~
+      line_count: ~
+      md5: c2c24aeb00ccb473bfad0c8cb7a487ce
+      mtime: 1194290391
+      name: lib/LS/Assigning/WSDL/LSIDAssigningSOAPBinding.wsdl
+    - bytesize: 16632
+      file_mime_type: ~
+      line_count: ~
+      md5: e3c3ef7dd6e946f0df1d843cce76ce7e
+      mtime: 1194290391
+      name: lib/LS/Authority.pm
+    - bytesize: 2417
+      file_mime_type: ~
+      line_count: ~
+      md5: 15b979931c0e98b7173ac469e649a50a
+      mtime: 1194290391
+      name: lib/LS/Authority/Mappings.pm
+    - bytesize: 19862
+      file_mime_type: ~
+      line_count: ~
+      md5: a2e6aff4bd690fa16f66111093926133
+      mtime: 1194290556
+      name: lib/LS/Authority/WSDL.pm
+    - bytesize: 6705
+      file_mime_type: ~
+      line_count: ~
+      md5: 62263fcdb532781f7d2d22f1b9620e19
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/Bindings.pm
+    - bytesize: 3915
+      file_mime_type: ~
+      line_count: ~
+      md5: 99d111d7dbf6b7f2c6d74458d530fafe
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/Constants.pm
+    - bytesize: 1145
+      file_mime_type: ~
+      line_count: ~
+      md5: 85e18b63e6b1fbc57a9c986f69b1b813
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDAuthorityServiceHTTPBindings.wsdl
+    - bytesize: 1450
+      file_mime_type: ~
+      line_count: ~
+      md5: 01ec7083f29759a22378517282c8d5d3
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDAuthorityServiceSOAPBindings.wsdl
+    - bytesize: 1358
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ec5ff074a45cc86a838ccb3c0a1a80
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDDataServiceFTPBindings.wsdl
+    - bytesize: 1339
+      file_mime_type: ~
+      line_count: ~
+      md5: 61ebd071ce3670de3f48939026afa587
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDDataServiceFileBindings.wsdl
+    - bytesize: 3525
+      file_mime_type: ~
+      line_count: ~
+      md5: 54329dded10de449152f52c0976092d7
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDDataServiceHTTPBindings.wsdl
+    - bytesize: 3560
+      file_mime_type: ~
+      line_count: ~
+      md5: 09330e9c025ce25e5518a11184de5f6a
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDDataServiceSOAPBindings.wsdl
+    - bytesize: 3089
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e650957480b18c7073a1187c822aa6e
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/LSIDPortTypes.wsdl
+    - bytesize: 1457
+      file_mime_type: ~
+      line_count: ~
+      md5: 05653ec0ad20bf225dd79c58b449b4f1
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/Location.pm
+    - bytesize: 9091
+      file_mime_type: ~
+      line_count: ~
+      md5: 482e916e151e5dcedb1bd5f3d30a1d50
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/Services.pm
+    - bytesize: 13836
+      file_mime_type: ~
+      line_count: ~
+      md5: d3ee927f371742f8ab9f6fbda9085ab5
+      mtime: 1194290391
+      name: lib/LS/Authority/WSDL/Simple.pm
+    - bytesize: 7309
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f8f3b99fe4173d59b89178c82dd0134
+      mtime: 1194290391
+      name: lib/LS/Cache/Config.pm
+    - bytesize: 1928
+      file_mime_type: ~
+      line_count: ~
+      md5: c4a7c92b0736a9000605c6ec1ca63fec
+      mtime: 1194290391
+      name: lib/LS/Cache/Logger.pm
+    - bytesize: 23562
+      file_mime_type: ~
+      line_count: ~
+      md5: c8a3c089727dd960c915fec4d0650e8d
+      mtime: 1194290391
+      name: lib/LS/Cache/Manager.pm
+    - bytesize: 3675
+      file_mime_type: ~
+      line_count: ~
+      md5: 04051d532febbb9d5fbf0b81668a0d33
+      mtime: 1194290392
+      name: lib/LS/Client.pm
+    - bytesize: 10856
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b40987e5b011d693307326bb8599229
+      mtime: 1194290392
+      name: lib/LS/Client/BasicResolver.pm
+    - bytesize: 2996
+      file_mime_type: ~
+      line_count: ~
+      md5: c5289caf0af5a676e92cc18ebf47e5f6
+      mtime: 1194290392
+      name: lib/LS/Client/FTP.pm
+    - bytesize: 8623
+      file_mime_type: ~
+      line_count: ~
+      md5: a0d83ca177ecbb9953bb0fc3beaa80aa
+      mtime: 1194290392
+      name: lib/LS/Client/HTTP.pm
+    - bytesize: 10748
+      file_mime_type: ~
+      line_count: ~
+      md5: 384bdd9454763d26e3840cb1e434d611
+      mtime: 1194290392
+      name: lib/LS/Client/SOAP.pm
+    - bytesize: 11485
+      file_mime_type: ~
+      line_count: ~
+      md5: 03673b264493310f5ef6d03f0a08a12d
+      mtime: 1194290392
+      name: lib/LS/Config.pm
+    - bytesize: 16054
+      file_mime_type: ~
+      line_count: ~
+      md5: a1941c69f4be127b5719aa4360849b31
+      mtime: 1194290392
+      name: lib/LS/HTTP/Service.pm
+    - bytesize: 7221
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b253dec22b14ad1e0dbc1fef00bf286
+      mtime: 1194290392
+      name: lib/LS/ID.pm
+    - bytesize: 11347
+      file_mime_type: ~
+      line_count: ~
+      md5: f9c702b7f0835f69d8ec3801c3ce8be2
+      mtime: 1194290392
+      name: lib/LS/Locator.pm
+    - bytesize: 6281
+      file_mime_type: ~
+      line_count: ~
+      md5: fc97a0a99eb0e8a80e28b79f22b2f463
+      mtime: 1194290392
+      name: lib/LS/RDF/ComplexDocument.pm
+    - bytesize: 601
+      file_mime_type: ~
+      line_count: ~
+      md5: cdc520a485db082c3d27dd2ee5a89a2e
+      mtime: 1194290392
+      name: lib/LS/RDF/Constants.pm
+    - bytesize: 8923
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a2ae948fc7d195b6f6971ea9e59149a
+      mtime: 1194290392
+      name: lib/LS/RDF/Metadata.pm
+    - bytesize: 4167
+      file_mime_type: ~
+      line_count: ~
+      md5: 54da3be5c810383e225da9ce1fd4cdfb
+      mtime: 1194290392
+      name: lib/LS/RDF/SimpleDocument.pm
+    - bytesize: 23547
+      file_mime_type: ~
+      line_count: ~
+      md5: 4079104df167f03f3efcde4e6bc0b6fa
+      mtime: 1194290392
+      name: lib/LS/Resource.pm
+    - bytesize: 3044
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c2af4ecb7d2cc69ea1de42a3e27e8e2
+      mtime: 1194290392
+      name: lib/LS/SOAP/Fault.pm
+    - bytesize: 2552
+      file_mime_type: ~
+      line_count: ~
+      md5: bded381a51a054d28ec15b062e644a31
+      mtime: 1194290392
+      name: lib/LS/SOAP/Serializer.pm
+    - bytesize: 23141
+      file_mime_type: ~
+      line_count: ~
+      md5: f6872d2d1079d9622623c5317aba5a0c
+      mtime: 1194290392
+      name: lib/LS/SOAP/Service.pm
+    - bytesize: 5698
+      file_mime_type: ~
+      line_count: ~
+      md5: be44e5b40f3fd0a9449834eb5376a3e5
+      mtime: 1194290392
+      name: lib/LS/Service.pm
+    - bytesize: 1574
+      file_mime_type: ~
+      line_count: ~
+      md5: a98192b4ffe85f43193fa014e5437ba8
+      mtime: 1194290392
+      name: lib/LS/Service/AdvancedDataService.pm
+    - bytesize: 12058
+      file_mime_type: ~
+      line_count: ~
+      md5: dd400486ad94c416581a61389e618e12
+      mtime: 1194290392
+      name: lib/LS/Service/Authority.pm
+    - bytesize: 5586
+      file_mime_type: ~
+      line_count: ~
+      md5: 236fc83456866ddabe2e4780ee7e73c0
+      mtime: 1194290392
+      name: lib/LS/Service/DataService.pm
+    - bytesize: 6032
+      file_mime_type: ~
+      line_count: ~
+      md5: 9672f35e5d7f8b5ba996ab8b721e0615
+      mtime: 1194290392
+      name: lib/LS/Service/Fault.pm
+    - bytesize: 5021
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f90796aa51a0ec366c0a238666976f
+      mtime: 1194290392
+      name: lib/LS/Service/Namespace.pm
+    - bytesize: 2507
+      file_mime_type: ~
+      line_count: ~
+      md5: 043cefce01ecb173923cac0d76a7a265
+      mtime: 1194290392
+      name: lib/LS/Service/Response.pm
+    - bytesize: 10202
+      file_mime_type: ~
+      line_count: ~
+      md5: 69ee236dfbd1cb97bb6c009944555a49
+      mtime: 1193921633
+      name: rfcfan.txt
+    - bytesize: 959
+      file_mime_type: ~
+      line_count: ~
+      md5: ee67dd1f6e0000b74498f876a424cc57
+      mtime: 1193921625
+      name: t/1.t
+    - bytesize: 2139
+      file_mime_type: ~
+      line_count: ~
+      md5: 41bb5b2d5d4887a9c72f24386a7e1c4a
+      mtime: 1193921625
+      name: t/Authority.t
+    - bytesize: 1094
+      file_mime_type: ~
+      line_count: ~
+      md5: 09fc4b64ce4e4f418da8e452e27e58f0
+      mtime: 1193921625
+      name: t/ID.t
+    - bytesize: 1773
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c8c663667907658040abc4685d77307
+      mtime: 1193921625
+      name: t/Locator.t
+    - bytesize: 1953
+      file_mime_type: ~
+      line_count: ~
+      md5: 095fcea5fc299f01cbda1cf29a48741c
+      mtime: 1193921625
+      name: t/WSDL01.t
+    - bytesize: 2827
+      file_mime_type: ~
+      line_count: ~
+      md5: 222419403305c305ad614c574597c34e
+      mtime: 1193921625
+      name: t/WSDL02.t
+    - bytesize: 1982
+      file_mime_type: ~
+      line_count: ~
+      md5: 6519cc5781c4d046b9ee1b09c6ea787d
+      mtime: 1193921625
+      name: t/WSDL03.t
+    - bytesize: 2025
+      file_mime_type: ~
+      line_count: ~
+      md5: 4df30f4e91f89869b62ee4afd7bf2bb0
+      mtime: 1193921625
+      name: t/WSDL04.t
+    - bytesize: 2921
+      file_mime_type: ~
+      line_count: ~
+      md5: 401c4d2ba3b4f37fa08ab581c7f9f3e7
+      mtime: 1193921625
+      name: t/WSDL05.t
+    - bytesize: 2184
+      file_mime_type: ~
+      line_count: ~
+      md5: 68f6889555524a09c44d3aca5d9043dc
+      mtime: 1193921625
+      name: t/WSDL_ns01.t
+    - bytesize: 2254
+      file_mime_type: ~
+      line_count: ~
+      md5: 79f85bb3b356e17156c80e6fce8c1141
+      mtime: 1193921625
+      name: t/WSDL_ns02.t
+    - bytesize: 189
+      file_mime_type: ~
+      line_count: ~
+      md5: 773032c1302d53358d8acec2b61995af
+      mtime: 1193921625
+      name: t/authorities
+    - bytesize: 1092
+      file_mime_type: ~
+      line_count: ~
+      md5: b2b900f08ec45c7b790af48032338db9
+      mtime: 1193921625
+      name: t/authority01.wsdl
+    - bytesize: 1267
+      file_mime_type: ~
+      line_count: ~
+      md5: 34afbbbe3f5e5cf27d70b5b8449fd5f2
+      mtime: 1193921625
+      name: t/authority02.wsdl
+    - bytesize: 1492
+      file_mime_type: ~
+      line_count: ~
+      md5: ffa12facd4573191bc0f3ff1df35b473
+      mtime: 1193921625
+      name: t/authority03.wsdl
+    - bytesize: 1470
+      file_mime_type: ~
+      line_count: ~
+      md5: 2837a41b8bda2e3907fbd427b1ab6adf
+      mtime: 1193921625
+      name: t/authority04.wsdl
+    - bytesize: 1019
+      file_mime_type: ~
+      line_count: ~
+      md5: d1a736ba1fdfc016cc278fccabf67759
+      mtime: 1193921625
+      name: t/authority05.wsdl
+    - bytesize: 1524
+      file_mime_type: ~
+      line_count: ~
+      md5: 57a20a7d5112cbf9cffb89cbe598058f
+      mtime: 1193921625
+      name: t/authorityns01.wsdl
+    - bytesize: 1513
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cafab839be732b0a9c2422efd0793e3
+      mtime: 1193921625
+      name: t/authorityns02.wsdl
+  module_info:
+    - bytesize: 7704
+      file_mime_type: ~
+      line_count: ~
+      md5: 939dd475e8969452952616607661b426
+      module_name_from_file_guess: LS
+      mtime: 1194291158
+      name: blib/lib/LS.pm
+      packages:
+        - LS
+        - LS::Base
+        - LS::Exception
+        - LS::InvalidParameterException
+        - LS::MalformedParameterException
+        - LS::RuntimeException
+        - LS::ClientException
+      primary_package: LS
+      uses:
+        - Error
+        - ''
+        - strict
+        - warnings
+        - vars
+        - Carp
+        - base
+        - overload
+      version_info:
+        filename: blib/lib/LS.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.1.7
+    - bytesize: 8059
+      file_mime_type: ~
+      line_count: ~
+      md5: 702c75a39b3b65b5c5a8370797ef232a
+      module_name_from_file_guess: LS::Assigning::Client
+      mtime: 1194290391
+      name: blib/lib/LS/Assigning/Client.pm
+      packages:
+        - LS::Assigning::Client
+      primary_package: LS::Assigning::Client
+      uses:
+        - strict
+        - warnings
+        - LS
+        - LS::ID
+        - LS::Client
+        - LS::Service::Response
+        - LS::Assigning::Serializer
+        - SOAP::Lite
+        - base
+      version_info:
+        filename: blib/lib/LS/Assigning/Client.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5232
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b98e44f66d5828f1f314f4bb68f9e1b
+      module_name_from_file_guess: LS::Assigning::Serializer
+      mtime: 1194290391
+      name: blib/lib/LS/Assigning/Serializer.pm
+      packages:
+        - LS::Assigning::Serializer
+      primary_package: LS::Assigning::Serializer
+      uses:
+        - strict
+        - warnings
+        - LS::ID
+      version_info:
+        filename: blib/lib/LS/Assigning/Serializer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7905
+      file_mime_type: ~
+      line_count: ~
+      md5: 5acb37332e770be2efd9013809fce844
+      module_name_from_file_guess: LS::Assigning::Service
+      mtime: 1194290391
+      name: blib/lib/LS/Assigning/Service.pm
+      packages:
+        - LS::Assigning::Service
+      primary_package: LS::Assigning::Service
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS::ID
+        - LS::Service
+        - LS::Service::Response
+        - LS::SOAP::Fault
+        - LS::SOAP::Serializer
+        - LS::Assigning::Serializer
+        - SOAP::Lite
+        - HTTP::Response
+        - HTTP::Request
+        - Carp
+      version_info:
+        filename: blib/lib/LS/Assigning/Service.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 16632
+      file_mime_type: ~
+      line_count: ~
+      md5: e12f65b1c9a0939566df6b4e061e9aa0
+      module_name_from_file_guess: LS::Authority
+      mtime: 1194290391
+      name: blib/lib/LS/Authority.pm
+      packages:
+        - LS::Authority
+        - LS::Authority::FAN
+      primary_package: LS::Authority
+      uses:
+        - strict
+        - warnings
+        - vars
+        - SOAP::Lite
+        - LS::ID
+        - LS::Authority::WSDL::Constants
+        - LS::Client
+        - LS::Client::HTTP
+        - LS::Client::SOAP
+        - LS::Cache::Manager
+        - base
+        - LS::Locator
+        - LS::Resource
+      version_info:
+        filename: blib/lib/LS/Authority.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2417
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e4f7403a29f4ed13d4e010271862690
+      module_name_from_file_guess: LS::Authority::Mappings
+      mtime: 1194290391
+      name: blib/lib/LS/Authority/Mappings.pm
+      packages:
+        - LS::Authority::WSDL::Mappings
+      primary_package: LS::Authority::WSDL::Mappings
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/LS/Authority/Mappings.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: ~
+    - bytesize: 19862
+      file_mime_type: ~
+      line_count: ~
+      md5: bf39beacda4a9c261d950e2ce4002424
+      module_name_from_file_guess: LS::Authority::WSDL
+      mtime: 1194290556
+      name: blib/lib/LS/Authority/WSDL.pm
+      packages:
+        - LS::Authority::WSDL
+        - LS::Authority::WSDL::ServiceDefinition
+        - LS::Authority::WSDL::Port
+        - LS::Authority::WSDL::Implementation
+      primary_package: LS::Authority::WSDL
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::ID
+        - LS::Authority::WSDL::Constants
+        - LS::Authority::WSDL::Bindings
+        - base
+        - XML::XPath
+      version_info:
+        filename: blib/lib/LS/Authority/WSDL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6705
+      file_mime_type: ~
+      line_count: ~
+      md5: e3f7fd8697334dba1f7e976c86ba627e
+      module_name_from_file_guess: LS::Authority::WSDL::Bindings
+      mtime: 1194290391
+      name: blib/lib/LS/Authority/WSDL/Bindings.pm
+      packages:
+        - LS::Authority::WSDL::Bindings
+        - LS::Authority::WSDL::Binding
+        - LS::Authority::WSDL::Binding::Operation
+      primary_package: LS::Authority::WSDL::Bindings
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS::Authority::WSDL::Constants
+        - LS::Authority::WSDL
+      version_info:
+        filename: blib/lib/LS/Authority/WSDL/Bindings.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3915
+      file_mime_type: ~
+      line_count: ~
+      md5: 57f61c7ea5d382d8b9f7997bd0d12235
+      module_name_from_file_guess: LS::Authority::WSDL::Constants
+      mtime: 1194290391
+      name: blib/lib/LS/Authority/WSDL/Constants.pm
+      packages:
+        - LS::Authority::WSDL::Constants
+        - LS::Authority::WSDL::Constants::Protocols
+      primary_package: LS::Authority::WSDL::Constants
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Carp
+      version_info:
+        filename: blib/lib/LS/Authority/WSDL/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1457
+      file_mime_type: ~
+      line_count: ~
+      md5: 95f26e00b075d6626f993852b0a27dfd
+      module_name_from_file_guess: LS::Authority::WSDL::Location
+      mtime: 1194290391
+      name: blib/lib/LS/Authority/WSDL/Location.pm
+      packages:
+        - LS::Authority::WSDL::Location
+      primary_package: LS::Authority::WSDL::Location
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+      version_info:
+        filename: blib/lib/LS/Authority/WSDL/Location.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9091
+      file_mime_type: ~
+      line_count: ~
+      md5: d3126bfd625dfd75ed0782a413ac51a2
+      module_name_from_file_guess: LS::Authority::WSDL::Services
+      mtime: 1194290391
+      name: blib/lib/LS/Authority/WSDL/Services.pm
+      packages:
+        - LS::Authority::WSDL::Services
+      primary_package: LS::Authority::WSDL::Services
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::Authority::WSDL::Location
+        - base
+      version_info:
+        filename: blib/lib/LS/Authority/WSDL/Services.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13836
+      file_mime_type: ~
+      line_count: ~
+      md5: 65972d93e8604ca4e26764cc492360a1
+      module_name_from_file_guess: LS::Authority::WSDL::Simple
+      mtime: 1194290391
+      name: blib/lib/LS/Authority/WSDL/Simple.pm
+      packages:
+        - LS::Authority::WSDL::Simple
+        - LS::Authority::WSDL::Simple::MetadataPort
+        - LS::Authority::WSDL::Simple::DataPort
+      primary_package: LS::Authority::WSDL::Simple
+      uses:
+        - strict
+        - warnings
+        - vars
+        - URI
+        - LS
+        - LS::Authority::Mappings
+        - LS::Authority::WSDL
+        - LS::Authority::WSDL::Location
+        - LS::Authority::WSDL::Constants
+        - base
+      version_info:
+        filename: blib/lib/LS/Authority/WSDL/Simple.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7309
+      file_mime_type: ~
+      line_count: ~
+      md5: c87ca3dca1780eeff7973f1b890175af
+      module_name_from_file_guess: LS::Cache::Config
+      mtime: 1194290391
+      name: blib/lib/LS/Cache/Config.pm
+      packages:
+        - LS::Cache::Config
+      primary_package: LS::Cache::Config
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Carp
+        - LS::Cache::Logger
+      version_info:
+        filename: blib/lib/LS/Cache/Config.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1928
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ceeb578dbf2945d9ae9cd80f5581059
+      module_name_from_file_guess: LS::Cache::Logger
+      mtime: 1194290391
+      name: blib/lib/LS/Cache/Logger.pm
+      packages:
+        - LS::Cache::Logger
+      primary_package: LS::Cache::Logger
+      uses:
+        - strict
+        - warnings
+        - Fcntl
+        - Carp
+      version_info:
+        filename: blib/lib/LS/Cache/Logger.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 23562
+      file_mime_type: ~
+      line_count: ~
+      md5: 05de72e21aed8c1a2552c4cf619127bc
+      module_name_from_file_guess: LS::Cache::Manager
+      mtime: 1194290391
+      name: blib/lib/LS/Cache/Manager.pm
+      packages:
+        - LS::Cache::Manager
+      primary_package: LS::Cache::Manager
+      uses:
+        - strict
+        - warnings
+        - vars
+        - IO::File
+        - File::Copy
+        - Fcntl
+        - Time::HiRes
+        - Carp
+        - LS::Cache::Config
+        - LS::Cache::Logger
+      version_info:
+        filename: blib/lib/LS/Cache/Manager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3675
+      file_mime_type: ~
+      line_count: ~
+      md5: d369e5766c124b2717edd28676d52451
+      module_name_from_file_guess: LS::Client
+      mtime: 1194290392
+      name: blib/lib/LS/Client.pm
+      packages:
+        - LS::Client
+        - LS::Client::Credentials
+      primary_package: LS::Client
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - base
+      version_info:
+        filename: blib/lib/LS/Client.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10856
+      file_mime_type: ~
+      line_count: ~
+      md5: e3c1bb05092cf60e71900c620256f25e
+      module_name_from_file_guess: LS::Client::BasicResolver
+      mtime: 1194290392
+      name: blib/lib/LS/Client/BasicResolver.pm
+      packages:
+        - LS::Client::BasicResolver
+      primary_package: LS::Client::BasicResolver
+      uses:
+        - strict
+        - warnings
+        - LS::ID
+        - LS::Client
+        - base
+        - LS::Locator
+      version_info:
+        filename: blib/lib/LS/Client/BasicResolver.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2996
+      file_mime_type: ~
+      line_count: ~
+      md5: efd824764ce59a8e7c2d2c3211fd8033
+      module_name_from_file_guess: LS::Client::FTP
+      mtime: 1194290392
+      name: blib/lib/LS/Client/FTP.pm
+      packages:
+        - LS::Client::FTP
+      primary_package: LS::Client::FTP
+      uses:
+        - strict
+        - warnings
+        - vars
+        - File::Temp
+        - Net::FTP
+        - LS
+        - LS::ID
+        - LS::Client
+        - LS::Service
+      version_info:
+        filename: blib/lib/LS/Client/FTP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8623
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f6cdb89f02e3b8492a89e8d4a201d98
+      module_name_from_file_guess: LS::Client::HTTP
+      mtime: 1194290392
+      name: blib/lib/LS/Client/HTTP.pm
+      packages:
+        - LS::Client::HTTP
+      primary_package: LS::Client::HTTP
+      uses:
+        - strict
+        - warnings
+        - vars
+        - URI
+        - File::Temp
+        - LWP::UserAgent
+        - LS
+        - LS::ID
+        - LS::Client
+        - LS::Service::Response
+        - base
+      version_info:
+        filename: blib/lib/LS/Client/HTTP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10748
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b406832548bd325b4f4c909603b5864
+      module_name_from_file_guess: LS::Client::SOAP
+      mtime: 1194290392
+      name: blib/lib/LS/Client/SOAP.pm
+      packages:
+        - LS::Client::SOAP
+      primary_package: LS::Client::SOAP
+      uses:
+        - strict
+        - warnings
+        - vars
+        - SOAP::Lite
+        - LS::ID
+        - LS::Client
+        - LS::Service::Response
+        - LS::SOAP::Serializer
+        - base
+      version_info:
+        filename: blib/lib/LS/Client/SOAP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11485
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b4db94bd5c1b0648f6444cd75223be
+      module_name_from_file_guess: LS::Config
+      mtime: 1194290392
+      name: blib/lib/LS/Config.pm
+      packages:
+        - LS::Config
+        - LS::Config::File
+        - LS::Config::Cache
+        - LS::Config::HostMapping
+        - LS::Config::ForeignAuthority
+      primary_package: LS::Config
+      uses:
+        - strict
+        - warnings
+        - vars
+        - XML::XPath
+        - LS
+        - base
+      version_info:
+        filename: blib/lib/LS/Config.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 16054
+      file_mime_type: ~
+      line_count: ~
+      md5: 024adcdc8ef63edd6f3114ba92083a5f
+      module_name_from_file_guess: LS::HTTP::Service
+      mtime: 1194290392
+      name: blib/lib/LS/HTTP/Service.pm
+      packages:
+        - LS::HTTP::Service
+        - LS::HTTP::Fault
+      primary_package: LS::HTTP::Service
+      uses:
+        - strict
+        - warnings
+        - vars
+        - URI
+        - HTTP::Status
+        - HTTP::Response
+        - LS
+        - LS::Service
+        - base
+        - LS::Service::Fault
+      version_info:
+        filename: blib/lib/LS/HTTP/Service.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7221
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f98d0581c69313e3796e710a6021850
+      module_name_from_file_guess: LS::ID
+      mtime: 1194290392
+      name: blib/lib/LS/ID.pm
+      packages:
+        - LS::ID
+      primary_package: LS::ID
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/LS/ID.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11347
+      file_mime_type: ~
+      line_count: ~
+      md5: 45e0077d600f202e275348860cca46bc
+      module_name_from_file_guess: LS::Locator
+      mtime: 1194290392
+      name: blib/lib/LS/Locator.pm
+      packages:
+        - LS::Locator
+      primary_package: LS::Locator
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Net::DNS::Resolver
+        - LS
+        - LS::ID
+        - LS::Authority
+        - base
+        - LWP::Simple
+      version_info:
+        filename: blib/lib/LS/Locator.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6281
+      file_mime_type: ~
+      line_count: ~
+      md5: f0226cb60a535809bc4af96bde826370
+      module_name_from_file_guess: LS::RDF::ComplexDocument
+      mtime: 1194290392
+      name: blib/lib/LS/RDF/ComplexDocument.pm
+      packages:
+        - LS::RDF::Complex
+        - LS::RDF::ComplexDocument
+        - LS::RDF::Bag
+      primary_package: LS::RDF::ComplexDocument
+      uses:
+        - strict
+        - warnings
+        - LS::RDF::Constants
+        - LS::RDF::SimpleDocument
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/LS/RDF/ComplexDocument.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 601
+      file_mime_type: ~
+      line_count: ~
+      md5: e1ccf0e5d6d4ecf24677f0050b09759f
+      module_name_from_file_guess: LS::RDF::Constants
+      mtime: 1194290392
+      name: blib/lib/LS/RDF/Constants.pm
+      packages:
+        - LS::RDF::Constants
+      primary_package: LS::RDF::Constants
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/LS/RDF/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8923
+      file_mime_type: ~
+      line_count: ~
+      md5: aae6947035d4b5ef56dc2210afb89ebf
+      module_name_from_file_guess: LS::RDF::Metadata
+      mtime: 1194290392
+      name: blib/lib/LS/RDF/Metadata.pm
+      packages:
+        - LS::RDF::Metadata
+        - LS::RDF::MetadataDocument
+      primary_package: LS::RDF::Metadata
+      uses:
+        - strict
+        - warnings
+        - LS::RDF::Constants
+        - LS::RDF::ComplexDocument
+        - base
+        - RDF::Core::Model
+        - RDF::Core::Model::Parser
+        - RDF::Core::Storage::Memory
+        - RDF::Core::Evaluator
+        - RDF::Core::NodeFactory
+        - RDF::Core::Query
+      version_info:
+        filename: blib/lib/LS/RDF/Metadata.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4167
+      file_mime_type: ~
+      line_count: ~
+      md5: db2614f24bacf3e84b068fae4de710cb
+      module_name_from_file_guess: LS::RDF::SimpleDocument
+      mtime: 1194290392
+      name: blib/lib/LS/RDF/SimpleDocument.pm
+      packages:
+        - LS::RDF::Simple
+        - LS::RDF::SimpleDocument
+      primary_package: LS::RDF::SimpleDocument
+      uses:
+        - strict
+        - warnings
+        - LS
+        - LS::RDF::Constants
+        - base
+        - RDF::Core::Model
+        - RDF::Core::Model::Serializer
+        - RDF::Core::Storage::Memory
+        - RDF::Core::Serializer
+        - RDF::Core::NodeFactory
+        - RDF::Core::Resource
+        - RDF::Core::Statement
+      version_info:
+        filename: blib/lib/LS/RDF/SimpleDocument.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 23547
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e3bc63461438faca955cbb74b9a54b9
+      module_name_from_file_guess: LS::Resource
+      mtime: 1194290392
+      name: blib/lib/LS/Resource.pm
+      packages:
+        - LS::Resource
+      primary_package: LS::Resource
+      uses:
+        - strict
+        - warnings
+        - vars
+        - URI
+        - LS
+        - LS::ID
+        - LS::Authority::WSDL::Constants
+        - base
+        - LS::Locator
+        - LS::Cache::Manager
+        - LS::Authority::WSDL::Simple
+        - RDF::Core::Model
+        - RDF::Core::Model::Parser
+        - RDF::Core::Storage::Memory
+        - RDF::Core::Evaluator
+        - RDF::Core::NodeFactory
+        - RDF::Core::Query
+      version_info:
+        filename: blib/lib/LS/Resource.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3044
+      file_mime_type: ~
+      line_count: ~
+      md5: 37e24318d24ba522a22c5888d8b5fe27
+      module_name_from_file_guess: LS::SOAP::Fault
+      mtime: 1194290392
+      name: blib/lib/LS/SOAP/Fault.pm
+      packages:
+        - LS::SOAP::Fault
+      primary_package: LS::SOAP::Fault
+      uses:
+        - strict
+        - warnings
+        - vars
+        - SOAP::Lite
+        - LS::Service::Fault
+      version_info:
+        filename: blib/lib/LS/SOAP/Fault.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2552
+      file_mime_type: ~
+      line_count: ~
+      md5: fb963dd96ede4f28049794d40807b06c
+      module_name_from_file_guess: LS::SOAP::Serializer
+      mtime: 1194290392
+      name: blib/lib/LS/SOAP/Serializer.pm
+      packages:
+        - LS::SOAP::Serializer
+      primary_package: LS::SOAP::Serializer
+      uses:
+        - strict
+        - vars
+        - SOAP::Lite
+      version_info:
+        filename: blib/lib/LS/SOAP/Serializer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 23141
+      file_mime_type: ~
+      line_count: ~
+      md5: 611bdd5fa34beb5321cdda6fde12e5cc
+      module_name_from_file_guess: LS::SOAP::Service
+      mtime: 1194290392
+      name: blib/lib/LS/SOAP/Service.pm
+      packages:
+        - LS::SOAP::Service
+        - LS::SOAP::Response
+      primary_package: LS::SOAP::Service
+      uses:
+        - strict
+        - warnings
+        - vars
+        - SOAP::Lite
+        - MIME::Entity
+        - HTTP::Status
+        - HTTP::Headers
+        - HTTP::Request
+        - HTTP::Response
+        - LS::Service
+        - LS::Service::Fault
+        - LS::Service::Response
+        - LS::SOAP::Fault
+        - LS::SOAP::Serializer
+        - LS::Authority::WSDL::Constants
+        - base
+      version_info:
+        filename: blib/lib/LS/SOAP/Service.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5698
+      file_mime_type: ~
+      line_count: ~
+      md5: a8fd5cd56f813302980cbd4aa2161eb5
+      module_name_from_file_guess: LS::Service
+      mtime: 1194290392
+      name: blib/lib/LS/Service.pm
+      packages:
+        - LS::Service
+      primary_package: LS::Service
+      uses:
+        - LS::Service::Fault
+        - LS::Service::Response
+        - LS::Service::Authority
+        - LS::Service::Namespace
+        - LS::Service::DataService
+        - LS::Service::AdvancedDataService
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::ID
+        - base
+      version_info:
+        filename: blib/lib/LS/Service.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1574
+      file_mime_type: ~
+      line_count: ~
+      md5: 10b8c02dd5808c110401861e4ddacdf0
+      module_name_from_file_guess: LS::Service::AdvancedDataService
+      mtime: 1194290392
+      name: blib/lib/LS/Service/AdvancedDataService.pm
+      packages:
+        - LS::Service::AdvancedDataService
+      primary_package: LS::Service::AdvancedDataService
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::ID
+        - base
+      version_info:
+        filename: blib/lib/LS/Service/AdvancedDataService.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12058
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f2ad4e285b63cbc1b588f51ce1b632b
+      module_name_from_file_guess: LS::Service::Authority
+      mtime: 1194290392
+      name: blib/lib/LS/Service/Authority.pm
+      packages:
+        - LS::Service::Authority
+        - LS::Service::Authority::Handlers
+      primary_package: LS::Service::Authority
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::ID
+        - LS::Authority::WSDL::Simple
+        - LS::Authority::WSDL::Services
+        - LS::Authority::WSDL::Constants
+        - base
+      version_info:
+        filename: blib/lib/LS/Service/Authority.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5586
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e4014dbcaa43c19b5d7e913a0e251c5
+      module_name_from_file_guess: LS::Service::DataService
+      mtime: 1194290392
+      name: blib/lib/LS/Service/DataService.pm
+      packages:
+        - LS::Service::DataService
+      primary_package: LS::Service::DataService
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::ID
+        - base
+      version_info:
+        filename: blib/lib/LS/Service/DataService.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6032
+      file_mime_type: ~
+      line_count: ~
+      md5: 34409910ad6762d4d7ab1fc83a58a65c
+      module_name_from_file_guess: LS::Service::Fault
+      mtime: 1194290392
+      name: blib/lib/LS/Service/Fault.pm
+      packages:
+        - LS::Service::Fault
+      primary_package: LS::Service::Fault
+      uses: []
+      version_info:
+        filename: blib/lib/LS/Service/Fault.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5021
+      file_mime_type: ~
+      line_count: ~
+      md5: 14e7d3e973d3c307efc2bdbbb2421c73
+      module_name_from_file_guess: LS::Service::Namespace
+      mtime: 1194290392
+      name: blib/lib/LS/Service/Namespace.pm
+      packages:
+        - LS::Service::Namespace
+        - LS::Service::Namespace::Handlers
+      primary_package: LS::Service::Namespace
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+        - LS::ID
+        - base
+      version_info:
+        filename: blib/lib/LS/Service/Namespace.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2507
+      file_mime_type: ~
+      line_count: ~
+      md5: aed8eedda8f210e5cf585cb0bfabae45
+      module_name_from_file_guess: LS::Service::Response
+      mtime: 1194290392
+      name: blib/lib/LS/Service/Response.pm
+      packages:
+        - LS::Service::Response
+      primary_package: LS::Service::Response
+      uses:
+        - strict
+        - warnings
+        - vars
+        - LS
+      version_info:
+        filename: blib/lib/LS/Service/Response.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/LS.pm
+    - blib/lib/LS/Assigning/Client.pm
+    - blib/lib/LS/Assigning/Serializer.pm
+    - blib/lib/LS/Assigning/Service.pm
+    - blib/lib/LS/Authority.pm
+    - blib/lib/LS/Authority/Mappings.pm
+    - blib/lib/LS/Authority/WSDL.pm
+    - blib/lib/LS/Authority/WSDL/Bindings.pm
+    - blib/lib/LS/Authority/WSDL/Constants.pm
+    - blib/lib/LS/Authority/WSDL/Location.pm
+    - blib/lib/LS/Authority/WSDL/Services.pm
+    - blib/lib/LS/Authority/WSDL/Simple.pm
+    - blib/lib/LS/Cache/Config.pm
+    - blib/lib/LS/Cache/Logger.pm
+    - blib/lib/LS/Cache/Manager.pm
+    - blib/lib/LS/Client.pm
+    - blib/lib/LS/Client/BasicResolver.pm
+    - blib/lib/LS/Client/FTP.pm
+    - blib/lib/LS/Client/HTTP.pm
+    - blib/lib/LS/Client/SOAP.pm
+    - blib/lib/LS/Config.pm
+    - blib/lib/LS/HTTP/Service.pm
+    - blib/lib/LS/ID.pm
+    - blib/lib/LS/Locator.pm
+    - blib/lib/LS/RDF/ComplexDocument.pm
+    - blib/lib/LS/RDF/Constants.pm
+    - blib/lib/LS/RDF/Metadata.pm
+    - blib/lib/LS/RDF/SimpleDocument.pm
+    - blib/lib/LS/Resource.pm
+    - blib/lib/LS/SOAP/Fault.pm
+    - blib/lib/LS/SOAP/Serializer.pm
+    - blib/lib/LS/SOAP/Service.pm
+    - blib/lib/LS/Service.pm
+    - blib/lib/LS/Service/AdvancedDataService.pm
+    - blib/lib/LS/Service/Authority.pm
+    - blib/lib/LS/Service/DataService.pm
+    - blib/lib/LS/Service/Fault.pm
+    - blib/lib/LS/Service/Namespace.pm
+    - blib/lib/LS/Service/Response.pm
+  test_info:
+    - bytesize: 959
+      file_mime_type: ~
+      line_count: ~
+      md5: ee67dd1f6e0000b74498f876a424cc57
+      mtime: 1193921625
+      name: t/1.t
+      uses:
+        - Test::More
+    - bytesize: 2139
+      file_mime_type: ~
+      line_count: ~
+      md5: 41bb5b2d5d4887a9c72f24386a7e1c4a
+      mtime: 1193921625
+      name: t/Authority.t
+      uses:
+        - Test::More
+    - bytesize: 1094
+      file_mime_type: ~
+      line_count: ~
+      md5: 09fc4b64ce4e4f418da8e452e27e58f0
+      mtime: 1193921625
+      name: t/ID.t
+      uses:
+        - Test::More
+    - bytesize: 1773
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c8c663667907658040abc4685d77307
+      mtime: 1193921625
+      name: t/Locator.t
+      uses:
+        - Test::More
+    - bytesize: 1953
+      file_mime_type: ~
+      line_count: ~
+      md5: 095fcea5fc299f01cbda1cf29a48741c
+      mtime: 1193921625
+      name: t/WSDL01.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+    - bytesize: 2827
+      file_mime_type: ~
+      line_count: ~
+      md5: 222419403305c305ad614c574597c34e
+      mtime: 1193921625
+      name: t/WSDL02.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+    - bytesize: 1982
+      file_mime_type: ~
+      line_count: ~
+      md5: 6519cc5781c4d046b9ee1b09c6ea787d
+      mtime: 1193921625
+      name: t/WSDL03.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+    - bytesize: 2025
+      file_mime_type: ~
+      line_count: ~
+      md5: 4df30f4e91f89869b62ee4afd7bf2bb0
+      mtime: 1193921625
+      name: t/WSDL04.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+    - bytesize: 2921
+      file_mime_type: ~
+      line_count: ~
+      md5: 401c4d2ba3b4f37fa08ab581c7f9f3e7
+      mtime: 1193921625
+      name: t/WSDL05.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+    - bytesize: 2184
+      file_mime_type: ~
+      line_count: ~
+      md5: 68f6889555524a09c44d3aca5d9043dc
+      mtime: 1193921625
+      name: t/WSDL_ns01.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+    - bytesize: 2254
+      file_mime_type: ~
+      line_count: ~
+      md5: 79f85bb3b356e17156c80e6fce8c1141
+      mtime: 1193921625
+      name: t/WSDL_ns02.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+        - Data::Dumper
+  tests:
+    - t/1.t
+    - t/Authority.t
+    - t/ID.t
+    - t/Locator.t
+    - t/WSDL01.t
+    - t/WSDL02.t
+    - t/WSDL03.t
+    - t/WSDL04.t
+    - t/WSDL05.t
+    - t/WSDL_ns01.t
+    - t/WSDL_ns02.t
+  unpack_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.BLjo
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 1055
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270137272
+  examine_start_time: 1270137180
+  examine_time: 92
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1029
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 1055
+  ppid: 1029
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/0AlPIU22Ym
+  run_end_time: 1270137272
+  run_start_time: 1270137180
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/0AlPIU22Ym
+  uuid: 1F94478C-3D73-11DF-9C68-EB68E8F9184E
+  worker_class: MyCPAN::Indexer::Worker

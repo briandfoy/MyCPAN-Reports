@@ -1,0 +1,3791 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Object Oriented Perl5 Interface to Network devices and MIBs through SNMP.
+    author:
+      - 'Eric A. Miller <emiller@cpan.org>'
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.44
+    license: bsd
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: SNMP-Info
+    requires:
+      Math::BigInt: 0
+      SNMP: 0
+      Test::More: 0
+    version: 2.00
+  blib:
+    - blib/lib/SNMP/Info.pm
+    - blib/lib/SNMP/Info/Airespace.pm
+    - blib/lib/SNMP/Info/Bridge.pm
+    - blib/lib/SNMP/Info/CDP.pm
+    - blib/lib/SNMP/Info/CiscoConfig.pm
+    - blib/lib/SNMP/Info/CiscoImage.pm
+    - blib/lib/SNMP/Info/CiscoPortSecurity.pm
+    - blib/lib/SNMP/Info/CiscoPower.pm
+    - blib/lib/SNMP/Info/CiscoQOS.pm
+    - blib/lib/SNMP/Info/CiscoRTT.pm
+    - blib/lib/SNMP/Info/CiscoStack.pm
+    - blib/lib/SNMP/Info/CiscoStats.pm
+    - blib/lib/SNMP/Info/CiscoVTP.pm
+    - blib/lib/SNMP/Info/Entity.pm
+    - blib/lib/SNMP/Info/EtherLike.pm
+    - blib/lib/SNMP/Info/FDP.pm
+    - blib/lib/SNMP/Info/IEEE802dot11.pm
+    - blib/lib/SNMP/Info/LLDP.pm
+    - blib/lib/SNMP/Info/Layer1.pm
+    - blib/lib/SNMP/Info/Layer1/Allied.pm
+    - blib/lib/SNMP/Info/Layer1/Asante.pm
+    - blib/lib/SNMP/Info/Layer1/Bayhub.pm
+    - blib/lib/SNMP/Info/Layer1/Cyclades.pm
+    - blib/lib/SNMP/Info/Layer1/S3000.pm
+    - blib/lib/SNMP/Info/Layer2.pm
+    - blib/lib/SNMP/Info/Layer2/Airespace.pm
+    - blib/lib/SNMP/Info/Layer2/Aironet.pm
+    - blib/lib/SNMP/Info/Layer2/Allied.pm
+    - blib/lib/SNMP/Info/Layer2/Aruba.pm
+    - blib/lib/SNMP/Info/Layer2/Bay.pm
+    - blib/lib/SNMP/Info/Layer2/Baystack.pm
+    - blib/lib/SNMP/Info/Layer2/C1900.pm
+    - blib/lib/SNMP/Info/Layer2/C2900.pm
+    - blib/lib/SNMP/Info/Layer2/Catalyst.pm
+    - blib/lib/SNMP/Info/Layer2/Centillion.pm
+    - blib/lib/SNMP/Info/Layer2/Cisco.pm
+    - blib/lib/SNMP/Info/Layer2/Foundry.pm
+    - blib/lib/SNMP/Info/Layer2/HP.pm
+    - blib/lib/SNMP/Info/Layer2/N2270.pm
+    - blib/lib/SNMP/Info/Layer2/NAP222x.pm
+    - blib/lib/SNMP/Info/Layer2/Netgear.pm
+    - blib/lib/SNMP/Info/Layer2/Orinoco.pm
+    - blib/lib/SNMP/Info/Layer2/ZyXEL_DSLAM.pm
+    - blib/lib/SNMP/Info/Layer3.pm
+    - blib/lib/SNMP/Info/Layer3/Aironet.pm
+    - blib/lib/SNMP/Info/Layer3/AlcatelLucent.pm
+    - blib/lib/SNMP/Info/Layer3/AlteonAD.pm
+    - blib/lib/SNMP/Info/Layer3/BayRS.pm
+    - blib/lib/SNMP/Info/Layer3/C3550.pm
+    - blib/lib/SNMP/Info/Layer3/C4000.pm
+    - blib/lib/SNMP/Info/Layer3/C6500.pm
+    - blib/lib/SNMP/Info/Layer3/Cisco.pm
+    - blib/lib/SNMP/Info/Layer3/Contivity.pm
+    - blib/lib/SNMP/Info/Layer3/Dell.pm
+    - blib/lib/SNMP/Info/Layer3/Enterasys.pm
+    - blib/lib/SNMP/Info/Layer3/Extreme.pm
+    - blib/lib/SNMP/Info/Layer3/Foundry.pm
+    - blib/lib/SNMP/Info/Layer3/HP9300.pm
+    - blib/lib/SNMP/Info/Layer3/Juniper.pm
+    - blib/lib/SNMP/Info/Layer3/Microsoft.pm
+    - blib/lib/SNMP/Info/Layer3/N1600.pm
+    - blib/lib/SNMP/Info/Layer3/NetSNMP.pm
+    - blib/lib/SNMP/Info/Layer3/Netscreen.pm
+    - blib/lib/SNMP/Info/Layer3/Passport.pm
+    - blib/lib/SNMP/Info/Layer3/Sun.pm
+    - blib/lib/SNMP/Info/Layer3/Timetra.pm
+    - blib/lib/SNMP/Info/MAU.pm
+    - blib/lib/SNMP/Info/NortelStack.pm
+    - blib/lib/SNMP/Info/PowerEthernet.pm
+    - blib/lib/SNMP/Info/RapidCity.pm
+    - blib/lib/SNMP/Info/SONMP.pm
+    - blib/man3/SNMP::Info.3
+    - blib/man3/SNMP::Info::Airespace.3
+    - blib/man3/SNMP::Info::Bridge.3
+    - blib/man3/SNMP::Info::CDP.3
+    - blib/man3/SNMP::Info::CiscoConfig.3
+    - blib/man3/SNMP::Info::CiscoImage.3
+    - blib/man3/SNMP::Info::CiscoPortSecurity.3
+    - blib/man3/SNMP::Info::CiscoPower.3
+    - blib/man3/SNMP::Info::CiscoQOS.3
+    - blib/man3/SNMP::Info::CiscoRTT.3
+    - blib/man3/SNMP::Info::CiscoStack.3
+    - blib/man3/SNMP::Info::CiscoStats.3
+    - blib/man3/SNMP::Info::CiscoVTP.3
+    - blib/man3/SNMP::Info::Entity.3
+    - blib/man3/SNMP::Info::EtherLike.3
+    - blib/man3/SNMP::Info::FDP.3
+    - blib/man3/SNMP::Info::IEEE802dot11.3
+    - blib/man3/SNMP::Info::LLDP.3
+    - blib/man3/SNMP::Info::Layer1.3
+    - blib/man3/SNMP::Info::Layer1::Allied.3
+    - blib/man3/SNMP::Info::Layer1::Asante.3
+    - blib/man3/SNMP::Info::Layer1::Bayhub.3
+    - blib/man3/SNMP::Info::Layer1::Cyclades.3
+    - blib/man3/SNMP::Info::Layer1::S3000.3
+    - blib/man3/SNMP::Info::Layer2.3
+    - blib/man3/SNMP::Info::Layer2::Airespace.3
+    - blib/man3/SNMP::Info::Layer2::Aironet.3
+    - blib/man3/SNMP::Info::Layer2::Allied.3
+    - blib/man3/SNMP::Info::Layer2::Aruba.3
+    - blib/man3/SNMP::Info::Layer2::Bay.3
+    - blib/man3/SNMP::Info::Layer2::Baystack.3
+    - blib/man3/SNMP::Info::Layer2::C1900.3
+    - blib/man3/SNMP::Info::Layer2::C2900.3
+    - blib/man3/SNMP::Info::Layer2::Catalyst.3
+    - blib/man3/SNMP::Info::Layer2::Centillion.3
+    - blib/man3/SNMP::Info::Layer2::Cisco.3
+    - blib/man3/SNMP::Info::Layer2::Foundry.3
+    - blib/man3/SNMP::Info::Layer2::HP.3
+    - blib/man3/SNMP::Info::Layer2::N2270.3
+    - blib/man3/SNMP::Info::Layer2::NAP222x.3
+    - blib/man3/SNMP::Info::Layer2::Netgear.3
+    - blib/man3/SNMP::Info::Layer2::Orinoco.3
+    - blib/man3/SNMP::Info::Layer2::ZyXEL_DSLAM.3
+    - blib/man3/SNMP::Info::Layer3.3
+    - blib/man3/SNMP::Info::Layer3::Aironet.3
+    - blib/man3/SNMP::Info::Layer3::AlcatelLucent.3
+    - blib/man3/SNMP::Info::Layer3::AlteonAD.3
+    - blib/man3/SNMP::Info::Layer3::BayRS.3
+    - blib/man3/SNMP::Info::Layer3::C3550.3
+    - blib/man3/SNMP::Info::Layer3::C4000.3
+    - blib/man3/SNMP::Info::Layer3::C6500.3
+    - blib/man3/SNMP::Info::Layer3::Cisco.3
+    - blib/man3/SNMP::Info::Layer3::Contivity.3
+    - blib/man3/SNMP::Info::Layer3::Dell.3
+    - blib/man3/SNMP::Info::Layer3::Enterasys.3
+    - blib/man3/SNMP::Info::Layer3::Extreme.3
+    - blib/man3/SNMP::Info::Layer3::Foundry.3
+    - blib/man3/SNMP::Info::Layer3::HP9300.3
+    - blib/man3/SNMP::Info::Layer3::Juniper.3
+    - blib/man3/SNMP::Info::Layer3::Microsoft.3
+    - blib/man3/SNMP::Info::Layer3::N1600.3
+    - blib/man3/SNMP::Info::Layer3::NetSNMP.3
+    - blib/man3/SNMP::Info::Layer3::Netscreen.3
+    - blib/man3/SNMP::Info::Layer3::Passport.3
+    - blib/man3/SNMP::Info::Layer3::Sun.3
+    - blib/man3/SNMP::Info::Layer3::Timetra.3
+    - blib/man3/SNMP::Info::MAU.3
+    - blib/man3/SNMP::Info::NortelStack.3
+    - blib/man3/SNMP::Info::PowerEthernet.3
+    - blib/man3/SNMP::Info::RapidCity.3
+    - blib/man3/SNMP::Info::SONMP.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite SNMP 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for SNMP::Info
+  build_output: |
+    cp Info/Layer3/NetSNMP.pm blib/lib/SNMP/Info/Layer3/NetSNMP.pm
+    cp Info/Layer2/HP.pm blib/lib/SNMP/Info/Layer2/HP.pm
+    cp Info/Layer2/C2900.pm blib/lib/SNMP/Info/Layer2/C2900.pm
+    cp Info/Layer2/Aruba.pm blib/lib/SNMP/Info/Layer2/Aruba.pm
+    cp Info/CiscoQOS.pm blib/lib/SNMP/Info/CiscoQOS.pm
+    cp Info/Layer3/Netscreen.pm blib/lib/SNMP/Info/Layer3/Netscreen.pm
+    cp Info/Layer3/Sun.pm blib/lib/SNMP/Info/Layer3/Sun.pm
+    cp Info/Layer3.pm blib/lib/SNMP/Info/Layer3.pm
+    cp Info/Layer2/Baystack.pm blib/lib/SNMP/Info/Layer2/Baystack.pm
+    cp Info.pm blib/lib/SNMP/Info.pm
+    cp Info/Layer3/C4000.pm blib/lib/SNMP/Info/Layer3/C4000.pm
+    cp Info/Layer2/Netgear.pm blib/lib/SNMP/Info/Layer2/Netgear.pm
+    cp Info/Layer3/Cisco.pm blib/lib/SNMP/Info/Layer3/Cisco.pm
+    cp Info/CiscoConfig.pm blib/lib/SNMP/Info/CiscoConfig.pm
+    cp Info/Entity.pm blib/lib/SNMP/Info/Entity.pm
+    cp Info/SONMP.pm blib/lib/SNMP/Info/SONMP.pm
+    cp Info/Layer1/S3000.pm blib/lib/SNMP/Info/Layer1/S3000.pm
+    cp Info/Layer3/Microsoft.pm blib/lib/SNMP/Info/Layer3/Microsoft.pm
+    cp Info/RapidCity.pm blib/lib/SNMP/Info/RapidCity.pm
+    cp Info/Layer3/HP9300.pm blib/lib/SNMP/Info/Layer3/HP9300.pm
+    cp Info/Layer2/ZyXEL_DSLAM.pm blib/lib/SNMP/Info/Layer2/ZyXEL_DSLAM.pm
+    cp Info/Layer3/C3550.pm blib/lib/SNMP/Info/Layer3/C3550.pm
+    cp Info/Layer2/N2270.pm blib/lib/SNMP/Info/Layer2/N2270.pm
+    cp Info/Layer2/Allied.pm blib/lib/SNMP/Info/Layer2/Allied.pm
+    cp Info/Layer2/Bay.pm blib/lib/SNMP/Info/Layer2/Bay.pm
+    cp Info/Layer2.pm blib/lib/SNMP/Info/Layer2.pm
+    cp Info/Layer3/Passport.pm blib/lib/SNMP/Info/Layer3/Passport.pm
+    cp Info/Layer2/Catalyst.pm blib/lib/SNMP/Info/Layer2/Catalyst.pm
+    cp Info/Layer3/Extreme.pm blib/lib/SNMP/Info/Layer3/Extreme.pm
+    cp Info/CiscoVTP.pm blib/lib/SNMP/Info/CiscoVTP.pm
+    cp Info/IEEE802dot11.pm blib/lib/SNMP/Info/IEEE802dot11.pm
+    cp Info/Layer2/Airespace.pm blib/lib/SNMP/Info/Layer2/Airespace.pm
+    cp Info/FDP.pm blib/lib/SNMP/Info/FDP.pm
+    cp Info/Layer2/Orinoco.pm blib/lib/SNMP/Info/Layer2/Orinoco.pm
+    cp Info/Layer3/Contivity.pm blib/lib/SNMP/Info/Layer3/Contivity.pm
+    cp Info/Layer3/AlcatelLucent.pm blib/lib/SNMP/Info/Layer3/AlcatelLucent.pm
+    cp Info/Layer3/BayRS.pm blib/lib/SNMP/Info/Layer3/BayRS.pm
+    cp Info/Layer3/C6500.pm blib/lib/SNMP/Info/Layer3/C6500.pm
+    cp Info/CiscoRTT.pm blib/lib/SNMP/Info/CiscoRTT.pm
+    cp Info/CiscoPower.pm blib/lib/SNMP/Info/CiscoPower.pm
+    cp Info/NortelStack.pm blib/lib/SNMP/Info/NortelStack.pm
+    cp Info/LLDP.pm blib/lib/SNMP/Info/LLDP.pm
+    cp Info/CiscoStats.pm blib/lib/SNMP/Info/CiscoStats.pm
+    cp Info/Layer1.pm blib/lib/SNMP/Info/Layer1.pm
+    cp Info/Layer1/Allied.pm blib/lib/SNMP/Info/Layer1/Allied.pm
+    cp Info/CDP.pm blib/lib/SNMP/Info/CDP.pm
+    cp Info/MAU.pm blib/lib/SNMP/Info/MAU.pm
+    cp Info/Layer1/Asante.pm blib/lib/SNMP/Info/Layer1/Asante.pm
+    cp Info/Layer2/C1900.pm blib/lib/SNMP/Info/Layer2/C1900.pm
+    cp Info/Bridge.pm blib/lib/SNMP/Info/Bridge.pm
+    cp Info/Layer3/N1600.pm blib/lib/SNMP/Info/Layer3/N1600.pm
+    cp Info/EtherLike.pm blib/lib/SNMP/Info/EtherLike.pm
+    cp Info/Layer1/Cyclades.pm blib/lib/SNMP/Info/Layer1/Cyclades.pm
+    cp Info/Layer2/Foundry.pm blib/lib/SNMP/Info/Layer2/Foundry.pm
+    cp Info/Layer2/NAP222x.pm blib/lib/SNMP/Info/Layer2/NAP222x.pm
+    cp Info/PowerEthernet.pm blib/lib/SNMP/Info/PowerEthernet.pm
+    cp Info/Layer2/Centillion.pm blib/lib/SNMP/Info/Layer2/Centillion.pm
+    cp Info/CiscoStack.pm blib/lib/SNMP/Info/CiscoStack.pm
+    cp Info/Layer3/Dell.pm blib/lib/SNMP/Info/Layer3/Dell.pm
+    cp Info/Layer3/Enterasys.pm blib/lib/SNMP/Info/Layer3/Enterasys.pm
+    cp Info/CiscoImage.pm blib/lib/SNMP/Info/CiscoImage.pm
+    cp Info/Airespace.pm blib/lib/SNMP/Info/Airespace.pm
+    cp Info/CiscoPortSecurity.pm blib/lib/SNMP/Info/CiscoPortSecurity.pm
+    cp Info/Layer3/Juniper.pm blib/lib/SNMP/Info/Layer3/Juniper.pm
+    cp Info/Layer3/Timetra.pm blib/lib/SNMP/Info/Layer3/Timetra.pm
+    cp Info/Layer3/Foundry.pm blib/lib/SNMP/Info/Layer3/Foundry.pm
+    cp Info/Layer3/AlteonAD.pm blib/lib/SNMP/Info/Layer3/AlteonAD.pm
+    cp Info/Layer3/Aironet.pm blib/lib/SNMP/Info/Layer3/Aironet.pm
+    cp Info/Layer2/Cisco.pm blib/lib/SNMP/Info/Layer2/Cisco.pm
+    cp Info/Layer1/Bayhub.pm blib/lib/SNMP/Info/Layer1/Bayhub.pm
+    cp Info/Layer2/Aironet.pm blib/lib/SNMP/Info/Layer2/Aironet.pm
+    Manifying blib/man3/SNMP::Info::Layer2::HP.3
+    Manifying blib/man3/SNMP::Info::Layer3::NetSNMP.3
+    Manifying blib/man3/SNMP::Info::Layer2::C2900.3
+    Manifying blib/man3/SNMP::Info::Layer2::Aruba.3
+    Manifying blib/man3/SNMP::Info::CiscoQOS.3
+    Manifying blib/man3/SNMP::Info::Layer3::Netscreen.3
+    Manifying blib/man3/SNMP::Info::Layer3::Sun.3
+    Manifying blib/man3/SNMP::Info::Layer3.3
+    Manifying blib/man3/SNMP::Info::Layer2::Baystack.3
+    Manifying blib/man3/SNMP::Info.3
+    Manifying blib/man3/SNMP::Info::Layer3::C4000.3
+    Manifying blib/man3/SNMP::Info::Layer2::Netgear.3
+    Manifying blib/man3/SNMP::Info::Layer3::Cisco.3
+    Manifying blib/man3/SNMP::Info::CiscoConfig.3
+    Manifying blib/man3/SNMP::Info::Entity.3
+    Manifying blib/man3/SNMP::Info::SONMP.3
+    Manifying blib/man3/SNMP::Info::Layer1::S3000.3
+    Manifying blib/man3/SNMP::Info::Layer3::Microsoft.3
+    Manifying blib/man3/SNMP::Info::RapidCity.3
+    Manifying blib/man3/SNMP::Info::Layer3::HP9300.3
+    Manifying blib/man3/SNMP::Info::Layer2::ZyXEL_DSLAM.3
+    Manifying blib/man3/SNMP::Info::Layer3::C3550.3
+    Manifying blib/man3/SNMP::Info::Layer2::N2270.3
+    Manifying blib/man3/SNMP::Info::Layer2::Allied.3
+    Manifying blib/man3/SNMP::Info::Layer2::Bay.3
+    Manifying blib/man3/SNMP::Info::Layer2.3
+    Manifying blib/man3/SNMP::Info::Layer3::Passport.3
+    Manifying blib/man3/SNMP::Info::Layer2::Catalyst.3
+    Manifying blib/man3/SNMP::Info::Layer3::Extreme.3
+    Manifying blib/man3/SNMP::Info::CiscoVTP.3
+    Manifying blib/man3/SNMP::Info::IEEE802dot11.3
+    Manifying blib/man3/SNMP::Info::Layer2::Airespace.3
+    Manifying blib/man3/SNMP::Info::FDP.3
+    Manifying blib/man3/SNMP::Info::Layer2::Orinoco.3
+    Manifying blib/man3/SNMP::Info::Layer3::Contivity.3
+    Manifying blib/man3/SNMP::Info::Layer3::AlcatelLucent.3
+    Manifying blib/man3/SNMP::Info::Layer3::BayRS.3
+    Manifying blib/man3/SNMP::Info::Layer3::C6500.3
+    Manifying blib/man3/SNMP::Info::CiscoRTT.3
+    Manifying blib/man3/SNMP::Info::CiscoPower.3
+    Manifying blib/man3/SNMP::Info::NortelStack.3
+    Manifying blib/man3/SNMP::Info::LLDP.3
+    Manifying blib/man3/SNMP::Info::CiscoStats.3
+    Manifying blib/man3/SNMP::Info::Layer1.3
+    Manifying blib/man3/SNMP::Info::Layer1::Allied.3
+    Manifying blib/man3/SNMP::Info::CDP.3
+    Manifying blib/man3/SNMP::Info::MAU.3
+    Manifying blib/man3/SNMP::Info::Layer1::Asante.3
+    Manifying blib/man3/SNMP::Info::Layer2::C1900.3
+    Manifying blib/man3/SNMP::Info::Bridge.3
+    Manifying blib/man3/SNMP::Info::Layer3::N1600.3
+    Manifying blib/man3/SNMP::Info::EtherLike.3
+    Manifying blib/man3/SNMP::Info::Layer1::Cyclades.3
+    Manifying blib/man3/SNMP::Info::Layer2::Foundry.3
+    Manifying blib/man3/SNMP::Info::Layer2::NAP222x.3
+    Manifying blib/man3/SNMP::Info::PowerEthernet.3
+    Manifying blib/man3/SNMP::Info::Layer2::Centillion.3
+    Manifying blib/man3/SNMP::Info::CiscoStack.3
+    Manifying blib/man3/SNMP::Info::Layer3::Dell.3
+    Manifying blib/man3/SNMP::Info::Layer3::Enterasys.3
+    Manifying blib/man3/SNMP::Info::CiscoImage.3
+    Manifying blib/man3/SNMP::Info::Airespace.3
+    Manifying blib/man3/SNMP::Info::CiscoPortSecurity.3
+    Manifying blib/man3/SNMP::Info::Layer3::Juniper.3
+    Manifying blib/man3/SNMP::Info::Layer3::Timetra.3
+    Manifying blib/man3/SNMP::Info::Layer3::Foundry.3
+    Manifying blib/man3/SNMP::Info::Layer2::Cisco.3
+    Manifying blib/man3/SNMP::Info::Layer3::Aironet.3
+    Manifying blib/man3/SNMP::Info::Layer3::AlteonAD.3
+    Manifying blib/man3/SNMP::Info::Layer1::Bayhub.3
+    Manifying blib/man3/SNMP::Info::Layer2::Aironet.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b/SNMP-Info-2.00/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b/SNMP-Info-2.00
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b/SNMP-Info-2.00/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b/SNMP-Info-2.00/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: EMILLER
+  dist_basename: SNMP-Info-2.00.tar.gz
+  dist_date: 1217649442
+  dist_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b/SNMP-Info-2.00
+  dist_extract_path: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b/SNMP-Info-2.00
+  dist_file: /home/brian/CPAN/authors/id/E/EM/EMILLER/SNMP-Info-2.00.tar.gz
+  dist_md5: 0effb91df2f2469706c8e86542fa0287
+  dist_size: 215550
+  manifest:
+    - COPYRIGHT
+    - ChangeLog
+    - DeviceMatrix.txt
+    - Info.pm
+    - Info/Airespace.pm
+    - Info/Bridge.pm
+    - Info/CDP.pm
+    - Info/CiscoConfig.pm
+    - Info/CiscoImage.pm
+    - Info/CiscoPortSecurity.pm
+    - Info/CiscoPower.pm
+    - Info/CiscoQOS.pm
+    - Info/CiscoRTT.pm
+    - Info/CiscoStack.pm
+    - Info/CiscoStats.pm
+    - Info/CiscoVTP.pm
+    - Info/Entity.pm
+    - Info/EtherLike.pm
+    - Info/FDP.pm
+    - Info/IEEE802dot11.pm
+    - Info/LLDP.pm
+    - Info/Layer1.pm
+    - Info/Layer1/Allied.pm
+    - Info/Layer1/Asante.pm
+    - Info/Layer1/Bayhub.pm
+    - Info/Layer1/Cyclades.pm
+    - Info/Layer1/S3000.pm
+    - Info/Layer2.pm
+    - Info/Layer2/Airespace.pm
+    - Info/Layer2/Aironet.pm
+    - Info/Layer2/Allied.pm
+    - Info/Layer2/Aruba.pm
+    - Info/Layer2/Bay.pm
+    - Info/Layer2/Baystack.pm
+    - Info/Layer2/C1900.pm
+    - Info/Layer2/C2900.pm
+    - Info/Layer2/Catalyst.pm
+    - Info/Layer2/Centillion.pm
+    - Info/Layer2/Cisco.pm
+    - Info/Layer2/Foundry.pm
+    - Info/Layer2/HP.pm
+    - Info/Layer2/N2270.pm
+    - Info/Layer2/NAP222x.pm
+    - Info/Layer2/Netgear.pm
+    - Info/Layer2/Orinoco.pm
+    - Info/Layer2/ZyXEL_DSLAM.pm
+    - Info/Layer3.pm
+    - Info/Layer3/Aironet.pm
+    - Info/Layer3/AlcatelLucent.pm
+    - Info/Layer3/AlteonAD.pm
+    - Info/Layer3/BayRS.pm
+    - Info/Layer3/C3550.pm
+    - Info/Layer3/C4000.pm
+    - Info/Layer3/C6500.pm
+    - Info/Layer3/Cisco.pm
+    - Info/Layer3/Contivity.pm
+    - Info/Layer3/Dell.pm
+    - Info/Layer3/Enterasys.pm
+    - Info/Layer3/Extreme.pm
+    - Info/Layer3/Foundry.pm
+    - Info/Layer3/HP9300.pm
+    - Info/Layer3/Juniper.pm
+    - Info/Layer3/Microsoft.pm
+    - Info/Layer3/N1600.pm
+    - Info/Layer3/NetSNMP.pm
+    - Info/Layer3/Netscreen.pm
+    - Info/Layer3/Passport.pm
+    - Info/Layer3/Sun.pm
+    - Info/Layer3/Timetra.pm
+    - Info/MAU.pm
+    - Info/NortelStack.pm
+    - Info/PowerEthernet.pm
+    - Info/RapidCity.pm
+    - Info/SONMP.pm
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - t/00-load.t
+    - t/docmunge
+    - t/make_dev_matrix.pl
+    - t/pod-coverage.t
+    - t/pod.t
+    - t/prereq.t
+    - t/test_class.pl
+  manifest_file_info:
+    - bytesize: 1677
+      file_mime_type: ~
+      line_count: ~
+      md5: 97d9303acdfc078a050e61dc5c1a9a76
+      mtime: 1217648131
+      name: COPYRIGHT
+    - bytesize: 17732
+      file_mime_type: ~
+      line_count: ~
+      md5: 02f0b547c2779d25cff89672135f20e3
+      mtime: 1217648131
+      name: ChangeLog
+    - bytesize: 13715
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a7c9b1f62984f26383619e1bcd2aac1
+      mtime: 1217648131
+      name: DeviceMatrix.txt
+    - bytesize: 100770
+      file_mime_type: ~
+      line_count: ~
+      md5: f10a990cea28fa8e75088c590bb371c1
+      mtime: 1217648131
+      name: Info.pm
+    - bytesize: 41285
+      file_mime_type: ~
+      line_count: ~
+      md5: 897f9bd73f00ec58f26313da443dcf2e
+      mtime: 1217648131
+      name: Info/Airespace.pm
+    - bytesize: 22769
+      file_mime_type: ~
+      line_count: ~
+      md5: c7181b7e5bf5222b7e46c3eeacb2c9a5
+      mtime: 1217648131
+      name: Info/Bridge.pm
+    - bytesize: 11001
+      file_mime_type: ~
+      line_count: ~
+      md5: e6c8ed34c01030c24cd38b4f068c5dcd
+      mtime: 1217648131
+      name: Info/CDP.pm
+    - bytesize: 14132
+      file_mime_type: ~
+      line_count: ~
+      md5: 24cc2040d8187f636aa6b40689c53f18
+      mtime: 1217648131
+      name: Info/CiscoConfig.pm
+    - bytesize: 3267
+      file_mime_type: ~
+      line_count: ~
+      md5: 11b3e2a44761e0afe7e8323aa234d435
+      mtime: 1217648131
+      name: Info/CiscoImage.pm
+    - bytesize: 9496
+      file_mime_type: ~
+      line_count: ~
+      md5: 1873242956f7b1a1047cc239dca4dafa
+      mtime: 1217648131
+      name: Info/CiscoPortSecurity.pm
+    - bytesize: 4349
+      file_mime_type: ~
+      line_count: ~
+      md5: f6250c9e8b94927598380f7260cb0adf
+      mtime: 1217648131
+      name: Info/CiscoPower.pm
+    - bytesize: 5172
+      file_mime_type: ~
+      line_count: ~
+      md5: d2dddc70cf09acdede3284c1e0681f63
+      mtime: 1217648131
+      name: Info/CiscoQOS.pm
+    - bytesize: 3555
+      file_mime_type: ~
+      line_count: ~
+      md5: afb5dfec521c1d69882b1356c6028d11
+      mtime: 1217648131
+      name: Info/CiscoRTT.pm
+    - bytesize: 15969
+      file_mime_type: ~
+      line_count: ~
+      md5: 04608cd62b6de5ecf4c3e00a6283179f
+      mtime: 1217648131
+      name: Info/CiscoStack.pm
+    - bytesize: 9631
+      file_mime_type: ~
+      line_count: ~
+      md5: d544cf584a510b1068e0a2cd017387cf
+      mtime: 1217648131
+      name: Info/CiscoStats.pm
+    - bytesize: 22159
+      file_mime_type: ~
+      line_count: ~
+      md5: e658c30b919eb8a22c5cba19012fec31
+      mtime: 1217648131
+      name: Info/CiscoVTP.pm
+    - bytesize: 6356
+      file_mime_type: ~
+      line_count: ~
+      md5: a6c4acf900352c046ff7842f6c7e3c1f
+      mtime: 1217648131
+      name: Info/Entity.pm
+    - bytesize: 6381
+      file_mime_type: ~
+      line_count: ~
+      md5: 08f4b3b0c14e05f36c3f0400a64697ad
+      mtime: 1217648131
+      name: Info/EtherLike.pm
+    - bytesize: 10614
+      file_mime_type: ~
+      line_count: ~
+      md5: 97425c7ab76b1e0c4dcbf61d7fa43954
+      mtime: 1217648131
+      name: Info/FDP.pm
+    - bytesize: 9226
+      file_mime_type: ~
+      line_count: ~
+      md5: c30ccf78d59362afa4b3eef658f6e4bc
+      mtime: 1217648131
+      name: Info/IEEE802dot11.pm
+    - bytesize: 13627
+      file_mime_type: ~
+      line_count: ~
+      md5: a25433cdc7efed969a98cc98ed4971fe
+      mtime: 1217648131
+      name: Info/LLDP.pm
+    - bytesize: 8273
+      file_mime_type: ~
+      line_count: ~
+      md5: 790c52eba5aa039c5b7ba4505e19b032
+      mtime: 1217648131
+      name: Info/Layer1.pm
+    - bytesize: 5587
+      file_mime_type: ~
+      line_count: ~
+      md5: 35c0d92106a125753069247eedcca040
+      mtime: 1217648131
+      name: Info/Layer1/Allied.pm
+    - bytesize: 6287
+      file_mime_type: ~
+      line_count: ~
+      md5: 1910a572777c0814e2b2403f7d7e29c6
+      mtime: 1217648131
+      name: Info/Layer1/Asante.pm
+    - bytesize: 17132
+      file_mime_type: ~
+      line_count: ~
+      md5: deb5601c8e913b30151e725ff1373906
+      mtime: 1217648131
+      name: Info/Layer1/Bayhub.pm
+    - bytesize: 11003
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a30872b737905b7404583f895edafcc
+      mtime: 1217648131
+      name: Info/Layer1/Cyclades.pm
+    - bytesize: 13566
+      file_mime_type: ~
+      line_count: ~
+      md5: 52020558661d69b11b8aee1b6860cab6
+      mtime: 1217648131
+      name: Info/Layer1/S3000.pm
+    - bytesize: 8295
+      file_mime_type: ~
+      line_count: ~
+      md5: 2834c6d2e69312ee5d69294abf9e1f17
+      mtime: 1217648131
+      name: Info/Layer2.pm
+    - bytesize: 5320
+      file_mime_type: ~
+      line_count: ~
+      md5: b7f220331c94c4290181efcf3ba1b820
+      mtime: 1217648131
+      name: Info/Layer2/Airespace.pm
+    - bytesize: 14796
+      file_mime_type: ~
+      line_count: ~
+      md5: 2416a5fc04140d65da25e7ae6bc1d004
+      mtime: 1217648131
+      name: Info/Layer2/Aironet.pm
+    - bytesize: 5667
+      file_mime_type: ~
+      line_count: ~
+      md5: 58c2d65d5e9965ba619472cbeb6adb24
+      mtime: 1217648131
+      name: Info/Layer2/Allied.pm
+    - bytesize: 15603
+      file_mime_type: ~
+      line_count: ~
+      md5: 926f7f1893e3e413d35b6277a5a5c8a8
+      mtime: 1217648131
+      name: Info/Layer2/Aruba.pm
+    - bytesize: 11875
+      file_mime_type: ~
+      line_count: ~
+      md5: f3b533531432e77c880607e34e3762e3
+      mtime: 1217648131
+      name: Info/Layer2/Bay.pm
+    - bytesize: 18886
+      file_mime_type: ~
+      line_count: ~
+      md5: 541c379a2e84980353a1e53066d76f77
+      mtime: 1217648131
+      name: Info/Layer2/Baystack.pm
+    - bytesize: 13222
+      file_mime_type: ~
+      line_count: ~
+      md5: 794a6d7a72b0a85d8103234c49bdcd56
+      mtime: 1217648131
+      name: Info/Layer2/C1900.pm
+    - bytesize: 11766
+      file_mime_type: ~
+      line_count: ~
+      md5: 354a8c62b5ccbbe22479443b1fde9abb
+      mtime: 1217648131
+      name: Info/Layer2/C2900.pm
+    - bytesize: 10203
+      file_mime_type: ~
+      line_count: ~
+      md5: 094b2e089e52858e4b698662f53102a4
+      mtime: 1217648131
+      name: Info/Layer2/Catalyst.pm
+    - bytesize: 13009
+      file_mime_type: ~
+      line_count: ~
+      md5: 27c5a177a23dbba0a6a6a24ae61adbbd
+      mtime: 1217648131
+      name: Info/Layer2/Centillion.pm
+    - bytesize: 7471
+      file_mime_type: ~
+      line_count: ~
+      md5: 161903da7ab36b1f846e170bbe7e2675
+      mtime: 1217648131
+      name: Info/Layer2/Cisco.pm
+    - bytesize: 8643
+      file_mime_type: ~
+      line_count: ~
+      md5: 8468d052d5601c3d3d31e6805988bc62
+      mtime: 1217648131
+      name: Info/Layer2/Foundry.pm
+    - bytesize: 25216
+      file_mime_type: ~
+      line_count: ~
+      md5: bb99af4e94578dda3cd5c51f6c7fd5da
+      mtime: 1217648131
+      name: Info/Layer2/HP.pm
+    - bytesize: 6259
+      file_mime_type: ~
+      line_count: ~
+      md5: 36d6541e70f7ba68be8ea74a1663c030
+      mtime: 1217648131
+      name: Info/Layer2/N2270.pm
+    - bytesize: 14579
+      file_mime_type: ~
+      line_count: ~
+      md5: ee1709c956c935619f83ab96cadadf1a
+      mtime: 1217648131
+      name: Info/Layer2/NAP222x.pm
+    - bytesize: 5354
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d8fb498894c55fd1ff43287cb36afda
+      mtime: 1217648131
+      name: Info/Layer2/Netgear.pm
+    - bytesize: 7446
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cf39cf311ec6b948399c5f07322d96b
+      mtime: 1217648131
+      name: Info/Layer2/Orinoco.pm
+    - bytesize: 5346
+      file_mime_type: ~
+      line_count: ~
+      md5: 35ebab217881086e61be4a9ae8905a97
+      mtime: 1217648131
+      name: Info/Layer2/ZyXEL_DSLAM.pm
+    - bytesize: 18206
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dfcdd7ef4b009a7d92071e5e0945020
+      mtime: 1217648131
+      name: Info/Layer3.pm
+    - bytesize: 9369
+      file_mime_type: ~
+      line_count: ~
+      md5: 948f9bea9e04f92673752045e4e4f7f1
+      mtime: 1217648131
+      name: Info/Layer3/Aironet.pm
+    - bytesize: 13904
+      file_mime_type: ~
+      line_count: ~
+      md5: d4b3b0487a4f1b5b57e1ef11eedb5525
+      mtime: 1217648131
+      name: Info/Layer3/AlcatelLucent.pm
+    - bytesize: 15645
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b44333ef52ba66b2426468c3b6922ac
+      mtime: 1217648131
+      name: Info/Layer3/AlteonAD.pm
+    - bytesize: 50323
+      file_mime_type: ~
+      line_count: ~
+      md5: 91984c2d2bfd311995c34def47ad3a07
+      mtime: 1217648131
+      name: Info/Layer3/BayRS.pm
+    - bytesize: 12755
+      file_mime_type: ~
+      line_count: ~
+      md5: ce9052c5883d708f95ffc591fa3e67d0
+      mtime: 1217648131
+      name: Info/Layer3/C3550.pm
+    - bytesize: 9229
+      file_mime_type: ~
+      line_count: ~
+      md5: c0b2ee650c6224268640625c3c48abde
+      mtime: 1217648131
+      name: Info/Layer3/C4000.pm
+    - bytesize: 12153
+      file_mime_type: ~
+      line_count: ~
+      md5: fe77027b74a221e280258b9adc346fa0
+      mtime: 1217648131
+      name: Info/Layer3/C6500.pm
+    - bytesize: 8918
+      file_mime_type: ~
+      line_count: ~
+      md5: ed5236a812256bb6573b0cb7caa13670
+      mtime: 1217648131
+      name: Info/Layer3/Cisco.pm
+    - bytesize: 7402
+      file_mime_type: ~
+      line_count: ~
+      md5: 63a96a0d56e9e8127db42f180b2adcbd
+      mtime: 1217648131
+      name: Info/Layer3/Contivity.pm
+    - bytesize: 11355
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a0f160aae6239988a03c852e17d5e32
+      mtime: 1217648131
+      name: Info/Layer3/Dell.pm
+    - bytesize: 13259
+      file_mime_type: ~
+      line_count: ~
+      md5: ccd38d82af1c2b44cc95273d5d4ff625
+      mtime: 1217648131
+      name: Info/Layer3/Enterasys.pm
+    - bytesize: 22236
+      file_mime_type: ~
+      line_count: ~
+      md5: db1679a30f95fcf6da7aba15d02f5cda
+      mtime: 1217648131
+      name: Info/Layer3/Extreme.pm
+    - bytesize: 16082
+      file_mime_type: ~
+      line_count: ~
+      md5: f7401c33e50a3e39fa679ae6529a9fb2
+      mtime: 1217648131
+      name: Info/Layer3/Foundry.pm
+    - bytesize: 14229
+      file_mime_type: ~
+      line_count: ~
+      md5: d9f620fd1a288d11323d686ac86e5ee5
+      mtime: 1217648131
+      name: Info/Layer3/HP9300.pm
+    - bytesize: 5406
+      file_mime_type: ~
+      line_count: ~
+      md5: cd9f00a3fea213fd0b9c9170a6ddd632
+      mtime: 1217648131
+      name: Info/Layer3/Juniper.pm
+    - bytesize: 4832
+      file_mime_type: ~
+      line_count: ~
+      md5: 98aa3a27349dd7e392dc34778200552a
+      mtime: 1217648131
+      name: Info/Layer3/Microsoft.pm
+    - bytesize: 7708
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d36f8c935a54bd51073ef145a4facb1
+      mtime: 1217648131
+      name: Info/Layer3/N1600.pm
+    - bytesize: 6247
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f42f5280d0929b08d33fe284dd55016
+      mtime: 1217648131
+      name: Info/Layer3/NetSNMP.pm
+    - bytesize: 5046
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bbdb26c511df4e9f44525dabe7c784a
+      mtime: 1217648131
+      name: Info/Layer3/Netscreen.pm
+    - bytesize: 35931
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cca7d14f9c2b1ec370a78fadf09ec7b
+      mtime: 1217648131
+      name: Info/Layer3/Passport.pm
+    - bytesize: 4690
+      file_mime_type: ~
+      line_count: ~
+      md5: df9822d0f5dd2db1d40febcd1e9348b7
+      mtime: 1217648131
+      name: Info/Layer3/Sun.pm
+    - bytesize: 4824
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b5e76508695df13d103249eb7c20469
+      mtime: 1217648131
+      name: Info/Layer3/Timetra.pm
+    - bytesize: 12488
+      file_mime_type: ~
+      line_count: ~
+      md5: 104a1db1231401853d8cc4aeddd27ade
+      mtime: 1217648131
+      name: Info/MAU.pm
+    - bytesize: 23844
+      file_mime_type: ~
+      line_count: ~
+      md5: a619fea533936502e4834a5bf7945db3
+      mtime: 1217648131
+      name: Info/NortelStack.pm
+    - bytesize: 6281
+      file_mime_type: ~
+      line_count: ~
+      md5: 55ef11d95c55aad483ea106db4bec1b9
+      mtime: 1217648131
+      name: Info/PowerEthernet.pm
+    - bytesize: 29008
+      file_mime_type: ~
+      line_count: ~
+      md5: 616735071e0677a2a46e67fa55bd98d9
+      mtime: 1217648131
+      name: Info/RapidCity.pm
+    - bytesize: 11157
+      file_mime_type: ~
+      line_count: ~
+      md5: 37f5eead43813dd8c250f2a44e401038
+      mtime: 1217648131
+      name: Info/SONMP.pm
+    - bytesize: 1715
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1217648183
+      name: MANIFEST
+    - bytesize: 559
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1217648182
+      name: META.yml
+    - bytesize: 987
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1217648131
+      name: Makefile.PL
+    - bytesize: 63744
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1217648131
+      name: README
+    - bytesize: 271
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1217648131
+      name: t/00-load.t
+    - bytesize: 864
+      file_mime_type: ~
+      line_count: ~
+      md5: dce594f0b248274709d2aaa055c75c5c
+      mtime: 1217648131
+      name: t/docmunge
+    - bytesize: 9961
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ec23ef08c29cdf3e26856bb7e210249
+      mtime: 1217648131
+      name: t/make_dev_matrix.pl
+    - bytesize: 690
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1217648131
+      name: t/pod-coverage.t
+    - bytesize: 344
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1217648131
+      name: t/pod.t
+    - bytesize: 2444
+      file_mime_type: ~
+      line_count: ~
+      md5: f18975accdee89539b8636499d0b5633
+      mtime: 1217648131
+      name: t/prereq.t
+    - bytesize: 4233
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a1988fdfdc84658cfae93f77c549e0
+      mtime: 1217648131
+      name: t/test_class.pl
+  module_info:
+    - bytesize: 100770
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d5a54f37bcdfb4d6c50dd0c5d1eeb12
+      module_name_from_file_guess: SNMP::Info
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info.pm
+      packages:
+        - SNMP::Info
+      primary_package: SNMP::Info
+      uses:
+        - strict
+        - Exporter
+        - SNMP
+        - Carp
+        - Math::BigInt
+        - vars
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/SNMP/Info.pm
+        identifier: VERSION
+        line_number: 26
+        sigil: $
+        value: 2.00
+    - bytesize: 41285
+      file_mime_type: ~
+      line_count: ~
+      md5: 547e7ee6c497495f89f057cc870f9a5c
+      module_name_from_file_guess: SNMP::Info::Airespace
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Airespace.pm
+      packages:
+        - SNMP::Info::Airespace
+      primary_package: SNMP::Info::Airespace
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Airespace.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 22769
+      file_mime_type: ~
+      line_count: ~
+      md5: d41be34797eb0bdc8eec5344e63d262d
+      module_name_from_file_guess: SNMP::Info::Bridge
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Bridge.pm
+      packages:
+        - SNMP::Info::Bridge
+      primary_package: SNMP::Info::Bridge
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Bridge.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 11001
+      file_mime_type: ~
+      line_count: ~
+      md5: f261d8d3eff86fd566a1fbeccd6c6526
+      module_name_from_file_guess: SNMP::Info::CDP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CDP.pm
+      packages:
+        - SNMP::Info::CDP
+      primary_package: SNMP::Info::CDP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CDP.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 14132
+      file_mime_type: ~
+      line_count: ~
+      md5: 88f01f8430be7647a10ff06b7aa854a1
+      module_name_from_file_guess: SNMP::Info::CiscoConfig
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoConfig.pm
+      packages:
+        - SNMP::Info::CiscoConfig
+      primary_package: SNMP::Info::CiscoConfig
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoConfig.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 3267
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fdbe5a118d5a6100fa414b36de4f4f8
+      module_name_from_file_guess: SNMP::Info::CiscoImage
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoImage.pm
+      packages:
+        - SNMP::Info::CiscoImage
+      primary_package: SNMP::Info::CiscoImage
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoImage.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 2.00
+    - bytesize: 9496
+      file_mime_type: ~
+      line_count: ~
+      md5: 591311a11ef647ca1dcb34b9569ff983
+      module_name_from_file_guess: SNMP::Info::CiscoPortSecurity
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoPortSecurity.pm
+      packages:
+        - SNMP::Info::CiscoPortSecurity
+      primary_package: SNMP::Info::CiscoPortSecurity
+      uses:
+        - strict
+        - Exporter
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoPortSecurity.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 2.00
+    - bytesize: 4349
+      file_mime_type: ~
+      line_count: ~
+      md5: 31821570c3eec0c13c7b159540b764b2
+      module_name_from_file_guess: SNMP::Info::CiscoPower
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoPower.pm
+      packages:
+        - SNMP::Info::CiscoPower
+      primary_package: SNMP::Info::CiscoPower
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoPower.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 5172
+      file_mime_type: ~
+      line_count: ~
+      md5: 36a44540405d369024cf8e51eda37fa5
+      module_name_from_file_guess: SNMP::Info::CiscoQOS
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoQOS.pm
+      packages:
+        - SNMP::Info::CiscoQOS
+      primary_package: SNMP::Info::CiscoQOS
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoQOS.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 3555
+      file_mime_type: ~
+      line_count: ~
+      md5: d751bdf1c98c35ed38dc6a22db938618
+      module_name_from_file_guess: SNMP::Info::CiscoRTT
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoRTT.pm
+      packages:
+        - SNMP::Info::CiscoRTT
+      primary_package: SNMP::Info::CiscoRTT
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoRTT.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 15969
+      file_mime_type: ~
+      line_count: ~
+      md5: 3026d5c683ca1fa51f18408d0444f5a8
+      module_name_from_file_guess: SNMP::Info::CiscoStack
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoStack.pm
+      packages:
+        - SNMP::Info::CiscoStack
+      primary_package: SNMP::Info::CiscoStack
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoStack.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 9631
+      file_mime_type: ~
+      line_count: ~
+      md5: af73e51f6e8354d8950a8ca5436cd6a6
+      module_name_from_file_guess: SNMP::Info::CiscoStats
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoStats.pm
+      packages:
+        - SNMP::Info::CiscoStats
+      primary_package: SNMP::Info::CiscoStats
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoStats.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 22159
+      file_mime_type: ~
+      line_count: ~
+      md5: 6802a43dc5178ba1e8ce54ded89d43ad
+      module_name_from_file_guess: SNMP::Info::CiscoVTP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/CiscoVTP.pm
+      packages:
+        - SNMP::Info::CiscoVTP
+      primary_package: SNMP::Info::CiscoVTP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/CiscoVTP.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 6356
+      file_mime_type: ~
+      line_count: ~
+      md5: 8515bea0f35286da9b53d43d5b1c8f11
+      module_name_from_file_guess: SNMP::Info::Entity
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Entity.pm
+      packages:
+        - SNMP::Info::Entity
+      primary_package: SNMP::Info::Entity
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Entity.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 6381
+      file_mime_type: ~
+      line_count: ~
+      md5: 14f64f46414d83f9b8f84c0895e7b86d
+      module_name_from_file_guess: SNMP::Info::EtherLike
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/EtherLike.pm
+      packages:
+        - SNMP::Info::EtherLike
+      primary_package: SNMP::Info::EtherLike
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/EtherLike.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 10614
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ce270ff3945293bc0cf1d5968f6646d
+      module_name_from_file_guess: SNMP::Info::FDP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/FDP.pm
+      packages:
+        - SNMP::Info::FDP
+      primary_package: SNMP::Info::FDP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/FDP.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 9226
+      file_mime_type: ~
+      line_count: ~
+      md5: b32fea05e3870d0781d9d301d7eaf357
+      module_name_from_file_guess: SNMP::Info::IEEE802dot11
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/IEEE802dot11.pm
+      packages:
+        - SNMP::Info::IEEE802dot11
+      primary_package: SNMP::Info::IEEE802dot11
+      uses:
+        - strict
+        - Exporter
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/IEEE802dot11.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 2.00
+    - bytesize: 13627
+      file_mime_type: ~
+      line_count: ~
+      md5: e1bc885f5bd21e0ed899a3b4f760ec3c
+      module_name_from_file_guess: SNMP::Info::LLDP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/LLDP.pm
+      packages:
+        - SNMP::Info::LLDP
+      primary_package: SNMP::Info::LLDP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/LLDP.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 8273
+      file_mime_type: ~
+      line_count: ~
+      md5: b4c3bd66452c60ba8d29888ab6e73f98
+      module_name_from_file_guess: SNMP::Info::Layer1
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer1.pm
+      packages:
+        - SNMP::Info::Layer1
+      primary_package: SNMP::Info::Layer1
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer1.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 5587
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c5a6c00c97260de60731059420f7d1e
+      module_name_from_file_guess: SNMP::Info::Layer1::Allied
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer1/Allied.pm
+      packages:
+        - SNMP::Info::Layer1::Allied
+      primary_package: SNMP::Info::Layer1::Allied
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer1
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer1/Allied.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 6287
+      file_mime_type: ~
+      line_count: ~
+      md5: 4df664e4f28d64f2451321f2996c9245
+      module_name_from_file_guess: SNMP::Info::Layer1::Asante
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer1/Asante.pm
+      packages:
+        - SNMP::Info::Layer1::Asante
+      primary_package: SNMP::Info::Layer1::Asante
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer1
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer1/Asante.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 17132
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fa6feb4f44f7412dbecbace5044bcb4
+      module_name_from_file_guess: SNMP::Info::Layer1::Bayhub
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer1/Bayhub.pm
+      packages:
+        - SNMP::Info::Layer1::Bayhub
+      primary_package: SNMP::Info::Layer1::Bayhub
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::SONMP
+        - SNMP::Info::NortelStack
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer1/Bayhub.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 11003
+      file_mime_type: ~
+      line_count: ~
+      md5: e71bee3b15b69f03e89a6cd71354a011
+      module_name_from_file_guess: SNMP::Info::Layer1::Cyclades
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer1/Cyclades.pm
+      packages:
+        - SNMP::Info::Layer1::Cyclades
+      primary_package: SNMP::Info::Layer1::Cyclades
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer1
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer1/Cyclades.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 13566
+      file_mime_type: ~
+      line_count: ~
+      md5: 0271f88e30c004b31cbe88b3feeb1487
+      module_name_from_file_guess: SNMP::Info::Layer1::S3000
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer1/S3000.pm
+      packages:
+        - SNMP::Info::Layer1::S3000
+      primary_package: SNMP::Info::Layer1::S3000
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer1/S3000.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 8295
+      file_mime_type: ~
+      line_count: ~
+      md5: 81522900ca19d5dcd9d6047d510f77a8
+      module_name_from_file_guess: SNMP::Info::Layer2
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2.pm
+      packages:
+        - SNMP::Info::Layer2
+      primary_package: SNMP::Info::Layer2
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - SNMP::Info::Bridge
+        - SNMP::Info::Entity
+        - SNMP::Info::PowerEthernet
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 2.00
+    - bytesize: 5320
+      file_mime_type: ~
+      line_count: ~
+      md5: 66dbc79b9236e811a7f113bcb618c222
+      module_name_from_file_guess: SNMP::Info::Layer2::Airespace
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Airespace.pm
+      packages:
+        - SNMP::Info::Layer2::Airespace
+      primary_package: SNMP::Info::Layer2::Airespace
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Bridge
+        - SNMP::Info::CDP
+        - SNMP::Info::Airespace
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Airespace.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 14796
+      file_mime_type: ~
+      line_count: ~
+      md5: d66f90dd6030af39be0ec0a898163c25
+      module_name_from_file_guess: SNMP::Info::Layer2::Aironet
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Aironet.pm
+      packages:
+        - SNMP::Info::Layer2::Aironet
+      primary_package: SNMP::Info::Layer2::Aironet
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - SNMP::Info::Entity
+        - SNMP::Info::EtherLike
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CDP
+        - SNMP::Info::IEEE802dot11
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Aironet.pm
+        identifier: VERSION
+        line_number: 51
+        sigil: $
+        value: 2.00
+    - bytesize: 5667
+      file_mime_type: ~
+      line_count: ~
+      md5: 331818b6a5081ff1e7c5a7499bef26b8
+      module_name_from_file_guess: SNMP::Info::Layer2::Allied
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Allied.pm
+      packages:
+        - SNMP::Info::Layer2::Allied
+      primary_package: SNMP::Info::Layer2::Allied
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - SNMP::Info::Layer1
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Allied.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 2.00
+    - bytesize: 15603
+      file_mime_type: ~
+      line_count: ~
+      md5: 79ef5159fcc824c2a0216eddafa516f3
+      module_name_from_file_guess: SNMP::Info::Layer2::Aruba
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Aruba.pm
+      packages:
+        - SNMP::Info::Layer2::Aruba
+      primary_package: SNMP::Info::Layer2::Aruba
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Aruba.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 11875
+      file_mime_type: ~
+      line_count: ~
+      md5: 74167678429f2cc3f054debc84de103f
+      module_name_from_file_guess: SNMP::Info::Layer2::Bay
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Bay.pm
+      packages:
+        - SNMP::Info::Layer2::Bay
+      primary_package: SNMP::Info::Layer2::Bay
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Bay.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 18886
+      file_mime_type: ~
+      line_count: ~
+      md5: 770429896fe50e4407d5902ff7c84e12
+      module_name_from_file_guess: SNMP::Info::Layer2::Baystack
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Baystack.pm
+      packages:
+        - SNMP::Info::Layer2::Baystack
+      primary_package: SNMP::Info::Layer2::Baystack
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::SONMP
+        - SNMP::Info::NortelStack
+        - SNMP::Info::RapidCity
+        - SNMP::Info::LLDP
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Baystack.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 2.00
+    - bytesize: 13222
+      file_mime_type: ~
+      line_count: ~
+      md5: 1325cc662356c1c7d22ecfa3a6651982
+      module_name_from_file_guess: SNMP::Info::Layer2::C1900
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/C1900.pm
+      packages:
+        - SNMP::Info::Layer2::C1900
+      primary_package: SNMP::Info::Layer2::C1900
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoConfig
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/C1900.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 2.00
+    - bytesize: 11766
+      file_mime_type: ~
+      line_count: ~
+      md5: f060f87cbb3af27ff20b59dc58839271
+      module_name_from_file_guess: SNMP::Info::Layer2::C2900
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/C2900.pm
+      packages:
+        - SNMP::Info::Layer2::C2900
+      primary_package: SNMP::Info::Layer2::C2900
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoConfig
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/C2900.pm
+        identifier: VERSION
+        line_number: 50
+        sigil: $
+        value: 2.00
+    - bytesize: 10203
+      file_mime_type: ~
+      line_count: ~
+      md5: ef223e7dbd238b92421ff322e8bd11ab
+      module_name_from_file_guess: SNMP::Info::Layer2::Catalyst
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Catalyst.pm
+      packages:
+        - SNMP::Info::Layer2::Catalyst
+      primary_package: SNMP::Info::Layer2::Catalyst
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoStack
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoPortSecurity
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Catalyst.pm
+        identifier: VERSION
+        line_number: 52
+        sigil: $
+        value: 2.00
+    - bytesize: 13009
+      file_mime_type: ~
+      line_count: ~
+      md5: e22e0daf749c32dc31330165f7f24a5d
+      module_name_from_file_guess: SNMP::Info::Layer2::Centillion
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Centillion.pm
+      packages:
+        - SNMP::Info::Layer2::Centillion
+      primary_package: SNMP::Info::Layer2::Centillion
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - SNMP::Info::Bridge
+        - SNMP::Info::NortelStack
+        - SNMP::Info::SONMP
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Centillion.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 2.00
+    - bytesize: 7471
+      file_mime_type: ~
+      line_count: ~
+      md5: bf202f7407744e1ee35cb64770fac942
+      module_name_from_file_guess: SNMP::Info::Layer2::Cisco
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Cisco.pm
+      packages:
+        - SNMP::Info::Layer2::Cisco
+      primary_package: SNMP::Info::Layer2::Cisco
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoImage
+        - SNMP::Info::CiscoRTT
+        - SNMP::Info::CiscoQOS
+        - SNMP::Info::CiscoConfig
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Cisco.pm
+        identifier: VERSION
+        line_number: 53
+        sigil: $
+        value: 2.00
+    - bytesize: 8643
+      file_mime_type: ~
+      line_count: ~
+      md5: cfa6bea05afcaf453d07ae1a7902ba14
+      module_name_from_file_guess: SNMP::Info::Layer2::Foundry
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Foundry.pm
+      packages:
+        - SNMP::Info::Layer2::Foundry
+      primary_package: SNMP::Info::Layer2::Foundry
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - SNMP::Info::FDP
+        - SNMP::Info::EtherLike
+        - SNMP::Info::MAU
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Foundry.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 2.00
+    - bytesize: 25216
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d791272b6fb46321f9a25d06e3c3ada
+      module_name_from_file_guess: SNMP::Info::Layer2::HP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/HP.pm
+      packages:
+        - SNMP::Info::Layer2::HP
+      primary_package: SNMP::Info::Layer2::HP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - SNMP::Info::MAU
+        - SNMP::Info::LLDP
+        - SNMP::Info::CDP
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/HP.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 2.00
+    - bytesize: 6259
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e9c08c2c70fa81a3eea42e635a3a8ec
+      module_name_from_file_guess: SNMP::Info::Layer2::N2270
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/N2270.pm
+      packages:
+        - SNMP::Info::Layer2::N2270
+      primary_package: SNMP::Info::Layer2::N2270
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - SNMP::Info::Bridge
+        - SNMP::Info::SONMP
+        - SNMP::Info::Airespace
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/N2270.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 2.00
+    - bytesize: 14579
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ccb5f6d4a834db9d991adda942e1f70
+      module_name_from_file_guess: SNMP::Info::Layer2::NAP222x
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/NAP222x.pm
+      packages:
+        - SNMP::Info::Layer2::NAP222x
+      primary_package: SNMP::Info::Layer2::NAP222x
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::SONMP
+        - SNMP::Info::IEEE802dot11
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/NAP222x.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 5354
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d23701cd73c05610049642438b40d28
+      module_name_from_file_guess: SNMP::Info::Layer2::Netgear
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Netgear.pm
+      packages:
+        - SNMP::Info::Layer2::Netgear
+      primary_package: SNMP::Info::Layer2::Netgear
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Netgear.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 7446
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a87b8f0630f9e1c14097ed578670677
+      module_name_from_file_guess: SNMP::Info::Layer2::Orinoco
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/Orinoco.pm
+      packages:
+        - SNMP::Info::Layer2::Orinoco
+      primary_package: SNMP::Info::Layer2::Orinoco
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::IEEE802dot11
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/Orinoco.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 5346
+      file_mime_type: ~
+      line_count: ~
+      md5: d659dabedc146afce39cfd8f93a8a964
+      module_name_from_file_guess: SNMP::Info::Layer2::ZyXEL_DSLAM
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer2/ZyXEL_DSLAM.pm
+      packages:
+        - SNMP::Info::Layer2::ZyXEL_DSLAM
+      primary_package: SNMP::Info::Layer2::ZyXEL_DSLAM
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer2
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer2/ZyXEL_DSLAM.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 18206
+      file_mime_type: ~
+      line_count: ~
+      md5: b0b9303736c1ecf74936fd7e0b9abdac
+      module_name_from_file_guess: SNMP::Info::Layer3
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3.pm
+      packages:
+        - SNMP::Info::Layer3
+      primary_package: SNMP::Info::Layer3
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - SNMP::Info::Bridge
+        - SNMP::Info::EtherLike
+        - SNMP::Info::Entity
+        - SNMP::Info::PowerEthernet
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3.pm
+        identifier: VERSION
+        line_number: 50
+        sigil: $
+        value: 2.00
+    - bytesize: 9369
+      file_mime_type: ~
+      line_count: ~
+      md5: d5cf76bfd8287f14d4587983f382bde7
+      module_name_from_file_guess: SNMP::Info::Layer3::Aironet
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Aironet.pm
+      packages:
+        - SNMP::Info::Layer3::Aironet
+      primary_package: SNMP::Info::Layer3::Aironet
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Aironet.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 13904
+      file_mime_type: ~
+      line_count: ~
+      md5: 05d6e3f2ed2549103594d594f800b0b0
+      module_name_from_file_guess: SNMP::Info::Layer3::AlcatelLucent
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/AlcatelLucent.pm
+      packages:
+        - SNMP::Info::Layer3::AlcatelLucent
+      primary_package: SNMP::Info::Layer3::AlcatelLucent
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - SNMP::Info::MAU
+        - SNMP::Info::LLDP
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/AlcatelLucent.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 15645
+      file_mime_type: ~
+      line_count: ~
+      md5: 616f38028c1ba3ddf0021a1a5f1ad201
+      module_name_from_file_guess: SNMP::Info::Layer3::AlteonAD
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/AlteonAD.pm
+      packages:
+        - SNMP::Info::Layer3::AlteonAD
+      primary_package: SNMP::Info::Layer3::AlteonAD
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/AlteonAD.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 50323
+      file_mime_type: ~
+      line_count: ~
+      md5: db2d33ef49d132f3a3ec74bacab89ad6
+      module_name_from_file_guess: SNMP::Info::Layer3::BayRS
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/BayRS.pm
+      packages:
+        - SNMP::Info::Layer3::BayRS
+      primary_package: SNMP::Info::Layer3::BayRS
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - SNMP::Info::Layer3
+        - SNMP::Info::Bridge
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/BayRS.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 2.00
+    - bytesize: 12755
+      file_mime_type: ~
+      line_count: ~
+      md5: 45d254a782af9337254d5fef28d3cc7d
+      module_name_from_file_guess: SNMP::Info::Layer3::C3550
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/C3550.pm
+      packages:
+        - SNMP::Info::Layer3::C3550
+      primary_package: SNMP::Info::Layer3::C3550
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CiscoStack
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoImage
+        - SNMP::Info::CiscoPortSecurity
+        - SNMP::Info::CiscoPower
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/C3550.pm
+        identifier: VERSION
+        line_number: 56
+        sigil: $
+        value: 2.00
+    - bytesize: 9229
+      file_mime_type: ~
+      line_count: ~
+      md5: c53e16ded036d006758cdcbd79a2b420
+      module_name_from_file_guess: SNMP::Info::Layer3::C4000
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/C4000.pm
+      packages:
+        - SNMP::Info::Layer3::C4000
+      primary_package: SNMP::Info::Layer3::C4000
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoImage
+        - SNMP::Info::CiscoPortSecurity
+        - SNMP::Info::CiscoConfig
+        - SNMP::Info::MAU
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/C4000.pm
+        identifier: VERSION
+        line_number: 53
+        sigil: $
+        value: 2.00
+    - bytesize: 12153
+      file_mime_type: ~
+      line_count: ~
+      md5: 201b9af13300737ceda95bc520d8d15b
+      module_name_from_file_guess: SNMP::Info::Layer3::C6500
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/C6500.pm
+      packages:
+        - SNMP::Info::Layer3::C6500
+      primary_package: SNMP::Info::Layer3::C6500
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CiscoStack
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoImage
+        - SNMP::Info::CiscoPortSecurity
+        - SNMP::Info::CiscoConfig
+        - SNMP::Info::CiscoPower
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/C6500.pm
+        identifier: VERSION
+        line_number: 58
+        sigil: $
+        value: 2.00
+    - bytesize: 8918
+      file_mime_type: ~
+      line_count: ~
+      md5: a7b8eb4e3bb9b05138eaa93c5fbc2487
+      module_name_from_file_guess: SNMP::Info::Layer3::Cisco
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Cisco.pm
+      packages:
+        - SNMP::Info::Layer3::Cisco
+      primary_package: SNMP::Info::Layer3::Cisco
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::CiscoVTP
+        - SNMP::Info::CDP
+        - SNMP::Info::CiscoStats
+        - SNMP::Info::CiscoImage
+        - SNMP::Info::CiscoRTT
+        - SNMP::Info::CiscoQOS
+        - SNMP::Info::CiscoConfig
+        - SNMP::Info::CiscoPower
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Cisco.pm
+        identifier: VERSION
+        line_number: 55
+        sigil: $
+        value: 2.00
+    - bytesize: 7402
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f5e0a1e5c09616c2db0de01ef13caa9
+      module_name_from_file_guess: SNMP::Info::Layer3::Contivity
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Contivity.pm
+      packages:
+        - SNMP::Info::Layer3::Contivity
+      primary_package: SNMP::Info::Layer3::Contivity
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - SNMP::Info::Layer3
+        - SNMP::Info::Entity
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Contivity.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 11355
+      file_mime_type: ~
+      line_count: ~
+      md5: 68d3636a0e8a6cdbe9dd8080150f519c
+      module_name_from_file_guess: SNMP::Info::Layer3::Dell
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Dell.pm
+      packages:
+        - SNMP::Info::Layer3::Dell
+      primary_package: SNMP::Info::Layer3::Dell
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Dell.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 13259
+      file_mime_type: ~
+      line_count: ~
+      md5: e9f632f6448554091f15ced6489f7ce7
+      module_name_from_file_guess: SNMP::Info::Layer3::Enterasys
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Enterasys.pm
+      packages:
+        - SNMP::Info::Layer3::Enterasys
+      primary_package: SNMP::Info::Layer3::Enterasys
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::MAU
+        - SNMP::Info::LLDP
+        - SNMP::Info::CDP
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Enterasys.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 2.00
+    - bytesize: 22236
+      file_mime_type: ~
+      line_count: ~
+      md5: 502b85a4b3a52539719203a447b76aac
+      module_name_from_file_guess: SNMP::Info::Layer3::Extreme
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Extreme.pm
+      packages:
+        - SNMP::Info::Layer3::Extreme
+      primary_package: SNMP::Info::Layer3::Extreme
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - SNMP::Info::MAU
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Extreme.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 2.00
+    - bytesize: 16082
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b3547f99e6a63d7a3657e37865fa733
+      module_name_from_file_guess: SNMP::Info::Layer3::Foundry
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Foundry.pm
+      packages:
+        - SNMP::Info::Layer3::Foundry
+      primary_package: SNMP::Info::Layer3::Foundry
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - SNMP::Info::FDP
+        - SNMP::Info::LLDP
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Foundry.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 2.00
+    - bytesize: 14229
+      file_mime_type: ~
+      line_count: ~
+      md5: a541eba50c31911308266b6641a373d1
+      module_name_from_file_guess: SNMP::Info::Layer3::HP9300
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/HP9300.pm
+      packages:
+        - SNMP::Info::Layer3::HP9300
+      primary_package: SNMP::Info::Layer3::HP9300
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - SNMP::Info::FDP
+        - SNMP::Info::LLDP
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/HP9300.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 2.00
+    - bytesize: 5406
+      file_mime_type: ~
+      line_count: ~
+      md5: b0053b083202a15405af1095b864e3a6
+      module_name_from_file_guess: SNMP::Info::Layer3::Juniper
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Juniper.pm
+      packages:
+        - SNMP::Info::Layer3::Juniper
+      primary_package: SNMP::Info::Layer3::Juniper
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Juniper.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 4832
+      file_mime_type: ~
+      line_count: ~
+      md5: 6dbae696bdf2f82158cce1eeb26efb84
+      module_name_from_file_guess: SNMP::Info::Layer3::Microsoft
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Microsoft.pm
+      packages:
+        - SNMP::Info::Layer3::Microsoft
+      primary_package: SNMP::Info::Layer3::Microsoft
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Microsoft.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 7708
+      file_mime_type: ~
+      line_count: ~
+      md5: 18235c3ec2111226015855e041893d9f
+      module_name_from_file_guess: SNMP::Info::Layer3::N1600
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/N1600.pm
+      packages:
+        - SNMP::Info::Layer3::N1600
+      primary_package: SNMP::Info::Layer3::N1600
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - SNMP::Info::SONMP
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/N1600.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 6247
+      file_mime_type: ~
+      line_count: ~
+      md5: bfced800605e44d06ab536f75cee38d4
+      module_name_from_file_guess: SNMP::Info::Layer3::NetSNMP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/NetSNMP.pm
+      packages:
+        - SNMP::Info::Layer3::NetSNMP
+      primary_package: SNMP::Info::Layer3::NetSNMP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/NetSNMP.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 5046
+      file_mime_type: ~
+      line_count: ~
+      md5: f292deedcf6fa833f98f6ee79fed06a4
+      module_name_from_file_guess: SNMP::Info::Layer3::Netscreen
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Netscreen.pm
+      packages:
+        - SNMP::Info::Layer3::Netscreen
+      primary_package: SNMP::Info::Layer3::Netscreen
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Netscreen.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 35931
+      file_mime_type: ~
+      line_count: ~
+      md5: ae3cc412695237e8f2c59e13c66f9af0
+      module_name_from_file_guess: SNMP::Info::Layer3::Passport
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Passport.pm
+      packages:
+        - SNMP::Info::Layer3::Passport
+      primary_package: SNMP::Info::Layer3::Passport
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::SONMP
+        - SNMP::Info::RapidCity
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Passport.pm
+        identifier: VERSION
+        line_number: 46
+        sigil: $
+        value: 2.00
+    - bytesize: 4690
+      file_mime_type: ~
+      line_count: ~
+      md5: d4e36622468204d1d7bd82cfebf535af
+      module_name_from_file_guess: SNMP::Info::Layer3::Sun
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Sun.pm
+      packages:
+        - SNMP::Info::Layer3::Sun
+      primary_package: SNMP::Info::Layer3::Sun
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Sun.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 4824
+      file_mime_type: ~
+      line_count: ~
+      md5: c1574ee5a73de5a866b53643253e3e78
+      module_name_from_file_guess: SNMP::Info::Layer3::Timetra
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/Layer3/Timetra.pm
+      packages:
+        - SNMP::Info::Layer3::Timetra
+      primary_package: SNMP::Info::Layer3::Timetra
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info::Layer3
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/Layer3/Timetra.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 2.00
+    - bytesize: 12488
+      file_mime_type: ~
+      line_count: ~
+      md5: dd65a28ae567c0eec764ca0e0436d95e
+      module_name_from_file_guess: SNMP::Info::MAU
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/MAU.pm
+      packages:
+        - SNMP::Info::MAU
+      primary_package: SNMP::Info::MAU
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/MAU.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 2.00
+    - bytesize: 23844
+      file_mime_type: ~
+      line_count: ~
+      md5: 2802ce5899f88c1b0bf1ff723319f948
+      module_name_from_file_guess: SNMP::Info::NortelStack
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/NortelStack.pm
+      packages:
+        - SNMP::Info::NortelStack
+      primary_package: SNMP::Info::NortelStack
+      uses: []
+      version_info:
+        filename: blib/lib/SNMP/Info/NortelStack.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 6281
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b573a4a30ae5e5394b6848ae8af14ac
+      module_name_from_file_guess: SNMP::Info::PowerEthernet
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/PowerEthernet.pm
+      packages:
+        - SNMP::Info::PowerEthernet
+      primary_package: SNMP::Info::PowerEthernet
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/PowerEthernet.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 29008
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dba9f7eb986d10362711d85b4c25c9a
+      module_name_from_file_guess: SNMP::Info::RapidCity
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/RapidCity.pm
+      packages:
+        - SNMP::Info::RapidCity
+      primary_package: SNMP::Info::RapidCity
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/RapidCity.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+    - bytesize: 11157
+      file_mime_type: ~
+      line_count: ~
+      md5: 4baa5f5188d7feabb6fd9127464654fc
+      module_name_from_file_guess: SNMP::Info::SONMP
+      mtime: 1217648131
+      name: blib/lib/SNMP/Info/SONMP.pm
+      packages:
+        - SNMP::Info::SONMP
+      primary_package: SNMP::Info::SONMP
+      uses:
+        - strict
+        - Exporter
+        - SNMP::Info
+        - vars
+      version_info:
+        filename: blib/lib/SNMP/Info/SONMP.pm
+        identifier: VERSION
+        line_number: 42
+        sigil: $
+        value: 2.00
+  modules:
+    - blib/lib/SNMP/Info.pm
+    - blib/lib/SNMP/Info/Airespace.pm
+    - blib/lib/SNMP/Info/Bridge.pm
+    - blib/lib/SNMP/Info/CDP.pm
+    - blib/lib/SNMP/Info/CiscoConfig.pm
+    - blib/lib/SNMP/Info/CiscoImage.pm
+    - blib/lib/SNMP/Info/CiscoPortSecurity.pm
+    - blib/lib/SNMP/Info/CiscoPower.pm
+    - blib/lib/SNMP/Info/CiscoQOS.pm
+    - blib/lib/SNMP/Info/CiscoRTT.pm
+    - blib/lib/SNMP/Info/CiscoStack.pm
+    - blib/lib/SNMP/Info/CiscoStats.pm
+    - blib/lib/SNMP/Info/CiscoVTP.pm
+    - blib/lib/SNMP/Info/Entity.pm
+    - blib/lib/SNMP/Info/EtherLike.pm
+    - blib/lib/SNMP/Info/FDP.pm
+    - blib/lib/SNMP/Info/IEEE802dot11.pm
+    - blib/lib/SNMP/Info/LLDP.pm
+    - blib/lib/SNMP/Info/Layer1.pm
+    - blib/lib/SNMP/Info/Layer1/Allied.pm
+    - blib/lib/SNMP/Info/Layer1/Asante.pm
+    - blib/lib/SNMP/Info/Layer1/Bayhub.pm
+    - blib/lib/SNMP/Info/Layer1/Cyclades.pm
+    - blib/lib/SNMP/Info/Layer1/S3000.pm
+    - blib/lib/SNMP/Info/Layer2.pm
+    - blib/lib/SNMP/Info/Layer2/Airespace.pm
+    - blib/lib/SNMP/Info/Layer2/Aironet.pm
+    - blib/lib/SNMP/Info/Layer2/Allied.pm
+    - blib/lib/SNMP/Info/Layer2/Aruba.pm
+    - blib/lib/SNMP/Info/Layer2/Bay.pm
+    - blib/lib/SNMP/Info/Layer2/Baystack.pm
+    - blib/lib/SNMP/Info/Layer2/C1900.pm
+    - blib/lib/SNMP/Info/Layer2/C2900.pm
+    - blib/lib/SNMP/Info/Layer2/Catalyst.pm
+    - blib/lib/SNMP/Info/Layer2/Centillion.pm
+    - blib/lib/SNMP/Info/Layer2/Cisco.pm
+    - blib/lib/SNMP/Info/Layer2/Foundry.pm
+    - blib/lib/SNMP/Info/Layer2/HP.pm
+    - blib/lib/SNMP/Info/Layer2/N2270.pm
+    - blib/lib/SNMP/Info/Layer2/NAP222x.pm
+    - blib/lib/SNMP/Info/Layer2/Netgear.pm
+    - blib/lib/SNMP/Info/Layer2/Orinoco.pm
+    - blib/lib/SNMP/Info/Layer2/ZyXEL_DSLAM.pm
+    - blib/lib/SNMP/Info/Layer3.pm
+    - blib/lib/SNMP/Info/Layer3/Aironet.pm
+    - blib/lib/SNMP/Info/Layer3/AlcatelLucent.pm
+    - blib/lib/SNMP/Info/Layer3/AlteonAD.pm
+    - blib/lib/SNMP/Info/Layer3/BayRS.pm
+    - blib/lib/SNMP/Info/Layer3/C3550.pm
+    - blib/lib/SNMP/Info/Layer3/C4000.pm
+    - blib/lib/SNMP/Info/Layer3/C6500.pm
+    - blib/lib/SNMP/Info/Layer3/Cisco.pm
+    - blib/lib/SNMP/Info/Layer3/Contivity.pm
+    - blib/lib/SNMP/Info/Layer3/Dell.pm
+    - blib/lib/SNMP/Info/Layer3/Enterasys.pm
+    - blib/lib/SNMP/Info/Layer3/Extreme.pm
+    - blib/lib/SNMP/Info/Layer3/Foundry.pm
+    - blib/lib/SNMP/Info/Layer3/HP9300.pm
+    - blib/lib/SNMP/Info/Layer3/Juniper.pm
+    - blib/lib/SNMP/Info/Layer3/Microsoft.pm
+    - blib/lib/SNMP/Info/Layer3/N1600.pm
+    - blib/lib/SNMP/Info/Layer3/NetSNMP.pm
+    - blib/lib/SNMP/Info/Layer3/Netscreen.pm
+    - blib/lib/SNMP/Info/Layer3/Passport.pm
+    - blib/lib/SNMP/Info/Layer3/Sun.pm
+    - blib/lib/SNMP/Info/Layer3/Timetra.pm
+    - blib/lib/SNMP/Info/MAU.pm
+    - blib/lib/SNMP/Info/NortelStack.pm
+    - blib/lib/SNMP/Info/PowerEthernet.pm
+    - blib/lib/SNMP/Info/RapidCity.pm
+    - blib/lib/SNMP/Info/SONMP.pm
+  test_info:
+    - bytesize: 690
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1217648131
+      name: t/pod-coverage.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 344
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1217648131
+      name: t/pod.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 271
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1217648131
+      name: t/00-load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 2444
+      file_mime_type: ~
+      line_count: ~
+      md5: f18975accdee89539b8636499d0b5633
+      mtime: 1217648131
+      name: t/prereq.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - SNMP
+  tests:
+    - t/pod-coverage.t
+    - t/pod.t
+    - t/00-load.t
+    - t/prereq.t
+  unpack_dir: /usr/home/brian/0AlPIU22Ym/MyCPAN-Indexer-1055.mY4b
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 1055
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270140984
+  examine_start_time: 1270140890
+  examine_time: 94
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1029
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 1055
+  ppid: 1029
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/0AlPIU22Ym
+  run_end_time: 1270140984
+  run_start_time: 1270140890
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/0AlPIU22Ym
+  uuid: 1F94478C-3D73-11DF-9C68-EB68E8F9184E
+  worker_class: MyCPAN::Indexer::Worker

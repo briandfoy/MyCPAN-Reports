@@ -1,0 +1,2736 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  blib:
+    - blib/lib/Net/DBus.pm
+    - blib/lib/Net/DBus/Binding/Bus.pm
+    - blib/lib/Net/DBus/Binding/Connection.pm
+    - blib/lib/Net/DBus/Binding/Introspector.pm
+    - blib/lib/Net/DBus/Binding/Iterator.pm
+    - blib/lib/Net/DBus/Binding/Message.pm
+    - blib/lib/Net/DBus/Binding/Message/Error.pm
+    - blib/lib/Net/DBus/Binding/Message/MethodCall.pm
+    - blib/lib/Net/DBus/Binding/Message/MethodReturn.pm
+    - blib/lib/Net/DBus/Binding/Message/Signal.pm
+    - blib/lib/Net/DBus/Binding/Server.pm
+    - blib/lib/Net/DBus/Binding/Value.pm
+    - blib/lib/Net/DBus/Binding/Watch.pm
+    - blib/lib/Net/DBus/Callback.pm
+    - blib/lib/Net/DBus/Dumper.pm
+    - blib/lib/Net/DBus/Exporter.pm
+    - blib/lib/Net/DBus/Object.pm
+    - blib/lib/Net/DBus/Reactor.pm
+    - blib/lib/Net/DBus/RemoteObject.pm
+    - blib/lib/Net/DBus/RemoteService.pm
+    - blib/lib/Net/DBus/Service.pm
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite XML::Grove 0 not found.
+    Warning: prerequisite XML::Parser 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Net::DBus
+  build_output: |
+    cp lib/Net/DBus/Binding/Watch.pm blib/lib/Net/DBus/Binding/Watch.pm
+    cp lib/Net/DBus/RemoteObject.pm blib/lib/Net/DBus/RemoteObject.pm
+    cp lib/Net/DBus/Binding/Message/Signal.pm blib/lib/Net/DBus/Binding/Message/Signal.pm
+    cp lib/Net/DBus/Binding/Value.pm blib/lib/Net/DBus/Binding/Value.pm
+    cp lib/Net/DBus/Binding/Bus.pm blib/lib/Net/DBus/Binding/Bus.pm
+    cp lib/Net/DBus.pm blib/lib/Net/DBus.pm
+    cp lib/Net/DBus/Service.pm blib/lib/Net/DBus/Service.pm
+    cp lib/Net/DBus/Object.pm blib/lib/Net/DBus/Object.pm
+    cp lib/Net/DBus/Binding/Message/MethodReturn.pm blib/lib/Net/DBus/Binding/Message/MethodReturn.pm
+    cp lib/Net/DBus/Binding/Connection.pm blib/lib/Net/DBus/Binding/Connection.pm
+    cp lib/Net/DBus/Binding/Message/MethodCall.pm blib/lib/Net/DBus/Binding/Message/MethodCall.pm
+    cp lib/Net/DBus/RemoteService.pm blib/lib/Net/DBus/RemoteService.pm
+    cp lib/Net/DBus/Dumper.pm blib/lib/Net/DBus/Dumper.pm
+    cp lib/Net/DBus/Binding/Iterator.pm blib/lib/Net/DBus/Binding/Iterator.pm
+    cp lib/Net/DBus/Binding/Message/Error.pm blib/lib/Net/DBus/Binding/Message/Error.pm
+    cp lib/Net/DBus/Binding/Message.pm blib/lib/Net/DBus/Binding/Message.pm
+    cp lib/Net/DBus/Binding/Server.pm blib/lib/Net/DBus/Binding/Server.pm
+    cp lib/Net/DBus/Binding/Introspector.pm blib/lib/Net/DBus/Binding/Introspector.pm
+    cp lib/Net/DBus/Callback.pm blib/lib/Net/DBus/Callback.pm
+    cp lib/Net/DBus/Exporter.pm blib/lib/Net/DBus/Exporter.pm
+    cp lib/Net/DBus/Reactor.pm blib/lib/Net/DBus/Reactor.pm
+    /home/brian/bin/perl5.10.1 /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/xsubpp  -typemap /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/typemap -typemap typemap  DBus.xs > DBus.xsc && mv DBus.xsc DBus.c
+    cc -c  -Wall  -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"0.32.1\"  -DXS_VERSION=\"0.32.1\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"  -DDBUS_API_SUBJECT_TO_CHANGE DBus.c
+    DBus.xs:6:23: error: dbus/dbus.h: No such file or directory
+    DBus.xs:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'connection_data_slot'
+    DBus.xs:19: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'server_data_slot'
+    DBus.xs:28: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_watch_generic'
+    DBus.xs:72: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_watch_server_add'
+    DBus.xs:76: error: expected ')' before '*' token
+    DBus.xs:80: error: expected ')' before '*' token
+    DBus.xs:85: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_watch_connection_add'
+    DBus.xs:89: error: expected ')' before '*' token
+    DBus.xs:93: error: expected ')' before '*' token
+    DBus.xs:99: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_timeout_generic'
+    DBus.xs:138: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_timeout_server_add'
+    DBus.xs:142: error: expected ')' before '*' token
+    DBus.xs:146: error: expected ')' before '*' token
+    DBus.xs:151: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_timeout_connection_add'
+    DBus.xs:155: error: expected ')' before '*' token
+    DBus.xs:159: error: expected ')' before '*' token
+    DBus.xs:164: error: expected ')' before '*' token
+    DBus.xs:206: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_message_filter'
+    DBus.xs:259: error: expected ')' before '*' token
+    DBus.xs:265: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_path_message_callback'
+    DBus.xs:296: error: expected '=', ',', ';', 'asm' or '__attribute__' before '_path_callback_vtable'
+    DBus.xs: In function '_populate_constant':
+    DBus.xs:308: warning: value computed is not used
+    DBus.xs: In function 'XS_Net__DBus__Binding__Connection__open':
+    DBus.xs:369: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:369: error: (Each undeclared identifier is reported only once
+    DBus.xs:369: error: for each function it appears in.)
+    DBus.xs:369: error: expected ';' before 'error'
+    DBus.xs:370: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.xs:370: error: 'con' undeclared (first use in this function)
+    DBus.c:393: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:373: warning: implicit declaration of function 'dbus_error_init'
+    DBus.xs:373: error: 'error' undeclared (first use in this function)
+    DBus.xs:374: warning: implicit declaration of function 'dbus_connection_open'
+    DBus.xs:371: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__set_owner':
+    DBus.c:423: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:423: error: 'con' undeclared (first use in this function)
+    DBus.c:427: error: expected expression before ')' token
+    DBus.xs:392: warning: implicit declaration of function 'dbus_connection_set_data'
+    DBus.xs:392: error: 'connection_data_slot' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_disconnect':
+    DBus.c:452: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:452: error: 'con' undeclared (first use in this function)
+    DBus.c:455: error: expected expression before ')' token
+    DBus.c:461: warning: implicit declaration of function 'dbus_connection_disconnect'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_get_is_connected':
+    DBus.c:478: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:478: error: 'con' undeclared (first use in this function)
+    DBus.c:483: error: expected expression before ')' token
+    DBus.c:489: warning: implicit declaration of function 'dbus_connection_get_is_connected'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_get_is_authenticated':
+    DBus.c:507: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:507: error: 'con' undeclared (first use in this function)
+    DBus.c:512: error: expected expression before ')' token
+    DBus.c:518: warning: implicit declaration of function 'dbus_connection_get_is_authenticated'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_flush':
+    DBus.c:536: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:536: error: 'con' undeclared (first use in this function)
+    DBus.c:539: error: expected expression before ')' token
+    DBus.c:545: warning: implicit declaration of function 'dbus_connection_flush'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__send':
+    DBus.c:562: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:562: error: 'con' undeclared (first use in this function)
+    DBus.c:563: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:563: error: 'msg' undeclared (first use in this function)
+    DBus.xs:415: error: 'dbus_uint32_t' undeclared (first use in this function)
+    DBus.xs:415: error: expected ';' before 'serial'
+    DBus.c:571: error: expected expression before ')' token
+    DBus.c:578: error: expected expression before ')' token
+    DBus.xs:417: warning: implicit declaration of function 'dbus_connection_send'
+    DBus.xs:417: error: 'serial' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__send_with_reply_and_block':
+    DBus.c:606: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:606: error: 'con' undeclared (first use in this function)
+    DBus.c:607: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:607: error: 'msg' undeclared (first use in this function)
+    DBus.xs:430: error: 'reply' undeclared (first use in this function)
+    DBus.xs:431: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.xs:431: error: 'iter' undeclared (first use in this function)
+    DBus.xs:432: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:432: error: expected ';' before 'error'
+    DBus.c:615: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:618: error: expected expression before ')' token
+    DBus.c:625: error: expected expression before ')' token
+    DBus.xs:435: error: 'error' undeclared (first use in this function)
+    DBus.xs:436: warning: implicit declaration of function 'dbus_connection_send_with_reply_and_block'
+    DBus.xs:433: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_borrow_message':
+    DBus.c:664: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:664: error: 'con' undeclared (first use in this function)
+    DBus.c:665: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:665: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:668: error: expected expression before ')' token
+    DBus.c:674: warning: implicit declaration of function 'dbus_connection_borrow_message'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_return_message':
+    DBus.c:695: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:695: error: 'con' undeclared (first use in this function)
+    DBus.c:696: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:696: error: 'msg' undeclared (first use in this function)
+    DBus.c:699: error: expected expression before ')' token
+    DBus.c:706: error: expected expression before ')' token
+    DBus.c:712: warning: implicit declaration of function 'dbus_connection_return_message'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_steal_borrowed_message':
+    DBus.c:729: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:729: error: 'con' undeclared (first use in this function)
+    DBus.c:730: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:730: error: 'msg' undeclared (first use in this function)
+    DBus.c:733: error: expected expression before ')' token
+    DBus.c:740: error: expected expression before ')' token
+    DBus.c:746: warning: implicit declaration of function 'dbus_connection_steal_borrowed_message'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_connection_pop_message':
+    DBus.c:763: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:763: error: 'con' undeclared (first use in this function)
+    DBus.c:764: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:764: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:767: error: expected expression before ')' token
+    DBus.c:773: warning: implicit declaration of function 'dbus_connection_pop_message'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__dispatch':
+    DBus.c:794: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:794: error: 'con' undeclared (first use in this function)
+    DBus.c:797: error: expected expression before ')' token
+    DBus.xs:472: warning: implicit declaration of function 'dbus_connection_dispatch'
+    DBus.xs:472: error: 'DBUS_DISPATCH_DATA_REMAINS' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__set_watch_callbacks':
+    DBus.c:821: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:821: error: 'con' undeclared (first use in this function)
+    DBus.c:824: error: expected expression before ')' token
+    DBus.xs:478: warning: implicit declaration of function 'dbus_connection_set_watch_functions'
+    DBus.xs:479: error: '_watch_connection_add' undeclared (first use in this function)
+    DBus.xs:480: error: '_watch_connection_remove' undeclared (first use in this function)
+    DBus.xs:481: error: '_watch_connection_toggled' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__set_timeout_callbacks':
+    DBus.c:854: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:854: error: 'con' undeclared (first use in this function)
+    DBus.c:857: error: expected expression before ')' token
+    DBus.xs:490: warning: implicit declaration of function 'dbus_connection_set_timeout_functions'
+    DBus.xs:491: error: '_timeout_connection_add' undeclared (first use in this function)
+    DBus.xs:492: error: '_timeout_connection_remove' undeclared (first use in this function)
+    DBus.xs:493: error: '_timeout_connection_toggled' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__register_object_path':
+    DBus.c:887: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:887: error: 'con' undeclared (first use in this function)
+    DBus.c:892: error: expected expression before ')' token
+    DBus.xs:505: warning: implicit declaration of function 'dbus_connection_register_object_path'
+    DBus.xs:505: error: '_path_callback_vtable' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection__add_filter':
+    DBus.c:919: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:919: error: 'con' undeclared (first use in this function)
+    DBus.c:923: error: expected expression before ')' token
+    DBus.xs:516: warning: implicit declaration of function 'dbus_connection_add_filter'
+    DBus.xs:516: error: '_message_filter' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_bus_register':
+    DBus.c:949: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:949: error: 'con' undeclared (first use in this function)
+    DBus.xs:522: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:522: error: expected ';' before 'error'
+    DBus.c:954: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:954: error: expected ';' before 'RETVAL'
+    DBus.c:957: error: expected expression before ')' token
+    DBus.xs:525: error: 'error' undeclared (first use in this function)
+    DBus.xs:526: warning: implicit declaration of function 'dbus_bus_register'
+    DBus.xs:529: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_bus_add_match':
+    DBus.c:985: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:985: error: 'con' undeclared (first use in this function)
+    DBus.xs:536: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:536: error: expected ';' before 'error'
+    DBus.c:992: error: expected expression before ')' token
+    DBus.xs:538: error: 'error' undeclared (first use in this function)
+    DBus.xs:540: warning: implicit declaration of function 'dbus_bus_add_match'
+    DBus.xs:541: warning: implicit declaration of function 'dbus_error_is_set'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_dbus_bus_request_name':
+    DBus.c:1021: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:1021: error: 'con' undeclared (first use in this function)
+    DBus.xs:551: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:551: error: expected ';' before 'error'
+    DBus.c:1031: error: expected expression before ')' token
+    DBus.xs:554: error: 'error' undeclared (first use in this function)
+    DBus.xs:555: warning: implicit declaration of function 'dbus_bus_request_name'
+    DBus.c:1028: warning: unused variable 'targ'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Connection_DESTROY':
+    DBus.c:1059: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.c:1059: error: 'con' undeclared (first use in this function)
+    DBus.c:1062: error: expected expression before ')' token
+    DBus.xs:568: warning: implicit declaration of function 'dbus_connection_unref'
+    DBus.xs: In function 'XS_Net__DBus__Binding__Server__open':
+    DBus.xs:579: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:579: error: expected ';' before 'error'
+    DBus.xs:580: error: 'DBusServer' undeclared (first use in this function)
+    DBus.xs:580: error: 'server' undeclared (first use in this function)
+    DBus.c:1096: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:583: error: 'error' undeclared (first use in this function)
+    DBus.xs:584: warning: implicit declaration of function 'dbus_server_listen'
+    DBus.xs:591: warning: implicit declaration of function 'dbus_server_set_auth_mechanisms'
+    DBus.xs:581: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server__set_owner':
+    DBus.c:1130: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1130: error: 'server' undeclared (first use in this function)
+    DBus.c:1134: error: expected expression before ')' token
+    DBus.xs:607: warning: implicit declaration of function 'dbus_server_set_data'
+    DBus.xs:607: error: 'server_data_slot' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server_dbus_server_disconnect':
+    DBus.c:1159: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1159: error: 'server' undeclared (first use in this function)
+    DBus.c:1162: error: expected expression before ')' token
+    DBus.c:1168: warning: implicit declaration of function 'dbus_server_disconnect'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server_dbus_server_get_is_connected':
+    DBus.c:1185: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1185: error: 'server' undeclared (first use in this function)
+    DBus.c:1190: error: expected expression before ')' token
+    DBus.c:1196: warning: implicit declaration of function 'dbus_server_get_is_connected'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server__set_watch_callbacks':
+    DBus.c:1214: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1214: error: 'server' undeclared (first use in this function)
+    DBus.c:1217: error: expected expression before ')' token
+    DBus.xs:621: warning: implicit declaration of function 'dbus_server_set_watch_functions'
+    DBus.xs:622: error: '_watch_server_add' undeclared (first use in this function)
+    DBus.xs:623: error: '_watch_server_remove' undeclared (first use in this function)
+    DBus.xs:624: error: '_watch_server_toggled' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server__set_timeout_callbacks':
+    DBus.c:1247: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1247: error: 'server' undeclared (first use in this function)
+    DBus.c:1250: error: expected expression before ')' token
+    DBus.xs:634: warning: implicit declaration of function 'dbus_server_set_timeout_functions'
+    DBus.xs:635: error: '_timeout_server_add' undeclared (first use in this function)
+    DBus.xs:636: error: '_timeout_server_remove' undeclared (first use in this function)
+    DBus.xs:637: error: '_timeout_server_toggled' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server__set_connection_callback':
+    DBus.c:1280: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1280: error: 'server' undeclared (first use in this function)
+    DBus.c:1283: error: expected expression before ')' token
+    DBus.xs:647: warning: implicit declaration of function 'dbus_server_set_new_connection_function'
+    DBus.xs:648: error: '_connection_callback' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Server_DESTROY':
+    DBus.c:1309: error: 'DBusServer' undeclared (first use in this function)
+    DBus.c:1309: error: 'server' undeclared (first use in this function)
+    DBus.c:1312: error: expected expression before ')' token
+    DBus.xs:656: warning: implicit declaration of function 'dbus_server_unref'
+    DBus.c: In function 'XS_Net__DBus__Binding__Bus__open':
+    DBus.c:1337: error: 'DBusBusType' undeclared (first use in this function)
+    DBus.c:1337: error: expected ';' before 'type'
+    DBus.xs:667: error: 'DBusError' undeclared (first use in this function)
+    DBus.xs:667: error: expected ';' before 'error'
+    DBus.xs:668: error: 'DBusConnection' undeclared (first use in this function)
+    DBus.xs:668: error: 'con' undeclared (first use in this function)
+    DBus.c:1343: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:671: error: 'error' undeclared (first use in this function)
+    DBus.xs:672: warning: implicit declaration of function 'dbus_bus_get'
+    DBus.xs:672: error: 'type' undeclared (first use in this function)
+    DBus.xs:669: warning: unused variable 'h_sv'
+    DBus.xs: In function 'XS_Net__DBus__Binding__Message__create':
+    DBus.xs:690: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.xs:690: error: 'msg' undeclared (first use in this function)
+    DBus.c:1378: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:693: warning: implicit declaration of function 'dbus_message_new'
+    DBus.xs:691: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__Message_set_no_reply':
+    DBus.c:1408: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1408: error: 'msg' undeclared (first use in this function)
+    DBus.c:1409: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:1409: error: expected ';' before 'status'
+    DBus.c:1412: error: expected expression before ')' token
+    DBus.xs:708: warning: implicit declaration of function 'dbus_message_set_no_reply'
+    DBus.xs:708: error: 'status' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Message__iterator_append':
+    DBus.c:1436: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1436: error: 'msg' undeclared (first use in this function)
+    DBus.c:1437: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:1437: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:1440: error: expected expression before ')' token
+    DBus.xs:716: warning: implicit declaration of function 'dbus_new'
+    DBus.xs:717: warning: implicit declaration of function 'dbus_message_iter_init_append'
+    DBus.c: In function 'XS_Net__DBus__Binding__Message__iterator':
+    DBus.c:1467: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1467: error: 'msg' undeclared (first use in this function)
+    DBus.c:1468: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:1468: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:1471: error: expected expression before ')' token
+    DBus.xs:727: warning: implicit declaration of function 'dbus_message_iter_init'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_DESTROY':
+    DBus.c:1498: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1498: error: 'msg' undeclared (first use in this function)
+    DBus.c:1501: error: expected expression before ')' token
+    DBus.xs:743: warning: implicit declaration of function 'dbus_message_unref'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_dbus_message_get_type':
+    DBus.c:1530: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1530: error: 'msg' undeclared (first use in this function)
+    DBus.c:1535: error: expected expression before ')' token
+    DBus.c:1541: warning: implicit declaration of function 'dbus_message_get_type'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_dbus_message_get_interface':
+    DBus.c:1559: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1559: error: 'msg' undeclared (first use in this function)
+    DBus.c:1564: error: expected expression before ')' token
+    DBus.c:1570: warning: implicit declaration of function 'dbus_message_get_interface'
+    DBus.c:1570: warning: assignment makes pointer from integer without a cast
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_dbus_message_get_path':
+    DBus.c:1588: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1588: error: 'msg' undeclared (first use in this function)
+    DBus.c:1593: error: expected expression before ')' token
+    DBus.c:1599: warning: implicit declaration of function 'dbus_message_get_path'
+    DBus.c:1599: warning: assignment makes pointer from integer without a cast
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_dbus_message_get_destination':
+    DBus.c:1617: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1617: error: 'msg' undeclared (first use in this function)
+    DBus.c:1622: error: expected expression before ')' token
+    DBus.c:1628: warning: implicit declaration of function 'dbus_message_get_destination'
+    DBus.c:1628: warning: assignment makes pointer from integer without a cast
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_dbus_message_get_sender':
+    DBus.c:1646: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1646: error: 'msg' undeclared (first use in this function)
+    DBus.c:1651: error: expected expression before ')' token
+    DBus.c:1657: warning: implicit declaration of function 'dbus_message_get_sender'
+    DBus.c:1657: warning: assignment makes pointer from integer without a cast
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Message_dbus_message_get_member':
+    DBus.c:1675: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1675: error: 'msg' undeclared (first use in this function)
+    DBus.c:1680: error: expected expression before ')' token
+    DBus.c:1686: warning: implicit declaration of function 'dbus_message_get_member'
+    DBus.c:1686: warning: assignment makes pointer from integer without a cast
+    DBus.xs: In function 'XS_Net__DBus__Binding__Message__Signal__create':
+    DBus.xs:779: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.xs:779: error: 'msg' undeclared (first use in this function)
+    DBus.c:1711: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:782: warning: implicit declaration of function 'dbus_message_new_signal'
+    DBus.xs:780: warning: unused variable 'h_sv'
+    DBus.xs: In function 'XS_Net__DBus__Binding__Message__MethodCall__create':
+    DBus.xs:806: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.xs:806: error: 'msg' undeclared (first use in this function)
+    DBus.c:1752: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:809: warning: implicit declaration of function 'dbus_message_new_method_call'
+    DBus.xs:807: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__Message__MethodReturn__create':
+    DBus.c:1785: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1785: error: 'call' undeclared (first use in this function)
+    DBus.xs:830: error: 'msg' undeclared (first use in this function)
+    DBus.c:1790: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:1793: error: expected expression before ')' token
+    DBus.xs:833: warning: implicit declaration of function 'dbus_message_new_method_return'
+    DBus.xs:831: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__Message__Error__create':
+    DBus.c:1830: error: 'DBusMessage' undeclared (first use in this function)
+    DBus.c:1830: error: 'replyto' undeclared (first use in this function)
+    DBus.xs:856: error: 'msg' undeclared (first use in this function)
+    DBus.c:1837: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:1840: error: expected expression before ')' token
+    DBus.xs:859: warning: implicit declaration of function 'dbus_message_new_error'
+    DBus.xs:857: warning: unused variable 'h_sv'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Watch_get_fileno':
+    DBus.c:1877: error: 'DBusWatch' undeclared (first use in this function)
+    DBus.c:1877: error: 'watch' undeclared (first use in this function)
+    DBus.c:1882: error: expected expression before ')' token
+    DBus.xs:879: warning: implicit declaration of function 'dbus_watch_get_fd'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Watch_get_flags':
+    DBus.c:1907: error: 'DBusWatch' undeclared (first use in this function)
+    DBus.c:1907: error: 'watch' undeclared (first use in this function)
+    DBus.c:1912: error: expected expression before ')' token
+    DBus.xs:887: warning: implicit declaration of function 'dbus_watch_get_flags'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Watch_is_enabled':
+    DBus.c:1937: error: 'DBusWatch' undeclared (first use in this function)
+    DBus.c:1937: error: 'watch' undeclared (first use in this function)
+    DBus.c:1938: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:1938: error: expected ';' before 'RETVAL'
+    DBus.c:1941: error: expected expression before ')' token
+    DBus.xs:895: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:895: warning: implicit declaration of function 'dbus_watch_get_enabled'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Watch_handle':
+    DBus.c:1967: error: 'DBusWatch' undeclared (first use in this function)
+    DBus.c:1967: error: 'watch' undeclared (first use in this function)
+    DBus.c:1971: error: expected expression before ')' token
+    DBus.xs:905: warning: implicit declaration of function 'dbus_watch_handle'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Watch_get_data':
+    DBus.c:1996: error: 'DBusWatch' undeclared (first use in this function)
+    DBus.c:1996: error: 'watch' undeclared (first use in this function)
+    DBus.c:2001: error: expected expression before ')' token
+    DBus.xs:912: warning: implicit declaration of function 'dbus_watch_get_data'
+    DBus.xs:912: warning: assignment makes pointer from integer without a cast
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Watch_set_data':
+    DBus.c:2026: error: 'DBusWatch' undeclared (first use in this function)
+    DBus.c:2026: error: 'watch' undeclared (first use in this function)
+    DBus.c:2030: error: expected expression before ')' token
+    DBus.xs:921: warning: implicit declaration of function 'dbus_watch_set_data'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Timeout_get_interval':
+    DBus.c:2054: error: 'DBusTimeout' undeclared (first use in this function)
+    DBus.c:2054: error: 'timeout' undeclared (first use in this function)
+    DBus.c:2059: error: expected expression before ')' token
+    DBus.xs:930: warning: implicit declaration of function 'dbus_timeout_get_interval'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Timeout_is_enabled':
+    DBus.c:2084: error: 'DBusTimeout' undeclared (first use in this function)
+    DBus.c:2084: error: 'timeout' undeclared (first use in this function)
+    DBus.c:2085: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:2085: error: expected ';' before 'RETVAL'
+    DBus.c:2088: error: expected expression before ')' token
+    DBus.xs:938: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:938: warning: implicit declaration of function 'dbus_timeout_get_enabled'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Timeout_handle':
+    DBus.c:2114: error: 'DBusTimeout' undeclared (first use in this function)
+    DBus.c:2114: error: 'timeout' undeclared (first use in this function)
+    DBus.c:2117: error: expected expression before ')' token
+    DBus.xs:947: warning: implicit declaration of function 'dbus_timeout_handle'
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Timeout_get_data':
+    DBus.c:2142: error: 'DBusTimeout' undeclared (first use in this function)
+    DBus.c:2142: error: 'timeout' undeclared (first use in this function)
+    DBus.c:2147: error: expected expression before ')' token
+    DBus.xs:953: warning: implicit declaration of function 'dbus_timeout_get_data'
+    DBus.xs:953: warning: assignment makes pointer from integer without a cast
+    DBus.c: In function 'XS_Net__DBus__Binding__C__Timeout_set_data':
+    DBus.c:2172: error: 'DBusTimeout' undeclared (first use in this function)
+    DBus.c:2172: error: 'timeout' undeclared (first use in this function)
+    DBus.c:2176: error: expected expression before ')' token
+    DBus.xs:962: warning: implicit declaration of function 'dbus_timeout_set_data'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__recurse':
+    DBus.c:2200: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2200: error: 'iter' undeclared (first use in this function)
+    DBus.c:2201: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:2204: error: expected expression before ')' token
+    DBus.xs:971: warning: implicit declaration of function 'dbus_message_iter_recurse'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__open_container':
+    DBus.c:2231: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2231: error: 'iter' undeclared (first use in this function)
+    DBus.c:2234: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c:2237: error: expected expression before ')' token
+    DBus.xs:982: warning: implicit declaration of function 'dbus_message_iter_open_container'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__close_container':
+    DBus.c:2264: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2264: error: 'iter' undeclared (first use in this function)
+    DBus.c:2265: error: 'sub_iter' undeclared (first use in this function)
+    DBus.c:2268: error: expected expression before ')' token
+    DBus.c:2275: error: expected expression before ')' token
+    DBus.xs:991: warning: implicit declaration of function 'dbus_message_iter_close_container'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_arg_type':
+    DBus.c:2299: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2299: error: 'iter' undeclared (first use in this function)
+    DBus.c:2304: error: expected expression before ')' token
+    DBus.xs:997: warning: implicit declaration of function 'dbus_message_iter_get_arg_type'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_element_type':
+    DBus.c:2329: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2329: error: 'iter' undeclared (first use in this function)
+    DBus.c:2334: error: expected expression before ')' token
+    DBus.xs:1005: warning: implicit declaration of function 'dbus_message_iter_get_element_type'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_has_next':
+    DBus.c:2359: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2359: error: 'iter' undeclared (first use in this function)
+    DBus.c:2360: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:2360: error: expected ';' before 'RETVAL'
+    DBus.c:2363: error: expected expression before ')' token
+    DBus.xs:1013: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:1013: warning: implicit declaration of function 'dbus_message_iter_has_next'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_next':
+    DBus.c:2389: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2389: error: 'iter' undeclared (first use in this function)
+    DBus.c:2390: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:2390: error: expected ';' before 'RETVAL'
+    DBus.c:2393: error: expected expression before ')' token
+    DBus.xs:1021: error: 'RETVAL' undeclared (first use in this function)
+    DBus.xs:1021: warning: implicit declaration of function 'dbus_message_iter_next'
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_boolean':
+    DBus.c:2419: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2419: error: 'iter' undeclared (first use in this function)
+    DBus.c:2420: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:2420: error: expected ';' before 'RETVAL'
+    DBus.c:2423: error: expected expression before ')' token
+    DBus.xs:1029: warning: implicit declaration of function 'dbus_message_iter_get_basic'
+    DBus.xs:1029: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_byte':
+    DBus.c:2449: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2449: error: 'iter' undeclared (first use in this function)
+    DBus.c:2454: error: expected expression before ')' token
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_int32':
+    DBus.c:2479: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2479: error: 'iter' undeclared (first use in this function)
+    DBus.c:2480: error: 'dbus_int32_t' undeclared (first use in this function)
+    DBus.c:2480: error: expected ';' before 'RETVAL'
+    DBus.c:2484: error: expected expression before ')' token
+    DBus.xs:1045: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_uint32':
+    DBus.c:2509: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2509: error: 'iter' undeclared (first use in this function)
+    DBus.c:2510: error: 'dbus_uint32_t' undeclared (first use in this function)
+    DBus.c:2510: error: expected ';' before 'RETVAL'
+    DBus.c:2514: error: expected expression before ')' token
+    DBus.xs:1053: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__get_int64':
+    DBus.c:2539: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2539: error: 'iter' undeclared (first use in this function)
+    DBus.c:2540: error: 'dbus_int64_t' undeclared (first use in this function)
+    DBus.c:2540: error: expected ';' before 'RETVAL'
+    DBus.c:2544: error: expected expression before ')' token
+    DBus.xs:1061: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__get_uint64':
+    DBus.c:2569: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2569: error: 'iter' undeclared (first use in this function)
+    DBus.c:2570: error: 'dbus_uint64_t' undeclared (first use in this function)
+    DBus.c:2570: error: expected ';' before 'RETVAL'
+    DBus.c:2574: error: expected expression before ')' token
+    DBus.xs:1069: error: 'RETVAL' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_double':
+    DBus.c:2599: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2599: error: 'iter' undeclared (first use in this function)
+    DBus.c:2604: error: expected expression before ')' token
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_get_string':
+    DBus.c:2629: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2629: error: 'iter' undeclared (first use in this function)
+    DBus.c:2634: error: expected expression before ')' token
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_append_boolean':
+    DBus.c:2659: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2659: error: 'iter' undeclared (first use in this function)
+    DBus.c:2660: error: 'dbus_bool_t' undeclared (first use in this function)
+    DBus.c:2660: error: expected ';' before 'val'
+    DBus.c:2663: error: expected expression before ')' token
+    DBus.xs:1095: warning: implicit declaration of function 'dbus_message_iter_append_basic'
+    DBus.xs:1095: error: 'DBUS_TYPE_BOOLEAN' undeclared (first use in this function)
+    DBus.xs:1095: error: 'val' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_append_byte':
+    DBus.c:2689: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2689: error: 'iter' undeclared (first use in this function)
+    DBus.c:2693: error: expected expression before ')' token
+    DBus.xs:1104: error: 'DBUS_TYPE_BYTE' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_append_int32':
+    DBus.c:2719: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2719: error: 'iter' undeclared (first use in this function)
+    DBus.c:2720: error: 'dbus_int32_t' undeclared (first use in this function)
+    DBus.c:2720: error: expected ';' before 'val'
+    DBus.c:2723: error: expected expression before ')' token
+    DBus.xs:1113: error: 'DBUS_TYPE_INT32' undeclared (first use in this function)
+    DBus.xs:1113: error: 'val' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_append_uint32':
+    DBus.c:2749: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2749: error: 'iter' undeclared (first use in this function)
+    DBus.c:2750: error: 'dbus_uint32_t' undeclared (first use in this function)
+    DBus.c:2750: error: expected ';' before 'val'
+    DBus.c:2753: error: expected expression before ')' token
+    DBus.xs:1122: error: 'DBUS_TYPE_UINT32' undeclared (first use in this function)
+    DBus.xs:1122: error: 'val' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__append_int64':
+    DBus.c:2779: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2779: error: 'iter' undeclared (first use in this function)
+    DBus.c:2780: error: 'dbus_int64_t' undeclared (first use in this function)
+    DBus.c:2780: error: expected ';' before 'val'
+    DBus.c:2783: error: expected expression before ')' token
+    DBus.xs:1131: error: 'DBUS_TYPE_INT64' undeclared (first use in this function)
+    DBus.xs:1131: error: 'val' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator__append_uint64':
+    DBus.c:2809: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2809: error: 'iter' undeclared (first use in this function)
+    DBus.c:2810: error: 'dbus_uint64_t' undeclared (first use in this function)
+    DBus.c:2810: error: expected ';' before 'val'
+    DBus.c:2813: error: expected expression before ')' token
+    DBus.xs:1140: error: 'DBUS_TYPE_UINT64' undeclared (first use in this function)
+    DBus.xs:1140: error: 'val' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_append_double':
+    DBus.c:2839: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2839: error: 'iter' undeclared (first use in this function)
+    DBus.c:2843: error: expected expression before ')' token
+    DBus.xs:1149: error: 'DBUS_TYPE_DOUBLE' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_append_string':
+    DBus.c:2869: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2869: error: 'iter' undeclared (first use in this function)
+    DBus.c:2873: error: expected expression before ')' token
+    DBus.xs:1158: error: 'DBUS_TYPE_STRING' undeclared (first use in this function)
+    DBus.c: In function 'XS_Net__DBus__Binding__Iterator_DESTROY':
+    DBus.c:2899: error: 'DBusMessageIter' undeclared (first use in this function)
+    DBus.c:2899: error: 'iter' undeclared (first use in this function)
+    DBus.c:2902: error: expected expression before ')' token
+    DBus.xs:1169: warning: implicit declaration of function 'dbus_free'
+    DBus.xs: In function 'boot_Net__DBus':
+    DBus.xs:323: error: 'DBUS_BUS_SYSTEM' undeclared (first use in this function)
+    DBus.xs:324: error: 'DBUS_BUS_SESSION' undeclared (first use in this function)
+    DBus.xs:325: error: 'DBUS_BUS_STARTER' undeclared (first use in this function)
+    DBus.xs:328: error: 'DBUS_TYPE_ARRAY' undeclared (first use in this function)
+    DBus.xs:329: error: 'DBUS_TYPE_BOOLEAN' undeclared (first use in this function)
+    DBus.xs:330: error: 'DBUS_TYPE_BYTE' undeclared (first use in this function)
+    DBus.xs:331: error: 'DBUS_TYPE_DOUBLE' undeclared (first use in this function)
+    DBus.xs:332: error: 'DBUS_TYPE_INT32' undeclared (first use in this function)
+    DBus.xs:333: error: 'DBUS_TYPE_INT64' undeclared (first use in this function)
+    DBus.xs:334: error: 'DBUS_TYPE_INVALID' undeclared (first use in this function)
+    DBus.xs:335: error: 'DBUS_TYPE_STRUCT' undeclared (first use in this function)
+    DBus.xs:336: error: 'DBUS_TYPE_SIGNATURE' undeclared (first use in this function)
+    DBus.xs:337: error: 'DBUS_TYPE_OBJECT_PATH' undeclared (first use in this function)
+    DBus.xs:338: error: 'DBUS_TYPE_DICT_ENTRY' undeclared (first use in this function)
+    DBus.xs:339: error: 'DBUS_TYPE_STRING' undeclared (first use in this function)
+    DBus.xs:340: error: 'DBUS_TYPE_UINT32' undeclared (first use in this function)
+    DBus.xs:341: error: 'DBUS_TYPE_UINT64' undeclared (first use in this function)
+    DBus.xs:342: error: 'DBUS_TYPE_VARIANT' undeclared (first use in this function)
+    DBus.xs:344: error: 'DBUS_MESSAGE_TYPE_METHOD_CALL' undeclared (first use in this function)
+    DBus.xs:345: error: 'DBUS_MESSAGE_TYPE_METHOD_RETURN' undeclared (first use in this function)
+    DBus.xs:346: error: 'DBUS_MESSAGE_TYPE_ERROR' undeclared (first use in this function)
+    DBus.xs:347: error: 'DBUS_MESSAGE_TYPE_SIGNAL' undeclared (first use in this function)
+    DBus.xs:348: error: 'DBUS_MESSAGE_TYPE_INVALID' undeclared (first use in this function)
+    DBus.xs:351: error: 'DBUS_WATCH_READABLE' undeclared (first use in this function)
+    DBus.xs:352: error: 'DBUS_WATCH_WRITABLE' undeclared (first use in this function)
+    DBus.xs:353: error: 'DBUS_WATCH_ERROR' undeclared (first use in this function)
+    DBus.xs:354: error: 'DBUS_WATCH_HANGUP' undeclared (first use in this function)
+    DBus.xs:356: warning: implicit declaration of function 'dbus_connection_allocate_data_slot'
+    DBus.xs:356: error: 'connection_data_slot' undeclared (first use in this function)
+    DBus.xs:357: warning: implicit declaration of function 'dbus_server_allocate_data_slot'
+    DBus.xs:357: error: 'server_data_slot' undeclared (first use in this function)
+    *** Error code 1
+    
+    Stop in /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1.
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DANBERR
+  dist_basename: Net-DBus-0.32.1.tar.gz
+  dist_date: 1125348831
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV/Net-DBus-0.32.1
+  dist_file: /home/brian/CPAN/authors/id/D/DA/DANBERR/Net-DBus-0.32.1.tar.gz
+  dist_md5: 6ac2d855eaad22563684b92a05abd9da
+  dist_size: 46453
+  manifest:
+    - AUTHORS
+    - CHANGES
+    - COPYING
+    - DBus.xs
+    - MANIFEST
+    - MANIFEST.SKIP
+    - Makefile.PL
+    - Net-DBus.spec
+    - Net-DBus.spec.PL
+    - README
+    - examples/dump-object.pl
+    - examples/example-client-no-introspect.pl
+    - examples/example-client.pl
+    - examples/example-service-no-introspect.pl
+    - examples/example-service.pl
+    - examples/example-signal-emitter.pl
+    - examples/example-signal-receiver.pl
+    - lib/Net/DBus.pm
+    - lib/Net/DBus/Binding/Bus.pm
+    - lib/Net/DBus/Binding/Connection.pm
+    - lib/Net/DBus/Binding/Introspector.pm
+    - lib/Net/DBus/Binding/Iterator.pm
+    - lib/Net/DBus/Binding/Message.pm
+    - lib/Net/DBus/Binding/Message/Error.pm
+    - lib/Net/DBus/Binding/Message/MethodCall.pm
+    - lib/Net/DBus/Binding/Message/MethodReturn.pm
+    - lib/Net/DBus/Binding/Message/Signal.pm
+    - lib/Net/DBus/Binding/Server.pm
+    - lib/Net/DBus/Binding/Value.pm
+    - lib/Net/DBus/Binding/Watch.pm
+    - lib/Net/DBus/Callback.pm
+    - lib/Net/DBus/Dumper.pm
+    - lib/Net/DBus/Exporter.pm
+    - lib/Net/DBus/Object.pm
+    - lib/Net/DBus/Reactor.pm
+    - lib/Net/DBus/RemoteObject.pm
+    - lib/Net/DBus/RemoteService.pm
+    - lib/Net/DBus/Service.pm
+    - rollingbuild.sh
+    - t/00-constants.t
+    - t/15-message.t
+    - t/20-callback.t
+    - t/25-reactor.t
+    - t/30-server.t
+    - t/40-introspector.t
+    - t/50-object-introspect.t
+    - typemap
+  manifest_file_info:
+    - bytesize: 286
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d350169560e75d0cf9fc8e3574a3639
+      mtime: 1114690451
+      name: AUTHORS
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: e4eb329834da3d36278b1b7d943b3bc9
+      mtime: 1124046300
+      name: CHANGES
+    - bytesize: 17989
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1124717570
+      name: COPYING
+    - bytesize: 30324
+      file_mime_type: ~
+      line_count: ~
+      md5: 7076ff2817dc38c99184a69984554c2d
+      mtime: 1124717474
+      name: DBus.xs
+    - bytesize: 1145
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1125348339
+      name: MANIFEST
+    - bytesize: 80
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1113344630
+      name: MANIFEST.SKIP
+    - bytesize: 1091
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1125323644
+      name: Makefile.PL
+    - bytesize: 1466
+      file_mime_type: ~
+      line_count: ~
+      md5: b080f04e5abde8cee57c05abed787d63
+      mtime: 1125348346
+      name: Net-DBus.spec
+    - bytesize: 1934
+      file_mime_type: ~
+      line_count: ~
+      md5: 105797e111a702b9f43e2e6709586410
+      mtime: 1124717580
+      name: Net-DBus.spec.PL
+    - bytesize: 3115
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1124717548
+      name: README
+    - bytesize: 392
+      file_mime_type: ~
+      line_count: ~
+      md5: b5d078bed0494dafca60544db4599621
+      mtime: 1124717429
+      name: examples/dump-object.pl
+    - bytesize: 636
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bf938fa4f8b3062145dcb87b0a33e14
+      mtime: 1125322816
+      name: examples/example-client-no-introspect.pl
+    - bytesize: 604
+      file_mime_type: ~
+      line_count: ~
+      md5: f98da808f4d6a0d732bf1455ad595dc7
+      mtime: 1124046374
+      name: examples/example-client.pl
+    - bytesize: 984
+      file_mime_type: ~
+      line_count: ~
+      md5: 6eca157ce580d8541b258e6c8c904584
+      mtime: 1125322816
+      name: examples/example-service-no-introspect.pl
+    - bytesize: 1227
+      file_mime_type: ~
+      line_count: ~
+      md5: f34a9adfc39d3aefd958e89b9238dbe2
+      mtime: 1124046374
+      name: examples/example-service.pl
+    - bytesize: 965
+      file_mime_type: ~
+      line_count: ~
+      md5: 97694a14c87ec90699e546bdb5daa3ff
+      mtime: 1124046374
+      name: examples/example-signal-emitter.pl
+    - bytesize: 769
+      file_mime_type: ~
+      line_count: ~
+      md5: 368b07dbc31ed4c52b1f6300440d5d07
+      mtime: 1125322794
+      name: examples/example-signal-receiver.pl
+    - bytesize: 10578
+      file_mime_type: ~
+      line_count: ~
+      md5: ade0b0d70c441a40cce888a966e37657
+      mtime: 1124717400
+      name: lib/Net/DBus.pm
+    - bytesize: 1593
+      file_mime_type: ~
+      line_count: ~
+      md5: d6cee356c95067dcd092feb70c374c1d
+      mtime: 1108944606
+      name: lib/Net/DBus/Binding/Bus.pm
+    - bytesize: 11122
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ab333adb3c2564228ed53515fa5b432
+      mtime: 1099233553
+      name: lib/Net/DBus/Binding/Connection.pm
+    - bytesize: 14728
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ddc12150985e67062d29cfadc7cedb6
+      mtime: 1124717530
+      name: lib/Net/DBus/Binding/Introspector.pm
+    - bytesize: 11823
+      file_mime_type: ~
+      line_count: ~
+      md5: e5cbd487c46af80c732ddea41dc82630
+      mtime: 1125322640
+      name: lib/Net/DBus/Binding/Iterator.pm
+    - bytesize: 4764
+      file_mime_type: ~
+      line_count: ~
+      md5: 80a5037d717aa569c7f3bc57861ae62e
+      mtime: 1125322681
+      name: lib/Net/DBus/Binding/Message.pm
+    - bytesize: 820
+      file_mime_type: ~
+      line_count: ~
+      md5: 87a88edc4b7ae5cc2a2a096b81084136
+      mtime: 1096584884
+      name: lib/Net/DBus/Binding/Message/Error.pm
+    - bytesize: 918
+      file_mime_type: ~
+      line_count: ~
+      md5: ee9000fa9ea5ac06bc9e5f7fcc8801ed
+      mtime: 1096584884
+      name: lib/Net/DBus/Binding/Message/MethodCall.pm
+    - bytesize: 658
+      file_mime_type: ~
+      line_count: ~
+      md5: 274a24451a14c7b1f5679299a277122b
+      mtime: 1096584884
+      name: lib/Net/DBus/Binding/Message/MethodReturn.pm
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: c9d6d4f2e9bf2837be102eb67298b343
+      mtime: 1101252337
+      name: lib/Net/DBus/Binding/Message/Signal.pm
+    - bytesize: 5152
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ad389e8b6a6a5af1fe5995da5871f7
+      mtime: 1096584884
+      name: lib/Net/DBus/Binding/Server.pm
+    - bytesize: 903
+      file_mime_type: ~
+      line_count: ~
+      md5: c98db12f8ce870f0ac9c2739fa64c7e9
+      mtime: 1099233590
+      name: lib/Net/DBus/Binding/Value.pm
+    - bytesize: 671
+      file_mime_type: ~
+      line_count: ~
+      md5: f44692920ec5ae7c210750d83d5ac5a3
+      mtime: 1096584884
+      name: lib/Net/DBus/Binding/Watch.pm
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: 483e931450c68b88dcdc97a5e25b6108
+      mtime: 1123696049
+      name: lib/Net/DBus/Callback.pm
+    - bytesize: 4279
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f38d3838b3b5530616943bdb7ad3252
+      mtime: 1124717415
+      name: lib/Net/DBus/Dumper.pm
+    - bytesize: 10973
+      file_mime_type: ~
+      line_count: ~
+      md5: ade4d21b6bc78867044e75c1c258abe4
+      mtime: 1125322184
+      name: lib/Net/DBus/Exporter.pm
+    - bytesize: 8722
+      file_mime_type: ~
+      line_count: ~
+      md5: 98a15f8abbe4c4635f94b4a00e2a457e
+      mtime: 1125322757
+      name: lib/Net/DBus/Object.pm
+    - bytesize: 17253
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b1c5d659392a2ecc6c9dad4728a6fb0
+      mtime: 1124045547
+      name: lib/Net/DBus/Reactor.pm
+    - bytesize: 4471
+      file_mime_type: ~
+      line_count: ~
+      md5: 786d4133b84a26cd779b557edb46c0c0
+      mtime: 1125322757
+      name: lib/Net/DBus/RemoteObject.pm
+    - bytesize: 949
+      file_mime_type: ~
+      line_count: ~
+      md5: 368f6add19a6770e97e2cacbe9c85070
+      mtime: 1125322715
+      name: lib/Net/DBus/RemoteService.pm
+    - bytesize: 1103
+      file_mime_type: ~
+      line_count: ~
+      md5: ddf60d12a9c889bff3615d9d6decccbc
+      mtime: 1124133125
+      name: lib/Net/DBus/Service.pm
+    - bytesize: 1052
+      file_mime_type: ~
+      line_count: ~
+      md5: 24ce73102b3f6d62aad8cc80e23c4f54
+      mtime: 1113344630
+      name: rollingbuild.sh
+    - bytesize: 1076
+      file_mime_type: ~
+      line_count: ~
+      md5: 04d55a486f790cd6d2fa28297891f852
+      mtime: 1108944624
+      name: t/00-constants.t
+    - bytesize: 1663
+      file_mime_type: ~
+      line_count: ~
+      md5: e9fe2ded0d1cadca9e532dfb8724ad66
+      mtime: 1108944624
+      name: t/15-message.t
+    - bytesize: 970
+      file_mime_type: ~
+      line_count: ~
+      md5: f1bf3efbd50dacaf4d628a4d001266a6
+      mtime: 1108944624
+      name: t/20-callback.t
+    - bytesize: 2182
+      file_mime_type: ~
+      line_count: ~
+      md5: 594f752a1fc919ddfce9a78bfd46dd62
+      mtime: 1108944624
+      name: t/25-reactor.t
+    - bytesize: 1072
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a3cc610fe7b183ec2059851d1af3a55
+      mtime: 1124368654
+      name: t/30-server.t
+    - bytesize: 4494
+      file_mime_type: ~
+      line_count: ~
+      md5: 31d23f7a25fa762786f1548cd572aa51
+      mtime: 1123705643
+      name: t/40-introspector.t
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: 082c8fe61d5dbf7d244ed546fad8cac1
+      mtime: 1124368654
+      name: t/50-object-introspect.t
+    - bytesize: 2510
+      file_mime_type: ~
+      line_count: ~
+      md5: f421e5dc171b308cac8ecaead365643f
+      mtime: 1099233476
+      name: typemap
+  module_info:
+    - bytesize: 10578
+      file_mime_type: ~
+      line_count: ~
+      md5: b405f6e962ec5f387d7eaa8a83c8a4af
+      module_name_from_file_guess: Net::DBus
+      mtime: 1124717400
+      name: blib/lib/Net/DBus.pm
+      packages:
+        - Net::DBus
+      primary_package: Net::DBus
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - XSLoader
+        - Net::DBus::Binding::Bus
+        - Net::DBus::Binding::Message
+        - Net::DBus::Binding::Value
+        - Net::DBus::Service
+        - Net::DBus::RemoteService
+      version_info:
+        filename: blib/lib/Net/DBus.pm
+        identifier: VERSION
+        line_number: 73
+        sigil: $
+        value: 0.32.1
+    - bytesize: 1593
+      file_mime_type: ~
+      line_count: ~
+      md5: d76225c8a6eea03654fedb79ba779d8f
+      module_name_from_file_guess: Net::DBus::Binding::Bus
+      mtime: 1108944606
+      name: blib/lib/Net/DBus/Binding/Bus.pm
+      packages:
+        - Net::DBus::Binding::Bus
+      primary_package: Net::DBus::Binding::Bus
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - base
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Bus.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 0.0.1
+    - bytesize: 11122
+      file_mime_type: ~
+      line_count: ~
+      md5: 83feceb60e38802f40b53ab467d707b2
+      module_name_from_file_guess: Net::DBus::Binding::Connection
+      mtime: 1099233553
+      name: blib/lib/Net/DBus/Binding/Connection.pm
+      packages:
+        - Net::DBus::Binding::Connection
+      primary_package: Net::DBus::Binding::Connection
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Message::MethodReturn
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Connection.pm
+        identifier: VERSION
+        line_number: 62
+        sigil: $
+        value: 0.0.1
+    - bytesize: 14728
+      file_mime_type: ~
+      line_count: ~
+      md5: 0800653561813e4e963c63bd0d28afd1
+      module_name_from_file_guess: Net::DBus::Binding::Introspector
+      mtime: 1124717530
+      name: blib/lib/Net/DBus/Binding/Introspector.pm
+      packages:
+        - Net::DBus::Binding::Introspector
+      primary_package: Net::DBus::Binding::Introspector
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - XML::Grove::Builder
+        - XML::Parser::PerlSAX
+        - Net::DBus
+        - Net::DBus::Binding::Message
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Introspector.pm
+        identifier: VERSION
+        line_number: 63
+        sigil: $
+        value: 0.0.1
+    - bytesize: 11823
+      file_mime_type: ~
+      line_count: ~
+      md5: e989b8d3e1a587e2745baf915693c233
+      module_name_from_file_guess: Net::DBus::Binding::Iterator
+      mtime: 1125322640
+      name: blib/lib/Net/DBus/Binding/Iterator.pm
+      packages:
+        - Net::DBus::Binding::Iterator
+      primary_package: Net::DBus::Binding::Iterator
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Iterator.pm
+        identifier: VERSION
+        line_number: 58
+        sigil: $
+        value: 0.0.1
+    - bytesize: 4764
+      file_mime_type: ~
+      line_count: ~
+      md5: 602cf40798bf6d25288b58714a66dafd
+      module_name_from_file_guess: Net::DBus::Binding::Message
+      mtime: 1125322681
+      name: blib/lib/Net/DBus/Binding/Message.pm
+      packages:
+        - Net::DBus::Binding::Message
+      primary_package: Net::DBus::Binding::Message
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Iterator
+        - Net::DBus::Binding::Message::Signal
+        - Net::DBus::Binding::Message::MethodCall
+        - Net::DBus::Binding::Message::MethodReturn
+        - Net::DBus::Binding::Message::Error
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Message.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 0.0.1
+    - bytesize: 820
+      file_mime_type: ~
+      line_count: ~
+      md5: 11d5dcf2181727daa4a526ee65ad643b
+      module_name_from_file_guess: Net::DBus::Binding::Message::Error
+      mtime: 1096584884
+      name: blib/lib/Net/DBus/Binding/Message/Error.pm
+      packages:
+        - Net::DBus::Binding::Message::Error
+      primary_package: Net::DBus::Binding::Message::Error
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Message
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Message/Error.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 0.0.1
+    - bytesize: 918
+      file_mime_type: ~
+      line_count: ~
+      md5: ef2bf15665d2164ed6cac23a9b82963b
+      module_name_from_file_guess: Net::DBus::Binding::Message::MethodCall
+      mtime: 1096584884
+      name: blib/lib/Net/DBus/Binding/Message/MethodCall.pm
+      packages:
+        - Net::DBus::Binding::Message::MethodCall
+      primary_package: Net::DBus::Binding::Message::MethodCall
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Message
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Message/MethodCall.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 0.0.1
+    - bytesize: 658
+      file_mime_type: ~
+      line_count: ~
+      md5: 30788e6d025cb1677e54ed572e49861e
+      module_name_from_file_guess: Net::DBus::Binding::Message::MethodReturn
+      mtime: 1096584884
+      name: blib/lib/Net/DBus/Binding/Message/MethodReturn.pm
+      packages:
+        - Net::DBus::Binding::Message::MethodReturn
+      primary_package: Net::DBus::Binding::Message::MethodReturn
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Message
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Message/MethodReturn.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 0.0.1
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: fc45c575faa9b4383b91df0f5fd89ee0
+      module_name_from_file_guess: Net::DBus::Binding::Message::Signal
+      mtime: 1101252337
+      name: blib/lib/Net/DBus/Binding/Message/Signal.pm
+      packages:
+        - Net::DBus::Binding::Message::Signal
+      primary_package: Net::DBus::Binding::Message::Signal
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Message
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Message/Signal.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 0.0.1
+    - bytesize: 5152
+      file_mime_type: ~
+      line_count: ~
+      md5: 4da02025ed963a82fe2fa2a072e5d93c
+      module_name_from_file_guess: Net::DBus::Binding::Server
+      mtime: 1096584884
+      name: blib/lib/Net/DBus/Binding/Server.pm
+      packages:
+        - Net::DBus::Binding::Server
+      primary_package: Net::DBus::Binding::Server
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+        - Net::DBus::Binding::Connection
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Server.pm
+        identifier: VERSION
+        line_number: 61
+        sigil: $
+        value: 0.0.1
+    - bytesize: 903
+      file_mime_type: ~
+      line_count: ~
+      md5: 19c24b50bf6348a76568b37ccbc1b105
+      module_name_from_file_guess: Net::DBus::Binding::Value
+      mtime: 1099233590
+      name: blib/lib/Net/DBus/Binding/Value.pm
+      packages:
+        - Net::DBus::Binding::Value
+      primary_package: Net::DBus::Binding::Value
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Value.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 0.0.1
+    - bytesize: 671
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d165bdd713fe08003ce9c79fb94d526
+      module_name_from_file_guess: Net::DBus::Binding::Watch
+      mtime: 1096584884
+      name: blib/lib/Net/DBus/Binding/Watch.pm
+      packages:
+        - Net::DBus::Binding::Watch
+      primary_package: Net::DBus::Binding::Watch
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus
+      version_info:
+        filename: blib/lib/Net/DBus/Binding/Watch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 751
+      file_mime_type: ~
+      line_count: ~
+      md5: f4b47718e7e7d37c4dde4fe7c29e9a49
+      module_name_from_file_guess: Net::DBus::Callback
+      mtime: 1123696049
+      name: blib/lib/Net/DBus/Callback.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/Net/DBus/Callback.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 0.0.1
+    - bytesize: 4279
+      file_mime_type: ~
+      line_count: ~
+      md5: cbb34a1a970b3cfd0583500349e69695
+      module_name_from_file_guess: Net::DBus::Dumper
+      mtime: 1124717415
+      name: blib/lib/Net/DBus/Dumper.pm
+      packages:
+        - Net::DBus::Dumper
+      primary_package: Net::DBus::Dumper
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - vars
+      version_info:
+        filename: blib/lib/Net/DBus/Dumper.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10973
+      file_mime_type: ~
+      line_count: ~
+      md5: e2980e616ec05fb6c29863cbc65b88ae
+      module_name_from_file_guess: Net::DBus::Exporter
+      mtime: 1125322184
+      name: blib/lib/Net/DBus/Exporter.pm
+      packages:
+        - Net::DBus::Exporter
+      primary_package: Net::DBus::Exporter
+      uses:
+        - vars
+        - warnings
+        - Exporter
+      version_info:
+        filename: blib/lib/Net/DBus/Exporter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8722
+      file_mime_type: ~
+      line_count: ~
+      md5: f9af20c5fcf3b487d062cf8c0ee92baa
+      module_name_from_file_guess: Net::DBus::Object
+      mtime: 1125322757
+      name: blib/lib/Net/DBus/Object.pm
+      packages:
+        - Net::DBus::Object
+      primary_package: Net::DBus::Object
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus::RemoteObject
+        - Net::DBus::Exporter
+        - Net::DBus::Binding::Message::Error
+        - Net::DBus::Binding::Message::MethodReturn
+      version_info:
+        filename: blib/lib/Net/DBus/Object.pm
+        identifier: VERSION
+        line_number: 135
+        sigil: $
+        value: 0.0.1
+    - bytesize: 17253
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fd65944d26d9d366dc17bc3fff117b6
+      module_name_from_file_guess: Net::DBus::Reactor
+      mtime: 1124045547
+      name: blib/lib/Net/DBus/Reactor.pm
+      packages:
+        - Net::DBus::Reactor
+      primary_package: Net::DBus::Reactor
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus::Binding::Watch
+        - Net::DBus::Callback
+        - Time::HiRes
+        - vars
+      version_info:
+        filename: blib/lib/Net/DBus/Reactor.pm
+        identifier: VERSION
+        line_number: 106
+        sigil: $
+        value: 0.0.1
+    - bytesize: 4471
+      file_mime_type: ~
+      line_count: ~
+      md5: 05277721e656e2fe59fac5882739967a
+      module_name_from_file_guess: Net::DBus::RemoteObject
+      mtime: 1125322757
+      name: blib/lib/Net/DBus/RemoteObject.pm
+      packages:
+        - Net::DBus::RemoteObject
+      primary_package: Net::DBus::RemoteObject
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus::Binding::Message::MethodCall
+        - Net::DBus::Binding::Introspector
+      version_info:
+        filename: blib/lib/Net/DBus/RemoteObject.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 0.0.1
+    - bytesize: 949
+      file_mime_type: ~
+      line_count: ~
+      md5: dd573009f6ae7e19658c60749451ffd3
+      module_name_from_file_guess: Net::DBus::RemoteService
+      mtime: 1125322715
+      name: blib/lib/Net/DBus/RemoteService.pm
+      packages:
+        - Net::DBus::RemoteService
+      primary_package: Net::DBus::RemoteService
+      uses:
+        - ''
+        - strict
+        - warnings
+        - Carp
+        - Net::DBus::RemoteObject
+      version_info:
+        filename: blib/lib/Net/DBus/RemoteService.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 0.0.1
+    - bytesize: 1103
+      file_mime_type: ~
+      line_count: ~
+      md5: 10924a16b48e50f1d139c392e2fe251a
+      module_name_from_file_guess: Net::DBus::Service
+      mtime: 1124133125
+      name: blib/lib/Net/DBus/Service.pm
+      packages:
+        - Net::DBus::Service
+      primary_package: Net::DBus::Service
+      uses: []
+      version_info:
+        filename: blib/lib/Net/DBus/Service.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Net/DBus.pm
+    - blib/lib/Net/DBus/Binding/Bus.pm
+    - blib/lib/Net/DBus/Binding/Connection.pm
+    - blib/lib/Net/DBus/Binding/Introspector.pm
+    - blib/lib/Net/DBus/Binding/Iterator.pm
+    - blib/lib/Net/DBus/Binding/Message.pm
+    - blib/lib/Net/DBus/Binding/Message/Error.pm
+    - blib/lib/Net/DBus/Binding/Message/MethodCall.pm
+    - blib/lib/Net/DBus/Binding/Message/MethodReturn.pm
+    - blib/lib/Net/DBus/Binding/Message/Signal.pm
+    - blib/lib/Net/DBus/Binding/Server.pm
+    - blib/lib/Net/DBus/Binding/Value.pm
+    - blib/lib/Net/DBus/Binding/Watch.pm
+    - blib/lib/Net/DBus/Callback.pm
+    - blib/lib/Net/DBus/Dumper.pm
+    - blib/lib/Net/DBus/Exporter.pm
+    - blib/lib/Net/DBus/Object.pm
+    - blib/lib/Net/DBus/Reactor.pm
+    - blib/lib/Net/DBus/RemoteObject.pm
+    - blib/lib/Net/DBus/RemoteService.pm
+    - blib/lib/Net/DBus/Service.pm
+  test_info:
+    - bytesize: 1072
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a3cc610fe7b183ec2059851d1af3a55
+      mtime: 1124368654
+      name: t/30-server.t
+      uses:
+        - Test::More
+    - bytesize: 970
+      file_mime_type: ~
+      line_count: ~
+      md5: f1bf3efbd50dacaf4d628a4d001266a6
+      mtime: 1108944624
+      name: t/20-callback.t
+      uses:
+        - Test::More
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: 082c8fe61d5dbf7d244ed546fad8cac1
+      mtime: 1124368654
+      name: t/50-object-introspect.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+    - bytesize: 1076
+      file_mime_type: ~
+      line_count: ~
+      md5: 04d55a486f790cd6d2fa28297891f852
+      mtime: 1108944624
+      name: t/00-constants.t
+      uses:
+        - Test::More
+    - bytesize: 2182
+      file_mime_type: ~
+      line_count: ~
+      md5: 594f752a1fc919ddfce9a78bfd46dd62
+      mtime: 1108944624
+      name: t/25-reactor.t
+      uses:
+        - Test::More
+        - POSIX
+        - strict
+        - warnings
+    - bytesize: 1663
+      file_mime_type: ~
+      line_count: ~
+      md5: e9fe2ded0d1cadca9e532dfb8724ad66
+      mtime: 1108944624
+      name: t/15-message.t
+      uses:
+        - Test::More
+    - bytesize: 4494
+      file_mime_type: ~
+      line_count: ~
+      md5: 31d23f7a25fa762786f1548cd572aa51
+      mtime: 1123705643
+      name: t/40-introspector.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+  tests:
+    - t/30-server.t
+    - t/20-callback.t
+    - t/50-object-introspect.t
+    - t/00-constants.t
+    - t/25-reactor.t
+    - t/15-message.t
+    - t/40-introspector.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-71308._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 71308
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269067817
+  examine_start_time: 1269067796
+  examine_time: 21
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 71308
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269067817
+  run_start_time: 1269067796
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

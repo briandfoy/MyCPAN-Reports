@@ -1,0 +1,2496 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Nifty XUL apps in a XUL::App
+    author:
+      - 'Agent Zhang <agentzh@yahoo.cn>'
+    build_requires:
+      ExtUtils::MakeMaker: 6.11
+    distribution_type: module
+    generated_by: Module::Install version 0.75
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: XUL-App
+    no_index:
+      directory:
+        - t
+        - inc
+        - doc
+        - share
+        - demo
+        - share
+        - share
+        - inc
+        - t
+        - demo
+    requires:
+      Class::Accessor::Fast: 0.30
+      Class::Data::Inheritable: 0.06
+      File::Basename: 0
+      File::Copy::Recursive: 0.35
+      File::Find: 0
+      File::ShareDir: 0.04
+      File::Slurp: 0
+      Locale::Maketext: 0
+      Locale::Maketext::Lexicon: 0
+      Object::Declare: 0.22
+      Sys::Hostname: 0
+      Template::Declare: 0.28
+      Template::Declare::Tags: 0
+      Text::Diff: 0
+      perl: 5.6.1
+    version: 0.09
+  blib:
+    - blib/lib/XUL/App.pm
+    - blib/lib/XUL/App/I18N.pm
+    - blib/lib/XUL/App/JSFile.pm
+    - blib/lib/XUL/App/Schema.pm
+    - blib/lib/XUL/App/View/Base.pm
+    - blib/lib/XUL/App/View/Install.pm
+    - blib/lib/XUL/App/XPIFile.pm
+    - blib/lib/XUL/App/XULFile.pm
+    - blib/lib/auto/XUL/App/html/close-me.html
+    - blib/lib/auto/XUL/App/js/JSAN.js
+    - blib/lib/auto/XUL/App/js/JSON.js
+    - blib/lib/auto/XUL/App/js/jquery.js
+    - blib/lib/auto/XUL/App/js/jslib/debug/debug.js
+    - blib/lib/auto/XUL/App/js/jslib/ds/chainDictionary.js
+    - blib/lib/auto/XUL/App/js/jslib/ds/dictionary.js
+    - blib/lib/auto/XUL/App/js/jslib/io/chromeFile.js
+    - blib/lib/auto/XUL/App/js/jslib/io/dir.js
+    - blib/lib/auto/XUL/App/js/jslib/io/dirUtils.js
+    - blib/lib/auto/XUL/App/js/jslib/io/file.js
+    - blib/lib/auto/XUL/App/js/jslib/io/fileUtils.js
+    - blib/lib/auto/XUL/App/js/jslib/io/filesystem.js
+    - blib/lib/auto/XUL/App/js/jslib/io/io.js
+    - blib/lib/auto/XUL/App/js/jslib/io/rdf.js
+    - blib/lib/auto/XUL/App/js/jslib/jslib.js
+    - blib/lib/auto/XUL/App/js/jslib/modules.js
+    - blib/lib/auto/XUL/App/js/jslib/network/filePostRequest.js
+    - blib/lib/auto/XUL/App/js/jslib/network/getRequest.js
+    - blib/lib/auto/XUL/App/js/jslib/network/http.js
+    - blib/lib/auto/XUL/App/js/jslib/network/multipartRequest.js
+    - blib/lib/auto/XUL/App/js/jslib/network/networkUtils.js
+    - blib/lib/auto/XUL/App/js/jslib/network/parts/bodyParametersPart.js
+    - blib/lib/auto/XUL/App/js/jslib/network/parts/filePart.js
+    - blib/lib/auto/XUL/App/js/jslib/network/parts/textPart.js
+    - blib/lib/auto/XUL/App/js/jslib/network/parts/urlParametersPart.js
+    - blib/lib/auto/XUL/App/js/jslib/network/postRequest.js
+    - blib/lib/auto/XUL/App/js/jslib/network/remoteFile.js
+    - blib/lib/auto/XUL/App/js/jslib/network/socket.js
+    - blib/lib/auto/XUL/App/js/jslib/rdf/inMemoryRDF.js
+    - blib/lib/auto/XUL/App/js/jslib/rdf/rdf.js
+    - blib/lib/auto/XUL/App/js/jslib/rdf/rdfBase.js
+    - blib/lib/auto/XUL/App/js/jslib/rdf/rdfContainer.js
+    - blib/lib/auto/XUL/App/js/jslib/rdf/rdfFile.js
+    - blib/lib/auto/XUL/App/js/jslib/rdf/rdfResource.js
+    - blib/lib/auto/XUL/App/js/jslib/sound/sound.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/date.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/dom.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/packageInfo.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/prefs.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/profile.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/sax.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/system.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/uuid.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/validate.js
+    - blib/lib/auto/XUL/App/js/jslib/utils/xpcom.js
+    - blib/lib/auto/XUL/App/js/jslib/zip/zip.js
+    - blib/man1/xulapp.1
+    - blib/man3/XUL::App.3
+    - blib/script/xml2td
+    - blib/script/xulapp
+  build_file: Makefile.PL
+  build_file_output: |
+    *** Module::AutoInstall version 1.03
+    *** Checking for Perl dependencies...
+    [Core Features]
+    - ExtUtils::MakeMaker       ...loaded. (6.55_02 >= 6.11)
+    - Object::Declare           ...missing. (would need 0.22)
+    - Template::Declare         ...missing. (would need 0.28)
+    - Template::Declare::Tags   ...missing.
+    - File::Slurp               ...missing.
+    - Class::Accessor::Fast     ...missing. (would need 0.30)
+    - Class::Data::Inheritable  ...missing. (would need 0.06)
+    - File::ShareDir            ...missing. (would need 0.04)
+    - File::Copy::Recursive     ...missing. (would need 0.35)
+    - File::Basename            ...loaded. (2.77)
+    - Locale::Maketext::Lexicon ...missing.
+    - Locale::Maketext          ...loaded. (1.13)
+    - Text::Diff                ...missing.
+    - File::Find                ...loaded. (1.14)
+    - Sys::Hostname             ...loaded. (1.11)
+    ==> Auto-install the 10 mandatory module(s) from CPAN? [Y/n] y
+    *** Dependencies will be installed the next time you type 'make'.
+        (You may need to do that as the 'root' user.)
+    *** Module::AutoInstall configuration finished.
+    Warning: prerequisite Class::Accessor::Fast 0.30 not found.
+    Warning: prerequisite Class::Data::Inheritable 0.06 not found.
+    Warning: prerequisite File::Copy::Recursive 0.35 not found.
+    Warning: prerequisite File::ShareDir 0.04 not found.
+    Warning: prerequisite File::Slurp 0 not found.
+    Warning: prerequisite Locale::Maketext::Lexicon 0 not found.
+    Warning: prerequisite Object::Declare 0.22 not found.
+    Warning: prerequisite Template::Declare 0.28 not found.
+    Warning: prerequisite Template::Declare::Tags 0 not found.
+    Warning: prerequisite Text::Diff 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for XUL::App
+  build_output: |
+    cp lib/XUL/App/XULFile.pm blib/lib/XUL/App/XULFile.pm
+    cp lib/XUL/App/I18N.pm blib/lib/XUL/App/I18N.pm
+    cp lib/XUL/App.pm blib/lib/XUL/App.pm
+    cp lib/XUL/App/XPIFile.pm blib/lib/XUL/App/XPIFile.pm
+    cp lib/XUL/App/Schema.pm blib/lib/XUL/App/Schema.pm
+    cp lib/XUL/App/View/Base.pm blib/lib/XUL/App/View/Base.pm
+    cp lib/XUL/App/View/Install.pm blib/lib/XUL/App/View/Install.pm
+    cp lib/XUL/App/JSFile.pm blib/lib/XUL/App/JSFile.pm
+    Installing blib/lib/auto/XUL/App/js/JSON.js
+    Installing blib/lib/auto/XUL/App/js/jquery.js
+    Installing blib/lib/auto/XUL/App/js/JSAN.js
+    Installing blib/lib/auto/XUL/App/js/jslib/modules.js
+    Installing blib/lib/auto/XUL/App/js/jslib/jslib.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/io.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/fileUtils.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/filesystem.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/chromeFile.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/dir.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/dirUtils.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/rdf.js
+    Installing blib/lib/auto/XUL/App/js/jslib/io/file.js
+    Installing blib/lib/auto/XUL/App/js/jslib/rdf/inMemoryRDF.js
+    Installing blib/lib/auto/XUL/App/js/jslib/rdf/rdfBase.js
+    Installing blib/lib/auto/XUL/App/js/jslib/rdf/rdfResource.js
+    Installing blib/lib/auto/XUL/App/js/jslib/rdf/rdfFile.js
+    Installing blib/lib/auto/XUL/App/js/jslib/rdf/rdfContainer.js
+    Installing blib/lib/auto/XUL/App/js/jslib/rdf/rdf.js
+    Installing blib/lib/auto/XUL/App/js/jslib/debug/debug.js
+    Installing blib/lib/auto/XUL/App/js/jslib/sound/sound.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/getRequest.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/networkUtils.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/http.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/remoteFile.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/filePostRequest.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/postRequest.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/multipartRequest.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/socket.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/parts/bodyParametersPart.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/parts/urlParametersPart.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/parts/textPart.js
+    Installing blib/lib/auto/XUL/App/js/jslib/network/parts/filePart.js
+    Installing blib/lib/auto/XUL/App/js/jslib/ds/chainDictionary.js
+    Installing blib/lib/auto/XUL/App/js/jslib/ds/dictionary.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/profile.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/sax.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/xpcom.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/prefs.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/system.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/uuid.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/date.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/validate.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/packageInfo.js
+    Installing blib/lib/auto/XUL/App/js/jslib/utils/dom.js
+    Installing blib/lib/auto/XUL/App/js/jslib/zip/zip.js
+    Installing blib/lib/auto/XUL/App/html/close-me.html
+    /home/brian/bin/perl5.10.1 "-Iinc" Makefile.PL --config= --installdeps=Object::Declare,0.22,Template::Declare,0.28,Template::Declare::Tags,0,File::Slurp,0,Class::Accessor::Fast,0.30,Class::Data::Inheritable,0.06,File::ShareDir,0.04,File::Copy::Recursive,0.35,Locale::Maketext::Lexicon,0,Text::Diff,0
+    *** Installing dependencies...
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    *** Installing Object::Declare...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Object::Declare' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Object::Declare installation cancelled.
+    *** Installing Template::Declare...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Template::Declare' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Template::Declare installation cancelled.
+    *** Installing Template::Declare::Tags...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Template::Declare::Tags' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Template::Declare::Tags installation cancelled.
+    *** Installing File::Slurp...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'File::Slurp' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** File::Slurp installation cancelled.
+    *** Installing Class::Accessor::Fast...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Class::Accessor::Fast' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Class::Accessor::Fast installation cancelled.
+    *** Installing Class::Data::Inheritable...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Class::Data::Inheritable' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Class::Data::Inheritable installation cancelled.
+    *** Installing File::ShareDir...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'File::ShareDir' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** File::ShareDir installation cancelled.
+    *** Installing File::Copy::Recursive...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'File::Copy::Recursive' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** File::Copy::Recursive installation cancelled.
+    *** Installing Locale::Maketext::Lexicon...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Locale::Maketext::Lexicon' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Locale::Maketext::Lexicon installation cancelled.
+    *** Installing Text::Diff...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Text::Diff' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Text::Diff installation cancelled.
+    *** Module::AutoInstall installation finished.
+    cp script/xulapp blib/script/xulapp
+    /home/brian/bin/perl5.10.1 "-Iinc" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/xulapp
+    cp script/xml2td blib/script/xml2td
+    /home/brian/bin/perl5.10.1 "-Iinc" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/xml2td
+    Manifying blib/man1/xulapp.1
+    Manifying blib/man3/XUL::App.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf/XUL-App-0.09/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf/XUL-App-0.09
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf/XUL-App-0.09/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf/XUL-App-0.09/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.75
+    perl_command: ~
+    uses_auto_install: 1
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: AGENT
+  dist_basename: XUL-App-0.09.tar.gz
+  dist_date: 1218595889
+  dist_dir: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf/XUL-App-0.09
+  dist_extract_path: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf/XUL-App-0.09
+  dist_file: /home/brian/CPAN/authors/id/A/AG/AGENT/XUL-App-0.09.tar.gz
+  dist_md5: 9eedda73808b591382ec4cba672803b1
+  dist_size: 218151
+  manifest:
+    - Changes
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - Makefile.PL
+    - README
+    - demo/ExportReader/exportreader.xpi
+    - demo/ExportReader/js/export.js
+    - demo/ExportReader/lib/ExportReader/App.pm
+    - demo/ExportReader/lib/ExportReader/View/ExportReader.pm
+    - demo/ExportReader/to-yaml.pl
+    - demo/HelloWorld/helloworld.xpi
+    - demo/HelloWorld/lib/HelloWorld/App.pm
+    - demo/HelloWorld/lib/HelloWorld/View/HelloWin.pm
+    - demo/HelloWorld/lib/HelloWorld/View/Overlay.pm
+    - demo/HelloWorld/po/en-us.po
+    - demo/HelloWorld/po/zh-cn.po
+    - demo/YahooFavorites/css/webdigest.css
+    - demo/YahooFavorites/css/webdigest_mac.css
+    - demo/YahooFavorites/icons/about-webdigest-small.png
+    - demo/YahooFavorites/icons/about-webdigest.png
+    - demo/YahooFavorites/icons/mywebdigest-mac-small.png
+    - demo/YahooFavorites/icons/mywebdigest-mac.png
+    - demo/YahooFavorites/icons/mywebdigest-small.png
+    - demo/YahooFavorites/icons/mywebdigest.png
+    - demo/YahooFavorites/icons/mywebycntag_14x14.png
+    - demo/YahooFavorites/icons/tagwebdigest-mac-small.png
+    - demo/YahooFavorites/icons/tagwebdigest-mac.png
+    - demo/YahooFavorites/icons/tagwebdigest-small.png
+    - demo/YahooFavorites/icons/tagwebdigest.png
+    - demo/YahooFavorites/icons/webdigest_context.png
+    - demo/YahooFavorites/js/options.js
+    - demo/YahooFavorites/js/webdigest.js
+    - demo/YahooFavorites/js/webdigest.properties
+    - demo/YahooFavorites/lib/YahooFavorites/App.pm
+    - demo/YahooFavorites/lib/YahooFavorites/View/About.pm
+    - demo/YahooFavorites/lib/YahooFavorites/View/Options.pm
+    - demo/YahooFavorites/lib/YahooFavorites/View/WebDigest.pm
+    - demo/YahooFavorites/po/en-us.po
+    - demo/YahooFavorites/po/zh-cn.po
+    - demo/YahooFavorites/yahoofavorites.xpi
+    - inc/Module/AutoInstall.pm
+    - inc/Module/Install.pm
+    - inc/Module/Install/AutoInstall.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Share.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/XUL/App.pm
+    - lib/XUL/App/I18N.pm
+    - lib/XUL/App/JSFile.pm
+    - lib/XUL/App/Schema.pm
+    - lib/XUL/App/View/Base.pm
+    - lib/XUL/App/View/Install.pm
+    - lib/XUL/App/XPIFile.pm
+    - lib/XUL/App/XULFile.pm
+    - script/xml2td
+    - script/xulapp
+    - share/html/close-me.html
+    - share/js/JSAN.js
+    - share/js/JSON.js
+    - share/js/jquery.js
+    - share/js/jslib/debug/debug.js
+    - share/js/jslib/ds/chainDictionary.js
+    - share/js/jslib/ds/dictionary.js
+    - share/js/jslib/io/chromeFile.js
+    - share/js/jslib/io/dir.js
+    - share/js/jslib/io/dirUtils.js
+    - share/js/jslib/io/file.js
+    - share/js/jslib/io/fileUtils.js
+    - share/js/jslib/io/filesystem.js
+    - share/js/jslib/io/io.js
+    - share/js/jslib/io/rdf.js
+    - share/js/jslib/jslib.js
+    - share/js/jslib/modules.js
+    - share/js/jslib/network/filePostRequest.js
+    - share/js/jslib/network/getRequest.js
+    - share/js/jslib/network/http.js
+    - share/js/jslib/network/multipartRequest.js
+    - share/js/jslib/network/networkUtils.js
+    - share/js/jslib/network/parts/bodyParametersPart.js
+    - share/js/jslib/network/parts/filePart.js
+    - share/js/jslib/network/parts/textPart.js
+    - share/js/jslib/network/parts/urlParametersPart.js
+    - share/js/jslib/network/postRequest.js
+    - share/js/jslib/network/remoteFile.js
+    - share/js/jslib/network/socket.js
+    - share/js/jslib/rdf/inMemoryRDF.js
+    - share/js/jslib/rdf/rdf.js
+    - share/js/jslib/rdf/rdfBase.js
+    - share/js/jslib/rdf/rdfContainer.js
+    - share/js/jslib/rdf/rdfFile.js
+    - share/js/jslib/rdf/rdfResource.js
+    - share/js/jslib/sound/sound.js
+    - share/js/jslib/utils/date.js
+    - share/js/jslib/utils/dom.js
+    - share/js/jslib/utils/packageInfo.js
+    - share/js/jslib/utils/prefs.js
+    - share/js/jslib/utils/profile.js
+    - share/js/jslib/utils/sax.js
+    - share/js/jslib/utils/system.js
+    - share/js/jslib/utils/uuid.js
+    - share/js/jslib/utils/validate.js
+    - share/js/jslib/utils/xpcom.js
+    - share/js/jslib/zip/zip.js
+    - t/01-load.t
+    - t/99-pod-coverage.t
+    - t/99-pod.t
+  manifest_file_info:
+    - bytesize: 903
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1218595228
+      name: Changes
+    - bytesize: 3631
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1214271909
+      name: MANIFEST
+    - bytesize: 145
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1214271842
+      name: MANIFEST.SKIP
+    - bytesize: 823
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1218595784
+      name: META.yml
+    - bytesize: 1082
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1214211815
+      name: Makefile.PL
+    - bytesize: 7616
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1218595784
+      name: README
+    - bytesize: 17993
+      file_mime_type: ~
+      line_count: ~
+      md5: f110632fb141d44ffbdfa49440509643
+      mtime: 1211177266
+      name: demo/ExportReader/exportreader.xpi
+    - bytesize: 807
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f70d751692730792e4504ba2ca138cf
+      mtime: 1203297055
+      name: demo/ExportReader/js/export.js
+    - bytesize: 897
+      file_mime_type: ~
+      line_count: ~
+      md5: a2c77a409e8d5c316b56b4b6fb8ca310
+      mtime: 1211176987
+      name: demo/ExportReader/lib/ExportReader/App.pm
+    - bytesize: 1305
+      file_mime_type: ~
+      line_count: ~
+      md5: 21db690123c25546e8bd2afc69444c1b
+      mtime: 1203297054
+      name: demo/ExportReader/lib/ExportReader/View/ExportReader.pm
+    - bytesize: 248
+      file_mime_type: ~
+      line_count: ~
+      md5: 9786300e8c2db1e03e0e6fee0058d209
+      mtime: 1203297055
+      name: demo/ExportReader/to-yaml.pl
+    - bytesize: 1786
+      file_mime_type: ~
+      line_count: ~
+      md5: 62afd99742e0f22fc09582db479f69f8
+      mtime: 1214271534
+      name: demo/HelloWorld/helloworld.xpi
+    - bytesize: 1002
+      file_mime_type: ~
+      line_count: ~
+      md5: 75e19612d558fe6efd811d8af7f8c9ba
+      mtime: 1214271534
+      name: demo/HelloWorld/lib/HelloWorld/App.pm
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: ba594a9d773a70c7dcef624c2f2b4f28
+      mtime: 1214271534
+      name: demo/HelloWorld/lib/HelloWorld/View/HelloWin.pm
+    - bytesize: 938
+      file_mime_type: ~
+      line_count: ~
+      md5: 403921e7e05e72c69c8199510af336f1
+      mtime: 1214271534
+      name: demo/HelloWorld/lib/HelloWorld/View/Overlay.pm
+    - bytesize: 747
+      file_mime_type: ~
+      line_count: ~
+      md5: 894d7b58866f46305f246f74044c744a
+      mtime: 1214271534
+      name: demo/HelloWorld/po/en-us.po
+    - bytesize: 788
+      file_mime_type: ~
+      line_count: ~
+      md5: f71dc72b4614f25dc03af8713230b14b
+      mtime: 1214271534
+      name: demo/HelloWorld/po/zh-cn.po
+    - bytesize: 1445
+      file_mime_type: ~
+      line_count: ~
+      md5: 177932f233f5cbaef5cc0713f37d2c46
+      mtime: 1214218844
+      name: demo/YahooFavorites/css/webdigest.css
+    - bytesize: 1461
+      file_mime_type: ~
+      line_count: ~
+      md5: 60e97a580b7d5e8c1ac2b7efb604a8cd
+      mtime: 1214218844
+      name: demo/YahooFavorites/css/webdigest_mac.css
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a2eafc686984b6171d9374f3b0f5dc1
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/about-webdigest-small.png
+    - bytesize: 2824
+      file_mime_type: ~
+      line_count: ~
+      md5: fbe8cdbd9bf00515c9ed762aa82bb72c
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/about-webdigest.png
+    - bytesize: 1496
+      file_mime_type: ~
+      line_count: ~
+      md5: 76d5b8963bc1bd2b128842e2ab8431eb
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/mywebdigest-mac-small.png
+    - bytesize: 2312
+      file_mime_type: ~
+      line_count: ~
+      md5: b5a72be5ded08ffeae229bce48216242
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/mywebdigest-mac.png
+    - bytesize: 450
+      file_mime_type: ~
+      line_count: ~
+      md5: f80ca974a8c13c9c4e684a2603efe5af
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/mywebdigest-small.png
+    - bytesize: 1706
+      file_mime_type: ~
+      line_count: ~
+      md5: dbf8bfd3a6a0c4a1cd55f8c96ba58a4e
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/mywebdigest.png
+    - bytesize: 21165
+      file_mime_type: ~
+      line_count: ~
+      md5: 135103a2adad7aa77475b3b5c7336686
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/mywebycntag_14x14.png
+    - bytesize: 1635
+      file_mime_type: ~
+      line_count: ~
+      md5: cae1d42b5357a0082cd0ca0a98b766fd
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/tagwebdigest-mac-small.png
+    - bytesize: 2191
+      file_mime_type: ~
+      line_count: ~
+      md5: 23e061ceb8f4e15e7a4fabf32db2ff69
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/tagwebdigest-mac.png
+    - bytesize: 419
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f637d1f9704532554c3b4f7caa15d7b
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/tagwebdigest-small.png
+    - bytesize: 1635
+      file_mime_type: ~
+      line_count: ~
+      md5: f0c9ecfdaeab9ea8a6c05b0c5d4681df
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/tagwebdigest.png
+    - bytesize: 243
+      file_mime_type: ~
+      line_count: ~
+      md5: b0300161a09c3c1a1a3c0f209d5d39b6
+      mtime: 1214213068
+      name: demo/YahooFavorites/icons/webdigest_context.png
+    - bytesize: 1640
+      file_mime_type: ~
+      line_count: ~
+      md5: 8062b9436b4bedcb98fd0141a4c90bcb
+      mtime: 1214218847
+      name: demo/YahooFavorites/js/options.js
+    - bytesize: 28671
+      file_mime_type: ~
+      line_count: ~
+      md5: 7394ce25639fe41c3e33dc98bc90f91d
+      mtime: 1214218847
+      name: demo/YahooFavorites/js/webdigest.js
+    - bytesize: 433
+      file_mime_type: ~
+      line_count: ~
+      md5: 720aea7e110d80cc3a9467fb119883d7
+      mtime: 1214215489
+      name: demo/YahooFavorites/js/webdigest.properties
+    - bytesize: 1461
+      file_mime_type: ~
+      line_count: ~
+      md5: b560a567f9975fbf0de0a8df2ab4752a
+      mtime: 1214221628
+      name: demo/YahooFavorites/lib/YahooFavorites/App.pm
+    - bytesize: 2890
+      file_mime_type: ~
+      line_count: ~
+      md5: 64566593584ea2d68b840bf1dde3d7e2
+      mtime: 1214218850
+      name: demo/YahooFavorites/lib/YahooFavorites/View/About.pm
+    - bytesize: 3962
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d38b775dc2a04aed9da7c7db5f10e2f
+      mtime: 1214218850
+      name: demo/YahooFavorites/lib/YahooFavorites/View/Options.pm
+    - bytesize: 5607
+      file_mime_type: ~
+      line_count: ~
+      md5: 83004a77d4a26488ff35eb0bcfdc5962
+      mtime: 1214218970
+      name: demo/YahooFavorites/lib/YahooFavorites/View/WebDigest.pm
+    - bytesize: 2143
+      file_mime_type: ~
+      line_count: ~
+      md5: 16468c1d30397eda59bb60ef6ae6c126
+      mtime: 1214275994
+      name: demo/YahooFavorites/po/en-us.po
+    - bytesize: 2451
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a312d4da0ca3571ba60744720b155e6
+      mtime: 1214275994
+      name: demo/YahooFavorites/po/zh-cn.po
+    - bytesize: 46517
+      file_mime_type: ~
+      line_count: ~
+      md5: 855bc6dabbb9105d5b841ae642eeb739
+      mtime: 1214275995
+      name: demo/YahooFavorites/yahoofavorites.xpi
+    - bytesize: 20986
+      file_mime_type: ~
+      line_count: ~
+      md5: 5df3a53b195a607829bddc376dbf459e
+      mtime: 1218595784
+      name: inc/Module/AutoInstall.pm
+    - bytesize: 8549
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1218595783
+      name: inc/Module/Install.pm
+    - bytesize: 1210
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fbb135dedaecade08ee4b691de9234
+      mtime: 1218595784
+      name: inc/Module/Install/AutoInstall.pm
+    - bytesize: 1053
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1218595784
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1788
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1218595784
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1218595784
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1218595784
+      name: inc/Module/Install/Include.pm
+    - bytesize: 6225
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1218595784
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 9448
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1218595784
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1249
+      file_mime_type: ~
+      line_count: ~
+      md5: 61baa844ea7b403718fff363f28b2e4e
+      mtime: 1218595784
+      name: inc/Module/Install/Share.pm
+    - bytesize: 1794
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1218595784
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 721
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1218595784
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 7310
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dfa12688604c783bcc997aec75be910
+      mtime: 1218595782
+      name: lib/XUL/App.pm
+    - bytesize: 2292
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a32ad531bdb6fd4d708ed23be0a89c
+      mtime: 1194498869
+      name: lib/XUL/App/I18N.pm
+    - bytesize: 350
+      file_mime_type: ~
+      line_count: ~
+      md5: 6863616f06b58c7172c3b418249e771a
+      mtime: 1194498869
+      name: lib/XUL/App/JSFile.pm
+    - bytesize: 1393
+      file_mime_type: ~
+      line_count: ~
+      md5: fc5609813c96f29ba0be7becaf8d3c00
+      mtime: 1194498869
+      name: lib/XUL/App/Schema.pm
+    - bytesize: 844
+      file_mime_type: ~
+      line_count: ~
+      md5: d1aa77b09a59776f65656179a019594f
+      mtime: 1194593245
+      name: lib/XUL/App/View/Base.pm
+    - bytesize: 2505
+      file_mime_type: ~
+      line_count: ~
+      md5: e5d32bd5f65fc4e0dbc6fb690ade51ef
+      mtime: 1214204845
+      name: lib/XUL/App/View/Install.pm
+    - bytesize: 860
+      file_mime_type: ~
+      line_count: ~
+      md5: afc9cbe43bae798270855b1ff6099586
+      mtime: 1214204816
+      name: lib/XUL/App/XPIFile.pm
+    - bytesize: 5129
+      file_mime_type: ~
+      line_count: ~
+      md5: dad29d7674b3e130a377f6bb67c9b101
+      mtime: 1194848116
+      name: lib/XUL/App/XULFile.pm
+    - bytesize: 2151
+      file_mime_type: ~
+      line_count: ~
+      md5: ba25b1a401fd729904a085c52731b228
+      mtime: 1214213766
+      name: script/xml2td
+    - bytesize: 21088
+      file_mime_type: ~
+      line_count: ~
+      md5: 447332276fa6b174ce0b426ef6c02368
+      mtime: 1218595571
+      name: script/xulapp
+    - bytesize: 311
+      file_mime_type: ~
+      line_count: ~
+      md5: a3a1825480b38c3b993e64fe1546c50f
+      mtime: 1194948115
+      name: share/html/close-me.html
+    - bytesize: 6901
+      file_mime_type: ~
+      line_count: ~
+      md5: 043c7d121d17ea6d2d280e1c3e3e5ba2
+      mtime: 1194837490
+      name: share/js/JSAN.js
+    - bytesize: 3577
+      file_mime_type: ~
+      line_count: ~
+      md5: 29d621fca5fa073f773711053dc86f3b
+      mtime: 1215773458
+      name: share/js/JSON.js
+    - bytesize: 29318
+      file_mime_type: ~
+      line_count: ~
+      md5: 424950b12081104c20fe2f1df15f5e5f
+      mtime: 1200741783
+      name: share/js/jquery.js
+    - bytesize: 10500
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e8067e45cccbbaa1688b6bb0d1bff6b
+      mtime: 1194838044
+      name: share/js/jslib/debug/debug.js
+    - bytesize: 2739
+      file_mime_type: ~
+      line_count: ~
+      md5: bfe01cbb383068b11bbac0380ca40f3e
+      mtime: 1194838123
+      name: share/js/jslib/ds/chainDictionary.js
+    - bytesize: 2452
+      file_mime_type: ~
+      line_count: ~
+      md5: c682566d7266adfa6aa6544a5886a9c1
+      mtime: 1194838123
+      name: share/js/jslib/ds/dictionary.js
+    - bytesize: 7121
+      file_mime_type: ~
+      line_count: ~
+      md5: 2017444a64b12e77d920953baaf8e9c1
+      mtime: 1194838052
+      name: share/js/jslib/io/chromeFile.js
+    - bytesize: 5828
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e18f0d21d527f840baf2d977f30fba4
+      mtime: 1194838052
+      name: share/js/jslib/io/dir.js
+    - bytesize: 9161
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f46c1910565b7c4eaee15a8f994dee0
+      mtime: 1194838052
+      name: share/js/jslib/io/dirUtils.js
+    - bytesize: 27150
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ded428cba8efa72ee841d9e2db55ccc
+      mtime: 1194838052
+      name: share/js/jslib/io/file.js
+    - bytesize: 14539
+      file_mime_type: ~
+      line_count: ~
+      md5: c0ef6445f48b694ccdd4812008e42d53
+      mtime: 1194838052
+      name: share/js/jslib/io/fileUtils.js
+    - bytesize: 14141
+      file_mime_type: ~
+      line_count: ~
+      md5: 96479862c6e43d27213501739005a73d
+      mtime: 1194838052
+      name: share/js/jslib/io/filesystem.js
+    - bytesize: 243
+      file_mime_type: ~
+      line_count: ~
+      md5: 83c16aeb088a77e75f2675102750b638
+      mtime: 1194838052
+      name: share/js/jslib/io/io.js
+    - bytesize: 11707
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b34f5360e70195a58d00856d7236e0c
+      mtime: 1194838052
+      name: share/js/jslib/io/rdf.js
+    - bytesize: 9393
+      file_mime_type: ~
+      line_count: ~
+      md5: 4afd6daeffed7f441efa093416a56f5e
+      mtime: 1194837994
+      name: share/js/jslib/jslib.js
+    - bytesize: 3509
+      file_mime_type: ~
+      line_count: ~
+      md5: b08be34805b7b3a9d8060472264dc0d4
+      mtime: 1194838033
+      name: share/js/jslib/modules.js
+    - bytesize: 3244
+      file_mime_type: ~
+      line_count: ~
+      md5: 58e46de3de04cbb09a0ae8ba3328ef87
+      mtime: 1194838065
+      name: share/js/jslib/network/filePostRequest.js
+    - bytesize: 1133
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b0c50d4b776a5b0b58ad8d1cbbfb4f0
+      mtime: 1194838065
+      name: share/js/jslib/network/getRequest.js
+    - bytesize: 805
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ee8b03c286a70007ab6690355c5ffce
+      mtime: 1194838065
+      name: share/js/jslib/network/http.js
+    - bytesize: 4478
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a3a60cecabc633ce736529012e05b49
+      mtime: 1194838065
+      name: share/js/jslib/network/multipartRequest.js
+    - bytesize: 2598
+      file_mime_type: ~
+      line_count: ~
+      md5: 2407fa57372fa05f068db6dba6dc8265
+      mtime: 1194838065
+      name: share/js/jslib/network/networkUtils.js
+    - bytesize: 3073
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d3ea0cb4ed9f56e5be4dabc7659e106
+      mtime: 1194838065
+      name: share/js/jslib/network/parts/bodyParametersPart.js
+    - bytesize: 2828
+      file_mime_type: ~
+      line_count: ~
+      md5: ae8e2e06bfb4136277b7f1b4c8a92d32
+      mtime: 1194838065
+      name: share/js/jslib/network/parts/filePart.js
+    - bytesize: 2489
+      file_mime_type: ~
+      line_count: ~
+      md5: 46070451322c5233cd2d087ea9ee908a
+      mtime: 1194838065
+      name: share/js/jslib/network/parts/textPart.js
+    - bytesize: 2568
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b35ba1e5aa195aa142153f22230986
+      mtime: 1194838065
+      name: share/js/jslib/network/parts/urlParametersPart.js
+    - bytesize: 1357
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b4958285e7b88f1062f77dd38417e88
+      mtime: 1194838065
+      name: share/js/jslib/network/postRequest.js
+    - bytesize: 3920
+      file_mime_type: ~
+      line_count: ~
+      md5: 7446818ee5939716939473f073d6f4eb
+      mtime: 1194838065
+      name: share/js/jslib/network/remoteFile.js
+    - bytesize: 10557
+      file_mime_type: ~
+      line_count: ~
+      md5: 90369afad112fccf83b4a8e1d8830473
+      mtime: 1194838065
+      name: share/js/jslib/network/socket.js
+    - bytesize: 29005
+      file_mime_type: ~
+      line_count: ~
+      md5: 1dabe53fd1ed5485b65f5766cf453fdc
+      mtime: 1194838111
+      name: share/js/jslib/rdf/inMemoryRDF.js
+    - bytesize: 7160
+      file_mime_type: ~
+      line_count: ~
+      md5: a50312c5ab94391060e5e75cd11462d7
+      mtime: 1194838111
+      name: share/js/jslib/rdf/rdf.js
+    - bytesize: 3349
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b222cef605f7ceafa41cd0041420527
+      mtime: 1194838111
+      name: share/js/jslib/rdf/rdfBase.js
+    - bytesize: 7380
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c937f891db812017073a681ebf16ade
+      mtime: 1194838111
+      name: share/js/jslib/rdf/rdfContainer.js
+    - bytesize: 2256
+      file_mime_type: ~
+      line_count: ~
+      md5: 73362f94c6e32a44894fe254b09dfb68
+      mtime: 1194838111
+      name: share/js/jslib/rdf/rdfFile.js
+    - bytesize: 9769
+      file_mime_type: ~
+      line_count: ~
+      md5: 3487f05d67facf2500202bcd78739030
+      mtime: 1194838111
+      name: share/js/jslib/rdf/rdfResource.js
+    - bytesize: 1916
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d0b98a206fd06d411157ba0666decb4
+      mtime: 1194838059
+      name: share/js/jslib/sound/sound.js
+    - bytesize: 13462
+      file_mime_type: ~
+      line_count: ~
+      md5: 13ef9877c430188e74e56f8ed6ddbc91
+      mtime: 1194838100
+      name: share/js/jslib/utils/date.js
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: fc1863f5078c63cd0a54e47eda299c38
+      mtime: 1194838100
+      name: share/js/jslib/utils/dom.js
+    - bytesize: 2158
+      file_mime_type: ~
+      line_count: ~
+      md5: bc4d88f0457ab6bc8c408608fadd98cb
+      mtime: 1194838100
+      name: share/js/jslib/utils/packageInfo.js
+    - bytesize: 5173
+      file_mime_type: ~
+      line_count: ~
+      md5: 268d3219db874af42b47ec3377470baa
+      mtime: 1194838100
+      name: share/js/jslib/utils/prefs.js
+    - bytesize: 1994
+      file_mime_type: ~
+      line_count: ~
+      md5: f794f255054d5395cb0fb784b670fb5b
+      mtime: 1194838100
+      name: share/js/jslib/utils/profile.js
+    - bytesize: 7173
+      file_mime_type: ~
+      line_count: ~
+      md5: 141412d38e658e145a2982a9084d2c75
+      mtime: 1194838100
+      name: share/js/jslib/utils/sax.js
+    - bytesize: 1328
+      file_mime_type: ~
+      line_count: ~
+      md5: f7c18e6fa7f031c200db1b83dd0920b5
+      mtime: 1194838100
+      name: share/js/jslib/utils/system.js
+    - bytesize: 945
+      file_mime_type: ~
+      line_count: ~
+      md5: 369475c9def2a5bff439d22a65b02b65
+      mtime: 1194838100
+      name: share/js/jslib/utils/uuid.js
+    - bytesize: 694
+      file_mime_type: ~
+      line_count: ~
+      md5: aeb2d364682bb13095e685ac117a34f6
+      mtime: 1194838100
+      name: share/js/jslib/utils/validate.js
+    - bytesize: 7046
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fb3de83a916244461e8c7420f659dd4
+      mtime: 1194838100
+      name: share/js/jslib/utils/xpcom.js
+    - bytesize: 10480
+      file_mime_type: ~
+      line_count: ~
+      md5: d5d0d8e23e9a9f645ddf4ac0eab083f7
+      mtime: 1194838092
+      name: share/js/jslib/zip/zip.js
+    - bytesize: 325
+      file_mime_type: ~
+      line_count: ~
+      md5: e75837f98f5b2bf2cbc12e1c54e97d72
+      mtime: 1214130877
+      name: t/01-load.t
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: ecaa4a5ef30c06fd133d302dc5980fc4
+      mtime: 1214132039
+      name: t/99-pod-coverage.t
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 17835dfb6b825669b6109f3f4eac1b87
+      mtime: 1214132018
+      name: t/99-pod.t
+  module_info:
+    - bytesize: 7310
+      file_mime_type: ~
+      line_count: ~
+      md5: ac05d8df7c2ac268dead183ec5af3eaa
+      module_name_from_file_guess: XUL::App
+      mtime: 1218595782
+      name: blib/lib/XUL/App.pm
+      packages:
+        - XUL::App
+      primary_package: XUL::App
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/XUL/App.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.09
+    - bytesize: 2292
+      file_mime_type: ~
+      line_count: ~
+      md5: 531fb7a5af49567b71df8555699ae7c7
+      module_name_from_file_guess: XUL::App::I18N
+      mtime: 1194498869
+      name: blib/lib/XUL/App/I18N.pm
+      packages:
+        - XUL::App::I18N
+        - XUL::App::I18N::en
+      primary_package: XUL::App::I18N
+      uses:
+        - strict
+        - warnings
+        - base
+        - Locale::Maketext::Lexicon
+        - File::Spec
+      version_info:
+        filename: blib/lib/XUL/App/I18N.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 350
+      file_mime_type: ~
+      line_count: ~
+      md5: 16d28be8d94efbc69fec58707761d83b
+      module_name_from_file_guess: XUL::App::JSFile
+      mtime: 1194498869
+      name: blib/lib/XUL/App/JSFile.pm
+      packages:
+        - XUL::App::JSFile
+      primary_package: XUL::App::JSFile
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/XUL/App/JSFile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1393
+      file_mime_type: ~
+      line_count: ~
+      md5: e51f400e200537c9f2c1a42ca0535814
+      module_name_from_file_guess: XUL::App::Schema
+      mtime: 1194498869
+      name: blib/lib/XUL/App/Schema.pm
+      packages:
+        - XUL::App::Schema
+      primary_package: XUL::App::Schema
+      uses:
+        - strict
+        - warnings
+        - XUL::App::XULFile
+        - XUL::App::JSFile
+        - XUL::App::XPIFile
+        - XUL::App
+        - Object::Declare
+        - base
+      version_info:
+        filename: blib/lib/XUL/App/Schema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 844
+      file_mime_type: ~
+      line_count: ~
+      md5: 49a25054bbf08d685c8c07d899a8cfce
+      module_name_from_file_guess: XUL::App::View::Base
+      mtime: 1194593245
+      name: blib/lib/XUL/App/View/Base.pm
+      packages:
+        - XUL::App::View::Base
+      primary_package: XUL::App::View::Base
+      uses:
+        - strict
+        - warnings
+        - base
+        - Template::Declare::Tags
+      version_info:
+        filename: blib/lib/XUL/App/View/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2505
+      file_mime_type: ~
+      line_count: ~
+      md5: 6af87ff7ddc37c9a3ba16c7e89b2edeb
+      module_name_from_file_guess: XUL::App::View::Install
+      mtime: 1214204845
+      name: blib/lib/XUL/App/View/Install.pm
+      packages:
+        - XUL::App::View::Install
+      primary_package: XUL::App::View::Install
+      uses:
+        - strict
+        - warnings
+        - base
+        - Template::Declare::Tags
+      version_info:
+        filename: blib/lib/XUL/App/View/Install.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 860
+      file_mime_type: ~
+      line_count: ~
+      md5: 30557b93a778a758cb86893105bfeaf2
+      module_name_from_file_guess: XUL::App::XPIFile
+      mtime: 1214204816
+      name: blib/lib/XUL/App/XPIFile.pm
+      packages:
+        - XUL::App::XPIFile
+      primary_package: XUL::App::XPIFile
+      uses:
+        - strict
+        - warnings
+        - XUL::App::View::Install
+        - File::Slurp
+        - base
+      version_info:
+        filename: blib/lib/XUL/App/XPIFile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5129
+      file_mime_type: ~
+      line_count: ~
+      md5: bc8da256e80c5d06312b895d254f6ac1
+      module_name_from_file_guess: XUL::App::XULFile
+      mtime: 1194848116
+      name: blib/lib/XUL/App/XULFile.pm
+      packages:
+        - XUL::App::XULFile
+      primary_package: XUL::App::XULFile
+      uses:
+        - lib
+        - strict
+        - warnings
+        - File::Slurp
+        - Encode
+        - XUL::App
+        - File::ShareDir
+        - File::Copy
+        - File::Basename
+        - File::Copy::Recursive
+        - base
+      version_info:
+        filename: blib/lib/XUL/App/XULFile.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/XUL/App.pm
+    - blib/lib/XUL/App/I18N.pm
+    - blib/lib/XUL/App/JSFile.pm
+    - blib/lib/XUL/App/Schema.pm
+    - blib/lib/XUL/App/View/Base.pm
+    - blib/lib/XUL/App/View/Install.pm
+    - blib/lib/XUL/App/XPIFile.pm
+    - blib/lib/XUL/App/XULFile.pm
+  test_info:
+    - bytesize: 325
+      file_mime_type: ~
+      line_count: ~
+      md5: e75837f98f5b2bf2cbc12e1c54e97d72
+      mtime: 1214130877
+      name: t/01-load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: ecaa4a5ef30c06fd133d302dc5980fc4
+      mtime: 1214132039
+      name: t/99-pod-coverage.t
+      uses:
+        - Test::More
+    - bytesize: 120
+      file_mime_type: ~
+      line_count: ~
+      md5: 17835dfb6b825669b6109f3f4eac1b87
+      mtime: 1214132018
+      name: t/99-pod.t
+      uses:
+        - Test::More
+  tests:
+    - t/01-load.t
+    - t/99-pod-coverage.t
+    - t/99-pod.t
+  unpack_dir: /usr/home/brian/V9ROrc6a2G/MyCPAN-Indexer-10884.jTxf
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 10884
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271516416
+  examine_start_time: 1271516356
+  examine_time: 60
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 49674
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 10884
+  ppid: 49674
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/V9ROrc6a2G
+  run_end_time: 1271516416
+  run_start_time: 1271516356
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/V9ROrc6a2G
+  uuid: A833DB74-4A2B-11DF-BFBC-508FE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

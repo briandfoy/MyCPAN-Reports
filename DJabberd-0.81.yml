@@ -1,0 +1,3697 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: DJabberd
+    requires:
+      Danga::Socket: 1.51
+      Digest::HMAC_SHA1: 0
+      Log::Log4perl: 0
+      Net::DNS: 0.48
+      Net::SSLeay: 0
+      XML::LibXML::SAX: 0
+      XML::SAX: 0
+    version: 0.81
+    version_from: lib/DJabberd.pm
+  blib:
+    - blib/lib/DJabberd.pm
+    - blib/lib/DJabberd/Agent.pm
+    - blib/lib/DJabberd/Agent/Node.pm
+    - blib/lib/DJabberd/Authen.pm
+    - blib/lib/DJabberd/Authen/AllowedUsers.pm
+    - blib/lib/DJabberd/Authen/InMemoryOnly.pm
+    - blib/lib/DJabberd/Authen/StaticPassword.pm
+    - blib/lib/DJabberd/Bot.pm
+    - blib/lib/DJabberd/Bot/Admin.pm
+    - blib/lib/DJabberd/BotContext.pm
+    - blib/lib/DJabberd/Callback.pm
+    - blib/lib/DJabberd/Cluster.pm
+    - blib/lib/DJabberd/ClusterMessage.pm
+    - blib/lib/DJabberd/ClusterMessage/DeliverStanza.pm
+    - blib/lib/DJabberd/Component.pm
+    - blib/lib/DJabberd/Component/Example.pm
+    - blib/lib/DJabberd/Component/External.pm
+    - blib/lib/DJabberd/Component/External/Connection.pm
+    - blib/lib/DJabberd/Component/Node.pm
+    - blib/lib/DJabberd/Connection.pm
+    - blib/lib/DJabberd/Connection/Admin.pm
+    - blib/lib/DJabberd/Connection/ClientIn.pm
+    - blib/lib/DJabberd/Connection/ClusterIn.pm
+    - blib/lib/DJabberd/Connection/ClusterOut.pm
+    - blib/lib/DJabberd/Connection/DialbackVerify.pm
+    - blib/lib/DJabberd/Connection/OldSSLClientIn.pm
+    - blib/lib/DJabberd/Connection/ServerIn.pm
+    - blib/lib/DJabberd/Connection/ServerOut.pm
+    - blib/lib/DJabberd/Connection/SimpleIn.pm
+    - blib/lib/DJabberd/DNS.pm
+    - blib/lib/DJabberd/Delivery.pm
+    - blib/lib/DJabberd/Delivery/Local.pm
+    - blib/lib/DJabberd/Delivery/LocalVHosts.pm
+    - blib/lib/DJabberd/Delivery/S2S.pm
+    - blib/lib/DJabberd/DialbackParams.pm
+    - blib/lib/DJabberd/HookDocs.pm
+    - blib/lib/DJabberd/IQ.pm
+    - blib/lib/DJabberd/JID.pm
+    - blib/lib/DJabberd/Log.pm
+    - blib/lib/DJabberd/Message.pm
+    - blib/lib/DJabberd/Plugin.pm
+    - blib/lib/DJabberd/Presence.pm
+    - blib/lib/DJabberd/PresenceChecker.pm
+    - blib/lib/DJabberd/PresenceChecker/Dummy.pm
+    - blib/lib/DJabberd/PresenceChecker/Local.pm
+    - blib/lib/DJabberd/Queue.pm
+    - blib/lib/DJabberd/Queue/ClusterOut.pm
+    - blib/lib/DJabberd/Queue/ServerOut.pm
+    - blib/lib/DJabberd/Roster.pm
+    - blib/lib/DJabberd/RosterItem.pm
+    - blib/lib/DJabberd/RosterStorage.pm
+    - blib/lib/DJabberd/RosterStorage/InMemoryOnly.pm
+    - blib/lib/DJabberd/SAXHandler.pm
+    - blib/lib/DJabberd/Stanza.pm
+    - blib/lib/DJabberd/Stanza/DialbackResult.pm
+    - blib/lib/DJabberd/Stanza/DialbackVerify.pm
+    - blib/lib/DJabberd/Stanza/StartTLS.pm
+    - blib/lib/DJabberd/Stanza/StreamFeatures.pm
+    - blib/lib/DJabberd/Stats.pm
+    - blib/lib/DJabberd/StreamStart.pm
+    - blib/lib/DJabberd/StreamVersion.pm
+    - blib/lib/DJabberd/Subscription.pm
+    - blib/lib/DJabberd/TestSAXHandler.pm
+    - blib/lib/DJabberd/Util.pm
+    - blib/lib/DJabberd/VHost.pm
+    - blib/lib/DJabberd/XMLElement.pm
+    - blib/lib/DJabberd/XMLParser.pm
+    - blib/man3/DJabberd.3
+    - blib/man3/DJabberd::Component.3
+    - blib/man3/DJabberd::Component::Example.3
+    - blib/man3/DJabberd::Component::External.3
+    - blib/man3/DJabberd::Component::External::Connection.3
+    - blib/man3/DJabberd::Delivery::LocalVHosts.3
+    - blib/script/djabberd
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Danga::Socket 1.51 not found.
+    Warning: prerequisite Digest::HMAC_SHA1 0 not found.
+    Warning: prerequisite Net::DNS 0.48 not found.
+    Warning: prerequisite Net::SSLeay 0 not found.
+    Warning: prerequisite XML::LibXML::SAX 0 not found.
+    Warning: prerequisite XML::SAX 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for DJabberd
+  build_output: |
+    cp lib/DJabberd/Component.pm blib/lib/DJabberd/Component.pm
+    cp lib/DJabberd/JID.pm blib/lib/DJabberd/JID.pm
+    cp lib/DJabberd/Connection/ClusterOut.pm blib/lib/DJabberd/Connection/ClusterOut.pm
+    cp lib/DJabberd/Connection/ServerOut.pm blib/lib/DJabberd/Connection/ServerOut.pm
+    cp lib/DJabberd/Component/Node.pm blib/lib/DJabberd/Component/Node.pm
+    cp lib/DJabberd/Agent/Node.pm blib/lib/DJabberd/Agent/Node.pm
+    cp lib/DJabberd/Stanza/StartTLS.pm blib/lib/DJabberd/Stanza/StartTLS.pm
+    cp lib/DJabberd/Connection/ClusterIn.pm blib/lib/DJabberd/Connection/ClusterIn.pm
+    cp lib/DJabberd/Connection/Admin.pm blib/lib/DJabberd/Connection/Admin.pm
+    cp lib/DJabberd/Cluster.pm blib/lib/DJabberd/Cluster.pm
+    cp lib/DJabberd/Queue/ClusterOut.pm blib/lib/DJabberd/Queue/ClusterOut.pm
+    cp lib/DJabberd/Stats.pm blib/lib/DJabberd/Stats.pm
+    cp lib/DJabberd/PresenceChecker.pm blib/lib/DJabberd/PresenceChecker.pm
+    cp lib/DJabberd/Bot/Admin.pm blib/lib/DJabberd/Bot/Admin.pm
+    cp lib/DJabberd/Log.pm blib/lib/DJabberd/Log.pm
+    cp lib/DJabberd/Authen/InMemoryOnly.pm blib/lib/DJabberd/Authen/InMemoryOnly.pm
+    cp lib/DJabberd/Connection/OldSSLClientIn.pm blib/lib/DJabberd/Connection/OldSSLClientIn.pm
+    cp lib/DJabberd/Stanza/StreamFeatures.pm blib/lib/DJabberd/Stanza/StreamFeatures.pm
+    cp lib/DJabberd/PresenceChecker/Local.pm blib/lib/DJabberd/PresenceChecker/Local.pm
+    cp lib/DJabberd.pm blib/lib/DJabberd.pm
+    cp lib/DJabberd/DialbackParams.pm blib/lib/DJabberd/DialbackParams.pm
+    cp lib/DJabberd/StreamVersion.pm blib/lib/DJabberd/StreamVersion.pm
+    cp lib/DJabberd/Queue/ServerOut.pm blib/lib/DJabberd/Queue/ServerOut.pm
+    cp lib/DJabberd/Util.pm blib/lib/DJabberd/Util.pm
+    cp lib/DJabberd/Stanza/DialbackResult.pm blib/lib/DJabberd/Stanza/DialbackResult.pm
+    cp lib/DJabberd/XMLParser.pm blib/lib/DJabberd/XMLParser.pm
+    cp lib/DJabberd/ClusterMessage/DeliverStanza.pm blib/lib/DJabberd/ClusterMessage/DeliverStanza.pm
+    cp lib/DJabberd/Agent.pm blib/lib/DJabberd/Agent.pm
+    cp lib/DJabberd/Callback.pm blib/lib/DJabberd/Callback.pm
+    cp lib/DJabberd/RosterItem.pm blib/lib/DJabberd/RosterItem.pm
+    cp lib/DJabberd/ClusterMessage.pm blib/lib/DJabberd/ClusterMessage.pm
+    cp lib/DJabberd/Connection/DialbackVerify.pm blib/lib/DJabberd/Connection/DialbackVerify.pm
+    cp lib/DJabberd/Authen/StaticPassword.pm blib/lib/DJabberd/Authen/StaticPassword.pm
+    cp lib/DJabberd/Bot.pm blib/lib/DJabberd/Bot.pm
+    cp lib/DJabberd/Delivery/LocalVHosts.pm blib/lib/DJabberd/Delivery/LocalVHosts.pm
+    cp lib/DJabberd/BotContext.pm blib/lib/DJabberd/BotContext.pm
+    cp lib/DJabberd/Component/External/Connection.pm blib/lib/DJabberd/Component/External/Connection.pm
+    cp lib/DJabberd/HookDocs.pm blib/lib/DJabberd/HookDocs.pm
+    cp lib/DJabberd/Stanza/DialbackVerify.pm blib/lib/DJabberd/Stanza/DialbackVerify.pm
+    cp lib/DJabberd/XMLElement.pm blib/lib/DJabberd/XMLElement.pm
+    cp lib/DJabberd/StreamStart.pm blib/lib/DJabberd/StreamStart.pm
+    cp lib/DJabberd/SAXHandler.pm blib/lib/DJabberd/SAXHandler.pm
+    cp lib/DJabberd/Connection/ClientIn.pm blib/lib/DJabberd/Connection/ClientIn.pm
+    cp lib/DJabberd/Delivery/S2S.pm blib/lib/DJabberd/Delivery/S2S.pm
+    cp lib/DJabberd/Delivery.pm blib/lib/DJabberd/Delivery.pm
+    cp lib/DJabberd/Roster.pm blib/lib/DJabberd/Roster.pm
+    cp lib/DJabberd/IQ.pm blib/lib/DJabberd/IQ.pm
+    cp lib/DJabberd/Subscription.pm blib/lib/DJabberd/Subscription.pm
+    cp lib/DJabberd/Presence.pm blib/lib/DJabberd/Presence.pm
+    cp lib/DJabberd/Stanza.pm blib/lib/DJabberd/Stanza.pm
+    cp lib/DJabberd/Connection/ServerIn.pm blib/lib/DJabberd/Connection/ServerIn.pm
+    cp lib/DJabberd/Delivery/Local.pm blib/lib/DJabberd/Delivery/Local.pm
+    cp lib/DJabberd/Message.pm blib/lib/DJabberd/Message.pm
+    cp lib/DJabberd/Authen/AllowedUsers.pm blib/lib/DJabberd/Authen/AllowedUsers.pm
+    cp lib/DJabberd/Component/Example.pm blib/lib/DJabberd/Component/Example.pm
+    cp lib/DJabberd/Connection.pm blib/lib/DJabberd/Connection.pm
+    cp lib/DJabberd/RosterStorage.pm blib/lib/DJabberd/RosterStorage.pm
+    cp lib/DJabberd/Plugin.pm blib/lib/DJabberd/Plugin.pm
+    cp lib/DJabberd/Authen.pm blib/lib/DJabberd/Authen.pm
+    cp lib/DJabberd/Connection/SimpleIn.pm blib/lib/DJabberd/Connection/SimpleIn.pm
+    cp lib/DJabberd/DNS.pm blib/lib/DJabberd/DNS.pm
+    cp lib/DJabberd/VHost.pm blib/lib/DJabberd/VHost.pm
+    cp lib/DJabberd/Component/External.pm blib/lib/DJabberd/Component/External.pm
+    cp lib/DJabberd/TestSAXHandler.pm blib/lib/DJabberd/TestSAXHandler.pm
+    cp lib/DJabberd/RosterStorage/InMemoryOnly.pm blib/lib/DJabberd/RosterStorage/InMemoryOnly.pm
+    cp lib/DJabberd/PresenceChecker/Dummy.pm blib/lib/DJabberd/PresenceChecker/Dummy.pm
+    cp lib/DJabberd/Queue.pm blib/lib/DJabberd/Queue.pm
+    cp djabberd blib/script/djabberd
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/djabberd
+    Manifying blib/man3/DJabberd::Component::External::Connection.3
+    Manifying blib/man3/DJabberd::Component::Example.3
+    Manifying blib/man3/DJabberd::Component::External.3
+    Manifying blib/man3/DJabberd::Component.3
+    Manifying blib/man3/DJabberd.3
+    Manifying blib/man3/DJabberd::Delivery::LocalVHosts.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV/DJabberd-0.81/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV/DJabberd-0.81
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV/DJabberd-0.81/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV/DJabberd-0.81/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: BRADFITZ
+  dist_basename: DJabberd-0.81.tar.gz
+  dist_date: 1159743327
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV/DJabberd-0.81
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV/DJabberd-0.81
+  dist_file: /home/brian/CPAN/authors/id/B/BR/BRADFITZ/DJabberd-0.81.tar.gz
+  dist_md5: 3a245758e21c359c5e7b8b23c0752583
+  dist_size: 81811
+  manifest:
+    - CHANGES
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - djabberd
+    - lib/DJabberd.pm
+    - lib/DJabberd/Agent.pm
+    - lib/DJabberd/Agent/Node.pm
+    - lib/DJabberd/Authen.pm
+    - lib/DJabberd/Authen/AllowedUsers.pm
+    - lib/DJabberd/Authen/InMemoryOnly.pm
+    - lib/DJabberd/Authen/StaticPassword.pm
+    - lib/DJabberd/Bot.pm
+    - lib/DJabberd/Bot/Admin.pm
+    - lib/DJabberd/BotContext.pm
+    - lib/DJabberd/Callback.pm
+    - lib/DJabberd/Cluster.pm
+    - lib/DJabberd/ClusterMessage.pm
+    - lib/DJabberd/ClusterMessage/DeliverStanza.pm
+    - lib/DJabberd/Component.pm
+    - lib/DJabberd/Component/Example.pm
+    - lib/DJabberd/Component/External.pm
+    - lib/DJabberd/Component/External/Connection.pm
+    - lib/DJabberd/Component/Node.pm
+    - lib/DJabberd/Connection.pm
+    - lib/DJabberd/Connection/Admin.pm
+    - lib/DJabberd/Connection/ClientIn.pm
+    - lib/DJabberd/Connection/ClusterIn.pm
+    - lib/DJabberd/Connection/ClusterOut.pm
+    - lib/DJabberd/Connection/DialbackVerify.pm
+    - lib/DJabberd/Connection/OldSSLClientIn.pm
+    - lib/DJabberd/Connection/ServerIn.pm
+    - lib/DJabberd/Connection/ServerOut.pm
+    - lib/DJabberd/Connection/SimpleIn.pm
+    - lib/DJabberd/DNS.pm
+    - lib/DJabberd/Delivery.pm
+    - lib/DJabberd/Delivery/Local.pm
+    - lib/DJabberd/Delivery/LocalVHosts.pm
+    - lib/DJabberd/Delivery/S2S.pm
+    - lib/DJabberd/DialbackParams.pm
+    - lib/DJabberd/HookDocs.pm
+    - lib/DJabberd/IQ.pm
+    - lib/DJabberd/JID.pm
+    - lib/DJabberd/Log.pm
+    - lib/DJabberd/Message.pm
+    - lib/DJabberd/Plugin.pm
+    - lib/DJabberd/Presence.pm
+    - lib/DJabberd/PresenceChecker.pm
+    - lib/DJabberd/PresenceChecker/Dummy.pm
+    - lib/DJabberd/PresenceChecker/Local.pm
+    - lib/DJabberd/Queue.pm
+    - lib/DJabberd/Queue/ClusterOut.pm
+    - lib/DJabberd/Queue/ServerOut.pm
+    - lib/DJabberd/Roster.pm
+    - lib/DJabberd/RosterItem.pm
+    - lib/DJabberd/RosterStorage.pm
+    - lib/DJabberd/RosterStorage/InMemoryOnly.pm
+    - lib/DJabberd/SAXHandler.pm
+    - lib/DJabberd/Stanza.pm
+    - lib/DJabberd/Stanza/DialbackResult.pm
+    - lib/DJabberd/Stanza/DialbackVerify.pm
+    - lib/DJabberd/Stanza/StartTLS.pm
+    - lib/DJabberd/Stanza/StreamFeatures.pm
+    - lib/DJabberd/Stats.pm
+    - lib/DJabberd/StreamStart.pm
+    - lib/DJabberd/StreamVersion.pm
+    - lib/DJabberd/Subscription.pm
+    - lib/DJabberd/TestSAXHandler.pm
+    - lib/DJabberd/Util.pm
+    - lib/DJabberd/VHost.pm
+    - lib/DJabberd/XMLElement.pm
+    - lib/DJabberd/XMLParser.pm
+    - t/10-specimpl.t
+    - t/directed-presence.t
+    - t/disco.t
+    - t/exchange-messages.t
+    - t/hookchain.t
+    - t/inband-reg.t
+    - t/iq-exchange.t
+    - t/lib/djabberd-test.pl
+    - t/mutual-add-and-presence.t
+    - t/new-connects.t
+    - t/quirk-libgaim-iqerrorfrom.t
+    - t/s2s-no-dialback-to.t
+    - t/server_die.t
+    - t/two-resources.t
+    - t/versions.t
+    - t/xmlparsing.t
+  manifest_file_info:
+    - bytesize: 200
+      file_mime_type: ~
+      line_count: ~
+      md5: e4eb329834da3d36278b1b7d943b3bc9
+      mtime: 1159738037
+      name: CHANGES
+    - bytesize: 2376
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1159738045
+      name: MANIFEST
+    - bytesize: 565
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1159738094
+      name: META.yml
+    - bytesize: 774
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1159474745
+      name: Makefile.PL
+    - bytesize: 2301
+      file_mime_type: ~
+      line_count: ~
+      md5: f2a15fe94a3746341b2cd46c6e65215b
+      mtime: 1159422145
+      name: djabberd
+    - bytesize: 18251
+      file_mime_type: ~
+      line_count: ~
+      md5: e5f9e32d8f8d7e9047cbf4fbd101a020
+      mtime: 1159737704
+      name: lib/DJabberd.pm
+    - bytesize: 4111
+      file_mime_type: ~
+      line_count: ~
+      md5: 79cc89b2d1103d1f2a28acbeefea74ae
+      mtime: 1159390667
+      name: lib/DJabberd/Agent.pm
+    - bytesize: 758
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c463141dbe9e420f6082d49565ed9eb
+      mtime: 1159390666
+      name: lib/DJabberd/Agent/Node.pm
+    - bytesize: 2234
+      file_mime_type: ~
+      line_count: ~
+      md5: c20978889067b96137db3df321b16b73
+      mtime: 1159390667
+      name: lib/DJabberd/Authen.pm
+    - bytesize: 1933
+      file_mime_type: ~
+      line_count: ~
+      md5: c97d3b0b53f76f3e390fbaec94faaf05
+      mtime: 1159390667
+      name: lib/DJabberd/Authen/AllowedUsers.pm
+    - bytesize: 1318
+      file_mime_type: ~
+      line_count: ~
+      md5: 04fb30a8a7e7a3f432946fa0ac69f640
+      mtime: 1159390667
+      name: lib/DJabberd/Authen/InMemoryOnly.pm
+    - bytesize: 463
+      file_mime_type: ~
+      line_count: ~
+      md5: ef1460e5803a9a24f2862d6e08d9ef7a
+      mtime: 1159390667
+      name: lib/DJabberd/Authen/StaticPassword.pm
+    - bytesize: 3036
+      file_mime_type: ~
+      line_count: ~
+      md5: 4049788b20641c8347e157a4042c33b1
+      mtime: 1159390667
+      name: lib/DJabberd/Bot.pm
+    - bytesize: 971
+      file_mime_type: ~
+      line_count: ~
+      md5: 0415758e052823f1193e9c218d9c0578
+      mtime: 1159390667
+      name: lib/DJabberd/Bot/Admin.pm
+    - bytesize: 1481
+      file_mime_type: ~
+      line_count: ~
+      md5: 60b6255b60ef75e0ff47b70f0425ba31
+      mtime: 1159390666
+      name: lib/DJabberd/BotContext.pm
+    - bytesize: 1278
+      file_mime_type: ~
+      line_count: ~
+      md5: fa3026e9da91bd8e1c2eb194fd787584
+      mtime: 1159390667
+      name: lib/DJabberd/Callback.pm
+    - bytesize: 1042
+      file_mime_type: ~
+      line_count: ~
+      md5: 73bec075ed43a0c5ca8d1bd1f316c0c2
+      mtime: 1159390666
+      name: lib/DJabberd/Cluster.pm
+    - bytesize: 521
+      file_mime_type: ~
+      line_count: ~
+      md5: 48b525affaa210725a010e73435d0188
+      mtime: 1159390667
+      name: lib/DJabberd/ClusterMessage.pm
+    - bytesize: 798
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c57ceebd618a364d806f50a62c678da
+      mtime: 1159390667
+      name: lib/DJabberd/ClusterMessage/DeliverStanza.pm
+    - bytesize: 2322
+      file_mime_type: ~
+      line_count: ~
+      md5: e5df708bab8cc78ba7420f69dfdf1bdc
+      mtime: 1159390668
+      name: lib/DJabberd/Component.pm
+    - bytesize: 4674
+      file_mime_type: ~
+      line_count: ~
+      md5: 5547bb1ec62c24de63748e7741beaf43
+      mtime: 1159390666
+      name: lib/DJabberd/Component/Example.pm
+    - bytesize: 6354
+      file_mime_type: ~
+      line_count: ~
+      md5: efd4b4810fffd6ac33c56da651de0bdc
+      mtime: 1159390667
+      name: lib/DJabberd/Component/External.pm
+    - bytesize: 4265
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e6efdc765c1130342413dca987fbe90
+      mtime: 1159390666
+      name: lib/DJabberd/Component/External/Connection.pm
+    - bytesize: 887
+      file_mime_type: ~
+      line_count: ~
+      md5: 96c01f65dfc8320aea61a063ecb43875
+      mtime: 1159390667
+      name: lib/DJabberd/Component/Node.pm
+    - bytesize: 25519
+      file_mime_type: ~
+      line_count: ~
+      md5: 996534de1b2a5511b37a4446cd6ae3b1
+      mtime: 1159390666
+      name: lib/DJabberd/Connection.pm
+    - bytesize: 9263
+      file_mime_type: ~
+      line_count: ~
+      md5: f672d5051c4915b622b9c13e550e6949
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/Admin.pm
+    - bytesize: 8309
+      file_mime_type: ~
+      line_count: ~
+      md5: c25caf277863f28fd2d406f73ea1f4a4
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/ClientIn.pm
+    - bytesize: 1823
+      file_mime_type: ~
+      line_count: ~
+      md5: f3c376a5854ffaa46d11259ca55da1fe
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/ClusterIn.pm
+    - bytesize: 314
+      file_mime_type: ~
+      line_count: ~
+      md5: 6195ac54cc80b83cd009562b48672dcd
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/ClusterOut.pm
+    - bytesize: 3449
+      file_mime_type: ~
+      line_count: ~
+      md5: ad7863bf491c7eba84b86e5f4e9be00b
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/DialbackVerify.pm
+    - bytesize: 2138
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b35dff9dae26733b50d1145a9d85412
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/OldSSLClientIn.pm
+    - bytesize: 4551
+      file_mime_type: ~
+      line_count: ~
+      md5: 01dfeaa439550cf8fef2fe3baaab7888
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/ServerIn.pm
+    - bytesize: 4537
+      file_mime_type: ~
+      line_count: ~
+      md5: f16b6bf52c2159d999139ab82bb26b13
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/ServerOut.pm
+    - bytesize: 2454
+      file_mime_type: ~
+      line_count: ~
+      md5: 5f6a23666785846bb41b700e57caaa11
+      mtime: 1159390666
+      name: lib/DJabberd/Connection/SimpleIn.pm
+    - bytesize: 6421
+      file_mime_type: ~
+      line_count: ~
+      md5: b6fc25a93503f40a144fa02e23c9d95f
+      mtime: 1159390667
+      name: lib/DJabberd/DNS.pm
+    - bytesize: 598
+      file_mime_type: ~
+      line_count: ~
+      md5: 661237b8254576bcd81fbf6eaccc555b
+      mtime: 1159390666
+      name: lib/DJabberd/Delivery.pm
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: bfdb9712aef3e6bddfe3eb92f1723114
+      mtime: 1159390666
+      name: lib/DJabberd/Delivery/Local.pm
+    - bytesize: 2521
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c9f21576920cfd70f53ee398b46727f
+      mtime: 1159390666
+      name: lib/DJabberd/Delivery/LocalVHosts.pm
+    - bytesize: 1638
+      file_mime_type: ~
+      line_count: ~
+      md5: 939f163bd11a52cee80710e7cd905255
+      mtime: 1159390666
+      name: lib/DJabberd/Delivery/S2S.pm
+    - bytesize: 1994
+      file_mime_type: ~
+      line_count: ~
+      md5: e5297a59fc050514682cf3e70b8f1559
+      mtime: 1159390666
+      name: lib/DJabberd/DialbackParams.pm
+    - bytesize: 5226
+      file_mime_type: ~
+      line_count: ~
+      md5: 38b0aace7c3e8597ac65d039933a5d51
+      mtime: 1159390667
+      name: lib/DJabberd/HookDocs.pm
+    - bytesize: 23089
+      file_mime_type: ~
+      line_count: ~
+      md5: 42f7d7daa6719ec6d149be6f9a5888e8
+      mtime: 1159390666
+      name: lib/DJabberd/IQ.pm
+    - bytesize: 1874
+      file_mime_type: ~
+      line_count: ~
+      md5: 7466ea80b63c1d283739937a3de116e3
+      mtime: 1159390666
+      name: lib/DJabberd/JID.pm
+    - bytesize: 1652
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dde527aa2c88f4d8eb8b863cf03bd74
+      mtime: 1159390667
+      name: lib/DJabberd/Log.pm
+    - bytesize: 434
+      file_mime_type: ~
+      line_count: ~
+      md5: 6947248a94c35ad79c49777781fadef2
+      mtime: 1159390667
+      name: lib/DJabberd/Message.pm
+    - bytesize: 764
+      file_mime_type: ~
+      line_count: ~
+      md5: 6aa1f0ac81eea697499317f1b2dbfb6d
+      mtime: 1159390666
+      name: lib/DJabberd/Plugin.pm
+    - bytesize: 25211
+      file_mime_type: ~
+      line_count: ~
+      md5: d55a7f7db7c9e398028a196e1098a142
+      mtime: 1159390667
+      name: lib/DJabberd/Presence.pm
+    - bytesize: 1152
+      file_mime_type: ~
+      line_count: ~
+      md5: 9028fda0ad26fb0115b24ea5a7a415fc
+      mtime: 1159390667
+      name: lib/DJabberd/PresenceChecker.pm
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 14ab1824dbe6da5152bf734167b741a9
+      mtime: 1159390666
+      name: lib/DJabberd/PresenceChecker/Dummy.pm
+    - bytesize: 678
+      file_mime_type: ~
+      line_count: ~
+      md5: a28ecb952d55cb66e58c8393c2b2f783
+      mtime: 1159390666
+      name: lib/DJabberd/PresenceChecker/Local.pm
+    - bytesize: 5094
+      file_mime_type: ~
+      line_count: ~
+      md5: f9ba2aeb3b8952fef4f246737287322e
+      mtime: 1159390667
+      name: lib/DJabberd/Queue.pm
+    - bytesize: 585
+      file_mime_type: ~
+      line_count: ~
+      md5: b1a2bd6a19511cc1700a74ab28634ee0
+      mtime: 1159390666
+      name: lib/DJabberd/Queue/ClusterOut.pm
+    - bytesize: 2055
+      file_mime_type: ~
+      line_count: ~
+      md5: 163bf1d190766e78a1b7f3d70aa0a962
+      mtime: 1159390666
+      name: lib/DJabberd/Queue/ServerOut.pm
+    - bytesize: 1044
+      file_mime_type: ~
+      line_count: ~
+      md5: ab4f5e9bc945e3873c9e4dd39a64521d
+      mtime: 1159390667
+      name: lib/DJabberd/Roster.pm
+    - bytesize: 2432
+      file_mime_type: ~
+      line_count: ~
+      md5: f1fc324de504cd4199b861aaf724d5f9
+      mtime: 1159390667
+      name: lib/DJabberd/RosterItem.pm
+    - bytesize: 2214
+      file_mime_type: ~
+      line_count: ~
+      md5: 047704da9b5e076545b9a4727d380d8f
+      mtime: 1159390667
+      name: lib/DJabberd/RosterStorage.pm
+    - bytesize: 3025
+      file_mime_type: ~
+      line_count: ~
+      md5: 0930c77b7c02f68769462f94cd820e59
+      mtime: 1159404662
+      name: lib/DJabberd/RosterStorage/InMemoryOnly.pm
+    - bytesize: 5930
+      file_mime_type: ~
+      line_count: ~
+      md5: dbe87a64c67ff7a0485af89a86fc84e7
+      mtime: 1159390666
+      name: lib/DJabberd/SAXHandler.pm
+    - bytesize: 5322
+      file_mime_type: ~
+      line_count: ~
+      md5: 43611e1bf1985671f4c0a316d7520259
+      mtime: 1159390667
+      name: lib/DJabberd/Stanza.pm
+    - bytesize: 2359
+      file_mime_type: ~
+      line_count: ~
+      md5: 480660649c1c16548d51729f460455a9
+      mtime: 1159390666
+      name: lib/DJabberd/Stanza/DialbackResult.pm
+    - bytesize: 2749
+      file_mime_type: ~
+      line_count: ~
+      md5: de80fc3fcbb918f614594819a54d4801
+      mtime: 1159390666
+      name: lib/DJabberd/Stanza/DialbackVerify.pm
+    - bytesize: 3674
+      file_mime_type: ~
+      line_count: ~
+      md5: e5046d44dec87507727fdb72d93f9be8
+      mtime: 1159390666
+      name: lib/DJabberd/Stanza/StartTLS.pm
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: 3461f8e7c7d60b9dd5b0bb2edf4bc859
+      mtime: 1159390666
+      name: lib/DJabberd/Stanza/StreamFeatures.pm
+    - bytesize: 376
+      file_mime_type: ~
+      line_count: ~
+      md5: 9648f041ca5af1d12bfedcd17a0acb34
+      mtime: 1159390666
+      name: lib/DJabberd/Stats.pm
+    - bytesize: 1216
+      file_mime_type: ~
+      line_count: ~
+      md5: 57444f19a12a4e6f1a3c5cb0db115739
+      mtime: 1159390667
+      name: lib/DJabberd/StreamStart.pm
+    - bytesize: 1728
+      file_mime_type: ~
+      line_count: ~
+      md5: b7c825c240a61938a15132a81cea8f53
+      mtime: 1159390667
+      name: lib/DJabberd/StreamVersion.pm
+    - bytesize: 4151
+      file_mime_type: ~
+      line_count: ~
+      md5: 202ffc8ccf2e522ed0c06e70d879ff43
+      mtime: 1159390667
+      name: lib/DJabberd/Subscription.pm
+    - bytesize: 2403
+      file_mime_type: ~
+      line_count: ~
+      md5: 09b3155834505c185c65063b01d0608b
+      mtime: 1159390668
+      name: lib/DJabberd/TestSAXHandler.pm
+    - bytesize: 1934
+      file_mime_type: ~
+      line_count: ~
+      md5: c90035063dda447ae7587add8c96a418
+      mtime: 1159390667
+      name: lib/DJabberd/Util.pm
+    - bytesize: 15885
+      file_mime_type: ~
+      line_count: ~
+      md5: 25cadc6f2830451f9107abdcbce8867c
+      mtime: 1159390668
+      name: lib/DJabberd/VHost.pm
+    - bytesize: 4516
+      file_mime_type: ~
+      line_count: ~
+      md5: 1472c0500a6d5275f801ecab2b3f14d5
+      mtime: 1159390667
+      name: lib/DJabberd/XMLElement.pm
+    - bytesize: 1936
+      file_mime_type: ~
+      line_count: ~
+      md5: 0819923c3564637f7d067f17ac823ff6
+      mtime: 1159390666
+      name: lib/DJabberd/XMLParser.pm
+    - bytesize: 1839
+      file_mime_type: ~
+      line_count: ~
+      md5: 471187bd56ee1d72abb010e2bd0ab12d
+      mtime: 1159391060
+      name: t/10-specimpl.t
+    - bytesize: 2140
+      file_mime_type: ~
+      line_count: ~
+      md5: 45421681806639c43090b286e4891315
+      mtime: 1159391060
+      name: t/directed-presence.t
+    - bytesize: 886
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b332d31cafa2cc65d5489f563dd5a1f
+      mtime: 1159391060
+      name: t/disco.t
+    - bytesize: 1651
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e58db9e38fb36bff669ac4888cba69e
+      mtime: 1159391060
+      name: t/exchange-messages.t
+    - bytesize: 3911
+      file_mime_type: ~
+      line_count: ~
+      md5: dfd154cca49fa152dd54f48be2f809c3
+      mtime: 1159391060
+      name: t/hookchain.t
+    - bytesize: 2037
+      file_mime_type: ~
+      line_count: ~
+      md5: a3f83b27aefde726b80fd1ca2fca3aa3
+      mtime: 1159394044
+      name: t/inband-reg.t
+    - bytesize: 530
+      file_mime_type: ~
+      line_count: ~
+      md5: 884a120fb632981dab796832a302d219
+      mtime: 1159391060
+      name: t/iq-exchange.t
+    - bytesize: 21337
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d8917debd5995d974a56b22b2d65357
+      mtime: 1159469730
+      name: t/lib/djabberd-test.pl
+    - bytesize: 4150
+      file_mime_type: ~
+      line_count: ~
+      md5: bda323bbe235567feb357ae234cfa1bc
+      mtime: 1159391061
+      name: t/mutual-add-and-presence.t
+    - bytesize: 2953
+      file_mime_type: ~
+      line_count: ~
+      md5: fa779565334d121cbfc02af3aea87827
+      mtime: 1159394840
+      name: t/new-connects.t
+    - bytesize: 1899
+      file_mime_type: ~
+      line_count: ~
+      md5: ed30245dc4effca7fd0db9cea0400133
+      mtime: 1159391060
+      name: t/quirk-libgaim-iqerrorfrom.t
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fa302b098909658f09b7e0691c037ae
+      mtime: 1159395912
+      name: t/s2s-no-dialback-to.t
+    - bytesize: 993
+      file_mime_type: ~
+      line_count: ~
+      md5: 89590a920b5fdc695c2a5cabfccb83fe
+      mtime: 1159391060
+      name: t/server_die.t
+    - bytesize: 2615
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d3f469737444e187d79d4d2ed76e970
+      mtime: 1159391060
+      name: t/two-resources.t
+    - bytesize: 720
+      file_mime_type: ~
+      line_count: ~
+      md5: 3af41e7ea6c461ab2ec84d6d596fb983
+      mtime: 1159391060
+      name: t/versions.t
+    - bytesize: 2177
+      file_mime_type: ~
+      line_count: ~
+      md5: 042d2c98b704836835af0620326d4f3f
+      mtime: 1159391060
+      name: t/xmlparsing.t
+  module_info:
+    - bytesize: 18251
+      file_mime_type: ~
+      line_count: ~
+      md5: 851976b19b2ea817bb6bc38a67a5aab7
+      module_name_from_file_guess: DJabberd
+      mtime: 1159737704
+      name: blib/lib/DJabberd.pm
+      packages:
+        - DJabberd
+      primary_package: DJabberd
+      uses:
+        - strict
+        - Carp
+        - Danga::Socket
+        - IO::Socket::INET
+        - IO::Socket::UNIX
+        - POSIX
+        - DJabberd::VHost
+        - DJabberd::Callback
+        - Scalar::Util
+        - DJabberd::HookDocs
+        - DJabberd::Connection
+        - DJabberd::Connection::ServerIn
+        - DJabberd::Connection::ClientIn
+        - DJabberd::Connection::ClusterIn
+        - DJabberd::Connection::OldSSLClientIn
+        - DJabberd::Connection::Admin
+        - DJabberd::Stanza::StartTLS
+        - DJabberd::Stanza::StreamFeatures
+        - DJabberd::Stanza::DialbackVerify
+        - DJabberd::Stanza::DialbackResult
+        - DJabberd::JID
+        - DJabberd::IQ
+        - DJabberd::Message
+        - DJabberd::Presence
+        - DJabberd::StreamVersion
+        - DJabberd::Log
+        - DJabberd::Delivery::Local
+        - DJabberd::Delivery::S2S
+        - DJabberd::PresenceChecker::Local
+        - DJabberd::Stats
+        - Socket
+        - DJabberd::Util
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/DJabberd.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 0.81
+    - bytesize: 4111
+      file_mime_type: ~
+      line_count: ~
+      md5: bb20e6cc2cfeac4c4a37016ba4bfbfa7
+      module_name_from_file_guess: DJabberd::Agent
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Agent.pm
+      packages:
+        - DJabberd::Agent
+      primary_package: DJabberd::Agent
+      uses:
+        - base
+        - strict
+        - warnings
+        - DJabberd::Util
+        - DJabberd::JID
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Agent.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 758
+      file_mime_type: ~
+      line_count: ~
+      md5: 88f5cf01673b569be3ad7b925a934ba6
+      module_name_from_file_guess: DJabberd::Agent::Node
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Agent/Node.pm
+      packages:
+        - DJabberd::Agent::Node
+      primary_package: DJabberd::Agent::Node
+      uses:
+        - base
+        - DJabberd::Util
+        - strict
+        - warnings
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Agent/Node.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2234
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dbe5a1f27f49f841f7f18abc8fa9acd
+      module_name_from_file_guess: DJabberd::Authen
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Authen.pm
+      packages:
+        - DJabberd::Authen
+      primary_package: DJabberd::Authen
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/Authen.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1933
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e9c56df9857214f9ea9b742dbc0b4b5
+      module_name_from_file_guess: DJabberd::Authen::AllowedUsers
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Authen/AllowedUsers.pm
+      packages:
+        - DJabberd::Authen::AllowedUsers
+      primary_package: DJabberd::Authen::AllowedUsers
+      uses:
+        - strict
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/DJabberd/Authen/AllowedUsers.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1318
+      file_mime_type: ~
+      line_count: ~
+      md5: d6bf1c4baa249817a028068811c6c539
+      module_name_from_file_guess: DJabberd::Authen::InMemoryOnly
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Authen/InMemoryOnly.pm
+      packages:
+        - DJabberd::Authen::InMemoryOnly
+      primary_package: DJabberd::Authen::InMemoryOnly
+      uses:
+        - strict
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/DJabberd/Authen/InMemoryOnly.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 463
+      file_mime_type: ~
+      line_count: ~
+      md5: d41d9ba0295be9e1afdbda4d28c2bd42
+      module_name_from_file_guess: DJabberd::Authen::StaticPassword
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Authen/StaticPassword.pm
+      packages:
+        - DJabberd::Authen::StaticPassword
+      primary_package: DJabberd::Authen::StaticPassword
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/Authen/StaticPassword.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3036
+      file_mime_type: ~
+      line_count: ~
+      md5: 411bdba72b55cf62fa32ff2c821bf0a3
+      module_name_from_file_guess: DJabberd::Bot
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Bot.pm
+      packages:
+        - DJabberd::Bot
+      primary_package: DJabberd::Bot
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::JID
+        - Carp
+        - Scalar::Util
+        - List::Util
+        - DJabberd::BotContext
+      version_info:
+        filename: blib/lib/DJabberd/Bot.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 971
+      file_mime_type: ~
+      line_count: ~
+      md5: cd71daa7c0daf54cc3808355de54367a
+      module_name_from_file_guess: DJabberd::Bot::Admin
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Bot/Admin.pm
+      packages:
+        - DJabberd::Bot::Admin
+      primary_package: DJabberd::Bot::Admin
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Util
+        - List::Util
+      version_info:
+        filename: blib/lib/DJabberd/Bot/Admin.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1481
+      file_mime_type: ~
+      line_count: ~
+      md5: b7aac6bee8e74a7cd77c3881208cf0ba
+      module_name_from_file_guess: DJabberd::BotContext
+      mtime: 1159390666
+      name: blib/lib/DJabberd/BotContext.pm
+      packages:
+        - DJabberd::BotContext
+      primary_package: DJabberd::BotContext
+      uses:
+        - strict
+        - fields
+        - warnings
+      version_info:
+        filename: blib/lib/DJabberd/BotContext.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1278
+      file_mime_type: ~
+      line_count: ~
+      md5: 42b3d8fa51c970c5f89a5ae0eff90a03
+      module_name_from_file_guess: DJabberd::Callback
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Callback.pm
+      packages:
+        - DJabberd::Callback
+      primary_package: DJabberd::Callback
+      uses:
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/DJabberd/Callback.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1042
+      file_mime_type: ~
+      line_count: ~
+      md5: f0cfc61fc25a73aa966cef6784a57ce4
+      module_name_from_file_guess: DJabberd::Cluster
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Cluster.pm
+      packages:
+        - DJabberd::Cluster
+      primary_package: DJabberd::Cluster
+      uses:
+        - strict
+        - base
+        - DJabberd::Queue::ClusterOut
+      version_info:
+        filename: blib/lib/DJabberd/Cluster.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 521
+      file_mime_type: ~
+      line_count: ~
+      md5: 94faa3d763d93e089d5dd37da8526e0f
+      module_name_from_file_guess: DJabberd::ClusterMessage
+      mtime: 1159390667
+      name: blib/lib/DJabberd/ClusterMessage.pm
+      packages:
+        - DJabberd::ClusterMessage
+      primary_package: DJabberd::ClusterMessage
+      uses:
+        - strict
+        - warnings
+        - Storable
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/ClusterMessage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 798
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ce969c59d1f7931137bdf7e9ad65ec9
+      module_name_from_file_guess: DJabberd::ClusterMessage::DeliverStanza
+      mtime: 1159390667
+      name: blib/lib/DJabberd/ClusterMessage/DeliverStanza.pm
+      packages:
+        - DJabberd::ClusterMessage::DeliverStanza
+      primary_package: DJabberd::ClusterMessage::DeliverStanza
+      uses:
+        - strict
+        - warnings
+        - base
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/ClusterMessage/DeliverStanza.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2322
+      file_mime_type: ~
+      line_count: ~
+      md5: b9cce2af359fc2ee3135bd5a98d912c4
+      module_name_from_file_guess: DJabberd::Component
+      mtime: 1159390668
+      name: blib/lib/DJabberd/Component.pm
+      packages:
+        - DJabberd::Component
+      primary_package: DJabberd::Component
+      uses:
+        - base
+        - strict
+        - DJabberd::Log
+        - DJabberd::Util
+      version_info:
+        filename: blib/lib/DJabberd/Component.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4674
+      file_mime_type: ~
+      line_count: ~
+      md5: 8222b73da8377ed964a055df3b6b3b3b
+      module_name_from_file_guess: DJabberd::Component::Example
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Component/Example.pm
+      packages:
+        - DJabberd::Component::Example
+      primary_package: DJabberd::Component::Example
+      uses:
+        - base
+        - DJabberd::Util
+        - DJabberd::Log
+        - DJabberd::Bot::Eliza
+        - DJabberd::JID
+      version_info:
+        filename: blib/lib/DJabberd/Component/Example.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6354
+      file_mime_type: ~
+      line_count: ~
+      md5: f63b7b33631069da5aec89e7258164f4
+      module_name_from_file_guess: DJabberd::Component::External
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Component/External.pm
+      packages:
+        - DJabberd::Component::External
+      primary_package: DJabberd::Component::External
+      uses:
+        - base
+        - strict
+        - DJabberd::Log
+        - DJabberd::Util
+        - DJabberd::Component::External::Connection
+        - IO::Socket::UNIX
+        - IO::Socket::INET
+        - Socket
+      version_info:
+        filename: blib/lib/DJabberd/Component/External.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4265
+      file_mime_type: ~
+      line_count: ~
+      md5: 4110f04a67d64fb2a409748c805fbaf7
+      module_name_from_file_guess: DJabberd::Component::External::Connection
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Component/External/Connection.pm
+      packages:
+        - DJabberd::Component::External::Connection
+      primary_package: DJabberd::Component::External::Connection
+      uses:
+        - strict
+        - base
+        - DJabberd::Log
+        - Digest::SHA1
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/Component/External/Connection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 887
+      file_mime_type: ~
+      line_count: ~
+      md5: d0ac4820bf43ffabfeb3b8f27d907fc8
+      module_name_from_file_guess: DJabberd::Component::Node
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Component/Node.pm
+      packages:
+        - DJabberd::Component::Node
+      primary_package: DJabberd::Component::Node
+      uses:
+        - base
+        - DJabberd::Util
+        - strict
+        - warnings
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Component/Node.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 25519
+      file_mime_type: ~
+      line_count: ~
+      md5: e7e789afa7f467ff555cad566b4e8f35
+      module_name_from_file_guess: DJabberd::Connection
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - base
+        - fields
+        - XML::SAX
+        - DJabberd::XMLParser
+        - Digest::SHA1
+        - DJabberd::SAXHandler
+        - DJabberd::JID
+        - DJabberd::IQ
+        - DJabberd::Message
+        - DJabberd::Util
+        - Data::Dumper
+        - Carp
+        - DJabberd::Log
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/Connection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9263
+      file_mime_type: ~
+      line_count: ~
+      md5: 58a4d92c190a429af92033ea7bcca543
+      module_name_from_file_guess: DJabberd::Connection::Admin
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/Admin.pm
+      packages:
+        - DJabberd::Connection::Admin
+      primary_package: DJabberd::Connection::Admin
+      uses:
+        - strict
+        - warnings
+        - base
+        - fields
+        - vars
+        - Devel::Peek
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/DJabberd/Connection/Admin.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8309
+      file_mime_type: ~
+      line_count: ~
+      md5: d55100b4aad2ab8853a6236b06b30e49
+      module_name_from_file_guess: DJabberd::Connection::ClientIn
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/ClientIn.pm
+      packages:
+        - DJabberd::Connection::ClientIn
+      primary_package: DJabberd::Connection::ClientIn
+      uses:
+        - strict
+        - base
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/Connection/ClientIn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1823
+      file_mime_type: ~
+      line_count: ~
+      md5: 033664214ffc2a7a683e908dc2d03053
+      module_name_from_file_guess: DJabberd::Connection::ClusterIn
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/ClusterIn.pm
+      packages:
+        - DJabberd::Connection::ClusterIn
+      primary_package: DJabberd::Connection::ClusterIn
+      uses:
+        - strict
+        - base
+        - DJabberd::ClusterMessage
+        - DJabberd::ClusterMessage::DeliverStanza
+        - fields
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Connection/ClusterIn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 314
+      file_mime_type: ~
+      line_count: ~
+      md5: 925711fc27ee52b0353d3d65ddaf3deb
+      module_name_from_file_guess: DJabberd::Connection::ClusterOut
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/ClusterOut.pm
+      packages:
+        - DJabberd::Connection::ClusterOut
+      primary_package: DJabberd::Connection::ClusterOut
+      uses:
+        - strict
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/DJabberd/Connection/ClusterOut.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3449
+      file_mime_type: ~
+      line_count: ~
+      md5: 148a90c96d80ed92312a9667683b3272
+      module_name_from_file_guess: DJabberd::Connection::DialbackVerify
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/DialbackVerify.pm
+      packages:
+        - DJabberd::Connection::DialbackVerify
+      primary_package: DJabberd::Connection::DialbackVerify
+      uses:
+        - strict
+        - base
+        - DJabberd::Log
+        - fields
+        - IO::Handle
+        - Socket
+      version_info:
+        filename: blib/lib/DJabberd/Connection/DialbackVerify.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2138
+      file_mime_type: ~
+      line_count: ~
+      md5: ab9388d2cb72a298ec051661f2a2fe63
+      module_name_from_file_guess: DJabberd::Connection::OldSSLClientIn
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/OldSSLClientIn.pm
+      packages:
+        - DJabberd::Connection::OldSSLClientIn
+      primary_package: DJabberd::Connection::OldSSLClientIn
+      uses:
+        - strict
+        - base
+        - DJabberd::Stanza::StartTLS
+        - Net::SSLeay
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/Connection/OldSSLClientIn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4551
+      file_mime_type: ~
+      line_count: ~
+      md5: afe5a92ee365f365d867fe8b4dfd558f
+      module_name_from_file_guess: DJabberd::Connection::ServerIn
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/ServerIn.pm
+      packages:
+        - DJabberd::Connection::ServerIn
+      primary_package: DJabberd::Connection::ServerIn
+      uses:
+        - strict
+        - base
+        - fields
+        - DJabberd::Stanza::DialbackResult
+      version_info:
+        filename: blib/lib/DJabberd/Connection/ServerIn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4537
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d21a8fb4017930a6252f9cb67321ee7
+      module_name_from_file_guess: DJabberd::Connection::ServerOut
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/ServerOut.pm
+      packages:
+        - DJabberd::Connection::ServerOut
+      primary_package: DJabberd::Connection::ServerOut
+      uses:
+        - strict
+        - base
+        - fields
+        - IO::Handle
+        - Socket
+        - Carp
+      version_info:
+        filename: blib/lib/DJabberd/Connection/ServerOut.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2454
+      file_mime_type: ~
+      line_count: ~
+      md5: 161b571d23021e2dda6b7960c351e33f
+      module_name_from_file_guess: DJabberd::Connection::SimpleIn
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Connection/SimpleIn.pm
+      packages:
+        - DJabberd::Connection::SimpleIn
+      primary_package: DJabberd::Connection::SimpleIn
+      uses:
+        - strict
+        - base
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/Connection/SimpleIn.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6421
+      file_mime_type: ~
+      line_count: ~
+      md5: 6663e21e5df2a7fed12d1c5abfe90251
+      module_name_from_file_guess: DJabberd::DNS
+      mtime: 1159390667
+      name: blib/lib/DJabberd/DNS.pm
+      packages:
+        - DJabberd::DNS
+        - DJabberd::IPEndPoint
+      primary_package: DJabberd::DNS
+      uses:
+        - strict
+        - base
+        - fields
+        - Carp
+        - DJabberd::Log
+        - Net::DNS
+      version_info:
+        filename: blib/lib/DJabberd/DNS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 598
+      file_mime_type: ~
+      line_count: ~
+      md5: b670bf4cd6f3a01f41a7d8e5aa5fc57a
+      module_name_from_file_guess: DJabberd::Delivery
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Delivery.pm
+      packages:
+        - DJabberd::Delivery
+      primary_package: DJabberd::Delivery
+      uses:
+        - strict
+        - warnings
+        - base
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/DJabberd/Delivery.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 905
+      file_mime_type: ~
+      line_count: ~
+      md5: 872699a7f8eaee1b93c89dee7217882d
+      module_name_from_file_guess: DJabberd::Delivery::Local
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Delivery/Local.pm
+      packages:
+        - DJabberd::Delivery::Local
+      primary_package: DJabberd::Delivery::Local
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/Delivery/Local.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2521
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ea1fa98180095af9b6d4b7e1f1f33a8
+      module_name_from_file_guess: DJabberd::Delivery::LocalVHosts
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Delivery/LocalVHosts.pm
+      packages:
+        - DJabberd::Delivery::LocalVHosts
+      primary_package: DJabberd::Delivery::LocalVHosts
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Delivery/LocalVHosts.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1638
+      file_mime_type: ~
+      line_count: ~
+      md5: 42362ae1200ba1188e7c946f625f39b4
+      module_name_from_file_guess: DJabberd::Delivery::S2S
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Delivery/S2S.pm
+      packages:
+        - DJabberd::Delivery::S2S
+      primary_package: DJabberd::Delivery::S2S
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Queue::ServerOut
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Delivery/S2S.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1994
+      file_mime_type: ~
+      line_count: ~
+      md5: c0f421dc14538b6dc188262323c1d71b
+      module_name_from_file_guess: DJabberd::DialbackParams
+      mtime: 1159390666
+      name: blib/lib/DJabberd/DialbackParams.pm
+      packages:
+        - DJabberd::DialbackParams
+      primary_package: DJabberd::DialbackParams
+      uses:
+        - strict
+        - Carp
+        - Digest::HMAC_SHA1
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/DialbackParams.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5226
+      file_mime_type: ~
+      line_count: ~
+      md5: 19c892f0ec289625495835046454fc78
+      module_name_from_file_guess: DJabberd::HookDocs
+      mtime: 1159390667
+      name: blib/lib/DJabberd/HookDocs.pm
+      packages:
+        - DJabberd::HookDocs
+      primary_package: DJabberd::HookDocs
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/DJabberd/HookDocs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 23089
+      file_mime_type: ~
+      line_count: ~
+      md5: 28e86ce0226c02392e22a9e58aeecede
+      module_name_from_file_guess: DJabberd::IQ
+      mtime: 1159390666
+      name: blib/lib/DJabberd/IQ.pm
+      packages:
+        - DJabberd::IQ
+      primary_package: DJabberd::IQ
+      uses:
+        - strict
+        - base
+        - DJabberd::Util
+        - DJabberd::Roster
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/IQ.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1874
+      file_mime_type: ~
+      line_count: ~
+      md5: 7601738ac061a07871d6aa29153b9358
+      module_name_from_file_guess: DJabberd::JID
+      mtime: 1159390666
+      name: blib/lib/DJabberd/JID.pm
+      packages:
+        - DJabberd::JID
+      primary_package: DJabberd::JID
+      uses:
+        - strict
+        - DJabberd::Util
+        - overload
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/JID.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1652
+      file_mime_type: ~
+      line_count: ~
+      md5: 2495ceb7e3cf4afdb72e1e01a34378c2
+      module_name_from_file_guess: DJabberd::Log
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Log.pm
+      packages:
+        - DJabberd::Log::Junk
+        - DJabberd::Log
+      primary_package: DJabberd::Log
+      uses:
+        - Log::Log4perl
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DJabberd/Log.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 434
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c0142f8d40cd839f4a9aa8bbdeba8eb
+      module_name_from_file_guess: DJabberd::Message
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Message.pm
+      packages:
+        - DJabberd::Message
+      primary_package: DJabberd::Message
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/Message.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 764
+      file_mime_type: ~
+      line_count: ~
+      md5: ceb38ad4b84a7b2ec8026a0f30210cdc
+      module_name_from_file_guess: DJabberd::Plugin
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Plugin.pm
+      packages:
+        - DJabberd::Plugin
+      primary_package: DJabberd::Plugin
+      uses:
+        - strict
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Plugin.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 25211
+      file_mime_type: ~
+      line_count: ~
+      md5: 319057910bbbe996d97b07130baadc05
+      module_name_from_file_guess: DJabberd::Presence
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Presence.pm
+      packages:
+        - DJabberd::Presence
+      primary_package: DJabberd::Presence
+      uses:
+        - strict
+        - base
+        - Carp
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/Presence.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1152
+      file_mime_type: ~
+      line_count: ~
+      md5: 7691901efeeb6551784a2e8946e81674
+      module_name_from_file_guess: DJabberd::PresenceChecker
+      mtime: 1159390667
+      name: blib/lib/DJabberd/PresenceChecker.pm
+      packages:
+        - DJabberd::PresenceChecker
+      primary_package: DJabberd::PresenceChecker
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/PresenceChecker.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 466dd4cd7bf51a2a1edf197110ee6a67
+      module_name_from_file_guess: DJabberd::PresenceChecker::Dummy
+      mtime: 1159390666
+      name: blib/lib/DJabberd/PresenceChecker/Dummy.pm
+      packages:
+        - DJabberd::PresenceChecker::Dummy
+      primary_package: DJabberd::PresenceChecker::Dummy
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/PresenceChecker/Dummy.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 678
+      file_mime_type: ~
+      line_count: ~
+      md5: 6815571cb4e27456bb4aada26a914653
+      module_name_from_file_guess: DJabberd::PresenceChecker::Local
+      mtime: 1159390666
+      name: blib/lib/DJabberd/PresenceChecker/Local.pm
+      packages:
+        - DJabberd::PresenceChecker::Local
+      primary_package: DJabberd::PresenceChecker::Local
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/PresenceChecker/Local.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5094
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ed2496e6fdbdbdfb37117178ade3b3c
+      module_name_from_file_guess: DJabberd::Queue
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Queue.pm
+      packages:
+        - DJabberd::Queue
+        - DJabberd::QueueItem
+      primary_package: DJabberd::Queue
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Log
+        - fields
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/Queue.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 585
+      file_mime_type: ~
+      line_count: ~
+      md5: c116058542de1d592610cf144102ba1d
+      module_name_from_file_guess: DJabberd::Queue::ClusterOut
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Queue/ClusterOut.pm
+      packages:
+        - DJabberd::Queue::ClusterOut
+      primary_package: DJabberd::Queue::ClusterOut
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Queue
+        - DJabberd::Connection::ClusterOut
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Queue/ClusterOut.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2055
+      file_mime_type: ~
+      line_count: ~
+      md5: 45b108461cf57e56454247c879d8f0ae
+      module_name_from_file_guess: DJabberd::Queue::ServerOut
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Queue/ServerOut.pm
+      packages:
+        - DJabberd::Queue::ServerOut
+      primary_package: DJabberd::Queue::ServerOut
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Queue
+        - fields
+        - DJabberd::Connection::ServerOut
+        - DJabberd::Log
+      version_info:
+        filename: blib/lib/DJabberd/Queue/ServerOut.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1044
+      file_mime_type: ~
+      line_count: ~
+      md5: 00fb635bb3217cf7360187ff9a78f6f8
+      module_name_from_file_guess: DJabberd::Roster
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Roster.pm
+      packages:
+        - DJabberd::Roster
+      primary_package: DJabberd::Roster
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DJabberd/Roster.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2432
+      file_mime_type: ~
+      line_count: ~
+      md5: 85a2add807b4fc83d8fbef65a23ca975
+      module_name_from_file_guess: DJabberd::RosterItem
+      mtime: 1159390667
+      name: blib/lib/DJabberd/RosterItem.pm
+      packages:
+        - DJabberd::RosterItem
+      primary_package: DJabberd::RosterItem
+      uses:
+        - strict
+        - Carp
+        - DJabberd::Util
+        - DJabberd::Subscription
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/RosterItem.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2214
+      file_mime_type: ~
+      line_count: ~
+      md5: 042768ffc2a4b9c4d5fb31fad506fb08
+      module_name_from_file_guess: DJabberd::RosterStorage
+      mtime: 1159390667
+      name: blib/lib/DJabberd/RosterStorage.pm
+      packages:
+        - DJabberd::RosterStorage
+      primary_package: DJabberd::RosterStorage
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Roster
+        - DJabberd::RosterItem
+      version_info:
+        filename: blib/lib/DJabberd/RosterStorage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3025
+      file_mime_type: ~
+      line_count: ~
+      md5: d0e1417799ef06297ca1356e9f78fa04
+      module_name_from_file_guess: DJabberd::RosterStorage::InMemoryOnly
+      mtime: 1159404662
+      name: blib/lib/DJabberd/RosterStorage/InMemoryOnly.pm
+      packages:
+        - DJabberd::RosterStorage::InMemoryOnly
+      primary_package: DJabberd::RosterStorage::InMemoryOnly
+      uses:
+        - strict
+        - warnings
+        - base
+        - DJabberd::Log
+        - DJabberd::RosterItem
+      version_info:
+        filename: blib/lib/DJabberd/RosterStorage/InMemoryOnly.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5930
+      file_mime_type: ~
+      line_count: ~
+      md5: 21808128eb5488e458f3fd11dfe6345d
+      module_name_from_file_guess: DJabberd::SAXHandler
+      mtime: 1159390666
+      name: blib/lib/DJabberd/SAXHandler.pm
+      packages:
+        - DJabberd::SAXHandler
+      primary_package: DJabberd::SAXHandler
+      uses:
+        - strict
+        - base
+        - DJabberd::XMLElement
+        - DJabberd::StreamStart
+        - Scalar::Util
+        - Time::HiRes
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/SAXHandler.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5322
+      file_mime_type: ~
+      line_count: ~
+      md5: 7be69b88a8841a148afd88d953e3e2d8
+      module_name_from_file_guess: DJabberd::Stanza
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Stanza.pm
+      packages:
+        - DJabberd::Stanza
+      primary_package: DJabberd::Stanza
+      uses:
+        - strict
+        - base
+        - Carp
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/Stanza.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2359
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d8533310ba831a8d3ee014e4d19a6ff
+      module_name_from_file_guess: DJabberd::Stanza::DialbackResult
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Stanza/DialbackResult.pm
+      packages:
+        - DJabberd::Stanza::DialbackResult
+      primary_package: DJabberd::Stanza::DialbackResult
+      uses:
+        - strict
+        - base
+        - DJabberd::DNS
+        - DJabberd::Connection::DialbackVerify
+      version_info:
+        filename: blib/lib/DJabberd/Stanza/DialbackResult.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2749
+      file_mime_type: ~
+      line_count: ~
+      md5: 969a27fbe1df096af2cadebeeb44cb76
+      module_name_from_file_guess: DJabberd::Stanza::DialbackVerify
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Stanza/DialbackVerify.pm
+      packages:
+        - DJabberd::Stanza::DialbackVerify
+      primary_package: DJabberd::Stanza::DialbackVerify
+      uses:
+        - strict
+        - base
+        - DJabberd::Log
+        - DJabberd::DialbackParams
+      version_info:
+        filename: blib/lib/DJabberd/Stanza/DialbackVerify.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3674
+      file_mime_type: ~
+      line_count: ~
+      md5: 6315b5cb9022bab7f637ba868aeeb070
+      module_name_from_file_guess: DJabberd::Stanza::StartTLS
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Stanza/StartTLS.pm
+      packages:
+        - DJabberd::Stanza::StartTLS
+      primary_package: DJabberd::Stanza::StartTLS
+      uses:
+        - strict
+        - base
+        - Net::SSLeay
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/Stanza/StartTLS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: 83f5233c0486c337239914f4a28341ef
+      module_name_from_file_guess: DJabberd::Stanza::StreamFeatures
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Stanza/StreamFeatures.pm
+      packages:
+        - DJabberd::Stanza::StreamFeatures
+      primary_package: DJabberd::Stanza::StreamFeatures
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/DJabberd/Stanza/StreamFeatures.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 376
+      file_mime_type: ~
+      line_count: ~
+      md5: f865c4ecdc6c3b9d829c8aed6d961139
+      module_name_from_file_guess: DJabberd::Stats
+      mtime: 1159390666
+      name: blib/lib/DJabberd/Stats.pm
+      packages:
+        - DJabberd::Stats
+      primary_package: DJabberd::Stats
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/DJabberd/Stats.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1216
+      file_mime_type: ~
+      line_count: ~
+      md5: 76bd6538a09c3207cbcc242976a4ab54
+      module_name_from_file_guess: DJabberd::StreamStart
+      mtime: 1159390667
+      name: blib/lib/DJabberd/StreamStart.pm
+      packages:
+        - DJabberd::StreamStart
+      primary_package: DJabberd::StreamStart
+      uses:
+        - strict
+        - DJabberd::StreamVersion
+      version_info:
+        filename: blib/lib/DJabberd/StreamStart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1728
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a5fd3f465da73d31bb7caf279b82d2f
+      module_name_from_file_guess: DJabberd::StreamVersion
+      mtime: 1159390667
+      name: blib/lib/DJabberd/StreamVersion.pm
+      packages:
+        - DJabberd::StreamVersion
+      primary_package: DJabberd::StreamVersion
+      uses:
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/StreamVersion.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4151
+      file_mime_type: ~
+      line_count: ~
+      md5: e291956bd99138ba68d71d7d0357928d
+      module_name_from_file_guess: DJabberd::Subscription
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Subscription.pm
+      packages:
+        - DJabberd::Subscription
+      primary_package: DJabberd::Subscription
+      uses:
+        - strict
+        - Carp
+        - DJabberd::Util
+        - overload
+        - fields
+      version_info:
+        filename: blib/lib/DJabberd/Subscription.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2403
+      file_mime_type: ~
+      line_count: ~
+      md5: f1452c733def0599dc6291d7eb95f53d
+      module_name_from_file_guess: DJabberd::TestSAXHandler
+      mtime: 1159390668
+      name: blib/lib/DJabberd/TestSAXHandler.pm
+      packages:
+        - DJabberd::TestSAXHandler
+      primary_package: DJabberd::TestSAXHandler
+      uses:
+        - strict
+        - base
+        - DJabberd::SAXHandler
+        - DJabberd::XMLElement
+        - DJabberd::StreamStart
+        - constant
+      version_info:
+        filename: blib/lib/DJabberd/TestSAXHandler.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1934
+      file_mime_type: ~
+      line_count: ~
+      md5: 333374155dcd705f00b39d22133a1559
+      module_name_from_file_guess: DJabberd::Util
+      mtime: 1159390667
+      name: blib/lib/DJabberd/Util.pm
+      packages:
+        - DJabberd::Util
+        - DJabberd::TrackedSub
+      primary_package: DJabberd::Util
+      uses:
+        - strict
+        - Exporter
+      version_info:
+        filename: blib/lib/DJabberd/Util.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 15885
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b7251395574a3d95c6ac2de9803d3d2
+      module_name_from_file_guess: DJabberd::VHost
+      mtime: 1159390668
+      name: blib/lib/DJabberd/VHost.pm
+      packages:
+        - DJabberd::VHost
+      primary_package: DJabberd::VHost
+      uses:
+        - strict
+        - Carp
+        - DJabberd::Util
+        - DJabberd::Log
+        - DJabberd::Roster
+      version_info:
+        filename: blib/lib/DJabberd/VHost.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4516
+      file_mime_type: ~
+      line_count: ~
+      md5: 682172802638305993ac5b504a34c4b3
+      module_name_from_file_guess: DJabberd::XMLElement
+      mtime: 1159390667
+      name: blib/lib/DJabberd/XMLElement.pm
+      packages:
+        - DJabberd::XMLElement
+      primary_package: DJabberd::XMLElement
+      uses:
+        - strict
+        - fields
+        - DJabberd::Util
+      version_info:
+        filename: blib/lib/DJabberd/XMLElement.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1936
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a3e980addf39519fa30ec2c5f847263
+      module_name_from_file_guess: DJabberd::XMLParser
+      mtime: 1159390666
+      name: blib/lib/DJabberd/XMLParser.pm
+      packages:
+        - DJabberd::XMLParser
+      primary_package: DJabberd::XMLParser
+      uses:
+        - strict
+        - vars
+        - XML::LibXML
+        - XML::SAX::Base
+        - base
+        - Carp
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/DJabberd/XMLParser.pm
+        identifier: VERSION
+        line_number: 4
+        sigil: $
+        value: 1.00
+  modules:
+    - blib/lib/DJabberd.pm
+    - blib/lib/DJabberd/Agent.pm
+    - blib/lib/DJabberd/Agent/Node.pm
+    - blib/lib/DJabberd/Authen.pm
+    - blib/lib/DJabberd/Authen/AllowedUsers.pm
+    - blib/lib/DJabberd/Authen/InMemoryOnly.pm
+    - blib/lib/DJabberd/Authen/StaticPassword.pm
+    - blib/lib/DJabberd/Bot.pm
+    - blib/lib/DJabberd/Bot/Admin.pm
+    - blib/lib/DJabberd/BotContext.pm
+    - blib/lib/DJabberd/Callback.pm
+    - blib/lib/DJabberd/Cluster.pm
+    - blib/lib/DJabberd/ClusterMessage.pm
+    - blib/lib/DJabberd/ClusterMessage/DeliverStanza.pm
+    - blib/lib/DJabberd/Component.pm
+    - blib/lib/DJabberd/Component/Example.pm
+    - blib/lib/DJabberd/Component/External.pm
+    - blib/lib/DJabberd/Component/External/Connection.pm
+    - blib/lib/DJabberd/Component/Node.pm
+    - blib/lib/DJabberd/Connection.pm
+    - blib/lib/DJabberd/Connection/Admin.pm
+    - blib/lib/DJabberd/Connection/ClientIn.pm
+    - blib/lib/DJabberd/Connection/ClusterIn.pm
+    - blib/lib/DJabberd/Connection/ClusterOut.pm
+    - blib/lib/DJabberd/Connection/DialbackVerify.pm
+    - blib/lib/DJabberd/Connection/OldSSLClientIn.pm
+    - blib/lib/DJabberd/Connection/ServerIn.pm
+    - blib/lib/DJabberd/Connection/ServerOut.pm
+    - blib/lib/DJabberd/Connection/SimpleIn.pm
+    - blib/lib/DJabberd/DNS.pm
+    - blib/lib/DJabberd/Delivery.pm
+    - blib/lib/DJabberd/Delivery/Local.pm
+    - blib/lib/DJabberd/Delivery/LocalVHosts.pm
+    - blib/lib/DJabberd/Delivery/S2S.pm
+    - blib/lib/DJabberd/DialbackParams.pm
+    - blib/lib/DJabberd/HookDocs.pm
+    - blib/lib/DJabberd/IQ.pm
+    - blib/lib/DJabberd/JID.pm
+    - blib/lib/DJabberd/Log.pm
+    - blib/lib/DJabberd/Message.pm
+    - blib/lib/DJabberd/Plugin.pm
+    - blib/lib/DJabberd/Presence.pm
+    - blib/lib/DJabberd/PresenceChecker.pm
+    - blib/lib/DJabberd/PresenceChecker/Dummy.pm
+    - blib/lib/DJabberd/PresenceChecker/Local.pm
+    - blib/lib/DJabberd/Queue.pm
+    - blib/lib/DJabberd/Queue/ClusterOut.pm
+    - blib/lib/DJabberd/Queue/ServerOut.pm
+    - blib/lib/DJabberd/Roster.pm
+    - blib/lib/DJabberd/RosterItem.pm
+    - blib/lib/DJabberd/RosterStorage.pm
+    - blib/lib/DJabberd/RosterStorage/InMemoryOnly.pm
+    - blib/lib/DJabberd/SAXHandler.pm
+    - blib/lib/DJabberd/Stanza.pm
+    - blib/lib/DJabberd/Stanza/DialbackResult.pm
+    - blib/lib/DJabberd/Stanza/DialbackVerify.pm
+    - blib/lib/DJabberd/Stanza/StartTLS.pm
+    - blib/lib/DJabberd/Stanza/StreamFeatures.pm
+    - blib/lib/DJabberd/Stats.pm
+    - blib/lib/DJabberd/StreamStart.pm
+    - blib/lib/DJabberd/StreamVersion.pm
+    - blib/lib/DJabberd/Subscription.pm
+    - blib/lib/DJabberd/TestSAXHandler.pm
+    - blib/lib/DJabberd/Util.pm
+    - blib/lib/DJabberd/VHost.pm
+    - blib/lib/DJabberd/XMLElement.pm
+    - blib/lib/DJabberd/XMLParser.pm
+  test_info:
+    - bytesize: 1899
+      file_mime_type: ~
+      line_count: ~
+      md5: ed30245dc4effca7fd0db9cea0400133
+      mtime: 1159391060
+      name: t/quirk-libgaim-iqerrorfrom.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 720
+      file_mime_type: ~
+      line_count: ~
+      md5: 3af41e7ea6c461ab2ec84d6d596fb983
+      mtime: 1159391060
+      name: t/versions.t
+      uses:
+        - strict
+        - Test::More
+        - DJabberd::StreamVersion
+    - bytesize: 2615
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d3f469737444e187d79d4d2ed76e970
+      mtime: 1159391060
+      name: t/two-resources.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 2140
+      file_mime_type: ~
+      line_count: ~
+      md5: 45421681806639c43090b286e4891315
+      mtime: 1159391060
+      name: t/directed-presence.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 2177
+      file_mime_type: ~
+      line_count: ~
+      md5: 042d2c98b704836835af0620326d4f3f
+      mtime: 1159391060
+      name: t/xmlparsing.t
+      uses:
+        - strict
+        - warnings
+        - XML::SAX
+        - DJabberd::XMLParser
+        - XML::SAX::PurePerl
+        - Scalar::Util
+        - Test::More
+        - Data::Dumper
+        - base
+    - bytesize: 2953
+      file_mime_type: ~
+      line_count: ~
+      md5: fa779565334d121cbfc02af3aea87827
+      mtime: 1159394840
+      name: t/new-connects.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+        - DJabberd
+        - DJabberd::Authen::AllowedUsers
+        - DJabberd::Authen::StaticPassword
+        - DJabberd::TestSAXHandler
+        - DJabberd::RosterStorage::InMemoryOnly
+        - FindBin
+        - IO::Socket::INET
+        - Devel::Peek
+    - bytesize: 886
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b332d31cafa2cc65d5489f563dd5a1f
+      mtime: 1159391060
+      name: t/disco.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 530
+      file_mime_type: ~
+      line_count: ~
+      md5: 884a120fb632981dab796832a302d219
+      mtime: 1159391060
+      name: t/iq-exchange.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 2037
+      file_mime_type: ~
+      line_count: ~
+      md5: a3f83b27aefde726b80fd1ca2fca3aa3
+      mtime: 1159394044
+      name: t/inband-reg.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+        - DJabberd::Authen::InMemoryOnly
+    - bytesize: 3911
+      file_mime_type: ~
+      line_count: ~
+      md5: dfd154cca49fa152dd54f48be2f809c3
+      mtime: 1159391060
+      name: t/hookchain.t
+      uses:
+        - strict
+        - Test::More
+        - DJabberd
+        - Scalar::Util
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fa302b098909658f09b7e0691c037ae
+      mtime: 1159395912
+      name: t/s2s-no-dialback-to.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 4150
+      file_mime_type: ~
+      line_count: ~
+      md5: bda323bbe235567feb357ae234cfa1bc
+      mtime: 1159391061
+      name: t/mutual-add-and-presence.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 1839
+      file_mime_type: ~
+      line_count: ~
+      md5: 471187bd56ee1d72abb010e2bd0ab12d
+      mtime: 1159391060
+      name: t/10-specimpl.t
+      uses:
+        - strict
+        - Test::More
+        - FindBin
+    - bytesize: 1651
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e58db9e38fb36bff669ac4888cba69e
+      mtime: 1159391060
+      name: t/exchange-messages.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+    - bytesize: 993
+      file_mime_type: ~
+      line_count: ~
+      md5: 89590a920b5fdc695c2a5cabfccb83fe
+      mtime: 1159391060
+      name: t/server_die.t
+      uses:
+        - strict
+        - Test::More
+        - lib
+        - ''
+  tests:
+    - t/quirk-libgaim-iqerrorfrom.t
+    - t/versions.t
+    - t/two-resources.t
+    - t/directed-presence.t
+    - t/xmlparsing.t
+    - t/new-connects.t
+    - t/disco.t
+    - t/iq-exchange.t
+    - t/inband-reg.t
+    - t/hookchain.t
+    - t/s2s-no-dialback-to.t
+    - t/mutual-add-and-presence.t
+    - t/10-specimpl.t
+    - t/exchange-messages.t
+    - t/server_die.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-5106._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 5106
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269012383
+  examine_start_time: 1269012336
+  examine_time: 47
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 5106
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269012383
+  run_start_time: 1269012336
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

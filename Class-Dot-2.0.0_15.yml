@@ -1,0 +1,3206 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Compatability layer for Class::Dot 1.x
+    author:
+      - 'Ask Solem <asksh@cpan.org>'
+    build_requires:
+      Scalar::Util: 1.14
+      Test::Exception: 0.21
+      Test::Simple: 0.42
+    distribution_type: module
+    generated_by: Module::Install version 0.68
+    license: bsd
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: Class-Dot
+    no_index:
+      directory:
+        - examples
+        - devel
+        - inc
+        - t
+    recommends:
+      IO::Capture: 0.02
+      Params::Util: 0.23
+      Sub::Name: 0.01
+      Test::Exception: 0.22
+    requires:
+      Class::Plugin::Util: 0.9
+      Params::Util: 0.14
+      perl: 5.6.0
+      version: 0
+    tests: t/*.t t/*/*.t t/*/*/*.t
+    version: 2.0.0_15
+  blib:
+    - blib/lib/Class/Dot.pm
+    - blib/lib/Class/Dot.pod
+    - blib/lib/Class/Dot/Delegator.pm
+    - blib/lib/Class/Dot/Delegator.pod
+    - blib/lib/Class/Dot/Devel/Sub/Name.pm
+    - blib/lib/Class/Dot/Devel/Sub/Name.pod
+    - blib/lib/Class/Dot/Meta/Accessor.pm
+    - blib/lib/Class/Dot/Meta/Accessor.pod
+    - blib/lib/Class/Dot/Meta/Accessor/Base.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Base.pod
+    - blib/lib/Class/Dot/Meta/Accessor/Chained.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Chained.pod
+    - blib/lib/Class/Dot/Meta/Accessor/Constrained.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Constrained.pod
+    - blib/lib/Class/Dot/Meta/Accessor/Overrideable.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Overrideable.pod
+    - blib/lib/Class/Dot/Meta/Class.pm
+    - blib/lib/Class/Dot/Meta/Class.pod
+    - blib/lib/Class/Dot/Meta/Method.pm
+    - blib/lib/Class/Dot/Meta/Method.pod
+    - blib/lib/Class/Dot/Meta/Property.pm
+    - blib/lib/Class/Dot/Meta/Property.pod
+    - blib/lib/Class/Dot/Meta/Role.pm
+    - blib/lib/Class/Dot/Meta/Role.pod
+    - blib/lib/Class/Dot/Meta/Type.pm
+    - blib/lib/Class/Dot/Meta/Type.pod
+    - blib/lib/Class/Dot/Object.pm
+    - blib/lib/Class/Dot/Object.pod
+    - blib/lib/Class/Dot/Policy.pm
+    - blib/lib/Class/Dot/Policy.pod
+    - blib/lib/Class/Dot/Policy/Affordance.pm
+    - blib/lib/Class/Dot/Policy/Affordance.pod
+    - blib/lib/Class/Dot/Policy/Constrained.pm
+    - blib/lib/Class/Dot/Policy/Constrained.pod
+    - blib/lib/Class/Dot/Policy/Mutator.pm
+    - blib/lib/Class/Dot/Policy/Mutator.pod
+    - blib/lib/Class/Dot/Registry.pm
+    - blib/lib/Class/Dot/Registry.pod
+    - blib/lib/Class/Dot/Type.pm
+    - blib/lib/Class/Dot/Type.pod
+    - blib/lib/Class/Dot/Typemap.pm
+    - blib/lib/Class/Dot/Typemap.pod
+    - blib/lib/Class/Dot2.pm
+    - blib/lib/Class/Dot2.pod
+    - blib/lib/Perl/Tags/ClassDot.pm
+    - blib/lib/Perl/Tags/ClassDot.pod
+    - blib/lib/Perl/Tags/ClassDot/Tag/Property.pm
+    - blib/lib/Perl/Tags/ClassDot/Tag/Property.pod
+    - blib/lib/dot/meta.pm
+    - blib/lib/dot/meta.pod
+    - blib/man3/Class::Dot.3
+    - blib/man3/Class::Dot2.3
+    - blib/man3/Class::Dot::Delegator.3
+    - blib/man3/Class::Dot::Devel::Sub::Name.3
+    - blib/man3/Class::Dot::Meta::Accessor.3
+    - blib/man3/Class::Dot::Meta::Accessor::Base.3
+    - blib/man3/Class::Dot::Meta::Accessor::Chained.3
+    - blib/man3/Class::Dot::Meta::Accessor::Constrained.3
+    - blib/man3/Class::Dot::Meta::Accessor::Overrideable.3
+    - blib/man3/Class::Dot::Meta::Class.3
+    - blib/man3/Class::Dot::Meta::Method.3
+    - blib/man3/Class::Dot::Meta::Property.3
+    - blib/man3/Class::Dot::Meta::Role.3
+    - blib/man3/Class::Dot::Meta::Type.3
+    - blib/man3/Class::Dot::Object.3
+    - blib/man3/Class::Dot::Policy.3
+    - blib/man3/Class::Dot::Policy::Affordance.3
+    - blib/man3/Class::Dot::Policy::Constrained.3
+    - blib/man3/Class::Dot::Policy::Mutator.3
+    - blib/man3/Class::Dot::Registry.3
+    - blib/man3/Class::Dot::Type.3
+    - blib/man3/Class::Dot::Typemap.3
+    - blib/man3/Perl::Tags::ClassDot.3
+    - blib/man3/Perl::Tags::ClassDot::Tag::Property.3
+    - blib/man3/dot::meta.3
+  build_file: Makefile.PL
+  build_file_output: |
+    *** Module::AutoInstall version 1.03
+    *** Checking for Perl dependencies...
+    [Core Features]
+    - Test::Simple        ...loaded. (0.92 >= 0.42)
+    - Scalar::Util        ...loaded. (1.21 >= 1.14)
+    - Test::Exception     ...missing. (would need 0.21)
+    - version             ...loaded. (0.8)
+    - Class::Plugin::Util ...missing. (would need 0.9)
+    - Params::Util        ...loaded. (1.00 >= 0.14)
+    ==> Auto-install the 2 mandatory module(s) from CPAN? [Y/n] y
+    *** Dependencies will be installed the next time you type 'make'.
+        (You may need to do that as the 'root' user.)
+    *** Module::AutoInstall configuration finished.
+    Checking if your kit is complete...
+    Looks good
+    Warning: prerequisite Class::Plugin::Util 0.9 not found.
+    Warning: prerequisite Test::Exception 0.21 not found.
+    Writing Makefile for Class::Dot
+  build_output: |
+    cp lib/Class/Dot/Type.pod blib/lib/Class/Dot/Type.pod
+    cp lib/Class/Dot/Meta/Accessor/Constrained.pm blib/lib/Class/Dot/Meta/Accessor/Constrained.pm
+    cp lib/Class/Dot/Meta/Accessor/Constrained.pod blib/lib/Class/Dot/Meta/Accessor/Constrained.pod
+    cp lib/Class/Dot/Typemap.pm blib/lib/Class/Dot/Typemap.pm
+    cp lib/Class/Dot/Policy/Mutator.pm blib/lib/Class/Dot/Policy/Mutator.pm
+    cp lib/Class/Dot2.pm blib/lib/Class/Dot2.pm
+    cp lib/Class/Dot/Policy/Mutator.pod blib/lib/Class/Dot/Policy/Mutator.pod
+    cp lib/Perl/Tags/ClassDot.pod blib/lib/Perl/Tags/ClassDot.pod
+    cp lib/Class/Dot/Policy.pod blib/lib/Class/Dot/Policy.pod
+    cp lib/Class/Dot/Object.pm blib/lib/Class/Dot/Object.pm
+    cp lib/Class/Dot/Meta/Method.pm blib/lib/Class/Dot/Meta/Method.pm
+    cp lib/Class/Dot/Policy.pm blib/lib/Class/Dot/Policy.pm
+    cp lib/Perl/Tags/ClassDot/Tag/Property.pm blib/lib/Perl/Tags/ClassDot/Tag/Property.pm
+    cp lib/Class/Dot/Meta/Class.pod blib/lib/Class/Dot/Meta/Class.pod
+    cp lib/Class/Dot/Meta/Type.pm blib/lib/Class/Dot/Meta/Type.pm
+    cp lib/Class/Dot/Meta/Property.pod blib/lib/Class/Dot/Meta/Property.pod
+    cp lib/Class/Dot/Meta/Accessor/Overrideable.pod blib/lib/Class/Dot/Meta/Accessor/Overrideable.pod
+    cp lib/Class/Dot/Delegator.pod blib/lib/Class/Dot/Delegator.pod
+    cp lib/Class/Dot/Policy/Constrained.pm blib/lib/Class/Dot/Policy/Constrained.pm
+    cp lib/dot/meta.pm blib/lib/dot/meta.pm
+    cp lib/Class/Dot/Meta/Class.pm blib/lib/Class/Dot/Meta/Class.pm
+    cp lib/Class/Dot/Meta/Role.pm blib/lib/Class/Dot/Meta/Role.pm
+    cp lib/Class/Dot/Meta/Accessor.pm blib/lib/Class/Dot/Meta/Accessor.pm
+    cp lib/Class/Dot.pm blib/lib/Class/Dot.pm
+    cp lib/Class/Dot/Meta/Accessor/Chained.pm blib/lib/Class/Dot/Meta/Accessor/Chained.pm
+    cp lib/Class/Dot2.pod blib/lib/Class/Dot2.pod
+    cp lib/Class/Dot/Type.pm blib/lib/Class/Dot/Type.pm
+    cp lib/Class/Dot/Delegator.pm blib/lib/Class/Dot/Delegator.pm
+    cp lib/Class/Dot.pod blib/lib/Class/Dot.pod
+    cp lib/Class/Dot/Typemap.pod blib/lib/Class/Dot/Typemap.pod
+    cp lib/Perl/Tags/ClassDot.pm blib/lib/Perl/Tags/ClassDot.pm
+    cp lib/Class/Dot/Meta/Method.pod blib/lib/Class/Dot/Meta/Method.pod
+    cp lib/Class/Dot/Meta/Accessor.pod blib/lib/Class/Dot/Meta/Accessor.pod
+    cp lib/Class/Dot/Registry.pm blib/lib/Class/Dot/Registry.pm
+    cp lib/Perl/Tags/ClassDot/Tag/Property.pod blib/lib/Perl/Tags/ClassDot/Tag/Property.pod
+    cp lib/Class/Dot/Meta/Property.pm blib/lib/Class/Dot/Meta/Property.pm
+    cp lib/Class/Dot/Registry.pod blib/lib/Class/Dot/Registry.pod
+    cp lib/Class/Dot/Meta/Accessor/Base.pod blib/lib/Class/Dot/Meta/Accessor/Base.pod
+    cp lib/Class/Dot/Meta/Type.pod blib/lib/Class/Dot/Meta/Type.pod
+    cp lib/Class/Dot/Meta/Accessor/Overrideable.pm blib/lib/Class/Dot/Meta/Accessor/Overrideable.pm
+    cp lib/Class/Dot/Policy/Affordance.pm blib/lib/Class/Dot/Policy/Affordance.pm
+    cp lib/Class/Dot/Meta/Accessor/Chained.pod blib/lib/Class/Dot/Meta/Accessor/Chained.pod
+    cp lib/Class/Dot/Meta/Accessor/Base.pm blib/lib/Class/Dot/Meta/Accessor/Base.pm
+    cp lib/Class/Dot/Object.pod blib/lib/Class/Dot/Object.pod
+    cp lib/dot/meta.pod blib/lib/dot/meta.pod
+    cp lib/Class/Dot/Devel/Sub/Name.pm blib/lib/Class/Dot/Devel/Sub/Name.pm
+    cp lib/Class/Dot/Policy/Affordance.pod blib/lib/Class/Dot/Policy/Affordance.pod
+    cp lib/Class/Dot/Policy/Constrained.pod blib/lib/Class/Dot/Policy/Constrained.pod
+    cp lib/Class/Dot/Meta/Role.pod blib/lib/Class/Dot/Meta/Role.pod
+    cp lib/Class/Dot/Devel/Sub/Name.pod blib/lib/Class/Dot/Devel/Sub/Name.pod
+    /home/brian/bin/perl5.10.1 "-Iinc" Makefile.PL --config= --installdeps=Test::Exception,0.21,Class::Plugin::Util,0.9
+    *** Installing dependencies...
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    *** Installing Test::Exception...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Test::Exception' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Test::Exception installation cancelled.
+    *** Installing Class::Plugin::Util...
+    *** Could not find a version 0.9 or above for Class::Plugin::Util; skipping.
+    *** Module::AutoInstall installation finished.
+    Manifying blib/man3/Class::Dot::Type.3
+    Manifying blib/man3/Class::Dot::Meta::Accessor::Constrained.3
+    Manifying blib/man3/Class::Dot.3
+    Manifying blib/man3/Class::Dot::Policy::Mutator.3
+    Manifying blib/man3/Perl::Tags::ClassDot.3
+    Manifying blib/man3/Class::Dot::Typemap.3
+    Manifying blib/man3/Class::Dot::Policy.3
+    Manifying blib/man3/Class::Dot::Meta::Method.3
+    Manifying blib/man3/Perl::Tags::ClassDot::Tag::Property.3
+    Manifying blib/man3/Class::Dot::Meta::Accessor.3
+    Manifying blib/man3/Class::Dot::Meta::Class.3
+    Manifying blib/man3/Class::Dot::Registry.3
+    Manifying blib/man3/Class::Dot::Meta::Accessor::Base.3
+    Manifying blib/man3/Class::Dot::Meta::Type.3
+    Manifying blib/man3/Class::Dot::Meta::Property.3
+    Manifying blib/man3/Class::Dot::Meta::Accessor::Overrideable.3
+    Manifying blib/man3/Class::Dot::Delegator.3
+    Manifying blib/man3/Class::Dot::Meta::Accessor::Chained.3
+    Manifying blib/man3/dot::meta.3
+    Manifying blib/man3/Class::Dot::Object.3
+    Manifying blib/man3/Class::Dot::Policy::Constrained.3
+    Manifying blib/man3/Class::Dot::Policy::Affordance.3
+    Manifying blib/man3/Class::Dot2.3
+    Manifying blib/man3/Class::Dot::Devel::Sub::Name.3
+    Manifying blib/man3/Class::Dot::Meta::Role.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK/Class-Dot-2.0.0_15/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK/Class-Dot-2.0.0_15
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK/Class-Dot-2.0.0_15/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK/Class-Dot-2.0.0_15/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.68
+    perl_command: ~
+    uses_auto_install: 1
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: ASKSH
+  dist_basename: Class-Dot-2.0.0_15.tar.gz
+  dist_date: 1202308038
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK/Class-Dot-2.0.0_15
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK/Class-Dot-2.0.0_15
+  dist_file: /home/brian/CPAN/authors/id/A/AS/ASKSH/Class-Dot-2.0.0_15.tar.gz
+  dist_md5: 62ab6fa6dc124d43773a851d10183b51
+  dist_size: 142072
+  manifest:
+    - 050-adopted_from_mixin/SUPER.t
+    - 050-adopted_from_mixin/compile_error.t
+    - 050-adopted_from_mixin/lib/Dog/CompileError.pm
+    - 050-adopted_from_mixin/lib/Dog/Hamish.pm
+    - 050-adopted_from_mixin/mixin.t
+    - 050-adopted_from_mixin/universal.t
+    - COPYING
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - SIGNATURE
+    - TODO
+    - Typemap
+    - contrib/dotperltags
+    - contrib/vim/README
+    - contrib/vim/syntax/perl.vim
+    - contrib/vim/taglist.vim
+    - design/RFC.pm
+    - design/keywords.pm
+    - devel/Generator/Typemap.pm
+    - devel/build_wikidoc.pl
+    - devel/curversion
+    - devel/dotbench.pl
+    - devel/dotprofile.pl
+    - devel/grepversion.sh
+    - devel/incrementversion.sh
+    - devel/loadbench.pl
+    - devel/testcover
+    - devel/trav.pl
+    - examples/Cat.pm
+    - examples/MooseLike.pm
+    - examples/Simple.pm
+    - inc/Module/AutoInstall.pm
+    - inc/Module/Install.pm
+    - inc/Module/Install/AutoInstall.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/Class/Dot.pm
+    - lib/Class/Dot.pod
+    - lib/Class/Dot/Delegator.pm
+    - lib/Class/Dot/Delegator.pod
+    - lib/Class/Dot/Devel/Sub/Name.pm
+    - lib/Class/Dot/Devel/Sub/Name.pod
+    - lib/Class/Dot/Meta/Accessor.pm
+    - lib/Class/Dot/Meta/Accessor.pod
+    - lib/Class/Dot/Meta/Accessor/Base.pm
+    - lib/Class/Dot/Meta/Accessor/Base.pod
+    - lib/Class/Dot/Meta/Accessor/Chained.pm
+    - lib/Class/Dot/Meta/Accessor/Chained.pod
+    - lib/Class/Dot/Meta/Accessor/Constrained.pm
+    - lib/Class/Dot/Meta/Accessor/Constrained.pod
+    - lib/Class/Dot/Meta/Accessor/Overrideable.pm
+    - lib/Class/Dot/Meta/Accessor/Overrideable.pod
+    - lib/Class/Dot/Meta/Class.pm
+    - lib/Class/Dot/Meta/Class.pod
+    - lib/Class/Dot/Meta/Method.pm
+    - lib/Class/Dot/Meta/Method.pod
+    - lib/Class/Dot/Meta/Property.pm
+    - lib/Class/Dot/Meta/Property.pod
+    - lib/Class/Dot/Meta/Role.pm
+    - lib/Class/Dot/Meta/Role.pod
+    - lib/Class/Dot/Meta/Type.pm
+    - lib/Class/Dot/Meta/Type.pod
+    - lib/Class/Dot/Object.pm
+    - lib/Class/Dot/Object.pod
+    - lib/Class/Dot/Policy.pm
+    - lib/Class/Dot/Policy.pod
+    - lib/Class/Dot/Policy/Affordance.pm
+    - lib/Class/Dot/Policy/Affordance.pod
+    - lib/Class/Dot/Policy/Constrained.pm
+    - lib/Class/Dot/Policy/Constrained.pod
+    - lib/Class/Dot/Policy/Mutator.pm
+    - lib/Class/Dot/Policy/Mutator.pod
+    - lib/Class/Dot/Registry.pm
+    - lib/Class/Dot/Registry.pod
+    - lib/Class/Dot/Type.pm
+    - lib/Class/Dot/Type.pod
+    - lib/Class/Dot/Typemap.pm
+    - lib/Class/Dot/Typemap.pod
+    - lib/Class/Dot2.pm
+    - lib/Class/Dot2.pod
+    - lib/Perl/Tags/ClassDot.pm
+    - lib/Perl/Tags/ClassDot.pod
+    - lib/Perl/Tags/ClassDot/Tag/Property.pm
+    - lib/Perl/Tags/ClassDot/Tag/Property.pod
+    - lib/dot/meta.pm
+    - lib/dot/meta.pod
+    - t/010-std_1.x_tests/Cat.pm
+    - t/010-std_1.x_tests/Composite.pm
+    - t/010-std_1.x_tests/Mammal.pm
+    - t/010-std_1.x_tests/TestChained.pm
+    - t/010-std_1.x_tests/TestComplete.pm
+    - t/010-std_1.x_tests/TestComplete/AlternateBase.pm
+    - t/010-std_1.x_tests/TestComplete/Base.pm
+    - t/010-std_1.x_tests/TestComplete/SubSubBase.pm
+    - t/010-std_1.x_tests/TestComplete/Type1.pm
+    - t/010-std_1.x_tests/TestComplete/Type2.pm
+    - t/010-std_1.x_tests/TestProperties.pm
+    - t/010-std_1.x_tests/cat.t
+    - t/010-std_1.x_tests/properties.t
+    - t/010-std_1.x_tests/testchained.t
+    - t/010-std_1.x_tests/testcomplete.t
+    - t/020-std_2.x_tests/001-load_class_dot2.t
+    - t/020-std_2.x_tests/002-use_line_option_assignment.t
+    - t/020-std_2.x_tests/003-accessor_mutator.t
+    - t/020-std_2.x_tests/010-attribute_readonly.t
+    - t/020-std_2.x_tests/011-attribute_writeonly.t
+    - t/020-std_2.x_tests/012-attribute_private.t
+    - t/020-std_2.x_tests/020-mixin_with.t
+    - t/020-std_2.x_tests/030-composition.t
+    - t/020-std_2.x_tests/040-class_delegation.t.todo
+    - t/020-std_2.x_tests/060-dot_meta.t
+    - t/020-std_2.x_tests/070-Maybe.t
+    - t/040-adopted_from_Moose/040-type_constraints/003_util_std_type_constraints.t
+    - t/040-adopted_from_Moose/040-type_constraints/004_util_find_type_constraint.t
+    - xt/author/00-Kwalitee.t
+    - xt/author/00-YAML-META_valid.t
+    - xt/author/minimum_version.t
+    - xt/author/perlcritic.t
+    - xt/author/perlcriticrc
+    - xt/author/pod-coverage.t
+    - xt/author/pod-spell.t
+    - xt/author/pod.t
+    - xt/author/stopwords-asksh.txt
+    - xt/disabled/on_devel_hide.t
+    - xt/disabled/when_sub_name.t
+  manifest_file_info:
+    - bytesize: 559
+      file_mime_type: ~
+      line_count: ~
+      md5: bb50b58c6282ec64d4c38de76e21409a
+      mtime: 1199740172
+      name: 050-adopted_from_mixin/SUPER.t
+    - bytesize: 377
+      file_mime_type: ~
+      line_count: ~
+      md5: afc3eca7296a3c1cb31baae403b820d8
+      mtime: 1199740232
+      name: 050-adopted_from_mixin/compile_error.t
+    - bytesize: 68
+      file_mime_type: ~
+      line_count: ~
+      md5: ab0bc43e31ce5c4b9e20d1708d0850af
+      mtime: 1199740124
+      name: 050-adopted_from_mixin/lib/Dog/CompileError.pm
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: ee7e4cfb2bc60a88606a069536c83e8b
+      mtime: 1199740089
+      name: 050-adopted_from_mixin/lib/Dog/Hamish.pm
+    - bytesize: 888
+      file_mime_type: ~
+      line_count: ~
+      md5: 47a9c310415545846d7739727a4c3920
+      mtime: 1199740089
+      name: 050-adopted_from_mixin/mixin.t
+    - bytesize: 319
+      file_mime_type: ~
+      line_count: ~
+      md5: 35e40659e826725763e7d66931cee9d5
+      mtime: 1199740089
+      name: 050-adopted_from_mixin/universal.t
+    - bytesize: 1550
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1198151796
+      name: COPYING
+    - bytesize: 14163
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1202306248
+      name: Changes
+    - bytesize: 3956
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1202306570
+      name: MANIFEST
+    - bytesize: 666
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1202306560
+      name: META.yml
+    - bytesize: 4132
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1202228241
+      name: Makefile.PL
+    - bytesize: 10257
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1197998927
+      name: README
+    - bytesize: 10765
+      file_mime_type: ~
+      line_count: ~
+      md5: ef21bf22481e7930df1e2bda54025095
+      mtime: 1202306586
+      name: SIGNATURE
+    - bytesize: 617
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1200580100
+      name: TODO
+    - bytesize: 5562
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ef12dd0cee400a2a43248104b208ad9
+      mtime: 1202306261
+      name: Typemap
+    - bytesize: 2617
+      file_mime_type: ~
+      line_count: ~
+      md5: c839fccd18397fe63620e7fa1690843c
+      mtime: 1199697922
+      name: contrib/dotperltags
+    - bytesize: 418
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b4cea23e8754e39daa694186f5549ad
+      mtime: 1197998927
+      name: contrib/vim/README
+    - bytesize: 29865
+      file_mime_type: ~
+      line_count: ~
+      md5: 70fc8f0c3125e1cefe16ff8e4a7061e1
+      mtime: 1201880486
+      name: contrib/vim/syntax/perl.vim
+    - bytesize: 146299
+      file_mime_type: ~
+      line_count: ~
+      md5: dc6f2726bf352cab953de8183598b302
+      mtime: 1201880576
+      name: contrib/vim/taglist.vim
+    - bytesize: 2912
+      file_mime_type: ~
+      line_count: ~
+      md5: dc7e3cc1d95a771e84517e54ca6e4d3e
+      mtime: 1200580100
+      name: design/RFC.pm
+    - bytesize: 9927
+      file_mime_type: ~
+      line_count: ~
+      md5: 0501daa289673ef9ce9b8d9be0264960
+      mtime: 1199981557
+      name: design/keywords.pm
+    - bytesize: 18001
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c6538a9fd60f925206a183f69e9164c
+      mtime: 1202228241
+      name: devel/Generator/Typemap.pm
+    - bytesize: 3392
+      file_mime_type: ~
+      line_count: ~
+      md5: 193e3e4577d867760eb39e2cbc7f16f7
+      mtime: 1199697922
+      name: devel/build_wikidoc.pl
+    - bytesize: 1012
+      file_mime_type: ~
+      line_count: ~
+      md5: d5045348f051c8d67cab90affa29b941
+      mtime: 1199697922
+      name: devel/curversion
+    - bytesize: 4681
+      file_mime_type: ~
+      line_count: ~
+      md5: 06bc2e0c0832b9e542090c884f2684f2
+      mtime: 1199894197
+      name: devel/dotbench.pl
+    - bytesize: 454
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fd92c990d2b235dfcd4c968dd5b407b
+      mtime: 1199894197
+      name: devel/dotprofile.pl
+    - bytesize: 347
+      file_mime_type: ~
+      line_count: ~
+      md5: 9dea29fd1dd92467c9fd244674edc456
+      mtime: 1199697922
+      name: devel/grepversion.sh
+    - bytesize: 440
+      file_mime_type: ~
+      line_count: ~
+      md5: 02741ba2d28ef17dd8f7f743b2b001bd
+      mtime: 1199697922
+      name: devel/incrementversion.sh
+    - bytesize: 1472
+      file_mime_type: ~
+      line_count: ~
+      md5: 62d5fb807ff950722e71476f2add94e7
+      mtime: 1199704947
+      name: devel/loadbench.pl
+    - bytesize: 73
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f23a97b42ecee2186af2fd04f5523cd
+      mtime: 1199697922
+      name: devel/testcover
+    - bytesize: 975
+      file_mime_type: ~
+      line_count: ~
+      md5: 52af704a15bd29009324d6d163f17b08
+      mtime: 1199697922
+      name: devel/trav.pl
+    - bytesize: 1499
+      file_mime_type: ~
+      line_count: ~
+      md5: 44363629a694ed37ac6369870cc24309
+      mtime: 1199697922
+      name: examples/Cat.pm
+    - bytesize: 626
+      file_mime_type: ~
+      line_count: ~
+      md5: 722533ec967222649ea671de5c8351a6
+      mtime: 1199704933
+      name: examples/MooseLike.pm
+    - bytesize: 589
+      file_mime_type: ~
+      line_count: ~
+      md5: 89f3834c9c5de0f058472e8273a09162
+      mtime: 1199697922
+      name: examples/Simple.pm
+    - bytesize: 20986
+      file_mime_type: ~
+      line_count: ~
+      md5: 5df3a53b195a607829bddc376dbf459e
+      mtime: 1202306559
+      name: inc/Module/AutoInstall.pm
+    - bytesize: 8073
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1202306555
+      name: inc/Module/Install.pm
+    - bytesize: 1210
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fbb135dedaecade08ee4b691de9234
+      mtime: 1202306558
+      name: inc/Module/Install/AutoInstall.pm
+    - bytesize: 1053
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1202306558
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1788
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1202306560
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1202306560
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1202306558
+      name: inc/Module/Install/Include.pm
+    - bytesize: 5961
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1202306559
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 9047
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1202306558
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1806
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1202306560
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 916
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1202306559
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 4166
+      file_mime_type: ~
+      line_count: ~
+      md5: 41999e1a12a7198dc722f2d502f31c1c
+      mtime: 1202228241
+      name: lib/Class/Dot.pm
+    - bytesize: 3865
+      file_mime_type: ~
+      line_count: ~
+      md5: 9613654705165a9cf642d6ba87b85432
+      mtime: 1202228241
+      name: lib/Class/Dot.pod
+    - bytesize: 783
+      file_mime_type: ~
+      line_count: ~
+      md5: 1eb321c2219b55a6e25b65ae2c30a7c7
+      mtime: 1202228241
+      name: lib/Class/Dot/Delegator.pm
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: b855b0f771b2b8c00cde17b7aeff582d
+      mtime: 1201782289
+      name: lib/Class/Dot/Delegator.pod
+    - bytesize: 5537
+      file_mime_type: ~
+      line_count: ~
+      md5: 12a71257adcce75d7acc39bf3d94e16f
+      mtime: 1202228241
+      name: lib/Class/Dot/Devel/Sub/Name.pm
+    - bytesize: 4888
+      file_mime_type: ~
+      line_count: ~
+      md5: ceded7f28317ede6d69b91478e2ab3e3
+      mtime: 1202228241
+      name: lib/Class/Dot/Devel/Sub/Name.pod
+    - bytesize: 6075
+      file_mime_type: ~
+      line_count: ~
+      md5: 036866139bfc0c3bac7d5de5d7220bcf
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor.pm
+    - bytesize: 5588
+      file_mime_type: ~
+      line_count: ~
+      md5: 001f81fd36d69e397188026502c72130
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor.pod
+    - bytesize: 1187
+      file_mime_type: ~
+      line_count: ~
+      md5: c568efb8625f3b63c529f67dc0c6190a
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor/Base.pm
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c8361b1e22a56a8623e82d2d0883406
+      mtime: 1201782290
+      name: lib/Class/Dot/Meta/Accessor/Base.pod
+    - bytesize: 2493
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d7492856a6224307560a1d250275835
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor/Chained.pm
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 581664c9510fbbdffaafa3b9bb560a5c
+      mtime: 1201782290
+      name: lib/Class/Dot/Meta/Accessor/Chained.pod
+    - bytesize: 2959
+      file_mime_type: ~
+      line_count: ~
+      md5: d7f36a7add90ab0b7754b996d3ff8e40
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor/Constrained.pm
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 3be15ae1225f7a0314764a9ba5906899
+      mtime: 1201782290
+      name: lib/Class/Dot/Meta/Accessor/Constrained.pod
+    - bytesize: 10256
+      file_mime_type: ~
+      line_count: ~
+      md5: 8eb3ce4e2998591cf21963612675b202
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor/Overrideable.pm
+    - bytesize: 7497
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d4783fdeede90051fea661baa7dbdb6
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Accessor/Overrideable.pod
+    - bytesize: 11887
+      file_mime_type: ~
+      line_count: ~
+      md5: 74b99a80eb22ce4bb78f1ad749843d38
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Class.pm
+    - bytesize: 4125
+      file_mime_type: ~
+      line_count: ~
+      md5: 36c5ef9fd68a6526d920538d3d758bbf
+      mtime: 1201782292
+      name: lib/Class/Dot/Meta/Class.pod
+    - bytesize: 6380
+      file_mime_type: ~
+      line_count: ~
+      md5: 736a25d252d4912068ad1b437579dcfa
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Method.pm
+    - bytesize: 5332
+      file_mime_type: ~
+      line_count: ~
+      md5: edfaa58b6464bee900c606ddedd221be
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Method.pod
+    - bytesize: 13311
+      file_mime_type: ~
+      line_count: ~
+      md5: ba9fa66312b13dbea33f93046e6bb71f
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Property.pm
+    - bytesize: 5161
+      file_mime_type: ~
+      line_count: ~
+      md5: 74d73885c1d03f8d6cb560916e273aa0
+      mtime: 1201782293
+      name: lib/Class/Dot/Meta/Property.pod
+    - bytesize: 1546
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c67fe3609a332ce8542bcb537ba5162
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Role.pm
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 44f6862872058954b4257ed66640c992
+      mtime: 1201782293
+      name: lib/Class/Dot/Meta/Role.pod
+    - bytesize: 6905
+      file_mime_type: ~
+      line_count: ~
+      md5: ab7fb1102d0f83301d53193019b2fcd3
+      mtime: 1202228241
+      name: lib/Class/Dot/Meta/Type.pm
+    - bytesize: 5157
+      file_mime_type: ~
+      line_count: ~
+      md5: 55e3df3bac91a8b684a586113136608b
+      mtime: 1201782294
+      name: lib/Class/Dot/Meta/Type.pod
+    - bytesize: 7660
+      file_mime_type: ~
+      line_count: ~
+      md5: ff0feb5d51f95cffedbbcaa6777d60cf
+      mtime: 1202228241
+      name: lib/Class/Dot/Object.pm
+    - bytesize: 5838
+      file_mime_type: ~
+      line_count: ~
+      md5: c03ae95a9dde41d1592774cba21f9f98
+      mtime: 1202228241
+      name: lib/Class/Dot/Object.pod
+    - bytesize: 25921
+      file_mime_type: ~
+      line_count: ~
+      md5: 17e1424912a1cb7031880b1c7fa83cc4
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy.pm
+    - bytesize: 18468
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f0455a7f83e48cb4357939807dfd80e
+      mtime: 1201782299
+      name: lib/Class/Dot/Policy.pod
+    - bytesize: 5157
+      file_mime_type: ~
+      line_count: ~
+      md5: 42dca9e6465b383f5a9f6a7d470ad7e1
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy/Affordance.pm
+    - bytesize: 4722
+      file_mime_type: ~
+      line_count: ~
+      md5: cd94a6bdd818dd99a43c97a7bda2fcf9
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy/Affordance.pod
+    - bytesize: 4825
+      file_mime_type: ~
+      line_count: ~
+      md5: 5501f1466c4176bed8394ac9fdacf203
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy/Constrained.pm
+    - bytesize: 4381
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b489626aa7982a164d8c6c18b6dfbc3
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy/Constrained.pod
+    - bytesize: 5062
+      file_mime_type: ~
+      line_count: ~
+      md5: 71326f36ea56129389d65330262fc9c3
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy/Mutator.pm
+    - bytesize: 4605
+      file_mime_type: ~
+      line_count: ~
+      md5: cd35b8c39f94ae3d6cc677f67759b270
+      mtime: 1202228241
+      name: lib/Class/Dot/Policy/Mutator.pod
+    - bytesize: 13455
+      file_mime_type: ~
+      line_count: ~
+      md5: bd4b231c882d0aa1b4313a9138581ffd
+      mtime: 1202228241
+      name: lib/Class/Dot/Registry.pm
+    - bytesize: 9277
+      file_mime_type: ~
+      line_count: ~
+      md5: 89119c279a9a265f9656c0bda1daae7c
+      mtime: 1202228241
+      name: lib/Class/Dot/Registry.pod
+    - bytesize: 9284
+      file_mime_type: ~
+      line_count: ~
+      md5: 4591fcff639879f3f8c937ec75d4e6d1
+      mtime: 1202228241
+      name: lib/Class/Dot/Type.pm
+    - bytesize: 8931
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e76741478021564a87e6664cdf18c4d
+      mtime: 1202228241
+      name: lib/Class/Dot/Type.pod
+    - bytesize: 30149
+      file_mime_type: ~
+      line_count: ~
+      md5: 3087d602d5fff8255afac5c5c1e22cf2
+      mtime: 1202306276
+      name: lib/Class/Dot/Typemap.pm
+    - bytesize: 6819
+      file_mime_type: ~
+      line_count: ~
+      md5: c09ef4753692ea36ee4e25514318cfc6
+      mtime: 1202228241
+      name: lib/Class/Dot/Typemap.pod
+    - bytesize: 4486
+      file_mime_type: ~
+      line_count: ~
+      md5: 33549a31eaeb751e3ed9186692d3bef3
+      mtime: 1202228241
+      name: lib/Class/Dot2.pm
+    - bytesize: 3850
+      file_mime_type: ~
+      line_count: ~
+      md5: 04bade5c3cca5767eb2bc04079637fc3
+      mtime: 1202228241
+      name: lib/Class/Dot2.pod
+    - bytesize: 6372
+      file_mime_type: ~
+      line_count: ~
+      md5: be780a2050d28a93a99f9cbca10adcf7
+      mtime: 1202228241
+      name: lib/Perl/Tags/ClassDot.pm
+    - bytesize: 4186
+      file_mime_type: ~
+      line_count: ~
+      md5: 0692feb5e29beab4445e07f9298d4fac
+      mtime: 1201782305
+      name: lib/Perl/Tags/ClassDot.pod
+    - bytesize: 4381
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a03705010318bbc4ae1b989bff5f746
+      mtime: 1202228241
+      name: lib/Perl/Tags/ClassDot/Tag/Property.pm
+    - bytesize: 4096
+      file_mime_type: ~
+      line_count: ~
+      md5: a9eae8d72a5c7872fce5c70400c40093
+      mtime: 1201782304
+      name: lib/Perl/Tags/ClassDot/Tag/Property.pod
+    - bytesize: 1661
+      file_mime_type: ~
+      line_count: ~
+      md5: 56e540411367721da16f46b0c1820cc9
+      mtime: 1200580100
+      name: lib/dot/meta.pm
+    - bytesize: 48
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a0ea4a7f75b973e8faecf253cbf532b
+      mtime: 1201782304
+      name: lib/dot/meta.pod
+    - bytesize: 1753
+      file_mime_type: ~
+      line_count: ~
+      md5: 63171b9cb05ac2013ce15e47d3c34087
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/Cat.pm
+    - bytesize: 185
+      file_mime_type: ~
+      line_count: ~
+      md5: 0997cd8fd484de324aed67a0386080be
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/Composite.pm
+    - bytesize: 364
+      file_mime_type: ~
+      line_count: ~
+      md5: f6a328da996653cd44fb85012b899c79
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/Mammal.pm
+    - bytesize: 665
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cc43f9a44dd2e6f919f53ea0fdf00fe
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestChained.pm
+    - bytesize: 586
+      file_mime_type: ~
+      line_count: ~
+      md5: 421a65c61b9efb82b6746784b0c9a544
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestComplete.pm
+    - bytesize: 270
+      file_mime_type: ~
+      line_count: ~
+      md5: 2705feabe04978b78c241ea8c582e5d1
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestComplete/AlternateBase.pm
+    - bytesize: 309
+      file_mime_type: ~
+      line_count: ~
+      md5: f37077f256a8a3504199980a94cee8f7
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestComplete/Base.pm
+    - bytesize: 221
+      file_mime_type: ~
+      line_count: ~
+      md5: 141c8fc7c57c799abb713ecc1a88a1b3
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestComplete/SubSubBase.pm
+    - bytesize: 527
+      file_mime_type: ~
+      line_count: ~
+      md5: d1b8c7fd6328a219b42c6c583f586829
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestComplete/Type1.pm
+    - bytesize: 497
+      file_mime_type: ~
+      line_count: ~
+      md5: 34855d66380a5647cf374defba5f837c
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/TestComplete/Type2.pm
+    - bytesize: 2666
+      file_mime_type: ~
+      line_count: ~
+      md5: 86270f88ed296949e9cb629a53128d18
+      mtime: 1199894106
+      name: t/010-std_1.x_tests/TestProperties.pm
+    - bytesize: 3032
+      file_mime_type: ~
+      line_count: ~
+      md5: 37bcb0961b04e003d2e12bdecb98d3de
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/cat.t
+    - bytesize: 14166
+      file_mime_type: ~
+      line_count: ~
+      md5: 22dbb70e7c54adfc6ce8c71f296ac391
+      mtime: 1199894124
+      name: t/010-std_1.x_tests/properties.t
+    - bytesize: 1555
+      file_mime_type: ~
+      line_count: ~
+      md5: 49d96348a6c82b848b080f4abfde0708
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/testchained.t
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: fef28f9b009c1b3db36ff6a51a216e17
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/testcomplete.t
+    - bytesize: 1666
+      file_mime_type: ~
+      line_count: ~
+      md5: daae21d6024d8e4f83badbe521f76f20
+      mtime: 1199795240
+      name: t/020-std_2.x_tests/001-load_class_dot2.t
+    - bytesize: 1214
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cf6f8bced269dba125b5d420153c5de
+      mtime: 1199795240
+      name: t/020-std_2.x_tests/002-use_line_option_assignment.t
+    - bytesize: 4453
+      file_mime_type: ~
+      line_count: ~
+      md5: e8cc7cfa68752d126a920b598aa6a6f2
+      mtime: 1199894306
+      name: t/020-std_2.x_tests/003-accessor_mutator.t
+    - bytesize: 1321
+      file_mime_type: ~
+      line_count: ~
+      md5: 18bf2e84a3470a9b7c1bc077381a0030
+      mtime: 1199894306
+      name: t/020-std_2.x_tests/010-attribute_readonly.t
+    - bytesize: 1200
+      file_mime_type: ~
+      line_count: ~
+      md5: da91370477331cdd8b157eac913296a8
+      mtime: 1199894306
+      name: t/020-std_2.x_tests/011-attribute_writeonly.t
+    - bytesize: 1324
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ec2e9c4fce9ce2731ca22fc45253c66
+      mtime: 1199893936
+      name: t/020-std_2.x_tests/012-attribute_private.t
+    - bytesize: 1335
+      file_mime_type: ~
+      line_count: ~
+      md5: d658c3da782a6da47f08d4c487de0e08
+      mtime: 1199894043
+      name: t/020-std_2.x_tests/020-mixin_with.t
+    - bytesize: 1751
+      file_mime_type: ~
+      line_count: ~
+      md5: 23142a7dff5a27221517b224359e383b
+      mtime: 1201647484
+      name: t/020-std_2.x_tests/030-composition.t
+    - bytesize: 459
+      file_mime_type: ~
+      line_count: ~
+      md5: 42f845a5cd84b7873c14f3ad80dcb349
+      mtime: 1199992223
+      name: t/020-std_2.x_tests/040-class_delegation.t.todo
+    - bytesize: 2084
+      file_mime_type: ~
+      line_count: ~
+      md5: e085bdcdf54479de561ef333245f83b3
+      mtime: 1199949900
+      name: t/020-std_2.x_tests/060-dot_meta.t
+    - bytesize: 2415
+      file_mime_type: ~
+      line_count: ~
+      md5: c9dbbcabffd29efaefeb93f9d73878b7
+      mtime: 1200580131
+      name: t/020-std_2.x_tests/070-Maybe.t
+    - bytesize: 24879
+      file_mime_type: ~
+      line_count: ~
+      md5: 10ac8e3cc7406a17e46466fb6c9ffe6b
+      mtime: 1199893703
+      name: t/040-adopted_from_Moose/040-type_constraints/003_util_std_type_constraints.t
+    - bytesize: 797
+      file_mime_type: ~
+      line_count: ~
+      md5: 9035d0824863dab170c8fa9a1bd6c3ed
+      mtime: 1199893703
+      name: t/040-adopted_from_Moose/040-type_constraints/004_util_find_type_constraint.t
+    - bytesize: 587
+      file_mime_type: ~
+      line_count: ~
+      md5: a279a900f5d95486e454cc903548b7f1
+      mtime: 1199697922
+      name: xt/author/00-Kwalitee.t
+    - bytesize: 690
+      file_mime_type: ~
+      line_count: ~
+      md5: e05e4e321ed34fb86f94bd089157678b
+      mtime: 1199697922
+      name: xt/author/00-YAML-META_valid.t
+    - bytesize: 749
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d0b37eb3c13cf0906e47faf318c48e3
+      mtime: 1199697922
+      name: xt/author/minimum_version.t
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 506bad5da06b9e233642307f003b98e0
+      mtime: 1199697922
+      name: xt/author/perlcritic.t
+    - bytesize: 265
+      file_mime_type: ~
+      line_count: ~
+      md5: 6afc20f9b35b8540c04c7893befe6af7
+      mtime: 1198240404
+      name: xt/author/perlcriticrc
+    - bytesize: 685
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cc3ac8ab86e75dcea1f68723718b9ad
+      mtime: 1199705454
+      name: xt/author/pod-coverage.t
+    - bytesize: 2754
+      file_mime_type: ~
+      line_count: ~
+      md5: 6529cd6fcfbf1ebe9deee562c6fafa38
+      mtime: 1199697922
+      name: xt/author/pod-spell.t
+    - bytesize: 585
+      file_mime_type: ~
+      line_count: ~
+      md5: af109b42d1d82f5b9234471eb15eb7d8
+      mtime: 1199697922
+      name: xt/author/pod.t
+    - bytesize: 266
+      file_mime_type: ~
+      line_count: ~
+      md5: cd8c834f3547fdaa63e7d66308e7a052
+      mtime: 1198151532
+      name: xt/author/stopwords-asksh.txt
+    - bytesize: 601
+      file_mime_type: ~
+      line_count: ~
+      md5: 03e8ff4bceafcf198bec3fde30741c04
+      mtime: 1199697922
+      name: xt/disabled/on_devel_hide.t
+    - bytesize: 571
+      file_mime_type: ~
+      line_count: ~
+      md5: ddd79905f9cc128cfb917c768ca02731
+      mtime: 1199697922
+      name: xt/disabled/when_sub_name.t
+  module_info:
+    - bytesize: 4166
+      file_mime_type: ~
+      line_count: ~
+      md5: 57cf03f9275d0ba18f318bc32f407a57
+      module_name_from_file_guess: Class::Dot
+      mtime: 1202228241
+      name: blib/lib/Class/Dot.pm
+      packages:
+        - Class::Dot
+      primary_package: Class::Dot
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Class::Dot::Policy
+      version_info:
+        filename: blib/lib/Class/Dot.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 783
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c3c480cee5d6c0bc4c3077712895e87
+      module_name_from_file_guess: Class::Dot::Delegator
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Delegator.pm
+      packages:
+        - Class::Dot::Delegator
+      primary_package: Class::Dot::Delegator
+      uses:
+        - strict
+        - warnings
+        - version
+        - dot::meta
+        - Carp
+        - Class::Plugin::Util
+      version_info:
+        filename: blib/lib/Class/Dot/Delegator.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 5537
+      file_mime_type: ~
+      line_count: ~
+      md5: c698313c2c841b7dba8ca29dd66bc745
+      module_name_from_file_guess: Class::Dot::Devel::Sub::Name
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Devel/Sub/Name.pm
+      packages:
+        - Class::Dot::Devel::Sub::Name
+      primary_package: Class::Dot::Devel::Sub::Name
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - English
+        - Class::Dot::Meta::Method
+      version_info:
+        filename: blib/lib/Class/Dot/Devel/Sub/Name.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: ~
+    - bytesize: 6075
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ae1dfdc724286a857c4eaf36945e7b3
+      module_name_from_file_guess: Class::Dot::Meta::Accessor
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Accessor.pm
+      packages:
+        - Class::Dot::Meta::Accessor
+      primary_package: Class::Dot::Meta::Accessor
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Class::Plugin::Util
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Accessor.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 1187
+      file_mime_type: ~
+      line_count: ~
+      md5: 2952fc3dfbd480c9aab5c61a1b51f4ba
+      module_name_from_file_guess: Class::Dot::Meta::Accessor::Base
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Accessor/Base.pm
+      packages:
+        - Class::Dot::Meta::Accessor::Base
+      primary_package: Class::Dot::Meta::Accessor::Base
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Accessor/Base.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 2493
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a47205467587a098ee31810577632c9
+      module_name_from_file_guess: Class::Dot::Meta::Accessor::Chained
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Accessor/Chained.pm
+      packages:
+        - Class::Dot::Meta::Accessor::Chained
+      primary_package: Class::Dot::Meta::Accessor::Chained
+      uses:
+        - base
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Class::Dot::Devel::Sub::Name
+        - Class::Dot::Meta::Type
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Accessor/Chained.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: ~
+    - bytesize: 2959
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c0f7c8b150971c64cd27f86ee6574e1
+      module_name_from_file_guess: Class::Dot::Meta::Accessor::Constrained
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Accessor/Constrained.pm
+      packages:
+        - Class::Dot::Meta::Accessor::Constrained
+      primary_package: Class::Dot::Meta::Accessor::Constrained
+      uses:
+        - base
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Scalar::Util
+        - overload
+        - Class::Dot::Devel::Sub::Name
+        - Class::Dot::Meta::Type
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Accessor/Constrained.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: ~
+    - bytesize: 10256
+      file_mime_type: ~
+      line_count: ~
+      md5: ba3a42e7f1e9b4c41f4d1cada748d875
+      module_name_from_file_guess: Class::Dot::Meta::Accessor::Overrideable
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Accessor/Overrideable.pm
+      packages:
+        - Class::Dot::Meta::Accessor::Overrideable
+      primary_package: Class::Dot::Meta::Accessor::Overrideable
+      uses:
+        - base
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Class::Dot::Devel::Sub::Name
+        - Class::Dot::Meta::Type
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Accessor/Overrideable.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: ~
+    - bytesize: 11887
+      file_mime_type: ~
+      line_count: ~
+      md5: 4203004f07029bce4dc71153ad46dcf1
+      module_name_from_file_guess: Class::Dot::Meta::Class
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Class.pm
+      packages:
+        - Class::Dot::Meta::Class
+      primary_package: Class::Dot::Meta::Class
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Params::Util
+        - Class::Plugin::Util
+        - Scalar::Util
+        - Class::Dot::Registry
+        - Class::Dot::Meta::Method
+        - Class::Dot::Meta::Property
+        - Class::Dot::Devel::Sub::Name
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Class.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 6380
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ce9be1c766f20580637acdfacd6ed4
+      module_name_from_file_guess: Class::Dot::Meta::Method
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Method.pm
+      packages:
+        - Class::Dot::Meta::Method
+      primary_package: Class::Dot::Meta::Method
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Method.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 13311
+      file_mime_type: ~
+      line_count: ~
+      md5: c3f9ac810aadaf7edd40ab35b9427021
+      module_name_from_file_guess: Class::Dot::Meta::Property
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Property.pm
+      packages:
+        - Class::Dot::Meta::Property
+      primary_package: Class::Dot::Meta::Property
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Params::Util
+        - Class::Plugin::Util
+        - Scalar::Util
+        - Class::Dot::Registry
+        - Class::Dot::Meta::Type
+        - Class::Dot::Meta::Method
+        - Class::Dot::Meta::Accessor
+        - Class::Dot::Devel::Sub::Name
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Property.pm
+        identifier: VERSION
+        line_number: 34
+        sigil: $
+        value: ~
+    - bytesize: 1546
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c8570d6f1199985a6d3a101054f3a74
+      module_name_from_file_guess: Class::Dot::Meta::Role
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Role.pm
+      packages:
+        - Class::Dot::Meta::Role
+      primary_package: Class::Dot::Meta::Role
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Class::Dot::Registry
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Role.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 6905
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cf6efa574904faaf7364369e14dbdae
+      module_name_from_file_guess: Class::Dot::Meta::Type
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Meta/Type.pm
+      packages:
+        - Class::Dot::Meta::Type
+      primary_package: Class::Dot::Meta::Type
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Scalar::Util
+        - Class::Dot::Meta::Method
+        - Class::Dot::Devel::Sub::Name
+      version_info:
+        filename: blib/lib/Class/Dot/Meta/Type.pm
+        identifier: VERSION
+        line_number: 21
+        sigil: $
+        value: ~
+    - bytesize: 7660
+      file_mime_type: ~
+      line_count: ~
+      md5: 09dab775de3ccd74efc5e7844f194547
+      module_name_from_file_guess: Class::Dot::Object
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Object.pm
+      packages:
+        - Class::Dot::Object
+      primary_package: Class::Dot::Object
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - dot::meta
+        - Class::Dot::Registry
+      version_info:
+        filename: blib/lib/Class/Dot/Object.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: ~
+    - bytesize: 25921
+      file_mime_type: ~
+      line_count: ~
+      md5: 40a991c2aad5fd50e26d6ffda072cc8a
+      module_name_from_file_guess: Class::Dot::Policy
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Policy.pm
+      packages:
+        - Class::Dot::Policy
+      primary_package: Class::Dot::Policy
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - vars
+        - Carp
+        - Scalar::Util
+        - Class::Plugin::Util
+        - English
+        - Params::Util
+        - Class::Dot::Typemap
+        - Class::Dot::Registry
+        - Class::Dot::Meta::Method
+        - Class::Dot::Meta::Type
+        - Class::Dot::Devel::Sub::Name
+      version_info:
+        filename: blib/lib/Class/Dot/Policy.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 5157
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c607b5c666fa50aed699b9f18d25739
+      module_name_from_file_guess: Class::Dot::Policy::Affordance
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Policy/Affordance.pm
+      packages:
+        - Class::Dot::Policy::Affordance
+      primary_package: Class::Dot::Policy::Affordance
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Class::Dot::Policy
+      version_info:
+        filename: blib/lib/Class/Dot/Policy/Affordance.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 4825
+      file_mime_type: ~
+      line_count: ~
+      md5: 76dfe0cd9d6ff1afbcd55cfffbee29ec
+      module_name_from_file_guess: Class::Dot::Policy::Constrained
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Policy/Constrained.pm
+      packages:
+        - Class::Dot::Policy::Constrained
+      primary_package: Class::Dot::Policy::Constrained
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Class::Dot::Policy
+      version_info:
+        filename: blib/lib/Class/Dot/Policy/Constrained.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 5062
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e31b4da23a9eb7b6d75e01b896db66f
+      module_name_from_file_guess: Class::Dot::Policy::Mutator
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Policy/Mutator.pm
+      packages:
+        - Class::Dot::Policy::Mutator
+      primary_package: Class::Dot::Policy::Mutator
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Class::Dot::Policy
+      version_info:
+        filename: blib/lib/Class/Dot/Policy/Mutator.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 13455
+      file_mime_type: ~
+      line_count: ~
+      md5: e4a85161f77f0e063703bf843ef13b83
+      module_name_from_file_guess: Class::Dot::Registry
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Registry.pm
+      packages:
+        - Class::Dot::Registry
+      primary_package: Class::Dot::Registry
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Carp
+        - Class::Plugin::Util
+      version_info:
+        filename: blib/lib/Class/Dot/Registry.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 9284
+      file_mime_type: ~
+      line_count: ~
+      md5: a5d2c10bf79e069f962fb1f5c8a78011
+      module_name_from_file_guess: Class::Dot::Type
+      mtime: 1202228241
+      name: blib/lib/Class/Dot/Type.pm
+      packages:
+        - Class::Dot::Type
+      primary_package: Class::Dot::Type
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+      version_info:
+        filename: blib/lib/Class/Dot/Type.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: ~
+    - bytesize: 30149
+      file_mime_type: ~
+      line_count: ~
+      md5: f92983c0ef58b41bd924d483960c21f6
+      module_name_from_file_guess: Class::Dot::Typemap
+      mtime: 1202306276
+      name: blib/lib/Class/Dot/Typemap.pm
+      packages:
+        - Class::Dot::Typemap
+      primary_package: Class::Dot::Typemap
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - vars
+        - Carp
+        - Class::Dot::Type
+        - Class::Dot::Devel::Sub::Name
+        - Class::Dot::Meta::Class
+        - Class::Dot::Meta::Type
+        - Class::Dot::Meta::Method
+        - Scalar::Util
+        - FileHandle
+      version_info:
+        filename: blib/lib/Class/Dot/Typemap.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: ~
+    - bytesize: 4486
+      file_mime_type: ~
+      line_count: ~
+      md5: ce396a11a0439898d09d81b409fccfe3
+      module_name_from_file_guess: Class::Dot2
+      mtime: 1202228241
+      name: blib/lib/Class/Dot2.pm
+      packages:
+        - Class::Dot2
+      primary_package: Class::Dot2
+      uses:
+        - strict
+        - warnings
+        - version
+        - ''
+        - Class::Dot::Policy
+      version_info:
+        filename: blib/lib/Class/Dot2.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: ~
+    - bytesize: 6372
+      file_mime_type: ~
+      line_count: ~
+      md5: ac7537fb1c5ff34cf6b4dc2b4c5ad3c4
+      module_name_from_file_guess: Perl::Tags::ClassDot
+      mtime: 1202228241
+      name: blib/lib/Perl/Tags/ClassDot.pm
+      packages:
+        - Perl::Tags::ClassDot
+      primary_package: Perl::Tags::ClassDot
+      uses:
+        - strict
+        - warnings
+        - vars
+        - version
+        - ''
+        - Perl::Tags
+        - Data::Dumper
+        - English
+        - Perl::Tags::ClassDot::Tag::Property
+      version_info:
+        filename: blib/lib/Perl/Tags/ClassDot.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: !!perl/hash:version
+          alpha: 1
+          original: 2.0.0_15
+          qv: 1
+          version:
+            - 2
+            - 0
+            - 0
+            - 15
+    - bytesize: 4381
+      file_mime_type: ~
+      line_count: ~
+      md5: 021a0120e621ec39c20f65ee80ebd7d8
+      module_name_from_file_guess: Perl::Tags::ClassDot::Tag::Property
+      mtime: 1202228241
+      name: blib/lib/Perl/Tags/ClassDot/Tag/Property.pm
+      packages:
+        - Perl::Tags::ClassDot::Tag::Property
+      primary_package: Perl::Tags::ClassDot::Tag::Property
+      uses:
+        - strict
+        - warnings
+        - vars
+        - version
+        - ''
+      version_info:
+        filename: blib/lib/Perl/Tags/ClassDot/Tag/Property.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: !!perl/hash:version
+          alpha: 1
+          original: 2.0.0_15
+          qv: 1
+          version:
+            - 2
+            - 0
+            - 0
+            - 15
+    - bytesize: 1661
+      file_mime_type: ~
+      line_count: ~
+      md5: 029e318d7bc1a24881920ea5e64ecf6e
+      module_name_from_file_guess: dot::meta
+      mtime: 1200580100
+      name: blib/lib/dot/meta.pm
+      packages:
+        - dot::meta
+      primary_package: dot::meta
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Scalar::Util
+        - Class::Dot::Registry
+      version_info:
+        filename: blib/lib/dot/meta.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Class/Dot.pm
+    - blib/lib/Class/Dot/Delegator.pm
+    - blib/lib/Class/Dot/Devel/Sub/Name.pm
+    - blib/lib/Class/Dot/Meta/Accessor.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Base.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Chained.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Constrained.pm
+    - blib/lib/Class/Dot/Meta/Accessor/Overrideable.pm
+    - blib/lib/Class/Dot/Meta/Class.pm
+    - blib/lib/Class/Dot/Meta/Method.pm
+    - blib/lib/Class/Dot/Meta/Property.pm
+    - blib/lib/Class/Dot/Meta/Role.pm
+    - blib/lib/Class/Dot/Meta/Type.pm
+    - blib/lib/Class/Dot/Object.pm
+    - blib/lib/Class/Dot/Policy.pm
+    - blib/lib/Class/Dot/Policy/Affordance.pm
+    - blib/lib/Class/Dot/Policy/Constrained.pm
+    - blib/lib/Class/Dot/Policy/Mutator.pm
+    - blib/lib/Class/Dot/Registry.pm
+    - blib/lib/Class/Dot/Type.pm
+    - blib/lib/Class/Dot/Typemap.pm
+    - blib/lib/Class/Dot2.pm
+    - blib/lib/Perl/Tags/ClassDot.pm
+    - blib/lib/Perl/Tags/ClassDot/Tag/Property.pm
+    - blib/lib/dot/meta.pm
+  test_info:
+    - bytesize: 3032
+      file_mime_type: ~
+      line_count: ~
+      md5: 37bcb0961b04e003d2e12bdecb98d3de
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/cat.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - FindBin
+        - English
+        - lib
+    - bytesize: 14166
+      file_mime_type: ~
+      line_count: ~
+      md5: 22dbb70e7c54adfc6ce8c71f296ac391
+      mtime: 1199894124
+      name: t/010-std_1.x_tests/properties.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - FindBin
+        - English
+        - lib
+        - Scalar::Util
+        - TestProperties
+        - Cat
+        - Test::Exception
+        - Class::Dot
+    - bytesize: 1555
+      file_mime_type: ~
+      line_count: ~
+      md5: 49d96348a6c82b848b080f4abfde0708
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/testchained.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - FindBin
+        - English
+        - lib
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: fef28f9b009c1b3db36ff6a51a216e17
+      mtime: 1199795240
+      name: t/010-std_1.x_tests/testcomplete.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - FindBin
+        - English
+        - lib
+        - Class::Dot::Meta::Class
+    - bytesize: 1666
+      file_mime_type: ~
+      line_count: ~
+      md5: daae21d6024d8e4f83badbe521f76f20
+      mtime: 1199795240
+      name: t/020-std_2.x_tests/001-load_class_dot2.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Class::Dot2
+    - bytesize: 1214
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cf6f8bced269dba125b5d420153c5de
+      mtime: 1199795240
+      name: t/020-std_2.x_tests/002-use_line_option_assignment.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Class::Dot2
+    - bytesize: 4453
+      file_mime_type: ~
+      line_count: ~
+      md5: e8cc7cfa68752d126a920b598aa6a6f2
+      mtime: 1199894306
+      name: t/020-std_2.x_tests/003-accessor_mutator.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - English
+        - Class::Dot2
+        - Class::Dot::Policy::Mutator
+    - bytesize: 1321
+      file_mime_type: ~
+      line_count: ~
+      md5: 18bf2e84a3470a9b7c1bc077381a0030
+      mtime: 1199894306
+      name: t/020-std_2.x_tests/010-attribute_readonly.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Class::Dot2
+    - bytesize: 1200
+      file_mime_type: ~
+      line_count: ~
+      md5: da91370477331cdd8b157eac913296a8
+      mtime: 1199894306
+      name: t/020-std_2.x_tests/011-attribute_writeonly.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Class::Dot2
+    - bytesize: 1324
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ec2e9c4fce9ce2731ca22fc45253c66
+      mtime: 1199893936
+      name: t/020-std_2.x_tests/012-attribute_private.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Class::Dot2
+    - bytesize: 1335
+      file_mime_type: ~
+      line_count: ~
+      md5: d658c3da782a6da47f08d4c487de0e08
+      mtime: 1199894043
+      name: t/020-std_2.x_tests/020-mixin_with.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Class::Dot2
+        - Class::Dot::Meta::Role
+    - bytesize: 1751
+      file_mime_type: ~
+      line_count: ~
+      md5: 23142a7dff5a27221517b224359e383b
+      mtime: 1201647484
+      name: t/020-std_2.x_tests/030-composition.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Scalar::Util
+        - Class::Dot2
+    - bytesize: 2084
+      file_mime_type: ~
+      line_count: ~
+      md5: e085bdcdf54479de561ef333245f83b3
+      mtime: 1199949900
+      name: t/020-std_2.x_tests/060-dot_meta.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - English
+        - Class::Dot2
+    - bytesize: 2415
+      file_mime_type: ~
+      line_count: ~
+      md5: c9dbbcabffd29efaefeb93f9d73878b7
+      mtime: 1200580131
+      name: t/020-std_2.x_tests/070-Maybe.t
+      uses:
+        - strict
+        - warnings
+        - English
+        - Test::More
+        - Test::Exception
+        - Carp
+        - Class::Dot2
+    - bytesize: 24879
+      file_mime_type: ~
+      line_count: ~
+      md5: 10ac8e3cc7406a17e46466fb6c9ffe6b
+      mtime: 1199893703
+      name: t/040-adopted_from_Moose/040-type_constraints/003_util_std_type_constraints.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Scalar::Util
+    - bytesize: 797
+      file_mime_type: ~
+      line_count: ~
+      md5: 9035d0824863dab170c8fa9a1bd6c3ed
+      mtime: 1199893703
+      name: t/040-adopted_from_Moose/040-type_constraints/004_util_find_type_constraint.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+  tests:
+    - t/010-std_1.x_tests/cat.t
+    - t/010-std_1.x_tests/properties.t
+    - t/010-std_1.x_tests/testchained.t
+    - t/010-std_1.x_tests/testcomplete.t
+    - t/020-std_2.x_tests/001-load_class_dot2.t
+    - t/020-std_2.x_tests/002-use_line_option_assignment.t
+    - t/020-std_2.x_tests/003-accessor_mutator.t
+    - t/020-std_2.x_tests/010-attribute_readonly.t
+    - t/020-std_2.x_tests/011-attribute_writeonly.t
+    - t/020-std_2.x_tests/012-attribute_private.t
+    - t/020-std_2.x_tests/020-mixin_with.t
+    - t/020-std_2.x_tests/030-composition.t
+    - t/020-std_2.x_tests/060-dot_meta.t
+    - t/020-std_2.x_tests/070-Maybe.t
+    - t/040-adopted_from_Moose/040-type_constraints/003_util_std_type_constraints.t
+    - t/040-adopted_from_Moose/040-type_constraints/004_util_find_type_constraint.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.seBK
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1269951754
+  examine_start_time: 1269951715
+  examine_time: 39
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1269951754
+  run_start_time: 1269951715
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

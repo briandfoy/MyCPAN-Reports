@@ -1,0 +1,2831 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Unified interface for virus scanning of files/directories
+    author:
+      - Dave O'Neill (dmo@roaringpenguin.com)
+    build_requires:
+      Test::Class: 0
+      Test::Exception: 0
+      Test::More: 0
+    distribution_type: module
+    generated_by: Module::Install version 0.78
+    license: gpl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: File-VirusScan
+    no_index:
+      directory:
+        - inc
+        - t
+    requires:
+      Class::Accessor::Fast: 0
+      Data::ResultSet: 0
+      File::Temp: 0
+      HTML::TokeParser: 0
+      IO::Dir: 0
+      IO::File: 0
+      IO::Select: 0
+      IO::Socket::INET: 0
+      IO::Socket::UNIX: 0
+      Scalar::Util: 0
+      perl: 5.8.0
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 0.101
+  blib:
+    - blib/lib/File/VirusScan.pm
+    - blib/lib/File/VirusScan/Engine.pm
+    - blib/lib/File/VirusScan/Engine/Command.pm
+    - blib/lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+    - blib/lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+    - blib/lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+    - blib/lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+    - blib/lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+    - blib/lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+    - blib/lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+    - blib/lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+    - blib/lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+    - blib/lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+    - blib/lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+    - blib/lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+    - blib/lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+    - blib/lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+    - blib/lib/File/VirusScan/Engine/Daemon.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+    - blib/lib/File/VirusScan/Result.pm
+    - blib/lib/File/VirusScan/ResultSet.pm
+    - blib/man3/File::VirusScan.3
+    - blib/man3/File::VirusScan::Engine.3
+    - blib/man3/File::VirusScan::Engine::Command.3
+    - blib/man3/File::VirusScan::Engine::Command::Authentium::CommandAntivirus.3
+    - blib/man3/File::VirusScan::Engine::Command::BitDefender::BDC.3
+    - blib/man3/File::VirusScan::Engine::Command::CentralCommand::Vexira.3
+    - blib/man3/File::VirusScan::Engine::Command::ClamAV::Clamscan.3
+    - blib/man3/File::VirusScan::Engine::Command::ESET::NOD32.3
+    - blib/man3/File::VirusScan::Engine::Command::FPROT::FPROT.3
+    - blib/man3/File::VirusScan::Engine::Command::FSecure::FSAV.3
+    - blib/man3/File::VirusScan::Engine::Command::Kaspersky::AVP5.3
+    - blib/man3/File::VirusScan::Engine::Command::Kaspersky::Kavscanner.3
+    - blib/man3/File::VirusScan::Engine::Command::NAI::Uvscan.3
+    - blib/man3/File::VirusScan::Engine::Command::Norman::NVCC.3
+    - blib/man3/File::VirusScan::Engine::Command::Sophos::Savscan.3
+    - blib/man3/File::VirusScan::Engine::Command::Sophos::Sweep.3
+    - blib/man3/File::VirusScan::Engine::Command::Trend::Vscan.3
+    - blib/man3/File::VirusScan::Engine::Daemon.3
+    - blib/man3/File::VirusScan::Engine::Daemon::ClamAV::Clamd.3
+    - blib/man3/File::VirusScan::Engine::Daemon::FPROT::V4.3
+    - blib/man3/File::VirusScan::Engine::Daemon::FPROT::V6.3
+    - blib/man3/File::VirusScan::Engine::Daemon::Sophos::Sophie.3
+    - blib/man3/File::VirusScan::Engine::Daemon::Symantec::CSS.3
+    - blib/man3/File::VirusScan::Engine::Daemon::Trend::Trophie.3
+    - blib/man3/File::VirusScan::Result.3
+    - blib/man3/File::VirusScan::ResultSet.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Class::Accessor::Fast 0 not found.
+    Warning: prerequisite Data::ResultSet 0 not found.
+    Warning: prerequisite HTML::TokeParser 0 not found.
+    Warning: prerequisite Test::Class 0 not found.
+    Warning: prerequisite Test::Exception 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for File::VirusScan
+  build_output: |
+    cp lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm blib/lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+    cp lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm blib/lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+    cp lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm blib/lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+    cp lib/File/VirusScan/Engine/Command/Trend/Vscan.pm blib/lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+    cp lib/File/VirusScan/Engine/Command/Norman/NVCC.pm blib/lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+    cp lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm blib/lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+    cp lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm blib/lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+    cp lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm blib/lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+    cp lib/File/VirusScan.pm blib/lib/File/VirusScan.pm
+    cp lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm blib/lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+    cp lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm blib/lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+    cp lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm blib/lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+    cp lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm blib/lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+    cp lib/File/VirusScan/Engine/Daemon.pm blib/lib/File/VirusScan/Engine/Daemon.pm
+    cp lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm blib/lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+    cp lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm blib/lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+    cp lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm blib/lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+    cp lib/File/VirusScan/Result.pm blib/lib/File/VirusScan/Result.pm
+    cp lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm blib/lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+    cp lib/File/VirusScan/Engine.pm blib/lib/File/VirusScan/Engine.pm
+    cp lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm blib/lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+    cp lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm blib/lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+    cp lib/File/VirusScan/ResultSet.pm blib/lib/File/VirusScan/ResultSet.pm
+    cp lib/File/VirusScan/Engine/Command/ESET/NOD32.pm blib/lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+    cp lib/File/VirusScan/Engine/Command.pm blib/lib/File/VirusScan/Engine/Command.pm
+    cp lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm blib/lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+    Manifying blib/man3/File::VirusScan::Engine::Command::NAI::Uvscan.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon::Trend::Trophie.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Trend::Vscan.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::FSecure::FSAV.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Norman::NVCC.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Authentium::CommandAntivirus.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Kaspersky::AVP5.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon::Symantec::CSS.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::CentralCommand::Vexira.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::BitDefender::BDC.3
+    Manifying blib/man3/File::VirusScan.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon::Sophos::Sophie.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Sophos::Sweep.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon::ClamAV::Clamd.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::ClamAV::Clamscan.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Sophos::Savscan.3
+    Manifying blib/man3/File::VirusScan::Result.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon::FPROT::V6.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::FPROT::FPROT.3
+    Manifying blib/man3/File::VirusScan::Engine.3
+    Manifying blib/man3/File::VirusScan::Engine::Daemon::FPROT::V4.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::ESET::NOD32.3
+    Manifying blib/man3/File::VirusScan::ResultSet.3
+    Manifying blib/man3/File::VirusScan::Engine::Command.3
+    Manifying blib/man3/File::VirusScan::Engine::Command::Kaspersky::Kavscanner.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq/File-VirusScan-0.101/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq/File-VirusScan-0.101
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq/File-VirusScan-0.101/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq/File-VirusScan-0.101/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.78
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: DONEILL
+  dist_basename: File-VirusScan-0.101.tar.gz
+  dist_date: 1267120494
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq/File-VirusScan-0.101
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq/File-VirusScan-0.101
+  dist_file: /home/brian/CPAN/authors/id/D/DO/DONEILL/File-VirusScan-0.101.tar.gz
+  dist_md5: 2583136ac547f43824cf436c35f9bce0
+  dist_size: 41960
+  manifest:
+    - .perltidyrc
+    - COPYING
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - inc/Module/Install.pm
+    - inc/Module/Install/AuthorTests.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/File/VirusScan.pm
+    - lib/File/VirusScan/Engine.pm
+    - lib/File/VirusScan/Engine/Command.pm
+    - lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+    - lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+    - lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+    - lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+    - lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+    - lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+    - lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+    - lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+    - lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+    - lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+    - lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+    - lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+    - lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+    - lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+    - lib/File/VirusScan/Engine/Daemon.pm
+    - lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+    - lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+    - lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+    - lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+    - lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+    - lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+    - lib/File/VirusScan/Result.pm
+    - lib/File/VirusScan/ResultSet.pm
+    - t/00-load.t
+    - t/authentium-command-antivirus.t
+    - t/bitdefender-bdc.t
+    - t/centralcommand-vexira.t
+    - t/clamav-clamscan.t
+    - t/clamav-daemon.t
+    - t/engine-base-class.t
+    - t/eset-nod32.t
+    - t/file-virusscan-trivial.t
+    - t/fprot-command.t
+    - t/fprot-daemon-v4.t
+    - t/fprot-daemon-v6.t
+    - t/fsecure-fsav.t
+    - t/kaspersky-avp5.t
+    - t/kaspersky-kavscanner.t
+    - t/lib/TestVirusPlugin.pm
+    - t/nai-uvscan.t
+    - t/norman-nvcc.t
+    - t/sophos-savscan.t
+    - t/sophos-sophie.t
+    - t/sophos-sweep.t
+    - t/symantec-css.t
+    - t/trend-trophie.t
+    - t/trend-vscan.t
+    - xt/01-pod.t
+    - xt/02-kwalitee.t
+    - xt/02-pod-coverage.t
+    - xt/03-perlcritic.t
+    - xt/perlcriticrc
+  manifest_file_info:
+    - bytesize: 839
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e19964978b7702eb8aa959aeadcafa3
+      mtime: 1206372525
+      name: .perltidyrc
+    - bytesize: 17987
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1267120221
+      name: COPYING
+    - bytesize: 846
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1267120096
+      name: Changes
+    - bytesize: 2089
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1267120223
+      name: MANIFEST
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1267120385
+      name: META.yml
+    - bytesize: 697
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1267120221
+      name: Makefile.PL
+    - bytesize: 944
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1267120097
+      name: README
+    - bytesize: 8837
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1267120384
+      name: inc/Module/Install.pm
+    - bytesize: 1165
+      file_mime_type: ~
+      line_count: ~
+      md5: 9608682bf5fe9673195d4c764609c320
+      mtime: 1267120384
+      name: inc/Module/Install/AuthorTests.pm
+    - bytesize: 1064
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1267120384
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1810
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1267120385
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2454
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1267120385
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 6498
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1267120385
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 11366
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1267120384
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1794
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1267120385
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 721
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1267120384
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 6469
+      file_mime_type: ~
+      line_count: ~
+      md5: 1aec7487c252f99db0f3f8eadecd8b74
+      mtime: 1267120239
+      name: lib/File/VirusScan.pm
+    - bytesize: 2825
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a149a307af70e701498711f74591e71
+      mtime: 1267120212
+      name: lib/File/VirusScan/Engine.pm
+    - bytesize: 2340
+      file_mime_type: ~
+      line_count: ~
+      md5: bcef9800242ea1f5451b2ca0a154e156
+      mtime: 1267120222
+      name: lib/File/VirusScan/Engine/Command.pm
+    - bytesize: 2908
+      file_mime_type: ~
+      line_count: ~
+      md5: aea34809354974a3e494be72d8cbcc37
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+    - bytesize: 2399
+      file_mime_type: ~
+      line_count: ~
+      md5: e67b8c048ba8564b243166debace6a6d
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+    - bytesize: 2815
+      file_mime_type: ~
+      line_count: ~
+      md5: 855351fe5de090756b14a8d071b7564b
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+    - bytesize: 2525
+      file_mime_type: ~
+      line_count: ~
+      md5: 0702aa1f3232959bf721b0fd4431bde7
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+    - bytesize: 2388
+      file_mime_type: ~
+      line_count: ~
+      md5: f6412552aedb32c5f35e344d5468c176
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+    - bytesize: 2714
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cce0b003ccc5e351e5d683dba116161
+      mtime: 1267120212
+      name: lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+    - bytesize: 2893
+      file_mime_type: ~
+      line_count: ~
+      md5: 1272af3d923cf9c1302cc72311aa77ef
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+    - bytesize: 3080
+      file_mime_type: ~
+      line_count: ~
+      md5: 42a1a20465cf6c65bf7601799385121b
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+    - bytesize: 2677
+      file_mime_type: ~
+      line_count: ~
+      md5: d9b46b4c27c925d3aa2ef8ebd156b2d0
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+    - bytesize: 3744
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f4a4e35e3227109bd4fff413edf6a4b
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+    - bytesize: 2442
+      file_mime_type: ~
+      line_count: ~
+      md5: a7842df448414bd175a38ce09f486511
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+    - bytesize: 2831
+      file_mime_type: ~
+      line_count: ~
+      md5: b1593efe734a3a0a66b4c9ecdaa365c8
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+    - bytesize: 2762
+      file_mime_type: ~
+      line_count: ~
+      md5: be60dd26611ef169a8600f0b22405a5c
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+    - bytesize: 2305
+      file_mime_type: ~
+      line_count: ~
+      md5: 9119b015299db271c0b42d6b0a9ad868
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+    - bytesize: 1078
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c4e58667d0646f5d8d6e6833db554e2
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Daemon.pm
+    - bytesize: 6333
+      file_mime_type: ~
+      line_count: ~
+      md5: cdd1b72ce2987f2a27876deb526ccfcc
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+    - bytesize: 8506
+      file_mime_type: ~
+      line_count: ~
+      md5: f1495326470464c9931fa1767a531122
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+    - bytesize: 7236
+      file_mime_type: ~
+      line_count: ~
+      md5: 07d420921c5e7a8b2bf81adc81d2e34b
+      mtime: 1267120221
+      name: lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+    - bytesize: 3429
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ab4273107cf30e0e1b1c25754666beb
+      mtime: 1267120222
+      name: lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+    - bytesize: 5981
+      file_mime_type: ~
+      line_count: ~
+      md5: 825e0c1d46c0b35d79d2feba3f7c6f78
+      mtime: 1267120222
+      name: lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+    - bytesize: 3557
+      file_mime_type: ~
+      line_count: ~
+      md5: c33664de33f5ff90792bf5615ae31c3e
+      mtime: 1267120222
+      name: lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+    - bytesize: 2853
+      file_mime_type: ~
+      line_count: ~
+      md5: 31669ef66931e7053f017c298695c890
+      mtime: 1267120097
+      name: lib/File/VirusScan/Result.pm
+    - bytesize: 2033
+      file_mime_type: ~
+      line_count: ~
+      md5: e44135b219f19c59d37cb5eaeb3b5e94
+      mtime: 1267120097
+      name: lib/File/VirusScan/ResultSet.pm
+    - bytesize: 155
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1214245950
+      name: t/00-load.t
+    - bytesize: 816
+      file_mime_type: ~
+      line_count: ~
+      md5: d9a3db799136a662f3b5d430c5e276f7
+      mtime: 1215445911
+      name: t/authentium-command-antivirus.t
+    - bytesize: 791
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bd2e739424362ba719bfbe9cff5d0d1
+      mtime: 1215445911
+      name: t/bitdefender-bdc.t
+    - bytesize: 812
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d9e0a90adb56b0f8cd79b6ceb4f867d
+      mtime: 1215445911
+      name: t/centralcommand-vexira.t
+    - bytesize: 799
+      file_mime_type: ~
+      line_count: ~
+      md5: cf6db535668a2c895b99d8fdca9f493b
+      mtime: 1215445911
+      name: t/clamav-clamscan.t
+    - bytesize: 1303
+      file_mime_type: ~
+      line_count: ~
+      md5: c9594d59282cf3359aa15624a6dedd3f
+      mtime: 1215445911
+      name: t/clamav-daemon.t
+    - bytesize: 1151
+      file_mime_type: ~
+      line_count: ~
+      md5: dfb5eadb026d89d70b463121a35614bf
+      mtime: 1267120237
+      name: t/engine-base-class.t
+    - bytesize: 782
+      file_mime_type: ~
+      line_count: ~
+      md5: bb786bd25465465bb778f8f2e5800705
+      mtime: 1215445911
+      name: t/eset-nod32.t
+    - bytesize: 1677
+      file_mime_type: ~
+      line_count: ~
+      md5: 14f7b69862b03cc0cdc061769928013d
+      mtime: 1214245954
+      name: t/file-virusscan-trivial.t
+    - bytesize: 784
+      file_mime_type: ~
+      line_count: ~
+      md5: 71f9c00c14b45f6f9803c82617c16721
+      mtime: 1215445911
+      name: t/fprot-command.t
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: df1df6a71d6b35613a550e20e925ccad
+      mtime: 1215445911
+      name: t/fprot-daemon-v4.t
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: b9146fd46436e05aedbe2dc07be9c124
+      mtime: 1215445911
+      name: t/fprot-daemon-v6.t
+    - bytesize: 783
+      file_mime_type: ~
+      line_count: ~
+      md5: 41097000c5e132323570e2ca355384ad
+      mtime: 1215445911
+      name: t/fsecure-fsav.t
+    - bytesize: 794
+      file_mime_type: ~
+      line_count: ~
+      md5: d919982358a5fcf74a790802e4a79852
+      mtime: 1215445911
+      name: t/kaspersky-avp5.t
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: 533113591bba5113f32af41424799a02
+      mtime: 1215445911
+      name: t/kaspersky-kavscanner.t
+    - bytesize: 3200
+      file_mime_type: ~
+      line_count: ~
+      md5: 114967a9f98570b9f54e6dcf144eadf3
+      mtime: 1215446799
+      name: t/lib/TestVirusPlugin.pm
+    - bytesize: 774
+      file_mime_type: ~
+      line_count: ~
+      md5: fce67178a40c9e501808bcb1accec6aa
+      mtime: 1215445911
+      name: t/nai-uvscan.t
+    - bytesize: 787
+      file_mime_type: ~
+      line_count: ~
+      md5: 08e456efb718f19eeea8aebd3db435af
+      mtime: 1215445911
+      name: t/norman-nvcc.t
+    - bytesize: 792
+      file_mime_type: ~
+      line_count: ~
+      md5: 697b0ea654e48cd37d566f0a8fc24b8c
+      mtime: 1215445911
+      name: t/sophos-savscan.t
+    - bytesize: 1309
+      file_mime_type: ~
+      line_count: ~
+      md5: 758b8963a762fb0bc93420a16cfb6fc9
+      mtime: 1215445911
+      name: t/sophos-sophie.t
+    - bytesize: 784
+      file_mime_type: ~
+      line_count: ~
+      md5: 44d76a7007bfd5dbe442d5e3ff8210b5
+      mtime: 1215445911
+      name: t/sophos-sweep.t
+    - bytesize: 1306
+      file_mime_type: ~
+      line_count: ~
+      md5: 439bfdb38ec8f918a790808bd34c5eaf
+      mtime: 1215445911
+      name: t/symantec-css.t
+    - bytesize: 1310
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e2b4f44cc3ab79c341f31907014237c
+      mtime: 1215445911
+      name: t/trend-trophie.t
+    - bytesize: 781
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a1393eb6c051964512f7e5ade8ed994
+      mtime: 1215445911
+      name: t/trend-vscan.t
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d32b86e053c345cfee31203276dd818
+      mtime: 1267120097
+      name: xt/01-pod.t
+    - bytesize: 301
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b7ea20506d376cb5b1d6f041c7c5b71
+      mtime: 1267120097
+      name: xt/02-kwalitee.t
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 01291342e7151ddb5edfbd6821dafcb6
+      mtime: 1267120213
+      name: xt/02-pod-coverage.t
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: 2308ca774cadf7ebd6197a3e6db193ed
+      mtime: 1267120097
+      name: xt/03-perlcritic.t
+    - bytesize: 359
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cb7deabd15be4f17f34706c56544c7e
+      mtime: 1267120097
+      name: xt/perlcriticrc
+  module_info:
+    - bytesize: 6469
+      file_mime_type: ~
+      line_count: ~
+      md5: b815bfa8dc9eeadb80da04174766720e
+      module_name_from_file_guess: File::VirusScan
+      mtime: 1267120239
+      name: blib/lib/File/VirusScan.pm
+      packages:
+        - File::VirusScan
+      primary_package: File::VirusScan
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - ''
+        - File::VirusScan::Result
+        - File::VirusScan::ResultSet
+      version_info:
+        filename: blib/lib/File/VirusScan.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 0.101
+    - bytesize: 2825
+      file_mime_type: ~
+      line_count: ~
+      md5: 553427382b06b36f50c01044ec89ae58
+      module_name_from_file_guess: File::VirusScan::Engine
+      mtime: 1267120212
+      name: blib/lib/File/VirusScan/Engine.pm
+      packages:
+        - File::VirusScan::Engine
+      primary_package: File::VirusScan::Engine
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - IO::Dir
+        - IO::File
+        - base
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2340
+      file_mime_type: ~
+      line_count: ~
+      md5: 285652921b0619712a60f83b88681630
+      module_name_from_file_guess: File::VirusScan::Engine::Command
+      mtime: 1267120222
+      name: blib/lib/File/VirusScan/Engine/Command.pm
+      packages:
+        - File::VirusScan::Engine::Command
+      primary_package: File::VirusScan::Engine::Command
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine
+        - vars
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2908
+      file_mime_type: ~
+      line_count: ~
+      md5: ea4f15f2313bdf41e586c9f97f519883
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Authentium::CommandAntivirus
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+      packages:
+        - File::VirusScan::Engine::Command::Authentium::CommandAntivirus
+      primary_package: File::VirusScan::Engine::Command::Authentium::CommandAntivirus
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - IO::Socket::UNIX
+        - IO::Select
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2399
+      file_mime_type: ~
+      line_count: ~
+      md5: 307873eb6fe85795d4933f03540d7050
+      module_name_from_file_guess: File::VirusScan::Engine::Command::BitDefender::BDC
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+      packages:
+        - File::VirusScan::Engine::Command::BitDefender::BDC
+      primary_package: File::VirusScan::Engine::Command::BitDefender::BDC
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2815
+      file_mime_type: ~
+      line_count: ~
+      md5: 35cc1acb497393e8d4401b18da8b28a6
+      module_name_from_file_guess: File::VirusScan::Engine::Command::CentralCommand::Vexira
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+      packages:
+        - File::VirusScan::Engine::Command::CentralCommand::Vexira
+      primary_package: File::VirusScan::Engine::Command::CentralCommand::Vexira
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2525
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e032c5a58902f7b0c549a80551c46cd
+      module_name_from_file_guess: File::VirusScan::Engine::Command::ClamAV::Clamscan
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+      packages:
+        - File::VirusScan::Engine::Command::ClamAV::Clamscan
+      primary_package: File::VirusScan::Engine::Command::ClamAV::Clamscan
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2388
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f3d4c30da9487e92a1b1eb45fccf51e
+      module_name_from_file_guess: File::VirusScan::Engine::Command::ESET::NOD32
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+      packages:
+        - File::VirusScan::Engine::Command::ESET::NOD32
+      primary_package: File::VirusScan::Engine::Command::ESET::NOD32
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2714
+      file_mime_type: ~
+      line_count: ~
+      md5: a0b173d568d81f83bbcc3021460dbde7
+      module_name_from_file_guess: File::VirusScan::Engine::Command::FPROT::FPROT
+      mtime: 1267120212
+      name: blib/lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+      packages:
+        - File::VirusScan::Engine::Command::FPROT::FPROT
+      primary_package: File::VirusScan::Engine::Command::FPROT::FPROT
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2893
+      file_mime_type: ~
+      line_count: ~
+      md5: 777133e99f54fc0caf3a4488eb1a2d2a
+      module_name_from_file_guess: File::VirusScan::Engine::Command::FSecure::FSAV
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+      packages:
+        - File::VirusScan::Engine::Command::FSecure::FSAV
+      primary_package: File::VirusScan::Engine::Command::FSecure::FSAV
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3080
+      file_mime_type: ~
+      line_count: ~
+      md5: 9dcee8030125d6cfdbda074ef1f970d1
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Kaspersky::AVP5
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+      packages:
+        - File::VirusScan::Engine::Command::Kaspersky::AVP5
+      primary_package: File::VirusScan::Engine::Command::Kaspersky::AVP5
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2677
+      file_mime_type: ~
+      line_count: ~
+      md5: bfac3bda830571b2ed6ad7f532b06dc8
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Kaspersky::Kavscanner
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+      packages:
+        - File::VirusScan::Engine::Command::Kaspersky::Kavscanner
+      primary_package: File::VirusScan::Engine::Command::Kaspersky::Kavscanner
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3744
+      file_mime_type: ~
+      line_count: ~
+      md5: 41926045ee8e36d01bc9613d06efbbcb
+      module_name_from_file_guess: File::VirusScan::Engine::Command::NAI::Uvscan
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+      packages:
+        - File::VirusScan::Engine::Command::NAI::Uvscan
+      primary_package: File::VirusScan::Engine::Command::NAI::Uvscan
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2442
+      file_mime_type: ~
+      line_count: ~
+      md5: ef66d37e5b079d32926b32a6cefa0440
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Norman::NVCC
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+      packages:
+        - File::VirusScan::Engine::Command::Norman::NVCC
+      primary_package: File::VirusScan::Engine::Command::Norman::NVCC
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2831
+      file_mime_type: ~
+      line_count: ~
+      md5: b9805d384bbf95e84d4928140c166b66
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Sophos::Savscan
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+      packages:
+        - File::VirusScan::Engine::Command::Sophos::Savscan
+      primary_package: File::VirusScan::Engine::Command::Sophos::Savscan
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2762
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a2398c927bbf463e1a8fcf505d82e5
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Sophos::Sweep
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+      packages:
+        - File::VirusScan::Engine::Command::Sophos::Sweep
+      primary_package: File::VirusScan::Engine::Command::Sophos::Sweep
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2305
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f54326066c1508d0bb6450334dd9ce2
+      module_name_from_file_guess: File::VirusScan::Engine::Command::Trend::Vscan
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+      packages:
+        - File::VirusScan::Engine::Command::Trend::Vscan
+      primary_package: File::VirusScan::Engine::Command::Trend::Vscan
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Command
+        - vars
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1078
+      file_mime_type: ~
+      line_count: ~
+      md5: c3e77dcd4957b9344b65c7197cbba811
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Daemon.pm
+      packages:
+        - File::VirusScan::Engine::Daemon
+      primary_package: File::VirusScan::Engine::Daemon
+      uses:
+        - strict
+        - warnings
+        - File::VirusScan::Engine
+        - vars
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6333
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a4984deeca0041c415c767908f3186c
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon::ClamAV::Clamd
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+      packages:
+        - File::VirusScan::Engine::Daemon::ClamAV::Clamd
+      primary_package: File::VirusScan::Engine::Daemon::ClamAV::Clamd
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Daemon
+        - vars
+        - IO::Socket::UNIX
+        - IO::Select
+        - Scalar::Util
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8506
+      file_mime_type: ~
+      line_count: ~
+      md5: d4264039eab7876f7e8de41efa4125a3
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon::FPROT::V4
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+      packages:
+        - File::VirusScan::Engine::Daemon::FPROT::V4
+      primary_package: File::VirusScan::Engine::Daemon::FPROT::V4
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Daemon
+        - vars
+        - IO::Socket::INET
+        - Cwd
+        - HTML::TokeParser
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7236
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fcbc89589db84b32f8d2b26e4201945
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon::FPROT::V6
+      mtime: 1267120221
+      name: blib/lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+      packages:
+        - File::VirusScan::Engine::Daemon::FPROT::V6
+      primary_package: File::VirusScan::Engine::Daemon::FPROT::V6
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Daemon
+        - vars
+        - IO::Socket::INET
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3429
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bc2968e8be149bd5e8366f3b7a0b6ec
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon::Sophos::Sophie
+      mtime: 1267120222
+      name: blib/lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+      packages:
+        - File::VirusScan::Engine::Daemon::Sophos::Sophie
+      primary_package: File::VirusScan::Engine::Daemon::Sophos::Sophie
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Daemon
+        - vars
+        - IO::Socket::UNIX
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5981
+      file_mime_type: ~
+      line_count: ~
+      md5: ab7b7b65dd8b8cd81091750e32a2ffe5
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon::Symantec::CSS
+      mtime: 1267120222
+      name: blib/lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+      packages:
+        - File::VirusScan::Engine::Daemon::Symantec::CSS
+      primary_package: File::VirusScan::Engine::Daemon::Symantec::CSS
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Daemon
+        - vars
+        - IO::Socket::INET
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3557
+      file_mime_type: ~
+      line_count: ~
+      md5: 65d4f89d8b87fe2ecea9cf554a0325e0
+      module_name_from_file_guess: File::VirusScan::Engine::Daemon::Trend::Trophie
+      mtime: 1267120222
+      name: blib/lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+      packages:
+        - File::VirusScan::Engine::Daemon::Trend::Trophie
+      primary_package: File::VirusScan::Engine::Daemon::Trend::Trophie
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::VirusScan::Engine::Daemon
+        - vars
+        - IO::Socket::UNIX
+        - Cwd
+        - File::VirusScan::Result
+      version_info:
+        filename: blib/lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2853
+      file_mime_type: ~
+      line_count: ~
+      md5: 648336fb2f5e4ae30a53d3c412ca5f85
+      module_name_from_file_guess: File::VirusScan::Result
+      mtime: 1267120097
+      name: blib/lib/File/VirusScan/Result.pm
+      packages:
+        - File::VirusScan::Result
+      primary_package: File::VirusScan::Result
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/File/VirusScan/Result.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2033
+      file_mime_type: ~
+      line_count: ~
+      md5: b737877a435420a9e56b3a113b0285c6
+      module_name_from_file_guess: File::VirusScan::ResultSet
+      mtime: 1267120097
+      name: blib/lib/File/VirusScan/ResultSet.pm
+      packages:
+        - File::VirusScan::ResultSet
+      primary_package: File::VirusScan::ResultSet
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Data::ResultSet
+      version_info:
+        filename: blib/lib/File/VirusScan/ResultSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/File/VirusScan.pm
+    - blib/lib/File/VirusScan/Engine.pm
+    - blib/lib/File/VirusScan/Engine/Command.pm
+    - blib/lib/File/VirusScan/Engine/Command/Authentium/CommandAntivirus.pm
+    - blib/lib/File/VirusScan/Engine/Command/BitDefender/BDC.pm
+    - blib/lib/File/VirusScan/Engine/Command/CentralCommand/Vexira.pm
+    - blib/lib/File/VirusScan/Engine/Command/ClamAV/Clamscan.pm
+    - blib/lib/File/VirusScan/Engine/Command/ESET/NOD32.pm
+    - blib/lib/File/VirusScan/Engine/Command/FPROT/FPROT.pm
+    - blib/lib/File/VirusScan/Engine/Command/FSecure/FSAV.pm
+    - blib/lib/File/VirusScan/Engine/Command/Kaspersky/AVP5.pm
+    - blib/lib/File/VirusScan/Engine/Command/Kaspersky/Kavscanner.pm
+    - blib/lib/File/VirusScan/Engine/Command/NAI/Uvscan.pm
+    - blib/lib/File/VirusScan/Engine/Command/Norman/NVCC.pm
+    - blib/lib/File/VirusScan/Engine/Command/Sophos/Savscan.pm
+    - blib/lib/File/VirusScan/Engine/Command/Sophos/Sweep.pm
+    - blib/lib/File/VirusScan/Engine/Command/Trend/Vscan.pm
+    - blib/lib/File/VirusScan/Engine/Daemon.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/ClamAV/Clamd.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/FPROT/V4.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/FPROT/V6.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/Sophos/Sophie.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/Symantec/CSS.pm
+    - blib/lib/File/VirusScan/Engine/Daemon/Trend/Trophie.pm
+    - blib/lib/File/VirusScan/Result.pm
+    - blib/lib/File/VirusScan/ResultSet.pm
+  test_info:
+    - bytesize: 1309
+      file_mime_type: ~
+      line_count: ~
+      md5: 758b8963a762fb0bc93420a16cfb6fc9
+      mtime: 1215445911
+      name: t/sophos-sophie.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Daemon::Sophos::Sophie
+    - bytesize: 1151
+      file_mime_type: ~
+      line_count: ~
+      md5: dfb5eadb026d89d70b463121a35614bf
+      mtime: 1267120237
+      name: t/engine-base-class.t
+      uses:
+        - strict
+        - warnings
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine
+    - bytesize: 1677
+      file_mime_type: ~
+      line_count: ~
+      md5: 14f7b69862b03cc0cdc061769928013d
+      mtime: 1214245954
+      name: t/file-virusscan-trivial.t
+      uses:
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - base
+    - bytesize: 792
+      file_mime_type: ~
+      line_count: ~
+      md5: 697b0ea654e48cd37d566f0a8fc24b8c
+      mtime: 1215445911
+      name: t/sophos-savscan.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Sophos::Savscan
+    - bytesize: 784
+      file_mime_type: ~
+      line_count: ~
+      md5: 44d76a7007bfd5dbe442d5e3ff8210b5
+      mtime: 1215445911
+      name: t/sophos-sweep.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Sophos::Sweep
+    - bytesize: 1306
+      file_mime_type: ~
+      line_count: ~
+      md5: 439bfdb38ec8f918a790808bd34c5eaf
+      mtime: 1215445911
+      name: t/symantec-css.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Daemon::Symantec::CSS
+    - bytesize: 774
+      file_mime_type: ~
+      line_count: ~
+      md5: fce67178a40c9e501808bcb1accec6aa
+      mtime: 1215445911
+      name: t/nai-uvscan.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::NAI::Uvscan
+    - bytesize: 816
+      file_mime_type: ~
+      line_count: ~
+      md5: d9a3db799136a662f3b5d430c5e276f7
+      mtime: 1215445911
+      name: t/authentium-command-antivirus.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Authentium::CommandAntivirus
+    - bytesize: 794
+      file_mime_type: ~
+      line_count: ~
+      md5: d919982358a5fcf74a790802e4a79852
+      mtime: 1215445911
+      name: t/kaspersky-avp5.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Kaspersky::AVP5
+    - bytesize: 783
+      file_mime_type: ~
+      line_count: ~
+      md5: 41097000c5e132323570e2ca355384ad
+      mtime: 1215445911
+      name: t/fsecure-fsav.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::FSecure::FSAV
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: b9146fd46436e05aedbe2dc07be9c124
+      mtime: 1215445911
+      name: t/fprot-daemon-v6.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Daemon::FPROT::V6
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: df1df6a71d6b35613a550e20e925ccad
+      mtime: 1215445911
+      name: t/fprot-daemon-v4.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Daemon::FPROT::V4
+    - bytesize: 799
+      file_mime_type: ~
+      line_count: ~
+      md5: cf6db535668a2c895b99d8fdca9f493b
+      mtime: 1215445911
+      name: t/clamav-clamscan.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::ClamAV::Clamscan
+    - bytesize: 787
+      file_mime_type: ~
+      line_count: ~
+      md5: 08e456efb718f19eeea8aebd3db435af
+      mtime: 1215445911
+      name: t/norman-nvcc.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Norman::NVCC
+    - bytesize: 1310
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e2b4f44cc3ab79c341f31907014237c
+      mtime: 1215445911
+      name: t/trend-trophie.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Daemon::Trend::Trophie
+    - bytesize: 812
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d9e0a90adb56b0f8cd79b6ceb4f867d
+      mtime: 1215445911
+      name: t/centralcommand-vexira.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::CentralCommand::Vexira
+    - bytesize: 791
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bd2e739424362ba719bfbe9cff5d0d1
+      mtime: 1215445911
+      name: t/bitdefender-bdc.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::BitDefender::BDC
+    - bytesize: 155
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1214245950
+      name: t/00-load.t
+      uses:
+        - Test::More
+    - bytesize: 784
+      file_mime_type: ~
+      line_count: ~
+      md5: 71f9c00c14b45f6f9803c82617c16721
+      mtime: 1215445911
+      name: t/fprot-command.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::FPROT::FPROT
+    - bytesize: 781
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a1393eb6c051964512f7e5ade8ed994
+      mtime: 1215445911
+      name: t/trend-vscan.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Trend::Vscan
+    - bytesize: 1303
+      file_mime_type: ~
+      line_count: ~
+      md5: c9594d59282cf3359aa15624a6dedd3f
+      mtime: 1215445911
+      name: t/clamav-daemon.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Daemon::ClamAV::Clamd
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: 533113591bba5113f32af41424799a02
+      mtime: 1215445911
+      name: t/kaspersky-kavscanner.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::Kaspersky::Kavscanner
+    - bytesize: 782
+      file_mime_type: ~
+      line_count: ~
+      md5: bb786bd25465465bb778f8f2e5800705
+      mtime: 1215445911
+      name: t/eset-nod32.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - base
+        - Test::More
+        - Test::Exception
+        - File::Temp
+        - File::VirusScan::Engine::Command::ESET::NOD32
+  tests:
+    - t/sophos-sophie.t
+    - t/engine-base-class.t
+    - t/file-virusscan-trivial.t
+    - t/sophos-savscan.t
+    - t/sophos-sweep.t
+    - t/symantec-css.t
+    - t/nai-uvscan.t
+    - t/authentium-command-antivirus.t
+    - t/kaspersky-avp5.t
+    - t/fsecure-fsav.t
+    - t/fprot-daemon-v6.t
+    - t/fprot-daemon-v4.t
+    - t/clamav-clamscan.t
+    - t/norman-nvcc.t
+    - t/trend-trophie.t
+    - t/centralcommand-vexira.t
+    - t/bitdefender-bdc.t
+    - t/00-load.t
+    - t/fprot-command.t
+    - t/trend-vscan.t
+    - t/clamav-daemon.t
+    - t/kaspersky-kavscanner.t
+    - t/eset-nod32.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.S9jq
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1270032600
+  examine_start_time: 1270032580
+  examine_time: 20
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1270032600
+  run_start_time: 1270032579
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

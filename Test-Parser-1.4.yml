@@ -1,0 +1,2363 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.30
+    installdirs: site
+    name: Test-Parser
+    requires:
+      CGI: 0
+      Chart::Graph::Gnuplot: 0
+      Getopt::Long: 0
+      Pod::Usage: 0
+      XML::Simple: 0
+      XML::Twig: 0
+    version: 1.4
+    version_from: ~
+  blib:
+    - blib/lib/Test/Metadata.pm
+    - blib/lib/Test/Parser.pm
+    - blib/lib/Test/Parser/Dbench.pm
+    - blib/lib/Test/Parser/Dbt2.pm
+    - blib/lib/Test/Parser/Iostat.pm
+    - blib/lib/Test/Parser/Iozone.pm
+    - blib/lib/Test/Parser/KernelBuild.pm
+    - blib/lib/Test/Parser/LHCS.pm
+    - blib/lib/Test/Parser/LTP.pm
+    - blib/lib/Test/Parser/NewPyNfs.pm
+    - blib/lib/Test/Parser/Oprofile.pm
+    - blib/lib/Test/Parser/PgOptions.pm
+    - blib/lib/Test/Parser/Readprofile.pm
+    - blib/lib/Test/Parser/Sar.pm
+    - blib/lib/Test/Parser/SysbenchCPU.pm
+    - blib/lib/Test/Parser/SysbenchFileIO.pm
+    - blib/lib/Test/Parser/Sysctl.pm
+    - blib/lib/Test/Parser/Vmstat.pm
+    - blib/man1/parse_iozone.1
+    - blib/man1/parse_test.1
+    - blib/man3/Test::Metadata.3
+    - blib/man3/Test::Parser.3
+    - blib/man3/Test::Parser::Dbench.3
+    - blib/man3/Test::Parser::Dbt2.3
+    - blib/man3/Test::Parser::Iostat.3
+    - blib/man3/Test::Parser::Iozone.3
+    - blib/man3/Test::Parser::KernelBuild.3
+    - blib/man3/Test::Parser::LHCS.3
+    - blib/man3/Test::Parser::LTP.3
+    - blib/man3/Test::Parser::NewPyNfs.3
+    - blib/man3/Test::Parser::Oprofile.3
+    - blib/man3/Test::Parser::PgOptions.3
+    - blib/man3/Test::Parser::Readprofile.3
+    - blib/man3/Test::Parser::Sar.3
+    - blib/man3/Test::Parser::SysbenchCPU.3
+    - blib/man3/Test::Parser::SysbenchFileIO.3
+    - blib/man3/Test::Parser::Sysctl.3
+    - blib/man3/Test::Parser::Vmstat.3
+    - blib/script/kernel2trpi
+    - blib/script/parse_build_kernel
+    - blib/script/parse_iozone
+    - blib/script/parse_ltp
+    - blib/script/parse_newpynfs
+    - blib/script/parse_sysbench_cpu
+    - blib/script/parse_sysbench_fileio
+    - blib/script/parse_test
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Chart::Graph::Gnuplot 0 not found.
+    Warning: prerequisite XML::Simple 0 not found.
+    Warning: prerequisite XML::Twig 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Test::Parser
+  build_output: |
+    cp lib/Test/Parser/Iostat.pm blib/lib/Test/Parser/Iostat.pm
+    cp lib/Test/Parser/SysbenchCPU.pm blib/lib/Test/Parser/SysbenchCPU.pm
+    cp lib/Test/Parser/NewPyNfs.pm blib/lib/Test/Parser/NewPyNfs.pm
+    cp lib/Test/Parser/PgOptions.pm blib/lib/Test/Parser/PgOptions.pm
+    cp lib/Test/Parser/LTP.pm blib/lib/Test/Parser/LTP.pm
+    cp lib/Test/Parser/Readprofile.pm blib/lib/Test/Parser/Readprofile.pm
+    cp lib/Test/Parser.pm blib/lib/Test/Parser.pm
+    cp lib/Test/Parser/Oprofile.pm blib/lib/Test/Parser/Oprofile.pm
+    cp lib/Test/Parser/LHCS.pm blib/lib/Test/Parser/LHCS.pm
+    cp lib/Test/Parser/Dbench.pm blib/lib/Test/Parser/Dbench.pm
+    cp lib/Test/Parser/SysbenchFileIO.pm blib/lib/Test/Parser/SysbenchFileIO.pm
+    cp lib/Test/Parser/KernelBuild.pm blib/lib/Test/Parser/KernelBuild.pm
+    cp lib/Test/Parser/Sar.pm blib/lib/Test/Parser/Sar.pm
+    cp lib/Test/Metadata.pm blib/lib/Test/Metadata.pm
+    cp lib/Test/Parser/Dbt2.pm blib/lib/Test/Parser/Dbt2.pm
+    cp lib/Test/Parser/Iozone.pm blib/lib/Test/Parser/Iozone.pm
+    cp lib/Test/Parser/Sysctl.pm blib/lib/Test/Parser/Sysctl.pm
+    cp lib/Test/Parser/Vmstat.pm blib/lib/Test/Parser/Vmstat.pm
+    cp scripts/parse_sysbench_fileio blib/script/parse_sysbench_fileio
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_sysbench_fileio
+    cp scripts/parse_sysbench_cpu blib/script/parse_sysbench_cpu
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_sysbench_cpu
+    cp scripts/parse_newpynfs blib/script/parse_newpynfs
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_newpynfs
+    cp scripts/parse_ltp blib/script/parse_ltp
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_ltp
+    cp scripts/parse_test blib/script/parse_test
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_test
+    cp scripts/parse_iozone blib/script/parse_iozone
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_iozone
+    cp scripts/kernel2trpi blib/script/kernel2trpi
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/kernel2trpi
+    cp scripts/parse_build_kernel blib/script/parse_build_kernel
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/parse_build_kernel
+    Manifying blib/man1/parse_test.1
+    Manifying blib/man1/parse_iozone.1
+    Manifying blib/man3/Test::Parser::Iostat.3
+    Manifying blib/man3/Test::Parser::SysbenchCPU.3
+    Manifying blib/man3/Test::Parser::NewPyNfs.3
+    Manifying blib/man3/Test::Parser::LTP.3
+    Manifying blib/man3/Test::Parser::PgOptions.3
+    Manifying blib/man3/Test::Parser::Readprofile.3
+    Manifying blib/man3/Test::Parser.3
+    Manifying blib/man3/Test::Parser::Oprofile.3
+    Manifying blib/man3/Test::Parser::LHCS.3
+    Manifying blib/man3/Test::Parser::Dbench.3
+    Manifying blib/man3/Test::Parser::SysbenchFileIO.3
+    Manifying blib/man3/Test::Parser::KernelBuild.3
+    Manifying blib/man3/Test::Parser::Sar.3
+    Manifying blib/man3/Test::Metadata.3
+    Manifying blib/man3/Test::Parser::Dbt2.3
+    Manifying blib/man3/Test::Parser::Vmstat.3
+    Manifying blib/man3/Test::Parser::Sysctl.3
+    Manifying blib/man3/Test::Parser::Iozone.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV/Test-Parser-1.4/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV/Test-Parser-1.4
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV/Test-Parser-1.4/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV/Test-Parser-1.4/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: BRYCE
+  dist_basename: Test-Parser-1.4.tar.gz
+  dist_date: 1157757600
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV/Test-Parser-1.4
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV/Test-Parser-1.4
+  dist_file: /home/brian/CPAN/authors/id/B/BR/BRYCE/Test-Parser-1.4.tar.gz
+  dist_md5: 3c6719d5aa579a639de8b6117fe6a35a
+  dist_size: 457463
+  manifest:
+    - ChangeLog
+    - INSTALL
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - Test-Parser-1.3.tar.gz
+    - doc/TODO
+    - lib/Test/Metadata.pm
+    - lib/Test/Parser.pm
+    - lib/Test/Parser/Dbench.pm
+    - lib/Test/Parser/Dbt2.pm
+    - lib/Test/Parser/Iostat.pm
+    - lib/Test/Parser/Iozone.pm
+    - lib/Test/Parser/KernelBuild.pm
+    - lib/Test/Parser/LHCS.pm
+    - lib/Test/Parser/LTP.pm
+    - lib/Test/Parser/NewPyNfs.pm
+    - lib/Test/Parser/Oprofile.pm
+    - lib/Test/Parser/PgOptions.pm
+    - lib/Test/Parser/Readprofile.pm
+    - lib/Test/Parser/Sar.pm
+    - lib/Test/Parser/SysbenchCPU.pm
+    - lib/Test/Parser/SysbenchFileIO.pm
+    - lib/Test/Parser/Sysctl.pm
+    - lib/Test/Parser/Vmstat.pm
+    - scripts/kernel2trpi
+    - scripts/ltp.log
+    - scripts/parse_build_kernel
+    - scripts/parse_iozone
+    - scripts/parse_ltp
+    - scripts/parse_newpynfs
+    - scripts/parse_sysbench_cpu
+    - scripts/parse_sysbench_fileio
+    - scripts/parse_test
+    - t/00_initialize.t
+    - t/01_script_compile.t
+    - t/02_kernel_build.log
+    - t/02_kernel_build.t
+    - t/03_ltp.log
+    - t/03_ltp.t
+    - t/04_lhcs.log
+    - t/04_lhcs.t
+    - t/05_newpynfs.log
+    - t/05_newpynfs.t
+    - t/06_iostat.log
+    - t/06_iostat.t
+    - t/07_oprofile.log
+    - t/07_oprofile.t
+    - t/08_pgoptions.log
+    - t/08_pgoptions.t
+    - t/09_readprofile.log
+    - t/09_readprofile.t
+    - t/10_sar.log
+    - t/10_sar.t
+    - t/11_sysctl.log
+    - t/11_sysctl.t
+    - t/12_vmstat.log
+    - t/12_vmstat.t
+    - t/13_iozone.log
+    - t/13_iozone.t
+    - t/zz_dump_config.t
+  manifest_file_info:
+    - bytesize: 1287
+      file_mime_type: ~
+      line_count: ~
+      md5: 02f0b547c2779d25cff89672135f20e3
+      mtime: 1157755063
+      name: ChangeLog
+    - bytesize: 1015
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1147913360
+      name: INSTALL
+    - bytesize: 1203
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1155168016
+      name: MANIFEST
+    - bytesize: 509
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1157757512
+      name: META.yml
+    - bytesize: 1169
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1157755546
+      name: Makefile.PL
+    - bytesize: 1663
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1151121951
+      name: README
+    - bytesize: 69802
+      file_mime_type: ~
+      line_count: ~
+      md5: be371bc45ff9ad939016c55a1d1bcbf0
+      mtime: 1151625667
+      name: Test-Parser-1.3.tar.gz
+    - bytesize: 520
+      file_mime_type: ~
+      line_count: ~
+      md5: 496bbe200ea084d0b996624aab40e39b
+      mtime: 1151120733
+      name: doc/TODO
+    - bytesize: 10097
+      file_mime_type: ~
+      line_count: ~
+      md5: 0348979b3fc72b280e7fce0d96d75764
+      mtime: 1151625447
+      name: lib/Test/Metadata.pm
+    - bytesize: 15690
+      file_mime_type: ~
+      line_count: ~
+      md5: c4d1e175ab0ec6f4a54c72b564e5501c
+      mtime: 1157755563
+      name: lib/Test/Parser.pm
+    - bytesize: 4669
+      file_mime_type: ~
+      line_count: ~
+      md5: 30739d1e63f70f267f53a8bf70c61877
+      mtime: 1157755984
+      name: lib/Test/Parser/Dbench.pm
+    - bytesize: 53971
+      file_mime_type: ~
+      line_count: ~
+      md5: d64034ade7cad72373876d6ef320915f
+      mtime: 1157755984
+      name: lib/Test/Parser/Dbt2.pm
+    - bytesize: 14099
+      file_mime_type: ~
+      line_count: ~
+      md5: 35579736c408ab5580afb062ae0fe9b5
+      mtime: 1157755984
+      name: lib/Test/Parser/Iostat.pm
+    - bytesize: 12465
+      file_mime_type: ~
+      line_count: ~
+      md5: 47742b116b398170fce6fcc39db2c869
+      mtime: 1157755984
+      name: lib/Test/Parser/Iozone.pm
+    - bytesize: 4204
+      file_mime_type: ~
+      line_count: ~
+      md5: 1dd337dd3083cc015136c655f04bfac0
+      mtime: 1157755984
+      name: lib/Test/Parser/KernelBuild.pm
+    - bytesize: 2622
+      file_mime_type: ~
+      line_count: ~
+      md5: eb016b9c5cc8d76f886d0968aa8e00ac
+      mtime: 1157755984
+      name: lib/Test/Parser/LHCS.pm
+    - bytesize: 4882
+      file_mime_type: ~
+      line_count: ~
+      md5: 041dfd60ff5d7c1223611ee9cc9c5132
+      mtime: 1157755984
+      name: lib/Test/Parser/LTP.pm
+    - bytesize: 2912
+      file_mime_type: ~
+      line_count: ~
+      md5: ba204fe51cdfa68040ad3c9cf9fc538c
+      mtime: 1157755984
+      name: lib/Test/Parser/NewPyNfs.pm
+    - bytesize: 2545
+      file_mime_type: ~
+      line_count: ~
+      md5: c91dfc2ab1fc411d974669217ffed2b6
+      mtime: 1157755984
+      name: lib/Test/Parser/Oprofile.pm
+    - bytesize: 2751
+      file_mime_type: ~
+      line_count: ~
+      md5: f3d60c379fe811dedaaea9d20983bfca
+      mtime: 1157755984
+      name: lib/Test/Parser/PgOptions.pm
+    - bytesize: 2361
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a2aaaa13d6595b79b60a58c088b3cae
+      mtime: 1157755984
+      name: lib/Test/Parser/Readprofile.pm
+    - bytesize: 36727
+      file_mime_type: ~
+      line_count: ~
+      md5: 6aca9074e7debb616b47c79211ea9543
+      mtime: 1157755984
+      name: lib/Test/Parser/Sar.pm
+    - bytesize: 7234
+      file_mime_type: ~
+      line_count: ~
+      md5: d6a34af989b375f8ca101f754985b587
+      mtime: 1157755984
+      name: lib/Test/Parser/SysbenchCPU.pm
+    - bytesize: 16855
+      file_mime_type: ~
+      line_count: ~
+      md5: 77adee1bc8ac7b9d74ad4480ad1dd361
+      mtime: 1157755984
+      name: lib/Test/Parser/SysbenchFileIO.pm
+    - bytesize: 2277
+      file_mime_type: ~
+      line_count: ~
+      md5: d9e01dfbba7ccb4a492fc8c633434ef9
+      mtime: 1157755984
+      name: lib/Test/Parser/Sysctl.pm
+    - bytesize: 10207
+      file_mime_type: ~
+      line_count: ~
+      md5: 1663fdb57cb6d737e59a2bfb31735054
+      mtime: 1157755984
+      name: lib/Test/Parser/Vmstat.pm
+    - bytesize: 656
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a884800af4d0d49bf319506e2f6e9e1
+      mtime: 1147913360
+      name: scripts/kernel2trpi
+    - bytesize: 73345
+      file_mime_type: ~
+      line_count: ~
+      md5: ba75789cb581d69928c7c34993d63237
+      mtime: 1147913360
+      name: scripts/ltp.log
+    - bytesize: 1068
+      file_mime_type: ~
+      line_count: ~
+      md5: d58419ba8f61cc77994297fb1c52c536
+      mtime: 1147913360
+      name: scripts/parse_build_kernel
+    - bytesize: 7911
+      file_mime_type: ~
+      line_count: ~
+      md5: 151e99a3b9901284ba30b3c340f3b255
+      mtime: 1152840572
+      name: scripts/parse_iozone
+    - bytesize: 698
+      file_mime_type: ~
+      line_count: ~
+      md5: 0848f7bf6a9ae428621847357c7eb49a
+      mtime: 1151627823
+      name: scripts/parse_ltp
+    - bytesize: 767
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c12ac0936c49cea5af1f52ba28522ea
+      mtime: 1151119706
+      name: scripts/parse_newpynfs
+    - bytesize: 517
+      file_mime_type: ~
+      line_count: ~
+      md5: b1389f31b3b1c2c3b5da7a114c094b66
+      mtime: 1157754622
+      name: scripts/parse_sysbench_cpu
+    - bytesize: 3548
+      file_mime_type: ~
+      line_count: ~
+      md5: 742fbe3c33979128ca338b2833578dca
+      mtime: 1154366777
+      name: scripts/parse_sysbench_fileio
+    - bytesize: 1472
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c5748e7866a9e0e4d415329074a44d5
+      mtime: 1157752027
+      name: scripts/parse_test
+    - bytesize: 246
+      file_mime_type: ~
+      line_count: ~
+      md5: 49374a95f5293bc999d58f6b58caa379
+      mtime: 1147913359
+      name: t/00_initialize.t
+    - bytesize: 746
+      file_mime_type: ~
+      line_count: ~
+      md5: b8a7b361a38f698b2018a3e4a053de7f
+      mtime: 1147913359
+      name: t/01_script_compile.t
+    - bytesize: 112302
+      file_mime_type: ~
+      line_count: ~
+      md5: b090196ab2da3f77eda7252e4d366674
+      mtime: 1147913359
+      name: t/02_kernel_build.log
+    - bytesize: 406
+      file_mime_type: ~
+      line_count: ~
+      md5: dff0911a3bdea4774b9454bcc65ef299
+      mtime: 1147913359
+      name: t/02_kernel_build.t
+    - bytesize: 49274
+      file_mime_type: ~
+      line_count: ~
+      md5: a7071c722eeafbf286914bdbb22a0716
+      mtime: 1147913359
+      name: t/03_ltp.log
+    - bytesize: 500
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c3acbaeb86427caf05d1da27f95ba71
+      mtime: 1147913359
+      name: t/03_ltp.t
+    - bytesize: 2049
+      file_mime_type: ~
+      line_count: ~
+      md5: 13f396bf0328b8ceeccff3ec95abeba4
+      mtime: 1147913359
+      name: t/04_lhcs.log
+    - bytesize: 499
+      file_mime_type: ~
+      line_count: ~
+      md5: e2b235fd01d0f770e201d432f42feb50
+      mtime: 1147913359
+      name: t/04_lhcs.t
+    - bytesize: 52468
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ce8aa20d701655cf61e1fbfd68b42ed
+      mtime: 1151116153
+      name: t/05_newpynfs.log
+    - bytesize: 515
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d7ab18f69c0046c95f2cbc477633150
+      mtime: 1151120018
+      name: t/05_newpynfs.t
+    - bytesize: 1036810
+      file_mime_type: ~
+      line_count: ~
+      md5: 856db194f74b43c946480a852cdcf899
+      mtime: 1152760790
+      name: t/06_iostat.log
+    - bytesize: 569
+      file_mime_type: ~
+      line_count: ~
+      md5: 188a648821bb113b86c21f6de2b6abcc
+      mtime: 1152760796
+      name: t/06_iostat.t
+    - bytesize: 156502
+      file_mime_type: ~
+      line_count: ~
+      md5: cc710dbe73e9f97387a5c6b2a2af748a
+      mtime: 1152760808
+      name: t/07_oprofile.log
+    - bytesize: 553
+      file_mime_type: ~
+      line_count: ~
+      md5: 48ca155561df9768c3b2a4c720275e44
+      mtime: 1152760817
+      name: t/07_oprofile.t
+    - bytesize: 21864
+      file_mime_type: ~
+      line_count: ~
+      md5: d9de5925ae44521b8f6daa51637009ed
+      mtime: 1152760831
+      name: t/08_pgoptions.log
+    - bytesize: 955
+      file_mime_type: ~
+      line_count: ~
+      md5: 3af1b0a66110ea56a07fdbf63e5cdec9
+      mtime: 1152760836
+      name: t/08_pgoptions.t
+    - bytesize: 66379
+      file_mime_type: ~
+      line_count: ~
+      md5: f67c5fb4630aa6c861aecc39846fd7e8
+      mtime: 1152760849
+      name: t/09_readprofile.log
+    - bytesize: 562
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e7cfd25ca57a1b8e91095a2c7e19f87
+      mtime: 1152760854
+      name: t/09_readprofile.t
+    - bytesize: 907945
+      file_mime_type: ~
+      line_count: ~
+      md5: acb91d139aa5ae88d8f14d4fe93b5545
+      mtime: 1149549199
+      name: t/10_sar.log
+    - bytesize: 3215
+      file_mime_type: ~
+      line_count: ~
+      md5: 06a1905d80b2fc31f9ec5efcccc6abde
+      mtime: 1149549199
+      name: t/10_sar.t
+    - bytesize: 15465
+      file_mime_type: ~
+      line_count: ~
+      md5: b58f237f8937465f49440f1e05c686d6
+      mtime: 1152760870
+      name: t/11_sysctl.log
+    - bytesize: 553
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c7d8063cae9b2856161cc40ddcfff55
+      mtime: 1152760875
+      name: t/11_sysctl.t
+    - bytesize: 8297
+      file_mime_type: ~
+      line_count: ~
+      md5: 0766fef74069fd4b6eff60b3cfb4ef07
+      mtime: 1152760891
+      name: t/12_vmstat.log
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: cbce18f277c6f5ea1f51c28449e5688a
+      mtime: 1152760896
+      name: t/12_vmstat.t
+    - bytesize: 24577
+      file_mime_type: ~
+      line_count: ~
+      md5: 653938f1e2c38765517799581a97f3a1
+      mtime: 1157754785
+      name: t/13_iozone.log
+    - bytesize: 575
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a2be64ee9d026852b218a9ab79888e7
+      mtime: 1157754817
+      name: t/13_iozone.t
+    - bytesize: 931
+      file_mime_type: ~
+      line_count: ~
+      md5: 813d60b0c0f4a12adb4e7191d7e56f64
+      mtime: 1147913359
+      name: t/zz_dump_config.t
+  module_info:
+    - bytesize: 10097
+      file_mime_type: ~
+      line_count: ~
+      md5: 3256fadd96998c3cc259204473dbf342
+      module_name_from_file_guess: Test::Metadata
+      mtime: 1151625447
+      name: blib/lib/Test/Metadata.pm
+      packages:
+        - Test::Metadata
+      primary_package: Test::Metadata
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Twig
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Metadata.pm
+        identifier: VERSION
+        line_number: 65
+        sigil: $
+        value: 1.3
+    - bytesize: 15690
+      file_mime_type: ~
+      line_count: ~
+      md5: 521fcb39eb16a157c7211bd3c9e019f1
+      module_name_from_file_guess: Test::Parser
+      mtime: 1157755563
+      name: blib/lib/Test/Parser.pm
+      packages:
+        - Test::Parser
+      primary_package: Test::Parser
+      uses:
+        - strict
+        - warnings
+        - File::Basename
+        - fields
+        - vars
+        - constant
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Test/Parser.pm
+        identifier: VERSION
+        line_number: 85
+        sigil: $
+        value: 1.4
+    - bytesize: 4669
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b6de6d0a0df71cf21b387205e00b5ac
+      module_name_from_file_guess: Test::Parser::Dbench
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Dbench.pm
+      packages:
+        - Test::Parser::Dbench
+      primary_package: Test::Parser::Dbench
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Dbench.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.4
+    - bytesize: 53971
+      file_mime_type: ~
+      line_count: ~
+      md5: d2d549a2953dde34b8c6b4067495ee07
+      module_name_from_file_guess: Test::Parser::Dbt2
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Dbt2.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Chart::Graph::Gnuplot
+        - CGI
+        - POSIX
+        - Test::Parser
+        - Test::Parser::Iostat
+        - Test::Parser::Oprofile
+        - Test::Parser::PgOptions
+        - Test::Parser::Readprofile
+        - Test::Parser::Sar
+        - Test::Parser::Sysctl
+        - Test::Parser::Vmstat
+        - XML::Simple
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Dbt2.pm
+        identifier: VERSION
+        line_number: 93
+        sigil: $
+        value: 1.4
+    - bytesize: 14099
+      file_mime_type: ~
+      line_count: ~
+      md5: 750a44c60d1da27cf5c4eb33f7c068fb
+      module_name_from_file_guess: Test::Parser::Iostat
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Iostat.pm
+      packages:
+        - Test::Parser::Iostat
+      primary_package: Test::Parser::Iostat
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Iostat.pm
+        identifier: VERSION
+        line_number: 43
+        sigil: $
+        value: 1.4
+    - bytesize: 12465
+      file_mime_type: ~
+      line_count: ~
+      md5: 30d2708de3a436de2a7bc4ae0b29fe9e
+      module_name_from_file_guess: Test::Parser::Iozone
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Iozone.pm
+      packages:
+        - Test::Parser::Iozone
+      primary_package: Test::Parser::Iozone
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/Test/Parser/Iozone.pm
+        identifier: VERSION
+        line_number: 44
+        sigil: $
+        value: 1.4
+    - bytesize: 4204
+      file_mime_type: ~
+      line_count: ~
+      md5: 839096f2dd1060861aaf1e80004ee563
+      module_name_from_file_guess: Test::Parser::KernelBuild
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/KernelBuild.pm
+      packages:
+        - Test::Parser::KernelBuild
+      primary_package: Test::Parser::KernelBuild
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/KernelBuild.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 1.4
+    - bytesize: 2622
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a41f69e494b669b35d55b57d6a8ac55
+      module_name_from_file_guess: Test::Parser::LHCS
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/LHCS.pm
+      packages:
+        - Test::Parser::LHCS
+      primary_package: Test::Parser::LHCS
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/LHCS.pm
+        identifier: VERSION
+        line_number: 45
+        sigil: $
+        value: 1.4
+    - bytesize: 4882
+      file_mime_type: ~
+      line_count: ~
+      md5: a5f05ef742ecf57fa3da1929314d01a8
+      module_name_from_file_guess: Test::Parser::LTP
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/LTP.pm
+      packages:
+        - Test::Parser::LTP
+      primary_package: Test::Parser::LTP
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/LTP.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 1.4
+    - bytesize: 2912
+      file_mime_type: ~
+      line_count: ~
+      md5: 0acdac052447f59c1d3ae3c431db2b54
+      module_name_from_file_guess: Test::Parser::NewPyNfs
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/NewPyNfs.pm
+      packages:
+        - Test::Parser::NewPyNfs
+      primary_package: Test::Parser::NewPyNfs
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/NewPyNfs.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: 1.4
+    - bytesize: 2545
+      file_mime_type: ~
+      line_count: ~
+      md5: 184bf6e050d7de6ce6187d5b6a136cc4
+      module_name_from_file_guess: Test::Parser::Oprofile
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Oprofile.pm
+      packages:
+        - Test::Parser::Oprofile
+      primary_package: Test::Parser::Oprofile
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Oprofile.pm
+        identifier: VERSION
+        line_number: 41
+        sigil: $
+        value: 1.4
+    - bytesize: 2751
+      file_mime_type: ~
+      line_count: ~
+      md5: 500b5bab8a915d5d7894612dedc81e8c
+      module_name_from_file_guess: Test::Parser::PgOptions
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/PgOptions.pm
+      packages:
+        - Test::Parser::PgOptions
+      primary_package: Test::Parser::PgOptions
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/PgOptions.pm
+        identifier: VERSION
+        line_number: 39
+        sigil: $
+        value: 1.4
+    - bytesize: 2361
+      file_mime_type: ~
+      line_count: ~
+      md5: 27cf76929c26e818f0852d21fc3fabb7
+      module_name_from_file_guess: Test::Parser::Readprofile
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Readprofile.pm
+      packages:
+        - Test::Parser::Readprofile
+      primary_package: Test::Parser::Readprofile
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Readprofile.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.4
+    - bytesize: 36727
+      file_mime_type: ~
+      line_count: ~
+      md5: d19fd3d8303079c15b6096063c835faa
+      module_name_from_file_guess: Test::Parser::Sar
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Sar.pm
+      packages:
+        - Test::Parser::Sar
+      primary_package: Test::Parser::Sar
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - File::Basename
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Sar.pm
+        identifier: VERSION
+        line_number: 57
+        sigil: $
+        value: 1.4
+    - bytesize: 7234
+      file_mime_type: ~
+      line_count: ~
+      md5: 26559952c65c6cf507a49d177884b80e
+      module_name_from_file_guess: Test::Parser::SysbenchCPU
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/SysbenchCPU.pm
+      packages:
+        - Test::Parser::SysbenchCPU
+      primary_package: Test::Parser::SysbenchCPU
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/SysbenchCPU.pm
+        identifier: VERSION
+        line_number: 55
+        sigil: $
+        value: 1.4
+    - bytesize: 16855
+      file_mime_type: ~
+      line_count: ~
+      md5: 01e59fe3b7f6d699c84be990ab712f6b
+      module_name_from_file_guess: Test::Parser::SysbenchFileIO
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/SysbenchFileIO.pm
+      packages:
+        - Test::Parser::SysbenchFileIO
+      primary_package: Test::Parser::SysbenchFileIO
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/SysbenchFileIO.pm
+        identifier: VERSION
+        line_number: 76
+        sigil: $
+        value: 1.4
+    - bytesize: 2277
+      file_mime_type: ~
+      line_count: ~
+      md5: 13ec527ef99a77816dc2eacf0fa400ea
+      module_name_from_file_guess: Test::Parser::Sysctl
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Sysctl.pm
+      packages:
+        - Test::Parser::Sysctl
+      primary_package: Test::Parser::Sysctl
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Sysctl.pm
+        identifier: VERSION
+        line_number: 39
+        sigil: $
+        value: 1.4
+    - bytesize: 10207
+      file_mime_type: ~
+      line_count: ~
+      md5: acc9c7ded8325d1270ce57ecfaf86c78
+      module_name_from_file_guess: Test::Parser::Vmstat
+      mtime: 1157755984
+      name: blib/lib/Test/Parser/Vmstat.pm
+      packages:
+        - Test::Parser::Vmstat
+      primary_package: Test::Parser::Vmstat
+      uses:
+        - strict
+        - warnings
+        - Test::Parser
+        - XML::Simple
+        - Chart::Graph::Gnuplot
+        - base
+        - fields
+        - vars
+      version_info:
+        filename: blib/lib/Test/Parser/Vmstat.pm
+        identifier: VERSION
+        line_number: 40
+        sigil: $
+        value: 1.4
+  modules:
+    - blib/lib/Test/Metadata.pm
+    - blib/lib/Test/Parser.pm
+    - blib/lib/Test/Parser/Dbench.pm
+    - blib/lib/Test/Parser/Dbt2.pm
+    - blib/lib/Test/Parser/Iostat.pm
+    - blib/lib/Test/Parser/Iozone.pm
+    - blib/lib/Test/Parser/KernelBuild.pm
+    - blib/lib/Test/Parser/LHCS.pm
+    - blib/lib/Test/Parser/LTP.pm
+    - blib/lib/Test/Parser/NewPyNfs.pm
+    - blib/lib/Test/Parser/Oprofile.pm
+    - blib/lib/Test/Parser/PgOptions.pm
+    - blib/lib/Test/Parser/Readprofile.pm
+    - blib/lib/Test/Parser/Sar.pm
+    - blib/lib/Test/Parser/SysbenchCPU.pm
+    - blib/lib/Test/Parser/SysbenchFileIO.pm
+    - blib/lib/Test/Parser/Sysctl.pm
+    - blib/lib/Test/Parser/Vmstat.pm
+  test_info:
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: cbce18f277c6f5ea1f51c28449e5688a
+      mtime: 1152760896
+      name: t/12_vmstat.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Vmstat
+    - bytesize: 931
+      file_mime_type: ~
+      line_count: ~
+      md5: 813d60b0c0f4a12adb4e7191d7e56f64
+      mtime: 1147913359
+      name: t/zz_dump_config.t
+      uses:
+        - Config
+    - bytesize: 499
+      file_mime_type: ~
+      line_count: ~
+      md5: e2b235fd01d0f770e201d432f42feb50
+      mtime: 1147913359
+      name: t/04_lhcs.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::LHCS
+    - bytesize: 406
+      file_mime_type: ~
+      line_count: ~
+      md5: dff0911a3bdea4774b9454bcc65ef299
+      mtime: 1147913359
+      name: t/02_kernel_build.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::KernelBuild
+    - bytesize: 562
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e7cfd25ca57a1b8e91095a2c7e19f87
+      mtime: 1152760854
+      name: t/09_readprofile.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Readprofile
+    - bytesize: 500
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c3acbaeb86427caf05d1da27f95ba71
+      mtime: 1147913359
+      name: t/03_ltp.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::LTP
+    - bytesize: 515
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d7ab18f69c0046c95f2cbc477633150
+      mtime: 1151120018
+      name: t/05_newpynfs.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::NewPyNfs
+    - bytesize: 553
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c7d8063cae9b2856161cc40ddcfff55
+      mtime: 1152760875
+      name: t/11_sysctl.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Sysctl
+    - bytesize: 553
+      file_mime_type: ~
+      line_count: ~
+      md5: 48ca155561df9768c3b2a4c720275e44
+      mtime: 1152760817
+      name: t/07_oprofile.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Oprofile
+    - bytesize: 955
+      file_mime_type: ~
+      line_count: ~
+      md5: 3af1b0a66110ea56a07fdbf63e5cdec9
+      mtime: 1152760836
+      name: t/08_pgoptions.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::PgOptions
+    - bytesize: 575
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a2be64ee9d026852b218a9ab79888e7
+      mtime: 1157754817
+      name: t/13_iozone.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Iozone
+    - bytesize: 746
+      file_mime_type: ~
+      line_count: ~
+      md5: b8a7b361a38f698b2018a3e4a053de7f
+      mtime: 1147913359
+      name: t/01_script_compile.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 3215
+      file_mime_type: ~
+      line_count: ~
+      md5: 06a1905d80b2fc31f9ec5efcccc6abde
+      mtime: 1149549199
+      name: t/10_sar.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Sar
+    - bytesize: 569
+      file_mime_type: ~
+      line_count: ~
+      md5: 188a648821bb113b86c21f6de2b6abcc
+      mtime: 1152760796
+      name: t/06_iostat.t
+      uses:
+        - strict
+        - Test::More
+        - Test::Parser::Iostat
+    - bytesize: 246
+      file_mime_type: ~
+      line_count: ~
+      md5: 49374a95f5293bc999d58f6b58caa379
+      mtime: 1147913359
+      name: t/00_initialize.t
+      uses:
+        - strict
+        - Test::More
+  tests:
+    - t/12_vmstat.t
+    - t/zz_dump_config.t
+    - t/04_lhcs.t
+    - t/02_kernel_build.t
+    - t/09_readprofile.t
+    - t/03_ltp.t
+    - t/05_newpynfs.t
+    - t/11_sysctl.t
+    - t/07_oprofile.t
+    - t/08_pgoptions.t
+    - t/13_iozone.t
+    - t/01_script_compile.t
+    - t/10_sar.t
+    - t/06_iostat.t
+    - t/00_initialize.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-51256._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 51256
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269020400
+  examine_start_time: 1269020362
+  examine_time: 38
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 51256
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269020400
+  run_start_time: 1269020362
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

@@ -1,0 +1,3964 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: A fully event-driven IRC client module
+    author:
+      - 'Chris Williams <chris@bingosnet.co.uk>'
+    build_requires:
+      Test::More: 0.47
+    distribution_type: module
+    generated_by: Module::Install version 0.79
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: POE-Component-IRC
+    no_index:
+      directory:
+        - examples
+        - inc
+        - t
+    requires:
+      Encode: 0
+      Encode::Guess: 0
+      POE: 0.3202
+      POE::Component::Pluggable: 1.12
+      POE::Driver::SysRW: 0
+      POE::Filter::IRCD: 1.7
+      POE::Filter::Line: 0
+      POE::Filter::Stackable: 0
+      POE::Filter::Stream: 0
+      POE::Wheel::ReadWrite: 0
+      POE::Wheel::SocketFactory: 0
+      perl: 5.6.0
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 6.04
+  blib:
+    - blib/lib/POE/Component/IRC.pm
+    - blib/lib/POE/Component/IRC/Common.pm
+    - blib/lib/POE/Component/IRC/Constants.pm
+    - blib/lib/POE/Component/IRC/Cookbook.pod
+    - blib/lib/POE/Component/IRC/Cookbook/BasicBot.pod
+    - blib/lib/POE/Component/IRC/Cookbook/Disconnecting.pod
+    - blib/lib/POE/Component/IRC/Cookbook/MegaHAL.pod
+    - blib/lib/POE/Component/IRC/Cookbook/Reload.pod
+    - blib/lib/POE/Component/IRC/Cookbook/Resolver.pod
+    - blib/lib/POE/Component/IRC/Cookbook/Seen.pod
+    - blib/lib/POE/Component/IRC/Cookbook/Translator.pod
+    - blib/lib/POE/Component/IRC/Plugin.pm
+    - blib/lib/POE/Component/IRC/Plugin/AutoJoin.pm
+    - blib/lib/POE/Component/IRC/Plugin/BotAddressed.pm
+    - blib/lib/POE/Component/IRC/Plugin/BotCommand.pm
+    - blib/lib/POE/Component/IRC/Plugin/BotTraffic.pm
+    - blib/lib/POE/Component/IRC/Plugin/CTCP.pm
+    - blib/lib/POE/Component/IRC/Plugin/Connector.pm
+    - blib/lib/POE/Component/IRC/Plugin/Console.pm
+    - blib/lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+    - blib/lib/POE/Component/IRC/Plugin/DCC.pm
+    - blib/lib/POE/Component/IRC/Plugin/FollowTail.pm
+    - blib/lib/POE/Component/IRC/Plugin/ISupport.pm
+    - blib/lib/POE/Component/IRC/Plugin/Logger.pm
+    - blib/lib/POE/Component/IRC/Plugin/NickReclaim.pm
+    - blib/lib/POE/Component/IRC/Plugin/NickServID.pm
+    - blib/lib/POE/Component/IRC/Plugin/PlugMan.pm
+    - blib/lib/POE/Component/IRC/Plugin/Proxy.pm
+    - blib/lib/POE/Component/IRC/Plugin/Whois.pm
+    - blib/lib/POE/Component/IRC/Projects.pod
+    - blib/lib/POE/Component/IRC/Qnet.pm
+    - blib/lib/POE/Component/IRC/Qnet/State.pm
+    - blib/lib/POE/Component/IRC/State.pm
+    - blib/lib/POE/Filter/IRC.pm
+    - blib/lib/POE/Filter/IRC/Compat.pm
+    - blib/man3/POE::Component::IRC.3
+    - blib/man3/POE::Component::IRC::Common.3
+    - blib/man3/POE::Component::IRC::Constants.3
+    - blib/man3/POE::Component::IRC::Cookbook.3
+    - blib/man3/POE::Component::IRC::Cookbook::BasicBot.3
+    - blib/man3/POE::Component::IRC::Cookbook::Disconnecting.3
+    - blib/man3/POE::Component::IRC::Cookbook::MegaHAL.3
+    - blib/man3/POE::Component::IRC::Cookbook::Reload.3
+    - blib/man3/POE::Component::IRC::Cookbook::Resolver.3
+    - blib/man3/POE::Component::IRC::Cookbook::Seen.3
+    - blib/man3/POE::Component::IRC::Cookbook::Translator.3
+    - blib/man3/POE::Component::IRC::Plugin.3
+    - blib/man3/POE::Component::IRC::Plugin::AutoJoin.3
+    - blib/man3/POE::Component::IRC::Plugin::BotAddressed.3
+    - blib/man3/POE::Component::IRC::Plugin::BotCommand.3
+    - blib/man3/POE::Component::IRC::Plugin::BotTraffic.3
+    - blib/man3/POE::Component::IRC::Plugin::CTCP.3
+    - blib/man3/POE::Component::IRC::Plugin::Connector.3
+    - blib/man3/POE::Component::IRC::Plugin::Console.3
+    - blib/man3/POE::Component::IRC::Plugin::CycleEmpty.3
+    - blib/man3/POE::Component::IRC::Plugin::DCC.3
+    - blib/man3/POE::Component::IRC::Plugin::FollowTail.3
+    - blib/man3/POE::Component::IRC::Plugin::ISupport.3
+    - blib/man3/POE::Component::IRC::Plugin::Logger.3
+    - blib/man3/POE::Component::IRC::Plugin::NickReclaim.3
+    - blib/man3/POE::Component::IRC::Plugin::NickServID.3
+    - blib/man3/POE::Component::IRC::Plugin::PlugMan.3
+    - blib/man3/POE::Component::IRC::Plugin::Proxy.3
+    - blib/man3/POE::Component::IRC::Plugin::Whois.3
+    - blib/man3/POE::Component::IRC::Projects.3
+    - blib/man3/POE::Component::IRC::Qnet.3
+    - blib/man3/POE::Component::IRC::Qnet::State.3
+    - blib/man3/POE::Component::IRC::State.3
+    - blib/man3/POE::Filter::IRC.3
+    - blib/man3/POE::Filter::IRC::Compat.3
+  build_file: Makefile.PL
+  build_file_output: |2
+    
+    ---------------------------------------------------------------
+    POE::Component::IRC now features an online test as part of the
+    testsuite. Whilst I have tried to make it as robust as I can
+    the last test may take up to 40 seconds or so to complete.
+    Please be patient while it does it's thing.
+    ---------------------------------------------------------------
+    
+    ---------------------------------------------------------------
+    A lot of the tests make use of the loopback interface. If this
+    is firewalled then these tests will fail. 
+    ---------------------------------------------------------------
+    
+    
+    ----------------------------------------------------------------
+    Hmmm. POE::Component::Client::DNS 0.99 isn't installed. It's use
+    is recommended but not necessary. Consider installing it. Thanks
+    ----------------------------------------------------------------
+    
+    Warning: prerequisite POE 0.3202 not found.
+    Warning: prerequisite POE::Component::Pluggable 1.12 not found.
+    Warning: prerequisite POE::Driver::SysRW 0 not found.
+    Warning: prerequisite POE::Filter::IRCD 1.7 not found.
+    Warning: prerequisite POE::Filter::Line 0 not found.
+    Warning: prerequisite POE::Filter::Stackable 0 not found.
+    Warning: prerequisite POE::Filter::Stream 0 not found.
+    Warning: prerequisite POE::Wheel::ReadWrite 0 not found.
+    Warning: prerequisite POE::Wheel::SocketFactory 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for POE::Component::IRC
+  build_output: |
+    cp lib/POE/Component/IRC/Plugin/Whois.pm blib/lib/POE/Component/IRC/Plugin/Whois.pm
+    cp lib/POE/Component/IRC/Plugin/ISupport.pm blib/lib/POE/Component/IRC/Plugin/ISupport.pm
+    cp lib/POE/Component/IRC/Cookbook/BasicBot.pod blib/lib/POE/Component/IRC/Cookbook/BasicBot.pod
+    cp lib/POE/Component/IRC/Plugin/Logger.pm blib/lib/POE/Component/IRC/Plugin/Logger.pm
+    cp lib/POE/Component/IRC/Plugin/CTCP.pm blib/lib/POE/Component/IRC/Plugin/CTCP.pm
+    cp lib/POE/Component/IRC/Plugin/NickReclaim.pm blib/lib/POE/Component/IRC/Plugin/NickReclaim.pm
+    cp lib/POE/Filter/IRC.pm blib/lib/POE/Filter/IRC.pm
+    cp lib/POE/Component/IRC/Plugin/Console.pm blib/lib/POE/Component/IRC/Plugin/Console.pm
+    cp lib/POE/Component/IRC/Plugin/FollowTail.pm blib/lib/POE/Component/IRC/Plugin/FollowTail.pm
+    cp lib/POE/Component/IRC/Plugin/DCC.pm blib/lib/POE/Component/IRC/Plugin/DCC.pm
+    cp lib/POE/Component/IRC/Cookbook/MegaHAL.pod blib/lib/POE/Component/IRC/Cookbook/MegaHAL.pod
+    cp lib/POE/Component/IRC/Plugin/Proxy.pm blib/lib/POE/Component/IRC/Plugin/Proxy.pm
+    cp lib/POE/Filter/IRC/Compat.pm blib/lib/POE/Filter/IRC/Compat.pm
+    cp lib/POE/Component/IRC/Cookbook/Reload.pod blib/lib/POE/Component/IRC/Cookbook/Reload.pod
+    cp lib/POE/Component/IRC/Cookbook/Translator.pod blib/lib/POE/Component/IRC/Cookbook/Translator.pod
+    cp lib/POE/Component/IRC/Qnet/State.pm blib/lib/POE/Component/IRC/Qnet/State.pm
+    cp lib/POE/Component/IRC/Plugin/BotTraffic.pm blib/lib/POE/Component/IRC/Plugin/BotTraffic.pm
+    cp lib/POE/Component/IRC/Plugin/CycleEmpty.pm blib/lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+    cp lib/POE/Component/IRC/Plugin/AutoJoin.pm blib/lib/POE/Component/IRC/Plugin/AutoJoin.pm
+    cp lib/POE/Component/IRC/Plugin/BotAddressed.pm blib/lib/POE/Component/IRC/Plugin/BotAddressed.pm
+    cp lib/POE/Component/IRC/Plugin/PlugMan.pm blib/lib/POE/Component/IRC/Plugin/PlugMan.pm
+    cp lib/POE/Component/IRC/State.pm blib/lib/POE/Component/IRC/State.pm
+    cp lib/POE/Component/IRC/Constants.pm blib/lib/POE/Component/IRC/Constants.pm
+    cp lib/POE/Component/IRC/Projects.pod blib/lib/POE/Component/IRC/Projects.pod
+    cp lib/POE/Component/IRC/Cookbook/Disconnecting.pod blib/lib/POE/Component/IRC/Cookbook/Disconnecting.pod
+    cp lib/POE/Component/IRC.pm blib/lib/POE/Component/IRC.pm
+    cp lib/POE/Component/IRC/Cookbook.pod blib/lib/POE/Component/IRC/Cookbook.pod
+    cp lib/POE/Component/IRC/Cookbook/Seen.pod blib/lib/POE/Component/IRC/Cookbook/Seen.pod
+    cp lib/POE/Component/IRC/Cookbook/Resolver.pod blib/lib/POE/Component/IRC/Cookbook/Resolver.pod
+    cp lib/POE/Component/IRC/Plugin/Connector.pm blib/lib/POE/Component/IRC/Plugin/Connector.pm
+    cp lib/POE/Component/IRC/Plugin.pm blib/lib/POE/Component/IRC/Plugin.pm
+    cp lib/POE/Component/IRC/Common.pm blib/lib/POE/Component/IRC/Common.pm
+    cp lib/POE/Component/IRC/Plugin/BotCommand.pm blib/lib/POE/Component/IRC/Plugin/BotCommand.pm
+    cp lib/POE/Component/IRC/Qnet.pm blib/lib/POE/Component/IRC/Qnet.pm
+    cp lib/POE/Component/IRC/Plugin/NickServID.pm blib/lib/POE/Component/IRC/Plugin/NickServID.pm
+    Manifying blib/man3/POE::Component::IRC::Cookbook::BasicBot.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::ISupport.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::Whois.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::Logger.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::NickReclaim.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::CTCP.3
+    Manifying blib/man3/POE::Filter::IRC.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::Console.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook::MegaHAL.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::DCC.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::FollowTail.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook::Reload.3
+    Manifying blib/man3/POE::Filter::IRC::Compat.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::Proxy.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::BotTraffic.3
+    Manifying blib/man3/POE::Component::IRC::Qnet::State.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook::Translator.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::CycleEmpty.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::AutoJoin.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::BotAddressed.3
+    Manifying blib/man3/POE::Component::IRC::State.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::PlugMan.3
+    Manifying blib/man3/POE::Component::IRC::Constants.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook::Disconnecting.3
+    Manifying blib/man3/POE::Component::IRC::Projects.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook::Resolver.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook::Seen.3
+    Manifying blib/man3/POE::Component::IRC::Cookbook.3
+    Manifying blib/man3/POE::Component::IRC.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::Connector.3
+    Manifying blib/man3/POE::Component::IRC::Plugin.3
+    Manifying blib/man3/POE::Component::IRC::Common.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::BotCommand.3
+    Manifying blib/man3/POE::Component::IRC::Qnet.3
+    Manifying blib/man3/POE::Component::IRC::Plugin::NickServID.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV/POE-Component-IRC-6.04/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV/POE-Component-IRC-6.04
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV/POE-Component-IRC-6.04/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV/POE-Component-IRC-6.04/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.79
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: BINGOS
+  dist_basename: POE-Component-IRC-6.04.tar.gz
+  dist_date: 1236469268
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV/POE-Component-IRC-6.04
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV/POE-Component-IRC-6.04
+  dist_file: /home/brian/CPAN/authors/id/B/BI/BINGOS/POE-Component-IRC-6.04.tar.gz
+  dist_md5: ac920cc6a52a27752eb85fd67d70348d
+  dist_size: 343049
+  manifest:
+    - Changes
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - docs/ctcpspec.html
+    - docs/dccspec.html
+    - docs/isupport-draft.txt
+    - docs/rfc1459.html
+    - docs/rfc2810.html
+    - docs/rfc2811.html
+    - docs/rfc2812.html
+    - docs/rfc2813.html
+    - examples/aimproxy.pl
+    - examples/dcctest.pl
+    - examples/dicebot.pl
+    - examples/eliza.pl
+    - examples/ircproxy.pl
+    - examples/logger.pl
+    - examples/moo.pl
+    - examples/rot13_multi.pl
+    - examples/simpleclient.pl
+    - examples/tinyurl.pl
+    - inc/Module/Install.pm
+    - inc/Module/Install/AuthorTests.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/POE/Component/IRC.pm
+    - lib/POE/Component/IRC/Common.pm
+    - lib/POE/Component/IRC/Constants.pm
+    - lib/POE/Component/IRC/Cookbook.pod
+    - lib/POE/Component/IRC/Cookbook/BasicBot.pod
+    - lib/POE/Component/IRC/Cookbook/Disconnecting.pod
+    - lib/POE/Component/IRC/Cookbook/MegaHAL.pod
+    - lib/POE/Component/IRC/Cookbook/Reload.pod
+    - lib/POE/Component/IRC/Cookbook/Resolver.pod
+    - lib/POE/Component/IRC/Cookbook/Seen.pod
+    - lib/POE/Component/IRC/Cookbook/Translator.pod
+    - lib/POE/Component/IRC/Plugin.pm
+    - lib/POE/Component/IRC/Plugin/AutoJoin.pm
+    - lib/POE/Component/IRC/Plugin/BotAddressed.pm
+    - lib/POE/Component/IRC/Plugin/BotCommand.pm
+    - lib/POE/Component/IRC/Plugin/BotTraffic.pm
+    - lib/POE/Component/IRC/Plugin/CTCP.pm
+    - lib/POE/Component/IRC/Plugin/Connector.pm
+    - lib/POE/Component/IRC/Plugin/Console.pm
+    - lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+    - lib/POE/Component/IRC/Plugin/DCC.pm
+    - lib/POE/Component/IRC/Plugin/FollowTail.pm
+    - lib/POE/Component/IRC/Plugin/ISupport.pm
+    - lib/POE/Component/IRC/Plugin/Logger.pm
+    - lib/POE/Component/IRC/Plugin/NickReclaim.pm
+    - lib/POE/Component/IRC/Plugin/NickServID.pm
+    - lib/POE/Component/IRC/Plugin/PlugMan.pm
+    - lib/POE/Component/IRC/Plugin/Proxy.pm
+    - lib/POE/Component/IRC/Plugin/Whois.pm
+    - lib/POE/Component/IRC/Projects.pod
+    - lib/POE/Component/IRC/Qnet.pm
+    - lib/POE/Component/IRC/Qnet/State.pm
+    - lib/POE/Component/IRC/State.pm
+    - lib/POE/Filter/IRC.pm
+    - lib/POE/Filter/IRC/Compat.pm
+    - t/01_base/01_compile.t
+    - t/01_base/02_filters.t
+    - t/01_base/03_common.t
+    - t/01_base/04_pocosi.t
+    - t/02_behavior/01_public_methods.t
+    - t/02_behavior/02_connect.t
+    - t/02_behavior/03_socketerr.t
+    - t/02_behavior/04_ipv6.t
+    - t/02_behavior/05_resolver.t
+    - t/02_behavior/06_online.t
+    - t/02_behavior/07_subclass.t
+    - t/02_behavior/08_parent_session.t
+    - t/02_behavior/09_multiple.t
+    - t/02_behavior/10_signal.t
+    - t/02_behavior/11_multi_signal.t
+    - t/02_behavior/12_delays.t
+    - t/02_behavior/13_activity.t
+    - t/03_subclasses/01_state.t
+    - t/03_subclasses/02_qnet.t
+    - t/03_subclasses/03_qnet_state.t
+    - t/04_plugins/01_ctcp/01_load.t
+    - t/04_plugins/01_ctcp/02_replies.t
+    - t/04_plugins/02_connector/01_load.t
+    - t/04_plugins/02_connector/02_reconnect.t
+    - t/04_plugins/03_botaddressed/01_load.t
+    - t/04_plugins/03_botaddressed/02_output.t
+    - t/04_plugins/04_bottraffic/01_load.t
+    - t/04_plugins/04_bottraffic/02_output.t
+    - t/04_plugins/05_isupport/01_load.t
+    - t/04_plugins/05_isupport/02_isupport.t
+    - t/04_plugins/06_plugman/01_load.t
+    - t/04_plugins/06_plugman/02_add.t
+    - t/04_plugins/06_plugman/03_irc_interface.t
+    - t/04_plugins/07_console/01_load.t
+    - t/04_plugins/08_proxy/01_load.t
+    - t/04_plugins/09_nickreclaim/01_load.t
+    - t/04_plugins/09_nickreclaim/02_reclaim.t
+    - t/04_plugins/10_followtail/01_load.t
+    - t/04_plugins/11_cycleempty/01_load.t
+    - t/04_plugins/11_cycleempty/02_cycle.t
+    - t/04_plugins/12_autojoin/01_load.t
+    - t/04_plugins/12_autojoin/02_join.t
+    - t/04_plugins/12_autojoin/03_banned.t
+    - t/04_plugins/13_botcommand/01_load.t
+    - t/04_plugins/13_botcommand/02_commands.t
+    - t/04_plugins/13_botcommand/03_options.t
+    - t/04_plugins/14_logger/01_load.t
+    - t/04_plugins/14_logger/02_public.t
+    - t/04_plugins/14_logger/03_private.t
+    - t/04_plugins/14_logger/04_dcc_chat.t
+    - t/04_plugins/15_nickservid/01_load.t
+    - t/04_plugins/16_whois/01_load.t
+    - t/04_plugins/16_whois/02_whois.t
+    - t/04_plugins/17_dcc/01_load.t
+    - t/04_plugins/17_dcc/02_timeout.t
+    - t/04_plugins/17_dcc/03_send.t
+    - t/04_plugins/17_dcc/04_send_spaces.t
+    - t/04_plugins/17_dcc/05_resume.t
+    - t/04_plugins/17_dcc/06_chat.t
+    - t/04_plugins/17_dcc/07_nat.t
+    - t/05_regression/01_dcc_chat_close.t
+    - t/inc/Algorithm/Diff.pm
+    - t/inc/Algorithm/DiffOld.pm
+    - t/inc/Crypt/PasswdMD5.pm
+    - t/inc/Net/Netmask.pm
+    - t/inc/POE/Component/IRC/Test/Plugin.pm
+    - t/inc/POE/Component/Server/IRC.pm
+    - t/inc/POE/Component/Server/IRC/Backend.pm
+    - t/inc/POE/Component/Server/IRC/Common.pm
+    - t/inc/POE/Component/Server/IRC/OperServ.pm
+    - t/inc/POE/Component/Server/IRC/Pipeline.pm
+    - t/inc/POE/Component/Server/IRC/Plugin.pm
+    - xt/perl_critic.t
+    - xt/perl_critic_t.t
+    - xt/perlcriticrc
+    - xt/perlcriticrc_t
+    - xt/pod.t
+    - xt/pod_coverage.t
+  manifest_file_info:
+    - bytesize: 52295
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1236468692
+      name: Changes
+    - bytesize: 18312
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1236034389
+      name: LICENSE
+    - bytesize: 4519
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1236336559
+      name: MANIFEST
+    - bytesize: 749
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1236468807
+      name: META.yml
+    - bytesize: 1939
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1233053823
+      name: Makefile.PL
+    - bytesize: 3556
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1233053823
+      name: README
+    - bytesize: 31256
+      file_mime_type: ~
+      line_count: ~
+      md5: 9675183572131e6b2d23906257673f44
+      mtime: 1233053822
+      name: docs/ctcpspec.html
+    - bytesize: 6609
+      file_mime_type: ~
+      line_count: ~
+      md5: f50b6c0d1947c4524c648f13ead95a73
+      mtime: 1233053822
+      name: docs/dccspec.html
+    - bytesize: 41298
+      file_mime_type: ~
+      line_count: ~
+      md5: 86f70411f342d090b913b84c1e40cdc3
+      mtime: 1233053822
+      name: docs/isupport-draft.txt
+    - bytesize: 135091
+      file_mime_type: ~
+      line_count: ~
+      md5: 692eb1847026a50f999bae721ab3b2b0
+      mtime: 1233053822
+      name: docs/rfc1459.html
+    - bytesize: 20291
+      file_mime_type: ~
+      line_count: ~
+      md5: ea665ca414fdd05d3e619c724c67040b
+      mtime: 1233053822
+      name: docs/rfc2810.html
+    - bytesize: 40677
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a686360de9061dceb721102157a2719
+      mtime: 1233053822
+      name: docs/rfc2811.html
+    - bytesize: 119377
+      file_mime_type: ~
+      line_count: ~
+      md5: 50df80b12c0ed2a0ba3fe076a2cf1bfb
+      mtime: 1233053822
+      name: docs/rfc2812.html
+    - bytesize: 56132
+      file_mime_type: ~
+      line_count: ~
+      md5: d9e4e766010429154f2d46d44979719e
+      mtime: 1233053822
+      name: docs/rfc2813.html
+    - bytesize: 9756
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d998fabff535044041545c60b6ce19b
+      mtime: 1233053822
+      name: examples/aimproxy.pl
+    - bytesize: 3231
+      file_mime_type: ~
+      line_count: ~
+      md5: 06f478e68103c594a25394992f7f9234
+      mtime: 1233053822
+      name: examples/dcctest.pl
+    - bytesize: 2695
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e1d20a5a56e31a7109021cf75552075
+      mtime: 1233053822
+      name: examples/dicebot.pl
+    - bytesize: 3080
+      file_mime_type: ~
+      line_count: ~
+      md5: 791fb796629898fa208a13036f899d90
+      mtime: 1233053822
+      name: examples/eliza.pl
+    - bytesize: 2232
+      file_mime_type: ~
+      line_count: ~
+      md5: de748f531901eb700bb281c2494f19ef
+      mtime: 1233053822
+      name: examples/ircproxy.pl
+    - bytesize: 758
+      file_mime_type: ~
+      line_count: ~
+      md5: 04191a71033b1d3147f9ccc8c8c07609
+      mtime: 1233053822
+      name: examples/logger.pl
+    - bytesize: 5639
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e5d2dbfc5c6c502ce77cfa6df44e177
+      mtime: 1233053822
+      name: examples/moo.pl
+    - bytesize: 2874
+      file_mime_type: ~
+      line_count: ~
+      md5: 9379e25af19cedeffeebadb736760c4b
+      mtime: 1233053822
+      name: examples/rot13_multi.pl
+    - bytesize: 3971
+      file_mime_type: ~
+      line_count: ~
+      md5: f5d0a04bc5cbd5d006e567ae9ebc1ae3
+      mtime: 1233053822
+      name: examples/simpleclient.pl
+    - bytesize: 4669
+      file_mime_type: ~
+      line_count: ~
+      md5: a12b368823eeec3042632e5e20a63c44
+      mtime: 1233053822
+      name: examples/tinyurl.pl
+    - bytesize: 8837
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1236468805
+      name: inc/Module/Install.pm
+    - bytesize: 1165
+      file_mime_type: ~
+      line_count: ~
+      md5: 9608682bf5fe9673195d4c764609c320
+      mtime: 1236468807
+      name: inc/Module/Install/AuthorTests.pm
+    - bytesize: 1064
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1236468807
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1810
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1236468807
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2454
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1236468807
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 6498
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1236468807
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 12853
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1236468807
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 1794
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1236468807
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 721
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1236468807
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 93690
+      file_mime_type: ~
+      line_count: ~
+      md5: 40631b8b9e595b862af19a2ea66ef6d8
+      mtime: 1236468723
+      name: lib/POE/Component/IRC.pm
+    - bytesize: 14706
+      file_mime_type: ~
+      line_count: ~
+      md5: dbfb4697373a87d5e458f0dcd108fb68
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Common.pm
+    - bytesize: 1529
+      file_mime_type: ~
+      line_count: ~
+      md5: d54e0973bf417b9a84eb348016590c91
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Constants.pm
+    - bytesize: 1947
+      file_mime_type: ~
+      line_count: ~
+      md5: d6034e1c7cbbf7aa8ac3077d5e7dfb2d
+      mtime: 1233053820
+      name: lib/POE/Component/IRC/Cookbook.pod
+    - bytesize: 1882
+      file_mime_type: ~
+      line_count: ~
+      md5: 69341fc09438f26c520f8e5fb518730a
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/BasicBot.pod
+    - bytesize: 1085
+      file_mime_type: ~
+      line_count: ~
+      md5: c6c656f8076a91e0b5fbeb53f7bddab4
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/Disconnecting.pod
+    - bytesize: 1103
+      file_mime_type: ~
+      line_count: ~
+      md5: fa670d2963eedc3e46051ba83203e385
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/MegaHAL.pod
+    - bytesize: 799
+      file_mime_type: ~
+      line_count: ~
+      md5: f4c841e758c0afdee2bdbaa7ac30b350
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/Reload.pod
+    - bytesize: 2227
+      file_mime_type: ~
+      line_count: ~
+      md5: fb1309b55142de5bb516e4915fb70c10
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/Resolver.pod
+    - bytesize: 4133
+      file_mime_type: ~
+      line_count: ~
+      md5: ee5032e36ef85e49c782ae3ba0d671d7
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/Seen.pod
+    - bytesize: 3089
+      file_mime_type: ~
+      line_count: ~
+      md5: ccaf9dd3f59d9d2413f877b8d7a4aabd
+      mtime: 1233053818
+      name: lib/POE/Component/IRC/Cookbook/Translator.pod
+    - bytesize: 11411
+      file_mime_type: ~
+      line_count: ~
+      md5: 25dbb27285dacc4cf47cbf4b391468fa
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin.pm
+    - bytesize: 5277
+      file_mime_type: ~
+      line_count: ~
+      md5: 93b0258960d6721f685985b5fcb3b419
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/AutoJoin.pm
+    - bytesize: 3771
+      file_mime_type: ~
+      line_count: ~
+      md5: dfba7f3c2b58d7e8dae802de87c457ce
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/BotAddressed.pm
+    - bytesize: 7245
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e03f18c6766fd7255f25fd7dd81ee34
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/BotCommand.pm
+    - bytesize: 3142
+      file_mime_type: ~
+      line_count: ~
+      md5: f1350c7239bf73e953a6deb7ce13bb50
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/BotTraffic.pm
+    - bytesize: 4542
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e7553f3c4d00e835ab83fed1d23ead3
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/CTCP.pm
+    - bytesize: 6428
+      file_mime_type: ~
+      line_count: ~
+      md5: 88caac559319f883351d181e77fdfba2
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/Connector.pm
+    - bytesize: 8698
+      file_mime_type: ~
+      line_count: ~
+      md5: 39c027e4b3741695200fe7a8b209eebc
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/Console.pm
+    - bytesize: 3655
+      file_mime_type: ~
+      line_count: ~
+      md5: fd0f908fe85cec402838e95496ddc14e
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+    - bytesize: 25125
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a4d84149534b6084ac8960ff3b49721
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/DCC.pm
+    - bytesize: 5164
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e2c22359b495e0a73dd8f754210537f
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/FollowTail.pm
+    - bytesize: 5973
+      file_mime_type: ~
+      line_count: ~
+      md5: 8289358a7841ff73880ff22a0d261231
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/ISupport.pm
+    - bytesize: 16999
+      file_mime_type: ~
+      line_count: ~
+      md5: df98c08818aa5213d6a41aa1b781ac7f
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/Logger.pm
+    - bytesize: 5443
+      file_mime_type: ~
+      line_count: ~
+      md5: c42efe3bec0db79e048128c09ccd65b9
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/NickReclaim.pm
+    - bytesize: 2361
+      file_mime_type: ~
+      line_count: ~
+      md5: 06e34debbe0da2f74f7ce43fe7201023
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/NickServID.pm
+    - bytesize: 9729
+      file_mime_type: ~
+      line_count: ~
+      md5: e1a08a7fc081585c3e7b0f9306d383b2
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/PlugMan.pm
+    - bytesize: 15576
+      file_mime_type: ~
+      line_count: ~
+      md5: 45d2252ab00a8314b5c23bf3b0b3342f
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Plugin/Proxy.pm
+    - bytesize: 5208
+      file_mime_type: ~
+      line_count: ~
+      md5: 94fc27db19e637a0b94c5a00dc5dad85
+      mtime: 1236468666
+      name: lib/POE/Component/IRC/Plugin/Whois.pm
+    - bytesize: 3972
+      file_mime_type: ~
+      line_count: ~
+      md5: 61ccb275662e99cd34ffd76a56bd6686
+      mtime: 1233053820
+      name: lib/POE/Component/IRC/Projects.pod
+    - bytesize: 5871
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c5835906e3c15e46b0935978eadf6ec
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Qnet.pm
+    - bytesize: 19557
+      file_mime_type: ~
+      line_count: ~
+      md5: 4515391cd2aa5b97ef3561a23677157c
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/Qnet/State.pm
+    - bytesize: 48670
+      file_mime_type: ~
+      line_count: ~
+      md5: 00d297a5541be7fcbcbe53ea5023f764
+      mtime: 1236468667
+      name: lib/POE/Component/IRC/State.pm
+    - bytesize: 1805
+      file_mime_type: ~
+      line_count: ~
+      md5: afed9adb760393e247abae15b47803a1
+      mtime: 1236468666
+      name: lib/POE/Filter/IRC.pm
+    - bytesize: 14404
+      file_mime_type: ~
+      line_count: ~
+      md5: 708df49f13d044c282c6c01d5180cd4f
+      mtime: 1236468667
+      name: lib/POE/Filter/IRC/Compat.pm
+    - bytesize: 1069
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f8bb2bd029cd11a9820691d531a70e8
+      mtime: 1233053817
+      name: t/01_base/01_compile.t
+    - bytesize: 4656
+      file_mime_type: ~
+      line_count: ~
+      md5: f54cb9d82dfad019dd98f6381ea7ad02
+      mtime: 1233053817
+      name: t/01_base/02_filters.t
+    - bytesize: 2753
+      file_mime_type: ~
+      line_count: ~
+      md5: 814ac685bcf495ccb52c2abcb3fd5710
+      mtime: 1233053817
+      name: t/01_base/03_common.t
+    - bytesize: 423
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f0de53226e2e66819cb8b2783fd3989
+      mtime: 1233053817
+      name: t/01_base/04_pocosi.t
+    - bytesize: 419
+      file_mime_type: ~
+      line_count: ~
+      md5: 4734e92eecef0a1f94a886e58e54f04a
+      mtime: 1233053812
+      name: t/02_behavior/01_public_methods.t
+    - bytesize: 3646
+      file_mime_type: ~
+      line_count: ~
+      md5: 8887eb007c39c3289ff90b6cc90fc02f
+      mtime: 1236463284
+      name: t/02_behavior/02_connect.t
+    - bytesize: 1488
+      file_mime_type: ~
+      line_count: ~
+      md5: 81ddcfe5191fdd58a90a2e8ba0401c5b
+      mtime: 1236463284
+      name: t/02_behavior/03_socketerr.t
+    - bytesize: 3578
+      file_mime_type: ~
+      line_count: ~
+      md5: 06fa4934c41b327045b57e4a5f2f0fdc
+      mtime: 1233053812
+      name: t/02_behavior/04_ipv6.t
+    - bytesize: 823
+      file_mime_type: ~
+      line_count: ~
+      md5: c5681fdfa6bd8ebf181a9655a364914d
+      mtime: 1233053812
+      name: t/02_behavior/05_resolver.t
+    - bytesize: 2551
+      file_mime_type: ~
+      line_count: ~
+      md5: dc4096c0fcb7facfd4adf2d00eeb48ed
+      mtime: 1236336552
+      name: t/02_behavior/06_online.t
+    - bytesize: 3230
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bc160a7ebd2e64210e216f5a3006a3e
+      mtime: 1236463284
+      name: t/02_behavior/07_subclass.t
+    - bytesize: 802
+      file_mime_type: ~
+      line_count: ~
+      md5: c4d7e9e3556a678a2290799934ec18a9
+      mtime: 1233053812
+      name: t/02_behavior/08_parent_session.t
+    - bytesize: 3337
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e03bb77f5bb86e79b5cb67c016aca98
+      mtime: 1236463284
+      name: t/02_behavior/09_multiple.t
+    - bytesize: 2342
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c3e9d1f492e01ab62df31ef717baa66
+      mtime: 1236463284
+      name: t/02_behavior/10_signal.t
+    - bytesize: 2581
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b186ec6630ee03c32e1d31eb2ff2d94
+      mtime: 1236463284
+      name: t/02_behavior/11_multi_signal.t
+    - bytesize: 1098
+      file_mime_type: ~
+      line_count: ~
+      md5: b21b5b47e9e0fc91c72a556d1eb30a27
+      mtime: 1233053812
+      name: t/02_behavior/12_delays.t
+    - bytesize: 5012
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d881b8e432385d644051c489258912
+      mtime: 1236463284
+      name: t/02_behavior/13_activity.t
+    - bytesize: 6489
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fe94302376f31c84ee75b917780fa7b
+      mtime: 1236463285
+      name: t/03_subclasses/01_state.t
+    - bytesize: 346
+      file_mime_type: ~
+      line_count: ~
+      md5: b9e6292f15155eb4ef205bd72e717f66
+      mtime: 1233053814
+      name: t/03_subclasses/02_qnet.t
+    - bytesize: 367
+      file_mime_type: ~
+      line_count: ~
+      md5: ffd61d35c6385fbec9a1392f7472ead1
+      mtime: 1233053814
+      name: t/03_subclasses/03_qnet_state.t
+    - bytesize: 1101
+      file_mime_type: ~
+      line_count: ~
+      md5: cb93f58be85dc979e66e69f025cdb9c6
+      mtime: 1236336554
+      name: t/04_plugins/01_ctcp/01_load.t
+    - bytesize: 3023
+      file_mime_type: ~
+      line_count: ~
+      md5: 4527831bdd75408db1e6d040cb27d7a5
+      mtime: 1236463284
+      name: t/04_plugins/01_ctcp/02_replies.t
+    - bytesize: 1126
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f320319d2c4789947e879ebc37dcc4c
+      mtime: 1233053813
+      name: t/04_plugins/02_connector/01_load.t
+    - bytesize: 2446
+      file_mime_type: ~
+      line_count: ~
+      md5: ed1b83b37995ef185dbbed5a5458499b
+      mtime: 1236463285
+      name: t/04_plugins/02_connector/02_reconnect.t
+    - bytesize: 1141
+      file_mime_type: ~
+      line_count: ~
+      md5: 807b832d3970c6705c37f782d8719142
+      mtime: 1233053814
+      name: t/04_plugins/03_botaddressed/01_load.t
+    - bytesize: 3698
+      file_mime_type: ~
+      line_count: ~
+      md5: 6945d44ff65767858fa02305c526c89c
+      mtime: 1236463285
+      name: t/04_plugins/03_botaddressed/02_output.t
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: b48af81a8dfaa13a26f160256263b684
+      mtime: 1233053813
+      name: t/04_plugins/04_bottraffic/01_load.t
+    - bytesize: 3030
+      file_mime_type: ~
+      line_count: ~
+      md5: d1e1bdbb7d1c27f4ae6f79ec36d1e839
+      mtime: 1236463284
+      name: t/04_plugins/04_bottraffic/02_output.t
+    - bytesize: 1121
+      file_mime_type: ~
+      line_count: ~
+      md5: 06d2d2166bbc39303e3327324fff7791
+      mtime: 1233053813
+      name: t/04_plugins/05_isupport/01_load.t
+    - bytesize: 2292
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ab60b099702ecf2c67ff19671b23a05
+      mtime: 1236463284
+      name: t/04_plugins/05_isupport/02_isupport.t
+    - bytesize: 1116
+      file_mime_type: ~
+      line_count: ~
+      md5: 85851a87aae7ab588b2d5a923e45a15c
+      mtime: 1236336558
+      name: t/04_plugins/06_plugman/01_load.t
+    - bytesize: 1965
+      file_mime_type: ~
+      line_count: ~
+      md5: 0336d33309fa25ed9cf86546a88c2a67
+      mtime: 1236336558
+      name: t/04_plugins/06_plugman/02_add.t
+    - bytesize: 3423
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a3b3cb9539e77138a2ea8f70720ae62
+      mtime: 1236463285
+      name: t/04_plugins/06_plugman/03_irc_interface.t
+    - bytesize: 1116
+      file_mime_type: ~
+      line_count: ~
+      md5: 446bc0f137fcbc0d8f8af4efb80c092a
+      mtime: 1233053814
+      name: t/04_plugins/07_console/01_load.t
+    - bytesize: 1106
+      file_mime_type: ~
+      line_count: ~
+      md5: c170038149ced748cc05f1569cd6d850
+      mtime: 1233053813
+      name: t/04_plugins/08_proxy/01_load.t
+    - bytesize: 1136
+      file_mime_type: ~
+      line_count: ~
+      md5: 83808eb519af1c9e1f98eaf834783df9
+      mtime: 1233053813
+      name: t/04_plugins/09_nickreclaim/01_load.t
+    - bytesize: 3044
+      file_mime_type: ~
+      line_count: ~
+      md5: cd9f2ea1a6a07838635e4de519892aaf
+      mtime: 1236463284
+      name: t/04_plugins/09_nickreclaim/02_reclaim.t
+    - bytesize: 1787
+      file_mime_type: ~
+      line_count: ~
+      md5: 456d2646cef68efb22af86540f1c2af5
+      mtime: 1233053814
+      name: t/04_plugins/10_followtail/01_load.t
+    - bytesize: 1145
+      file_mime_type: ~
+      line_count: ~
+      md5: 55532a857145029f8e7bd14fc2da0769
+      mtime: 1233053812
+      name: t/04_plugins/11_cycleempty/01_load.t
+    - bytesize: 3499
+      file_mime_type: ~
+      line_count: ~
+      md5: 00d6d2510835e8eefaba3d3a9560120d
+      mtime: 1236463284
+      name: t/04_plugins/11_cycleempty/02_cycle.t
+    - bytesize: 1135
+      file_mime_type: ~
+      line_count: ~
+      md5: acf6e4535667aa930c2af9abbb3a6315
+      mtime: 1233053813
+      name: t/04_plugins/12_autojoin/01_load.t
+    - bytesize: 2413
+      file_mime_type: ~
+      line_count: ~
+      md5: 69e0f1f281cfe952bc852853f3e3b5c7
+      mtime: 1236463284
+      name: t/04_plugins/12_autojoin/02_join.t
+    - bytesize: 3226
+      file_mime_type: ~
+      line_count: ~
+      md5: b187cad512a4aa1ea64dd51a82441800
+      mtime: 1236201435
+      name: t/04_plugins/12_autojoin/03_banned.t
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: d138d174b42a83780f60e78a652ccb80
+      mtime: 1233053813
+      name: t/04_plugins/13_botcommand/01_load.t
+    - bytesize: 4091
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cc8ae1638df242ac521d38e1bef2d4d
+      mtime: 1236463284
+      name: t/04_plugins/13_botcommand/02_commands.t
+    - bytesize: 4562
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cf84c6527327ad6afdc1822af9be67d
+      mtime: 1236463284
+      name: t/04_plugins/13_botcommand/03_options.t
+    - bytesize: 1147
+      file_mime_type: ~
+      line_count: ~
+      md5: 12491310fc8210383b8570013e97a03a
+      mtime: 1233053812
+      name: t/04_plugins/14_logger/01_load.t
+    - bytesize: 6169
+      file_mime_type: ~
+      line_count: ~
+      md5: d8be38b244ac1c70cd8dbb0963c21e20
+      mtime: 1236463284
+      name: t/04_plugins/14_logger/02_public.t
+    - bytesize: 4170
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b2903f56917e6e4f6c713c3d772dd0
+      mtime: 1236463284
+      name: t/04_plugins/14_logger/03_private.t
+    - bytesize: 4702
+      file_mime_type: ~
+      line_count: ~
+      md5: 267bad9fddd803ad293d483f03ab8a14
+      mtime: 1236463284
+      name: t/04_plugins/14_logger/04_dcc_chat.t
+    - bytesize: 1150
+      file_mime_type: ~
+      line_count: ~
+      md5: c54bfd86f5f6fa0c2be660b373805053
+      mtime: 1233053814
+      name: t/04_plugins/15_nickservid/01_load.t
+    - bytesize: 1106
+      file_mime_type: ~
+      line_count: ~
+      md5: b58df0d3097323e850b035fd5b654331
+      mtime: 1233053813
+      name: t/04_plugins/16_whois/01_load.t
+    - bytesize: 2337
+      file_mime_type: ~
+      line_count: ~
+      md5: f3ed215ac914215e6eb5b111638e79a3
+      mtime: 1236463285
+      name: t/04_plugins/16_whois/02_whois.t
+    - bytesize: 1096
+      file_mime_type: ~
+      line_count: ~
+      md5: b9e71909250f481a4918a8fc20cd484c
+      mtime: 1233053814
+      name: t/04_plugins/17_dcc/01_load.t
+    - bytesize: 3052
+      file_mime_type: ~
+      line_count: ~
+      md5: c42ac04cb8cc43fc62bd28c468912b12
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/02_timeout.t
+    - bytesize: 3421
+      file_mime_type: ~
+      line_count: ~
+      md5: a799d9ec93698c85cf21665cb1765684
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/03_send.t
+    - bytesize: 3649
+      file_mime_type: ~
+      line_count: ~
+      md5: aa0287bdc9769e7c2bca3277beed166f
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/04_send_spaces.t
+    - bytesize: 3732
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bb289ea88582d5cff74917ba871853b
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/05_resume.t
+    - bytesize: 3589
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ba182d613526f945224aecfe63c324d
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/06_chat.t
+    - bytesize: 3341
+      file_mime_type: ~
+      line_count: ~
+      md5: 9978c6b3902d97955cb4ec4776117227
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/07_nat.t
+    - bytesize: 3687
+      file_mime_type: ~
+      line_count: ~
+      md5: f56ba2809103cb527c94c7f959ee232d
+      mtime: 1236463285
+      name: t/05_regression/01_dcc_chat_close.t
+    - bytesize: 20517
+      file_mime_type: ~
+      line_count: ~
+      md5: 91fcd5e122e35de7bac71dc2d2d1cda1
+      mtime: 1233229636
+      name: t/inc/Algorithm/Diff.pm
+    - bytesize: 4835
+      file_mime_type: ~
+      line_count: ~
+      md5: 77541ac1215cddce834b2a1376e6fb95
+      mtime: 1233229703
+      name: t/inc/Algorithm/DiffOld.pm
+    - bytesize: 3937
+      file_mime_type: ~
+      line_count: ~
+      md5: c099e9626dd0bd33b98dfc5c1bf09232
+      mtime: 1233229944
+      name: t/inc/Crypt/PasswdMD5.pm
+    - bytesize: 12575
+      file_mime_type: ~
+      line_count: ~
+      md5: d396de899d35c102e2473e6393b88819
+      mtime: 1233053816
+      name: t/inc/Net/Netmask.pm
+    - bytesize: 2724
+      file_mime_type: ~
+      line_count: ~
+      md5: ea4de0ab20def4513e8884357645d94d
+      mtime: 1233053815
+      name: t/inc/POE/Component/IRC/Test/Plugin.pm
+    - bytesize: 198522
+      file_mime_type: ~
+      line_count: ~
+      md5: a360f9e544cb8a17bea0ba7a957a7c79
+      mtime: 1233229784
+      name: t/inc/POE/Component/Server/IRC.pm
+    - bytesize: 33054
+      file_mime_type: ~
+      line_count: ~
+      md5: a05fba30b13bc15c4ddbc7da4dd91dfe
+      mtime: 1236201438
+      name: t/inc/POE/Component/Server/IRC/Backend.pm
+    - bytesize: 5569
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bfca896ea05a0e821a739b93a0a59ab
+      mtime: 1233229864
+      name: t/inc/POE/Component/Server/IRC/Common.pm
+    - bytesize: 1999
+      file_mime_type: ~
+      line_count: ~
+      md5: b0829b53416891a1743dba6ab9a9ba24
+      mtime: 1233229821
+      name: t/inc/POE/Component/Server/IRC/OperServ.pm
+    - bytesize: 6716
+      file_mime_type: ~
+      line_count: ~
+      md5: 81e49bc6935d104b7613ede5f46ebd91
+      mtime: 1233229844
+      name: t/inc/POE/Component/Server/IRC/Pipeline.pm
+    - bytesize: 654
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c56fbd95873deb2604078a16c1ab374
+      mtime: 1233229879
+      name: t/inc/POE/Component/Server/IRC/Plugin.pm
+    - bytesize: 654
+      file_mime_type: ~
+      line_count: ~
+      md5: d4ef4a95e552d0c502cfc271e3b9ec71
+      mtime: 1236463285
+      name: xt/perl_critic.t
+    - bytesize: 667
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a10357ab4e21a3f03690d08b66298b9
+      mtime: 1236463285
+      name: xt/perl_critic_t.t
+    - bytesize: 548
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cb7deabd15be4f17f34706c56544c7e
+      mtime: 1236336559
+      name: xt/perlcriticrc
+    - bytesize: 769
+      file_mime_type: ~
+      line_count: ~
+      md5: bf4f6c3f19640cb8c49e25eb432d4053
+      mtime: 1236336559
+      name: xt/perlcriticrc_t
+    - bytesize: 129
+      file_mime_type: ~
+      line_count: ~
+      md5: bae4b683f9c2f442ec5d4d0440962a8a
+      mtime: 1233053822
+      name: xt/pod.t
+    - bytesize: 430
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b82c0b184daf5d9541669e73e7c8ff4
+      mtime: 1233053822
+      name: xt/pod_coverage.t
+  module_info:
+    - bytesize: 93690
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dbd4448881bb8d78516a5a04e3a414b
+      module_name_from_file_guess: POE::Component::IRC
+      mtime: 1236468723
+      name: blib/lib/POE/Component/IRC.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE
+        - POE::Filter::IRCD
+        - POE::Filter::IRC::Compat
+        - POE::Component::IRC::Common
+        - POE::Component::IRC::Constants
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Plugin::DCC
+        - POE::Component::IRC::Plugin::ISupport
+        - POE::Component::IRC::Plugin::Whois
+        - Socket
+        - base
+        - POE::Component::SSLify
+        - POE::Component::Client::DNS
+        - Socket6
+        - POE::Filter::Zlib::Stream
+      version_info:
+        filename: blib/lib/POE/Component/IRC.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 6.04
+    - bytesize: 14706
+      file_mime_type: ~
+      line_count: ~
+      md5: df0cce0bdc7fa4d65a3e7bf613bfe2ae
+      module_name_from_file_guess: POE::Component::IRC::Common
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Common.pm
+      packages:
+        - POE::Component::IRC::Common
+      primary_package: POE::Component::IRC::Common
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Common.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 6.04
+    - bytesize: 1529
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e366fdccc06b3e49e6c28f6b84198b1
+      module_name_from_file_guess: POE::Component::IRC::Constants
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Constants.pm
+      packages:
+        - POE::Component::IRC::Constants
+      primary_package: POE::Component::IRC::Constants
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Constants.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 6.04
+    - bytesize: 11411
+      file_mime_type: ~
+      line_count: ~
+      md5: 268e594ad9761943aa398361014a348c
+      module_name_from_file_guess: POE::Component::IRC::Plugin
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin.pm
+      packages:
+        - POE::Component::IRC::Plugin
+      primary_package: POE::Component::IRC::Plugin
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 6.04
+    - bytesize: 5277
+      file_mime_type: ~
+      line_count: ~
+      md5: 59b30f3ad4ad1876e9c38d8abf3b833d
+      module_name_from_file_guess: POE::Component::IRC::Plugin::AutoJoin
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/AutoJoin.pm
+      packages:
+        - POE::Component::IRC::Plugin::AutoJoin
+      primary_package: POE::Component::IRC::Plugin::AutoJoin
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Common
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/AutoJoin.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 3771
+      file_mime_type: ~
+      line_count: ~
+      md5: f9ae09eb4b1337e1216d839e08798a85
+      module_name_from_file_guess: POE::Component::IRC::Plugin::BotAddressed
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/BotAddressed.pm
+      packages:
+        - POE::Component::IRC::Plugin::BotAddressed
+      primary_package: POE::Component::IRC::Plugin::BotAddressed
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/BotAddressed.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 6.04
+    - bytesize: 7245
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c0ed2922ce508bf47dd8914a3605790
+      module_name_from_file_guess: POE::Component::IRC::Plugin::BotCommand
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/BotCommand.pm
+      packages:
+        - POE::Component::IRC::Plugin::BotCommand
+      primary_package: POE::Component::IRC::Plugin::BotCommand
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Common
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/BotCommand.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 3142
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c14ed9b5f994c01ed4f091dcdf00331
+      module_name_from_file_guess: POE::Component::IRC::Plugin::BotTraffic
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/BotTraffic.pm
+      packages:
+        - POE::Component::IRC::Plugin::BotTraffic
+      primary_package: POE::Component::IRC::Plugin::BotTraffic
+      uses:
+        - strict
+        - warnings
+        - POE::Component::IRC::Plugin
+        - POE::Filter::IRCD
+        - POE::Filter::IRC::Compat
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/BotTraffic.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 4542
+      file_mime_type: ~
+      line_count: ~
+      md5: 531a611df789b421351ad7c75f7a4679
+      module_name_from_file_guess: POE::Component::IRC::Plugin::CTCP
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/CTCP.pm
+      packages:
+        - POE::Component::IRC::Plugin::CTCP
+      primary_package: POE::Component::IRC::Plugin::CTCP
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+        - POSIX
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/CTCP.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 6428
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d5034adf5c7cb02352f459daffae7be
+      module_name_from_file_guess: POE::Component::IRC::Plugin::Connector
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/Connector.pm
+      packages:
+        - POE::Component::IRC::Plugin::Connector
+      primary_package: POE::Component::IRC::Plugin::Connector
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/Connector.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 8698
+      file_mime_type: ~
+      line_count: ~
+      md5: ddf5193f51e6b4c88f820cbbfe73cbd6
+      module_name_from_file_guess: POE::Component::IRC::Plugin::Console
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/Console.pm
+      packages:
+        - POE::Component::IRC::Plugin::Console
+      primary_package: POE::Component::IRC::Plugin::Console
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/Console.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 3655
+      file_mime_type: ~
+      line_count: ~
+      md5: 9467c0f93a0934638edf15b4e53c78e4
+      module_name_from_file_guess: POE::Component::IRC::Plugin::CycleEmpty
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+      packages:
+        - POE::Component::IRC::Plugin::CycleEmpty
+      primary_package: POE::Component::IRC::Plugin::CycleEmpty
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Common
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 25125
+      file_mime_type: ~
+      line_count: ~
+      md5: 257df8f59c26398f874b5c85c45c201f
+      module_name_from_file_guess: POE::Component::IRC::Plugin::DCC
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/DCC.pm
+      packages:
+        - POE::Component::IRC::Plugin::DCC
+      primary_package: POE::Component::IRC::Plugin::DCC
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::Basename
+        - POE
+        - POE::Component::IRC::Plugin
+        - Socket
+        - constant
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/DCC.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 6.04
+    - bytesize: 5164
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a83bc9e115c64943e580812d55572dc
+      module_name_from_file_guess: POE::Component::IRC::Plugin::FollowTail
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/FollowTail.pm
+      packages:
+        - POE::Component::IRC::Plugin::FollowTail
+      primary_package: POE::Component::IRC::Plugin::FollowTail
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/FollowTail.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 5973
+      file_mime_type: ~
+      line_count: ~
+      md5: 615531cbb165c0155b77a44c77fc5333
+      module_name_from_file_guess: POE::Component::IRC::Plugin::ISupport
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/ISupport.pm
+      packages:
+        - POE::Component::IRC::Plugin::ISupport
+      primary_package: POE::Component::IRC::Plugin::ISupport
+      uses:
+        - strict
+        - warnings
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/ISupport.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 6.04
+    - bytesize: 16999
+      file_mime_type: ~
+      line_count: ~
+      md5: 98e34798925dfe74af7e2707bf0ebe8f
+      module_name_from_file_guess: POE::Component::IRC::Plugin::Logger
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/Logger.pm
+      packages:
+        - POE::Component::IRC::Plugin::Logger
+      primary_package: POE::Component::IRC::Plugin::Logger
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Encode
+        - Encode::Guess
+        - Fcntl
+        - File::Spec::Functions
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Plugin::BotTraffic
+        - POE::Component::IRC::Common
+        - POSIX
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/Logger.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 6.04
+    - bytesize: 5443
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fdd78e100b3a64664fb7262d444934b
+      module_name_from_file_guess: POE::Component::IRC::Plugin::NickReclaim
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/NickReclaim.pm
+      packages:
+        - POE::Component::IRC::Plugin::NickReclaim
+      primary_package: POE::Component::IRC::Plugin::NickReclaim
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/NickReclaim.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 6.04
+    - bytesize: 2361
+      file_mime_type: ~
+      line_count: ~
+      md5: 9915e4ef2b7eecf330bfc2a96ed5dc9a
+      module_name_from_file_guess: POE::Component::IRC::Plugin::NickServID
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/NickServID.pm
+      packages:
+        - POE::Component::IRC::Plugin::NickServID
+      primary_package: POE::Component::IRC::Plugin::NickServID
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Common
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/NickServID.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 9729
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e7faa9ad7036f2e90f14bffd4b45496
+      module_name_from_file_guess: POE::Component::IRC::Plugin::PlugMan
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/PlugMan.pm
+      packages:
+        - POE::Component::IRC::Plugin::PlugMan
+      primary_package: POE::Component::IRC::Plugin::PlugMan
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Common
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/PlugMan.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 15576
+      file_mime_type: ~
+      line_count: ~
+      md5: 1519a7aaf8cf9517fe22b784185a4ae4
+      module_name_from_file_guess: POE::Component::IRC::Plugin::Proxy
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Plugin/Proxy.pm
+      packages:
+        - POE::Component::IRC::Plugin::Proxy
+      primary_package: POE::Component::IRC::Plugin::Proxy
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Socket
+        - POE
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Common
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/Proxy.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 6.04
+    - bytesize: 5208
+      file_mime_type: ~
+      line_count: ~
+      md5: eb6d0a69c155a0cefaf3beb4b1692f4b
+      module_name_from_file_guess: POE::Component::IRC::Plugin::Whois
+      mtime: 1236468666
+      name: blib/lib/POE/Component/IRC/Plugin/Whois.pm
+      packages:
+        - POE::Component::IRC::Plugin::Whois
+      primary_package: POE::Component::IRC::Plugin::Whois
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC::Plugin
+        - POE::Component::IRC::Common
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Plugin/Whois.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 5871
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fabeb210b1447ccfcb13283dac5790b
+      module_name_from_file_guess: POE::Component::IRC::Qnet
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Qnet.pm
+      packages:
+        - POE::Component::IRC::Qnet
+      primary_package: POE::Component::IRC::Qnet
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE
+        - POE::Component::IRC::Constants
+        - base
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Qnet.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 6.04
+    - bytesize: 19557
+      file_mime_type: ~
+      line_count: ~
+      md5: f3577c76f220a5609b1b2ade011c2c75
+      module_name_from_file_guess: POE::Component::IRC::Qnet::State
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/Qnet/State.pm
+      packages:
+        - POE::Component::IRC::Qnet::State
+      primary_package: POE::Component::IRC::Qnet::State
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE
+        - POE::Component::IRC::Common
+        - POE::Component::IRC::Plugin
+        - base
+      version_info:
+        filename: blib/lib/POE/Component/IRC/Qnet/State.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 6.04
+    - bytesize: 48670
+      file_mime_type: ~
+      line_count: ~
+      md5: a177249942e27a617ed1106da8ef2ea3
+      module_name_from_file_guess: POE::Component::IRC::State
+      mtime: 1236468667
+      name: blib/lib/POE/Component/IRC/State.pm
+      packages:
+        - POE::Component::IRC::State
+      primary_package: POE::Component::IRC::State
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC::Common
+        - POE::Component::IRC::Plugin
+        - base
+      version_info:
+        filename: blib/lib/POE/Component/IRC/State.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 6.04
+    - bytesize: 1805
+      file_mime_type: ~
+      line_count: ~
+      md5: b31e4c5e2b59c69e1c49419e735b655e
+      module_name_from_file_guess: POE::Filter::IRC
+      mtime: 1236468666
+      name: blib/lib/POE/Filter/IRC.pm
+      packages:
+        - POE::Filter::IRC
+      primary_package: POE::Filter::IRC
+      uses:
+        - strict
+        - warnings
+        - POE::Filter::Stackable
+        - POE::Filter::IRCD
+        - POE::Filter::IRC::Compat
+      version_info:
+        filename: blib/lib/POE/Filter/IRC.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 6.04
+    - bytesize: 14404
+      file_mime_type: ~
+      line_count: ~
+      md5: 1505e23e40492cbc0769403d763dd770
+      module_name_from_file_guess: POE::Filter::IRC::Compat
+      mtime: 1236468667
+      name: blib/lib/POE/Filter/IRC/Compat.pm
+      packages:
+        - POE::Filter::IRC::Compat
+      primary_package: POE::Filter::IRC::Compat
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - POE::Filter::IRCD
+        - File::Basename
+        - base
+      version_info:
+        filename: blib/lib/POE/Filter/IRC/Compat.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 6.04
+  modules:
+    - blib/lib/POE/Component/IRC.pm
+    - blib/lib/POE/Component/IRC/Common.pm
+    - blib/lib/POE/Component/IRC/Constants.pm
+    - blib/lib/POE/Component/IRC/Plugin.pm
+    - blib/lib/POE/Component/IRC/Plugin/AutoJoin.pm
+    - blib/lib/POE/Component/IRC/Plugin/BotAddressed.pm
+    - blib/lib/POE/Component/IRC/Plugin/BotCommand.pm
+    - blib/lib/POE/Component/IRC/Plugin/BotTraffic.pm
+    - blib/lib/POE/Component/IRC/Plugin/CTCP.pm
+    - blib/lib/POE/Component/IRC/Plugin/Connector.pm
+    - blib/lib/POE/Component/IRC/Plugin/Console.pm
+    - blib/lib/POE/Component/IRC/Plugin/CycleEmpty.pm
+    - blib/lib/POE/Component/IRC/Plugin/DCC.pm
+    - blib/lib/POE/Component/IRC/Plugin/FollowTail.pm
+    - blib/lib/POE/Component/IRC/Plugin/ISupport.pm
+    - blib/lib/POE/Component/IRC/Plugin/Logger.pm
+    - blib/lib/POE/Component/IRC/Plugin/NickReclaim.pm
+    - blib/lib/POE/Component/IRC/Plugin/NickServID.pm
+    - blib/lib/POE/Component/IRC/Plugin/PlugMan.pm
+    - blib/lib/POE/Component/IRC/Plugin/Proxy.pm
+    - blib/lib/POE/Component/IRC/Plugin/Whois.pm
+    - blib/lib/POE/Component/IRC/Qnet.pm
+    - blib/lib/POE/Component/IRC/Qnet/State.pm
+    - blib/lib/POE/Component/IRC/State.pm
+    - blib/lib/POE/Filter/IRC.pm
+    - blib/lib/POE/Filter/IRC/Compat.pm
+  test_info:
+    - bytesize: 3732
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bb289ea88582d5cff74917ba871853b
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/05_resume.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 3589
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ba182d613526f945224aecfe63c324d
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/06_chat.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - POE
+        - Socket
+        - Test::More
+    - bytesize: 1096
+      file_mime_type: ~
+      line_count: ~
+      md5: b9e71909250f481a4918a8fc20cd484c
+      mtime: 1233053814
+      name: t/04_plugins/17_dcc/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::DCC
+    - bytesize: 3421
+      file_mime_type: ~
+      line_count: ~
+      md5: a799d9ec93698c85cf21665cb1765684
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/03_send.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 3052
+      file_mime_type: ~
+      line_count: ~
+      md5: c42ac04cb8cc43fc62bd28c468912b12
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/02_timeout.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 3649
+      file_mime_type: ~
+      line_count: ~
+      md5: aa0287bdc9769e7c2bca3277beed166f
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/04_send_spaces.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 3341
+      file_mime_type: ~
+      line_count: ~
+      md5: 9978c6b3902d97955cb4ec4776117227
+      mtime: 1236463285
+      name: t/04_plugins/17_dcc/07_nat.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 3030
+      file_mime_type: ~
+      line_count: ~
+      md5: d1e1bdbb7d1c27f4ae6f79ec36d1e839
+      mtime: 1236463284
+      name: t/04_plugins/04_bottraffic/02_output.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotTraffic
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: b48af81a8dfaa13a26f160256263b684
+      mtime: 1233053813
+      name: t/04_plugins/04_bottraffic/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotTraffic
+    - bytesize: 1150
+      file_mime_type: ~
+      line_count: ~
+      md5: c54bfd86f5f6fa0c2be660b373805053
+      mtime: 1233053814
+      name: t/04_plugins/15_nickservid/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::NickServID
+    - bytesize: 1106
+      file_mime_type: ~
+      line_count: ~
+      md5: b58df0d3097323e850b035fd5b654331
+      mtime: 1233053813
+      name: t/04_plugins/16_whois/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::Whois
+    - bytesize: 2337
+      file_mime_type: ~
+      line_count: ~
+      md5: f3ed215ac914215e6eb5b111638e79a3
+      mtime: 1236463285
+      name: t/04_plugins/16_whois/02_whois.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: d138d174b42a83780f60e78a652ccb80
+      mtime: 1233053813
+      name: t/04_plugins/13_botcommand/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotCommand
+    - bytesize: 4562
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cf84c6527327ad6afdc1822af9be67d
+      mtime: 1236463284
+      name: t/04_plugins/13_botcommand/03_options.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotCommand
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+        - POE::Component::IRC::Plugin
+    - bytesize: 4091
+      file_mime_type: ~
+      line_count: ~
+      md5: 9cc8ae1638df242ac521d38e1bef2d4d
+      mtime: 1236463284
+      name: t/04_plugins/13_botcommand/02_commands.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotCommand
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1145
+      file_mime_type: ~
+      line_count: ~
+      md5: 55532a857145029f8e7bd14fc2da0769
+      mtime: 1233053812
+      name: t/04_plugins/11_cycleempty/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::CycleEmpty
+    - bytesize: 3499
+      file_mime_type: ~
+      line_count: ~
+      md5: 00d6d2510835e8eefaba3d3a9560120d
+      mtime: 1236463284
+      name: t/04_plugins/11_cycleempty/02_cycle.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::CycleEmpty
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 6169
+      file_mime_type: ~
+      line_count: ~
+      md5: d8be38b244ac1c70cd8dbb0963c21e20
+      mtime: 1236463284
+      name: t/04_plugins/14_logger/02_public.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - File::Spec::Functions
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::Logger
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1147
+      file_mime_type: ~
+      line_count: ~
+      md5: 12491310fc8210383b8570013e97a03a
+      mtime: 1233053812
+      name: t/04_plugins/14_logger/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::Logger
+    - bytesize: 4702
+      file_mime_type: ~
+      line_count: ~
+      md5: 267bad9fddd803ad293d483f03ab8a14
+      mtime: 1236463284
+      name: t/04_plugins/14_logger/04_dcc_chat.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - File::Spec::Functions
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::Logger
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 4170
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b2903f56917e6e4f6c713c3d772dd0
+      mtime: 1236463284
+      name: t/04_plugins/14_logger/03_private.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - File::Spec::Functions
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::Logger
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1106
+      file_mime_type: ~
+      line_count: ~
+      md5: c170038149ced748cc05f1569cd6d850
+      mtime: 1233053813
+      name: t/04_plugins/08_proxy/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::Proxy
+    - bytesize: 2446
+      file_mime_type: ~
+      line_count: ~
+      md5: ed1b83b37995ef185dbbed5a5458499b
+      mtime: 1236463285
+      name: t/04_plugins/02_connector/02_reconnect.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::Connector
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 1126
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f320319d2c4789947e879ebc37dcc4c
+      mtime: 1233053813
+      name: t/04_plugins/02_connector/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::Connector
+    - bytesize: 3226
+      file_mime_type: ~
+      line_count: ~
+      md5: b187cad512a4aa1ea64dd51a82441800
+      mtime: 1236201435
+      name: t/04_plugins/12_autojoin/03_banned.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::AutoJoin
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 1135
+      file_mime_type: ~
+      line_count: ~
+      md5: acf6e4535667aa930c2af9abbb3a6315
+      mtime: 1233053813
+      name: t/04_plugins/12_autojoin/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::AutoJoin
+    - bytesize: 2413
+      file_mime_type: ~
+      line_count: ~
+      md5: 69e0f1f281cfe952bc852853f3e3b5c7
+      mtime: 1236463284
+      name: t/04_plugins/12_autojoin/02_join.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::AutoJoin
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 3698
+      file_mime_type: ~
+      line_count: ~
+      md5: 6945d44ff65767858fa02305c526c89c
+      mtime: 1236463285
+      name: t/04_plugins/03_botaddressed/02_output.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotAddressed
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 1141
+      file_mime_type: ~
+      line_count: ~
+      md5: 807b832d3970c6705c37f782d8719142
+      mtime: 1233053814
+      name: t/04_plugins/03_botaddressed/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::BotAddressed
+    - bytesize: 3044
+      file_mime_type: ~
+      line_count: ~
+      md5: cd9f2ea1a6a07838635e4de519892aaf
+      mtime: 1236463284
+      name: t/04_plugins/09_nickreclaim/02_reclaim.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::NickReclaim
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 1136
+      file_mime_type: ~
+      line_count: ~
+      md5: 83808eb519af1c9e1f98eaf834783df9
+      mtime: 1233053813
+      name: t/04_plugins/09_nickreclaim/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::NickReclaim
+    - bytesize: 1787
+      file_mime_type: ~
+      line_count: ~
+      md5: 456d2646cef68efb22af86540f1c2af5
+      mtime: 1233053814
+      name: t/04_plugins/10_followtail/01_load.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::FollowTail
+        - Test::More
+    - bytesize: 1116
+      file_mime_type: ~
+      line_count: ~
+      md5: 85851a87aae7ab588b2d5a923e45a15c
+      mtime: 1236336558
+      name: t/04_plugins/06_plugman/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::PlugMan
+    - bytesize: 1965
+      file_mime_type: ~
+      line_count: ~
+      md5: 0336d33309fa25ed9cf86546a88c2a67
+      mtime: 1236336558
+      name: t/04_plugins/06_plugman/02_add.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::PlugMan
+        - Test::More
+        - POE::Component::IRC::Plugin
+    - bytesize: 3423
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a3b3cb9539e77138a2ea8f70720ae62
+      mtime: 1236463285
+      name: t/04_plugins/06_plugman/03_irc_interface.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC::State
+        - POE::Component::IRC::Plugin::PlugMan
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 1121
+      file_mime_type: ~
+      line_count: ~
+      md5: 06d2d2166bbc39303e3327324fff7791
+      mtime: 1233053813
+      name: t/04_plugins/05_isupport/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::ISupport
+    - bytesize: 2292
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ab60b099702ecf2c67ff19671b23a05
+      mtime: 1236463284
+      name: t/04_plugins/05_isupport/02_isupport.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1116
+      file_mime_type: ~
+      line_count: ~
+      md5: 446bc0f137fcbc0d8f8af4efb80c092a
+      mtime: 1233053814
+      name: t/04_plugins/07_console/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::Console
+    - bytesize: 3023
+      file_mime_type: ~
+      line_count: ~
+      md5: 4527831bdd75408db1e6d040cb27d7a5
+      mtime: 1236463284
+      name: t/04_plugins/01_ctcp/02_replies.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - Socket
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::CTCP
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 1101
+      file_mime_type: ~
+      line_count: ~
+      md5: cb93f58be85dc979e66e69f025cdb9c6
+      mtime: 1236336554
+      name: t/04_plugins/01_ctcp/01_load.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE
+        - POE::Component::IRC
+        - POE::Component::IRC::Plugin::CTCP
+    - bytesize: 1069
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f8bb2bd029cd11a9820691d531a70e8
+      mtime: 1233053817
+      name: t/01_base/01_compile.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 4656
+      file_mime_type: ~
+      line_count: ~
+      md5: f54cb9d82dfad019dd98f6381ea7ad02
+      mtime: 1233053817
+      name: t/01_base/02_filters.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - POE::Filter::Stackable
+        - POE::Filter::IRCD
+        - POE::Filter::IRC::Compat
+        - POE::Filter::IRC
+    - bytesize: 423
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f0de53226e2e66819cb8b2783fd3989
+      mtime: 1233053817
+      name: t/01_base/04_pocosi.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::Server::IRC
+        - Test::More
+    - bytesize: 2753
+      file_mime_type: ~
+      line_count: ~
+      md5: 814ac685bcf495ccb52c2abcb3fd5710
+      mtime: 1233053817
+      name: t/01_base/03_common.t
+      uses:
+        - strict
+        - warnings
+        - POE::Component::IRC::Common
+        - Test::More
+    - bytesize: 1488
+      file_mime_type: ~
+      line_count: ~
+      md5: 81ddcfe5191fdd58a90a2e8ba0401c5b
+      mtime: 1236463284
+      name: t/02_behavior/03_socketerr.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - Socket
+        - Test::More
+    - bytesize: 5012
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d881b8e432385d644051c489258912
+      mtime: 1236463284
+      name: t/02_behavior/13_activity.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - POE
+        - Socket
+        - Test::More
+    - bytesize: 3578
+      file_mime_type: ~
+      line_count: ~
+      md5: 06fa4934c41b327045b57e4a5f2f0fdc
+      mtime: 1233053812
+      name: t/02_behavior/04_ipv6.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - Socket
+        - Test::More
+        - Socket6
+    - bytesize: 419
+      file_mime_type: ~
+      line_count: ~
+      md5: 4734e92eecef0a1f94a886e58e54f04a
+      mtime: 1233053812
+      name: t/02_behavior/01_public_methods.t
+      uses:
+        - strict
+        - warnings
+        - POE::Component::IRC
+        - Test::More
+    - bytesize: 2342
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c3e9d1f492e01ab62df31ef717baa66
+      mtime: 1236463284
+      name: t/02_behavior/10_signal.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 823
+      file_mime_type: ~
+      line_count: ~
+      md5: c5681fdfa6bd8ebf181a9655a364914d
+      mtime: 1233053812
+      name: t/02_behavior/05_resolver.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - Test::More
+        - POE::Component::Client::DNS
+    - bytesize: 3230
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bc160a7ebd2e64210e216f5a3006a3e
+      mtime: 1236463284
+      name: t/02_behavior/07_subclass.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+        - base
+    - bytesize: 3646
+      file_mime_type: ~
+      line_count: ~
+      md5: 8887eb007c39c3289ff90b6cc90fc02f
+      mtime: 1236463284
+      name: t/02_behavior/02_connect.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 802
+      file_mime_type: ~
+      line_count: ~
+      md5: c4d7e9e3556a678a2290799934ec18a9
+      mtime: 1233053812
+      name: t/02_behavior/08_parent_session.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - Test::More
+    - bytesize: 3337
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e03bb77f5bb86e79b5cb67c016aca98
+      mtime: 1236463284
+      name: t/02_behavior/09_multiple.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 2551
+      file_mime_type: ~
+      line_count: ~
+      md5: dc4096c0fcb7facfd4adf2d00eeb48ed
+      mtime: 1236336552
+      name: t/02_behavior/06_online.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - Socket
+        - Test::More
+    - bytesize: 1098
+      file_mime_type: ~
+      line_count: ~
+      md5: b21b5b47e9e0fc91c72a556d1eb30a27
+      mtime: 1233053812
+      name: t/02_behavior/12_delays.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC
+        - Socket
+        - Test::More
+    - bytesize: 2581
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b186ec6630ee03c32e1d31eb2ff2d94
+      mtime: 1236463284
+      name: t/02_behavior/11_multi_signal.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 3687
+      file_mime_type: ~
+      line_count: ~
+      md5: f56ba2809103cb527c94c7f959ee232d
+      mtime: 1236463285
+      name: t/05_regression/01_dcc_chat_close.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE::Component::IRC
+        - POE::Component::Server::IRC
+        - POE
+        - Socket
+        - Test::More
+    - bytesize: 6489
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fe94302376f31c84ee75b917780fa7b
+      mtime: 1236463285
+      name: t/03_subclasses/01_state.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - POE
+        - POE::Component::IRC::Common
+        - POE::Component::IRC::State
+        - POE::Component::Server::IRC
+        - Socket
+        - Test::More
+    - bytesize: 346
+      file_mime_type: ~
+      line_count: ~
+      md5: b9e6292f15155eb4ef205bd72e717f66
+      mtime: 1233053814
+      name: t/03_subclasses/02_qnet.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC::Qnet
+        - Test::More
+    - bytesize: 367
+      file_mime_type: ~
+      line_count: ~
+      md5: ffd61d35c6385fbec9a1392f7472ead1
+      mtime: 1233053814
+      name: t/03_subclasses/03_qnet_state.t
+      uses:
+        - strict
+        - warnings
+        - POE
+        - POE::Component::IRC::Qnet::State
+        - Test::More
+  tests:
+    - t/04_plugins/17_dcc/05_resume.t
+    - t/04_plugins/17_dcc/06_chat.t
+    - t/04_plugins/17_dcc/01_load.t
+    - t/04_plugins/17_dcc/03_send.t
+    - t/04_plugins/17_dcc/02_timeout.t
+    - t/04_plugins/17_dcc/04_send_spaces.t
+    - t/04_plugins/17_dcc/07_nat.t
+    - t/04_plugins/04_bottraffic/02_output.t
+    - t/04_plugins/04_bottraffic/01_load.t
+    - t/04_plugins/15_nickservid/01_load.t
+    - t/04_plugins/16_whois/01_load.t
+    - t/04_plugins/16_whois/02_whois.t
+    - t/04_plugins/13_botcommand/01_load.t
+    - t/04_plugins/13_botcommand/03_options.t
+    - t/04_plugins/13_botcommand/02_commands.t
+    - t/04_plugins/11_cycleempty/01_load.t
+    - t/04_plugins/11_cycleempty/02_cycle.t
+    - t/04_plugins/14_logger/02_public.t
+    - t/04_plugins/14_logger/01_load.t
+    - t/04_plugins/14_logger/04_dcc_chat.t
+    - t/04_plugins/14_logger/03_private.t
+    - t/04_plugins/08_proxy/01_load.t
+    - t/04_plugins/02_connector/02_reconnect.t
+    - t/04_plugins/02_connector/01_load.t
+    - t/04_plugins/12_autojoin/03_banned.t
+    - t/04_plugins/12_autojoin/01_load.t
+    - t/04_plugins/12_autojoin/02_join.t
+    - t/04_plugins/03_botaddressed/02_output.t
+    - t/04_plugins/03_botaddressed/01_load.t
+    - t/04_plugins/09_nickreclaim/02_reclaim.t
+    - t/04_plugins/09_nickreclaim/01_load.t
+    - t/04_plugins/10_followtail/01_load.t
+    - t/04_plugins/06_plugman/01_load.t
+    - t/04_plugins/06_plugman/02_add.t
+    - t/04_plugins/06_plugman/03_irc_interface.t
+    - t/04_plugins/05_isupport/01_load.t
+    - t/04_plugins/05_isupport/02_isupport.t
+    - t/04_plugins/07_console/01_load.t
+    - t/04_plugins/01_ctcp/02_replies.t
+    - t/04_plugins/01_ctcp/01_load.t
+    - t/01_base/01_compile.t
+    - t/01_base/02_filters.t
+    - t/01_base/04_pocosi.t
+    - t/01_base/03_common.t
+    - t/02_behavior/03_socketerr.t
+    - t/02_behavior/13_activity.t
+    - t/02_behavior/04_ipv6.t
+    - t/02_behavior/01_public_methods.t
+    - t/02_behavior/10_signal.t
+    - t/02_behavior/05_resolver.t
+    - t/02_behavior/07_subclass.t
+    - t/02_behavior/02_connect.t
+    - t/02_behavior/08_parent_session.t
+    - t/02_behavior/09_multiple.t
+    - t/02_behavior/06_online.t
+    - t/02_behavior/12_delays.t
+    - t/02_behavior/11_multi_signal.t
+    - t/05_regression/01_dcc_chat_close.t
+    - t/03_subclasses/01_state.t
+    - t/03_subclasses/02_qnet.t
+    - t/03_subclasses/03_qnet_state.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-67543._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 67543
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268996485
+  examine_start_time: 1268996419
+  examine_time: 66
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 67543
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1268996485
+  run_start_time: 1268996419
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

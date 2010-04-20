@@ -1,0 +1,2788 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Persistence API for perl classes.
+    author:
+      - 'Adrian Witas <adrian@webapp.strefa.pl>'
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.3201
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.2.html
+      version: 1.2
+    name: Persistence-Entity
+    requires:
+      Abstract::Meta::Class: 0.08
+      Carp: 0
+      DBIx::Connection: 0.06
+      SQL::Entity: 0.04
+      Simple::SAX::Serializer: 0.04
+      Test::DBUnit: 0.07
+      Test::Pod: 0
+      Test::Pod::Coverage: 0
+    resources:
+      license: http://dev.perl.org/licenses/
+    tests: t/*.t t/*/*.t
+    version: 0.04
+  blib:
+    - blib/lib/Persistence/Attribute.pm
+    - blib/lib/Persistence/Attribute/AMCAdapter.pm
+    - blib/lib/Persistence/Entity.pm
+    - blib/lib/Persistence/Entity/Manager.pm
+    - blib/lib/Persistence/Entity/Query.pm
+    - blib/lib/Persistence/Fetchable.pm
+    - blib/lib/Persistence/LOB.pm
+    - blib/lib/Persistence/Manual.pm
+    - blib/lib/Persistence/Manual/EntityManager.pm
+    - blib/lib/Persistence/Manual/Introduction.pm
+    - blib/lib/Persistence/Manual/LOB.pm
+    - blib/lib/Persistence/Manual/Relationship.pm
+    - blib/lib/Persistence/Meta/XML.pm
+    - blib/lib/Persistence/ORM.pm
+    - blib/lib/Persistence/Relationship.pm
+    - blib/lib/Persistence/Relationship/ManyToMany.pm
+    - blib/lib/Persistence/Relationship/OneToMany.pm
+    - blib/lib/Persistence/Relationship/ToOne.pm
+    - blib/lib/Persistence/ValueGenerator.pm
+    - blib/lib/Persistence/ValueGenerator/SequenceGenerator.pm
+    - blib/lib/Persistence/ValueGenerator/TableGenerator.pm
+    - blib/man3/Persistence::Attribute.3
+    - blib/man3/Persistence::Attribute::AMCAdapter.3
+    - blib/man3/Persistence::Entity.3
+    - blib/man3/Persistence::Entity::Manager.3
+    - blib/man3/Persistence::Entity::Query.3
+    - blib/man3/Persistence::Fetchable.3
+    - blib/man3/Persistence::LOB.3
+    - blib/man3/Persistence::Manual.3
+    - blib/man3/Persistence::Manual::EntityManager.3
+    - blib/man3/Persistence::Manual::Introduction.3
+    - blib/man3/Persistence::Manual::LOB.3
+    - blib/man3/Persistence::Manual::Relationship.3
+    - blib/man3/Persistence::Meta::XML.3
+    - blib/man3/Persistence::ORM.3
+    - blib/man3/Persistence::Relationship.3
+    - blib/man3/Persistence::Relationship::ManyToMany.3
+    - blib/man3/Persistence::Relationship::OneToMany.3
+    - blib/man3/Persistence::Relationship::ToOne.3
+    - blib/man3/Persistence::ValueGenerator.3
+    - blib/man3/Persistence::ValueGenerator::SequenceGenerator.3
+    - blib/man3/Persistence::ValueGenerator::TableGenerator.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Abstract::Meta::Class 0.08 not found.
+    Warning: prerequisite DBIx::Connection 0.06 not found.
+    Warning: prerequisite SQL::Entity 0.04 not found.
+    Warning: prerequisite Simple::SAX::Serializer 0.04 not found.
+    Warning: prerequisite Test::DBUnit 0.07 not found.
+    Warning: prerequisite Test::Pod 0 not found.
+    Warning: prerequisite Test::Pod::Coverage 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Persistence::Entity
+  build_output: |
+    cp lib/Persistence/Relationship/ManyToMany.pm blib/lib/Persistence/Relationship/ManyToMany.pm
+    cp lib/Persistence/Attribute/AMCAdapter.pm blib/lib/Persistence/Attribute/AMCAdapter.pm
+    cp lib/Persistence/Manual/EntityManager.pm blib/lib/Persistence/Manual/EntityManager.pm
+    cp lib/Persistence/Manual/LOB.pm blib/lib/Persistence/Manual/LOB.pm
+    cp lib/Persistence/Fetchable.pm blib/lib/Persistence/Fetchable.pm
+    cp lib/Persistence/Relationship/ToOne.pm blib/lib/Persistence/Relationship/ToOne.pm
+    cp lib/Persistence/Manual/Relationship.pm blib/lib/Persistence/Manual/Relationship.pm
+    cp lib/Persistence/Meta/XML.pm blib/lib/Persistence/Meta/XML.pm
+    cp lib/Persistence/ORM.pm blib/lib/Persistence/ORM.pm
+    cp lib/Persistence/Manual.pm blib/lib/Persistence/Manual.pm
+    cp lib/Persistence/LOB.pm blib/lib/Persistence/LOB.pm
+    cp lib/Persistence/ValueGenerator.pm blib/lib/Persistence/ValueGenerator.pm
+    cp lib/Persistence/Relationship/OneToMany.pm blib/lib/Persistence/Relationship/OneToMany.pm
+    cp lib/Persistence/ValueGenerator/SequenceGenerator.pm blib/lib/Persistence/ValueGenerator/SequenceGenerator.pm
+    cp lib/Persistence/Relationship.pm blib/lib/Persistence/Relationship.pm
+    cp lib/Persistence/Manual/Introduction.pm blib/lib/Persistence/Manual/Introduction.pm
+    cp lib/Persistence/Attribute.pm blib/lib/Persistence/Attribute.pm
+    cp lib/Persistence/ValueGenerator/TableGenerator.pm blib/lib/Persistence/ValueGenerator/TableGenerator.pm
+    cp lib/Persistence/Entity.pm blib/lib/Persistence/Entity.pm
+    cp lib/Persistence/Entity/Query.pm blib/lib/Persistence/Entity/Query.pm
+    cp lib/Persistence/Entity/Manager.pm blib/lib/Persistence/Entity/Manager.pm
+    Manifying blib/man3/Persistence::Attribute::AMCAdapter.3
+    Manifying blib/man3/Persistence::Relationship::ManyToMany.3
+    Manifying blib/man3/Persistence::Manual::EntityManager.3
+    Manifying blib/man3/Persistence::Manual::LOB.3
+    Manifying blib/man3/Persistence::Manual::Relationship.3
+    Manifying blib/man3/Persistence::Relationship::ToOne.3
+    Manifying blib/man3/Persistence::Fetchable.3
+    Manifying blib/man3/Persistence::Meta::XML.3
+    Manifying blib/man3/Persistence::ORM.3
+    Manifying blib/man3/Persistence::Manual.3
+    Manifying blib/man3/Persistence::LOB.3
+    Manifying blib/man3/Persistence::ValueGenerator.3
+    Manifying blib/man3/Persistence::Relationship::OneToMany.3
+    Manifying blib/man3/Persistence::ValueGenerator::SequenceGenerator.3
+    Manifying blib/man3/Persistence::Relationship.3
+    Manifying blib/man3/Persistence::Manual::Introduction.3
+    Manifying blib/man3/Persistence::Attribute.3
+    Manifying blib/man3/Persistence::ValueGenerator::TableGenerator.3
+    Manifying blib/man3/Persistence::Entity.3
+    Manifying blib/man3/Persistence::Entity::Query.3
+    Manifying blib/man3/Persistence::Entity::Manager.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH/Persistence-Entity-0.04/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH/Persistence-Entity-0.04
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH/Persistence-Entity-0.04/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH/Persistence-Entity-0.04/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: ADRIANWIT
+  dist_basename: Persistence-Entity-0.04.tar.gz
+  dist_date: 1212364709
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH/Persistence-Entity-0.04
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH/Persistence-Entity-0.04
+  dist_file: /home/brian/CPAN/authors/id/A/AD/ADRIANWIT/Persistence-Entity-0.04.tar.gz
+  dist_md5: 237e412abb87addad948c32a414e70d1
+  dist_size: 48897
+  manifest:
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - examples/value_generator.pl
+    - lib/Persistence/Attribute.pm
+    - lib/Persistence/Attribute/AMCAdapter.pm
+    - lib/Persistence/Entity.pm
+    - lib/Persistence/Entity/Manager.pm
+    - lib/Persistence/Entity/Query.pm
+    - lib/Persistence/Fetchable.pm
+    - lib/Persistence/LOB.pm
+    - lib/Persistence/Manual.pm
+    - lib/Persistence/Manual/EntityManager.pm
+    - lib/Persistence/Manual/Introduction.pm
+    - lib/Persistence/Manual/LOB.pm
+    - lib/Persistence/Manual/Relationship.pm
+    - lib/Persistence/Meta/XML.pm
+    - lib/Persistence/ORM.pm
+    - lib/Persistence/Relationship.pm
+    - lib/Persistence/Relationship/ManyToMany.pm
+    - lib/Persistence/Relationship/OneToMany.pm
+    - lib/Persistence/Relationship/ToOne.pm
+    - lib/Persistence/ValueGenerator.pm
+    - lib/Persistence/ValueGenerator/SequenceGenerator.pm
+    - lib/Persistence/ValueGenerator/TableGenerator.pm
+    - t/attribute/adapter.t
+    - t/bin/data1.bin
+    - t/bin/data2.bin
+    - t/entity.delete-result.xml
+    - t/entity.init.xml
+    - t/entity.insert-result.xml
+    - t/entity.t
+    - t/entity.update-result.xml
+    - t/entity/lob.init.xml
+    - t/entity/lob.insert-result.xml
+    - t/entity/lob.t
+    - t/entity/lob.update-result.xml
+    - t/entity/manager.t
+    - t/entity/query.t
+    - t/entity/relationship.delete-result.xml
+    - t/entity/relationship.init.xml
+    - t/entity/relationship.insert-result.xml
+    - t/entity/relationship.merge-result.xml
+    - t/entity/relationship.t
+    - t/lob.init.xml
+    - t/lob.insert-result.xml
+    - t/lob.t
+    - t/lob.update-result.xml
+    - t/meta/lob.init.xml
+    - t/meta/lob.insert-result.xml
+    - t/meta/lob.t
+    - t/meta/lob.update-result.xml
+    - t/meta/lob/Photo.xml
+    - t/meta/lob/persistence.xml
+    - t/meta/lob/photo.xml
+    - t/meta/xml.t
+    - t/meta/xml/Employee.xml
+    - t/meta/xml/dept.xml
+    - t/meta/xml/emp.xml
+    - t/meta/xml/persistence.xml
+    - t/plain_class.delete-result.xml
+    - t/plain_class.insert-result.xml
+    - t/plain_class.t
+    - t/plain_class.update-result.xml
+    - t/pod.t
+    - t/pod_coverage.t
+    - t/relationship/bidirectional.delete-result.xml
+    - t/relationship/bidirectional.init.xml
+    - t/relationship/bidirectional.insert-result.xml
+    - t/relationship/bidirectional.t
+    - t/relationship/bidirectional.update-result.xml
+    - t/relationship/many_to_many_relationship.delete-result.xml
+    - t/relationship/many_to_many_relationship.init.xml
+    - t/relationship/many_to_many_relationship.insert-result.xml
+    - t/relationship/many_to_many_relationship.t
+    - t/relationship/many_to_many_relationship.update-result.xml
+    - t/relationship/meta/Department.xml
+    - t/relationship/meta/Employee.xml
+    - t/relationship/meta/dept.xml
+    - t/relationship/meta/emp.xml
+    - t/relationship/meta/persistence.xml
+    - t/relationship/one_to_many_relationship.delete-result.xml
+    - t/relationship/one_to_many_relationship.init.xml
+    - t/relationship/one_to_many_relationship.insert-result.xml
+    - t/relationship/one_to_many_relationship.t
+    - t/relationship/one_to_many_relationship.update-result.xml
+    - t/relationship/to_one_relationship.delete-result.xml
+    - t/relationship/to_one_relationship.delete_1-result.xml
+    - t/relationship/to_one_relationship.init.xml
+    - t/relationship/to_one_relationship.insert-result.xml
+    - t/relationship/to_one_relationship.insert_1-result.xml
+    - t/relationship/to_one_relationship.t
+    - t/relationship/to_one_relationship.update-result.xml
+    - t/relationship/to_one_relationship.update.xml
+    - t/relationship/to_one_relationship.update2-result.xml
+    - t/relationship/to_one_relationship.update_1-result.xml
+    - t/sql/MySQL/create_schema.sql
+    - t/sql/MySQL/populate_schema.sql
+    - t/sql/Oracle/create_schema.sql
+    - t/sql/Oracle/populate_schema.sql
+    - t/sql/PostgreSQL/create_schema.sql
+    - t/sql/PostgreSQL/populate_schema.sql
+    - t/value_generator.t
+    - t/value_generator.table_generator-result.xml
+    - t/value_generator.table_generator.xml
+    - t/value_generator/sequence_generator.t
+    - t/value_generator/table_generator.t
+  manifest_file_info:
+    - bytesize: 402
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1212336498
+      name: Changes
+    - bytesize: 3572
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1212331525
+      name: MANIFEST
+    - bytesize: 771
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1212336517
+      name: META.yml
+    - bytesize: 703
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1212331991
+      name: Makefile.PL
+    - bytesize: 524
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1212336502
+      name: README
+    - bytesize: 1534
+      file_mime_type: ~
+      line_count: ~
+      md5: 93f222b54c6b11e569b4472cb0576b70
+      mtime: 1211706354
+      name: examples/value_generator.pl
+    - bytesize: 3339
+      file_mime_type: ~
+      line_count: ~
+      md5: 145f3095141d497e8f3b9626320dfcfb
+      mtime: 1212318508
+      name: lib/Persistence/Attribute.pm
+    - bytesize: 5175
+      file_mime_type: ~
+      line_count: ~
+      md5: e2ef5b6a169a3df82f826f9d165b81e8
+      mtime: 1212318567
+      name: lib/Persistence/Attribute/AMCAdapter.pm
+    - bytesize: 24377
+      file_mime_type: ~
+      line_count: ~
+      md5: 37015efa8c7909622eeea8573ecbe151
+      mtime: 1212331615
+      name: lib/Persistence/Entity.pm
+    - bytesize: 23205
+      file_mime_type: ~
+      line_count: ~
+      md5: f012e6cc3936a79b0ab08f94f003f18b
+      mtime: 1212317896
+      name: lib/Persistence/Entity/Manager.pm
+    - bytesize: 2649
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a41e0585dd5fbe67126268b63c549a
+      mtime: 1211133527
+      name: lib/Persistence/Entity/Query.pm
+    - bytesize: 3179
+      file_mime_type: ~
+      line_count: ~
+      md5: 83024916b2799d08482bb5aa829d3470
+      mtime: 1212336431
+      name: lib/Persistence/Fetchable.pm
+    - bytesize: 3353
+      file_mime_type: ~
+      line_count: ~
+      md5: b3a7aaec0b7630d164ccb348775e1e59
+      mtime: 1212336387
+      name: lib/Persistence/LOB.pm
+    - bytesize: 515
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fb320e46fec4b9134f854f628d44094
+      mtime: 1212336104
+      name: lib/Persistence/Manual.pm
+    - bytesize: 6429
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fc32d2d693f687115a02000decdcfa5
+      mtime: 1212249808
+      name: lib/Persistence/Manual/EntityManager.pm
+    - bytesize: 6114
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d4b2c19c1918c68a17ef2242a2f38d2
+      mtime: 1212318894
+      name: lib/Persistence/Manual/Introduction.pm
+    - bytesize: 2823
+      file_mime_type: ~
+      line_count: ~
+      md5: 82d680a7f35c771f1fd379db1a80e66e
+      mtime: 1212331477
+      name: lib/Persistence/Manual/LOB.pm
+    - bytesize: 9375
+      file_mime_type: ~
+      line_count: ~
+      md5: 04df0f0934ed1e8f2894a6cb97172f4b
+      mtime: 1212336241
+      name: lib/Persistence/Manual/Relationship.pm
+    - bytesize: 22397
+      file_mime_type: ~
+      line_count: ~
+      md5: eb363f2dc851db45fb2cce5b1d831361
+      mtime: 1212331180
+      name: lib/Persistence/Meta/XML.pm
+    - bytesize: 17279
+      file_mime_type: ~
+      line_count: ~
+      md5: c851c152b4fe7cf532ec93b481105072
+      mtime: 1212331277
+      name: lib/Persistence/ORM.pm
+    - bytesize: 7557
+      file_mime_type: ~
+      line_count: ~
+      md5: d50eec293fc5babb9dfbe4efa0e7fa8a
+      mtime: 1212312175
+      name: lib/Persistence/Relationship.pm
+    - bytesize: 7193
+      file_mime_type: ~
+      line_count: ~
+      md5: 53a85241133df48766b6165d1a04910d
+      mtime: 1212289363
+      name: lib/Persistence/Relationship/ManyToMany.pm
+    - bytesize: 4424
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bc9ea7c8d5d55d51571e6a570104b4a
+      mtime: 1212251382
+      name: lib/Persistence/Relationship/OneToMany.pm
+    - bytesize: 4947
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d1ad7b77e0b27846bc46f3a785193a8
+      mtime: 1212293721
+      name: lib/Persistence/Relationship/ToOne.pm
+    - bytesize: 3835
+      file_mime_type: ~
+      line_count: ~
+      md5: 154b5551e24a02c9e1b63806fd9120da
+      mtime: 1211132019
+      name: lib/Persistence/ValueGenerator.pm
+    - bytesize: 2300
+      file_mime_type: ~
+      line_count: ~
+      md5: d3b150c904455d9b94b7f5bf091b0207
+      mtime: 1211132528
+      name: lib/Persistence/ValueGenerator/SequenceGenerator.pm
+    - bytesize: 6042
+      file_mime_type: ~
+      line_count: ~
+      md5: e66adae5b0ea66142e8030f4df891ff8
+      mtime: 1211132422
+      name: lib/Persistence/ValueGenerator/TableGenerator.pm
+    - bytesize: 330
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c55520d8331ff4128adb28f60bad9c5
+      mtime: 1212307655
+      name: t/attribute/adapter.t
+    - bytesize: 89
+      file_mime_type: ~
+      line_count: ~
+      md5: e0205d6471f79049ad15bec0700d7ee4
+      mtime: 1035154800
+      name: t/bin/data1.bin
+    - bytesize: 89
+      file_mime_type: ~
+      line_count: ~
+      md5: 5578e0d9bd5a7426099a1b04904f3e87
+      mtime: 1035154800
+      name: t/bin/data2.bin
+    - bytesize: 520
+      file_mime_type: ~
+      line_count: ~
+      md5: 98ea64c4bd66d46583ce2710010a1372
+      mtime: 1210861147
+      name: t/entity.delete-result.xml
+    - bytesize: 566
+      file_mime_type: ~
+      line_count: ~
+      md5: 1baa2adb9719fcaa43c51cc3c42f13de
+      mtime: 1210779351
+      name: t/entity.init.xml
+    - bytesize: 626
+      file_mime_type: ~
+      line_count: ~
+      md5: d163756bec53fc7d4239ef16ff7fdb1a
+      mtime: 1210779389
+      name: t/entity.insert-result.xml
+    - bytesize: 3067
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ee60c3b03906a68181241da2674816c
+      mtime: 1210861181
+      name: t/entity.t
+    - bytesize: 566
+      file_mime_type: ~
+      line_count: ~
+      md5: 3471e4d965cf7bfabbafd80da30cfd5e
+      mtime: 1210861068
+      name: t/entity.update-result.xml
+    - bytesize: 279
+      file_mime_type: ~
+      line_count: ~
+      md5: 5776a3b73382f1d7c441bdc980ae7bc4
+      mtime: 1212247859
+      name: t/entity/lob.init.xml
+    - bytesize: 381
+      file_mime_type: ~
+      line_count: ~
+      md5: aa2eb257f662ed4500d49e3cd2efff0c
+      mtime: 1212247934
+      name: t/entity/lob.insert-result.xml
+    - bytesize: 3285
+      file_mime_type: ~
+      line_count: ~
+      md5: 39daca196ab340cb630bfa5c43d2d8e9
+      mtime: 1212317731
+      name: t/entity/lob.t
+    - bytesize: 448
+      file_mime_type: ~
+      line_count: ~
+      md5: 5028f117e5660a0b803c31bf46ab18d8
+      mtime: 1212247872
+      name: t/entity/lob.update-result.xml
+    - bytesize: 6553
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a9076e2fbc634b1888a2b19db7cc5ae
+      mtime: 1211705781
+      name: t/entity/manager.t
+    - bytesize: 2397
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e4a533104e726a3623cc061946598e6
+      mtime: 1211099832
+      name: t/entity/query.t
+    - bytesize: 559
+      file_mime_type: ~
+      line_count: ~
+      md5: c2d31576bedda510b32b6673a0ba49c3
+      mtime: 1209943836
+      name: t/entity/relationship.delete-result.xml
+    - bytesize: 566
+      file_mime_type: ~
+      line_count: ~
+      md5: 080577a5c5db5239a7732efacd04780d
+      mtime: 1209912055
+      name: t/entity/relationship.init.xml
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f50a8f4767a705a22237eb1817c7d7c
+      mtime: 1209912931
+      name: t/entity/relationship.insert-result.xml
+    - bytesize: 671
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fbcc613990675be9bb19e6feb1c4c9e
+      mtime: 1209916031
+      name: t/entity/relationship.merge-result.xml
+    - bytesize: 3662
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b4a88f10ae2ea504833ffc14320a469
+      mtime: 1211099882
+      name: t/entity/relationship.t
+    - bytesize: 279
+      file_mime_type: ~
+      line_count: ~
+      md5: 0df81ac60455d928df011ea5d614d3b3
+      mtime: 1212310412
+      name: t/lob.init.xml
+    - bytesize: 381
+      file_mime_type: ~
+      line_count: ~
+      md5: a5292f728d93ee0eef1897695757bef0
+      mtime: 1212310418
+      name: t/lob.insert-result.xml
+    - bytesize: 1959
+      file_mime_type: ~
+      line_count: ~
+      md5: fb6b9714569c907e1aa0900d2ae630c9
+      mtime: 1212328062
+      name: t/lob.t
+    - bytesize: 448
+      file_mime_type: ~
+      line_count: ~
+      md5: 0654e812818087656ab707ec71aff7c6
+      mtime: 1212310423
+      name: t/lob.update-result.xml
+    - bytesize: 279
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ab239801d09a5721b845b8578b40973
+      mtime: 1212247859
+      name: t/meta/lob.init.xml
+    - bytesize: 381
+      file_mime_type: ~
+      line_count: ~
+      md5: 55a2561664be8a19f8e4221090e30a00
+      mtime: 1212247934
+      name: t/meta/lob.insert-result.xml
+    - bytesize: 1851
+      file_mime_type: ~
+      line_count: ~
+      md5: 533608e9262f9c82017c6a5bccd19690
+      mtime: 1212331409
+      name: t/meta/lob.t
+    - bytesize: 448
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cf30e4660abaf9145b61ecd19d0a478
+      mtime: 1212247872
+      name: t/meta/lob.update-result.xml
+    - bytesize: 239
+      file_mime_type: ~
+      line_count: ~
+      md5: 512e8e3619ae362b78dba6a0f2ab3f79
+      mtime: 1212329384
+      name: t/meta/lob/Photo.xml
+    - bytesize: 258
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a464c4e6e43dbb6fcae9d53fb03f51d
+      mtime: 1212329351
+      name: t/meta/lob/persistence.xml
+    - bytesize: 301
+      file_mime_type: ~
+      line_count: ~
+      md5: 15089f45a3bb91d23b261f6cde1e5d41
+      mtime: 1212329455
+      name: t/meta/lob/photo.xml
+    - bytesize: 7826
+      file_mime_type: ~
+      line_count: ~
+      md5: 88036951214f57ba04ef53b7b26ebe80
+      mtime: 1212300759
+      name: t/meta/xml.t
+    - bytesize: 304
+      file_mime_type: ~
+      line_count: ~
+      md5: 6111289915bc06c1c69599433f675f70
+      mtime: 1211100859
+      name: t/meta/xml/Employee.xml
+    - bytesize: 450
+      file_mime_type: ~
+      line_count: ~
+      md5: 78ab77b4a1177fed58e35c44bd949846
+      mtime: 1211123126
+      name: t/meta/xml/dept.xml
+    - bytesize: 415
+      file_mime_type: ~
+      line_count: ~
+      md5: 297d47188c8dc2e4c104fb32bf038c30
+      mtime: 1211120465
+      name: t/meta/xml/emp.xml
+    - bytesize: 299
+      file_mime_type: ~
+      line_count: ~
+      md5: 520f8f24f2097231af162d99e5580d70
+      mtime: 1211122709
+      name: t/meta/xml/persistence.xml
+    - bytesize: 573
+      file_mime_type: ~
+      line_count: ~
+      md5: b23d81e61f3ea554ff59a4d9201531d4
+      mtime: 1211556156
+      name: t/plain_class.delete-result.xml
+    - bytesize: 619
+      file_mime_type: ~
+      line_count: ~
+      md5: cfa0d7f663dc23b4bda1c5974a0a5e2c
+      mtime: 1211556068
+      name: t/plain_class.insert-result.xml
+    - bytesize: 3236
+      file_mime_type: ~
+      line_count: ~
+      md5: 101cd6d6730f6d503bdcb31fe065af22
+      mtime: 1212306105
+      name: t/plain_class.t
+    - bytesize: 641
+      file_mime_type: ~
+      line_count: ~
+      md5: e41638631172460fa8e2bfd37abff654
+      mtime: 1211556355
+      name: t/plain_class.update-result.xml
+    - bytesize: 2337
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1212324899
+      name: t/pod.t
+    - bytesize: 1685
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f2a7e9d49bb3f5b3943e7d6afde39d0
+      mtime: 1212324925
+      name: t/pod_coverage.t
+    - bytesize: 441
+      file_mime_type: ~
+      line_count: ~
+      md5: f2e9fa8bba6e4e487b64a7fdcfaa0766
+      mtime: 1211130024
+      name: t/relationship/bidirectional.delete-result.xml
+    - bytesize: 567
+      file_mime_type: ~
+      line_count: ~
+      md5: 29518a9a3451b6054b16fab0a433af93
+      mtime: 1211122075
+      name: t/relationship/bidirectional.init.xml
+    - bytesize: 654
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b5f3603696eb49e30fe9521646ba9b6
+      mtime: 1211129118
+      name: t/relationship/bidirectional.insert-result.xml
+    - bytesize: 2489
+      file_mime_type: ~
+      line_count: ~
+      md5: b92ef2915814e19a259914654b27e5e7
+      mtime: 1211130157
+      name: t/relationship/bidirectional.t
+    - bytesize: 604
+      file_mime_type: ~
+      line_count: ~
+      md5: bc0e37d0c3cfe9fe8a505cd530d09f9c
+      mtime: 1211129778
+      name: t/relationship/bidirectional.update-result.xml
+    - bytesize: 746
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fe5947e4a2941a0811ab9c509304969
+      mtime: 1210606871
+      name: t/relationship/many_to_many_relationship.delete-result.xml
+    - bytesize: 995
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f85e996f4a554ad9f499d158c420f8b
+      mtime: 1209986949
+      name: t/relationship/many_to_many_relationship.init.xml
+    - bytesize: 1079
+      file_mime_type: ~
+      line_count: ~
+      md5: 69d677cdec56925b4320721759a4014e
+      mtime: 1209987388
+      name: t/relationship/many_to_many_relationship.insert-result.xml
+    - bytesize: 5902
+      file_mime_type: ~
+      line_count: ~
+      md5: a88503ac52623ed0aa440c832e32dbd6
+      mtime: 1211100183
+      name: t/relationship/many_to_many_relationship.t
+    - bytesize: 991
+      file_mime_type: ~
+      line_count: ~
+      md5: 1957791809f8fd3eeec79bbf076f52ab
+      mtime: 1209993703
+      name: t/relationship/many_to_many_relationship.update-result.xml
+    - bytesize: 324
+      file_mime_type: ~
+      line_count: ~
+      md5: a0ec39dbd670f282a866ddc049712822
+      mtime: 1211125994
+      name: t/relationship/meta/Department.xml
+    - bytesize: 361
+      file_mime_type: ~
+      line_count: ~
+      md5: 00be867f8144126d4ddc2e92f36aaff8
+      mtime: 1211125988
+      name: t/relationship/meta/Employee.xml
+    - bytesize: 450
+      file_mime_type: ~
+      line_count: ~
+      md5: b1cf2d7202f58d99487316145c5eb21a
+      mtime: 1211087134
+      name: t/relationship/meta/dept.xml
+    - bytesize: 415
+      file_mime_type: ~
+      line_count: ~
+      md5: 67e3e0c5630ece0a9b1aa7082f3ad0bf
+      mtime: 1211087187
+      name: t/relationship/meta/emp.xml
+    - bytesize: 342
+      file_mime_type: ~
+      line_count: ~
+      md5: 022d8ce54770be635e246c3ca38d8cad
+      mtime: 1211122725
+      name: t/relationship/meta/persistence.xml
+    - bytesize: 421
+      file_mime_type: ~
+      line_count: ~
+      md5: 41587b8b3594ce093dad24950563e3bc
+      mtime: 1209961572
+      name: t/relationship/one_to_many_relationship.delete-result.xml
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: 37152649039516727b9e7fdc92bd377a
+      mtime: 1209986805
+      name: t/relationship/one_to_many_relationship.init.xml
+    - bytesize: 736
+      file_mime_type: ~
+      line_count: ~
+      md5: a5aeb4ad935969262890a0f37086ec5e
+      mtime: 1209957775
+      name: t/relationship/one_to_many_relationship.insert-result.xml
+    - bytesize: 6741
+      file_mime_type: ~
+      line_count: ~
+      md5: b1028f9abd05ed46457a151f5c9ca5e7
+      mtime: 1211100291
+      name: t/relationship/one_to_many_relationship.t
+    - bytesize: 647
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ab92dfe739c8236b3c34e18029de1e0
+      mtime: 1209961404
+      name: t/relationship/one_to_many_relationship.update-result.xml
+    - bytesize: 478
+      file_mime_type: ~
+      line_count: ~
+      md5: 766987cb3249be5d380f2b59f9c5a6a0
+      mtime: 1210776128
+      name: t/relationship/to_one_relationship.delete-result.xml
+    - bytesize: 639
+      file_mime_type: ~
+      line_count: ~
+      md5: 72e77133fd589340ffc49682f8648f09
+      mtime: 1211701773
+      name: t/relationship/to_one_relationship.delete_1-result.xml
+    - bytesize: 568
+      file_mime_type: ~
+      line_count: ~
+      md5: d2d3c3d3885973021dce90a5a193b1b1
+      mtime: 1211693461
+      name: t/relationship/to_one_relationship.init.xml
+    - bytesize: 669
+      file_mime_type: ~
+      line_count: ~
+      md5: beb403e12a13dc335f0b58b30acd4739
+      mtime: 1210683278
+      name: t/relationship/to_one_relationship.insert-result.xml
+    - bytesize: 685
+      file_mime_type: ~
+      line_count: ~
+      md5: 24b51a3aecc20f27ca624ca5d163a648
+      mtime: 1211694522
+      name: t/relationship/to_one_relationship.insert_1-result.xml
+    - bytesize: 6827
+      file_mime_type: ~
+      line_count: ~
+      md5: 5940e1935b410d20bf72fa665510191c
+      mtime: 1212306239
+      name: t/relationship/to_one_relationship.t
+    - bytesize: 685
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fdc7b152055239201acfe195b5f5373
+      mtime: 1210774591
+      name: t/relationship/to_one_relationship.update-result.xml
+    - bytesize: 686
+      file_mime_type: ~
+      line_count: ~
+      md5: 390e32faffbb626d95f78e77ebde561d
+      mtime: 1210774623
+      name: t/relationship/to_one_relationship.update.xml
+    - bytesize: 689
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eb43355f8d12b54359071d8ce16a05a
+      mtime: 1210775376
+      name: t/relationship/to_one_relationship.update2-result.xml
+    - bytesize: 764
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b25a1b6c40d48a70a19e152163491ea
+      mtime: 1211700473
+      name: t/relationship/to_one_relationship.update_1-result.xml
+    - bytesize: 1297
+      file_mime_type: ~
+      line_count: ~
+      md5: 68fe91de41ca277a0452f84f66ba9104
+      mtime: 1212243065
+      name: t/sql/MySQL/create_schema.sql
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: 56f6468c542292b17506ff3654b14c29
+      mtime: 1211037569
+      name: t/sql/MySQL/populate_schema.sql
+    - bytesize: 1602
+      file_mime_type: ~
+      line_count: ~
+      md5: ee9a3e1c626a6016c7b9c7a72610bd77
+      mtime: 1212242694
+      name: t/sql/Oracle/create_schema.sql
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: f0817041e9d5953c572b645d78a05804
+      mtime: 1211037533
+      name: t/sql/Oracle/populate_schema.sql
+    - bytesize: 1294
+      file_mime_type: ~
+      line_count: ~
+      md5: 766d037f8e617e4f099d090df6197c68
+      mtime: 1212242714
+      name: t/sql/PostgreSQL/create_schema.sql
+    - bytesize: 328
+      file_mime_type: ~
+      line_count: ~
+      md5: a58b96c0abfcfc4c35f884d7be1bd532
+      mtime: 1211037557
+      name: t/sql/PostgreSQL/populate_schema.sql
+    - bytesize: 2046
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fe0ded2f696da3014b8d7ca25743d99
+      mtime: 1211100015
+      name: t/value_generator.t
+    - bytesize: 522
+      file_mime_type: ~
+      line_count: ~
+      md5: 1423836abdd657f5946dee8697403270
+      mtime: 1209905508
+      name: t/value_generator.table_generator-result.xml
+    - bytesize: 130
+      file_mime_type: ~
+      line_count: ~
+      md5: 54725e5cca22eaa28191424800769fac
+      mtime: 1210606133
+      name: t/value_generator.table_generator.xml
+    - bytesize: 2378
+      file_mime_type: ~
+      line_count: ~
+      md5: d11844b7946369a2c95ebf3d6c4dde4c
+      mtime: 1211100082
+      name: t/value_generator/sequence_generator.t
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: dd01b7cca3ceda0ec4938e9cb1f2d463
+      mtime: 1209906236
+      name: t/value_generator/table_generator.t
+  module_info:
+    - bytesize: 3339
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aba49efb9ce7e52301eab25712d4f8c
+      module_name_from_file_guess: Persistence::Attribute
+      mtime: 1212318508
+      name: blib/lib/Persistence/Attribute.pm
+      packages:
+        - Persistence::Attribute
+      primary_package: Persistence::Attribute
+      uses:
+        - strict
+        - warnings
+        - Abstract::Meta::Class
+        - vars
+        - Carp
+      version_info:
+        filename: blib/lib/Persistence/Attribute.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 0.04
+    - bytesize: 5175
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dff663de5aa04235dc5bcb9b7b53d33
+      module_name_from_file_guess: Persistence::Attribute::AMCAdapter
+      mtime: 1212318567
+      name: blib/lib/Persistence/Attribute/AMCAdapter.pm
+      packages:
+        - Persistence::Attribute::AMCAdapter
+      primary_package: Persistence::Attribute::AMCAdapter
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - Persistence::Attribute
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/Persistence/Attribute/AMCAdapter.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 0.01
+    - bytesize: 24377
+      file_mime_type: ~
+      line_count: ~
+      md5: cd81aaf6703f9b4ae4ce5f7205ff80c6
+      module_name_from_file_guess: Persistence::Entity
+      mtime: 1212331615
+      name: blib/lib/Persistence/Entity.pm
+      packages:
+        - Persistence::Entity
+      primary_package: Persistence::Entity
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - base
+        - Carp
+        - SQL::Entity
+      version_info:
+        filename: blib/lib/Persistence/Entity.pm
+        identifier: VERSION
+        line_number: 26
+        sigil: $
+        value: 0.03
+    - bytesize: 23205
+      file_mime_type: ~
+      line_count: ~
+      md5: 48eada8085d4e7b4bbf9dfe6a58d4a13
+      module_name_from_file_guess: Persistence::Entity::Manager
+      mtime: 1212317896
+      name: blib/lib/Persistence/Entity/Manager.pm
+      packages:
+        - Persistence::Entity::Manager
+      primary_package: Persistence::Entity::Manager
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - Persistence::ORM
+        - DBIx::Connection
+        - Carp
+        - Persistence::Entity
+      version_info:
+        filename: blib/lib/Persistence/Entity/Manager.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.02
+    - bytesize: 2649
+      file_mime_type: ~
+      line_count: ~
+      md5: b3d9099f5711c3b0dc572a8ac4ae6838
+      module_name_from_file_guess: Persistence::Entity::Query
+      mtime: 1211133527
+      name: blib/lib/Persistence/Entity/Query.pm
+      packages:
+        - Persistence::Entity::Query
+      primary_package: Persistence::Entity::Query
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - base
+      version_info:
+        filename: blib/lib/Persistence/Entity/Query.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 0.01
+    - bytesize: 3179
+      file_mime_type: ~
+      line_count: ~
+      md5: 03c308d27d842e43993302242bb36a24
+      module_name_from_file_guess: Persistence::Fetchable
+      mtime: 1212336431
+      name: blib/lib/Persistence/Fetchable.pm
+      packages:
+        - Persistence::Fetchable
+      primary_package: Persistence::Fetchable
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - base
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/Persistence/Fetchable.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.02
+    - bytesize: 3353
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cd2c005859ebb18543913712c1ed0fe
+      module_name_from_file_guess: Persistence::LOB
+      mtime: 1212336387
+      name: blib/lib/Persistence/LOB.pm
+      packages:
+        - Persistence::LOB
+      primary_package: Persistence::LOB
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - Persistence::Fetchable
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/Persistence/LOB.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 0.02
+    - bytesize: 515
+      file_mime_type: ~
+      line_count: ~
+      md5: a51857b061d5c01bc087c8d8f380fe5c
+      module_name_from_file_guess: Persistence::Manual
+      mtime: 1212336104
+      name: blib/lib/Persistence/Manual.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Persistence/Manual.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6429
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e24b5badf6c5be6d2d902d544a81afe
+      module_name_from_file_guess: Persistence::Manual::EntityManager
+      mtime: 1212249808
+      name: blib/lib/Persistence/Manual/EntityManager.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Persistence/Manual/EntityManager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6114
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a27014cc0a6d744239752a11cde5e40
+      module_name_from_file_guess: Persistence::Manual::Introduction
+      mtime: 1212318894
+      name: blib/lib/Persistence/Manual/Introduction.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Persistence/Manual/Introduction.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2823
+      file_mime_type: ~
+      line_count: ~
+      md5: 76215b19288cc4d3a30ab2505987e24e
+      module_name_from_file_guess: Persistence::Manual::LOB
+      mtime: 1212331477
+      name: blib/lib/Persistence/Manual/LOB.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Persistence/Manual/LOB.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9375
+      file_mime_type: ~
+      line_count: ~
+      md5: da1776da02a105d214595962ace137ef
+      module_name_from_file_guess: Persistence::Manual::Relationship
+      mtime: 1212336241
+      name: blib/lib/Persistence/Manual/Relationship.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/Persistence/Manual/Relationship.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 22397
+      file_mime_type: ~
+      line_count: ~
+      md5: c8e3ade81b4a4bf36e75b9e128e0c8e8
+      module_name_from_file_guess: Persistence::Meta::XML
+      mtime: 1212331180
+      name: blib/lib/Persistence/Meta/XML.pm
+      packages:
+        - Persistence::Meta::XML
+      primary_package: Persistence::Meta::XML
+      uses: []
+      version_info:
+        filename: blib/lib/Persistence/Meta/XML.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 0.03
+    - bytesize: 17279
+      file_mime_type: ~
+      line_count: ~
+      md5: 15c354d2d4f38e84a1af48bcf59e6c71
+      module_name_from_file_guess: Persistence::ORM
+      mtime: 1212331277
+      name: blib/lib/Persistence/ORM.pm
+      packages:
+        - Persistence::ORM
+      primary_package: Persistence::ORM
+      uses:
+        - strict
+        - warnings
+        - Abstract::Meta::Class
+        - Persistence::Attribute::AMCAdapter
+        - Persistence::Relationship
+        - Persistence::LOB
+        - Persistence::Relationship::ToOne
+        - Persistence::Relationship::OneToMany
+        - Persistence::Relationship::ManyToMany
+        - vars
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/Persistence/ORM.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 0.04
+    - bytesize: 7557
+      file_mime_type: ~
+      line_count: ~
+      md5: 127709b679b8a8b5c1432d049dfe512e
+      module_name_from_file_guess: Persistence::Relationship
+      mtime: 1212312175
+      name: blib/lib/Persistence/Relationship.pm
+      packages:
+        - Persistence::Relationship
+      primary_package: Persistence::Relationship
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - Persistence::Fetchable
+        - base
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/Persistence/Relationship.pm
+        identifier: VERSION
+        line_number: 21
+        sigil: $
+        value: 0.03
+    - bytesize: 7193
+      file_mime_type: ~
+      line_count: ~
+      md5: 197143dfb2c66ccc14c3c0a1c8138f64
+      module_name_from_file_guess: Persistence::Relationship::ManyToMany
+      mtime: 1212289363
+      name: blib/lib/Persistence/Relationship/ManyToMany.pm
+      packages:
+        - Persistence::Relationship::ManyToMany
+      primary_package: Persistence::Relationship::ManyToMany
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/Persistence/Relationship/ManyToMany.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 0.01
+    - bytesize: 4424
+      file_mime_type: ~
+      line_count: ~
+      md5: 353d987b2f6ea3e6537c0f594d71a12c
+      module_name_from_file_guess: Persistence::Relationship::OneToMany
+      mtime: 1212251382
+      name: blib/lib/Persistence/Relationship/OneToMany.pm
+      packages:
+        - Persistence::Relationship::OneToMany
+      primary_package: Persistence::Relationship::OneToMany
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/Persistence/Relationship/OneToMany.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 0.01
+    - bytesize: 4947
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a58e0d4a5adba973771bf197ddc9bf2
+      module_name_from_file_guess: Persistence::Relationship::ToOne
+      mtime: 1212293721
+      name: blib/lib/Persistence/Relationship/ToOne.pm
+      packages:
+        - Persistence::Relationship::ToOne
+      primary_package: Persistence::Relationship::ToOne
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+        - base
+        - Carp
+      version_info:
+        filename: blib/lib/Persistence/Relationship/ToOne.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 0.01
+    - bytesize: 3835
+      file_mime_type: ~
+      line_count: ~
+      md5: f441311dd4ea785821c8a8a8df0a852d
+      module_name_from_file_guess: Persistence::ValueGenerator
+      mtime: 1211132019
+      name: blib/lib/Persistence/ValueGenerator.pm
+      packages:
+        - Persistence::ValueGenerator
+      primary_package: Persistence::ValueGenerator
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Abstract::Meta::Class
+      version_info:
+        filename: blib/lib/Persistence/ValueGenerator.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 0.01
+    - bytesize: 2300
+      file_mime_type: ~
+      line_count: ~
+      md5: 1873f0dbf28320168d63adc0f2a5ec7d
+      module_name_from_file_guess: Persistence::ValueGenerator::SequenceGenerator
+      mtime: 1211132528
+      name: blib/lib/Persistence/ValueGenerator/SequenceGenerator.pm
+      packages:
+        - Persistence::ValueGenerator::SequenceGenerator
+      primary_package: Persistence::ValueGenerator::SequenceGenerator
+      uses:
+        - strict
+        - warnings
+        - vars
+        - base
+        - Abstract::Meta::Class
+      version_info:
+        filename: blib/lib/Persistence/ValueGenerator/SequenceGenerator.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 0.01
+    - bytesize: 6042
+      file_mime_type: ~
+      line_count: ~
+      md5: 34ce5d6d3f7c89eac9f78b78f6dfd33c
+      module_name_from_file_guess: Persistence::ValueGenerator::TableGenerator
+      mtime: 1211132422
+      name: blib/lib/Persistence/ValueGenerator/TableGenerator.pm
+      packages:
+        - Persistence::ValueGenerator::TableGenerator
+      primary_package: Persistence::ValueGenerator::TableGenerator
+      uses:
+        - strict
+        - warnings
+        - vars
+        - base
+        - Abstract::Meta::Class
+        - Persistence::Entity
+      version_info:
+        filename: blib/lib/Persistence/ValueGenerator/TableGenerator.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 0.01
+  modules:
+    - blib/lib/Persistence/Attribute.pm
+    - blib/lib/Persistence/Attribute/AMCAdapter.pm
+    - blib/lib/Persistence/Entity.pm
+    - blib/lib/Persistence/Entity/Manager.pm
+    - blib/lib/Persistence/Entity/Query.pm
+    - blib/lib/Persistence/Fetchable.pm
+    - blib/lib/Persistence/LOB.pm
+    - blib/lib/Persistence/Manual.pm
+    - blib/lib/Persistence/Manual/EntityManager.pm
+    - blib/lib/Persistence/Manual/Introduction.pm
+    - blib/lib/Persistence/Manual/LOB.pm
+    - blib/lib/Persistence/Manual/Relationship.pm
+    - blib/lib/Persistence/Meta/XML.pm
+    - blib/lib/Persistence/ORM.pm
+    - blib/lib/Persistence/Relationship.pm
+    - blib/lib/Persistence/Relationship/ManyToMany.pm
+    - blib/lib/Persistence/Relationship/OneToMany.pm
+    - blib/lib/Persistence/Relationship/ToOne.pm
+    - blib/lib/Persistence/ValueGenerator.pm
+    - blib/lib/Persistence/ValueGenerator/SequenceGenerator.pm
+    - blib/lib/Persistence/ValueGenerator/TableGenerator.pm
+  test_info:
+    - bytesize: 3236
+      file_mime_type: ~
+      line_count: ~
+      md5: 101cd6d6730f6d503bdcb31fe065af22
+      mtime: 1212306105
+      name: t/plain_class.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Persistence::Entity::Manager
+        - Persistence::Entity
+        - Test::DBUnit
+    - bytesize: 2046
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fe0ded2f696da3014b8d7ca25743d99
+      mtime: 1211100015
+      name: t/value_generator.t
+      uses:
+        - DBIx::Connection
+        - Test::More
+        - Test::DBUnit
+        - strict
+        - warnings
+    - bytesize: 1685
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f2a7e9d49bb3f5b3943e7d6afde39d0
+      mtime: 1212324925
+      name: t/pod_coverage.t
+      uses:
+        - strict
+        - warnings
+        - Test::Pod::Coverage
+    - bytesize: 2337
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1212324899
+      name: t/pod.t
+      uses:
+        - warnings
+        - strict
+        - Test::Pod
+    - bytesize: 3067
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ee60c3b03906a68181241da2674816c
+      mtime: 1210861181
+      name: t/entity.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+    - bytesize: 1959
+      file_mime_type: ~
+      line_count: ~
+      md5: fb6b9714569c907e1aa0900d2ae630c9
+      mtime: 1212328062
+      name: t/lob.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+    - bytesize: 3662
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b4a88f10ae2ea504833ffc14320a469
+      mtime: 1211099882
+      name: t/entity/relationship.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+    - bytesize: 2397
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e4a533104e726a3623cc061946598e6
+      mtime: 1211099832
+      name: t/entity/query.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Abstract::Meta::Class
+        - Persistence::ORM
+    - bytesize: 6553
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a9076e2fbc634b1888a2b19db7cc5ae
+      mtime: 1211705781
+      name: t/entity/manager.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Abstract::Meta::Class
+        - Persistence::ORM
+    - bytesize: 3285
+      file_mime_type: ~
+      line_count: ~
+      md5: 39daca196ab340cb630bfa5c43d2d8e9
+      mtime: 1212317731
+      name: t/entity/lob.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Abstract::Meta::Class
+        - Persistence::ORM
+    - bytesize: 2378
+      file_mime_type: ~
+      line_count: ~
+      md5: d11844b7946369a2c95ebf3d6c4dde4c
+      mtime: 1211100082
+      name: t/value_generator/sequence_generator.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1601
+      file_mime_type: ~
+      line_count: ~
+      md5: dd01b7cca3ceda0ec4938e9cb1f2d463
+      mtime: 1209906236
+      name: t/value_generator/table_generator.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+    - bytesize: 6741
+      file_mime_type: ~
+      line_count: ~
+      md5: b1028f9abd05ed46457a151f5c9ca5e7
+      mtime: 1211100291
+      name: t/relationship/one_to_many_relationship.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Abstract::Meta::Class
+        - Persistence::Entity
+        - Persistence::ORM
+    - bytesize: 2489
+      file_mime_type: ~
+      line_count: ~
+      md5: b92ef2915814e19a259914654b27e5e7
+      mtime: 1211130157
+      name: t/relationship/bidirectional.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Persistence::Meta::XML
+        - Abstract::Meta::Class
+    - bytesize: 5902
+      file_mime_type: ~
+      line_count: ~
+      md5: a88503ac52623ed0aa440c832e32dbd6
+      mtime: 1211100183
+      name: t/relationship/many_to_many_relationship.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Abstract::Meta::Class
+        - Persistence::Entity
+        - Persistence::ORM
+    - bytesize: 6827
+      file_mime_type: ~
+      line_count: ~
+      md5: 5940e1935b410d20bf72fa665510191c
+      mtime: 1212306239
+      name: t/relationship/to_one_relationship.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Abstract::Meta::Class
+        - Persistence::ORM
+        - Persistence::Entity
+    - bytesize: 1851
+      file_mime_type: ~
+      line_count: ~
+      md5: 533608e9262f9c82017c6a5bccd19690
+      mtime: 1212331409
+      name: t/meta/lob.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::DBUnit
+        - Persistence::Meta::XML
+        - Abstract::Meta::Class
+    - bytesize: 7826
+      file_mime_type: ~
+      line_count: ~
+      md5: 88036951214f57ba04ef53b7b26ebe80
+      mtime: 1212300759
+      name: t/meta/xml.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Persistence::Entity
+        - SQL::Entity::Condition
+        - Abstract::Meta::Class
+    - bytesize: 330
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c55520d8331ff4128adb28f60bad9c5
+      mtime: 1212307655
+      name: t/attribute/adapter.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Abstract::Meta::Class
+  tests:
+    - t/plain_class.t
+    - t/value_generator.t
+    - t/pod_coverage.t
+    - t/pod.t
+    - t/entity.t
+    - t/lob.t
+    - t/entity/relationship.t
+    - t/entity/query.t
+    - t/entity/manager.t
+    - t/entity/lob.t
+    - t/value_generator/sequence_generator.t
+    - t/value_generator/table_generator.t
+    - t/relationship/one_to_many_relationship.t
+    - t/relationship/bidirectional.t
+    - t/relationship/many_to_many_relationship.t
+    - t/relationship/to_one_relationship.t
+    - t/meta/lob.t
+    - t/meta/xml.t
+    - t/attribute/adapter.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-24831.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 24831
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268911738
+  examine_start_time: 1268911713
+  examine_time: 25
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 24831
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268911738
+  run_start_time: 1268911713
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

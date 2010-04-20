@@ -1,0 +1,4921 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: 'Framework for performing continuous, unattended, automated software builds'
+    author:
+      - 'Daniel P. Berrange <dan@berrange.com>'
+    build_requires:
+      Test::More: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.30
+    license: gpl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.3.html
+      version: 1.3
+    name: Test-AutoBuild
+    requires:
+      BSD::Resource: 1.10
+      Carp: 0
+      Class::MethodMaker: 0
+      Config: 0
+      Config::Record: 1.1.0
+      Cwd: 0
+      Data::Dumper: 0
+      Date::Manip: 0
+      Digest::MD5: 0
+      Fcntl: 0
+      File::Copy: 0
+      File::Find: 0
+      File::Glob: 0
+      File::Path: 0
+      File::Spec: 0
+      File::Temp: 0
+      File::stat: 0
+      IO::File: 0
+      IO::Scalar: 0
+      List::Util: 0
+      Log::Log4perl: 0
+      Net::SMTP: 2.15
+      POSIX: 0
+      Storable: 0
+      Symbol: 0
+      Sys::Hostname: 0
+      Template: 0
+    resources:
+      MailingList: https://gna.org/mail/?group=testautobuild
+      bugtracker: https://gna.org/bugs/?group=testautobuild
+      homepage: http://autobuild.org/
+      license: http://www.gnu.org/licenses/gpl.html
+      repository: https://gna.org/cvs/?group=testautobuild
+    version: 1.2.1
+  blib:
+    - blib/lib/Test/AutoBuild.pm
+    - blib/lib/Test/AutoBuild/Archive.pm
+    - blib/lib/Test/AutoBuild/Archive/File.pm
+    - blib/lib/Test/AutoBuild/Archive/Memory.pm
+    - blib/lib/Test/AutoBuild/ArchiveManager.pm
+    - blib/lib/Test/AutoBuild/ArchiveManager/File.pm
+    - blib/lib/Test/AutoBuild/ArchiveManager/Memory.pm
+    - blib/lib/Test/AutoBuild/Change.pm
+    - blib/lib/Test/AutoBuild/Command.pm
+    - blib/lib/Test/AutoBuild/Command/Local.pm
+    - blib/lib/Test/AutoBuild/Command/SELocal.pm
+    - blib/lib/Test/AutoBuild/Counter.pm
+    - blib/lib/Test/AutoBuild/Counter/ChangeList.pm
+    - blib/lib/Test/AutoBuild/Counter/Time.pm
+    - blib/lib/Test/AutoBuild/Counter/Timestamp.pm
+    - blib/lib/Test/AutoBuild/ErrorReport.pm
+    - blib/lib/Test/AutoBuild/Group.pm
+    - blib/lib/Test/AutoBuild/Lib.pm
+    - blib/lib/Test/AutoBuild/Lock.pm
+    - blib/lib/Test/AutoBuild/Module.pm
+    - blib/lib/Test/AutoBuild/Monitor.pm
+    - blib/lib/Test/AutoBuild/Monitor/CommandLine.pm
+    - blib/lib/Test/AutoBuild/Monitor/Log4perl.pm
+    - blib/lib/Test/AutoBuild/Monitor/Pipe.pm
+    - blib/lib/Test/AutoBuild/Package.pm
+    - blib/lib/Test/AutoBuild/PackageType.pm
+    - blib/lib/Test/AutoBuild/Platform.pm
+    - blib/lib/Test/AutoBuild/Publisher.pm
+    - blib/lib/Test/AutoBuild/Publisher/Copy.pm
+    - blib/lib/Test/AutoBuild/Publisher/XSLTransform.pm
+    - blib/lib/Test/AutoBuild/Repository.pm
+    - blib/lib/Test/AutoBuild/Repository/CVS.pm
+    - blib/lib/Test/AutoBuild/Repository/Disk.pm
+    - blib/lib/Test/AutoBuild/Repository/GNUArch.pm
+    - blib/lib/Test/AutoBuild/Repository/Mercurial.pm
+    - blib/lib/Test/AutoBuild/Repository/Perforce.pm
+    - blib/lib/Test/AutoBuild/Repository/SVK.pm
+    - blib/lib/Test/AutoBuild/Repository/Subversion.pm
+    - blib/lib/Test/AutoBuild/Result.pm
+    - blib/lib/Test/AutoBuild/Runtime.pm
+    - blib/lib/Test/AutoBuild/Stage.pm
+    - blib/lib/Test/AutoBuild/Stage/Apt.pm
+    - blib/lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+    - blib/lib/Test/AutoBuild/Stage/Build.pm
+    - blib/lib/Test/AutoBuild/Stage/CleanArchive.pm
+    - blib/lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+    - blib/lib/Test/AutoBuild/Stage/CleanPackages.pm
+    - blib/lib/Test/AutoBuild/Stage/Copier.pm
+    - blib/lib/Test/AutoBuild/Stage/CreateArchive.pm
+    - blib/lib/Test/AutoBuild/Stage/CreateRepo.pm
+    - blib/lib/Test/AutoBuild/Stage/EmailAlert.pm
+    - blib/lib/Test/AutoBuild/Stage/GetSource.pm
+    - blib/lib/Test/AutoBuild/Stage/Group.pm
+    - blib/lib/Test/AutoBuild/Stage/HTMLStatus.pm
+    - blib/lib/Test/AutoBuild/Stage/ISOBuilder.pm
+    - blib/lib/Test/AutoBuild/Stage/Iterator.pm
+    - blib/lib/Test/AutoBuild/Stage/LogCopier.pm
+    - blib/lib/Test/AutoBuild/Stage/PackageCopier.pm
+    - blib/lib/Test/AutoBuild/Stage/SetNice.pm
+    - blib/lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+    - blib/lib/Test/AutoBuild/Stage/Test.pm
+    - blib/lib/Test/AutoBuild/Stage/Yum.pm
+    - blib/man1/auto-build-clean-root.1
+    - blib/man1/auto-build-make-root.1
+    - blib/man1/auto-build.1
+    - blib/man3/Test::AutoBuild.3
+    - blib/man3/Test::AutoBuild::Archive.3
+    - blib/man3/Test::AutoBuild::Archive::File.3
+    - blib/man3/Test::AutoBuild::Archive::Memory.3
+    - blib/man3/Test::AutoBuild::ArchiveManager.3
+    - blib/man3/Test::AutoBuild::ArchiveManager::File.3
+    - blib/man3/Test::AutoBuild::ArchiveManager::Memory.3
+    - blib/man3/Test::AutoBuild::Change.3
+    - blib/man3/Test::AutoBuild::Command.3
+    - blib/man3/Test::AutoBuild::Command::Local.3
+    - blib/man3/Test::AutoBuild::Command::SELocal.3
+    - blib/man3/Test::AutoBuild::Counter.3
+    - blib/man3/Test::AutoBuild::Counter::ChangeList.3
+    - blib/man3/Test::AutoBuild::Counter::Time.3
+    - blib/man3/Test::AutoBuild::Counter::Timestamp.3
+    - blib/man3/Test::AutoBuild::ErrorReport.3
+    - blib/man3/Test::AutoBuild::Group.3
+    - blib/man3/Test::AutoBuild::Lib.3
+    - blib/man3/Test::AutoBuild::Lock.3
+    - blib/man3/Test::AutoBuild::Module.3
+    - blib/man3/Test::AutoBuild::Monitor.3
+    - blib/man3/Test::AutoBuild::Monitor::CommandLine.3
+    - blib/man3/Test::AutoBuild::Monitor::Log4perl.3
+    - blib/man3/Test::AutoBuild::Monitor::Pipe.3
+    - blib/man3/Test::AutoBuild::Package.3
+    - blib/man3/Test::AutoBuild::PackageType.3
+    - blib/man3/Test::AutoBuild::Platform.3
+    - blib/man3/Test::AutoBuild::Publisher.3
+    - blib/man3/Test::AutoBuild::Publisher::Copy.3
+    - blib/man3/Test::AutoBuild::Publisher::XSLTransform.3
+    - blib/man3/Test::AutoBuild::Repository.3
+    - blib/man3/Test::AutoBuild::Repository::CVS.3
+    - blib/man3/Test::AutoBuild::Repository::Disk.3
+    - blib/man3/Test::AutoBuild::Repository::GNUArch.3
+    - blib/man3/Test::AutoBuild::Repository::Mercurial.3
+    - blib/man3/Test::AutoBuild::Repository::Perforce.3
+    - blib/man3/Test::AutoBuild::Repository::SVK.3
+    - blib/man3/Test::AutoBuild::Repository::Subversion.3
+    - blib/man3/Test::AutoBuild::Result.3
+    - blib/man3/Test::AutoBuild::Runtime.3
+    - blib/man3/Test::AutoBuild::Stage.3
+    - blib/man3/Test::AutoBuild::Stage::Apt.3
+    - blib/man3/Test::AutoBuild::Stage::ArtifactCopier.3
+    - blib/man3/Test::AutoBuild::Stage::Build.3
+    - blib/man3/Test::AutoBuild::Stage::CleanArchive.3
+    - blib/man3/Test::AutoBuild::Stage::CleanBuildRoots.3
+    - blib/man3/Test::AutoBuild::Stage::CleanPackages.3
+    - blib/man3/Test::AutoBuild::Stage::Copier.3
+    - blib/man3/Test::AutoBuild::Stage::CreateArchive.3
+    - blib/man3/Test::AutoBuild::Stage::CreateRepo.3
+    - blib/man3/Test::AutoBuild::Stage::EmailAlert.3
+    - blib/man3/Test::AutoBuild::Stage::GetSource.3
+    - blib/man3/Test::AutoBuild::Stage::Group.3
+    - blib/man3/Test::AutoBuild::Stage::HTMLStatus.3
+    - blib/man3/Test::AutoBuild::Stage::ISOBuilder.3
+    - blib/man3/Test::AutoBuild::Stage::Iterator.3
+    - blib/man3/Test::AutoBuild::Stage::LogCopier.3
+    - blib/man3/Test::AutoBuild::Stage::PackageCopier.3
+    - blib/man3/Test::AutoBuild::Stage::SetNice.3
+    - blib/man3/Test::AutoBuild::Stage::TemplateGenerator.3
+    - blib/man3/Test::AutoBuild::Stage::Test.3
+    - blib/man3/Test::AutoBuild::Stage::Yum.3
+    - blib/script/auto-build
+    - blib/script/auto-build-clean-root
+    - blib/script/auto-build-make-root
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite BSD::Resource 1.10 not found.
+    Warning: prerequisite Class::MethodMaker 0 not found.
+    Warning: prerequisite Config::Record 1.1.0 not found.
+    Warning: prerequisite Date::Manip 0 not found.
+    Warning: prerequisite IO::Scalar 0 not found.
+    Warning: prerequisite Template 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Test-AutoBuild
+  build_output: |
+    cp lib/Test/AutoBuild/Stage/ISOBuilder.pm blib/lib/Test/AutoBuild/Stage/ISOBuilder.pm
+    cp lib/Test/AutoBuild/Stage/HTMLStatus.pm blib/lib/Test/AutoBuild/Stage/HTMLStatus.pm
+    cp lib/Test/AutoBuild/Runtime.pm blib/lib/Test/AutoBuild/Runtime.pm
+    cp lib/Test/AutoBuild/Publisher.pm blib/lib/Test/AutoBuild/Publisher.pm
+    cp lib/Test/AutoBuild/Stage/GetSource.pm blib/lib/Test/AutoBuild/Stage/GetSource.pm
+    cp lib/Test/AutoBuild/Stage/LogCopier.pm blib/lib/Test/AutoBuild/Stage/LogCopier.pm
+    cp lib/Test/AutoBuild/Publisher/XSLTransform.pm blib/lib/Test/AutoBuild/Publisher/XSLTransform.pm
+    cp lib/Test/AutoBuild/Group.pm blib/lib/Test/AutoBuild/Group.pm
+    cp lib/Test/AutoBuild/Counter/ChangeList.pm blib/lib/Test/AutoBuild/Counter/ChangeList.pm
+    cp lib/Test/AutoBuild/Stage/Copier.pm blib/lib/Test/AutoBuild/Stage/Copier.pm
+    cp lib/Test/AutoBuild/Monitor/Pipe.pm blib/lib/Test/AutoBuild/Monitor/Pipe.pm
+    cp lib/Test/AutoBuild/Stage/Group.pm blib/lib/Test/AutoBuild/Stage/Group.pm
+    cp lib/Test/AutoBuild/Repository/Subversion.pm blib/lib/Test/AutoBuild/Repository/Subversion.pm
+    cp lib/Test/AutoBuild/Stage/CreateArchive.pm blib/lib/Test/AutoBuild/Stage/CreateArchive.pm
+    cp lib/Test/AutoBuild/Repository/SVK.pm blib/lib/Test/AutoBuild/Repository/SVK.pm
+    cp lib/Test/AutoBuild/ErrorReport.pm blib/lib/Test/AutoBuild/ErrorReport.pm
+    cp lib/Test/AutoBuild/ArchiveManager/File.pm blib/lib/Test/AutoBuild/ArchiveManager/File.pm
+    cp lib/Test/AutoBuild/Archive.pm blib/lib/Test/AutoBuild/Archive.pm
+    cp lib/Test/AutoBuild/Stage/Build.pm blib/lib/Test/AutoBuild/Stage/Build.pm
+    cp lib/Test/AutoBuild/Monitor/CommandLine.pm blib/lib/Test/AutoBuild/Monitor/CommandLine.pm
+    cp lib/Test/AutoBuild/Stage/CleanBuildRoots.pm blib/lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+    cp lib/Test/AutoBuild/Repository.pm blib/lib/Test/AutoBuild/Repository.pm
+    cp lib/Test/AutoBuild/Stage.pm blib/lib/Test/AutoBuild/Stage.pm
+    cp lib/Test/AutoBuild/Stage/CreateRepo.pm blib/lib/Test/AutoBuild/Stage/CreateRepo.pm
+    cp lib/Test/AutoBuild/Stage/Yum.pm blib/lib/Test/AutoBuild/Stage/Yum.pm
+    cp lib/Test/AutoBuild/Counter/Time.pm blib/lib/Test/AutoBuild/Counter/Time.pm
+    cp lib/Test/AutoBuild/Archive/File.pm blib/lib/Test/AutoBuild/Archive/File.pm
+    cp lib/Test/AutoBuild/Counter.pm blib/lib/Test/AutoBuild/Counter.pm
+    cp lib/Test/AutoBuild.pm blib/lib/Test/AutoBuild.pm
+    cp lib/Test/AutoBuild/Monitor/Log4perl.pm blib/lib/Test/AutoBuild/Monitor/Log4perl.pm
+    cp lib/Test/AutoBuild/Stage/Test.pm blib/lib/Test/AutoBuild/Stage/Test.pm
+    cp lib/Test/AutoBuild/Stage/Apt.pm blib/lib/Test/AutoBuild/Stage/Apt.pm
+    cp lib/Test/AutoBuild/Platform.pm blib/lib/Test/AutoBuild/Platform.pm
+    cp lib/Test/AutoBuild/Stage/CleanPackages.pm blib/lib/Test/AutoBuild/Stage/CleanPackages.pm
+    cp lib/Test/AutoBuild/Stage/Iterator.pm blib/lib/Test/AutoBuild/Stage/Iterator.pm
+    cp lib/Test/AutoBuild/Stage/EmailAlert.pm blib/lib/Test/AutoBuild/Stage/EmailAlert.pm
+    cp lib/Test/AutoBuild/Command/Local.pm blib/lib/Test/AutoBuild/Command/Local.pm
+    cp lib/Test/AutoBuild/Package.pm blib/lib/Test/AutoBuild/Package.pm
+    cp lib/Test/AutoBuild/Stage/TemplateGenerator.pm blib/lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+    cp lib/Test/AutoBuild/Monitor.pm blib/lib/Test/AutoBuild/Monitor.pm
+    cp lib/Test/AutoBuild/Stage/PackageCopier.pm blib/lib/Test/AutoBuild/Stage/PackageCopier.pm
+    cp lib/Test/AutoBuild/Command/SELocal.pm blib/lib/Test/AutoBuild/Command/SELocal.pm
+    cp lib/Test/AutoBuild/Counter/Timestamp.pm blib/lib/Test/AutoBuild/Counter/Timestamp.pm
+    cp lib/Test/AutoBuild/Stage/ArtifactCopier.pm blib/lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+    cp lib/Test/AutoBuild/Publisher/Copy.pm blib/lib/Test/AutoBuild/Publisher/Copy.pm
+    cp lib/Test/AutoBuild/ArchiveManager/Memory.pm blib/lib/Test/AutoBuild/ArchiveManager/Memory.pm
+    cp lib/Test/AutoBuild/Repository/Disk.pm blib/lib/Test/AutoBuild/Repository/Disk.pm
+    cp lib/Test/AutoBuild/Result.pm blib/lib/Test/AutoBuild/Result.pm
+    cp lib/Test/AutoBuild/Command.pm blib/lib/Test/AutoBuild/Command.pm
+    cp lib/Test/AutoBuild/PackageType.pm blib/lib/Test/AutoBuild/PackageType.pm
+    cp lib/Test/AutoBuild/Repository/GNUArch.pm blib/lib/Test/AutoBuild/Repository/GNUArch.pm
+    cp lib/Test/AutoBuild/Repository/Mercurial.pm blib/lib/Test/AutoBuild/Repository/Mercurial.pm
+    cp lib/Test/AutoBuild/Repository/CVS.pm blib/lib/Test/AutoBuild/Repository/CVS.pm
+    cp lib/Test/AutoBuild/Lock.pm blib/lib/Test/AutoBuild/Lock.pm
+    cp lib/Test/AutoBuild/Archive/Memory.pm blib/lib/Test/AutoBuild/Archive/Memory.pm
+    cp lib/Test/AutoBuild/Stage/CleanArchive.pm blib/lib/Test/AutoBuild/Stage/CleanArchive.pm
+    cp lib/Test/AutoBuild/ArchiveManager.pm blib/lib/Test/AutoBuild/ArchiveManager.pm
+    cp lib/Test/AutoBuild/Change.pm blib/lib/Test/AutoBuild/Change.pm
+    cp lib/Test/AutoBuild/Lib.pm blib/lib/Test/AutoBuild/Lib.pm
+    cp lib/Test/AutoBuild/Module.pm blib/lib/Test/AutoBuild/Module.pm
+    cp lib/Test/AutoBuild/Stage/SetNice.pm blib/lib/Test/AutoBuild/Stage/SetNice.pm
+    cp lib/Test/AutoBuild/Repository/Perforce.pm blib/lib/Test/AutoBuild/Repository/Perforce.pm
+    cp bin/auto-build-clean-root blib/script/auto-build-clean-root
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/auto-build-clean-root
+    cp bin/auto-build blib/script/auto-build
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/auto-build
+    cp bin/auto-build-make-root blib/script/auto-build-make-root
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/auto-build-make-root
+    test -d /usr/share/selinux/devel -a 0 = 1 && make -C conf/selinux ||:
+    Manifying blib/man1/auto-build-clean-root.1
+    Manifying blib/man1/auto-build.1
+    Manifying blib/man1/auto-build-make-root.1
+    Manifying blib/man3/Test::AutoBuild::Stage::ISOBuilder.3
+    Manifying blib/man3/Test::AutoBuild::Stage::HTMLStatus.3
+    Manifying blib/man3/Test::AutoBuild::Runtime.3
+    Manifying blib/man3/Test::AutoBuild::Stage::GetSource.3
+    Manifying blib/man3/Test::AutoBuild::Publisher.3
+    Manifying blib/man3/Test::AutoBuild::Stage::LogCopier.3
+    Manifying blib/man3/Test::AutoBuild::Publisher::XSLTransform.3
+    Manifying blib/man3/Test::AutoBuild::Group.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Copier.3
+    Manifying blib/man3/Test::AutoBuild::Counter::ChangeList.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Group.3
+    Manifying blib/man3/Test::AutoBuild::Monitor::Pipe.3
+    Manifying blib/man3/Test::AutoBuild::Repository::Subversion.3
+    Manifying blib/man3/Test::AutoBuild::Repository::SVK.3
+    Manifying blib/man3/Test::AutoBuild::Stage::CreateArchive.3
+    Manifying blib/man3/Test::AutoBuild::ErrorReport.3
+    Manifying blib/man3/Test::AutoBuild::ArchiveManager::File.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Build.3
+    Manifying blib/man3/Test::AutoBuild::Archive.3
+    Manifying blib/man3/Test::AutoBuild::Stage::CleanBuildRoots.3
+    Manifying blib/man3/Test::AutoBuild::Monitor::CommandLine.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Yum.3
+    Manifying blib/man3/Test::AutoBuild::Stage::CreateRepo.3
+    Manifying blib/man3/Test::AutoBuild::Stage.3
+    Manifying blib/man3/Test::AutoBuild::Repository.3
+    Manifying blib/man3/Test::AutoBuild::Archive::File.3
+    Manifying blib/man3/Test::AutoBuild::Counter::Time.3
+    Manifying blib/man3/Test::AutoBuild::Counter.3
+    Manifying blib/man3/Test::AutoBuild.3
+    Manifying blib/man3/Test::AutoBuild::Monitor::Log4perl.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Test.3
+    Manifying blib/man3/Test::AutoBuild::Platform.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Apt.3
+    Manifying blib/man3/Test::AutoBuild::Command::Local.3
+    Manifying blib/man3/Test::AutoBuild::Stage::EmailAlert.3
+    Manifying blib/man3/Test::AutoBuild::Stage::Iterator.3
+    Manifying blib/man3/Test::AutoBuild::Stage::CleanPackages.3
+    Manifying blib/man3/Test::AutoBuild::Package.3
+    Manifying blib/man3/Test::AutoBuild::Stage::TemplateGenerator.3
+    Manifying blib/man3/Test::AutoBuild::Stage::PackageCopier.3
+    Manifying blib/man3/Test::AutoBuild::Monitor.3
+    Manifying blib/man3/Test::AutoBuild::Command::SELocal.3
+    Manifying blib/man3/Test::AutoBuild::Counter::Timestamp.3
+    Manifying blib/man3/Test::AutoBuild::ArchiveManager::Memory.3
+    Manifying blib/man3/Test::AutoBuild::Publisher::Copy.3
+    Manifying blib/man3/Test::AutoBuild::Stage::ArtifactCopier.3
+    Manifying blib/man3/Test::AutoBuild::Repository::Disk.3
+    Manifying blib/man3/Test::AutoBuild::PackageType.3
+    Manifying blib/man3/Test::AutoBuild::Command.3
+    Manifying blib/man3/Test::AutoBuild::Result.3
+    Manifying blib/man3/Test::AutoBuild::Repository::GNUArch.3
+    Manifying blib/man3/Test::AutoBuild::Repository::Mercurial.3
+    Manifying blib/man3/Test::AutoBuild::Repository::CVS.3
+    Manifying blib/man3/Test::AutoBuild::Archive::Memory.3
+    Manifying blib/man3/Test::AutoBuild::Lock.3
+    Manifying blib/man3/Test::AutoBuild::Stage::CleanArchive.3
+    Manifying blib/man3/Test::AutoBuild::Change.3
+    Manifying blib/man3/Test::AutoBuild::ArchiveManager.3
+    Manifying blib/man3/Test::AutoBuild::Lib.3
+    Manifying blib/man3/Test::AutoBuild::Module.3
+    Manifying blib/man3/Test::AutoBuild::Repository::Perforce.3
+    Manifying blib/man3/Test::AutoBuild::Stage::SetNice.3
+    /home/brian/bin/perl5.10.1 "-Iblib/arch" "-Iblib/lib" META.yml.PL META.yml
+    Can't locate Template.pm in @INC (@INC contains: blib/arch blib/lib /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/5.10.1 /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1 .) at blib/lib/Test/AutoBuild/Lib.pm line 67.
+    BEGIN failed--compilation aborted at blib/lib/Test/AutoBuild/Lib.pm line 67.
+    Compilation failed in require at lib/Test/AutoBuild.pm line 629.
+    BEGIN failed--compilation aborted at lib/Test/AutoBuild.pm line 629.
+    *** Error code 2
+    
+    Stop in /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1.
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DANBERR
+  dist_basename: Test-AutoBuild-1.2.1.tar.gz
+  dist_date: 1197156079
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV/Test-AutoBuild-1.2.1
+  dist_file: /home/brian/CPAN/authors/id/D/DA/DANBERR/Test-AutoBuild-1.2.1.tar.gz
+  dist_md5: a163794acb1156b814ab87688c50e4eb
+  dist_size: 219216
+  manifest:
+    - AUTHORS
+    - CHANGES
+    - INSTALL
+    - LICENSE
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - META.yml.PL
+    - Makefile.PL
+    - README
+    - TODO
+    - Test-AutoBuild.spec
+    - Test-AutoBuild.spec.PL
+    - UPGRADING
+    - autobuild.sh
+    - bin/auto-build
+    - bin/auto-build-clean-root
+    - bin/auto-build-make-root
+    - conf/auto-build.conf
+    - conf/auto-build.conf.pod
+    - conf/cron/continuous.conf
+    - conf/cron/daily.conf
+    - conf/cron/hourly.conf
+    - conf/engine/host-build-secure.conf
+    - conf/engine/host-build.conf
+    - conf/httpd/aliased.conf
+    - conf/httpd/user.conf
+    - conf/httpd/vhost.conf
+    - conf/selinux/.cvsignore
+    - conf/selinux/Makefile
+    - conf/selinux/auto-build.fc
+    - conf/selinux/auto-build.if
+    - conf/selinux/auto-build.te
+    - doc/autobuild-process-1.0.fig
+    - doc/autobuild-process-1.0.png
+    - doc/coding-standards.txt
+    - doc/developer-guide
+    - doc/planning-v1.2/config.txt
+    - doc/planning-v1.2/workflow.txt
+    - doc/release-process.txt
+    - examples/README
+    - examples/autobuild-autoconf.sh
+    - examples/autobuild-perl-makemaker.sh
+    - examples/autobuild-python.sh
+    - lib/Test/AutoBuild.pm
+    - lib/Test/AutoBuild/Archive.pm
+    - lib/Test/AutoBuild/Archive/File.pm
+    - lib/Test/AutoBuild/Archive/Memory.pm
+    - lib/Test/AutoBuild/ArchiveManager.pm
+    - lib/Test/AutoBuild/ArchiveManager/File.pm
+    - lib/Test/AutoBuild/ArchiveManager/Memory.pm
+    - lib/Test/AutoBuild/Change.pm
+    - lib/Test/AutoBuild/Command.pm
+    - lib/Test/AutoBuild/Command/Local.pm
+    - lib/Test/AutoBuild/Command/SELocal.pm
+    - lib/Test/AutoBuild/Counter.pm
+    - lib/Test/AutoBuild/Counter/ChangeList.pm
+    - lib/Test/AutoBuild/Counter/Time.pm
+    - lib/Test/AutoBuild/Counter/Timestamp.pm
+    - lib/Test/AutoBuild/ErrorReport.pm
+    - lib/Test/AutoBuild/Group.pm
+    - lib/Test/AutoBuild/Lib.pm
+    - lib/Test/AutoBuild/Lock.pm
+    - lib/Test/AutoBuild/Module.pm
+    - lib/Test/AutoBuild/Monitor.pm
+    - lib/Test/AutoBuild/Monitor/CommandLine.pm
+    - lib/Test/AutoBuild/Monitor/Log4perl.pm
+    - lib/Test/AutoBuild/Monitor/Pipe.pm
+    - lib/Test/AutoBuild/Package.pm
+    - lib/Test/AutoBuild/PackageType.pm
+    - lib/Test/AutoBuild/Platform.pm
+    - lib/Test/AutoBuild/Publisher.pm
+    - lib/Test/AutoBuild/Publisher/Copy.pm
+    - lib/Test/AutoBuild/Publisher/XSLTransform.pm
+    - lib/Test/AutoBuild/Repository.pm
+    - lib/Test/AutoBuild/Repository/CVS.pm
+    - lib/Test/AutoBuild/Repository/Disk.pm
+    - lib/Test/AutoBuild/Repository/GNUArch.pm
+    - lib/Test/AutoBuild/Repository/Mercurial.pm
+    - lib/Test/AutoBuild/Repository/Perforce.pm
+    - lib/Test/AutoBuild/Repository/SVK.pm
+    - lib/Test/AutoBuild/Repository/Subversion.pm
+    - lib/Test/AutoBuild/Result.pm
+    - lib/Test/AutoBuild/Runtime.pm
+    - lib/Test/AutoBuild/Stage.pm
+    - lib/Test/AutoBuild/Stage/Apt.pm
+    - lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+    - lib/Test/AutoBuild/Stage/Build.pm
+    - lib/Test/AutoBuild/Stage/CleanArchive.pm
+    - lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+    - lib/Test/AutoBuild/Stage/CleanPackages.pm
+    - lib/Test/AutoBuild/Stage/Copier.pm
+    - lib/Test/AutoBuild/Stage/CreateArchive.pm
+    - lib/Test/AutoBuild/Stage/CreateRepo.pm
+    - lib/Test/AutoBuild/Stage/EmailAlert.pm
+    - lib/Test/AutoBuild/Stage/GetSource.pm
+    - lib/Test/AutoBuild/Stage/Group.pm
+    - lib/Test/AutoBuild/Stage/HTMLStatus.pm
+    - lib/Test/AutoBuild/Stage/ISOBuilder.pm
+    - lib/Test/AutoBuild/Stage/Iterator.pm
+    - lib/Test/AutoBuild/Stage/LogCopier.pm
+    - lib/Test/AutoBuild/Stage/PackageCopier.pm
+    - lib/Test/AutoBuild/Stage/SetNice.pm
+    - lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+    - lib/Test/AutoBuild/Stage/Test.pm
+    - lib/Test/AutoBuild/Stage/Yum.pm
+    - t/005-pod.t
+    - t/008-meta.t
+    - t/010-pod-coverage.t
+    - t/030-Platform.t
+    - t/040-Monitor.t
+    - t/050-Runtime.t
+    - t/060-Result.t
+    - t/061-Archive.t
+    - t/062-ArchiveManager.t
+    - t/063-Archive-File.t
+    - t/064-ArchiveManager-File.t
+    - t/070-Lib.t
+    - t/080-PackageType.t
+    - t/090-Package.t
+    - t/100-Module.t
+    - t/105-Module-Archiving.t
+    - t/107-Module-Build.t
+    - t/110-Repository-CVS-init.sh
+    - t/110-Repository-CVS.t
+    - t/110-Repository-CVS.tar.gz
+    - t/110-Repository-Disk.t
+    - t/110-Repository-GNUArch-init.sh
+    - t/110-Repository-GNUArch.t
+    - t/110-Repository-GNUArch.tar.gz
+    - t/110-Repository-Mercurial-init.sh
+    - t/110-Repository-Mercurial.t
+    - t/110-Repository-Mercurial.tar.gz
+    - t/110-Repository-Perforce-init.sh
+    - t/110-Repository-Perforce.t
+    - t/110-Repository-Perforce.tar.gz
+    - t/110-Repository-SVN-init.sh
+    - t/110-Repository-SVN.gz
+    - t/110-Repository-SVN.t
+    - t/110-Repository.t
+    - t/120-Monitor-Command.t
+    - t/120-Monitor-Log4perl.t
+    - t/120-Monitor-Pipe.t
+    - t/130-Publisher.t
+    - t/131-Publisher-Copy.t
+    - t/140-Lock.t
+    - t/145-Stage.t
+    - t/150-Stage-Apt.t
+    - t/150-Stage-ArtifactCopier.t
+    - t/150-Stage-Build.t
+    - t/150-Stage-CleanBuildRoots.t
+    - t/150-Stage-CleanPackages.t
+    - t/150-Stage-EmailAlert.t
+    - t/150-Stage-GetSource.t
+    - t/150-Stage-Group.t
+    - t/150-Stage-HTMLStatus.t
+    - t/150-Stage-ISOBuilder.t
+    - t/150-Stage-Iterator.t
+    - t/150-Stage-LogCopier.t
+    - t/150-Stage-PackageCopier.t
+    - t/150-Stage-SetNice.t
+    - t/150-Stage-TEMPLATE
+    - t/150-Stage-Test.t
+    - t/150-Stage-Yum.t
+    - t/200-AutoBuild.t
+    - t/auto-build-engine.conf
+    - t/auto-build.conf
+    - t/email.txt
+    - t/log4perl.conf
+    - templates/classic-blue.css
+    - templates/classic-red.css
+    - templates/email-admin.txt
+    - templates/email.txt
+    - templates/failures.rss
+    - templates/generic.css
+    - templates/index-group.html
+    - templates/index-iso.html
+    - templates/index-module.html
+    - templates/index-repository.html
+    - templates/index.rss
+    - templates/logo-failed.png
+    - templates/logo-success.png
+    - templates/module.html
+    - templates/page.tt
+    - templates/rss10.png
+    - templates/status-stage.tt
+    - templates/status.html
+    - templates/test-autobuild.css
+  manifest_file_info:
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d350169560e75d0cf9fc8e3574a3639
+      mtime: 1171217194
+      name: AUTHORS
+    - bytesize: 3809
+      file_mime_type: ~
+      line_count: ~
+      md5: e4eb329834da3d36278b1b7d943b3bc9
+      mtime: 1197155176
+      name: CHANGES
+    - bytesize: 873
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1138872495
+      name: INSTALL
+    - bytesize: 17982
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1197144366
+      name: LICENSE
+    - bytesize: 5042
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1197155921
+      name: MANIFEST
+    - bytesize: 278
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1197151493
+      name: MANIFEST.SKIP
+    - bytesize: 1687
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1197155449
+      name: META.yml
+    - bytesize: 2061
+      file_mime_type: ~
+      line_count: ~
+      md5: e1ddbccc1d02684f03a2856217bbca42
+      mtime: 1197151576
+      name: META.yml.PL
+    - bytesize: 6649
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1197153675
+      name: Makefile.PL
+    - bytesize: 1641
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1083940082
+      name: README
+    - bytesize: 1672
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1103653025
+      name: TODO
+    - bytesize: 11104
+      file_mime_type: ~
+      line_count: ~
+      md5: c4d7cb9cbe67fd5fc20a9bdf76e5b555
+      mtime: 1197155449
+      name: Test-AutoBuild.spec
+    - bytesize: 11571
+      file_mime_type: ~
+      line_count: ~
+      md5: ed0a125a26a6c64345bd11b20c5f4c21
+      mtime: 1197152436
+      name: Test-AutoBuild.spec.PL
+    - bytesize: 3336
+      file_mime_type: ~
+      line_count: ~
+      md5: 7748eb3bfdd3bf962553f6f9f2723c45
+      mtime: 1146625335
+      name: UPGRADING
+    - bytesize: 1913
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b3a33af6b239bbe0727b00944d830e7
+      mtime: 1197155916
+      name: autobuild.sh
+    - bytesize: 19998
+      file_mime_type: ~
+      line_count: ~
+      md5: de7eaab72136a49392b6ddbe216cd9f7
+      mtime: 1197147782
+      name: bin/auto-build
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: 60fe6d64f8ea725c921de0e6785382fb
+      mtime: 1197146122
+      name: bin/auto-build-clean-root
+    - bytesize: 2906
+      file_mime_type: ~
+      line_count: ~
+      md5: ef2d3605144cf5075d570a2af0c987eb
+      mtime: 1197146079
+      name: bin/auto-build-make-root
+    - bytesize: 10510
+      file_mime_type: ~
+      line_count: ~
+      md5: fd02007bc6d1bb455508238d9b51adb1
+      mtime: 1183232626
+      name: conf/auto-build.conf
+    - bytesize: 19524
+      file_mime_type: ~
+      line_count: ~
+      md5: cafad59b3d245487f882b26760e782db
+      mtime: 1155097166
+      name: conf/auto-build.conf.pod
+    - bytesize: 177
+      file_mime_type: ~
+      line_count: ~
+      md5: f7da76e7d233a87e033097d53033744c
+      mtime: 1144876913
+      name: conf/cron/continuous.conf
+    - bytesize: 178
+      file_mime_type: ~
+      line_count: ~
+      md5: ef9a1cb0bfc9d95c50aa4bc179a88f36
+      mtime: 1146758411
+      name: conf/cron/daily.conf
+    - bytesize: 195
+      file_mime_type: ~
+      line_count: ~
+      md5: 40994f21c6311483a0e0f24f7036083e
+      mtime: 1146758411
+      name: conf/cron/hourly.conf
+    - bytesize: 20475
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b43d6278c2d6a6b3c52e5bb4550993c
+      mtime: 1197144626
+      name: conf/engine/host-build-secure.conf
+    - bytesize: 19561
+      file_mime_type: ~
+      line_count: ~
+      md5: a45d98101d894b2765520a048663c1be
+      mtime: 1197144626
+      name: conf/engine/host-build.conf
+    - bytesize: 324
+      file_mime_type: ~
+      line_count: ~
+      md5: aad58cadc49fff3cb701b919166753c8
+      mtime: 1144876913
+      name: conf/httpd/aliased.conf
+    - bytesize: 385
+      file_mime_type: ~
+      line_count: ~
+      md5: 5737218979d366a773e0f77ec3a9a589
+      mtime: 1144876913
+      name: conf/httpd/user.conf
+    - bytesize: 414
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a531124cc02d2aa2c423cc18cb10dfb
+      mtime: 1144876913
+      name: conf/httpd/vhost.conf
+    - bytesize: 18
+      file_mime_type: ~
+      line_count: ~
+      md5: 80070133e5b1602908785eb42a3319d7
+      mtime: 1183232626
+      name: conf/selinux/.cvsignore
+    - bytesize: 193
+      file_mime_type: ~
+      line_count: ~
+      md5: d436f07567ee4e671037d82b9711bfb4
+      mtime: 1183232626
+      name: conf/selinux/Makefile
+    - bytesize: 1391
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cbc82ece62e85445c4c6bc59b6af0b0
+      mtime: 1183335349
+      name: conf/selinux/auto-build.fc
+    - bytesize: 1193
+      file_mime_type: ~
+      line_count: ~
+      md5: 28ea091cab444e994765e23937ed331c
+      mtime: 1183232626
+      name: conf/selinux/auto-build.if
+    - bytesize: 14757
+      file_mime_type: ~
+      line_count: ~
+      md5: 4533dfc39c1af127c7e473a6935f794c
+      mtime: 1183335349
+      name: conf/selinux/auto-build.te
+    - bytesize: 3132
+      file_mime_type: ~
+      line_count: ~
+      md5: 1cefa949f759503f071d79a8748fee98
+      mtime: 1083348079
+      name: doc/autobuild-process-1.0.fig
+    - bytesize: 17409
+      file_mime_type: ~
+      line_count: ~
+      md5: f464cca5bc0d90dfb6f74edfdab7824c
+      mtime: 1083348079
+      name: doc/autobuild-process-1.0.png
+    - bytesize: 1444
+      file_mime_type: ~
+      line_count: ~
+      md5: 61cc09d2fe9bd41f6e1185450148f198
+      mtime: 1145366372
+      name: doc/coding-standards.txt
+    - bytesize: 2960
+      file_mime_type: ~
+      line_count: ~
+      md5: 55ad634acb68b43bf5136326946ff6d9
+      mtime: 1085459274
+      name: doc/developer-guide
+    - bytesize: 345
+      file_mime_type: ~
+      line_count: ~
+      md5: e0c6a4787bd5b964e41b050be24a5943
+      mtime: 1083348428
+      name: doc/planning-v1.2/config.txt
+    - bytesize: 2278
+      file_mime_type: ~
+      line_count: ~
+      md5: 864f2047104be484010ed3fd1d8c8eb2
+      mtime: 1083348428
+      name: doc/planning-v1.2/workflow.txt
+    - bytesize: 2556
+      file_mime_type: ~
+      line_count: ~
+      md5: 5515241d2331c1d24e2d9c28f506822d
+      mtime: 1104589793
+      name: doc/release-process.txt
+    - bytesize: 421
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a79bdf9710789d1fe47f13dc195d129
+      mtime: 1197151153
+      name: examples/README
+    - bytesize: 679
+      file_mime_type: ~
+      line_count: ~
+      md5: 479a7f6c96234637d671b17e3a3d1313
+      mtime: 1197151153
+      name: examples/autobuild-autoconf.sh
+    - bytesize: 1887
+      file_mime_type: ~
+      line_count: ~
+      md5: a29a212d92badad687f2b94b9bdf5c3c
+      mtime: 1197151153
+      name: examples/autobuild-perl-makemaker.sh
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d1db219c040cc011cee61aecc0dc92e
+      mtime: 1197151153
+      name: examples/autobuild-python.sh
+    - bytesize: 33576
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a402a07e5860732f79f1d12809306a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild.pm
+    - bytesize: 15069
+      file_mime_type: ~
+      line_count: ~
+      md5: 1644f27ee1340770c1ab74b6f8e2225a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Archive.pm
+    - bytesize: 7097
+      file_mime_type: ~
+      line_count: ~
+      md5: 15a08e8c6c19c1075dd2b3754ff19a46
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Archive/File.pm
+    - bytesize: 5894
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c80d18a57a280498bd98e90b4484b92
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Archive/Memory.pm
+    - bytesize: 13430
+      file_mime_type: ~
+      line_count: ~
+      md5: 22a28307a32a8d851f451d1d654e77b2
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/ArchiveManager.pm
+    - bytesize: 2871
+      file_mime_type: ~
+      line_count: ~
+      md5: a2a9485025415f422c8e3a362161d031
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/ArchiveManager/File.pm
+    - bytesize: 2190
+      file_mime_type: ~
+      line_count: ~
+      md5: 7002cb8139b3e47640d32d5764a1151c
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/ArchiveManager/Memory.pm
+    - bytesize: 3642
+      file_mime_type: ~
+      line_count: ~
+      md5: 168da5ae311629c3072c4e7c50403349
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Change.pm
+    - bytesize: 3083
+      file_mime_type: ~
+      line_count: ~
+      md5: 765050c6126bb4bd41aa820b4f9f692e
+      mtime: 1183232506
+      name: lib/Test/AutoBuild/Command.pm
+    - bytesize: 5912
+      file_mime_type: ~
+      line_count: ~
+      md5: 3510895fd3744f4f9bffb3b78d3a28bd
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Command/Local.pm
+    - bytesize: 3005
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bb8ad2c3e4b265430c90bdee1c9a5e0
+      mtime: 1183232551
+      name: lib/Test/AutoBuild/Command/SELocal.pm
+    - bytesize: 2686
+      file_mime_type: ~
+      line_count: ~
+      md5: 65d6ca2c6b9b21c3ffc677a5439824a4
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Counter.pm
+    - bytesize: 2104
+      file_mime_type: ~
+      line_count: ~
+      md5: e521d3bc2062d79d038448f993b4e12c
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Counter/ChangeList.pm
+    - bytesize: 1869
+      file_mime_type: ~
+      line_count: ~
+      md5: 44deeeb9e72a18f04f065f99089a85b7
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Counter/Time.pm
+    - bytesize: 1914
+      file_mime_type: ~
+      line_count: ~
+      md5: 32460a23bb838a04b037c228a588bb5a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Counter/Timestamp.pm
+    - bytesize: 4694
+      file_mime_type: ~
+      line_count: ~
+      md5: 883cc92c060511b6acf75714a4b81590
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/ErrorReport.pm
+    - bytesize: 4557
+      file_mime_type: ~
+      line_count: ~
+      md5: a5db222b170f4c79eef6aef4000f85dd
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Group.pm
+    - bytesize: 11926
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a3a1d1f935c8cde65f3515c88430b25
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Lib.pm
+    - bytesize: 7979
+      file_mime_type: ~
+      line_count: ~
+      md5: 4198956d66bf4bfc423f92d5e1007a6e
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Lock.pm
+    - bytesize: 30726
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d6f0626a37e6e460b35bd5881ca5d70
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Module.pm
+    - bytesize: 6016
+      file_mime_type: ~
+      line_count: ~
+      md5: 214b0ff42ce0e001818e87c3e1179f1a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Monitor.pm
+    - bytesize: 3731
+      file_mime_type: ~
+      line_count: ~
+      md5: 57b1a553b7da9fa95d6afd3f754b8703
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Monitor/CommandLine.pm
+    - bytesize: 2486
+      file_mime_type: ~
+      line_count: ~
+      md5: fb42bf3d55b0edb9a5a413c8e452e09a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Monitor/Log4perl.pm
+    - bytesize: 3961
+      file_mime_type: ~
+      line_count: ~
+      md5: 2abaf4dbdc13b469f98dce4e8f935179
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Monitor/Pipe.pm
+    - bytesize: 3571
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bdd1d64c72b56fa4af9924904bdc3f8
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Package.pm
+    - bytesize: 5669
+      file_mime_type: ~
+      line_count: ~
+      md5: d05d39679d3a2ec376d4a009e78eba93
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/PackageType.pm
+    - bytesize: 5543
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a0f6178286d2fe1ec961c1837acf94a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Platform.pm
+    - bytesize: 4038
+      file_mime_type: ~
+      line_count: ~
+      md5: beb214d1118bc1f5e258185eaac1b191
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Publisher.pm
+    - bytesize: 1959
+      file_mime_type: ~
+      line_count: ~
+      md5: 9733d7f04d57dc35e396e82a0a35e8ee
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Publisher/Copy.pm
+    - bytesize: 2147
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a11746c2ccd4f23bff2c77736490cb6
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Publisher/XSLTransform.pm
+    - bytesize: 7531
+      file_mime_type: ~
+      line_count: ~
+      md5: 490abed85415ce0f20ab8ca34572c070
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Repository.pm
+    - bytesize: 2813
+      file_mime_type: ~
+      line_count: ~
+      md5: 527dfc314efb81ddd2f1e351bfcd4d95
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Repository/CVS.pm
+    - bytesize: 2418
+      file_mime_type: ~
+      line_count: ~
+      md5: 6241394d7b898e68b7fc1aa1062c1fb8
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Repository/Disk.pm
+    - bytesize: 6418
+      file_mime_type: ~
+      line_count: ~
+      md5: e07d0b1dc216ef36ca65600953a56f5d
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Repository/GNUArch.pm
+    - bytesize: 7206
+      file_mime_type: ~
+      line_count: ~
+      md5: 2df68a81241f946354a4a534f350814c
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Repository/Mercurial.pm
+    - bytesize: 10484
+      file_mime_type: ~
+      line_count: ~
+      md5: 630648430c2deba9f00e0a6cb0b289b2
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Repository/Perforce.pm
+    - bytesize: 3439
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dab7b009bbf5309f5bef93da8ec5cce
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Repository/SVK.pm
+    - bytesize: 6561
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f9b917f6afbdf44a2dc4531325f3c3
+      mtime: 1197147679
+      name: lib/Test/AutoBuild/Repository/Subversion.pm
+    - bytesize: 3668
+      file_mime_type: ~
+      line_count: ~
+      md5: cfc81e30483bc43ac7d4ca5abfa5e754
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Result.pm
+    - bytesize: 21316
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b274cebf4a6a3b8d0f222f81206b6d5
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Runtime.pm
+    - bytesize: 10302
+      file_mime_type: ~
+      line_count: ~
+      md5: ff0e13e5ba679026a75c07223791c1aa
+      mtime: 1197147782
+      name: lib/Test/AutoBuild/Stage.pm
+    - bytesize: 7394
+      file_mime_type: ~
+      line_count: ~
+      md5: c4af6452296db438b87b87c417817950
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/Apt.pm
+    - bytesize: 3555
+      file_mime_type: ~
+      line_count: ~
+      md5: fcb753b1e8dd6e53f479b05843dde911
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+    - bytesize: 4720
+      file_mime_type: ~
+      line_count: ~
+      md5: 107405f94e950937b6c1c0745a3eb3e6
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Stage/Build.pm
+    - bytesize: 2307
+      file_mime_type: ~
+      line_count: ~
+      md5: cd610c368c11142031315898db70ed61
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/CleanArchive.pm
+    - bytesize: 2507
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ef12d89d9189d65bab3e6b19b6a32b8
+      mtime: 1138876248
+      name: lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: dc0e73b72aef748f5dfed924822d038a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/CleanPackages.pm
+    - bytesize: 3052
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c752cf5f5b7fa27b5cd7931aa8d0263
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/Copier.pm
+    - bytesize: 2132
+      file_mime_type: ~
+      line_count: ~
+      md5: b1ddecaee6abd4c824fed329a2569a86
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/CreateArchive.pm
+    - bytesize: 4785
+      file_mime_type: ~
+      line_count: ~
+      md5: 911e807a502a35c5175e58d97eb9789c
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/CreateRepo.pm
+    - bytesize: 10614
+      file_mime_type: ~
+      line_count: ~
+      md5: 96b86458fb7fb868da3926645c6e5d86
+      mtime: 1149511121
+      name: lib/Test/AutoBuild/Stage/EmailAlert.pm
+    - bytesize: 3962
+      file_mime_type: ~
+      line_count: ~
+      md5: 125c9a1d2b06a46b1bffce2900704f80
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Stage/GetSource.pm
+    - bytesize: 4558
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d93a8476370cce6f68ceb135fdba01f
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/Group.pm
+    - bytesize: 8500
+      file_mime_type: ~
+      line_count: ~
+      md5: 9545401676ea4273cbae4dcb89ce64ec
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Stage/HTMLStatus.pm
+    - bytesize: 5723
+      file_mime_type: ~
+      line_count: ~
+      md5: 92a867deb81b09b0e429c7d701d591b3
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/ISOBuilder.pm
+    - bytesize: 5520
+      file_mime_type: ~
+      line_count: ~
+      md5: cfad235ced43827372e92d8aec4f7dcf
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/Iterator.pm
+    - bytesize: 4073
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e6f69413ba26aa8d2171560d8cf894a
+      mtime: 1197144626
+      name: lib/Test/AutoBuild/Stage/LogCopier.pm
+    - bytesize: 2524
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d268baa55c8b1c78a06a4e1e23d79e2
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/PackageCopier.pm
+    - bytesize: 3584
+      file_mime_type: ~
+      line_count: ~
+      md5: cf319a904cdb83e32788d3db45c3af5a
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/SetNice.pm
+    - bytesize: 4955
+      file_mime_type: ~
+      line_count: ~
+      md5: 57a2e56544eb2644d146e73beca83384
+      mtime: 1197144971
+      name: lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+    - bytesize: 3932
+      file_mime_type: ~
+      line_count: ~
+      md5: 593772b43c696ad62dda35fa912125d2
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/Test.pm
+    - bytesize: 4673
+      file_mime_type: ~
+      line_count: ~
+      md5: f3cd744e4d90173e762196f27edd9b44
+      mtime: 1197135316
+      name: lib/Test/AutoBuild/Stage/Yum.pm
+    - bytesize: 145
+      file_mime_type: ~
+      line_count: ~
+      md5: 0963df200568676c6622539ed280edff
+      mtime: 1197135316
+      name: t/005-pod.t
+    - bytesize: 368
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d7795f322f28712aeeb048b1edeb18f
+      mtime: 1197152033
+      name: t/008-meta.t
+    - bytesize: 248
+      file_mime_type: ~
+      line_count: ~
+      md5: e086905841efa0af7606ee54217bfd82
+      mtime: 1138876249
+      name: t/010-pod-coverage.t
+    - bytesize: 1989
+      file_mime_type: ~
+      line_count: ~
+      md5: 9969c705c160177c33209c4293589c1b
+      mtime: 1197135316
+      name: t/030-Platform.t
+    - bytesize: 1839
+      file_mime_type: ~
+      line_count: ~
+      md5: 64fd189add63c4a36c65f85bb3ce5d5c
+      mtime: 1197135316
+      name: t/040-Monitor.t
+    - bytesize: 12267
+      file_mime_type: ~
+      line_count: ~
+      md5: f2b3fbb8378f96a2aa0cf34af25fb994
+      mtime: 1197135316
+      name: t/050-Runtime.t
+    - bytesize: 1375
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e9bb08f8abf6225c2f0b1740edb1c63
+      mtime: 1197135316
+      name: t/060-Result.t
+    - bytesize: 3199
+      file_mime_type: ~
+      line_count: ~
+      md5: 26fe9d0d09f976437b1588f7f8388981
+      mtime: 1197135316
+      name: t/061-Archive.t
+    - bytesize: 1883
+      file_mime_type: ~
+      line_count: ~
+      md5: 9121d397f96a902dbf8b38f0d175233d
+      mtime: 1197135316
+      name: t/062-ArchiveManager.t
+    - bytesize: 7076
+      file_mime_type: ~
+      line_count: ~
+      md5: a462ffa13be740fe493b78f29087216e
+      mtime: 1197135316
+      name: t/063-Archive-File.t
+    - bytesize: 3706
+      file_mime_type: ~
+      line_count: ~
+      md5: bb9e24ae0fd91a8ea268a0734541919c
+      mtime: 1197135316
+      name: t/064-ArchiveManager-File.t
+    - bytesize: 7532
+      file_mime_type: ~
+      line_count: ~
+      md5: 54afacd83ddb27315938ad522dd84fe3
+      mtime: 1197135316
+      name: t/070-Lib.t
+    - bytesize: 158
+      file_mime_type: ~
+      line_count: ~
+      md5: bcb5ac2551b4f5cc4093ad758783d21f
+      mtime: 1197135316
+      name: t/080-PackageType.t
+    - bytesize: 154
+      file_mime_type: ~
+      line_count: ~
+      md5: eaa6258a1279b17e218322bff241c00b
+      mtime: 1197135316
+      name: t/090-Package.t
+    - bytesize: 5627
+      file_mime_type: ~
+      line_count: ~
+      md5: 0178ef25617dc3c5a8f2e92c5f54398a
+      mtime: 1197144626
+      name: t/100-Module.t
+    - bytesize: 5408
+      file_mime_type: ~
+      line_count: ~
+      md5: 00abbd5c32427e6c6bb2cd480e7cd4aa
+      mtime: 1197135316
+      name: t/105-Module-Archiving.t
+    - bytesize: 10406
+      file_mime_type: ~
+      line_count: ~
+      md5: afbdac80d7a7bc6a41f6fb23333cd113
+      mtime: 1197144626
+      name: t/107-Module-Build.t
+    - bytesize: 1070
+      file_mime_type: ~
+      line_count: ~
+      md5: 14470e52e1a2de14436988cbcdd6bc33
+      mtime: 1109197602
+      name: t/110-Repository-CVS-init.sh
+    - bytesize: 2896
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a265b87a554d77d404749d5a1381bcc
+      mtime: 1197153635
+      name: t/110-Repository-CVS.t
+    - bytesize: 5562
+      file_mime_type: ~
+      line_count: ~
+      md5: 7726b46ffd8d7e937d6cce9c98a6610c
+      mtime: 1109197602
+      name: t/110-Repository-CVS.tar.gz
+    - bytesize: 163
+      file_mime_type: ~
+      line_count: ~
+      md5: f284ae1c3808eec1c151be083dee77b1
+      mtime: 1197135316
+      name: t/110-Repository-Disk.t
+    - bytesize: 1240
+      file_mime_type: ~
+      line_count: ~
+      md5: fae16b1d52472197e9196d5eb4ccb523
+      mtime: 1112052969
+      name: t/110-Repository-GNUArch-init.sh
+    - bytesize: 4926
+      file_mime_type: ~
+      line_count: ~
+      md5: 4623483f67afed4ffdd29b8ee0511c36
+      mtime: 1197153635
+      name: t/110-Repository-GNUArch.t
+    - bytesize: 11112
+      file_mime_type: ~
+      line_count: ~
+      md5: 137f258c46cebdfb961050cb4a5f7623
+      mtime: 1112052969
+      name: t/110-Repository-GNUArch.tar.gz
+    - bytesize: 1057
+      file_mime_type: ~
+      line_count: ~
+      md5: 375d95d437c347373f039fd6f3c8b184
+      mtime: 1133966937
+      name: t/110-Repository-Mercurial-init.sh
+    - bytesize: 4609
+      file_mime_type: ~
+      line_count: ~
+      md5: 27c467056d02e665b221ef3dd8c5cb77
+      mtime: 1197153635
+      name: t/110-Repository-Mercurial.t
+    - bytesize: 2808
+      file_mime_type: ~
+      line_count: ~
+      md5: 9890555bed15130c9cd0b0fd29aa6c13
+      mtime: 1133966937
+      name: t/110-Repository-Mercurial.tar.gz
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: ac2f1ded9609b2b6e4f43a3416142347
+      mtime: 1110726918
+      name: t/110-Repository-Perforce-init.sh
+    - bytesize: 5872
+      file_mime_type: ~
+      line_count: ~
+      md5: 075f09b92c4a2a43e1e7f0b0e1f91f23
+      mtime: 1197153635
+      name: t/110-Repository-Perforce.t
+    - bytesize: 5220
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fb6d588f9759dad66c73d1b613eb720
+      mtime: 1110726918
+      name: t/110-Repository-Perforce.tar.gz
+    - bytesize: 1132
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dd8ce1bc3031884d19b38c20f5f1e05
+      mtime: 1109848452
+      name: t/110-Repository-SVN-init.sh
+    - bytesize: 666
+      file_mime_type: ~
+      line_count: ~
+      md5: 0666e7d34b995299645c69abd3d79ec9
+      mtime: 1109972108
+      name: t/110-Repository-SVN.gz
+    - bytesize: 4253
+      file_mime_type: ~
+      line_count: ~
+      md5: a7ffffc32e22e4d5e8dfe8cd02fa07f0
+      mtime: 1197153635
+      name: t/110-Repository-SVN.t
+    - bytesize: 157
+      file_mime_type: ~
+      line_count: ~
+      md5: 43807bcb0937acedff30a3e25d4fff1a
+      mtime: 1197144410
+      name: t/110-Repository.t
+    - bytesize: 1551
+      file_mime_type: ~
+      line_count: ~
+      md5: 68e28f7fa2859d4fa71e02dfdac0a254
+      mtime: 1197135316
+      name: t/120-Monitor-Command.t
+    - bytesize: 494
+      file_mime_type: ~
+      line_count: ~
+      md5: a414ddc16772a0f86549291e82ec80db
+      mtime: 1197135316
+      name: t/120-Monitor-Log4perl.t
+    - bytesize: 2181
+      file_mime_type: ~
+      line_count: ~
+      md5: df893c0d2aee226a1fad513b2de74a89
+      mtime: 1197135316
+      name: t/120-Monitor-Pipe.t
+    - bytesize: 156
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c12d55aaefd3f2f2c7089afa4cc26a7
+      mtime: 1197135316
+      name: t/130-Publisher.t
+    - bytesize: 162
+      file_mime_type: ~
+      line_count: ~
+      md5: 7557041357080cd57ac5425c0aa2dfd1
+      mtime: 1197135316
+      name: t/131-Publisher-Copy.t
+    - bytesize: 1071
+      file_mime_type: ~
+      line_count: ~
+      md5: 711f1f7b04e6f8a2a3d869d11a5ba7ac
+      mtime: 1197135316
+      name: t/140-Lock.t
+    - bytesize: 3095
+      file_mime_type: ~
+      line_count: ~
+      md5: 1729097062f3fdf3bfa9b66e431cf400
+      mtime: 1197135316
+      name: t/145-Stage.t
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: 33b3069812ea4805c761b31b148920cb
+      mtime: 1197135316
+      name: t/150-Stage-Apt.t
+    - bytesize: 712
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b2b40b26b2cb19dbbda233f3a46d7ec
+      mtime: 1197135316
+      name: t/150-Stage-ArtifactCopier.t
+    - bytesize: 675
+      file_mime_type: ~
+      line_count: ~
+      md5: 329de912bc6fa858f918aabe95108651
+      mtime: 1197135316
+      name: t/150-Stage-Build.t
+    - bytesize: 725
+      file_mime_type: ~
+      line_count: ~
+      md5: 53b22ae86981bd231bfb0e8d32a95d6f
+      mtime: 1197135316
+      name: t/150-Stage-CleanBuildRoots.t
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: b1ed0118e904941243bffc02a026561e
+      mtime: 1197135316
+      name: t/150-Stage-CleanPackages.t
+    - bytesize: 21116
+      file_mime_type: ~
+      line_count: ~
+      md5: 1de288497137b6b9ea02aaad62d1d433
+      mtime: 1197144626
+      name: t/150-Stage-EmailAlert.t
+    - bytesize: 702
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b090fade96021aeca61e348968be3b8
+      mtime: 1197135316
+      name: t/150-Stage-GetSource.t
+    - bytesize: 681
+      file_mime_type: ~
+      line_count: ~
+      md5: 00ab908cfccd86bd11fffd683c09f2ff
+      mtime: 1197135316
+      name: t/150-Stage-Group.t
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: 04954df99b552dafe096260022696981
+      mtime: 1197135316
+      name: t/150-Stage-HTMLStatus.t
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: f23babdfe875ddb2c28b808c5f75a2b1
+      mtime: 1197135316
+      name: t/150-Stage-ISOBuilder.t
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: dfc7f1b89750b4e9458f58750b4a5ef4
+      mtime: 1197135316
+      name: t/150-Stage-Iterator.t
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: 85478e66fd4847ae8d93b874b63142e3
+      mtime: 1197135316
+      name: t/150-Stage-LogCopier.t
+    - bytesize: 718
+      file_mime_type: ~
+      line_count: ~
+      md5: eeb34ddcd2e63db0f8d7b23ac723c76f
+      mtime: 1197135316
+      name: t/150-Stage-PackageCopier.t
+    - bytesize: 1626
+      file_mime_type: ~
+      line_count: ~
+      md5: be40ac6cb5993cdc3c340f954aae63f7
+      mtime: 1197135316
+      name: t/150-Stage-SetNice.t
+    - bytesize: 636
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f209d85fec96f7cb391581a1112e14c
+      mtime: 1197135316
+      name: t/150-Stage-TEMPLATE
+    - bytesize: 669
+      file_mime_type: ~
+      line_count: ~
+      md5: d2253b17febb6ba702644543848c7416
+      mtime: 1197135316
+      name: t/150-Stage-Test.t
+    - bytesize: 680
+      file_mime_type: ~
+      line_count: ~
+      md5: e3866ce09ebe37b480a4b71070cf37c7
+      mtime: 1197135316
+      name: t/150-Stage-Yum.t
+    - bytesize: 287
+      file_mime_type: ~
+      line_count: ~
+      md5: 95ccb12cf6e4b578df4bff908ae34f22
+      mtime: 1197135316
+      name: t/200-AutoBuild.t
+    - bytesize: 18046
+      file_mime_type: ~
+      line_count: ~
+      md5: 85e2e127ba23e0a10a0358ea925d524e
+      mtime: 1135955104
+      name: t/auto-build-engine.conf
+    - bytesize: 2391
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e99b24c535710cbfebd1ec858a998e6
+      mtime: 1138872496
+      name: t/auto-build.conf
+    - bytesize: 458
+      file_mime_type: ~
+      line_count: ~
+      md5: 93a222dddecc01089edb78536a18f19d
+      mtime: 1144806100
+      name: t/email.txt
+    - bytesize: 300
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a5c76519fc61ac01169d6a150919ad7
+      mtime: 1104520979
+      name: t/log4perl.conf
+    - bytesize: 2279
+      file_mime_type: ~
+      line_count: ~
+      md5: 386b0aa3b2f113604d7db59f82068c13
+      mtime: 1116112972
+      name: templates/classic-blue.css
+    - bytesize: 2281
+      file_mime_type: ~
+      line_count: ~
+      md5: f83f8b3452237c8af4fa9d73453eaaab
+      mtime: 1116112972
+      name: templates/classic-red.css
+    - bytesize: 451
+      file_mime_type: ~
+      line_count: ~
+      md5: 9291ec6856593696ee74a82b540140a9
+      mtime: 1135711286
+      name: templates/email-admin.txt
+    - bytesize: 458
+      file_mime_type: ~
+      line_count: ~
+      md5: e050de6a68606409d5e8765d1c970957
+      mtime: 1135711286
+      name: templates/email.txt
+    - bytesize: 2105
+      file_mime_type: ~
+      line_count: ~
+      md5: 527a54bdb8b86d524261fd013ab677cc
+      mtime: 1136568654
+      name: templates/failures.rss
+    - bytesize: 1126
+      file_mime_type: ~
+      line_count: ~
+      md5: 98d82fa234280242f80d6af55d419440
+      mtime: 1108593446
+      name: templates/generic.css
+    - bytesize: 668
+      file_mime_type: ~
+      line_count: ~
+      md5: ce894d61af8e67b29d7cdfd51e2130a7
+      mtime: 1183215589
+      name: templates/index-group.html
+    - bytesize: 697
+      file_mime_type: ~
+      line_count: ~
+      md5: a7b41fe62d9042888e983e179b558f03
+      mtime: 1183215589
+      name: templates/index-iso.html
+    - bytesize: 497
+      file_mime_type: ~
+      line_count: ~
+      md5: 187293640602248b31cdfe40838b9977
+      mtime: 1183215589
+      name: templates/index-module.html
+    - bytesize: 687
+      file_mime_type: ~
+      line_count: ~
+      md5: 7196e4f4a6a0f1af2045c1e18e19731f
+      mtime: 1183215589
+      name: templates/index-repository.html
+    - bytesize: 1960
+      file_mime_type: ~
+      line_count: ~
+      md5: 6115a871f6d7c622aa7cbb6decc3e640
+      mtime: 1136568654
+      name: templates/index.rss
+    - bytesize: 4150
+      file_mime_type: ~
+      line_count: ~
+      md5: 7337170649c24209b7919a3b70876788
+      mtime: 1110056995
+      name: templates/logo-failed.png
+    - bytesize: 4151
+      file_mime_type: ~
+      line_count: ~
+      md5: ade1c483a2d88d3fda4d84c266119d93
+      mtime: 1110056995
+      name: templates/logo-success.png
+    - bytesize: 5379
+      file_mime_type: ~
+      line_count: ~
+      md5: 7961a0064ffbd40b1083f8511843bc45
+      mtime: 1197144626
+      name: templates/module.html
+    - bytesize: 2552
+      file_mime_type: ~
+      line_count: ~
+      md5: ae6471af336ed56c0165a15838d8ffaa
+      mtime: 1136575263
+      name: templates/page.tt
+    - bytesize: 948
+      file_mime_type: ~
+      line_count: ~
+      md5: b24d943c33740a4d4a8be18a5155d940
+      mtime: 1136568654
+      name: templates/rss10.png
+    - bytesize: 564
+      file_mime_type: ~
+      line_count: ~
+      md5: d37a5ae9cd738ed89d3f2e2a4c7f4b94
+      mtime: 1121280536
+      name: templates/status-stage.tt
+    - bytesize: 192
+      file_mime_type: ~
+      line_count: ~
+      md5: f7fce1d7c9c05cd4b8887c795b6ae2b0
+      mtime: 1116795537
+      name: templates/status.html
+    - bytesize: 3546
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c9622d429ed0b5d28de6cffdc650580
+      mtime: 1133966091
+      name: templates/test-autobuild.css
+  module_info:
+    - bytesize: 33576
+      file_mime_type: ~
+      line_count: ~
+      md5: cdedf34aa46fb3c61238954e9ebec07c
+      module_name_from_file_guess: Test::AutoBuild
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild.pm
+      packages:
+        - Test::AutoBuild
+      primary_package: Test::AutoBuild
+      uses:
+        - warnings
+        - strict
+        - Test::AutoBuild::Lib
+        - Test::AutoBuild::Runtime
+        - Test::AutoBuild::Group
+        - Test::AutoBuild::Platform
+        - Test::AutoBuild::PackageType
+        - Test::AutoBuild::Stage::Group
+        - Class::MethodMaker
+        - Log::Log4perl
+        - File::Spec::Functions
+        - UNIVERSAL
+        - vars
+      version_info:
+        filename: blib/lib/Test/AutoBuild.pm
+        identifier: VERSION
+        line_number: 644
+        sigil: $
+        value: 1.2.1
+    - bytesize: 15069
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e2c4165110e97783b66d6f8932b3311
+      module_name_from_file_guess: Test::AutoBuild::Archive
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Archive.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - warnings
+        - strict
+        - File::Spec::Functions
+        - Storable
+        - Class::MethodMaker
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Archive.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7097
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f9d81c6ec0e179c314adfd4dbaccd08
+      module_name_from_file_guess: Test::AutoBuild::Archive::File
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Archive/File.pm
+      packages:
+        - Test::AutoBuild::Archive::File
+      primary_package: Test::AutoBuild::Archive::File
+      uses:
+        - base
+        - warnings
+        - strict
+        - Test::AutoBuild::Lib
+        - File::Spec::Functions
+        - File::Path
+        - File::Find
+        - Storable
+        - Class::MethodMaker
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Archive/File.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5894
+      file_mime_type: ~
+      line_count: ~
+      md5: efdbdf3bd4b9d98b2d58a79d41e54eac
+      module_name_from_file_guess: Test::AutoBuild::Archive::Memory
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Archive/Memory.pm
+      packages:
+        - Test::AutoBuild::Archive::Memory
+      primary_package: Test::AutoBuild::Archive::Memory
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Archive/Memory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13430
+      file_mime_type: ~
+      line_count: ~
+      md5: 85356ebd3f5e3b1ac28b6baa71ee3724
+      module_name_from_file_guess: Test::AutoBuild::ArchiveManager
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/ArchiveManager.pm
+      packages:
+        - Test::AutoBuild::ArchiveManager
+      primary_package: Test::AutoBuild::ArchiveManager
+      uses:
+        - warnings
+        - strict
+        - Class::MethodMaker
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/ArchiveManager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2871
+      file_mime_type: ~
+      line_count: ~
+      md5: d82eb174cc0e1ac3c6fb0aea48c02d71
+      module_name_from_file_guess: Test::AutoBuild::ArchiveManager::File
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/ArchiveManager/File.pm
+      packages:
+        - Test::AutoBuild::ArchiveManager::File
+      primary_package: Test::AutoBuild::ArchiveManager::File
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Spec::Functions
+        - File::Path
+        - Test::AutoBuild::Archive::File
+        - Log::Log4perl
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/ArchiveManager/File.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2190
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d2b91dbbd707c08a68ca04c190e5769
+      module_name_from_file_guess: Test::AutoBuild::ArchiveManager::Memory
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/ArchiveManager/Memory.pm
+      packages:
+        - Test::AutoBuild::ArchiveManager::Memory
+      primary_package: Test::AutoBuild::ArchiveManager::Memory
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Test::AutoBuild::Archive::Memory
+      version_info:
+        filename: blib/lib/Test/AutoBuild/ArchiveManager/Memory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3642
+      file_mime_type: ~
+      line_count: ~
+      md5: 16be78d4cc45dc663d8f48614e2f49c8
+      module_name_from_file_guess: Test::AutoBuild::Change
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Change.pm
+      packages:
+        - Test::AutoBuild::Change
+      primary_package: Test::AutoBuild::Change
+      uses:
+        - strict
+        - warnings
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Change.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3083
+      file_mime_type: ~
+      line_count: ~
+      md5: fd754dea4d26046748adb8d407fa0490
+      module_name_from_file_guess: Test::AutoBuild::Command
+      mtime: 1183232506
+      name: blib/lib/Test/AutoBuild/Command.pm
+      packages:
+        - Test::AutoBuild::Command
+      primary_package: Test::AutoBuild::Command
+      uses:
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Command.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5912
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e09f33f97728d18cad7d65e9a1c5dee
+      module_name_from_file_guess: Test::AutoBuild::Command::Local
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Command/Local.pm
+      packages:
+        - Test::AutoBuild::Command::Local
+      primary_package: Test::AutoBuild::Command::Local
+      uses:
+        - warnings
+        - strict
+        - Log::Log4perl
+        - POSIX
+        - Symbol
+        - base
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Command/Local.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3005
+      file_mime_type: ~
+      line_count: ~
+      md5: 09bbb754062cd4659806fc2cc3fa3827
+      module_name_from_file_guess: Test::AutoBuild::Command::SELocal
+      mtime: 1183232551
+      name: blib/lib/Test/AutoBuild/Command/SELocal.pm
+      packages:
+        - Test::AutoBuild::Command::SELocal
+      primary_package: Test::AutoBuild::Command::SELocal
+      uses:
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Symbol
+        - base
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Command/SELocal.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2686
+      file_mime_type: ~
+      line_count: ~
+      md5: da674e86b63633073f96be4f9601ec95
+      module_name_from_file_guess: Test::AutoBuild::Counter
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Counter.pm
+      packages:
+        - Test::AutoBuild::Counter
+      primary_package: Test::AutoBuild::Counter
+      uses:
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Counter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2104
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b3969290018580d68ca6cafb3b70331
+      module_name_from_file_guess: Test::AutoBuild::Counter::ChangeList
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Counter/ChangeList.pm
+      packages:
+        - Test::AutoBuild::Counter::ChangeList
+      primary_package: Test::AutoBuild::Counter::ChangeList
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Counter/ChangeList.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1869
+      file_mime_type: ~
+      line_count: ~
+      md5: 89e00a4378d0328c64e01921166e174b
+      module_name_from_file_guess: Test::AutoBuild::Counter::Time
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Counter/Time.pm
+      packages:
+        - Test::AutoBuild::Counter::Time
+      primary_package: Test::AutoBuild::Counter::Time
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Counter/Time.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1914
+      file_mime_type: ~
+      line_count: ~
+      md5: f8e47d95790ab0522c81cb542c917d40
+      module_name_from_file_guess: Test::AutoBuild::Counter::Timestamp
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Counter/Timestamp.pm
+      packages:
+        - Test::AutoBuild::Counter::Timestamp
+      primary_package: Test::AutoBuild::Counter::Timestamp
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Counter/Timestamp.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4694
+      file_mime_type: ~
+      line_count: ~
+      md5: b11faa595fbd1c936fd12b07107648f3
+      module_name_from_file_guess: Test::AutoBuild::ErrorReport
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/ErrorReport.pm
+      packages:
+        - Test::AutoBuild::ErrorReport
+      primary_package: Test::AutoBuild::ErrorReport
+      uses:
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Sys::Hostname
+        - File::Spec::Functions
+        - Config
+        - Data::Dumper
+        - Carp
+        - Class::MethodMaker
+        - overload
+      version_info:
+        filename: blib/lib/Test/AutoBuild/ErrorReport.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4557
+      file_mime_type: ~
+      line_count: ~
+      md5: 259432fd896d141dc531fb0533b03c4a
+      module_name_from_file_guess: Test::AutoBuild::Group
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Group.pm
+      packages:
+        - Test::AutoBuild::Group
+      primary_package: Test::AutoBuild::Group
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Class::MethodMaker
+        - Digest::MD5
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Group.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11926
+      file_mime_type: ~
+      line_count: ~
+      md5: b6618b48f30a1bf297021a5a786e2718
+      module_name_from_file_guess: Test::AutoBuild::Lib
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Lib.pm
+      packages:
+        - Test::AutoBuild::Lib
+      primary_package: Test::AutoBuild::Lib
+      uses:
+        - warnings
+        - strict
+        - Carp
+        - File::Copy
+        - File::Glob
+        - File::Path
+        - File::stat
+        - File::Spec::Functions
+        - Log::Log4perl
+        - POSIX
+        - Sys::Hostname
+        - Template
+        - IO::Scalar
+        - Config::Record
+        - Test::AutoBuild::Command::Local
+        - integer
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Lib.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7979
+      file_mime_type: ~
+      line_count: ~
+      md5: ea7e1e579df81177bb11d07c6f88ef81
+      module_name_from_file_guess: Test::AutoBuild::Lock
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Lock.pm
+      packages:
+        - Test::AutoBuild::Lock
+      primary_package: Test::AutoBuild::Lock
+      uses:
+        - warnings
+        - strict
+        - IO::File
+        - Class::MethodMaker
+        - File::Spec::Functions
+        - Fcntl
+        - POSIX
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Lock.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 30726
+      file_mime_type: ~
+      line_count: ~
+      md5: ac224b42ea0eda11f5cd669a45ac5eeb
+      module_name_from_file_guess: Test::AutoBuild::Module
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Module.pm
+      packages:
+        - Test::AutoBuild::Module
+      primary_package: Test::AutoBuild::Module
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::Spec::Functions
+        - Class::MethodMaker
+        - Cwd
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Module.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6016
+      file_mime_type: ~
+      line_count: ~
+      md5: 378c7e148cae7192ca4d3237a04fe7e1
+      module_name_from_file_guess: Test::AutoBuild::Monitor
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Monitor.pm
+      packages:
+        - Test::AutoBuild::Monitor
+      primary_package: Test::AutoBuild::Monitor
+      uses:
+        - warnings
+        - strict
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Monitor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3731
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b599798e29e02d34f16d7c9d40b66b5
+      module_name_from_file_guess: Test::AutoBuild::Monitor::CommandLine
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Monitor/CommandLine.pm
+      packages:
+        - Test::AutoBuild::Monitor::CommandLine
+      primary_package: Test::AutoBuild::Monitor::CommandLine
+      uses:
+        - base
+        - warnings
+        - strict
+        - Test::AutoBuild::Lib
+        - Carp
+        - POSIX
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Monitor/CommandLine.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2486
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bf0c81b3c8cc1b9e99d342024e55b29
+      module_name_from_file_guess: Test::AutoBuild::Monitor::Log4perl
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Monitor/Log4perl.pm
+      packages:
+        - Test::AutoBuild::Monitor::Log4perl
+      primary_package: Test::AutoBuild::Monitor::Log4perl
+      uses:
+        - base
+        - warnings
+        - strict
+        - Test::AutoBuild::Lib
+        - Log::Log4perl
+        - Carp
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Monitor/Log4perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3961
+      file_mime_type: ~
+      line_count: ~
+      md5: a3bf5fc58f3eb80fc9f5c1b2388328b5
+      module_name_from_file_guess: Test::AutoBuild::Monitor::Pipe
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Monitor/Pipe.pm
+      packages:
+        - Test::AutoBuild::Monitor::Pipe
+      primary_package: Test::AutoBuild::Monitor::Pipe
+      uses:
+        - base
+        - warnings
+        - strict
+        - IO::File
+        - Test::AutoBuild::Lib
+        - Carp
+        - POSIX
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Monitor/Pipe.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3571
+      file_mime_type: ~
+      line_count: ~
+      md5: 585a265b8dbfb5ca53d39c38a41adf63
+      module_name_from_file_guess: Test::AutoBuild::Package
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Package.pm
+      packages:
+        - Test::AutoBuild::Package
+      primary_package: Test::AutoBuild::Package
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Digest::MD5
+        - File::stat
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Package.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5669
+      file_mime_type: ~
+      line_count: ~
+      md5: 92c6fa22f188185d01637a03718ac697
+      module_name_from_file_guess: Test::AutoBuild::PackageType
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/PackageType.pm
+      packages:
+        - Test::AutoBuild::PackageType
+      primary_package: Test::AutoBuild::PackageType
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::Find
+        - File::Path
+        - Log::Log4perl
+        - Test::AutoBuild::Package
+      version_info:
+        filename: blib/lib/Test/AutoBuild/PackageType.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5543
+      file_mime_type: ~
+      line_count: ~
+      md5: 8655d15e6849524905cbca3b42317ea6
+      module_name_from_file_guess: Test::AutoBuild::Platform
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Platform.pm
+      packages:
+        - Test::AutoBuild::Platform
+      primary_package: Test::AutoBuild::Platform
+      uses:
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Spec::Functions
+        - POSIX
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Platform.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4038
+      file_mime_type: ~
+      line_count: ~
+      md5: 464aa749532a4f43876e0176277ae7cd
+      module_name_from_file_guess: Test::AutoBuild::Publisher
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Publisher.pm
+      packages:
+        - Test::AutoBuild::Publisher
+      primary_package: Test::AutoBuild::Publisher
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Publisher.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1959
+      file_mime_type: ~
+      line_count: ~
+      md5: dcc3c79bc5a1c96d6c2dac44e41b9449
+      module_name_from_file_guess: Test::AutoBuild::Publisher::Copy
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Publisher/Copy.pm
+      packages:
+        - Test::AutoBuild::Publisher::Copy
+      primary_package: Test::AutoBuild::Publisher::Copy
+      uses:
+        - base
+        - strict
+        - warnings
+        - Carp
+        - File::Path
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Publisher/Copy.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2147
+      file_mime_type: ~
+      line_count: ~
+      md5: f45793a63ddd108964ceff0f77e0879a
+      module_name_from_file_guess: Test::AutoBuild::Publisher::XSLTransform
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Publisher/XSLTransform.pm
+      packages:
+        - Test::AutoBuild::Publisher::XSLTransform
+      primary_package: Test::AutoBuild::Publisher::XSLTransform
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Test::AutoBuild::Publisher
+        - File::Path
+        - vars
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Publisher/XSLTransform.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7531
+      file_mime_type: ~
+      line_count: ~
+      md5: b0ed5480108e59094069907d147b0375
+      module_name_from_file_guess: Test::AutoBuild::Repository
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Repository.pm
+      packages:
+        - Test::AutoBuild::Repository
+      primary_package: Test::AutoBuild::Repository
+      uses:
+        - strict
+        - warnings
+        - Test::AutoBuild::Lib
+        - Log::Log4perl
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2813
+      file_mime_type: ~
+      line_count: ~
+      md5: 11966d697437ae8de31a33c2feed57a7
+      module_name_from_file_guess: Test::AutoBuild::Repository::CVS
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Repository/CVS.pm
+      packages:
+        - Test::AutoBuild::Repository::CVS
+      primary_package: Test::AutoBuild::Repository::CVS
+      uses:
+        - strict
+        - warnings
+        - POSIX
+        - Log::Log4perl
+        - base
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/CVS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2418
+      file_mime_type: ~
+      line_count: ~
+      md5: 88c83a748f20249ab3173c3d83029068
+      module_name_from_file_guess: Test::AutoBuild::Repository::Disk
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Repository/Disk.pm
+      packages:
+        - Test::AutoBuild::Repository::Disk
+      primary_package: Test::AutoBuild::Repository::Disk
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - File::Path
+        - File::Spec::Functions
+        - Test::AutoBuild::Lib
+        - base
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/Disk.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6418
+      file_mime_type: ~
+      line_count: ~
+      md5: 367ec1ebf5052fcdca6e017016ef4dec
+      module_name_from_file_guess: Test::AutoBuild::Repository::GNUArch
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Repository/GNUArch.pm
+      packages:
+        - Test::AutoBuild::Repository::GNUArch
+      primary_package: Test::AutoBuild::Repository::GNUArch
+      uses:
+        - base
+        - strict
+        - warnings
+        - Log::Log4perl
+        - Test::AutoBuild::Change
+        - Date::Manip
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/GNUArch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7206
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b45fe081ea7bed299cc8107f5237c75
+      module_name_from_file_guess: Test::AutoBuild::Repository::Mercurial
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Repository/Mercurial.pm
+      packages:
+        - Test::AutoBuild::Repository::Mercurial
+      primary_package: Test::AutoBuild::Repository::Mercurial
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Test::AutoBuild::Change
+        - Date::Manip
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/Mercurial.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10484
+      file_mime_type: ~
+      line_count: ~
+      md5: 401de28efe50bf618fcc4b0927a0896e
+      module_name_from_file_guess: Test::AutoBuild::Repository::Perforce
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Repository/Perforce.pm
+      packages:
+        - Test::AutoBuild::Repository::Perforce
+      primary_package: Test::AutoBuild::Repository::Perforce
+      uses:
+        - base
+        - strict
+        - warnings
+        - File::Spec::Functions
+        - POSIX
+        - Date::Manip
+        - Class::MethodMaker
+        - Log::Log4perl
+        - Test::AutoBuild::Change
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/Perforce.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3439
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a670c8a10e8f1276148ac096d780832
+      module_name_from_file_guess: Test::AutoBuild::Repository::SVK
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Repository/SVK.pm
+      packages:
+        - Test::AutoBuild::Repository::SVK
+      primary_package: Test::AutoBuild::Repository::SVK
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/SVK.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6561
+      file_mime_type: ~
+      line_count: ~
+      md5: 591a915194efbd87fff904eef4756e83
+      module_name_from_file_guess: Test::AutoBuild::Repository::Subversion
+      mtime: 1197147679
+      name: blib/lib/Test/AutoBuild/Repository/Subversion.pm
+      packages:
+        - Test::AutoBuild::Repository::Subversion
+      primary_package: Test::AutoBuild::Repository::Subversion
+      uses:
+        - base
+        - strict
+        - warnings
+        - POSIX
+        - Log::Log4perl
+        - Test::AutoBuild::Change
+        - Date::Manip
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Repository/Subversion.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3668
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cf688ed50f57dde64ad9e23b8d8bc8d
+      module_name_from_file_guess: Test::AutoBuild::Result
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Result.pm
+      packages:
+        - Test::AutoBuild::Result
+      primary_package: Test::AutoBuild::Result
+      uses:
+        - strict
+        - warnings
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Result.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 21316
+      file_mime_type: ~
+      line_count: ~
+      md5: 478f938ae977d663e5b6f8c2aad7e8ce
+      module_name_from_file_guess: Test::AutoBuild::Runtime
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Runtime.pm
+      packages:
+        - Test::AutoBuild::Runtime
+      primary_package: Test::AutoBuild::Runtime
+      uses:
+        - warnings
+        - strict
+        - Carp
+        - Log::Log4perl
+        - Sys::Hostname
+        - File::Spec::Functions
+        - List::Util
+        - Class::MethodMaker
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Runtime.pm
+        identifier: VERSION
+        line_number: 113
+        sigil: $
+        value: 1.1.0
+    - bytesize: 10302
+      file_mime_type: ~
+      line_count: ~
+      md5: 215a7d4f56e5ef55f9ca88b0e452fbc5
+      module_name_from_file_guess: Test::AutoBuild::Stage
+      mtime: 1197147782
+      name: blib/lib/Test/AutoBuild/Stage.pm
+      packages:
+        - Test::AutoBuild::Stage
+      primary_package: Test::AutoBuild::Stage
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - Class::MethodMaker
+        - Data::Dumper
+        - Log::Log4perl
+        - Test::AutoBuild::Result
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7394
+      file_mime_type: ~
+      line_count: ~
+      md5: f49f23e973fc667b541a1f2973212338
+      module_name_from_file_guess: Test::AutoBuild::Stage::Apt
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/Apt.pm
+      packages:
+        - Test::AutoBuild::Stage::Apt
+      primary_package: Test::AutoBuild::Stage::Apt
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Spec::Functions
+        - File::Path
+        - Test::AutoBuild::Lib
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Apt.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3555
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f16b916cec57c0ebe256a4d28176f75
+      module_name_from_file_guess: Test::AutoBuild::Stage::ArtifactCopier
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+      packages:
+        - Test::AutoBuild::Stage::ArtifactCopier
+      primary_package: Test::AutoBuild::Stage::ArtifactCopier
+      uses:
+        - base
+        - warnings
+        - strict
+        - Test::AutoBuild::Lib
+        - File::Path
+        - File::Spec::Functions
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4720
+      file_mime_type: ~
+      line_count: ~
+      md5: 77ba8adfb3e2e2713788b57675d7b463
+      module_name_from_file_guess: Test::AutoBuild::Stage::Build
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Stage/Build.pm
+      packages:
+        - Test::AutoBuild::Stage::Build
+      primary_package: Test::AutoBuild::Stage::Build
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Test::AutoBuild::Result
+        - Test::AutoBuild::Lib
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Build.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2307
+      file_mime_type: ~
+      line_count: ~
+      md5: 192cf48deb395c01c56a8e36a96961c2
+      module_name_from_file_guess: Test::AutoBuild::Stage::CleanArchive
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/CleanArchive.pm
+      packages:
+        - Test::AutoBuild::Stage::CleanArchive
+      primary_package: Test::AutoBuild::Stage::CleanArchive
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/CleanArchive.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2507
+      file_mime_type: ~
+      line_count: ~
+      md5: fb3bf33406e3fd2b727f011804d4498c
+      module_name_from_file_guess: Test::AutoBuild::Stage::CleanBuildRoots
+      mtime: 1138876248
+      name: blib/lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+      packages:
+        - Test::AutoBuild::Stage::CleanBuildRoots
+      primary_package: Test::AutoBuild::Stage::CleanBuildRoots
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Spec::Functions
+        - File::Path
+        - Log::Log4perl
+        - Test::AutoBuild::Lib
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d878abe6ea6ab837406fba35ef89c4a
+      module_name_from_file_guess: Test::AutoBuild::Stage::CleanPackages
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/CleanPackages.pm
+      packages:
+        - Test::AutoBuild::Stage::CleanPackages
+      primary_package: Test::AutoBuild::Stage::CleanPackages
+      uses:
+        - base
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/CleanPackages.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3052
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e98fd938b0523d3377ebab037a3573e
+      module_name_from_file_guess: Test::AutoBuild::Stage::Copier
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/Copier.pm
+      packages:
+        - Test::AutoBuild::Stage::Copier
+      primary_package: Test::AutoBuild::Stage::Copier
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Path
+        - Log::Log4perl
+        - Test::AutoBuild::Lib
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Copier.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2132
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f0b14bd2e45dd499e0813f942c5ae97
+      module_name_from_file_guess: Test::AutoBuild::Stage::CreateArchive
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/CreateArchive.pm
+      packages:
+        - Test::AutoBuild::Stage::CreateArchive
+      primary_package: Test::AutoBuild::Stage::CreateArchive
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/CreateArchive.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4785
+      file_mime_type: ~
+      line_count: ~
+      md5: 0223d33e8e5a0d50f94c1d6ba18c7127
+      module_name_from_file_guess: Test::AutoBuild::Stage::CreateRepo
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/CreateRepo.pm
+      packages:
+        - Test::AutoBuild::Stage::CreateRepo
+      primary_package: Test::AutoBuild::Stage::CreateRepo
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/CreateRepo.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10614
+      file_mime_type: ~
+      line_count: ~
+      md5: 36ad4a94a09ba7aa4737305f0b137b76
+      module_name_from_file_guess: Test::AutoBuild::Stage::EmailAlert
+      mtime: 1149511121
+      name: blib/lib/Test/AutoBuild/Stage/EmailAlert.pm
+      packages:
+        - Test::AutoBuild::Stage::EmailAlert
+      primary_package: Test::AutoBuild::Stage::EmailAlert
+      uses:
+        - base
+        - warnings
+        - strict
+        - Net::SMTP
+        - IO::Scalar
+        - Log::Log4perl
+        - POSIX
+        - Template
+        - Sys::Hostname
+        - Test::AutoBuild::Lib
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/EmailAlert.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3962
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e64af98fb134d60f4cd735e52bb9210
+      module_name_from_file_guess: Test::AutoBuild::Stage::GetSource
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Stage/GetSource.pm
+      packages:
+        - Test::AutoBuild::Stage::GetSource
+      primary_package: Test::AutoBuild::Stage::GetSource
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Spec::Functions
+        - File::Path
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/GetSource.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4558
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f404a7fff5b518803fc3d335f3b7517
+      module_name_from_file_guess: Test::AutoBuild::Stage::Group
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/Group.pm
+      packages:
+        - Test::AutoBuild::Stage::Group
+      primary_package: Test::AutoBuild::Stage::Group
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Group.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8500
+      file_mime_type: ~
+      line_count: ~
+      md5: e40c37d863cc92d4522de9ba7664d7d7
+      module_name_from_file_guess: Test::AutoBuild::Stage::HTMLStatus
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Stage/HTMLStatus.pm
+      packages:
+        - Test::AutoBuild::Stage::HTMLStatus
+      primary_package: Test::AutoBuild::Stage::HTMLStatus
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Spec::Functions
+        - Test::AutoBuild::Lib
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/HTMLStatus.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5723
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f88787b61af98bc5a0ace8bd5b56928
+      module_name_from_file_guess: Test::AutoBuild::Stage::ISOBuilder
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/ISOBuilder.pm
+      packages:
+        - Test::AutoBuild::Stage::ISOBuilder
+      primary_package: Test::AutoBuild::Stage::ISOBuilder
+      uses:
+        - base
+        - warnings
+        - strict
+        - Digest::MD5
+        - Log::Log4perl
+        - Test::AutoBuild::Lib
+        - File::Spec::Functions
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/ISOBuilder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5520
+      file_mime_type: ~
+      line_count: ~
+      md5: a5391423a9c87a7a0def8f54428c39a0
+      module_name_from_file_guess: Test::AutoBuild::Stage::Iterator
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/Iterator.pm
+      packages:
+        - Test::AutoBuild::Stage::Iterator
+      primary_package: Test::AutoBuild::Stage::Iterator
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Iterator.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4073
+      file_mime_type: ~
+      line_count: ~
+      md5: 98c99c28191a1f3b54cc4b31cde02d9c
+      module_name_from_file_guess: Test::AutoBuild::Stage::LogCopier
+      mtime: 1197144626
+      name: blib/lib/Test/AutoBuild/Stage/LogCopier.pm
+      packages:
+        - Test::AutoBuild::Stage::LogCopier
+      primary_package: Test::AutoBuild::Stage::LogCopier
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Path
+        - File::Spec::Functions
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/LogCopier.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2524
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e46eb5891f9b48fd256c868366df564
+      module_name_from_file_guess: Test::AutoBuild::Stage::PackageCopier
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/PackageCopier.pm
+      packages:
+        - Test::AutoBuild::Stage::PackageCopier
+      primary_package: Test::AutoBuild::Stage::PackageCopier
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Path
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/PackageCopier.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3584
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bc021a6281213bab260b220754dc70d
+      module_name_from_file_guess: Test::AutoBuild::Stage::SetNice
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/SetNice.pm
+      packages:
+        - Test::AutoBuild::Stage::SetNice
+      primary_package: Test::AutoBuild::Stage::SetNice
+      uses:
+        - base
+        - warnings
+        - strict
+        - BSD::Resource
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/SetNice.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4955
+      file_mime_type: ~
+      line_count: ~
+      md5: 004eb79ccd48ecda39b50a6db5a6243e
+      module_name_from_file_guess: Test::AutoBuild::Stage::TemplateGenerator
+      mtime: 1197144971
+      name: blib/lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+      packages:
+        - Test::AutoBuild::Stage::TemplateGenerator
+      primary_package: Test::AutoBuild::Stage::TemplateGenerator
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Spec
+        - Log::Log4perl
+        - POSIX
+        - Sys::Hostname
+        - Template
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3932
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c8bd95422d6bdccd68d67f55febeacd
+      module_name_from_file_guess: Test::AutoBuild::Stage::Test
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/Test.pm
+      packages:
+        - Test::AutoBuild::Stage::Test
+      primary_package: Test::AutoBuild::Stage::Test
+      uses:
+        - base
+        - warnings
+        - strict
+        - File::Path
+        - File::Temp
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Test.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4673
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f02640228251275416d0f1fdb73ef6b
+      module_name_from_file_guess: Test::AutoBuild::Stage::Yum
+      mtime: 1197135316
+      name: blib/lib/Test/AutoBuild/Stage/Yum.pm
+      packages:
+        - Test::AutoBuild::Stage::Yum
+      primary_package: Test::AutoBuild::Stage::Yum
+      uses:
+        - base
+        - warnings
+        - strict
+        - Log::Log4perl
+      version_info:
+        filename: blib/lib/Test/AutoBuild/Stage/Yum.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Test/AutoBuild.pm
+    - blib/lib/Test/AutoBuild/Archive.pm
+    - blib/lib/Test/AutoBuild/Archive/File.pm
+    - blib/lib/Test/AutoBuild/Archive/Memory.pm
+    - blib/lib/Test/AutoBuild/ArchiveManager.pm
+    - blib/lib/Test/AutoBuild/ArchiveManager/File.pm
+    - blib/lib/Test/AutoBuild/ArchiveManager/Memory.pm
+    - blib/lib/Test/AutoBuild/Change.pm
+    - blib/lib/Test/AutoBuild/Command.pm
+    - blib/lib/Test/AutoBuild/Command/Local.pm
+    - blib/lib/Test/AutoBuild/Command/SELocal.pm
+    - blib/lib/Test/AutoBuild/Counter.pm
+    - blib/lib/Test/AutoBuild/Counter/ChangeList.pm
+    - blib/lib/Test/AutoBuild/Counter/Time.pm
+    - blib/lib/Test/AutoBuild/Counter/Timestamp.pm
+    - blib/lib/Test/AutoBuild/ErrorReport.pm
+    - blib/lib/Test/AutoBuild/Group.pm
+    - blib/lib/Test/AutoBuild/Lib.pm
+    - blib/lib/Test/AutoBuild/Lock.pm
+    - blib/lib/Test/AutoBuild/Module.pm
+    - blib/lib/Test/AutoBuild/Monitor.pm
+    - blib/lib/Test/AutoBuild/Monitor/CommandLine.pm
+    - blib/lib/Test/AutoBuild/Monitor/Log4perl.pm
+    - blib/lib/Test/AutoBuild/Monitor/Pipe.pm
+    - blib/lib/Test/AutoBuild/Package.pm
+    - blib/lib/Test/AutoBuild/PackageType.pm
+    - blib/lib/Test/AutoBuild/Platform.pm
+    - blib/lib/Test/AutoBuild/Publisher.pm
+    - blib/lib/Test/AutoBuild/Publisher/Copy.pm
+    - blib/lib/Test/AutoBuild/Publisher/XSLTransform.pm
+    - blib/lib/Test/AutoBuild/Repository.pm
+    - blib/lib/Test/AutoBuild/Repository/CVS.pm
+    - blib/lib/Test/AutoBuild/Repository/Disk.pm
+    - blib/lib/Test/AutoBuild/Repository/GNUArch.pm
+    - blib/lib/Test/AutoBuild/Repository/Mercurial.pm
+    - blib/lib/Test/AutoBuild/Repository/Perforce.pm
+    - blib/lib/Test/AutoBuild/Repository/SVK.pm
+    - blib/lib/Test/AutoBuild/Repository/Subversion.pm
+    - blib/lib/Test/AutoBuild/Result.pm
+    - blib/lib/Test/AutoBuild/Runtime.pm
+    - blib/lib/Test/AutoBuild/Stage.pm
+    - blib/lib/Test/AutoBuild/Stage/Apt.pm
+    - blib/lib/Test/AutoBuild/Stage/ArtifactCopier.pm
+    - blib/lib/Test/AutoBuild/Stage/Build.pm
+    - blib/lib/Test/AutoBuild/Stage/CleanArchive.pm
+    - blib/lib/Test/AutoBuild/Stage/CleanBuildRoots.pm
+    - blib/lib/Test/AutoBuild/Stage/CleanPackages.pm
+    - blib/lib/Test/AutoBuild/Stage/Copier.pm
+    - blib/lib/Test/AutoBuild/Stage/CreateArchive.pm
+    - blib/lib/Test/AutoBuild/Stage/CreateRepo.pm
+    - blib/lib/Test/AutoBuild/Stage/EmailAlert.pm
+    - blib/lib/Test/AutoBuild/Stage/GetSource.pm
+    - blib/lib/Test/AutoBuild/Stage/Group.pm
+    - blib/lib/Test/AutoBuild/Stage/HTMLStatus.pm
+    - blib/lib/Test/AutoBuild/Stage/ISOBuilder.pm
+    - blib/lib/Test/AutoBuild/Stage/Iterator.pm
+    - blib/lib/Test/AutoBuild/Stage/LogCopier.pm
+    - blib/lib/Test/AutoBuild/Stage/PackageCopier.pm
+    - blib/lib/Test/AutoBuild/Stage/SetNice.pm
+    - blib/lib/Test/AutoBuild/Stage/TemplateGenerator.pm
+    - blib/lib/Test/AutoBuild/Stage/Test.pm
+    - blib/lib/Test/AutoBuild/Stage/Yum.pm
+  test_info:
+    - bytesize: 718
+      file_mime_type: ~
+      line_count: ~
+      md5: eeb34ddcd2e63db0f8d7b23ac723c76f
+      mtime: 1197135316
+      name: t/150-Stage-PackageCopier.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 158
+      file_mime_type: ~
+      line_count: ~
+      md5: bcb5ac2551b4f5cc4093ad758783d21f
+      mtime: 1197135316
+      name: t/080-PackageType.t
+      uses:
+        - Test::AutoBuild::PackageType
+    - bytesize: 5408
+      file_mime_type: ~
+      line_count: ~
+      md5: 00abbd5c32427e6c6bb2cd480e7cd4aa
+      mtime: 1197135316
+      name: t/105-Module-Archiving.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - base
+    - bytesize: 4609
+      file_mime_type: ~
+      line_count: ~
+      md5: 27c467056d02e665b221ef3dd8c5cb77
+      mtime: 1197153635
+      name: t/110-Repository-Mercurial.t
+      uses:
+        - strict
+        - warnings
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - Test::More
+        - Log::Log4perl
+        - base
+    - bytesize: 702
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b090fade96021aeca61e348968be3b8
+      mtime: 1197135316
+      name: t/150-Stage-GetSource.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 5872
+      file_mime_type: ~
+      line_count: ~
+      md5: 075f09b92c4a2a43e1e7f0b0e1f91f23
+      mtime: 1197153635
+      name: t/110-Repository-Perforce.t
+      uses:
+        - strict
+        - warnings
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - Test::More
+        - POSIX
+        - Log::Log4perl
+        - base
+    - bytesize: 7532
+      file_mime_type: ~
+      line_count: ~
+      md5: 54afacd83ddb27315938ad522dd84fe3
+      mtime: 1197135316
+      name: t/070-Lib.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Temp
+        - File::Path
+        - File::Spec::Functions
+    - bytesize: 4926
+      file_mime_type: ~
+      line_count: ~
+      md5: 4623483f67afed4ffdd29b8ee0511c36
+      mtime: 1197153635
+      name: t/110-Repository-GNUArch.t
+      uses:
+        - strict
+        - warnings
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - Test::More
+        - Log::Log4perl
+        - base
+    - bytesize: 1839
+      file_mime_type: ~
+      line_count: ~
+      md5: 64fd189add63c4a36c65f85bb3ce5d5c
+      mtime: 1197135316
+      name: t/040-Monitor.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - base
+    - bytesize: 680
+      file_mime_type: ~
+      line_count: ~
+      md5: e3866ce09ebe37b480a4b71070cf37c7
+      mtime: 1197135316
+      name: t/150-Stage-Yum.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 1551
+      file_mime_type: ~
+      line_count: ~
+      md5: 68e28f7fa2859d4fa71e02dfdac0a254
+      mtime: 1197135316
+      name: t/120-Monitor-Command.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 725
+      file_mime_type: ~
+      line_count: ~
+      md5: 53b22ae86981bd231bfb0e8d32a95d6f
+      mtime: 1197135316
+      name: t/150-Stage-CleanBuildRoots.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 3706
+      file_mime_type: ~
+      line_count: ~
+      md5: bb9e24ae0fd91a8ea268a0734541919c
+      mtime: 1197135316
+      name: t/064-ArchiveManager-File.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Path
+    - bytesize: 1883
+      file_mime_type: ~
+      line_count: ~
+      md5: 9121d397f96a902dbf8b38f0d175233d
+      mtime: 1197135316
+      name: t/062-ArchiveManager.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - base
+    - bytesize: 1071
+      file_mime_type: ~
+      line_count: ~
+      md5: 711f1f7b04e6f8a2a3d869d11a5ba7ac
+      mtime: 1197135316
+      name: t/140-Lock.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - POSIX
+    - bytesize: 3095
+      file_mime_type: ~
+      line_count: ~
+      md5: 1729097062f3fdf3bfa9b66e431cf400
+      mtime: 1197135316
+      name: t/145-Stage.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - base
+    - bytesize: 675
+      file_mime_type: ~
+      line_count: ~
+      md5: 329de912bc6fa858f918aabe95108651
+      mtime: 1197135316
+      name: t/150-Stage-Build.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 287
+      file_mime_type: ~
+      line_count: ~
+      md5: 95ccb12cf6e4b578df4bff908ae34f22
+      mtime: 1197135316
+      name: t/200-AutoBuild.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Config::Record
+    - bytesize: 145
+      file_mime_type: ~
+      line_count: ~
+      md5: 0963df200568676c6622539ed280edff
+      mtime: 1197135316
+      name: t/005-pod.t
+      uses:
+        - Test::More
+    - bytesize: 669
+      file_mime_type: ~
+      line_count: ~
+      md5: d2253b17febb6ba702644543848c7416
+      mtime: 1197135316
+      name: t/150-Stage-Test.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 3199
+      file_mime_type: ~
+      line_count: ~
+      md5: 26fe9d0d09f976437b1588f7f8388981
+      mtime: 1197135316
+      name: t/061-Archive.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - base
+    - bytesize: 712
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b2b40b26b2cb19dbbda233f3a46d7ec
+      mtime: 1197135316
+      name: t/150-Stage-ArtifactCopier.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: b1ed0118e904941243bffc02a026561e
+      mtime: 1197135316
+      name: t/150-Stage-CleanPackages.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 154
+      file_mime_type: ~
+      line_count: ~
+      md5: eaa6258a1279b17e218322bff241c00b
+      mtime: 1197135316
+      name: t/090-Package.t
+      uses:
+        - Test::AutoBuild::Package
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: 85478e66fd4847ae8d93b874b63142e3
+      mtime: 1197135316
+      name: t/150-Stage-LogCopier.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 1989
+      file_mime_type: ~
+      line_count: ~
+      md5: 9969c705c160177c33209c4293589c1b
+      mtime: 1197135316
+      name: t/030-Platform.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Spec::Functions
+        - POSIX
+    - bytesize: 1375
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e9bb08f8abf6225c2f0b1740edb1c63
+      mtime: 1197135316
+      name: t/060-Result.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 1626
+      file_mime_type: ~
+      line_count: ~
+      md5: be40ac6cb5993cdc3c340f954aae63f7
+      mtime: 1197135316
+      name: t/150-Stage-SetNice.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - BSD::Resource
+    - bytesize: 157
+      file_mime_type: ~
+      line_count: ~
+      md5: 43807bcb0937acedff30a3e25d4fff1a
+      mtime: 1197144410
+      name: t/110-Repository.t
+      uses:
+        - Test::AutoBuild::Repository
+    - bytesize: 368
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d7795f322f28712aeeb048b1edeb18f
+      mtime: 1197152033
+      name: t/008-meta.t
+      uses:
+        - Test::More
+    - bytesize: 684
+      file_mime_type: ~
+      line_count: ~
+      md5: 33b3069812ea4805c761b31b148920cb
+      mtime: 1197135316
+      name: t/150-Stage-Apt.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 4253
+      file_mime_type: ~
+      line_count: ~
+      md5: a7ffffc32e22e4d5e8dfe8cd02fa07f0
+      mtime: 1197153635
+      name: t/110-Repository-SVN.t
+      uses:
+        - strict
+        - warnings
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - Test::More
+        - Log::Log4perl
+        - base
+    - bytesize: 162
+      file_mime_type: ~
+      line_count: ~
+      md5: 7557041357080cd57ac5425c0aa2dfd1
+      mtime: 1197135316
+      name: t/131-Publisher-Copy.t
+      uses:
+        - Test::AutoBuild::Publisher::Copy
+    - bytesize: 248
+      file_mime_type: ~
+      line_count: ~
+      md5: e086905841efa0af7606ee54217bfd82
+      mtime: 1138876249
+      name: t/010-pod-coverage.t
+      uses:
+        - Test::More
+    - bytesize: 163
+      file_mime_type: ~
+      line_count: ~
+      md5: f284ae1c3808eec1c151be083dee77b1
+      mtime: 1197135316
+      name: t/110-Repository-Disk.t
+      uses:
+        - Test::AutoBuild::Repository::Disk
+    - bytesize: 7076
+      file_mime_type: ~
+      line_count: ~
+      md5: a462ffa13be740fe493b78f29087216e
+      mtime: 1197135316
+      name: t/063-Archive-File.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Path
+        - File::Spec::Functions
+        - File::stat
+    - bytesize: 156
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c12d55aaefd3f2f2c7089afa4cc26a7
+      mtime: 1197135316
+      name: t/130-Publisher.t
+      uses:
+        - Test::AutoBuild::Publisher
+    - bytesize: 717
+      file_mime_type: ~
+      line_count: ~
+      md5: 04954df99b552dafe096260022696981
+      mtime: 1197135316
+      name: t/150-Stage-HTMLStatus.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 10406
+      file_mime_type: ~
+      line_count: ~
+      md5: afbdac80d7a7bc6a41f6fb23333cd113
+      mtime: 1197144626
+      name: t/107-Module-Build.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - base
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: f23babdfe875ddb2c28b808c5f75a2b1
+      mtime: 1197135316
+      name: t/150-Stage-ISOBuilder.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 21116
+      file_mime_type: ~
+      line_count: ~
+      md5: 1de288497137b6b9ea02aaad62d1d433
+      mtime: 1197144626
+      name: t/150-Stage-EmailAlert.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - File::Spec::Functions
+        - base
+    - bytesize: 710
+      file_mime_type: ~
+      line_count: ~
+      md5: dfc7f1b89750b4e9458f58750b4a5ef4
+      mtime: 1197135316
+      name: t/150-Stage-Iterator.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 5627
+      file_mime_type: ~
+      line_count: ~
+      md5: 0178ef25617dc3c5a8f2e92c5f54398a
+      mtime: 1197144626
+      name: t/100-Module.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 12267
+      file_mime_type: ~
+      line_count: ~
+      md5: f2b3fbb8378f96a2aa0cf34af25fb994
+      mtime: 1197135316
+      name: t/050-Runtime.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - Test::AutoBuild::Runtime
+        - Test::AutoBuild::Module
+        - Test::AutoBuild::Repository
+        - Test::AutoBuild::Publisher
+        - Test::AutoBuild::PackageType
+        - Test::AutoBuild::Monitor
+        - Test::AutoBuild::Group
+        - Test::AutoBuild::Archive
+        - base
+    - bytesize: 2181
+      file_mime_type: ~
+      line_count: ~
+      md5: df893c0d2aee226a1fad513b2de74a89
+      mtime: 1197135316
+      name: t/120-Monitor-Pipe.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+        - POSIX
+    - bytesize: 494
+      file_mime_type: ~
+      line_count: ~
+      md5: a414ddc16772a0f86549291e82ec80db
+      mtime: 1197135316
+      name: t/120-Monitor-Log4perl.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+    - bytesize: 2896
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a265b87a554d77d404749d5a1381bcc
+      mtime: 1197153635
+      name: t/110-Repository-CVS.t
+      uses:
+        - strict
+        - warnings
+        - Cwd
+        - File::Spec::Functions
+        - File::Path
+        - Test::More
+        - Log::Log4perl
+        - base
+    - bytesize: 681
+      file_mime_type: ~
+      line_count: ~
+      md5: 00ab908cfccd86bd11fffd683c09f2ff
+      mtime: 1197135316
+      name: t/150-Stage-Group.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Log::Log4perl
+  tests:
+    - t/150-Stage-PackageCopier.t
+    - t/080-PackageType.t
+    - t/105-Module-Archiving.t
+    - t/110-Repository-Mercurial.t
+    - t/150-Stage-GetSource.t
+    - t/110-Repository-Perforce.t
+    - t/070-Lib.t
+    - t/110-Repository-GNUArch.t
+    - t/040-Monitor.t
+    - t/150-Stage-Yum.t
+    - t/120-Monitor-Command.t
+    - t/150-Stage-CleanBuildRoots.t
+    - t/064-ArchiveManager-File.t
+    - t/062-ArchiveManager.t
+    - t/140-Lock.t
+    - t/145-Stage.t
+    - t/150-Stage-Build.t
+    - t/200-AutoBuild.t
+    - t/005-pod.t
+    - t/150-Stage-Test.t
+    - t/061-Archive.t
+    - t/150-Stage-ArtifactCopier.t
+    - t/150-Stage-CleanPackages.t
+    - t/090-Package.t
+    - t/150-Stage-LogCopier.t
+    - t/030-Platform.t
+    - t/060-Result.t
+    - t/150-Stage-SetNice.t
+    - t/110-Repository.t
+    - t/008-meta.t
+    - t/150-Stage-Apt.t
+    - t/110-Repository-SVN.t
+    - t/131-Publisher-Copy.t
+    - t/010-pod-coverage.t
+    - t/110-Repository-Disk.t
+    - t/063-Archive-File.t
+    - t/130-Publisher.t
+    - t/150-Stage-HTMLStatus.t
+    - t/107-Module-Build.t
+    - t/150-Stage-ISOBuilder.t
+    - t/150-Stage-EmailAlert.t
+    - t/150-Stage-Iterator.t
+    - t/100-Module.t
+    - t/050-Runtime.t
+    - t/120-Monitor-Pipe.t
+    - t/120-Monitor-Log4perl.t
+    - t/110-Repository-CVS.t
+    - t/150-Stage-Group.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-73248._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 73248
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269068381
+  examine_start_time: 1269068318
+  examine_time: 63
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 73248
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269068381
+  run_start_time: 1269068318
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

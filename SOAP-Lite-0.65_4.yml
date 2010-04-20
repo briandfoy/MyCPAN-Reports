@@ -1,0 +1,4029 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.17
+    installdirs: site
+    name: SOAP-Lite
+    requires:
+      Compress::Zlib: 0
+      Crypt::SSLeay: 0
+      HTTP::Daemon: 0
+      IO::File: 0
+      MIME::Base64: 0
+      MIME::Lite: 0
+      MIME::Parser: 6.106
+      Net::FTP: 0
+      Net::POP3: 0
+      URI: 0
+      XML::Parser: 2.23
+    version: 0.65_4
+    version_from: lib/SOAP/Lite.pm
+  blib:
+    - blib/lib/Apache/SOAP.pm
+    - blib/lib/Apache/XMLRPC/Lite.pm
+    - blib/lib/IO/SessionData.pm
+    - blib/lib/IO/SessionSet.pm
+    - blib/lib/OldDocs/SOAP/Lite.pm
+    - blib/lib/OldDocs/SOAP/Transport/FTP.pm
+    - blib/lib/OldDocs/SOAP/Transport/HTTP.pm
+    - blib/lib/OldDocs/SOAP/Transport/IO.pm
+    - blib/lib/OldDocs/SOAP/Transport/JABBER.pm
+    - blib/lib/OldDocs/SOAP/Transport/LOCAL.pm
+    - blib/lib/OldDocs/SOAP/Transport/MAILTO.pm
+    - blib/lib/OldDocs/SOAP/Transport/MQ.pm
+    - blib/lib/OldDocs/SOAP/Transport/POP3.pm
+    - blib/lib/OldDocs/SOAP/Transport/TCP.pm
+    - blib/lib/SOAP/Client.pm
+    - blib/lib/SOAP/Constants.pm
+    - blib/lib/SOAP/Data.pm
+    - blib/lib/SOAP/Deserializer.pm
+    - blib/lib/SOAP/Fault.pm
+    - blib/lib/SOAP/Header.pm
+    - blib/lib/SOAP/Lite.pm
+    - blib/lib/SOAP/Packager.pm
+    - blib/lib/SOAP/SOM.pm
+    - blib/lib/SOAP/Schema.pm
+    - blib/lib/SOAP/Serializer.pm
+    - blib/lib/SOAP/Server.pm
+    - blib/lib/SOAP/Test.pm
+    - blib/lib/SOAP/Trace.pm
+    - blib/lib/SOAP/Transport.pm
+    - blib/lib/SOAP/Transport/FTP.pm
+    - blib/lib/SOAP/Transport/HTTP.pm
+    - blib/lib/SOAP/Transport/IO.pm
+    - blib/lib/SOAP/Transport/JABBER.pm
+    - blib/lib/SOAP/Transport/LOCAL.pm
+    - blib/lib/SOAP/Transport/MAILTO.pm
+    - blib/lib/SOAP/Transport/MQ.pm
+    - blib/lib/SOAP/Transport/POP3.pm
+    - blib/lib/SOAP/Transport/TCP.pm
+    - blib/lib/SOAP/Utils.pm
+    - blib/lib/UDDI/Lite.pm
+    - blib/lib/XML/Parser/Lite.pm
+    - blib/lib/XMLRPC/Lite.pm
+    - blib/lib/XMLRPC/Test.pm
+    - blib/lib/XMLRPC/Transport/HTTP.pm
+    - blib/lib/XMLRPC/Transport/POP3.pm
+    - blib/lib/XMLRPC/Transport/TCP.pm
+    - blib/man1/SOAPsh.pl.1
+    - blib/man1/XMLRPCsh.pl.1
+    - blib/man1/stubmaker.pl.1
+    - blib/man3/Apache::SOAP.3
+    - blib/man3/Apache::XMLRPC::Lite.3
+    - blib/man3/OldDocs::SOAP::Lite.3
+    - blib/man3/OldDocs::SOAP::Transport::FTP.3
+    - blib/man3/OldDocs::SOAP::Transport::HTTP.3
+    - blib/man3/OldDocs::SOAP::Transport::IO.3
+    - blib/man3/OldDocs::SOAP::Transport::JABBER.3
+    - blib/man3/OldDocs::SOAP::Transport::LOCAL.3
+    - blib/man3/OldDocs::SOAP::Transport::MAILTO.3
+    - blib/man3/OldDocs::SOAP::Transport::MQ.3
+    - blib/man3/OldDocs::SOAP::Transport::POP3.3
+    - blib/man3/OldDocs::SOAP::Transport::TCP.3
+    - blib/man3/SOAP::Client.3
+    - blib/man3/SOAP::Constants.3
+    - blib/man3/SOAP::Data.3
+    - blib/man3/SOAP::Deserializer.3
+    - blib/man3/SOAP::Fault.3
+    - blib/man3/SOAP::Header.3
+    - blib/man3/SOAP::Lite.3
+    - blib/man3/SOAP::Packager.3
+    - blib/man3/SOAP::SOM.3
+    - blib/man3/SOAP::Schema.3
+    - blib/man3/SOAP::Serializer.3
+    - blib/man3/SOAP::Server.3
+    - blib/man3/SOAP::Test.3
+    - blib/man3/SOAP::Trace.3
+    - blib/man3/SOAP::Transport.3
+    - blib/man3/SOAP::Transport::POP3.3
+    - blib/man3/SOAP::Utils.3
+    - blib/man3/UDDI::Lite.3
+    - blib/man3/XML::Parser::Lite.3
+    - blib/man3/XMLRPC::Lite.3
+    - blib/man3/XMLRPC::Test.3
+    - blib/man3/XMLRPC::Transport::HTTP.3
+    - blib/man3/XMLRPC::Transport::POP3.3
+    - blib/man3/XMLRPC::Transport::TCP.3
+    - blib/script/SOAPsh.pl
+    - blib/script/XMLRPCsh.pl
+    - blib/script/stubmaker.pl
+  build_file: Makefile.PL
+  build_file_output: |
+    We are about to install SOAP::Lite and for your convenience will provide
+    you with list of modules and prerequisites, so you'll be able to choose
+    only modules you need for your configuration.
+    
+    XMLRPC::Lite, UDDI::Lite, and XML::Parser::Lite are included by default.
+    Installed transports can be used for both SOAP::Lite and XMLRPC::Lite.
+    
+    Press <enter> to see the detailed list.  
+    
+    Feature                       Prerequisites                Install?
+    ----------------------------- ---------------------------- --------
+    Core Package                  [ ] URI                      always  
+                                  [*] MIME::Base64                     
+                                  [ ] XML::Parser (v2.23)              
+    Client HTTP support           [ ] LWP::UserAgent           [ yes ] 
+    Client HTTPS support          [ ] Crypt::SSLeay            [ no ]  
+    Client SMTP/sendmail support  [ ] MIME::Lite               [ no ]  
+    Client FTP support            [*] IO::File                 [ yes ] 
+                                  [*] Net::FTP                         
+    Standalone HTTP server        [ ] HTTP::Daemon             [ no ]  
+    Apache/mod_perl server        [ ] Apache                   [ no ]  
+    FastCGI server                [ ] FCGI                     [ no ]  
+    POP3 server                   [ ] MIME::Parser             [ no ]  
+                                  [*] Net::POP3                        
+    IO server                     [*] IO::File                 [ yes ] 
+    MQ transport support          [ ] MQSeries                 [ no ]  
+    JABBER transport support      [ ] Net::Jabber              [ no ]  
+    MIME messages                 [ ] MIME::Parser             [ no ]  
+    DIME messages                 [ ] IO::Scalar (v2.105)      [ no ]  
+                                  [ ] DIME::Tools (v0.03)              
+                                  [*] Data::UUID (v0.11)               
+    SSL Support for TCP Transport [ ] IO::Socket::SSL          [ no ]  
+    Compression support for HTTP  [*] Compress::Zlib           [ yes ] 
+    MIME interoperability w/ Axis [ ] MIME::Parser (v6.106)    [ no ]  
+    --- An asterix '[*]' indicates if the module is currently installed.
+    
+    Do you want to proceed with this configuration? [yes] yes
+    
+    During "make test" phase we may run tests with several SOAP servers
+    that may take long and may fail due to server/connectivity problems.
+    
+    Do you want to perform these tests in addition to core tests? [no] no
+    Warning: prerequisite URI 0 not found.
+    Warning: prerequisite XML::Parser 2.23 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for SOAP::Lite
+  build_output: |
+    cp lib/SOAP/Packager.pm blib/lib/SOAP/Packager.pm
+    cp lib/SOAP/Data.pm blib/lib/SOAP/Data.pm
+    cp lib/XML/Parser/Lite.pm blib/lib/XML/Parser/Lite.pm
+    cp lib/XMLRPC/Transport/TCP.pm blib/lib/XMLRPC/Transport/TCP.pm
+    cp lib/SOAP/Transport/JABBER.pm blib/lib/SOAP/Transport/JABBER.pm
+    cp lib/OldDocs/SOAP/Transport/TCP.pm blib/lib/OldDocs/SOAP/Transport/TCP.pm
+    cp lib/OldDocs/SOAP/Transport/POP3.pm blib/lib/OldDocs/SOAP/Transport/POP3.pm
+    cp lib/SOAP/Transport/MAILTO.pm blib/lib/SOAP/Transport/MAILTO.pm
+    cp lib/SOAP/Test.pm blib/lib/SOAP/Test.pm
+    cp lib/Apache/SOAP.pm blib/lib/Apache/SOAP.pm
+    cp lib/SOAP/Transport.pm blib/lib/SOAP/Transport.pm
+    cp lib/Apache/XMLRPC/Lite.pm blib/lib/Apache/XMLRPC/Lite.pm
+    cp lib/XMLRPC/Transport/HTTP.pm blib/lib/XMLRPC/Transport/HTTP.pm
+    cp lib/SOAP/Transport/POP3.pm blib/lib/SOAP/Transport/POP3.pm
+    cp lib/SOAP/Transport/MQ.pm blib/lib/SOAP/Transport/MQ.pm
+    cp lib/SOAP/Deserializer.pm blib/lib/SOAP/Deserializer.pm
+    cp lib/SOAP/Trace.pm blib/lib/SOAP/Trace.pm
+    cp lib/SOAP/Schema.pm blib/lib/SOAP/Schema.pm
+    cp lib/SOAP/Transport/IO.pm blib/lib/SOAP/Transport/IO.pm
+    cp lib/SOAP/Server.pm blib/lib/SOAP/Server.pm
+    cp lib/UDDI/Lite.pm blib/lib/UDDI/Lite.pm
+    cp lib/SOAP/Utils.pm blib/lib/SOAP/Utils.pm
+    cp lib/SOAP/Constants.pm blib/lib/SOAP/Constants.pm
+    cp lib/XMLRPC/Transport/POP3.pm blib/lib/XMLRPC/Transport/POP3.pm
+    cp lib/XMLRPC/Lite.pm blib/lib/XMLRPC/Lite.pm
+    cp lib/SOAP/Serializer.pm blib/lib/SOAP/Serializer.pm
+    cp lib/OldDocs/SOAP/Lite.pm blib/lib/OldDocs/SOAP/Lite.pm
+    cp lib/OldDocs/SOAP/Transport/HTTP.pm blib/lib/OldDocs/SOAP/Transport/HTTP.pm
+    cp lib/IO/SessionData.pm blib/lib/IO/SessionData.pm
+    cp lib/SOAP/Client.pm blib/lib/SOAP/Client.pm
+    cp lib/SOAP/SOM.pm blib/lib/SOAP/SOM.pm
+    cp lib/SOAP/Header.pm blib/lib/SOAP/Header.pm
+    cp lib/XMLRPC/Test.pm blib/lib/XMLRPC/Test.pm
+    cp lib/OldDocs/SOAP/Transport/FTP.pm blib/lib/OldDocs/SOAP/Transport/FTP.pm
+    cp lib/OldDocs/SOAP/Transport/MQ.pm blib/lib/OldDocs/SOAP/Transport/MQ.pm
+    cp lib/SOAP/Transport/TCP.pm blib/lib/SOAP/Transport/TCP.pm
+    cp lib/OldDocs/SOAP/Transport/JABBER.pm blib/lib/OldDocs/SOAP/Transport/JABBER.pm
+    cp lib/IO/SessionSet.pm blib/lib/IO/SessionSet.pm
+    cp lib/SOAP/Transport/HTTP.pm blib/lib/SOAP/Transport/HTTP.pm
+    cp lib/OldDocs/SOAP/Transport/IO.pm blib/lib/OldDocs/SOAP/Transport/IO.pm
+    cp lib/OldDocs/SOAP/Transport/LOCAL.pm blib/lib/OldDocs/SOAP/Transport/LOCAL.pm
+    cp lib/SOAP/Transport/LOCAL.pm blib/lib/SOAP/Transport/LOCAL.pm
+    cp lib/SOAP/Lite.pm blib/lib/SOAP/Lite.pm
+    cp lib/SOAP/Transport/FTP.pm blib/lib/SOAP/Transport/FTP.pm
+    cp lib/SOAP/Fault.pm blib/lib/SOAP/Fault.pm
+    cp lib/OldDocs/SOAP/Transport/MAILTO.pm blib/lib/OldDocs/SOAP/Transport/MAILTO.pm
+    cp bin/SOAPsh.pl blib/script/SOAPsh.pl
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/SOAPsh.pl
+    cp bin/stubmaker.pl blib/script/stubmaker.pl
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/stubmaker.pl
+    cp bin/XMLRPCsh.pl blib/script/XMLRPCsh.pl
+    /home/brian/bin/perl5.10.1 -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/XMLRPCsh.pl
+    Manifying blib/man1/SOAPsh.pl.1
+    Manifying blib/man1/stubmaker.pl.1
+    Manifying blib/man1/XMLRPCsh.pl.1
+    Manifying blib/man3/SOAP::Packager.3
+    Manifying blib/man3/XML::Parser::Lite.3
+    Manifying blib/man3/SOAP::Data.3
+    Manifying blib/man3/XMLRPC::Transport::TCP.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::TCP.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::POP3.3
+    Manifying blib/man3/Apache::SOAP.3
+    Manifying blib/man3/SOAP::Test.3
+    Manifying blib/man3/SOAP::Transport.3
+    Manifying blib/man3/Apache::XMLRPC::Lite.3
+    Manifying blib/man3/XMLRPC::Transport::HTTP.3
+    Manifying blib/man3/SOAP::Transport::POP3.3
+    Manifying blib/man3/SOAP::Deserializer.3
+    Manifying blib/man3/SOAP::Trace.3
+    Manifying blib/man3/SOAP::Schema.3
+    Manifying blib/man3/SOAP::Server.3
+    Manifying blib/man3/UDDI::Lite.3
+    Manifying blib/man3/SOAP::Utils.3
+    Manifying blib/man3/SOAP::Constants.3
+    Manifying blib/man3/XMLRPC::Transport::POP3.3
+    Manifying blib/man3/XMLRPC::Lite.3
+    Manifying blib/man3/SOAP::Serializer.3
+    Manifying blib/man3/OldDocs::SOAP::Lite.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::HTTP.3
+    Manifying blib/man3/SOAP::Client.3
+    Manifying blib/man3/SOAP::SOM.3
+    Manifying blib/man3/SOAP::Header.3
+    Manifying blib/man3/XMLRPC::Test.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::MQ.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::FTP.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::JABBER.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::IO.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::LOCAL.3
+    Manifying blib/man3/SOAP::Lite.3
+    Manifying blib/man3/OldDocs::SOAP::Transport::MAILTO.3
+    Manifying blib/man3/SOAP::Fault.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV/SOAP-Lite-0.65_4/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV/SOAP-Lite-0.65_4
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV/SOAP-Lite-0.65_4/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV/SOAP-Lite-0.65_4/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: BYRNE
+  dist_basename: SOAP-Lite-0.65_4.tar.gz
+  dist_date: 1112520017
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV/SOAP-Lite-0.65_4
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV/SOAP-Lite-0.65_4
+  dist_file: /home/brian/CPAN/authors/id/B/BY/BYRNE/SOAP-Lite-0.65_4.tar.gz
+  dist_md5: 199aaca34d6ad8fe3bbc3d9da8965202
+  dist_size: 235277
+  manifest:
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - ReleaseNotes.txt
+    - bin/SOAPsh.pl
+    - bin/XMLRPCsh.pl
+    - bin/stubmaker.pl
+    - examples/COM/README
+    - examples/COM/SOAP-Lite-COM-minimal.ctrl
+    - examples/COM/SOAP-Lite-COM-standalone.ctrl
+    - examples/COM/hash.vbs
+    - examples/COM/hashecho.vbs
+    - examples/COM/local.vbs
+    - examples/COM/make-com-minimal.bat
+    - examples/COM/make-com-standalone.bat
+    - examples/COM/remote.cs
+    - examples/COM/remote.vba
+    - examples/COM/remote.vbs
+    - examples/COM/remote.xls
+    - examples/COM/service.vbs
+    - examples/COM/soap.asp
+    - examples/COM/soap.vbs
+    - examples/COM/soap_perl.asp
+    - examples/COM/states.html
+    - examples/COM/states.pl
+    - examples/COM/states.vba
+    - examples/COM/states.vbs
+    - examples/COM/states.xls
+    - examples/COM/temper.vbs
+    - examples/COM/xmlrpc.vbs
+    - examples/JABBER/jabclient.pl
+    - examples/JABBER/jabserver.pl
+    - examples/MQ/mqclient.pl
+    - examples/MQ/mqserver.pl
+    - examples/My/Chat.pm
+    - examples/My/Examples.pm
+    - examples/My/Parameters.pm
+    - examples/My/PersistentIterator.pm
+    - examples/My/PingPong.pm
+    - examples/My/SessionIterator.pm
+    - examples/SOAP/Transport/HTTP/Daemon/ForkAfterProcessing.pm
+    - examples/SOAP/Transport/HTTP/Daemon/ForkOnAccept.pm
+    - examples/SOAP/simple1.pl
+    - examples/SOAP/simple2.pl
+    - examples/SOAP/simple3.pl
+    - examples/UDDI/inquire1.pl
+    - examples/UDDI/publish1.pl
+    - examples/UDDI/simple1.pl
+    - examples/UDDI/simple2.pl
+    - examples/UDDI/syntax1.pl
+    - examples/UDDI/syntax2.pl
+    - examples/UDDI/syntax3.pl
+    - examples/WSDL/dynamic1.pl
+    - examples/WSDL/dynamic2.pl
+    - examples/WSDL/dynamic3.pl
+    - examples/WSDL/dynamic4.pl
+    - examples/WSDL/stub1.pl
+    - examples/WSDL/stub2.pl
+    - examples/WSDL/stub3.pl
+    - examples/XML/customxml.pl
+    - examples/XMLRPC/mod_xmlrpc.htaccess
+    - examples/XMLRPC/simple1.pl
+    - examples/XMLRPC/xmlrpc.cgi
+    - examples/XMLRPC/xmlrpc.daemon
+    - examples/allclients.pl
+    - examples/authentication.pl
+    - examples/autoexamples.pl
+    - examples/chat.pl
+    - examples/compress.pl
+    - examples/cookie.pl
+    - examples/cookieauth.pl
+    - examples/customschema.pl
+    - examples/forms/style.cgi
+    - examples/forms/style.html
+    - examples/fullsearch.pl
+    - examples/getdom.pl
+    - examples/google.pl
+    - examples/inline.daemon
+    - examples/iterator.pl
+    - examples/joke.pl
+    - examples/oneliners
+    - examples/oo-apache.pl
+    - examples/parametersbyname.pl
+    - examples/pingpong.pl
+    - examples/server/Apache.pm
+    - examples/server/mod_soap.htaccess
+    - examples/server/soap.asp
+    - examples/server/soap.cgi
+    - examples/server/soap.daemon
+    - examples/server/soap.daemon.forkafterprocessing
+    - examples/server/soap.daemon.forkonaccept
+    - examples/server/soap.fcgi
+    - examples/server/soap.io
+    - examples/server/soap.jabber
+    - examples/server/soap.mod_cgi
+    - examples/server/soap.mq
+    - examples/server/soap.pop3
+    - examples/server/soap.tcp
+    - examples/server/soap.vbs
+    - examples/server/soap_perl.asp
+    - examples/soapmark.pl
+    - examples/soapsmtp.pl
+    - examples/tcpclient.pl
+    - examples/terraserver.pl
+    - examples/weblog.pl
+    - lib/Apache/SOAP.pm
+    - lib/Apache/XMLRPC/Lite.pm
+    - lib/IO/SessionData.pm
+    - lib/IO/SessionSet.pm
+    - lib/OldDocs/SOAP/Lite.pm
+    - lib/OldDocs/SOAP/Transport/FTP.pm
+    - lib/OldDocs/SOAP/Transport/HTTP.pm
+    - lib/OldDocs/SOAP/Transport/IO.pm
+    - lib/OldDocs/SOAP/Transport/JABBER.pm
+    - lib/OldDocs/SOAP/Transport/LOCAL.pm
+    - lib/OldDocs/SOAP/Transport/MAILTO.pm
+    - lib/OldDocs/SOAP/Transport/MQ.pm
+    - lib/OldDocs/SOAP/Transport/POP3.pm
+    - lib/OldDocs/SOAP/Transport/TCP.pm
+    - lib/SOAP/Client.pm
+    - lib/SOAP/Constants.pm
+    - lib/SOAP/Data.pm
+    - lib/SOAP/Deserializer.pm
+    - lib/SOAP/Fault.pm
+    - lib/SOAP/Header.pm
+    - lib/SOAP/Lite.pm
+    - lib/SOAP/Packager.pm
+    - lib/SOAP/SOM.pm
+    - lib/SOAP/Schema.pm
+    - lib/SOAP/Serializer.pm
+    - lib/SOAP/Server.pm
+    - lib/SOAP/Test.pm
+    - lib/SOAP/Trace.pm
+    - lib/SOAP/Transport.pm
+    - lib/SOAP/Transport/FTP.pm
+    - lib/SOAP/Transport/HTTP.pm
+    - lib/SOAP/Transport/IO.pm
+    - lib/SOAP/Transport/JABBER.pm
+    - lib/SOAP/Transport/LOCAL.pm
+    - lib/SOAP/Transport/MAILTO.pm
+    - lib/SOAP/Transport/MQ.pm
+    - lib/SOAP/Transport/POP3.pm
+    - lib/SOAP/Transport/TCP.pm
+    - lib/SOAP/Utils.pm
+    - lib/UDDI/Lite.pm
+    - lib/XML/Parser/Lite.pm
+    - lib/XMLRPC/Lite.pm
+    - lib/XMLRPC/Test.pm
+    - lib/XMLRPC/Transport/HTTP.pm
+    - lib/XMLRPC/Transport/POP3.pm
+    - lib/XMLRPC/Transport/TCP.pm
+    - t/01-core.t
+    - t/02-payload.t
+    - t/03-server.t
+    - t/04-attach.t
+    - t/05-customxml.t
+    - t/06-modules.t
+    - t/07-xmlrpc_payload.t
+    - t/08-schema.t
+    - t/11-cgi.t
+    - t/12-cgi_https.t
+    - t/13-mod_perl.t
+    - t/14-cgi_apache.t
+    - t/15-daemon.t
+    - t/16-tcp.t
+    - t/17-mod_soap.t
+    - t/19-apachesoap.t
+    - t/21-public.t
+    - t/22-interop_apache.t
+    - t/23-ppm.t
+    - t/24-wsdl.t
+    - t/25-uddi.t
+    - t/26-xmlrpc.t
+    - t/27-xmlparserlite.t
+    - t/28-uddi_search.t
+    - t/29-uddi_publishing.t
+    - t/36-leaks.t
+    - t/37-mod_xmlrpc.t
+    - t/38-packager.t
+    - t/TEST.pl
+  manifest_file_info:
+    - bytesize: 28102
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1112173110
+      name: Changes
+    - bytesize: 7301
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1109036776
+      name: MANIFEST
+    - bytesize: 718
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1112516964
+      name: META.yml
+    - bytesize: 6889
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1100460646
+      name: Makefile.PL
+    - bytesize: 4673
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1098804407
+      name: README
+    - bytesize: 2471
+      file_mime_type: ~
+      line_count: ~
+      md5: 51365377c405c29d9a1e7db96ed2bc46
+      mtime: 1098806740
+      name: ReleaseNotes.txt
+    - bytesize: 2797
+      file_mime_type: ~
+      line_count: ~
+      md5: d74d45caeb2ef1e6319dbc7061868e10
+      mtime: 1036162421
+      name: bin/SOAPsh.pl
+    - bytesize: 2800
+      file_mime_type: ~
+      line_count: ~
+      md5: 0eba44a0fd652f7ad59a27d8cf6124a3
+      mtime: 1036162421
+      name: bin/XMLRPCsh.pl
+    - bytesize: 3405
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c66776dd0a9f3f5771a3260e79fb109
+      mtime: 1112173113
+      name: bin/stubmaker.pl
+    - bytesize: 5793
+      file_mime_type: ~
+      line_count: ~
+      md5: 74dc023308816617f4143409a0b8389d
+      mtime: 1109655866
+      name: examples/COM/README
+    - bytesize: 2177
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fb2af3a29ce5e4fe81e4f75bcb1121a
+      mtime: 1036162424
+      name: examples/COM/SOAP-Lite-COM-minimal.ctrl
+    - bytesize: 2461
+      file_mime_type: ~
+      line_count: ~
+      md5: f82eff3db7e0ddec9fd6349ddf182a3e
+      mtime: 1036162424
+      name: examples/COM/SOAP-Lite-COM-standalone.ctrl
+    - bytesize: 361
+      file_mime_type: ~
+      line_count: ~
+      md5: 570773134ef9e6f7b3fa0aee5b5f67cf
+      mtime: 1036162422
+      name: examples/COM/hash.vbs
+    - bytesize: 692
+      file_mime_type: ~
+      line_count: ~
+      md5: 0129cf6f2e6aa1427c9e679d1f5efd94
+      mtime: 1036162422
+      name: examples/COM/hashecho.vbs
+    - bytesize: 269
+      file_mime_type: ~
+      line_count: ~
+      md5: e812c01c8193f3a0daffaa7c4477dcca
+      mtime: 1036162422
+      name: examples/COM/local.vbs
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a4c553e00d34a6cf692871f00b99637
+      mtime: 1109651241
+      name: examples/COM/make-com-minimal.bat
+    - bytesize: 113
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d048cc9f38d32c26157fbeefbd4c0e7
+      mtime: 1109651241
+      name: examples/COM/make-com-standalone.bat
+    - bytesize: 980
+      file_mime_type: ~
+      line_count: ~
+      md5: cc2cd350de6f95e092b3570336140de1
+      mtime: 1036162423
+      name: examples/COM/remote.cs
+    - bytesize: 660
+      file_mime_type: ~
+      line_count: ~
+      md5: 05062a0d3edb9386f14c7ccb72a14105
+      mtime: 1036162423
+      name: examples/COM/remote.vba
+    - bytesize: 265
+      file_mime_type: ~
+      line_count: ~
+      md5: 239d14022360ed5d417b7721c9ae4f32
+      mtime: 1036162423
+      name: examples/COM/remote.vbs
+    - bytesize: 38400
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e1de1ecea0c49bdb475f3726d9bd9f1
+      mtime: 1036162424
+      name: examples/COM/remote.xls
+    - bytesize: 188
+      file_mime_type: ~
+      line_count: ~
+      md5: 5564faa3755030f44ecd5d4416923737
+      mtime: 1036162424
+      name: examples/COM/service.vbs
+    - bytesize: 478
+      file_mime_type: ~
+      line_count: ~
+      md5: fed80cc7c663900ee4b8ccdb5d07ce36
+      mtime: 1036162424
+      name: examples/COM/soap.asp
+    - bytesize: 525
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e09c682b16fe8a3fcf9bd629a1c7b69
+      mtime: 1036162424
+      name: examples/COM/soap.vbs
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a6d330bd2da90d76dee2d6f92516cfd
+      mtime: 1036162424
+      name: examples/COM/soap_perl.asp
+    - bytesize: 1092
+      file_mime_type: ~
+      line_count: ~
+      md5: 956e61e055a0191398b71517f15f0c2b
+      mtime: 1036162425
+      name: examples/COM/states.html
+    - bytesize: 360
+      file_mime_type: ~
+      line_count: ~
+      md5: adc90208337f2d6eb286f5e6e1378d26
+      mtime: 1036162424
+      name: examples/COM/states.pl
+    - bytesize: 613
+      file_mime_type: ~
+      line_count: ~
+      md5: b48900524bb22542211551df8440bd44
+      mtime: 1036162424
+      name: examples/COM/states.vba
+    - bytesize: 223
+      file_mime_type: ~
+      line_count: ~
+      md5: 39c92394c7bbfa1c7a599c89614379b0
+      mtime: 1036162424
+      name: examples/COM/states.vbs
+    - bytesize: 34816
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d0c4ea1dee75ec4aacede184fbdee37
+      mtime: 1036162425
+      name: examples/COM/states.xls
+    - bytesize: 273
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a364ddabad61ec06dbed6c137477f8b
+      mtime: 1036162425
+      name: examples/COM/temper.vbs
+    - bytesize: 242
+      file_mime_type: ~
+      line_count: ~
+      md5: 61f8867236dff1a30c896762c2034f38
+      mtime: 1036162425
+      name: examples/COM/xmlrpc.vbs
+    - bytesize: 450
+      file_mime_type: ~
+      line_count: ~
+      md5: 6863575f38172f5447ffa2bf7b964efc
+      mtime: 1036162426
+      name: examples/JABBER/jabclient.pl
+    - bytesize: 487
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ab984ccdb80834c13fd587741d61a57
+      mtime: 1036162426
+      name: examples/JABBER/jabserver.pl
+    - bytesize: 281
+      file_mime_type: ~
+      line_count: ~
+      md5: b6aa924f82870893d4dff330122710bf
+      mtime: 1036162426
+      name: examples/MQ/mqclient.pl
+    - bytesize: 410
+      file_mime_type: ~
+      line_count: ~
+      md5: 32da882801b462b1be673f03d820b1ba
+      mtime: 1036162426
+      name: examples/MQ/mqserver.pl
+    - bytesize: 1014
+      file_mime_type: ~
+      line_count: ~
+      md5: b3431a2cede6728e6112a7652e534cbe
+      mtime: 1036162426
+      name: examples/My/Chat.pm
+    - bytesize: 1024
+      file_mime_type: ~
+      line_count: ~
+      md5: 977844bf40e3384a2c2d959ccc20cb0a
+      mtime: 1036162426
+      name: examples/My/Examples.pm
+    - bytesize: 1618
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ed5b99a84b272f2e1d178822b2bc51b
+      mtime: 1036162426
+      name: examples/My/Parameters.pm
+    - bytesize: 221
+      file_mime_type: ~
+      line_count: ~
+      md5: 69b6022c820bcc7c20f8cf132e503144
+      mtime: 1036162426
+      name: examples/My/PersistentIterator.pm
+    - bytesize: 232
+      file_mime_type: ~
+      line_count: ~
+      md5: cb60b46714599e027b8c97fecf7b2bd9
+      mtime: 1036162426
+      name: examples/My/PingPong.pm
+    - bytesize: 187
+      file_mime_type: ~
+      line_count: ~
+      md5: c7727f2d668e759b6d1b9ead85b55f0f
+      mtime: 1036162426
+      name: examples/My/SessionIterator.pm
+    - bytesize: 599
+      file_mime_type: ~
+      line_count: ~
+      md5: 68a6a9a48128bfb8cf3a93e784b5076a
+      mtime: 1036162426
+      name: examples/SOAP/Transport/HTTP/Daemon/ForkAfterProcessing.pm
+    - bytesize: 903
+      file_mime_type: ~
+      line_count: ~
+      md5: a461fd6dc2ad2a82b44344f653786a2b
+      mtime: 1036162426
+      name: examples/SOAP/Transport/HTTP/Daemon/ForkOnAccept.pm
+    - bytesize: 336
+      file_mime_type: ~
+      line_count: ~
+      md5: 92e9ef7b196b5956db897ab1b7cfca56
+      mtime: 1036162426
+      name: examples/SOAP/simple1.pl
+    - bytesize: 356
+      file_mime_type: ~
+      line_count: ~
+      md5: 088b7703993d4e75fed9cf2af0a171e0
+      mtime: 1036162426
+      name: examples/SOAP/simple2.pl
+    - bytesize: 257
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cc5616a3eb30411658548d8159392f8
+      mtime: 1036162426
+      name: examples/SOAP/simple3.pl
+    - bytesize: 932
+      file_mime_type: ~
+      line_count: ~
+      md5: 8920f3d305fa6b47f3605df1ab624bb0
+      mtime: 1036162426
+      name: examples/UDDI/inquire1.pl
+    - bytesize: 1142
+      file_mime_type: ~
+      line_count: ~
+      md5: a4ebf3a9208956c172af143433892625
+      mtime: 1036162426
+      name: examples/UDDI/publish1.pl
+    - bytesize: 427
+      file_mime_type: ~
+      line_count: ~
+      md5: bac496bd652ea5bf0ba7d76ccbe9ca75
+      mtime: 1036162427
+      name: examples/UDDI/simple1.pl
+    - bytesize: 357
+      file_mime_type: ~
+      line_count: ~
+      md5: fe30a93c05e9f98a8faca7b9bdc5c27c
+      mtime: 1036162426
+      name: examples/UDDI/simple2.pl
+    - bytesize: 978
+      file_mime_type: ~
+      line_count: ~
+      md5: e9b7cc34a35777df75864a01382a0df5
+      mtime: 1036162426
+      name: examples/UDDI/syntax1.pl
+    - bytesize: 1907
+      file_mime_type: ~
+      line_count: ~
+      md5: 7516e93e8397d33fb241858817c95c5b
+      mtime: 1036162426
+      name: examples/UDDI/syntax2.pl
+    - bytesize: 1351
+      file_mime_type: ~
+      line_count: ~
+      md5: a53996e212bb1d853eee32dfe841c345
+      mtime: 1036162426
+      name: examples/UDDI/syntax3.pl
+    - bytesize: 489
+      file_mime_type: ~
+      line_count: ~
+      md5: 954419d0d6b2064250b2d84d29246ded
+      mtime: 1036162427
+      name: examples/WSDL/dynamic1.pl
+    - bytesize: 273
+      file_mime_type: ~
+      line_count: ~
+      md5: cc66f2e336d123963994c54804698fc5
+      mtime: 1036162427
+      name: examples/WSDL/dynamic2.pl
+    - bytesize: 294
+      file_mime_type: ~
+      line_count: ~
+      md5: add1215321f5dbce576437ba901bd109
+      mtime: 1036162427
+      name: examples/WSDL/dynamic3.pl
+    - bytesize: 323
+      file_mime_type: ~
+      line_count: ~
+      md5: 5edc2320542f96be5de257afa3e342e7
+      mtime: 1036162427
+      name: examples/WSDL/dynamic4.pl
+    - bytesize: 285
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b804ef8f501dfca54494798d2ce8cee
+      mtime: 1036162427
+      name: examples/WSDL/stub1.pl
+    - bytesize: 297
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b8c8126ecb450d2e232e853b9cb557c
+      mtime: 1036162427
+      name: examples/WSDL/stub2.pl
+    - bytesize: 326
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f07d009c4c8054faac8e8632ee3ecd2
+      mtime: 1036162427
+      name: examples/WSDL/stub3.pl
+    - bytesize: 5814
+      file_mime_type: ~
+      line_count: ~
+      md5: 24237030869a924f163a12333a22cc48
+      mtime: 1036162427
+      name: examples/XML/customxml.pl
+    - bytesize: 763
+      file_mime_type: ~
+      line_count: ~
+      md5: 23bcb4b77bb43c052eda397918af6d81
+      mtime: 1036162427
+      name: examples/XMLRPC/mod_xmlrpc.htaccess
+    - bytesize: 243
+      file_mime_type: ~
+      line_count: ~
+      md5: 929a95b849df0e4736440274747a64be
+      mtime: 1036162427
+      name: examples/XMLRPC/simple1.pl
+    - bytesize: 2010
+      file_mime_type: ~
+      line_count: ~
+      md5: cc1e6411c40abf270f78b841d5d08fc0
+      mtime: 1036162427
+      name: examples/XMLRPC/xmlrpc.cgi
+    - bytesize: 2116
+      file_mime_type: ~
+      line_count: ~
+      md5: 7857e99be440f75ff32087c3f671edab
+      mtime: 1036162427
+      name: examples/XMLRPC/xmlrpc.daemon
+    - bytesize: 1324
+      file_mime_type: ~
+      line_count: ~
+      md5: 13d3ea717b1742ca3ea7a30920958240
+      mtime: 1036162421
+      name: examples/allclients.pl
+    - bytesize: 1119
+      file_mime_type: ~
+      line_count: ~
+      md5: 59f27e420cf065054c1eee002c0e193b
+      mtime: 1036162421
+      name: examples/authentication.pl
+    - bytesize: 886
+      file_mime_type: ~
+      line_count: ~
+      md5: 4eed46f1f864698b19aa8c29e0195dd5
+      mtime: 1036162421
+      name: examples/autoexamples.pl
+    - bytesize: 1124
+      file_mime_type: ~
+      line_count: ~
+      md5: e1631a8dfb0a680c9a263fa7ae8ed212
+      mtime: 1036162422
+      name: examples/chat.pl
+    - bytesize: 480
+      file_mime_type: ~
+      line_count: ~
+      md5: 19a77a62081f24e4d3257eaaa30ad0b7
+      mtime: 1036162422
+      name: examples/compress.pl
+    - bytesize: 452
+      file_mime_type: ~
+      line_count: ~
+      md5: 325310777985c8f2b1eecae9af1819e8
+      mtime: 1036162422
+      name: examples/cookie.pl
+    - bytesize: 380
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d5ebc1c5dd68da4a05b716999af5729
+      mtime: 1036162422
+      name: examples/cookieauth.pl
+    - bytesize: 3191
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f06f2f9c247b058b1b3c0be089dd5b5
+      mtime: 1036162422
+      name: examples/customschema.pl
+    - bytesize: 431
+      file_mime_type: ~
+      line_count: ~
+      md5: 732fa343949b31b0fd0e2b765c0a812d
+      mtime: 1036162425
+      name: examples/forms/style.cgi
+    - bytesize: 812
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e3b57450185751ad2271a33cb6b25b1
+      mtime: 1036162425
+      name: examples/forms/style.html
+    - bytesize: 1053
+      file_mime_type: ~
+      line_count: ~
+      md5: 20bb91456fe66d6d83696daee6722e26
+      mtime: 1036162422
+      name: examples/fullsearch.pl
+    - bytesize: 1803
+      file_mime_type: ~
+      line_count: ~
+      md5: ed5000f86fd7364970b971b83d0e6a4d
+      mtime: 1036162422
+      name: examples/getdom.pl
+    - bytesize: 804
+      file_mime_type: ~
+      line_count: ~
+      md5: 499e566939361de33a26af0eda465d65
+      mtime: 1036162422
+      name: examples/google.pl
+    - bytesize: 665
+      file_mime_type: ~
+      line_count: ~
+      md5: 798b22d4109455c28340789fbe6fcd41
+      mtime: 1036162422
+      name: examples/inline.daemon
+    - bytesize: 880
+      file_mime_type: ~
+      line_count: ~
+      md5: 20155cbbb96a898580bf5fb10ba34cd1
+      mtime: 1036162422
+      name: examples/iterator.pl
+    - bytesize: 461
+      file_mime_type: ~
+      line_count: ~
+      md5: 67b35185166ebd8edb10bc514f34d8d4
+      mtime: 1036162422
+      name: examples/joke.pl
+    - bytesize: 187
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c4a2931c9d73c6f881d18cbdc2932db
+      mtime: 1036162422
+      name: examples/oneliners
+    - bytesize: 790
+      file_mime_type: ~
+      line_count: ~
+      md5: a6d432d2c11f64debcc33c3ed8178c2b
+      mtime: 1036162422
+      name: examples/oo-apache.pl
+    - bytesize: 976
+      file_mime_type: ~
+      line_count: ~
+      md5: 54fea201c9016d1abb8975bba54b6baf
+      mtime: 1036162422
+      name: examples/parametersbyname.pl
+    - bytesize: 1028
+      file_mime_type: ~
+      line_count: ~
+      md5: 68c3c11691522303778a9fb7f047d4f0
+      mtime: 1036162422
+      name: examples/pingpong.pl
+    - bytesize: 772
+      file_mime_type: ~
+      line_count: ~
+      md5: 377817dd95dd8de55f1cc0dc2d5ff6c8
+      mtime: 1036162426
+      name: examples/server/Apache.pm
+    - bytesize: 974
+      file_mime_type: ~
+      line_count: ~
+      md5: 231a0704d83ed44188bdcff11da22874
+      mtime: 1036162426
+      name: examples/server/mod_soap.htaccess
+    - bytesize: 478
+      file_mime_type: ~
+      line_count: ~
+      md5: 47558a0bbad303eb3f0458bb8edc4fae
+      mtime: 1036162426
+      name: examples/server/soap.asp
+    - bytesize: 383
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cee54fb7bfd6ebb953dd58fddb9423b
+      mtime: 1057244860
+      name: examples/server/soap.cgi
+    - bytesize: 1130
+      file_mime_type: ~
+      line_count: ~
+      md5: 8222db07c1c3ad00b77cd0c5c0c1affe
+      mtime: 1036162426
+      name: examples/server/soap.daemon
+    - bytesize: 1081
+      file_mime_type: ~
+      line_count: ~
+      md5: 62af3c66ca93633dd8e5465e4734f12d
+      mtime: 1036162426
+      name: examples/server/soap.daemon.forkafterprocessing
+    - bytesize: 979
+      file_mime_type: ~
+      line_count: ~
+      md5: d56cceb49c8f0d560bb2d38ec37cf7e8
+      mtime: 1036162426
+      name: examples/server/soap.daemon.forkonaccept
+    - bytesize: 379
+      file_mime_type: ~
+      line_count: ~
+      md5: e868df904038dc53d2cc1f4ebd470ce5
+      mtime: 1036162426
+      name: examples/server/soap.fcgi
+    - bytesize: 1090
+      file_mime_type: ~
+      line_count: ~
+      md5: c6b20cc123d50ea131f5f6921f0fee36
+      mtime: 1036162426
+      name: examples/server/soap.io
+    - bytesize: 567
+      file_mime_type: ~
+      line_count: ~
+      md5: 18a1de9c650b98db873145bb146f8107
+      mtime: 1036162426
+      name: examples/server/soap.jabber
+    - bytesize: 734
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b0772636261f9d4a72d03d0db49767d
+      mtime: 1036162426
+      name: examples/server/soap.mod_cgi
+    - bytesize: 627
+      file_mime_type: ~
+      line_count: ~
+      md5: 59d5e8ddef0c288a1fadf6410cdaa3ae
+      mtime: 1036162426
+      name: examples/server/soap.mq
+    - bytesize: 1042
+      file_mime_type: ~
+      line_count: ~
+      md5: 12b0b38c9bd3abfa918df4e685418088
+      mtime: 1036162426
+      name: examples/server/soap.pop3
+    - bytesize: 657
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b84ce4e5da1693adfb887e87b3f383b
+      mtime: 1036162426
+      name: examples/server/soap.tcp
+    - bytesize: 525
+      file_mime_type: ~
+      line_count: ~
+      md5: f0746281bea4de22047282d1cbdf2fc8
+      mtime: 1036162426
+      name: examples/server/soap.vbs
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: 34963f6238d5f98a9eb5f9e7211d5ec8
+      mtime: 1036162426
+      name: examples/server/soap_perl.asp
+    - bytesize: 1963
+      file_mime_type: ~
+      line_count: ~
+      md5: 722336146577b524daccd9c906d8a216
+      mtime: 1036162422
+      name: examples/soapmark.pl
+    - bytesize: 777
+      file_mime_type: ~
+      line_count: ~
+      md5: 204340be8cd17f513ceba43b32d1bf0e
+      mtime: 1036162422
+      name: examples/soapsmtp.pl
+    - bytesize: 567
+      file_mime_type: ~
+      line_count: ~
+      md5: f7f1c32ed4ac74dbafdd4fb5c80dbeba
+      mtime: 1036162422
+      name: examples/tcpclient.pl
+    - bytesize: 1313
+      file_mime_type: ~
+      line_count: ~
+      md5: 159b32730ace25bcaf85d83d42580ecd
+      mtime: 1036162422
+      name: examples/terraserver.pl
+    - bytesize: 472
+      file_mime_type: ~
+      line_count: ~
+      md5: de7fb312ecc6179856536d5887bdcdc4
+      mtime: 1036162422
+      name: examples/weblog.pl
+    - bytesize: 3715
+      file_mime_type: ~
+      line_count: ~
+      md5: 48fb733a178467e4329189a280163d7a
+      mtime: 1100460649
+      name: lib/Apache/SOAP.pm
+    - bytesize: 3755
+      file_mime_type: ~
+      line_count: ~
+      md5: 8442599c5f39e15d764bea6fc2009644
+      mtime: 1100460649
+      name: lib/Apache/XMLRPC/Lite.pm
+    - bytesize: 6237
+      file_mime_type: ~
+      line_count: ~
+      md5: ae59cc11dccf35bc816f735e2ac23bce
+      mtime: 1036162427
+      name: lib/IO/SessionData.pm
+    - bytesize: 5025
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c9f394c85e63f9486f57875c60f6472
+      mtime: 1097127987
+      name: lib/IO/SessionSet.pm
+    - bytesize: 69340
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c245ece6d67e3e8efbb6d1df0a19079
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Lite.pm
+    - bytesize: 661
+      file_mime_type: ~
+      line_count: ~
+      md5: cb521eecdd80e54cbe8145cca4ed51d6
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/FTP.pm
+    - bytesize: 12303
+      file_mime_type: ~
+      line_count: ~
+      md5: c2f2066237c1821a552dd483f1e1059e
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/HTTP.pm
+    - bytesize: 1415
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c85d490cba9395a0da96ed157562b96
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/IO.pm
+    - bytesize: 1589
+      file_mime_type: ~
+      line_count: ~
+      md5: 10b6b6f1a06fcf55bac5ac0600641de9
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/JABBER.pm
+    - bytesize: 771
+      file_mime_type: ~
+      line_count: ~
+      md5: 06c6a0e0b159f96220fa1c482d8c6139
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/LOCAL.pm
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: 77ef99010795d458b82712fd7d0cab06
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/MAILTO.pm
+    - bytesize: 1539
+      file_mime_type: ~
+      line_count: ~
+      md5: de555518aebb2b32205bf66cc4af2559
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/MQ.pm
+    - bytesize: 1732
+      file_mime_type: ~
+      line_count: ~
+      md5: d743ebd4bcf1cfedd136dcd567903e56
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/POP3.pm
+    - bytesize: 1208
+      file_mime_type: ~
+      line_count: ~
+      md5: 38509d74ee0c048b7a928c6eb10341de
+      mtime: 1097948717
+      name: lib/OldDocs/SOAP/Transport/TCP.pm
+    - bytesize: 3077
+      file_mime_type: ~
+      line_count: ~
+      md5: e48106070505e2fe838f7ca7e148c4da
+      mtime: 1097606875
+      name: lib/SOAP/Client.pm
+    - bytesize: 3645
+      file_mime_type: ~
+      line_count: ~
+      md5: 6869f9c61af109ce985f7a4d3e524a78
+      mtime: 1097606875
+      name: lib/SOAP/Constants.pm
+    - bytesize: 9852
+      file_mime_type: ~
+      line_count: ~
+      md5: b12d3847085073ee373f31db411fb238
+      mtime: 1100460649
+      name: lib/SOAP/Data.pm
+    - bytesize: 2037
+      file_mime_type: ~
+      line_count: ~
+      md5: f4f63f7ab375fca224095658ffd780cb
+      mtime: 1098043144
+      name: lib/SOAP/Deserializer.pm
+    - bytesize: 3893
+      file_mime_type: ~
+      line_count: ~
+      md5: 5894d82207f9b8db0af0926f44699e2f
+      mtime: 1097606875
+      name: lib/SOAP/Fault.pm
+    - bytesize: 1441
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f51cde5b74565b42504c1dd797d7821
+      mtime: 1097606875
+      name: lib/SOAP/Header.pm
+    - bytesize: 160051
+      file_mime_type: ~
+      line_count: ~
+      md5: e93fdcd265f4e46af7cdbf5d7314a3a7
+      mtime: 1112517058
+      name: lib/SOAP/Lite.pm
+    - bytesize: 16740
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b770810f8fb53fc1d265921b11d2b90
+      mtime: 1098804409
+      name: lib/SOAP/Packager.pm
+    - bytesize: 12382
+      file_mime_type: ~
+      line_count: ~
+      md5: 37da19e712ffc855e4fa74bb52417ae8
+      mtime: 1097606875
+      name: lib/SOAP/SOM.pm
+    - bytesize: 5635
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b2cf3abfaec86ec2d4f25f88af5dabd
+      mtime: 1100460649
+      name: lib/SOAP/Schema.pm
+    - bytesize: 13283
+      file_mime_type: ~
+      line_count: ~
+      md5: 17f94b918d2018d1074d9f89e1bc57eb
+      mtime: 1097990298
+      name: lib/SOAP/Serializer.pm
+    - bytesize: 12182
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bb63fd93c85a0ce6d944ec11233cf18
+      mtime: 1098483866
+      name: lib/SOAP/Server.pm
+    - bytesize: 12135
+      file_mime_type: ~
+      line_count: ~
+      md5: 07d6db82223d3b68af3cf0ca995f14b3
+      mtime: 1060581047
+      name: lib/SOAP/Test.pm
+    - bytesize: 7397
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dd7cc03a9a243b96de2c75b277113f5
+      mtime: 1097606875
+      name: lib/SOAP/Trace.pm
+    - bytesize: 35343
+      file_mime_type: ~
+      line_count: ~
+      md5: fdfbcacc035cad94dc45cd02331410ed
+      mtime: 1098483824
+      name: lib/SOAP/Transport.pm
+    - bytesize: 2423
+      file_mime_type: ~
+      line_count: ~
+      md5: b82ce56216051380a92d41a896fd781a
+      mtime: 1100460650
+      name: lib/SOAP/Transport/FTP.pm
+    - bytesize: 21383
+      file_mime_type: ~
+      line_count: ~
+      md5: f3b701e167e867112b26d3872d02341b
+      mtime: 1112173114
+      name: lib/SOAP/Transport/HTTP.pm
+    - bytesize: 1798
+      file_mime_type: ~
+      line_count: ~
+      md5: 2050a39a2425d8479df28b7014319f67
+      mtime: 1100460650
+      name: lib/SOAP/Transport/IO.pm
+    - bytesize: 6710
+      file_mime_type: ~
+      line_count: ~
+      md5: 59744e19eac4bff4d09f3171f2652cdd
+      mtime: 1100460650
+      name: lib/SOAP/Transport/JABBER.pm
+    - bytesize: 1637
+      file_mime_type: ~
+      line_count: ~
+      md5: 27bda6c683f42c54ae46df679526d7cc
+      mtime: 1100460650
+      name: lib/SOAP/Transport/LOCAL.pm
+    - bytesize: 2623
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a69fb3c3443585b2350961ae44cf8b3
+      mtime: 1100460650
+      name: lib/SOAP/Transport/MAILTO.pm
+    - bytesize: 6421
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f7f72963cb2797e1f345353436ed5d9
+      mtime: 1100460650
+      name: lib/SOAP/Transport/MQ.pm
+    - bytesize: 3666
+      file_mime_type: ~
+      line_count: ~
+      md5: 60bde857a4e3c58bd2a84eb8d765216c
+      mtime: 1100460650
+      name: lib/SOAP/Transport/POP3.pm
+    - bytesize: 5910
+      file_mime_type: ~
+      line_count: ~
+      md5: bd722ca7e71b0e2075a62ac0297029de
+      mtime: 1100460650
+      name: lib/SOAP/Transport/TCP.pm
+    - bytesize: 1123
+      file_mime_type: ~
+      line_count: ~
+      md5: 7612e54db0dcf751dd5eadfdbf214b57
+      mtime: 1097606875
+      name: lib/SOAP/Utils.pm
+    - bytesize: 39787
+      file_mime_type: ~
+      line_count: ~
+      md5: 783a484cd8c3dd73063b39646ad83f0b
+      mtime: 1100460650
+      name: lib/UDDI/Lite.pm
+    - bytesize: 6515
+      file_mime_type: ~
+      line_count: ~
+      md5: 64122b563f3af06adeeb909df16bf95b
+      mtime: 1109036862
+      name: lib/XML/Parser/Lite.pm
+    - bytesize: 10722
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b5df939929741ca814ca5f946227d5f
+      mtime: 1100460650
+      name: lib/XMLRPC/Lite.pm
+    - bytesize: 5048
+      file_mime_type: ~
+      line_count: ~
+      md5: 0994bdf0961ae3d6eb8e2b86094ef6f5
+      mtime: 1036162438
+      name: lib/XMLRPC/Test.pm
+    - bytesize: 6139
+      file_mime_type: ~
+      line_count: ~
+      md5: a341633bdc8c02fa7717a0de443a140e
+      mtime: 1100460650
+      name: lib/XMLRPC/Transport/HTTP.pm
+    - bytesize: 2186
+      file_mime_type: ~
+      line_count: ~
+      md5: a831aa937950994d40eb782736aa0a14
+      mtime: 1100460650
+      name: lib/XMLRPC/Transport/POP3.pm
+    - bytesize: 1793
+      file_mime_type: ~
+      line_count: ~
+      md5: eb1bcf2664bbd10c8821a7b9efacb888
+      mtime: 1100460650
+      name: lib/XMLRPC/Transport/TCP.pm
+    - bytesize: 9733
+      file_mime_type: ~
+      line_count: ~
+      md5: d572e3773d93ed5d1127c051146571bd
+      mtime: 1098806592
+      name: t/01-core.t
+    - bytesize: 29954
+      file_mime_type: ~
+      line_count: ~
+      md5: a0f31d070b071206cc75dbad1beeec45
+      mtime: 1098806592
+      name: t/02-payload.t
+    - bytesize: 10471
+      file_mime_type: ~
+      line_count: ~
+      md5: 571da1599369a5b571580bb3bff6582e
+      mtime: 1098820827
+      name: t/03-server.t
+    - bytesize: 7174
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dcd198119d864e59e4f37d19492699b
+      mtime: 1098820830
+      name: t/04-attach.t
+    - bytesize: 6162
+      file_mime_type: ~
+      line_count: ~
+      md5: 01883ad62403fac8b52f0abf2ba59856
+      mtime: 1036162440
+      name: t/05-customxml.t
+    - bytesize: 810
+      file_mime_type: ~
+      line_count: ~
+      md5: ad8a35afee965a4660c86aa972f7a39a
+      mtime: 1098087108
+      name: t/06-modules.t
+    - bytesize: 1951
+      file_mime_type: ~
+      line_count: ~
+      md5: e17e6d78b6fa42fd4f8b5f8c417216a4
+      mtime: 1070292377
+      name: t/07-xmlrpc_payload.t
+    - bytesize: 5996
+      file_mime_type: ~
+      line_count: ~
+      md5: 06585450aac12bc8cc00f5a01a19a357
+      mtime: 1036162441
+      name: t/08-schema.t
+    - bytesize: 224
+      file_mime_type: ~
+      line_count: ~
+      md5: bccaf582ea6fcad9294237dd1a760c23
+      mtime: 1036162441
+      name: t/11-cgi.t
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c63959c31aa54d0abd64c8d31cb4cc2
+      mtime: 1036162441
+      name: t/12-cgi_https.t
+    - bytesize: 210
+      file_mime_type: ~
+      line_count: ~
+      md5: c65199c30492cb4002ab4f09c3cf6751
+      mtime: 1036162441
+      name: t/13-mod_perl.t
+    - bytesize: 229
+      file_mime_type: ~
+      line_count: ~
+      md5: bd195701503c333780afee6cc210ba9f
+      mtime: 1036162441
+      name: t/14-cgi_apache.t
+    - bytesize: 208
+      file_mime_type: ~
+      line_count: ~
+      md5: d90b5827e15dd8561f19ae8862983476
+      mtime: 1036162441
+      name: t/15-daemon.t
+    - bytesize: 209
+      file_mime_type: ~
+      line_count: ~
+      md5: 71848030d00555270f599eba38504790
+      mtime: 1036162441
+      name: t/16-tcp.t
+    - bytesize: 216
+      file_mime_type: ~
+      line_count: ~
+      md5: 8340f8d77080e47a1275997ad58d58b8
+      mtime: 1036162441
+      name: t/17-mod_soap.t
+    - bytesize: 1307
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d4412f2aa879f73ca3e4453fa184b59
+      mtime: 1036162441
+      name: t/19-apachesoap.t
+    - bytesize: 10062
+      file_mime_type: ~
+      line_count: ~
+      md5: ecd83a048ffa9f1461c7de9b0bef4570
+      mtime: 1036162441
+      name: t/21-public.t
+    - bytesize: 3903
+      file_mime_type: ~
+      line_count: ~
+      md5: 185968992d709a501878627c272fca36
+      mtime: 1036162441
+      name: t/22-interop_apache.t
+    - bytesize: 1293
+      file_mime_type: ~
+      line_count: ~
+      md5: cd9e45efab5eb0b0d02a7b320d387743
+      mtime: 1036162441
+      name: t/23-ppm.t
+    - bytesize: 3212
+      file_mime_type: ~
+      line_count: ~
+      md5: e0d7d12c791f30d0efb68f6650a217f3
+      mtime: 1036162442
+      name: t/24-wsdl.t
+    - bytesize: 5748
+      file_mime_type: ~
+      line_count: ~
+      md5: e01796e7c3bd2f09186bf9b4762f62d0
+      mtime: 1082076412
+      name: t/25-uddi.t
+    - bytesize: 1707
+      file_mime_type: ~
+      line_count: ~
+      md5: b7cfa8faba54c8c5285960fe8be64f39
+      mtime: 1036162442
+      name: t/26-xmlrpc.t
+    - bytesize: 1896
+      file_mime_type: ~
+      line_count: ~
+      md5: e204f0729e70a82311a2b3d705f9bfa0
+      mtime: 1036162442
+      name: t/27-xmlparserlite.t
+    - bytesize: 1866
+      file_mime_type: ~
+      line_count: ~
+      md5: 461526d720a431ec08bdf2db58ca7f2e
+      mtime: 1061230326
+      name: t/28-uddi_search.t
+    - bytesize: 2091
+      file_mime_type: ~
+      line_count: ~
+      md5: 16474559c5985bb5d9edad17045e3c0b
+      mtime: 1036162442
+      name: t/29-uddi_publishing.t
+    - bytesize: 1659
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cf3815670bcac156f99f403a5ed789d
+      mtime: 1036162442
+      name: t/36-leaks.t
+    - bytesize: 222
+      file_mime_type: ~
+      line_count: ~
+      md5: 0793c79b73a6ad69dda9572dbb0b9277
+      mtime: 1036162442
+      name: t/37-mod_xmlrpc.t
+    - bytesize: 5495
+      file_mime_type: ~
+      line_count: ~
+      md5: e22bf7af7735260a3005f2aecf54f9dc
+      mtime: 1097990424
+      name: t/38-packager.t
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a352394460651041f032d4b97a69545
+      mtime: 1036162442
+      name: t/TEST.pl
+  module_info:
+    - bytesize: 3715
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ac9476637c8d60276f62766c60a1402
+      module_name_from_file_guess: Apache::SOAP
+      mtime: 1100460649
+      name: blib/lib/Apache/SOAP.pm
+      packages:
+        - Apache::SOAP
+      primary_package: Apache::SOAP
+      uses:
+        - strict
+        - vars
+        - SOAP::Transport::HTTP
+      version_info:
+        filename: blib/lib/Apache/SOAP.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: ~
+    - bytesize: 3755
+      file_mime_type: ~
+      line_count: ~
+      md5: 71cb565b7b7868a7ddb9a4a9ca3a265e
+      module_name_from_file_guess: Apache::XMLRPC::Lite
+      mtime: 1100460649
+      name: blib/lib/Apache/XMLRPC/Lite.pm
+      packages:
+        - Apache::XMLRPC::Lite
+      primary_package: Apache::XMLRPC::Lite
+      uses:
+        - strict
+        - vars
+        - XMLRPC::Transport::HTTP
+      version_info:
+        filename: blib/lib/Apache/XMLRPC/Lite.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: ~
+    - bytesize: 6237
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bee8d9c0ca7540c9beda38fc259ccd3
+      module_name_from_file_guess: IO::SessionData
+      mtime: 1036162427
+      name: blib/lib/IO/SessionData.pm
+      packages:
+        - IO::SessionData
+      primary_package: IO::SessionData
+      uses: []
+      version_info:
+        filename: blib/lib/IO/SessionData.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 1.02
+    - bytesize: 5025
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d1990bc906f93c7e301921e3f011e94
+      module_name_from_file_guess: IO::SessionSet
+      mtime: 1097127987
+      name: blib/lib/IO/SessionSet.pm
+      packages:
+        - IO::SessionSet
+      primary_package: IO::SessionSet
+      uses:
+        - strict
+        - Carp
+        - IO::Select
+        - IO::Handle
+        - IO::SessionData
+        - vars
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/IO/SessionSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 69340
+      file_mime_type: ~
+      line_count: ~
+      md5: a70f8b0054913103cc46cc891d1bc5c1
+      module_name_from_file_guess: OldDocs::SOAP::Lite
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Lite.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Lite.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 661
+      file_mime_type: ~
+      line_count: ~
+      md5: 74ee16ebe00ed7b43da6bb052c74b06d
+      module_name_from_file_guess: OldDocs::SOAP::Transport::FTP
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/FTP.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/FTP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12303
+      file_mime_type: ~
+      line_count: ~
+      md5: 10db9aa25bf493a9e85c700b52794ffb
+      module_name_from_file_guess: OldDocs::SOAP::Transport::HTTP
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/HTTP.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/HTTP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1415
+      file_mime_type: ~
+      line_count: ~
+      md5: f383108ebe9e30eec227c791f4be998d
+      module_name_from_file_guess: OldDocs::SOAP::Transport::IO
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/IO.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/IO.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1589
+      file_mime_type: ~
+      line_count: ~
+      md5: 5692f040905610cc5b0b1672a5318225
+      module_name_from_file_guess: OldDocs::SOAP::Transport::JABBER
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/JABBER.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/JABBER.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 771
+      file_mime_type: ~
+      line_count: ~
+      md5: ce7ca19260bf605f3398597085f9a57e
+      module_name_from_file_guess: OldDocs::SOAP::Transport::LOCAL
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/LOCAL.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/LOCAL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: 910556b4853a19f1761d9ad97e1a64d3
+      module_name_from_file_guess: OldDocs::SOAP::Transport::MAILTO
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/MAILTO.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/MAILTO.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1539
+      file_mime_type: ~
+      line_count: ~
+      md5: 7edc2536e72708fee96a3737933c2dc6
+      module_name_from_file_guess: OldDocs::SOAP::Transport::MQ
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/MQ.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/MQ.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1732
+      file_mime_type: ~
+      line_count: ~
+      md5: be9faa1fa018cc7f5a53166d7bacf28e
+      module_name_from_file_guess: OldDocs::SOAP::Transport::POP3
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/POP3.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/POP3.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1208
+      file_mime_type: ~
+      line_count: ~
+      md5: d0431673f6e2c3ecfb45bdd0fcae91db
+      module_name_from_file_guess: OldDocs::SOAP::Transport::TCP
+      mtime: 1097948717
+      name: blib/lib/OldDocs/SOAP/Transport/TCP.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/OldDocs/SOAP/Transport/TCP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3077
+      file_mime_type: ~
+      line_count: ~
+      md5: e4aa7f71a9eeee1ac84ff56f7286b80e
+      module_name_from_file_guess: SOAP::Client
+      mtime: 1097606875
+      name: blib/lib/SOAP/Client.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Client.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3645
+      file_mime_type: ~
+      line_count: ~
+      md5: fa328c2f407f95750c4b39afc11fe79a
+      module_name_from_file_guess: SOAP::Constants
+      mtime: 1097606875
+      name: blib/lib/SOAP/Constants.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9852
+      file_mime_type: ~
+      line_count: ~
+      md5: f589c0e889a3e2da104b177a90d4d153
+      module_name_from_file_guess: SOAP::Data
+      mtime: 1100460649
+      name: blib/lib/SOAP/Data.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Data.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2037
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b8aeb0a4e1e15eea68f2ef68ce74159
+      module_name_from_file_guess: SOAP::Deserializer
+      mtime: 1098043144
+      name: blib/lib/SOAP/Deserializer.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Deserializer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3893
+      file_mime_type: ~
+      line_count: ~
+      md5: 91d6fb9ee59a97684b090a2b1950449a
+      module_name_from_file_guess: SOAP::Fault
+      mtime: 1097606875
+      name: blib/lib/SOAP/Fault.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Fault.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1441
+      file_mime_type: ~
+      line_count: ~
+      md5: c6e4e0bf4641941362391f48e1aa1c40
+      module_name_from_file_guess: SOAP::Header
+      mtime: 1097606875
+      name: blib/lib/SOAP/Header.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Header.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 160051
+      file_mime_type: ~
+      line_count: ~
+      md5: 860aa0ffd8e37608612cd8c7c5012de1
+      module_name_from_file_guess: SOAP::Lite
+      mtime: 1112517058
+      name: blib/lib/SOAP/Lite.pm
+      packages:
+        - SOAP::Lite
+        - SOAP::XMLSchemaSOAP1_1::Deserializer
+        - SOAP::XMLSchemaSOAP1_2::Deserializer
+        - SOAP::XMLSchemaApacheSOAP::Deserializer
+        - SOAP::XMLSchema::Serializer
+        - SOAP::XMLSchema1999::Serializer
+        - SOAP::XMLSchema1999::Deserializer
+        - SOAP::XMLSchema2001::Serializer
+        - SOAP::XMLSchema2001::Deserializer
+        - SOAP::Constants
+        - SOAP::Utils
+        - SOAP::Cloneable
+        - SOAP::Transport
+        - SOAP::Fault
+        - SOAP::Data
+        - SOAP::Header
+        - SOAP::Serializer
+        - SOAP::Parser
+        - SOAP::SOM
+        - SOAP::Deserializer
+        - SOAP::Client
+        - SOAP::Server::Object
+        - SOAP::Server::Parameters
+        - SOAP::Server
+        - SOAP::Trace
+        - SOAP::Custom::XML::Data
+        - SOAP::Custom::XML::Deserializer
+        - SOAP::Schema::Deserializer
+        - SOAP::Schema::WSDL
+        - SOAP::Schema
+        - SOAP
+        - SOAP::Lite
+        - SOAP::Lite::COM
+      primary_package: SOAP::Lite
+      uses:
+        - ''
+        - strict
+        - vars
+        - MIME::Base64
+        - constant
+        - Carp
+        - overload
+        - Exporter
+        - XML::Parser
+        - XML::Parser::Lite
+        - LWP::UserAgent
+        - URI
+        - SOAP::Packager
+        - SOAP::Lite
+      version_info:
+        filename: blib/lib/SOAP/Lite.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 0.65_4
+    - bytesize: 16740
+      file_mime_type: ~
+      line_count: ~
+      md5: 73ff0fb2c7ea8d5029d190d9370ff67a
+      module_name_from_file_guess: SOAP::Packager
+      mtime: 1098804409
+      name: blib/lib/SOAP/Packager.pm
+      packages:
+        - SOAP::Packager
+        - SOAP::Packager::MIME
+        - SOAP::Packager::DIME
+      primary_package: SOAP::Packager
+      uses:
+        - strict
+        - vars
+        - MIME::Entity
+        - DIME::Message
+        - DIME::Payload
+      version_info:
+        filename: blib/lib/SOAP/Packager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12382
+      file_mime_type: ~
+      line_count: ~
+      md5: e8123bed0d1c2e66aa6baa7f271450db
+      module_name_from_file_guess: SOAP::SOM
+      mtime: 1097606875
+      name: blib/lib/SOAP/SOM.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/SOM.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5635
+      file_mime_type: ~
+      line_count: ~
+      md5: 965eac2379fbcd1cfecc150c6ae99f8e
+      module_name_from_file_guess: SOAP::Schema
+      mtime: 1100460649
+      name: blib/lib/SOAP/Schema.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Schema.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13283
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d119bed2baec609e1e5eb8d38033c11
+      module_name_from_file_guess: SOAP::Serializer
+      mtime: 1097990298
+      name: blib/lib/SOAP/Serializer.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Serializer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12182
+      file_mime_type: ~
+      line_count: ~
+      md5: ff2ac881f310e695a07241d14d670198
+      module_name_from_file_guess: SOAP::Server
+      mtime: 1098483866
+      name: blib/lib/SOAP/Server.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Server.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12135
+      file_mime_type: ~
+      line_count: ~
+      md5: 9572ed332fb84b560c7e75ff50892230
+      module_name_from_file_guess: SOAP::Test
+      mtime: 1060581047
+      name: blib/lib/SOAP/Test.pm
+      packages:
+        - SOAP::Test
+        - My::PingPong
+        - SOAP::Test::Server
+      primary_package: SOAP::Test
+      uses:
+        - ''
+        - vars
+        - strict
+        - Test
+        - SOAP::Lite
+      version_info:
+        filename: blib/lib/SOAP/Test.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 0.65
+    - bytesize: 7397
+      file_mime_type: ~
+      line_count: ~
+      md5: e568e09a8b4e91c839928cbc0d878913
+      module_name_from_file_guess: SOAP::Trace
+      mtime: 1097606875
+      name: blib/lib/SOAP/Trace.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Trace.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 35343
+      file_mime_type: ~
+      line_count: ~
+      md5: c0c69f5676fe17f7dd3b114873516d25
+      module_name_from_file_guess: SOAP::Transport
+      mtime: 1098483824
+      name: blib/lib/SOAP/Transport.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Transport.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2423
+      file_mime_type: ~
+      line_count: ~
+      md5: 12f7ece176fbd46c0d6334fd605168c9
+      module_name_from_file_guess: SOAP::Transport::FTP
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/FTP.pm
+      packages:
+        - SOAP::Transport::FTP
+        - SOAP::Transport::FTP::Client
+      primary_package: SOAP::Transport::FTP
+      uses:
+        - strict
+        - vars
+        - Net::FTP
+        - IO::File
+        - URI
+      version_info:
+        filename: blib/lib/SOAP/Transport/FTP.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 21383
+      file_mime_type: ~
+      line_count: ~
+      md5: 2946c28c63cc26099a76e381add6251c
+      module_name_from_file_guess: SOAP::Transport::HTTP
+      mtime: 1112173114
+      name: blib/lib/SOAP/Transport/HTTP.pm
+      packages:
+        - SOAP::Transport::HTTP
+        - SOAP::Transport::HTTP::Client
+        - LWP::Protocol
+        - SOAP::Transport::HTTP::Server
+        - SOAP::Transport::HTTP::CGI
+        - SOAP::Transport::HTTP::Daemon
+        - SOAP::Transport::HTTP::Apache
+        - SOAP::Transport::HTTP::FCGI
+      primary_package: SOAP::Transport::HTTP
+      uses:
+        - strict
+        - vars
+        - SOAP::Lite
+        - SOAP::Packager
+        - HTTP::Request
+        - HTTP::Headers
+        - Compress::Zlib
+        - URI
+        - LWP::UserAgent
+        - Carp
+        - Apache
+        - Apache::Constants
+        - Apache::RequestRec
+        - Apache::RequestIO
+        - Apache::Const
+        - FCGI
+      version_info:
+        filename: blib/lib/SOAP/Transport/HTTP.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 1798
+      file_mime_type: ~
+      line_count: ~
+      md5: db6e23898b22ed4a6481af462566886f
+      module_name_from_file_guess: SOAP::Transport::IO
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/IO.pm
+      packages:
+        - SOAP::Transport::IO
+        - SOAP::Transport::IO::Server
+      primary_package: SOAP::Transport::IO
+      uses:
+        - strict
+        - vars
+        - IO::File
+        - SOAP::Lite
+        - Carp
+      version_info:
+        filename: blib/lib/SOAP/Transport/IO.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 6710
+      file_mime_type: ~
+      line_count: ~
+      md5: 4535cf444d7e1b9cf741c6d395e11a3c
+      module_name_from_file_guess: SOAP::Transport::JABBER
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/JABBER.pm
+      packages:
+        - SOAP::Transport::JABBER
+        - URI::jabber
+        - SOAP::Transport::JABBER::Query
+        - SOAP::Transport::JABBER::Client
+        - SOAP::Transport::JABBER::Server
+      primary_package: SOAP::Transport::JABBER
+      uses:
+        - strict
+        - vars
+        - Net::Jabber
+        - URI::Escape
+        - URI
+        - SOAP::Lite
+        - URI::_server
+        - URI::_userpass
+        - Carp
+      version_info:
+        filename: blib/lib/SOAP/Transport/JABBER.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 1637
+      file_mime_type: ~
+      line_count: ~
+      md5: 381716d84bb95793fa477e6a0ede6778
+      module_name_from_file_guess: SOAP::Transport::LOCAL
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/LOCAL.pm
+      packages:
+        - SOAP::Transport::LOCAL
+        - SOAP::Transport::LOCAL::Client
+      primary_package: SOAP::Transport::LOCAL
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/SOAP/Transport/LOCAL.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 2623
+      file_mime_type: ~
+      line_count: ~
+      md5: dc4007dcce9cff3ce10243d1f164391d
+      module_name_from_file_guess: SOAP::Transport::MAILTO
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/MAILTO.pm
+      packages:
+        - SOAP::Transport::MAILTO
+        - SOAP::Transport::MAILTO::Client
+      primary_package: SOAP::Transport::MAILTO
+      uses:
+        - strict
+        - vars
+        - MIME::Lite
+        - URI
+      version_info:
+        filename: blib/lib/SOAP/Transport/MAILTO.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 6421
+      file_mime_type: ~
+      line_count: ~
+      md5: a754991926a6743fef090bcca707f9a1
+      module_name_from_file_guess: SOAP::Transport::MQ
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/MQ.pm
+      packages:
+        - SOAP::Transport::MQ
+        - URI::mq
+        - SOAP::Transport::MQ::Client
+        - SOAP::Transport::MQ::Server
+      primary_package: SOAP::Transport::MQ
+      uses:
+        - strict
+        - vars
+        - MQClient::MQSeries
+        - MQSeries::QueueManager
+        - MQSeries::Queue
+        - MQSeries::Message
+        - URI
+        - URI::Escape
+        - SOAP::Lite
+        - URI::_server
+        - URI::_userpass
+        - MQSeries
+        - Carp
+      version_info:
+        filename: blib/lib/SOAP/Transport/MQ.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 3666
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ffb095de0611e1d583d3e1cab2b0dba
+      module_name_from_file_guess: SOAP::Transport::POP3
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/POP3.pm
+      packages:
+        - SOAP::Transport::POP3
+        - SOAP::Transport::POP3::Server
+      primary_package: SOAP::Transport::POP3
+      uses:
+        - strict
+        - vars
+        - Net::POP3
+        - URI
+        - SOAP::Lite
+        - Carp
+      version_info:
+        filename: blib/lib/SOAP/Transport/POP3.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 5910
+      file_mime_type: ~
+      line_count: ~
+      md5: aedcd329358bfa6963511b468d0ec35b
+      module_name_from_file_guess: SOAP::Transport::TCP
+      mtime: 1100460650
+      name: blib/lib/SOAP/Transport/TCP.pm
+      packages:
+        - SOAP::Transport::TCP
+        - URI::tcp
+        - SOAP::Transport::TCP::Client
+        - SOAP::Transport::TCP::Server
+      primary_package: SOAP::Transport::TCP
+      uses:
+        - strict
+        - vars
+        - URI
+        - IO::Socket
+        - IO::Select
+        - IO::SessionData
+        - SOAP::Lite
+        - URI::_server
+        - IO::SessionSet
+        - Carp
+      version_info:
+        filename: blib/lib/SOAP/Transport/TCP.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 1123
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a1e77b550646354a151bee27ff8787c
+      module_name_from_file_guess: SOAP::Utils
+      mtime: 1097606875
+      name: blib/lib/SOAP/Utils.pm
+      packages: []
+      primary_package: ~
+      uses: []
+      version_info:
+        filename: blib/lib/SOAP/Utils.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 39787
+      file_mime_type: ~
+      line_count: ~
+      md5: 985850ade670c528f65086d792bbd77d
+      module_name_from_file_guess: UDDI::Lite
+      mtime: 1100460650
+      name: blib/lib/UDDI/Lite.pm
+      packages:
+        - UDDI::Lite
+        - UDDI::Constants
+        - UDDI::SOM
+        - UDDI::Data
+        - UDDI::Serializer
+        - UDDI::Deserializer
+        - UDDI::Lite
+      primary_package: UDDI::Lite
+      uses:
+        - ''
+        - strict
+        - vars
+        - SOAP::Lite
+        - Carp
+        - overload
+        - Exporter
+      version_info:
+        filename: blib/lib/UDDI/Lite.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: ~
+    - bytesize: 6515
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d9fd007a25b0da51aa782d9ee9e1462
+      module_name_from_file_guess: XML::Parser::Lite
+      mtime: 1109036862
+      name: blib/lib/XML/Parser/Lite.pm
+      packages:
+        - XML::Parser::Lite
+      primary_package: XML::Parser::Lite
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/XML/Parser/Lite.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.65_3
+    - bytesize: 10722
+      file_mime_type: ~
+      line_count: ~
+      md5: 840dba2970fb6fae513ee3f1d764903c
+      module_name_from_file_guess: XMLRPC::Lite
+      mtime: 1100460650
+      name: blib/lib/XMLRPC/Lite.pm
+      packages:
+        - XMLRPC::Lite
+        - XMLRPC::Constants
+        - XMLRPC::Data
+        - XMLRPC::Serializer
+        - XMLRPC::SOM
+        - XMLRPC::Deserializer
+        - XMLRPC::Server
+        - XMLRPC::Server::Parameters
+        - XMLRPC
+        - XMLRPC::Lite
+      primary_package: XMLRPC::Lite
+      uses:
+        - SOAP::Lite
+        - strict
+        - vars
+        - MIME::Base64
+      version_info:
+        filename: blib/lib/XMLRPC/Lite.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: ~
+    - bytesize: 5048
+      file_mime_type: ~
+      line_count: ~
+      md5: 095e5ce766022905e775ef1352733121
+      module_name_from_file_guess: XMLRPC::Test
+      mtime: 1036162438
+      name: blib/lib/XMLRPC/Test.pm
+      packages:
+        - XMLRPC::Test
+        - My::PingPong
+        - XMLRPC::Test::Server
+      primary_package: XMLRPC::Test
+      uses:
+        - ''
+        - vars
+        - strict
+        - Test
+        - XMLRPC::Lite
+      version_info:
+        filename: blib/lib/XMLRPC/Test.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 0.65
+    - bytesize: 6139
+      file_mime_type: ~
+      line_count: ~
+      md5: 36f6ec73c5ecccbd575c449fb7656c9f
+      module_name_from_file_guess: XMLRPC::Transport::HTTP
+      mtime: 1100460650
+      name: blib/lib/XMLRPC/Transport/HTTP.pm
+      packages:
+        - XMLRPC::Transport::HTTP
+        - XMLRPC::Transport::HTTP::CGI
+        - XMLRPC::Transport::HTTP::Daemon
+        - XMLRPC::Transport::HTTP::Apache
+      primary_package: XMLRPC::Transport::HTTP
+      uses:
+        - strict
+        - vars
+        - XMLRPC::Lite
+        - SOAP::Transport::HTTP
+      version_info:
+        filename: blib/lib/XMLRPC/Transport/HTTP.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 2186
+      file_mime_type: ~
+      line_count: ~
+      md5: c9f7895a9a0955b99640fc0f8e5b3902
+      module_name_from_file_guess: XMLRPC::Transport::POP3
+      mtime: 1100460650
+      name: blib/lib/XMLRPC/Transport/POP3.pm
+      packages:
+        - XMLRPC::Transport::POP3
+        - XMLRPC::Transport::POP3::Server
+      primary_package: XMLRPC::Transport::POP3
+      uses:
+        - strict
+        - vars
+        - XMLRPC::Lite
+        - SOAP::Transport::POP3
+      version_info:
+        filename: blib/lib/XMLRPC/Transport/POP3.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+    - bytesize: 1793
+      file_mime_type: ~
+      line_count: ~
+      md5: abf922a5c1c1d38fa95e509b44163c70
+      module_name_from_file_guess: XMLRPC::Transport::TCP
+      mtime: 1100460650
+      name: blib/lib/XMLRPC/Transport/TCP.pm
+      packages:
+        - XMLRPC::Transport::TCP
+        - XMLRPC::Transport::TCP::Server
+      primary_package: XMLRPC::Transport::TCP
+      uses:
+        - strict
+        - vars
+        - XMLRPC::Lite
+        - SOAP::Transport::TCP
+      version_info:
+        filename: blib/lib/XMLRPC/Transport/TCP.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: ~
+  modules:
+    - blib/lib/Apache/SOAP.pm
+    - blib/lib/Apache/XMLRPC/Lite.pm
+    - blib/lib/IO/SessionData.pm
+    - blib/lib/IO/SessionSet.pm
+    - blib/lib/OldDocs/SOAP/Lite.pm
+    - blib/lib/OldDocs/SOAP/Transport/FTP.pm
+    - blib/lib/OldDocs/SOAP/Transport/HTTP.pm
+    - blib/lib/OldDocs/SOAP/Transport/IO.pm
+    - blib/lib/OldDocs/SOAP/Transport/JABBER.pm
+    - blib/lib/OldDocs/SOAP/Transport/LOCAL.pm
+    - blib/lib/OldDocs/SOAP/Transport/MAILTO.pm
+    - blib/lib/OldDocs/SOAP/Transport/MQ.pm
+    - blib/lib/OldDocs/SOAP/Transport/POP3.pm
+    - blib/lib/OldDocs/SOAP/Transport/TCP.pm
+    - blib/lib/SOAP/Client.pm
+    - blib/lib/SOAP/Constants.pm
+    - blib/lib/SOAP/Data.pm
+    - blib/lib/SOAP/Deserializer.pm
+    - blib/lib/SOAP/Fault.pm
+    - blib/lib/SOAP/Header.pm
+    - blib/lib/SOAP/Lite.pm
+    - blib/lib/SOAP/Packager.pm
+    - blib/lib/SOAP/SOM.pm
+    - blib/lib/SOAP/Schema.pm
+    - blib/lib/SOAP/Serializer.pm
+    - blib/lib/SOAP/Server.pm
+    - blib/lib/SOAP/Test.pm
+    - blib/lib/SOAP/Trace.pm
+    - blib/lib/SOAP/Transport.pm
+    - blib/lib/SOAP/Transport/FTP.pm
+    - blib/lib/SOAP/Transport/HTTP.pm
+    - blib/lib/SOAP/Transport/IO.pm
+    - blib/lib/SOAP/Transport/JABBER.pm
+    - blib/lib/SOAP/Transport/LOCAL.pm
+    - blib/lib/SOAP/Transport/MAILTO.pm
+    - blib/lib/SOAP/Transport/MQ.pm
+    - blib/lib/SOAP/Transport/POP3.pm
+    - blib/lib/SOAP/Transport/TCP.pm
+    - blib/lib/SOAP/Utils.pm
+    - blib/lib/UDDI/Lite.pm
+    - blib/lib/XML/Parser/Lite.pm
+    - blib/lib/XMLRPC/Lite.pm
+    - blib/lib/XMLRPC/Test.pm
+    - blib/lib/XMLRPC/Transport/HTTP.pm
+    - blib/lib/XMLRPC/Transport/POP3.pm
+    - blib/lib/XMLRPC/Transport/TCP.pm
+  test_info:
+    - bytesize: 3903
+      file_mime_type: ~
+      line_count: ~
+      md5: 185968992d709a501878627c272fca36
+      mtime: 1036162441
+      name: t/22-interop_apache.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+        - SOAP::Test
+    - bytesize: 1866
+      file_mime_type: ~
+      line_count: ~
+      md5: 461526d720a431ec08bdf2db58ca7f2e
+      mtime: 1061230326
+      name: t/28-uddi_search.t
+      uses:
+        - strict
+        - Test
+        - UDDI::Lite
+        - SOAP::Test
+    - bytesize: 5495
+      file_mime_type: ~
+      line_count: ~
+      md5: e22bf7af7735260a3005f2aecf54f9dc
+      mtime: 1097990424
+      name: t/38-packager.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Packager
+    - bytesize: 810
+      file_mime_type: ~
+      line_count: ~
+      md5: ad8a35afee965a4660c86aa972f7a39a
+      mtime: 1098087108
+      name: t/06-modules.t
+      uses:
+        - strict
+        - Test
+    - bytesize: 7174
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dcd198119d864e59e4f37d19492699b
+      mtime: 1098820830
+      name: t/04-attach.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+    - bytesize: 208
+      file_mime_type: ~
+      line_count: ~
+      md5: d90b5827e15dd8561f19ae8862983476
+      mtime: 1036162441
+      name: t/15-daemon.t
+      uses:
+        - SOAP::Test
+    - bytesize: 5996
+      file_mime_type: ~
+      line_count: ~
+      md5: 06585450aac12bc8cc00f5a01a19a357
+      mtime: 1036162441
+      name: t/08-schema.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+    - bytesize: 229
+      file_mime_type: ~
+      line_count: ~
+      md5: bd195701503c333780afee6cc210ba9f
+      mtime: 1036162441
+      name: t/14-cgi_apache.t
+      uses:
+        - SOAP::Test
+    - bytesize: 1896
+      file_mime_type: ~
+      line_count: ~
+      md5: e204f0729e70a82311a2b3d705f9bfa0
+      mtime: 1036162442
+      name: t/27-xmlparserlite.t
+      uses:
+        - strict
+        - Test
+        - XML::Parser::Lite
+    - bytesize: 5748
+      file_mime_type: ~
+      line_count: ~
+      md5: e01796e7c3bd2f09186bf9b4762f62d0
+      mtime: 1082076412
+      name: t/25-uddi.t
+      uses:
+        - strict
+        - Test
+        - UDDI::Lite
+        - SOAP::Test
+    - bytesize: 1293
+      file_mime_type: ~
+      line_count: ~
+      md5: cd9e45efab5eb0b0d02a7b320d387743
+      mtime: 1036162441
+      name: t/23-ppm.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+        - SOAP::Test
+    - bytesize: 29954
+      file_mime_type: ~
+      line_count: ~
+      md5: a0f31d070b071206cc75dbad1beeec45
+      mtime: 1098806592
+      name: t/02-payload.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+    - bytesize: 10062
+      file_mime_type: ~
+      line_count: ~
+      md5: ecd83a048ffa9f1461c7de9b0bef4570
+      mtime: 1036162441
+      name: t/21-public.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+        - SOAP::Test
+    - bytesize: 1659
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cf3815670bcac156f99f403a5ed789d
+      mtime: 1036162442
+      name: t/36-leaks.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+        - SOAP::Test
+    - bytesize: 6162
+      file_mime_type: ~
+      line_count: ~
+      md5: 01883ad62403fac8b52f0abf2ba59856
+      mtime: 1036162440
+      name: t/05-customxml.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+    - bytesize: 2091
+      file_mime_type: ~
+      line_count: ~
+      md5: 16474559c5985bb5d9edad17045e3c0b
+      mtime: 1036162442
+      name: t/29-uddi_publishing.t
+      uses:
+        - strict
+        - Test
+        - UDDI::Lite
+        - SOAP::Test
+    - bytesize: 9733
+      file_mime_type: ~
+      line_count: ~
+      md5: d572e3773d93ed5d1127c051146571bd
+      mtime: 1098806592
+      name: t/01-core.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+    - bytesize: 1951
+      file_mime_type: ~
+      line_count: ~
+      md5: e17e6d78b6fa42fd4f8b5f8c417216a4
+      mtime: 1070292377
+      name: t/07-xmlrpc_payload.t
+      uses:
+        - strict
+        - Test
+        - XMLRPC::Lite
+    - bytesize: 1707
+      file_mime_type: ~
+      line_count: ~
+      md5: b7cfa8faba54c8c5285960fe8be64f39
+      mtime: 1036162442
+      name: t/26-xmlrpc.t
+      uses:
+        - strict
+        - Test
+        - XMLRPC::Lite
+        - SOAP::Test
+    - bytesize: 10471
+      file_mime_type: ~
+      line_count: ~
+      md5: 571da1599369a5b571580bb3bff6582e
+      mtime: 1098820827
+      name: t/03-server.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+    - bytesize: 3212
+      file_mime_type: ~
+      line_count: ~
+      md5: e0d7d12c791f30d0efb68f6650a217f3
+      mtime: 1036162442
+      name: t/24-wsdl.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+        - SOAP::Test
+    - bytesize: 1307
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d4412f2aa879f73ca3e4453fa184b59
+      mtime: 1036162441
+      name: t/19-apachesoap.t
+      uses:
+        - strict
+        - Test
+        - SOAP::Lite
+        - SOAP::Test
+    - bytesize: 224
+      file_mime_type: ~
+      line_count: ~
+      md5: bccaf582ea6fcad9294237dd1a760c23
+      mtime: 1036162441
+      name: t/11-cgi.t
+      uses:
+        - SOAP::Test
+    - bytesize: 222
+      file_mime_type: ~
+      line_count: ~
+      md5: 0793c79b73a6ad69dda9572dbb0b9277
+      mtime: 1036162442
+      name: t/37-mod_xmlrpc.t
+      uses:
+        - XMLRPC::Test
+    - bytesize: 209
+      file_mime_type: ~
+      line_count: ~
+      md5: 71848030d00555270f599eba38504790
+      mtime: 1036162441
+      name: t/16-tcp.t
+      uses:
+        - SOAP::Test
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c63959c31aa54d0abd64c8d31cb4cc2
+      mtime: 1036162441
+      name: t/12-cgi_https.t
+      uses:
+        - SOAP::Test
+    - bytesize: 216
+      file_mime_type: ~
+      line_count: ~
+      md5: 8340f8d77080e47a1275997ad58d58b8
+      mtime: 1036162441
+      name: t/17-mod_soap.t
+      uses:
+        - SOAP::Test
+    - bytesize: 210
+      file_mime_type: ~
+      line_count: ~
+      md5: c65199c30492cb4002ab4f09c3cf6751
+      mtime: 1036162441
+      name: t/13-mod_perl.t
+      uses:
+        - SOAP::Test
+  tests:
+    - t/22-interop_apache.t
+    - t/28-uddi_search.t
+    - t/38-packager.t
+    - t/06-modules.t
+    - t/04-attach.t
+    - t/15-daemon.t
+    - t/08-schema.t
+    - t/14-cgi_apache.t
+    - t/27-xmlparserlite.t
+    - t/25-uddi.t
+    - t/23-ppm.t
+    - t/02-payload.t
+    - t/21-public.t
+    - t/36-leaks.t
+    - t/05-customxml.t
+    - t/29-uddi_publishing.t
+    - t/01-core.t
+    - t/07-xmlrpc_payload.t
+    - t/26-xmlrpc.t
+    - t/03-server.t
+    - t/24-wsdl.t
+    - t/19-apachesoap.t
+    - t/11-cgi.t
+    - t/37-mod_xmlrpc.t
+    - t/16-tcp.t
+    - t/12-cgi_https.t
+    - t/17-mod_soap.t
+    - t/13-mod_perl.t
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-74471._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 74471
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269023736
+  examine_start_time: 1269023673
+  examine_time: 63
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 74471
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269023736
+  run_start_time: 1269023673
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

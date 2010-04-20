@@ -1,0 +1,4574 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.12
+    installdirs: site
+    name: SPOPS
+    requires:
+      Carp::Assert: 0.17
+      Class::Accessor: 0.17
+      Class::Date: 1
+      Class::Factory: 1
+      Class::Fields: 0.14
+      Class::ISA: 0.32
+      Data::Dumper: 2
+      Devel::StackTrace: 0.9
+      Log::Dispatch: 2
+      Log::Log4perl: 0.35
+      Storable: 1
+      Test::More: 0.41
+      Time::Piece: 1.07
+    version: 0.85
+    version_from: SPOPS.pm
+  blib:
+    - blib/lib/SPOPS.pm
+    - blib/lib/SPOPS/ClassFactory.pm
+    - blib/lib/SPOPS/ClassFactory/DBI.pm
+    - blib/lib/SPOPS/ClassFactory/DefaultBehavior.pm
+    - blib/lib/SPOPS/ClassFactory/LDAP.pm
+    - blib/lib/SPOPS/DBI.pm
+    - blib/lib/SPOPS/DBI/InterBase.pm
+    - blib/lib/SPOPS/DBI/MySQL.pm
+    - blib/lib/SPOPS/DBI/Oracle.pm
+    - blib/lib/SPOPS/DBI/Pg.pm
+    - blib/lib/SPOPS/DBI/SQLite.pm
+    - blib/lib/SPOPS/DBI/Sybase.pm
+    - blib/lib/SPOPS/DBI/TypeInfo.pm
+    - blib/lib/SPOPS/Error.pm
+    - blib/lib/SPOPS/Exception.pm
+    - blib/lib/SPOPS/Exception/DBI.pm
+    - blib/lib/SPOPS/Exception/LDAP.pm
+    - blib/lib/SPOPS/Exception/Security.pm
+    - blib/lib/SPOPS/Export.pm
+    - blib/lib/SPOPS/Export/DBI/Data.pm
+    - blib/lib/SPOPS/Export/Object.pm
+    - blib/lib/SPOPS/Export/Perl.pm
+    - blib/lib/SPOPS/Export/SQL.pm
+    - blib/lib/SPOPS/Export/XML.pm
+    - blib/lib/SPOPS/GDBM.pm
+    - blib/lib/SPOPS/HashFile.pm
+    - blib/lib/SPOPS/Import.pm
+    - blib/lib/SPOPS/Import/DBI/Data.pm
+    - blib/lib/SPOPS/Import/DBI/Table.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/InterBase.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/MySQL.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/Oracle.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/Pg.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/SQLite.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/Sybase.pm
+    - blib/lib/SPOPS/Import/Object.pm
+    - blib/lib/SPOPS/Initialize.pm
+    - blib/lib/SPOPS/Iterator.pm
+    - blib/lib/SPOPS/Iterator/DBI.pm
+    - blib/lib/SPOPS/Iterator/LDAP.pm
+    - blib/lib/SPOPS/Iterator/WrapList.pm
+    - blib/lib/SPOPS/Key/DBI/HandleField.pm
+    - blib/lib/SPOPS/Key/DBI/Identity.pm
+    - blib/lib/SPOPS/Key/DBI/Pool.pm
+    - blib/lib/SPOPS/Key/DBI/Sequence.pm
+    - blib/lib/SPOPS/Key/Random.pm
+    - blib/lib/SPOPS/Key/UUID.pm
+    - blib/lib/SPOPS/LDAP.pm
+    - blib/lib/SPOPS/LDAP/MultiDatasource.pm
+    - blib/lib/SPOPS/Loopback.pm
+    - blib/lib/SPOPS/Manual.pod
+    - blib/lib/SPOPS/Manual/CodeGeneration.pod
+    - blib/lib/SPOPS/Manual/Configuration.pod
+    - blib/lib/SPOPS/Manual/Cookbook.pod
+    - blib/lib/SPOPS/Manual/Datasource.pod
+    - blib/lib/SPOPS/Manual/Exceptions.pod
+    - blib/lib/SPOPS/Manual/ImportExport.pod
+    - blib/lib/SPOPS/Manual/Intro.pod
+    - blib/lib/SPOPS/Manual/Object.pod
+    - blib/lib/SPOPS/Manual/ObjectRules.pod
+    - blib/lib/SPOPS/Manual/Relationships.pod
+    - blib/lib/SPOPS/Manual/Security.pod
+    - blib/lib/SPOPS/Manual/Serialization.pod
+    - blib/lib/SPOPS/SQLInterface.pm
+    - blib/lib/SPOPS/Secure.pm
+    - blib/lib/SPOPS/Secure/DBI.pm
+    - blib/lib/SPOPS/Secure/Hierarchy.pm
+    - blib/lib/SPOPS/Secure/Loopback.pm
+    - blib/lib/SPOPS/Secure/Util.pm
+    - blib/lib/SPOPS/Tie.pm
+    - blib/lib/SPOPS/Tie/StrictField.pm
+    - blib/lib/SPOPS/Tool/CreateOnly.pm
+    - blib/lib/SPOPS/Tool/DBI/Datasource.pm
+    - blib/lib/SPOPS/Tool/DBI/DiscoverField.pm
+    - blib/lib/SPOPS/Tool/DBI/FindDefaults.pm
+    - blib/lib/SPOPS/Tool/DBI/MaintainLinkedList.pm
+    - blib/lib/SPOPS/Tool/DateConvert.pm
+    - blib/lib/SPOPS/Tool/LDAP/Datasource.pm
+    - blib/lib/SPOPS/Tool/ReadOnly.pm
+    - blib/lib/SPOPS/Tool/UTFConvert.pm
+    - blib/lib/SPOPS/Utility.pm
+    - blib/man3/SPOPS.3
+    - blib/man3/SPOPS::ClassFactory.3
+    - blib/man3/SPOPS::ClassFactory::DBI.3
+    - blib/man3/SPOPS::ClassFactory::DefaultBehavior.3
+    - blib/man3/SPOPS::ClassFactory::LDAP.3
+    - blib/man3/SPOPS::DBI.3
+    - blib/man3/SPOPS::DBI::InterBase.3
+    - blib/man3/SPOPS::DBI::MySQL.3
+    - blib/man3/SPOPS::DBI::Oracle.3
+    - blib/man3/SPOPS::DBI::Pg.3
+    - blib/man3/SPOPS::DBI::SQLite.3
+    - blib/man3/SPOPS::DBI::Sybase.3
+    - blib/man3/SPOPS::DBI::TypeInfo.3
+    - blib/man3/SPOPS::Error.3
+    - blib/man3/SPOPS::Exception.3
+    - blib/man3/SPOPS::Exception::DBI.3
+    - blib/man3/SPOPS::Exception::LDAP.3
+    - blib/man3/SPOPS::Exception::Security.3
+    - blib/man3/SPOPS::Export.3
+    - blib/man3/SPOPS::Export::DBI::Data.3
+    - blib/man3/SPOPS::Export::Object.3
+    - blib/man3/SPOPS::Export::Perl.3
+    - blib/man3/SPOPS::Export::SQL.3
+    - blib/man3/SPOPS::Export::XML.3
+    - blib/man3/SPOPS::GDBM.3
+    - blib/man3/SPOPS::HashFile.3
+    - blib/man3/SPOPS::Import.3
+    - blib/man3/SPOPS::Import::DBI::Data.3
+    - blib/man3/SPOPS::Import::DBI::Table.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform::InterBase.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform::MySQL.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform::Oracle.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform::Pg.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform::SQLite.3
+    - blib/man3/SPOPS::Import::DBI::TableTransform::Sybase.3
+    - blib/man3/SPOPS::Import::Object.3
+    - blib/man3/SPOPS::Initialize.3
+    - blib/man3/SPOPS::Iterator.3
+    - blib/man3/SPOPS::Iterator::DBI.3
+    - blib/man3/SPOPS::Iterator::LDAP.3
+    - blib/man3/SPOPS::Iterator::WrapList.3
+    - blib/man3/SPOPS::Key::DBI::HandleField.3
+    - blib/man3/SPOPS::Key::DBI::Identity.3
+    - blib/man3/SPOPS::Key::DBI::Pool.3
+    - blib/man3/SPOPS::Key::DBI::Sequence.3
+    - blib/man3/SPOPS::Key::Random.3
+    - blib/man3/SPOPS::Key::UUID.3
+    - blib/man3/SPOPS::LDAP.3
+    - blib/man3/SPOPS::LDAP::MultiDatasource.3
+    - blib/man3/SPOPS::Loopback.3
+    - blib/man3/SPOPS::Manual.3
+    - blib/man3/SPOPS::Manual::CodeGeneration.3
+    - blib/man3/SPOPS::Manual::Configuration.3
+    - blib/man3/SPOPS::Manual::Cookbook.3
+    - blib/man3/SPOPS::Manual::Datasource.3
+    - blib/man3/SPOPS::Manual::Exceptions.3
+    - blib/man3/SPOPS::Manual::ImportExport.3
+    - blib/man3/SPOPS::Manual::Intro.3
+    - blib/man3/SPOPS::Manual::Object.3
+    - blib/man3/SPOPS::Manual::ObjectRules.3
+    - blib/man3/SPOPS::Manual::Relationships.3
+    - blib/man3/SPOPS::Manual::Security.3
+    - blib/man3/SPOPS::Manual::Serialization.3
+    - blib/man3/SPOPS::SQLInterface.3
+    - blib/man3/SPOPS::Secure.3
+    - blib/man3/SPOPS::Secure::DBI.3
+    - blib/man3/SPOPS::Secure::Hierarchy.3
+    - blib/man3/SPOPS::Secure::Loopback.3
+    - blib/man3/SPOPS::Secure::Util.3
+    - blib/man3/SPOPS::Tie.3
+    - blib/man3/SPOPS::Tie::StrictField.3
+    - blib/man3/SPOPS::Tool::CreateOnly.3
+    - blib/man3/SPOPS::Tool::DBI::Datasource.3
+    - blib/man3/SPOPS::Tool::DBI::DiscoverField.3
+    - blib/man3/SPOPS::Tool::DBI::FindDefaults.3
+    - blib/man3/SPOPS::Tool::DBI::MaintainLinkedList.3
+    - blib/man3/SPOPS::Tool::DateConvert.3
+    - blib/man3/SPOPS::Tool::LDAP::Datasource.3
+    - blib/man3/SPOPS::Tool::ReadOnly.3
+    - blib/man3/SPOPS::Tool::UTFConvert.3
+    - blib/man3/SPOPS::Utility.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Carp::Assert 0.17 not found.
+    Warning: prerequisite Class::Accessor 0.17 not found.
+    Warning: prerequisite Class::Date 1 not found.
+    Warning: prerequisite Class::Factory 1 not found.
+    Warning: prerequisite Class::Fields 0.14 not found.
+    Warning: prerequisite Devel::StackTrace 0.9 not found.
+    Warning: prerequisite Log::Dispatch 2 not found.
+    ========================================
+    NOTE: Build process changed as of version 0.65. Default
+    build is now automated. See README for details.
+    ========================================
+    
+    You don't appear to have DBI installed; skipping DBI tests.
+    You don't appear to have Net::LDAP installed; skipping LDAP tests.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for SPOPS
+  build_output: |
+    cp SPOPS/Import.pm blib/lib/SPOPS/Import.pm
+    cp SPOPS/Manual/Serialization.pod blib/lib/SPOPS/Manual/Serialization.pod
+    cp SPOPS/Secure/Hierarchy.pm blib/lib/SPOPS/Secure/Hierarchy.pm
+    cp SPOPS/Key/DBI/Pool.pm blib/lib/SPOPS/Key/DBI/Pool.pm
+    cp SPOPS/Iterator/WrapList.pm blib/lib/SPOPS/Iterator/WrapList.pm
+    cp SPOPS/Iterator/LDAP.pm blib/lib/SPOPS/Iterator/LDAP.pm
+    cp SPOPS/Import/DBI/Table.pm blib/lib/SPOPS/Import/DBI/Table.pm
+    cp SPOPS/Import/Object.pm blib/lib/SPOPS/Import/Object.pm
+    cp SPOPS/ClassFactory/DefaultBehavior.pm blib/lib/SPOPS/ClassFactory/DefaultBehavior.pm
+    cp SPOPS/Import/DBI/TableTransform/MySQL.pm blib/lib/SPOPS/Import/DBI/TableTransform/MySQL.pm
+    cp SPOPS/DBI/InterBase.pm blib/lib/SPOPS/DBI/InterBase.pm
+    cp SPOPS/ClassFactory.pm blib/lib/SPOPS/ClassFactory.pm
+    cp SPOPS/Key/DBI/Identity.pm blib/lib/SPOPS/Key/DBI/Identity.pm
+    cp SPOPS/Key/Random.pm blib/lib/SPOPS/Key/Random.pm
+    cp SPOPS/Manual/Object.pod blib/lib/SPOPS/Manual/Object.pod
+    cp SPOPS/Import/DBI/TableTransform/Pg.pm blib/lib/SPOPS/Import/DBI/TableTransform/Pg.pm
+    cp SPOPS/SQLInterface.pm blib/lib/SPOPS/SQLInterface.pm
+    cp SPOPS/Manual/Exceptions.pod blib/lib/SPOPS/Manual/Exceptions.pod
+    cp SPOPS/Secure.pm blib/lib/SPOPS/Secure.pm
+    cp SPOPS/DBI/Pg.pm blib/lib/SPOPS/DBI/Pg.pm
+    cp SPOPS/Tool/DBI/FindDefaults.pm blib/lib/SPOPS/Tool/DBI/FindDefaults.pm
+    cp SPOPS/Export/XML.pm blib/lib/SPOPS/Export/XML.pm
+    cp SPOPS/GDBM.pm blib/lib/SPOPS/GDBM.pm
+    cp SPOPS/DBI.pm blib/lib/SPOPS/DBI.pm
+    cp SPOPS/Import/DBI/TableTransform/Sybase.pm blib/lib/SPOPS/Import/DBI/TableTransform/Sybase.pm
+    cp SPOPS/Import/DBI/Data.pm blib/lib/SPOPS/Import/DBI/Data.pm
+    cp SPOPS/Manual/ImportExport.pod blib/lib/SPOPS/Manual/ImportExport.pod
+    cp SPOPS/Manual/ObjectRules.pod blib/lib/SPOPS/Manual/ObjectRules.pod
+    cp SPOPS/Tie/StrictField.pm blib/lib/SPOPS/Tie/StrictField.pm
+    cp SPOPS/Key/UUID.pm blib/lib/SPOPS/Key/UUID.pm
+    cp SPOPS/Error.pm blib/lib/SPOPS/Error.pm
+    cp SPOPS/Exception/Security.pm blib/lib/SPOPS/Exception/Security.pm
+    cp SPOPS/Import/DBI/TableTransform/InterBase.pm blib/lib/SPOPS/Import/DBI/TableTransform/InterBase.pm
+    cp SPOPS.pm blib/lib/SPOPS.pm
+    cp SPOPS/Key/DBI/HandleField.pm blib/lib/SPOPS/Key/DBI/HandleField.pm
+    cp SPOPS/Manual/Relationships.pod blib/lib/SPOPS/Manual/Relationships.pod
+    cp SPOPS/Iterator.pm blib/lib/SPOPS/Iterator.pm
+    cp SPOPS/Tool/DateConvert.pm blib/lib/SPOPS/Tool/DateConvert.pm
+    cp SPOPS/Export.pm blib/lib/SPOPS/Export.pm
+    cp SPOPS/Manual/Datasource.pod blib/lib/SPOPS/Manual/Datasource.pod
+    cp SPOPS/Tool/DBI/MaintainLinkedList.pm blib/lib/SPOPS/Tool/DBI/MaintainLinkedList.pm
+    cp SPOPS/Key/DBI/Sequence.pm blib/lib/SPOPS/Key/DBI/Sequence.pm
+    cp SPOPS/Tool/DBI/Datasource.pm blib/lib/SPOPS/Tool/DBI/Datasource.pm
+    cp SPOPS/HashFile.pm blib/lib/SPOPS/HashFile.pm
+    cp SPOPS/Iterator/DBI.pm blib/lib/SPOPS/Iterator/DBI.pm
+    cp SPOPS/Manual/Configuration.pod blib/lib/SPOPS/Manual/Configuration.pod
+    cp SPOPS/Tool/UTFConvert.pm blib/lib/SPOPS/Tool/UTFConvert.pm
+    cp SPOPS/Secure/DBI.pm blib/lib/SPOPS/Secure/DBI.pm
+    cp SPOPS/Tie.pm blib/lib/SPOPS/Tie.pm
+    cp SPOPS/Manual.pod blib/lib/SPOPS/Manual.pod
+    cp SPOPS/Initialize.pm blib/lib/SPOPS/Initialize.pm
+    cp SPOPS/DBI/MySQL.pm blib/lib/SPOPS/DBI/MySQL.pm
+    cp SPOPS/Tool/DBI/DiscoverField.pm blib/lib/SPOPS/Tool/DBI/DiscoverField.pm
+    cp SPOPS/ClassFactory/LDAP.pm blib/lib/SPOPS/ClassFactory/LDAP.pm
+    cp SPOPS/Secure/Util.pm blib/lib/SPOPS/Secure/Util.pm
+    cp SPOPS/DBI/Oracle.pm blib/lib/SPOPS/DBI/Oracle.pm
+    cp SPOPS/Import/DBI/TableTransform/Oracle.pm blib/lib/SPOPS/Import/DBI/TableTransform/Oracle.pm
+    cp SPOPS/DBI/Sybase.pm blib/lib/SPOPS/DBI/Sybase.pm
+    cp SPOPS/Export/SQL.pm blib/lib/SPOPS/Export/SQL.pm
+    cp SPOPS/Tool/ReadOnly.pm blib/lib/SPOPS/Tool/ReadOnly.pm
+    cp SPOPS/Tool/CreateOnly.pm blib/lib/SPOPS/Tool/CreateOnly.pm
+    cp SPOPS/Export/DBI/Data.pm blib/lib/SPOPS/Export/DBI/Data.pm
+    cp SPOPS/Manual/CodeGeneration.pod blib/lib/SPOPS/Manual/CodeGeneration.pod
+    cp SPOPS/Import/DBI/TableTransform/SQLite.pm blib/lib/SPOPS/Import/DBI/TableTransform/SQLite.pm
+    cp SPOPS/ClassFactory/DBI.pm blib/lib/SPOPS/ClassFactory/DBI.pm
+    cp SPOPS/Secure/Loopback.pm blib/lib/SPOPS/Secure/Loopback.pm
+    cp SPOPS/DBI/TypeInfo.pm blib/lib/SPOPS/DBI/TypeInfo.pm
+    cp SPOPS/Exception/LDAP.pm blib/lib/SPOPS/Exception/LDAP.pm
+    cp SPOPS/Exception.pm blib/lib/SPOPS/Exception.pm
+    cp SPOPS/LDAP/MultiDatasource.pm blib/lib/SPOPS/LDAP/MultiDatasource.pm
+    cp SPOPS/LDAP.pm blib/lib/SPOPS/LDAP.pm
+    cp SPOPS/Export/Object.pm blib/lib/SPOPS/Export/Object.pm
+    cp SPOPS/Manual/Cookbook.pod blib/lib/SPOPS/Manual/Cookbook.pod
+    cp SPOPS/Manual/Security.pod blib/lib/SPOPS/Manual/Security.pod
+    cp SPOPS/Tool/LDAP/Datasource.pm blib/lib/SPOPS/Tool/LDAP/Datasource.pm
+    cp SPOPS/Utility.pm blib/lib/SPOPS/Utility.pm
+    cp SPOPS/Exception/DBI.pm blib/lib/SPOPS/Exception/DBI.pm
+    cp SPOPS/Manual/Intro.pod blib/lib/SPOPS/Manual/Intro.pod
+    cp SPOPS/Import/DBI/TableTransform.pm blib/lib/SPOPS/Import/DBI/TableTransform.pm
+    cp SPOPS/Export/Perl.pm blib/lib/SPOPS/Export/Perl.pm
+    cp SPOPS/Loopback.pm blib/lib/SPOPS/Loopback.pm
+    cp SPOPS/DBI/SQLite.pm blib/lib/SPOPS/DBI/SQLite.pm
+    Manifying blib/man3/SPOPS::Manual::Serialization.3
+    Manifying blib/man3/SPOPS::Import.3
+    Manifying blib/man3/SPOPS::Secure::Hierarchy.3
+    Manifying blib/man3/SPOPS::Key::DBI::Pool.3
+    Manifying blib/man3/SPOPS::Iterator::WrapList.3
+    Manifying blib/man3/SPOPS::Iterator::LDAP.3
+    Manifying blib/man3/SPOPS::Import::DBI::Table.3
+    Manifying blib/man3/SPOPS::Import::Object.3
+    Manifying blib/man3/SPOPS::ClassFactory::DefaultBehavior.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform::MySQL.3
+    Manifying blib/man3/SPOPS::DBI::InterBase.3
+    Manifying blib/man3/SPOPS::ClassFactory.3
+    Manifying blib/man3/SPOPS::Key::DBI::Identity.3
+    Manifying blib/man3/SPOPS::Key::Random.3
+    Manifying blib/man3/SPOPS::Manual::Object.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform::Pg.3
+    Manifying blib/man3/SPOPS::SQLInterface.3
+    Manifying blib/man3/SPOPS::Manual::Exceptions.3
+    Manifying blib/man3/SPOPS::Secure.3
+    Manifying blib/man3/SPOPS::DBI::Pg.3
+    Manifying blib/man3/SPOPS::Tool::DBI::FindDefaults.3
+    Manifying blib/man3/SPOPS::Export::XML.3
+    Manifying blib/man3/SPOPS::GDBM.3
+    Manifying blib/man3/SPOPS::DBI.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform::Sybase.3
+    Manifying blib/man3/SPOPS::Import::DBI::Data.3
+    Manifying blib/man3/SPOPS::Manual::ImportExport.3
+    Manifying blib/man3/SPOPS::Manual::ObjectRules.3
+    Manifying blib/man3/SPOPS::Tie::StrictField.3
+    Manifying blib/man3/SPOPS::Key::UUID.3
+    Manifying blib/man3/SPOPS::Error.3
+    Manifying blib/man3/SPOPS::Exception::Security.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform::InterBase.3
+    Manifying blib/man3/SPOPS::Key::DBI::HandleField.3
+    Manifying blib/man3/SPOPS.3
+    Manifying blib/man3/SPOPS::Manual::Relationships.3
+    Manifying blib/man3/SPOPS::Iterator.3
+    Manifying blib/man3/SPOPS::Tool::DateConvert.3
+    Manifying blib/man3/SPOPS::Export.3
+    Manifying blib/man3/SPOPS::Manual::Datasource.3
+    Manifying blib/man3/SPOPS::Tool::DBI::MaintainLinkedList.3
+    Manifying blib/man3/SPOPS::Key::DBI::Sequence.3
+    Manifying blib/man3/SPOPS::Tool::DBI::Datasource.3
+    Manifying blib/man3/SPOPS::HashFile.3
+    Manifying blib/man3/SPOPS::Iterator::DBI.3
+    Manifying blib/man3/SPOPS::Manual::Configuration.3
+    Manifying blib/man3/SPOPS::Tool::UTFConvert.3
+    Manifying blib/man3/SPOPS::Secure::DBI.3
+    Manifying blib/man3/SPOPS::Tie.3
+    Manifying blib/man3/SPOPS::Manual.3
+    Manifying blib/man3/SPOPS::Initialize.3
+    Manifying blib/man3/SPOPS::DBI::MySQL.3
+    Manifying blib/man3/SPOPS::Tool::DBI::DiscoverField.3
+    Manifying blib/man3/SPOPS::ClassFactory::LDAP.3
+    Manifying blib/man3/SPOPS::Secure::Util.3
+    Manifying blib/man3/SPOPS::DBI::Oracle.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform::Oracle.3
+    Manifying blib/man3/SPOPS::DBI::Sybase.3
+    Manifying blib/man3/SPOPS::Export::SQL.3
+    Manifying blib/man3/SPOPS::Tool::ReadOnly.3
+    Manifying blib/man3/SPOPS::Tool::CreateOnly.3
+    Manifying blib/man3/SPOPS::Export::DBI::Data.3
+    Manifying blib/man3/SPOPS::Manual::CodeGeneration.3
+    Manifying blib/man3/SPOPS::ClassFactory::DBI.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform::SQLite.3
+    Manifying blib/man3/SPOPS::Secure::Loopback.3
+    Manifying blib/man3/SPOPS::DBI::TypeInfo.3
+    Manifying blib/man3/SPOPS::Exception::LDAP.3
+    Manifying blib/man3/SPOPS::Exception.3
+    Manifying blib/man3/SPOPS::LDAP::MultiDatasource.3
+    Manifying blib/man3/SPOPS::Export::Object.3
+    Manifying blib/man3/SPOPS::LDAP.3
+    Manifying blib/man3/SPOPS::Manual::Security.3
+    Manifying blib/man3/SPOPS::Manual::Cookbook.3
+    Manifying blib/man3/SPOPS::Tool::LDAP::Datasource.3
+    Manifying blib/man3/SPOPS::Exception::DBI.3
+    Manifying blib/man3/SPOPS::Utility.3
+    Manifying blib/man3/SPOPS::Manual::Intro.3
+    Manifying blib/man3/SPOPS::DBI::SQLite.3
+    Manifying blib/man3/SPOPS::Loopback.3
+    Manifying blib/man3/SPOPS::Export::Perl.3
+    Manifying blib/man3/SPOPS::Import::DBI::TableTransform.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK/SPOPS-0.85/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK/SPOPS-0.85
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK/SPOPS-0.85/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK/SPOPS-0.85/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: CWINTERS
+  dist_basename: SPOPS-0.85.tar.gz
+  dist_date: 1084249749
+  dist_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK/SPOPS-0.85
+  dist_extract_path: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK/SPOPS-0.85
+  dist_file: /home/brian/CPAN/authors/id/C/CW/CWINTERS/SPOPS-0.85.tar.gz
+  dist_md5: 7e65324a4ca9b449905cdb39adaede8e
+  dist_size: 290184
+  manifest:
+    - COPYING
+    - COPYING-DOCS
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - RELEASE
+    - SPOPS.pm
+    - SPOPS/ClassFactory.pm
+    - SPOPS/ClassFactory/DBI.pm
+    - SPOPS/ClassFactory/DefaultBehavior.pm
+    - SPOPS/ClassFactory/LDAP.pm
+    - SPOPS/DBI.pm
+    - SPOPS/DBI/InterBase.pm
+    - SPOPS/DBI/MySQL.pm
+    - SPOPS/DBI/Oracle.pm
+    - SPOPS/DBI/Pg.pm
+    - SPOPS/DBI/SQLite.pm
+    - SPOPS/DBI/Sybase.pm
+    - SPOPS/DBI/TypeInfo.pm
+    - SPOPS/Error.pm
+    - SPOPS/Exception.pm
+    - SPOPS/Exception/DBI.pm
+    - SPOPS/Exception/LDAP.pm
+    - SPOPS/Exception/Security.pm
+    - SPOPS/Export.pm
+    - SPOPS/Export/DBI/Data.pm
+    - SPOPS/Export/Object.pm
+    - SPOPS/Export/Perl.pm
+    - SPOPS/Export/SQL.pm
+    - SPOPS/Export/XML.pm
+    - SPOPS/GDBM.pm
+    - SPOPS/HashFile.pm
+    - SPOPS/Import.pm
+    - SPOPS/Import/DBI/Data.pm
+    - SPOPS/Import/DBI/Table.pm
+    - SPOPS/Import/DBI/TableTransform.pm
+    - SPOPS/Import/DBI/TableTransform/InterBase.pm
+    - SPOPS/Import/DBI/TableTransform/MySQL.pm
+    - SPOPS/Import/DBI/TableTransform/Oracle.pm
+    - SPOPS/Import/DBI/TableTransform/Pg.pm
+    - SPOPS/Import/DBI/TableTransform/SQLite.pm
+    - SPOPS/Import/DBI/TableTransform/Sybase.pm
+    - SPOPS/Import/Object.pm
+    - SPOPS/Initialize.pm
+    - SPOPS/Iterator.pm
+    - SPOPS/Iterator/DBI.pm
+    - SPOPS/Iterator/LDAP.pm
+    - SPOPS/Iterator/WrapList.pm
+    - SPOPS/Key/DBI/HandleField.pm
+    - SPOPS/Key/DBI/Identity.pm
+    - SPOPS/Key/DBI/Pool.pm
+    - SPOPS/Key/DBI/Sequence.pm
+    - SPOPS/Key/Random.pm
+    - SPOPS/Key/UUID.pm
+    - SPOPS/LDAP.pm
+    - SPOPS/LDAP/MultiDatasource.pm
+    - SPOPS/Loopback.pm
+    - SPOPS/Manual.pod
+    - SPOPS/Manual/CodeGeneration.pod
+    - SPOPS/Manual/Configuration.pod
+    - SPOPS/Manual/Cookbook.pod
+    - SPOPS/Manual/Datasource.pod
+    - SPOPS/Manual/Exceptions.pod
+    - SPOPS/Manual/ImportExport.pod
+    - SPOPS/Manual/Intro.pod
+    - SPOPS/Manual/Object.pod
+    - SPOPS/Manual/ObjectRules.pod
+    - SPOPS/Manual/Relationships.pod
+    - SPOPS/Manual/Security.pod
+    - SPOPS/Manual/Serialization.pod
+    - SPOPS/SQLInterface.pm
+    - SPOPS/Secure.pm
+    - SPOPS/Secure/DBI.pm
+    - SPOPS/Secure/Hierarchy.pm
+    - SPOPS/Secure/Loopback.pm
+    - SPOPS/Secure/Util.pm
+    - SPOPS/Tie.pm
+    - SPOPS/Tie/StrictField.pm
+    - SPOPS/Tool/CreateOnly.pm
+    - SPOPS/Tool/DBI/Datasource.pm
+    - SPOPS/Tool/DBI/DiscoverField.pm
+    - SPOPS/Tool/DBI/FindDefaults.pm
+    - SPOPS/Tool/DBI/MaintainLinkedList.pm
+    - SPOPS/Tool/DateConvert.pm
+    - SPOPS/Tool/LDAP/Datasource.pm
+    - SPOPS/Tool/ReadOnly.pm
+    - SPOPS/Tool/UTFConvert.pm
+    - SPOPS/Utility.pm
+    - conf/find_table_datatypes.pl
+    - conf/test_dbd_driver.dat
+    - conf/test_dbd_driver.pl
+    - conf/test_dbd_driver.sql
+    - eg/My/Common.pm
+    - eg/My/CommonResources.pm
+    - eg/My/Doodad.pm
+    - eg/My/Group.pm
+    - eg/My/LDAPConnect.pm
+    - eg/My/Security.pm
+    - eg/My/User.pm
+    - eg/README
+    - eg/datasource_configure.pl
+    - eg/datasource_configure_ldap.pl
+    - eg/export_doodads.pl
+    - eg/fetch_all.pl
+    - eg/fetch_doodads.pl
+    - eg/find_defaults_demo.pl
+    - eg/ldap_multidatasource.pl
+    - eg/log4perl.conf
+    - eg/modify_debug_to_l4p.pl
+    - eg/stock_doodads.pl
+    - eg/stock_user_group.pl
+    - eg/users_groups_clear.sql
+    - eg/users_groups_clear_interbase.sql
+    - eg/users_groups_clear_oracle.sql
+    - eg/users_groups_clear_pgsql.sql
+    - eg/users_groups_interbase.sql
+    - eg/users_groups_mysql.sql
+    - eg/users_groups_oracle.sql
+    - eg/users_groups_pgsql.sql
+    - eg/users_groups_sqlite.pl
+    - eg/users_groups_tsql.sql
+    - log4perl.conf
+    - t/00_base.t
+    - t/00_base_case.t
+    - t/01_tie.t
+    - t/02_tie_strict.t
+    - t/03_uuid_key.t
+    - t/04_random_key.t
+    - t/05_exception.t
+    - t/06_ruleset.t
+    - t/07_utility.t
+    - t/10_hash_file.t
+    - t/20_gdbm.t
+    - t/30_dbi.t
+    - t/31_dbi_multifield.t
+    - t/32_dbi_inline_config.t
+    - t/33_dbi_discover_field.t
+    - t/34_dbi_find_defaults.t
+    - t/35_dbi_type_info.t
+    - t/36_dbi_linked_list.t
+    - t/37_dbi_lazy_load.t
+    - t/40_ldap.t
+    - t/41_ldap_inline_config.t
+    - t/50_rule_create_only.t
+    - t/51_rule_read_only.t
+    - t/52_rule_date_convert.t
+    - t/60_export_object.t
+    - t/61_export_xml.t
+    - t/62_export_perl.t
+    - t/63_export_sql.t
+    - t/64_export_dbdata.t
+    - t/80_security.t
+    - t/81_security_hierarchical.t
+    - t/SampleRuleset.pm
+    - t/SecurityCommon.pm
+    - t/config.pl
+    - t/dbi_config.pl
+    - t/hash_file_test.perl
+  manifest_file_info:
+    - bytesize: 15144
+      file_mime_type: ~
+      line_count: ~
+      md5: 7116ef0705885343c9e1b2171a06be0e
+      mtime: 1030497388
+      name: COPYING
+    - bytesize: 16963
+      file_mime_type: ~
+      line_count: ~
+      md5: dd13d75cffee2fa6c56e79401e09f6fc
+      mtime: 1030497389
+      name: COPYING-DOCS
+    - bytesize: 92621
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1084249232
+      name: Changes
+    - bytesize: 3646
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1079098492
+      name: MANIFEST
+    - bytesize: 741
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1084249477
+      name: META.yml
+    - bytesize: 10883
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1073688193
+      name: Makefile.PL
+    - bytesize: 8303
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1077757652
+      name: README
+    - bytesize: 5311
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d649ef069df9885e382417c79f3d5cd
+      mtime: 1079664616
+      name: RELEASE
+    - bytesize: 52367
+      file_mime_type: ~
+      line_count: ~
+      md5: cd21eadcb4613f784b2cf7566d6c7354
+      mtime: 1084249287
+      name: SPOPS.pm
+    - bytesize: 24319
+      file_mime_type: ~
+      line_count: ~
+      md5: 6216a36360937335d9de1f3275973623
+      mtime: 1073701300
+      name: SPOPS/ClassFactory.pm
+    - bytesize: 16518
+      file_mime_type: ~
+      line_count: ~
+      md5: fb221fba0eac5c5f5f9bb828f8dcf505
+      mtime: 1077514109
+      name: SPOPS/ClassFactory/DBI.pm
+    - bytesize: 15977
+      file_mime_type: ~
+      line_count: ~
+      md5: 958d06bb85810df46c77bc0300ccec72
+      mtime: 1079102426
+      name: SPOPS/ClassFactory/DefaultBehavior.pm
+    - bytesize: 13673
+      file_mime_type: ~
+      line_count: ~
+      md5: 67b759457a9f45cd91e74476baaf9974
+      mtime: 1073701300
+      name: SPOPS/ClassFactory/LDAP.pm
+    - bytesize: 65226
+      file_mime_type: ~
+      line_count: ~
+      md5: b2ac936e3a1444f13eba81572aa3c612
+      mtime: 1084241306
+      name: SPOPS/DBI.pm
+    - bytesize: 4892
+      file_mime_type: ~
+      line_count: ~
+      md5: e76bf1f6bba676cbc721e238fcf02047
+      mtime: 1073701300
+      name: SPOPS/DBI/InterBase.pm
+    - bytesize: 3193
+      file_mime_type: ~
+      line_count: ~
+      md5: 328cec701451d51cf61227c31ee63393
+      mtime: 1073701300
+      name: SPOPS/DBI/MySQL.pm
+    - bytesize: 2231
+      file_mime_type: ~
+      line_count: ~
+      md5: e4d207ecdf80f95ca1e01135f8e9a5bf
+      mtime: 1079664573
+      name: SPOPS/DBI/Oracle.pm
+    - bytesize: 5268
+      file_mime_type: ~
+      line_count: ~
+      md5: 249f403cd657714f9b75c31f5a2c759d
+      mtime: 1079664573
+      name: SPOPS/DBI/Pg.pm
+    - bytesize: 3121
+      file_mime_type: ~
+      line_count: ~
+      md5: f0a745d5fad87892d6e44f0a10f98826
+      mtime: 1073701300
+      name: SPOPS/DBI/SQLite.pm
+    - bytesize: 3218
+      file_mime_type: ~
+      line_count: ~
+      md5: b6fabab8ec93a71432a352ab25a121d2
+      mtime: 1073424355
+      name: SPOPS/DBI/Sybase.pm
+    - bytesize: 11589
+      file_mime_type: ~
+      line_count: ~
+      md5: fddcc82389d69adcccf2d78cefcd96e0
+      mtime: 1077757403
+      name: SPOPS/DBI/TypeInfo.pm
+    - bytesize: 5275
+      file_mime_type: ~
+      line_count: ~
+      md5: a374bc0f790023cc17523a7253be1fee
+      mtime: 1041487225
+      name: SPOPS/Error.pm
+    - bytesize: 10890
+      file_mime_type: ~
+      line_count: ~
+      md5: f27532bbe7b5bd46dd2f2c3e206d6b19
+      mtime: 1060659557
+      name: SPOPS/Exception.pm
+    - bytesize: 3180
+      file_mime_type: ~
+      line_count: ~
+      md5: e3fc3601f80b0bf05d00ef079e7bfd64
+      mtime: 1045432918
+      name: SPOPS/Exception/DBI.pm
+    - bytesize: 2199
+      file_mime_type: ~
+      line_count: ~
+      md5: bf8cca50ea356cbed8263f06ca02a8c1
+      mtime: 1041487223
+      name: SPOPS/Exception/LDAP.pm
+    - bytesize: 2677
+      file_mime_type: ~
+      line_count: ~
+      md5: 1340d758b78a72f8ac18069a4da5eb0a
+      mtime: 1041487223
+      name: SPOPS/Exception/Security.pm
+    - bytesize: 6842
+      file_mime_type: ~
+      line_count: ~
+      md5: 70387370763a32f050b51967a36d0178
+      mtime: 1041487225
+      name: SPOPS/Export.pm
+    - bytesize: 1516
+      file_mime_type: ~
+      line_count: ~
+      md5: 9153f7948a6db47472f33f8e9a89c594
+      mtime: 1041487223
+      name: SPOPS/Export/DBI/Data.pm
+    - bytesize: 2595
+      file_mime_type: ~
+      line_count: ~
+      md5: da1af0a3b0360175c0570f2aa774e831
+      mtime: 1041487223
+      name: SPOPS/Export/Object.pm
+    - bytesize: 1333
+      file_mime_type: ~
+      line_count: ~
+      md5: 56c069d2a433f2c3d02a91697c53590c
+      mtime: 1041487223
+      name: SPOPS/Export/Perl.pm
+    - bytesize: 2952
+      file_mime_type: ~
+      line_count: ~
+      md5: a78f3a8987d47edba97a77cc9a51a004
+      mtime: 1041487223
+      name: SPOPS/Export/SQL.pm
+    - bytesize: 3034
+      file_mime_type: ~
+      line_count: ~
+      md5: a12222d327502785ab53eff13ef7b250
+      mtime: 1041487223
+      name: SPOPS/Export/XML.pm
+    - bytesize: 12994
+      file_mime_type: ~
+      line_count: ~
+      md5: cd91ea06ca7e15605066ea4902d03976
+      mtime: 1073701300
+      name: SPOPS/GDBM.pm
+    - bytesize: 10976
+      file_mime_type: ~
+      line_count: ~
+      md5: cb3f05ba1f65d300c136ab640157c649
+      mtime: 1070680439
+      name: SPOPS/HashFile.pm
+    - bytesize: 5982
+      file_mime_type: ~
+      line_count: ~
+      md5: a6a918210324762fd63069511dd46195
+      mtime: 1050759076
+      name: SPOPS/Import.pm
+    - bytesize: 4089
+      file_mime_type: ~
+      line_count: ~
+      md5: 16ca97e837b78a2af93540f91b38a256
+      mtime: 1041487223
+      name: SPOPS/Import/DBI/Data.pm
+    - bytesize: 7886
+      file_mime_type: ~
+      line_count: ~
+      md5: b72df1c68824447e63bd30e808047e68
+      mtime: 1050935974
+      name: SPOPS/Import/DBI/Table.pm
+    - bytesize: 4762
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fb99979e5943fdcb29c83cbd8d828d3
+      mtime: 1050935975
+      name: SPOPS/Import/DBI/TableTransform.pm
+    - bytesize: 1847
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f57e848ee867be7866ba94683b427ea
+      mtime: 1041909833
+      name: SPOPS/Import/DBI/TableTransform/InterBase.pm
+    - bytesize: 1683
+      file_mime_type: ~
+      line_count: ~
+      md5: eabd85cfb791d876cbec27d14809eb65
+      mtime: 1041909833
+      name: SPOPS/Import/DBI/TableTransform/MySQL.pm
+    - bytesize: 1965
+      file_mime_type: ~
+      line_count: ~
+      md5: f0d44e930d3ba43870f8a4718c99e50a
+      mtime: 1060659655
+      name: SPOPS/Import/DBI/TableTransform/Oracle.pm
+    - bytesize: 2123
+      file_mime_type: ~
+      line_count: ~
+      md5: 00568404b3a446a617974af0899b5a46
+      mtime: 1058361795
+      name: SPOPS/Import/DBI/TableTransform/Pg.pm
+    - bytesize: 1738
+      file_mime_type: ~
+      line_count: ~
+      md5: 533bfd72beb8379f92188885ee40412b
+      mtime: 1041909833
+      name: SPOPS/Import/DBI/TableTransform/SQLite.pm
+    - bytesize: 1777
+      file_mime_type: ~
+      line_count: ~
+      md5: e15b7c0745d7472386e5c21f85806f43
+      mtime: 1041909833
+      name: SPOPS/Import/DBI/TableTransform/Sybase.pm
+    - bytesize: 6285
+      file_mime_type: ~
+      line_count: ~
+      md5: 6446a3e325befa9c428c082ea5836f48
+      mtime: 1050978665
+      name: SPOPS/Import/Object.pm
+    - bytesize: 9008
+      file_mime_type: ~
+      line_count: ~
+      md5: e1dda20f2f22f6e412de2092a52058f2
+      mtime: 1073701300
+      name: SPOPS/Initialize.pm
+    - bytesize: 15146
+      file_mime_type: ~
+      line_count: ~
+      md5: a6c0594ddb8d0bd8101a2b7675ca561b
+      mtime: 1077757543
+      name: SPOPS/Iterator.pm
+    - bytesize: 7052
+      file_mime_type: ~
+      line_count: ~
+      md5: bdcee62ed4348b8d549a5da2148380ce
+      mtime: 1077757337
+      name: SPOPS/Iterator/DBI.pm
+    - bytesize: 6890
+      file_mime_type: ~
+      line_count: ~
+      md5: cbf54925f2e08f9be9e34e57d3e8bec7
+      mtime: 1073701300
+      name: SPOPS/Iterator/LDAP.pm
+    - bytesize: 2823
+      file_mime_type: ~
+      line_count: ~
+      md5: cfea169356623818fb0bd0c04f5630d9
+      mtime: 1073701300
+      name: SPOPS/Iterator/WrapList.pm
+    - bytesize: 3329
+      file_mime_type: ~
+      line_count: ~
+      md5: 901c5660dd9f9b1427f992f317cbbd74
+      mtime: 1073701299
+      name: SPOPS/Key/DBI/HandleField.pm
+    - bytesize: 2281
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b1ce8bae5ed8583f3a60547a7a4a492
+      mtime: 1073701299
+      name: SPOPS/Key/DBI/Identity.pm
+    - bytesize: 3533
+      file_mime_type: ~
+      line_count: ~
+      md5: ea445c2dc5df0ac6ee6f1cd33c77ed95
+      mtime: 1073701299
+      name: SPOPS/Key/DBI/Pool.pm
+    - bytesize: 4695
+      file_mime_type: ~
+      line_count: ~
+      md5: c8cb84fddb9435690effafec2e07e028
+      mtime: 1073701299
+      name: SPOPS/Key/DBI/Sequence.pm
+    - bytesize: 2062
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e6a0ffcea35e8a41cf009407f97cfdf
+      mtime: 1073701300
+      name: SPOPS/Key/Random.pm
+    - bytesize: 1381
+      file_mime_type: ~
+      line_count: ~
+      md5: dbfb97401b400053dc742621c6e7b319
+      mtime: 1073701299
+      name: SPOPS/Key/UUID.pm
+    - bytesize: 29317
+      file_mime_type: ~
+      line_count: ~
+      md5: 145dae71034492ecb3d4eb536b362ce8
+      mtime: 1073701300
+      name: SPOPS/LDAP.pm
+    - bytesize: 11616
+      file_mime_type: ~
+      line_count: ~
+      md5: 27c267574a9fb9d6eb53b9426f5dd9ec
+      mtime: 1073701299
+      name: SPOPS/LDAP/MultiDatasource.pm
+    - bytesize: 7241
+      file_mime_type: ~
+      line_count: ~
+      md5: 44cc62d38b701b5d7043bb9903f1c604
+      mtime: 1079103148
+      name: SPOPS/Loopback.pm
+    - bytesize: 10328
+      file_mime_type: ~
+      line_count: ~
+      md5: 71791846881f91561d96dee75a243765
+      mtime: 1084249302
+      name: SPOPS/Manual.pod
+    - bytesize: 9689
+      file_mime_type: ~
+      line_count: ~
+      md5: dcfd5c0fc1435649d4e0cbf45554b948
+      mtime: 1084249302
+      name: SPOPS/Manual/CodeGeneration.pod
+    - bytesize: 20429
+      file_mime_type: ~
+      line_count: ~
+      md5: bf27a3d5e9bde18bba29cbfb50b6b942
+      mtime: 1084249302
+      name: SPOPS/Manual/Configuration.pod
+    - bytesize: 7748
+      file_mime_type: ~
+      line_count: ~
+      md5: c458c345b1cd866533b35677686e9371
+      mtime: 1084249302
+      name: SPOPS/Manual/Cookbook.pod
+    - bytesize: 501
+      file_mime_type: ~
+      line_count: ~
+      md5: ada8e39526f351f78bf28bd59e2c46b4
+      mtime: 1084249302
+      name: SPOPS/Manual/Datasource.pod
+    - bytesize: 5180
+      file_mime_type: ~
+      line_count: ~
+      md5: da8ec324ea1b71dbcf87d51c1d85b1b2
+      mtime: 1084249302
+      name: SPOPS/Manual/Exceptions.pod
+    - bytesize: 8908
+      file_mime_type: ~
+      line_count: ~
+      md5: 25e5165f74de769ad46722c7b6b01dc7
+      mtime: 1084249302
+      name: SPOPS/Manual/ImportExport.pod
+    - bytesize: 4282
+      file_mime_type: ~
+      line_count: ~
+      md5: 4785ee3f2a134f6d2b7a7aa7d27aca34
+      mtime: 1084249302
+      name: SPOPS/Manual/Intro.pod
+    - bytesize: 18476
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d5442bfae9de53b0e2c7672a965675c
+      mtime: 1084249302
+      name: SPOPS/Manual/Object.pod
+    - bytesize: 7358
+      file_mime_type: ~
+      line_count: ~
+      md5: 3bb4f411d8212ccba0702b1f1953665b
+      mtime: 1084249303
+      name: SPOPS/Manual/ObjectRules.pod
+    - bytesize: 20617
+      file_mime_type: ~
+      line_count: ~
+      md5: c4a62b2b6aa3afc183bb35dfe21c21e2
+      mtime: 1084249303
+      name: SPOPS/Manual/Relationships.pod
+    - bytesize: 13284
+      file_mime_type: ~
+      line_count: ~
+      md5: ace69821f8bff91145cd0183de332e1b
+      mtime: 1084249303
+      name: SPOPS/Manual/Security.pod
+    - bytesize: 5820
+      file_mime_type: ~
+      line_count: ~
+      md5: 81d022bbda77006bac02e124d754714b
+      mtime: 1084249303
+      name: SPOPS/Manual/Serialization.pod
+    - bytesize: 28857
+      file_mime_type: ~
+      line_count: ~
+      md5: f87cd551d36d8cb83446a1da4241f5ac
+      mtime: 1077757499
+      name: SPOPS/SQLInterface.pm
+    - bytesize: 39118
+      file_mime_type: ~
+      line_count: ~
+      md5: a7834dc2c75744086340d03c3feda817
+      mtime: 1084241379
+      name: SPOPS/Secure.pm
+    - bytesize: 11104
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bef68f245258b2817870095b14da727
+      mtime: 1077072895
+      name: SPOPS/Secure/DBI.pm
+    - bytesize: 17415
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dc3666dc579c86854b831fd39b15646
+      mtime: 1084249288
+      name: SPOPS/Secure/Hierarchy.pm
+    - bytesize: 3196
+      file_mime_type: ~
+      line_count: ~
+      md5: 44c871b381ac7d58ee4a53d76ec9b3b4
+      mtime: 1073701299
+      name: SPOPS/Secure/Loopback.pm
+    - bytesize: 4879
+      file_mime_type: ~
+      line_count: ~
+      md5: d5cab73879b26e31509617fee53e3bc1
+      mtime: 1077072895
+      name: SPOPS/Secure/Util.pm
+    - bytesize: 19196
+      file_mime_type: ~
+      line_count: ~
+      md5: 69be59909d0f6d4a58edfc1d0f4c5ad3
+      mtime: 1083440727
+      name: SPOPS/Tie.pm
+    - bytesize: 5204
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ae3134a468d7df0a9c63696e42bb889
+      mtime: 1084241254
+      name: SPOPS/Tie/StrictField.pm
+    - bytesize: 3227
+      file_mime_type: ~
+      line_count: ~
+      md5: 0456e985e329c778ce24d36573ad0a7a
+      mtime: 1073701299
+      name: SPOPS/Tool/CreateOnly.pm
+    - bytesize: 4202
+      file_mime_type: ~
+      line_count: ~
+      md5: 3452bef63e4bcd20676c6a48e75eb1c4
+      mtime: 1073701299
+      name: SPOPS/Tool/DBI/Datasource.pm
+    - bytesize: 3341
+      file_mime_type: ~
+      line_count: ~
+      md5: baa1ae1709df1efd8bbe5696da321798
+      mtime: 1079102303
+      name: SPOPS/Tool/DBI/DiscoverField.pm
+    - bytesize: 3612
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cf365292d02edd616756b8ec3702a71
+      mtime: 1073701299
+      name: SPOPS/Tool/DBI/FindDefaults.pm
+    - bytesize: 13253
+      file_mime_type: ~
+      line_count: ~
+      md5: 39c0e1a533f037520dd021cd49aef49a
+      mtime: 1073701299
+      name: SPOPS/Tool/DBI/MaintainLinkedList.pm
+    - bytesize: 8321
+      file_mime_type: ~
+      line_count: ~
+      md5: 3821576470f061a1e45ae37085b80bf4
+      mtime: 1077757297
+      name: SPOPS/Tool/DateConvert.pm
+    - bytesize: 4073
+      file_mime_type: ~
+      line_count: ~
+      md5: 60f6c62cc439fd39fe70e3d0753242af
+      mtime: 1073701299
+      name: SPOPS/Tool/LDAP/Datasource.pm
+    - bytesize: 2576
+      file_mime_type: ~
+      line_count: ~
+      md5: 47d17a6e4323e58c8995b843c5406052
+      mtime: 1073701299
+      name: SPOPS/Tool/ReadOnly.pm
+    - bytesize: 3644
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e0bd17cbe170b52da14c62bf90a4b58
+      mtime: 1073701299
+      name: SPOPS/Tool/UTFConvert.pm
+    - bytesize: 8063
+      file_mime_type: ~
+      line_count: ~
+      md5: fa3eea6bb4422ddcbdbed994e053cbc0
+      mtime: 1073701300
+      name: SPOPS/Utility.pm
+    - bytesize: 809
+      file_mime_type: ~
+      line_count: ~
+      md5: 14e213bebceca7b27074c35cecf64bcf
+      mtime: 1030497391
+      name: conf/find_table_datatypes.pl
+    - bytesize: 102
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a0a864c415470c8ed9e7743ee589966
+      mtime: 1030497391
+      name: conf/test_dbd_driver.dat
+    - bytesize: 6841
+      file_mime_type: ~
+      line_count: ~
+      md5: c43f3cc99da2eaff1fdcd434c9a6409e
+      mtime: 1030497391
+      name: conf/test_dbd_driver.pl
+    - bytesize: 335
+      file_mime_type: ~
+      line_count: ~
+      md5: ecea09f8220340b0d0b8b333d34c0976
+      mtime: 1030497391
+      name: conf/test_dbd_driver.sql
+    - bytesize: 876
+      file_mime_type: ~
+      line_count: ~
+      md5: b048349cb9856449962be33fd9c0f1dc
+      mtime: 1073702998
+      name: eg/My/Common.pm
+    - bytesize: 1149
+      file_mime_type: ~
+      line_count: ~
+      md5: 0815673a547f67d8abd5f1eeef6a2ca0
+      mtime: 1058271587
+      name: eg/My/CommonResources.pm
+    - bytesize: 2100
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d0d9c6f4ffd9037ef99310307ff2db5
+      mtime: 1058271587
+      name: eg/My/Doodad.pm
+    - bytesize: 1386
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b7f7c08bd3d9644f5897aa7b8a7db69
+      mtime: 1058271587
+      name: eg/My/Group.pm
+    - bytesize: 1773
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ce28f41796864967f19f7bdb582c11
+      mtime: 1030497392
+      name: eg/My/LDAPConnect.pm
+    - bytesize: 1271
+      file_mime_type: ~
+      line_count: ~
+      md5: 79511632b41c38b52b9f0e3e143f6f90
+      mtime: 1073702998
+      name: eg/My/Security.pm
+    - bytesize: 4114
+      file_mime_type: ~
+      line_count: ~
+      md5: c2ed913c5d46ea27fbada0f9d41b5392
+      mtime: 1058271587
+      name: eg/My/User.pm
+    - bytesize: 3932
+      file_mime_type: ~
+      line_count: ~
+      md5: 386e377ea13239267a8e74071bbe9de7
+      mtime: 1073702998
+      name: eg/README
+    - bytesize: 1103
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f75e66605a501c02d9c726dea723720
+      mtime: 1073702998
+      name: eg/datasource_configure.pl
+    - bytesize: 1193
+      file_mime_type: ~
+      line_count: ~
+      md5: 38cd7c81cfa4596985c956e216215363
+      mtime: 1073702998
+      name: eg/datasource_configure_ldap.pl
+    - bytesize: 666
+      file_mime_type: ~
+      line_count: ~
+      md5: ad69ca224100663aa3a85cd0a4f930da
+      mtime: 1073702998
+      name: eg/export_doodads.pl
+    - bytesize: 1319
+      file_mime_type: ~
+      line_count: ~
+      md5: c083cf313b2f636429cdff4dfe6c21e4
+      mtime: 1073702998
+      name: eg/fetch_all.pl
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: e889083a81c30a5dfe7f9ff264078463
+      mtime: 1073702998
+      name: eg/fetch_doodads.pl
+    - bytesize: 1855
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ab76fcce42a0b7652631b9200cd1f20
+      mtime: 1073702562
+      name: eg/find_defaults_demo.pl
+    - bytesize: 1131
+      file_mime_type: ~
+      line_count: ~
+      md5: c5a06b84c4224e43826f74ea92c02536
+      mtime: 1073702998
+      name: eg/ldap_multidatasource.pl
+    - bytesize: 1155
+      file_mime_type: ~
+      line_count: ~
+      md5: 9319e9b84c5b21b272946226d84fc0fe
+      mtime: 1079356302
+      name: eg/log4perl.conf
+    - bytesize: 8859
+      file_mime_type: ~
+      line_count: ~
+      md5: 2eddd7b902b9aff65ec4b181bf261f6c
+      mtime: 1073659755
+      name: eg/modify_debug_to_l4p.pl
+    - bytesize: 1084
+      file_mime_type: ~
+      line_count: ~
+      md5: 59af29ba1d0ea1a95f8ef49ef0708dcb
+      mtime: 1073702998
+      name: eg/stock_doodads.pl
+    - bytesize: 2675
+      file_mime_type: ~
+      line_count: ~
+      md5: 422a05aab112c15da680f63a6fae26ae
+      mtime: 1073702998
+      name: eg/stock_user_group.pl
+    - bytesize: 131
+      file_mime_type: ~
+      line_count: ~
+      md5: e3fe105627ddbb9792739ce031b3384a
+      mtime: 1030497392
+      name: eg/users_groups_clear.sql
+    - bytesize: 254
+      file_mime_type: ~
+      line_count: ~
+      md5: c68ce00bf217f6b35a264579a80cc647
+      mtime: 1030497392
+      name: eg/users_groups_clear_interbase.sql
+    - bytesize: 251
+      file_mime_type: ~
+      line_count: ~
+      md5: ece3fe45cd95459145f9677ec102dea5
+      mtime: 1030497392
+      name: eg/users_groups_clear_oracle.sql
+    - bytesize: 251
+      file_mime_type: ~
+      line_count: ~
+      md5: 51a9baee0154a5408d7387d7568bd781
+      mtime: 1030497392
+      name: eg/users_groups_clear_pgsql.sql
+    - bytesize: 1310
+      file_mime_type: ~
+      line_count: ~
+      md5: 521ecf2cb65cf80c105f159134148943
+      mtime: 1030497392
+      name: eg/users_groups_interbase.sql
+    - bytesize: 1294
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ea7943f4cbc744e9f502729cfdaadb2
+      mtime: 1030497392
+      name: eg/users_groups_mysql.sql
+    - bytesize: 1390
+      file_mime_type: ~
+      line_count: ~
+      md5: 849cd382d787185a96ebbbe773cc3930
+      mtime: 1030497392
+      name: eg/users_groups_oracle.sql
+    - bytesize: 1361
+      file_mime_type: ~
+      line_count: ~
+      md5: 63a1b35dc387971e6cdfc59e223573b6
+      mtime: 1030497392
+      name: eg/users_groups_pgsql.sql
+    - bytesize: 1916
+      file_mime_type: ~
+      line_count: ~
+      md5: 8509ed8b20d51223537c7c40c4ae401e
+      mtime: 1073702666
+      name: eg/users_groups_sqlite.pl
+    - bytesize: 1330
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c2d0f3291334747b9cb2db5e714d0c7
+      mtime: 1030497392
+      name: eg/users_groups_tsql.sql
+    - bytesize: 1151
+      file_mime_type: ~
+      line_count: ~
+      md5: 180c55960a27836f6be1e88aa068600c
+      mtime: 1079356322
+      name: log4perl.conf
+    - bytesize: 8643
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b2ea2895ae2e03f8b1ecaf9788280ee
+      mtime: 1079102199
+      name: t/00_base.t
+    - bytesize: 8380
+      file_mime_type: ~
+      line_count: ~
+      md5: 2df4ef28a1f4659f80972b48056bcb3a
+      mtime: 1079103257
+      name: t/00_base_case.t
+    - bytesize: 2962
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a5b35abc3741e692d7d9e29d04a9a0f
+      mtime: 1077760950
+      name: t/01_tie.t
+    - bytesize: 916
+      file_mime_type: ~
+      line_count: ~
+      md5: 29b410c279f8a4a24e7201d736142e72
+      mtime: 1030497392
+      name: t/02_tie_strict.t
+    - bytesize: 1429
+      file_mime_type: ~
+      line_count: ~
+      md5: 86baaa4e1c14660e6263a1707ba8bc9a
+      mtime: 1077760950
+      name: t/03_uuid_key.t
+    - bytesize: 1299
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a1d2a552cfee944eb3c5315976aab0a
+      mtime: 1077760950
+      name: t/04_random_key.t
+    - bytesize: 4951
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f073db84410144a5cc1f2479fe586ca
+      mtime: 1045432916
+      name: t/05_exception.t
+    - bytesize: 1271
+      file_mime_type: ~
+      line_count: ~
+      md5: e616768e323a26468f2ead150287bb34
+      mtime: 1077760950
+      name: t/06_ruleset.t
+    - bytesize: 3000
+      file_mime_type: ~
+      line_count: ~
+      md5: c0433636cede3a49c95b7a8e2c9a538d
+      mtime: 1077760949
+      name: t/07_utility.t
+    - bytesize: 3010
+      file_mime_type: ~
+      line_count: ~
+      md5: fb2228e8ecdd67e839dcfca0621a7e22
+      mtime: 1077760949
+      name: t/10_hash_file.t
+    - bytesize: 3152
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d00985be59ab98244b939f369f31e67
+      mtime: 1030497392
+      name: t/20_gdbm.t
+    - bytesize: 16159
+      file_mime_type: ~
+      line_count: ~
+      md5: d06e9a94e5d3b86696b6ef50971b8385
+      mtime: 1052594561
+      name: t/30_dbi.t
+    - bytesize: 6735
+      file_mime_type: ~
+      line_count: ~
+      md5: 705dbe223cf46fc45ea983e4073a35e0
+      mtime: 1030497392
+      name: t/31_dbi_multifield.t
+    - bytesize: 1399
+      file_mime_type: ~
+      line_count: ~
+      md5: bd0765ad79b7d518c59ea61b8d0ef97b
+      mtime: 1031575237
+      name: t/32_dbi_inline_config.t
+    - bytesize: 1816
+      file_mime_type: ~
+      line_count: ~
+      md5: c20d7e2e0e780c12a0664f7274c1bc7f
+      mtime: 1031575237
+      name: t/33_dbi_discover_field.t
+    - bytesize: 2326
+      file_mime_type: ~
+      line_count: ~
+      md5: 4faa9e25c63dfe5f4a839e8d9a9b7830
+      mtime: 1030497392
+      name: t/34_dbi_find_defaults.t
+    - bytesize: 5370
+      file_mime_type: ~
+      line_count: ~
+      md5: b1f6bf15c3b62ec28466ebebdaafd91b
+      mtime: 1041570770
+      name: t/35_dbi_type_info.t
+    - bytesize: 4763
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b21abfd3dcae48704ba42cae7474081
+      mtime: 1041487109
+      name: t/36_dbi_linked_list.t
+    - bytesize: 4156
+      file_mime_type: ~
+      line_count: ~
+      md5: 87f1e63b9aa9183f7ab466b374fbb14e
+      mtime: 1045806089
+      name: t/37_dbi_lazy_load.t
+    - bytesize: 12810
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bea00ed5f7f432b9885ca189cdc931e
+      mtime: 1034251662
+      name: t/40_ldap.t
+    - bytesize: 2224
+      file_mime_type: ~
+      line_count: ~
+      md5: 7811d197e262b2b81c4e51ae29579957
+      mtime: 1034251662
+      name: t/41_ldap_inline_config.t
+    - bytesize: 1427
+      file_mime_type: ~
+      line_count: ~
+      md5: e8c1bc25a40cbd245b102c73257c6108
+      mtime: 1077760949
+      name: t/50_rule_create_only.t
+    - bytesize: 1255
+      file_mime_type: ~
+      line_count: ~
+      md5: d3eb4b1366798e3d34c27541a494dcea
+      mtime: 1077760949
+      name: t/51_rule_read_only.t
+    - bytesize: 4539
+      file_mime_type: ~
+      line_count: ~
+      md5: 106bb85b6cd42fa8c0d100f3c07e6185
+      mtime: 1077760949
+      name: t/52_rule_date_convert.t
+    - bytesize: 3004
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c94ffa0043b644ad0d5559e0a94f368
+      mtime: 1077760949
+      name: t/60_export_object.t
+    - bytesize: 3189
+      file_mime_type: ~
+      line_count: ~
+      md5: ac00f289745c1d8ceb6f82c2b9cec855
+      mtime: 1077760949
+      name: t/61_export_xml.t
+    - bytesize: 2669
+      file_mime_type: ~
+      line_count: ~
+      md5: 70c306d7e6ac717fb93eb78ab672b90d
+      mtime: 1077760949
+      name: t/62_export_perl.t
+    - bytesize: 3007
+      file_mime_type: ~
+      line_count: ~
+      md5: c228856c1dcc45103336a571edda7722
+      mtime: 1077760949
+      name: t/63_export_sql.t
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: be4abd004781dcc159dbd6ce459981bb
+      mtime: 1077760949
+      name: t/64_export_dbdata.t
+    - bytesize: 7803
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eb1cbd1ec3d8d529e85150844cf8b41
+      mtime: 1077760949
+      name: t/80_security.t
+    - bytesize: 6098
+      file_mime_type: ~
+      line_count: ~
+      md5: 209887bcbdad6a76486fd3c9843db052
+      mtime: 1077760949
+      name: t/81_security_hierarchical.t
+    - bytesize: 447
+      file_mime_type: ~
+      line_count: ~
+      md5: cf7531e4d15434fa5a2e53b31f529b94
+      mtime: 1030497392
+      name: t/SampleRuleset.pm
+    - bytesize: 688
+      file_mime_type: ~
+      line_count: ~
+      md5: eb7136a9a8990decb9419606ab3574b3
+      mtime: 1032209028
+      name: t/SecurityCommon.pm
+    - bytesize: 944
+      file_mime_type: ~
+      line_count: ~
+      md5: aa8b7d371136c069b9b0bbb7d6089f68
+      mtime: 1077760949
+      name: t/config.pl
+    - bytesize: 5528
+      file_mime_type: ~
+      line_count: ~
+      md5: a4bab952be9275175cc599d7cd5b8424
+      mtime: 1041227715
+      name: t/dbi_config.pl
+    - bytesize: 6131
+      file_mime_type: ~
+      line_count: ~
+      md5: 39172c4fc8a87b79dd56f669350a7255
+      mtime: 1030497392
+      name: t/hash_file_test.perl
+  module_info:
+    - bytesize: 52367
+      file_mime_type: ~
+      line_count: ~
+      md5: 2fb09945997cccd52e2aa6a90d5a7d7b
+      module_name_from_file_guess: SPOPS
+      mtime: 1084249287
+      name: blib/lib/SPOPS.pm
+      packages:
+        - SPOPS
+      primary_package: SPOPS
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - Log::Log4perl
+        - SPOPS::ClassFactory::DefaultBehavior
+        - SPOPS::Exception
+        - SPOPS::Tie
+        - SPOPS::Tie::StrictField
+        - SPOPS::Secure
+        - SPOPS::Utility
+        - Carp
+        - Storable
+      version_info:
+        filename: blib/lib/SPOPS.pm
+        identifier: SPOPS::VERSION
+        line_number: 18
+        sigil: $
+        value: 0.85
+    - bytesize: 24319
+      file_mime_type: ~
+      line_count: ~
+      md5: 05189c820e7b08ecc32d40846f6eb31e
+      module_name_from_file_guess: SPOPS::ClassFactory
+      mtime: 1073701300
+      name: blib/lib/SPOPS/ClassFactory.pm
+      packages:
+        - SPOPS::ClassFactory
+      primary_package: SPOPS::ClassFactory
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - Class::ISA
+        - Data::Dumper
+        - SPOPS
+        - SPOPS::Exception
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/ClassFactory.pm
+        identifier: SPOPS::ClassFactory::VERSION
+        line_number: 14
+        sigil: $
+        value: 3.05
+    - bytesize: 16518
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d48327949ce78c83fec4b6552cf462c
+      module_name_from_file_guess: SPOPS::ClassFactory::DBI
+      mtime: 1077514109
+      name: blib/lib/SPOPS/ClassFactory/DBI.pm
+      packages:
+        - SPOPS::ClassFactory::DBI
+      primary_package: SPOPS::ClassFactory::DBI
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/ClassFactory/DBI.pm
+        identifier: SPOPS::ClassFactory::DBI::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.10
+    - bytesize: 15977
+      file_mime_type: ~
+      line_count: ~
+      md5: feb9bc9e9f72861afc41d70b155cb9d6
+      module_name_from_file_guess: SPOPS::ClassFactory::DefaultBehavior
+      mtime: 1079102426
+      name: blib/lib/SPOPS/ClassFactory/DefaultBehavior.pm
+      packages:
+        - SPOPS::ClassFactory::DefaultBehavior
+      primary_package: SPOPS::ClassFactory::DefaultBehavior
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/ClassFactory/DefaultBehavior.pm
+        identifier: SPOPS::ClassFactory::DefaultBehavior::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.09
+    - bytesize: 13673
+      file_mime_type: ~
+      line_count: ~
+      md5: c3ff421500054423055085e62be50537
+      module_name_from_file_guess: SPOPS::ClassFactory::LDAP
+      mtime: 1073701300
+      name: blib/lib/SPOPS/ClassFactory/LDAP.pm
+      packages:
+        - SPOPS::ClassFactory::LDAP
+      primary_package: SPOPS::ClassFactory::LDAP
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/ClassFactory/LDAP.pm
+        identifier: SPOPS::ClassFactory::LDAP::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 65226
+      file_mime_type: ~
+      line_count: ~
+      md5: 1351a8df1953edef8a325bfb8f67c259
+      module_name_from_file_guess: SPOPS::DBI
+      mtime: 1084241306
+      name: blib/lib/SPOPS/DBI.pm
+      packages:
+        - SPOPS::DBI
+      primary_package: SPOPS::DBI
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - DBI
+        - Log::Log4perl
+        - SPOPS::Exception
+        - SPOPS::Exception::DBI
+        - SPOPS::Iterator::DBI
+        - SPOPS::Secure
+        - SPOPS::Tie
+        - SPOPS::ClassFactory::DBI
+      version_info:
+        filename: blib/lib/SPOPS/DBI.pm
+        identifier: SPOPS::DBI::VERSION
+        line_number: 18
+        sigil: $
+        value: 3.21
+    - bytesize: 4892
+      file_mime_type: ~
+      line_count: ~
+      md5: 7066565ff77347d1794d4931c779c9f7
+      module_name_from_file_guess: SPOPS::DBI::InterBase
+      mtime: 1073701300
+      name: blib/lib/SPOPS/DBI/InterBase.pm
+      packages:
+        - SPOPS::DBI::InterBase
+      primary_package: SPOPS::DBI::InterBase
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/DBI/InterBase.pm
+        identifier: SPOPS::DBI::InterBase::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.04
+    - bytesize: 3193
+      file_mime_type: ~
+      line_count: ~
+      md5: abfd3ec0a3eade53f3c336f3dff84f82
+      module_name_from_file_guess: SPOPS::DBI::MySQL
+      mtime: 1073701300
+      name: blib/lib/SPOPS/DBI/MySQL.pm
+      packages:
+        - SPOPS::DBI::MySQL
+      primary_package: SPOPS::DBI::MySQL
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+        - SPOPS::Key::DBI::HandleField
+      version_info:
+        filename: blib/lib/SPOPS/DBI/MySQL.pm
+        identifier: SPOPS::DBI::MySQL::VERSION
+        line_number: 13
+        sigil: $
+        value: 3.04
+    - bytesize: 2231
+      file_mime_type: ~
+      line_count: ~
+      md5: 522a8b01fb7ac141861fde437c5ed443
+      module_name_from_file_guess: SPOPS::DBI::Oracle
+      mtime: 1079664573
+      name: blib/lib/SPOPS/DBI/Oracle.pm
+      packages:
+        - SPOPS::DBI::Oracle
+      primary_package: SPOPS::DBI::Oracle
+      uses:
+        - strict
+        - SPOPS::Exception
+        - SPOPS::Utility
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/DBI/Oracle.pm
+        identifier: SPOPS::DBI::Oracle::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.05
+    - bytesize: 5268
+      file_mime_type: ~
+      line_count: ~
+      md5: 59db3fc3308346db7879294e704efabd
+      module_name_from_file_guess: SPOPS::DBI::Pg
+      mtime: 1079664573
+      name: blib/lib/SPOPS/DBI/Pg.pm
+      packages:
+        - SPOPS::DBI::Pg
+      primary_package: SPOPS::DBI::Pg
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Exception
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/DBI/Pg.pm
+        identifier: SPOPS::DBI::Pg::VERSION
+        line_number: 10
+        sigil: $
+        value: 3.05
+    - bytesize: 3121
+      file_mime_type: ~
+      line_count: ~
+      md5: 0da1a1542f38b126a71d07edeee2f982
+      module_name_from_file_guess: SPOPS::DBI::SQLite
+      mtime: 1073701300
+      name: blib/lib/SPOPS/DBI/SQLite.pm
+      packages:
+        - SPOPS::DBI::SQLite
+      primary_package: SPOPS::DBI::SQLite
+      uses:
+        - strict
+        - Log::Log4perl
+        - DBI
+        - SPOPS
+        - SPOPS::DBI::TypeInfo
+        - SPOPS::Utility
+      version_info:
+        filename: blib/lib/SPOPS/DBI/SQLite.pm
+        identifier: SPOPS::DBI::SQLite::VERSION
+        line_number: 15
+        sigil: $
+        value: 3.04
+    - bytesize: 3218
+      file_mime_type: ~
+      line_count: ~
+      md5: 73199c970499aaf0b6f7f29790ca6c2d
+      module_name_from_file_guess: SPOPS::DBI::Sybase
+      mtime: 1073424355
+      name: blib/lib/SPOPS/DBI/Sybase.pm
+      packages:
+        - SPOPS::DBI::Sybase
+      primary_package: SPOPS::DBI::Sybase
+      uses:
+        - strict
+        - SPOPS::Key::DBI::Identity
+      version_info:
+        filename: blib/lib/SPOPS/DBI/Sybase.pm
+        identifier: SPOPS::DBI::Sybase::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.05
+    - bytesize: 11589
+      file_mime_type: ~
+      line_count: ~
+      md5: 0e64074cb4d2921bd03ebaf38bef4a75
+      module_name_from_file_guess: SPOPS::DBI::TypeInfo
+      mtime: 1077757403
+      name: blib/lib/SPOPS/DBI/TypeInfo.pm
+      packages:
+        - SPOPS::DBI::TypeInfo
+      primary_package: SPOPS::DBI::TypeInfo
+      uses:
+        - strict
+        - base
+        - DBI
+        - Log::Log4perl
+        - SPOPS::Exception
+        - SPOPS::Exception::DBI
+      version_info:
+        filename: blib/lib/SPOPS/DBI/TypeInfo.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5275
+      file_mime_type: ~
+      line_count: ~
+      md5: 18df3b695193902e7d596dddd09c55b7
+      module_name_from_file_guess: SPOPS::Error
+      mtime: 1041487225
+      name: blib/lib/SPOPS/Error.pm
+      packages:
+        - SPOPS::Error
+      primary_package: SPOPS::Error
+      uses:
+        - strict
+        - vars
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/SPOPS/Error.pm
+        identifier: SPOPS::Error::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 10890
+      file_mime_type: ~
+      line_count: ~
+      md5: cd8f0ff50c0cb2b95dc6cd5a847f9935
+      module_name_from_file_guess: SPOPS::Exception
+      mtime: 1060659557
+      name: blib/lib/SPOPS/Exception.pm
+      packages:
+        - SPOPS::Exception
+      primary_package: SPOPS::Exception
+      uses:
+        - strict
+        - base
+        - overload
+        - Devel::StackTrace
+        - SPOPS::Error
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Exception.pm
+        identifier: SPOPS::Exception::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.04
+    - bytesize: 3180
+      file_mime_type: ~
+      line_count: ~
+      md5: 252d568b508b861d190173320dd363a4
+      module_name_from_file_guess: SPOPS::Exception::DBI
+      mtime: 1045432918
+      name: blib/lib/SPOPS/Exception/DBI.pm
+      packages:
+        - SPOPS::Exception::DBI
+      primary_package: SPOPS::Exception::DBI
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Exception/DBI.pm
+        identifier: SPOPS::Exception::DBI::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 2199
+      file_mime_type: ~
+      line_count: ~
+      md5: ebc4934f7a7fc2b2890c572960ac22e7
+      module_name_from_file_guess: SPOPS::Exception::LDAP
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Exception/LDAP.pm
+      packages:
+        - SPOPS::Exception::LDAP
+      primary_package: SPOPS::Exception::LDAP
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Exception/LDAP.pm
+        identifier: SPOPS::Exception::LDAP::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.01
+    - bytesize: 2677
+      file_mime_type: ~
+      line_count: ~
+      md5: f0b0763bd90d39178edf9247d83b6cd8
+      module_name_from_file_guess: SPOPS::Exception::Security
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Exception/Security.pm
+      packages:
+        - SPOPS::Exception::Security
+      primary_package: SPOPS::Exception::Security
+      uses:
+        - strict
+        - base
+        - SPOPS::Secure
+      version_info:
+        filename: blib/lib/SPOPS/Exception/Security.pm
+        identifier: SPOPS::Exception::Security::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.01
+    - bytesize: 6842
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d8e3667e7e0c81c4e58a2c6d75435f5
+      module_name_from_file_guess: SPOPS::Export
+      mtime: 1041487225
+      name: blib/lib/SPOPS/Export.pm
+      packages:
+        - SPOPS::Export
+      primary_package: SPOPS::Export
+      uses:
+        - strict
+        - base
+        - SPOPS::Exception
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Export.pm
+        identifier: SPOPS::Export::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.03
+    - bytesize: 1516
+      file_mime_type: ~
+      line_count: ~
+      md5: f74350386ae8e749416f8aa9c37624a3
+      module_name_from_file_guess: SPOPS::Export::DBI::Data
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Export/DBI/Data.pm
+      packages:
+        - SPOPS::Export::DBI::Data
+      primary_package: SPOPS::Export::DBI::Data
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Export/DBI/Data.pm
+        identifier: SPOPS::Export::DBI::Data::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 2595
+      file_mime_type: ~
+      line_count: ~
+      md5: 961ec84e7cd76a03865b399b0f7232fa
+      module_name_from_file_guess: SPOPS::Export::Object
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Export/Object.pm
+      packages:
+        - SPOPS::Export::Object
+      primary_package: SPOPS::Export::Object
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Export/Object.pm
+        identifier: SPOPS::Export::Object::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 1333
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d49a90b6ef7e8faeed6fc359027b185
+      module_name_from_file_guess: SPOPS::Export::Perl
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Export/Perl.pm
+      packages:
+        - SPOPS::Export::Perl
+      primary_package: SPOPS::Export::Perl
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/SPOPS/Export/Perl.pm
+        identifier: SPOPS::Export::Perl::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.02
+    - bytesize: 2952
+      file_mime_type: ~
+      line_count: ~
+      md5: abead7181246e5f1a11f58a8be4c4c2c
+      module_name_from_file_guess: SPOPS::Export::SQL
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Export/SQL.pm
+      packages:
+        - SPOPS::Export::SQL
+      primary_package: SPOPS::Export::SQL
+      uses:
+        - strict
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Export/SQL.pm
+        identifier: SPOPS::Export::SQL::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 3034
+      file_mime_type: ~
+      line_count: ~
+      md5: d75a83e2453d15df22bd7bb1ef90c97e
+      module_name_from_file_guess: SPOPS::Export::XML
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Export/XML.pm
+      packages:
+        - SPOPS::Export::XML
+      primary_package: SPOPS::Export::XML
+      uses:
+        - strict
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Export/XML.pm
+        identifier: SPOPS::Export::XML::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 12994
+      file_mime_type: ~
+      line_count: ~
+      md5: b2553e44df32e825497d7590cb6504bf
+      module_name_from_file_guess: SPOPS::GDBM
+      mtime: 1073701300
+      name: blib/lib/SPOPS/GDBM.pm
+      packages:
+        - SPOPS::GDBM
+      primary_package: SPOPS::GDBM
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - Data::Dumper
+        - GDBM_File
+        - SPOPS
+        - SPOPS::Exception
+      version_info:
+        filename: blib/lib/SPOPS/GDBM.pm
+        identifier: SPOPS::GDBM::VERSION
+        line_number: 15
+        sigil: $
+        value: 3.03
+    - bytesize: 10976
+      file_mime_type: ~
+      line_count: ~
+      md5: e6807d3c17bc8a458ceef1f7b475a416
+      module_name_from_file_guess: SPOPS::HashFile
+      mtime: 1070680439
+      name: blib/lib/SPOPS/HashFile.pm
+      packages:
+        - SPOPS::HashFile
+        - SPOPS::TieFileHash
+      primary_package: SPOPS::HashFile
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - File::Copy
+      version_info:
+        filename: blib/lib/SPOPS/HashFile.pm
+        identifier: SPOPS::HashFile::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.03
+    - bytesize: 5982
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a9d97eda57e3c9291b07400802be18f
+      module_name_from_file_guess: SPOPS::Import
+      mtime: 1050759076
+      name: blib/lib/SPOPS/Import.pm
+      packages:
+        - SPOPS::Import
+      primary_package: SPOPS::Import
+      uses:
+        - strict
+        - base
+        - SPOPS::Exception
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Import.pm
+        identifier: SPOPS::Import::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.05
+    - bytesize: 4089
+      file_mime_type: ~
+      line_count: ~
+      md5: ea73bf60d8378b183181efd059374ad1
+      module_name_from_file_guess: SPOPS::Import::DBI::Data
+      mtime: 1041487223
+      name: blib/lib/SPOPS/Import/DBI/Data.pm
+      packages:
+        - SPOPS::Import::DBI::Data
+      primary_package: SPOPS::Import::DBI::Data
+      uses:
+        - strict
+        - base
+        - SPOPS::Exception
+        - SPOPS::SQLInterface
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/Data.pm
+        identifier: SPOPS::Import::DBI::Data::VERSION
+        line_number: 10
+        sigil: $
+        value: 3.02
+    - bytesize: 7886
+      file_mime_type: ~
+      line_count: ~
+      md5: 4dc3e43746621caf2e833bb9528f62a3
+      module_name_from_file_guess: SPOPS::Import::DBI::Table
+      mtime: 1050935974
+      name: blib/lib/SPOPS/Import/DBI/Table.pm
+      packages:
+        - SPOPS::Import::DBI::Table
+      primary_package: SPOPS::Import::DBI::Table
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - SPOPS::Exception
+        - SPOPS::Import::DBI::TableTransform
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/Table.pm
+        identifier: SPOPS::Import::DBI::Table::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.05
+    - bytesize: 4762
+      file_mime_type: ~
+      line_count: ~
+      md5: ea7314b8094c83ddd89cfa50bf5ef276
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform
+      mtime: 1050935975
+      name: blib/lib/SPOPS/Import/DBI/TableTransform.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform
+      primary_package: SPOPS::Import::DBI::TableTransform
+      uses:
+        - strict
+        - base
+        - SPOPS::Exception
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform.pm
+        identifier: SPOPS::Import::DBI::TableTransform::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.06
+    - bytesize: 1847
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f2989b33978b3d731eec67c3ca082a6
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform::InterBase
+      mtime: 1041909833
+      name: blib/lib/SPOPS/Import/DBI/TableTransform/InterBase.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform::InterBase
+      primary_package: SPOPS::Import::DBI::TableTransform::InterBase
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform/InterBase.pm
+        identifier: SPOPS::Import::DBI::TableTransform::InterBase::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 1683
+      file_mime_type: ~
+      line_count: ~
+      md5: e094ea2a44158b2c53e812a7ec507dca
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform::MySQL
+      mtime: 1041909833
+      name: blib/lib/SPOPS/Import/DBI/TableTransform/MySQL.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform::MySQL
+      primary_package: SPOPS::Import::DBI::TableTransform::MySQL
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform/MySQL.pm
+        identifier: SPOPS::Import::DBI::TableTransform::MySQL::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 1965
+      file_mime_type: ~
+      line_count: ~
+      md5: a1f19a1bac2f1d9685a185adc123aa28
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform::Oracle
+      mtime: 1060659655
+      name: blib/lib/SPOPS/Import/DBI/TableTransform/Oracle.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform::Oracle
+      primary_package: SPOPS::Import::DBI::TableTransform::Oracle
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform/Oracle.pm
+        identifier: SPOPS::Import::DBI::TableTransform::Oracle::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.03
+    - bytesize: 2123
+      file_mime_type: ~
+      line_count: ~
+      md5: e671900d103f9bf9a40d4b0e6c0d21e1
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform::Pg
+      mtime: 1058361795
+      name: blib/lib/SPOPS/Import/DBI/TableTransform/Pg.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform::Pg
+      primary_package: SPOPS::Import::DBI::TableTransform::Pg
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform/Pg.pm
+        identifier: SPOPS::Import::DBI::TableTransform::Pg::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.03
+    - bytesize: 1738
+      file_mime_type: ~
+      line_count: ~
+      md5: 91d1d602b72c26c9d5c4a796d80c34fe
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform::SQLite
+      mtime: 1041909833
+      name: blib/lib/SPOPS/Import/DBI/TableTransform/SQLite.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform::SQLite
+      primary_package: SPOPS::Import::DBI::TableTransform::SQLite
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform/SQLite.pm
+        identifier: SPOPS::Import::DBI::TableTransform::SQLite::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 1777
+      file_mime_type: ~
+      line_count: ~
+      md5: 86d785c67c5cb475557dd66f26b3a0d8
+      module_name_from_file_guess: SPOPS::Import::DBI::TableTransform::Sybase
+      mtime: 1041909833
+      name: blib/lib/SPOPS/Import/DBI/TableTransform/Sybase.pm
+      packages:
+        - SPOPS::Import::DBI::TableTransform::Sybase
+      primary_package: SPOPS::Import::DBI::TableTransform::Sybase
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/DBI/TableTransform/Sybase.pm
+        identifier: SPOPS::Import::DBI::TableTransform::Sybase::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 6285
+      file_mime_type: ~
+      line_count: ~
+      md5: aa5d3f64ac5730230a5d2383fb2dc6e9
+      module_name_from_file_guess: SPOPS::Import::Object
+      mtime: 1050978665
+      name: blib/lib/SPOPS/Import/Object.pm
+      packages:
+        - SPOPS::Import::Object
+      primary_package: SPOPS::Import::Object
+      uses:
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/SPOPS/Import/Object.pm
+        identifier: SPOPS::Import::Object::VERSION
+        line_number: 8
+        sigil: $
+        value: 3.04
+    - bytesize: 9008
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d5a28d8c400851bb2ba5835224c64f2
+      module_name_from_file_guess: SPOPS::Initialize
+      mtime: 1073701300
+      name: blib/lib/SPOPS/Initialize.pm
+      packages:
+        - SPOPS::Initialize
+      primary_package: SPOPS::Initialize
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+        - SPOPS::Exception
+      version_info:
+        filename: blib/lib/SPOPS/Initialize.pm
+        identifier: SPOPS::Initialize::VERSION
+        line_number: 13
+        sigil: $
+        value: 3.03
+    - bytesize: 15146
+      file_mime_type: ~
+      line_count: ~
+      md5: 90df792e513ad33fa6e89e4f2db8242f
+      module_name_from_file_guess: SPOPS::Iterator
+      mtime: 1077757543
+      name: blib/lib/SPOPS/Iterator.pm
+      packages:
+        - SPOPS::Iterator
+      primary_package: SPOPS::Iterator
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - SPOPS
+        - constant
+        - SPOPS::Iterator::WrapList
+      version_info:
+        filename: blib/lib/SPOPS/Iterator.pm
+        identifier: SPOPS::Iterator::VERSION
+        line_number: 10
+        sigil: $
+        value: 3.03
+    - bytesize: 7052
+      file_mime_type: ~
+      line_count: ~
+      md5: c9635e9194bd9e1327aa6ed4e469c017
+      module_name_from_file_guess: SPOPS::Iterator::DBI
+      mtime: 1077757337
+      name: blib/lib/SPOPS/Iterator/DBI.pm
+      packages:
+        - SPOPS::Iterator::DBI
+      primary_package: SPOPS::Iterator::DBI
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Iterator
+        - SPOPS::Secure
+      version_info:
+        filename: blib/lib/SPOPS/Iterator/DBI.pm
+        identifier: SPOPS::Iterator::DBI::VERSION
+        line_number: 15
+        sigil: $
+        value: 3.03
+    - bytesize: 6890
+      file_mime_type: ~
+      line_count: ~
+      md5: f1913d50db768ce74ac8197751b17af2
+      module_name_from_file_guess: SPOPS::Iterator::LDAP
+      mtime: 1073701300
+      name: blib/lib/SPOPS/Iterator/LDAP.pm
+      packages:
+        - SPOPS::Iterator::LDAP
+      primary_package: SPOPS::Iterator::LDAP
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Iterator
+        - SPOPS::Secure
+      version_info:
+        filename: blib/lib/SPOPS/Iterator/LDAP.pm
+        identifier: SPOPS::Iterator::LDAP::VERSION
+        line_number: 15
+        sigil: $
+        value: 3.02
+    - bytesize: 2823
+      file_mime_type: ~
+      line_count: ~
+      md5: d42d17b304102d0fa5c23e09ec910a1a
+      module_name_from_file_guess: SPOPS::Iterator::WrapList
+      mtime: 1073701300
+      name: blib/lib/SPOPS/Iterator/WrapList.pm
+      packages:
+        - SPOPS::Iterator::WrapList
+      primary_package: SPOPS::Iterator::WrapList
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Iterator
+      version_info:
+        filename: blib/lib/SPOPS/Iterator/WrapList.pm
+        identifier: SPOPS::Iterator::WrapList::VERSION
+        line_number: 14
+        sigil: $
+        value: 3.03
+    - bytesize: 3329
+      file_mime_type: ~
+      line_count: ~
+      md5: e18f0f234bba83cc5cbab1c8cd24f868
+      module_name_from_file_guess: SPOPS::Key::DBI::HandleField
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Key/DBI/HandleField.pm
+      packages:
+        - SPOPS::Key::DBI::HandleField
+      primary_package: SPOPS::Key::DBI::HandleField
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+      version_info:
+        filename: blib/lib/SPOPS/Key/DBI/HandleField.pm
+        identifier: SPOPS::Key::DBI::HandleField::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.04
+    - bytesize: 2281
+      file_mime_type: ~
+      line_count: ~
+      md5: a91df7af26adaaafbed3c21e00025955
+      module_name_from_file_guess: SPOPS::Key::DBI::Identity
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Key/DBI/Identity.pm
+      packages:
+        - SPOPS::Key::DBI::Identity
+      primary_package: SPOPS::Key::DBI::Identity
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+      version_info:
+        filename: blib/lib/SPOPS/Key/DBI/Identity.pm
+        identifier: SPOPS::Key::DBI::Identity::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.03
+    - bytesize: 3533
+      file_mime_type: ~
+      line_count: ~
+      md5: 3256360512c9d75aee57fa9a70e7461e
+      module_name_from_file_guess: SPOPS::Key::DBI::Pool
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Key/DBI/Pool.pm
+      packages:
+        - SPOPS::Key::DBI::Pool
+      primary_package: SPOPS::Key::DBI::Pool
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+      version_info:
+        filename: blib/lib/SPOPS/Key/DBI/Pool.pm
+        identifier: SPOPS::Key::DBI::Pool::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.03
+    - bytesize: 4695
+      file_mime_type: ~
+      line_count: ~
+      md5: 91bb5f09e047a3b13bda98b56d1273cc
+      module_name_from_file_guess: SPOPS::Key::DBI::Sequence
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Key/DBI/Sequence.pm
+      packages:
+        - SPOPS::Key::DBI::Sequence
+      primary_package: SPOPS::Key::DBI::Sequence
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Key/DBI/Sequence.pm
+        identifier: SPOPS::Key::DBI::Sequence::VERSION
+        line_number: 9
+        sigil: $
+        value: 3.03
+    - bytesize: 2062
+      file_mime_type: ~
+      line_count: ~
+      md5: e7167285bbd9a8bd0b103011ef7b2f56
+      module_name_from_file_guess: SPOPS::Key::Random
+      mtime: 1073701300
+      name: blib/lib/SPOPS/Key/Random.pm
+      packages:
+        - SPOPS::Key::Random
+      primary_package: SPOPS::Key::Random
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Utility
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Key/Random.pm
+        identifier: SPOPS::Key::Random::VERSION
+        line_number: 10
+        sigil: $
+        value: 3.03
+    - bytesize: 1381
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e71124671badca64b4c4cc7c4485ef3
+      module_name_from_file_guess: SPOPS::Key::UUID
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Key/UUID.pm
+      packages:
+        - SPOPS::Key::UUID
+      primary_package: SPOPS::Key::UUID
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - Data::UUID
+      version_info:
+        filename: blib/lib/SPOPS/Key/UUID.pm
+        identifier: SPOPS::Key::UUID::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.03
+    - bytesize: 29317
+      file_mime_type: ~
+      line_count: ~
+      md5: 9fb39db9649ab172205d08133077d6fc
+      module_name_from_file_guess: SPOPS::LDAP
+      mtime: 1073701300
+      name: blib/lib/SPOPS/LDAP.pm
+      packages:
+        - SPOPS::LDAP
+      primary_package: SPOPS::LDAP
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - Data::Dumper
+        - Net::LDAP
+        - Net::LDAP::Entry
+        - Net::LDAP::Util
+        - SPOPS
+        - SPOPS::Exception::LDAP
+        - SPOPS::Secure
+        - SPOPS::ClassFactory::LDAP
+        - SPOPS::Iterator::LDAP
+      version_info:
+        filename: blib/lib/SPOPS/LDAP.pm
+        identifier: SPOPS::LDAP::VERSION
+        line_number: 18
+        sigil: $
+        value: 3.03
+    - bytesize: 11616
+      file_mime_type: ~
+      line_count: ~
+      md5: bdd0104d1ae8fa8a0e05a7480846ffcc
+      module_name_from_file_guess: SPOPS::LDAP::MultiDatasource
+      mtime: 1073701299
+      name: blib/lib/SPOPS/LDAP/MultiDatasource.pm
+      packages:
+        - SPOPS::LDAP::MultiDatasource
+      primary_package: SPOPS::LDAP::MultiDatasource
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Exception::LDAP
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/LDAP/MultiDatasource.pm
+        identifier: SPOPS::LDAP::MultiDatasource::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 7241
+      file_mime_type: ~
+      line_count: ~
+      md5: e31d93e028ce5ac9418b46690fcb66dc
+      module_name_from_file_guess: SPOPS::Loopback
+      mtime: 1079103148
+      name: blib/lib/SPOPS/Loopback.pm
+      packages:
+        - SPOPS::Loopback
+      primary_package: SPOPS::Loopback
+      uses:
+        - strict
+        - base
+        - Data::Dumper
+        - Log::Log4perl
+        - SPOPS::Secure
+        - SPOPS::Iterator::WrapList
+      version_info:
+        filename: blib/lib/SPOPS/Loopback.pm
+        identifier: SPOPS::Loopback::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.10
+    - bytesize: 28857
+      file_mime_type: ~
+      line_count: ~
+      md5: 81deadd97b57d8f914e7c744ab553f7f
+      module_name_from_file_guess: SPOPS::SQLInterface
+      mtime: 1077757499
+      name: blib/lib/SPOPS/SQLInterface.pm
+      packages:
+        - SPOPS::SQLInterface
+      primary_package: SPOPS::SQLInterface
+      uses:
+        - strict
+        - Data::Dumper
+        - DBI
+        - Log::Log4perl
+        - SPOPS::DBI::TypeInfo
+        - SPOPS::Exception
+        - SPOPS::Exception::DBI
+      version_info:
+        filename: blib/lib/SPOPS/SQLInterface.pm
+        identifier: SPOPS::SQLInterface::VERSION
+        line_number: 15
+        sigil: $
+        value: 3.10
+    - bytesize: 39118
+      file_mime_type: ~
+      line_count: ~
+      md5: b579264726738120ce322441a3e9cf96
+      module_name_from_file_guess: SPOPS::Secure
+      mtime: 1084241379
+      name: blib/lib/SPOPS/Secure.pm
+      packages:
+        - SPOPS::Secure
+      primary_package: SPOPS::Secure
+      uses:
+        - strict
+        - base
+        - vars
+        - Data::Dumper
+        - Log::Log4perl
+        - constant
+        - SPOPS::Exception::Security
+        - SPOPS::Secure::Util
+      version_info:
+        filename: blib/lib/SPOPS/Secure.pm
+        identifier: SPOPS::Secure::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.13
+    - bytesize: 11104
+      file_mime_type: ~
+      line_count: ~
+      md5: 63833bcd7cb6b7ecdc3f2162d81b56d0
+      module_name_from_file_guess: SPOPS::Secure::DBI
+      mtime: 1077072895
+      name: blib/lib/SPOPS/Secure/DBI.pm
+      packages:
+        - SPOPS::Secure::DBI
+      primary_package: SPOPS::Secure::DBI
+      uses:
+        - strict
+        - Log::Log4perl
+        - Data::Dumper
+        - SPOPS
+        - SPOPS::Secure
+        - SPOPS::Secure::Util
+      version_info:
+        filename: blib/lib/SPOPS/Secure/DBI.pm
+        identifier: SPOPS::Secure::DBI::VERSION
+        line_number: 14
+        sigil: $
+        value: 1.08
+    - bytesize: 17415
+      file_mime_type: ~
+      line_count: ~
+      md5: 4344c023ce38add47787420446e4c287
+      module_name_from_file_guess: SPOPS::Secure::Hierarchy
+      mtime: 1084249288
+      name: blib/lib/SPOPS/Secure/Hierarchy.pm
+      packages:
+        - SPOPS::Secure::Hierarchy
+      primary_package: SPOPS::Secure::Hierarchy
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - vars
+        - Data::Dumper
+        - SPOPS
+        - SPOPS::Exception::Security
+        - SPOPS::Secure
+        - SPOPS::Secure::Util
+      version_info:
+        filename: blib/lib/SPOPS/Secure/Hierarchy.pm
+        identifier: SPOPS::Secure::Hierarchy::VERSION
+        line_number: 19
+        sigil: $
+        value: 3.05
+    - bytesize: 3196
+      file_mime_type: ~
+      line_count: ~
+      md5: 3480a8429793f279afdf1633ffeb9a0a
+      module_name_from_file_guess: SPOPS::Secure::Loopback
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Secure/Loopback.pm
+      packages:
+        - SPOPS::Secure::Loopback
+      primary_package: SPOPS::Secure::Loopback
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::Secure
+        - SPOPS::Secure::Util
+      version_info:
+        filename: blib/lib/SPOPS/Secure/Loopback.pm
+        identifier: SPOPS::Secure::Loopback::VERSION
+        line_number: 13
+        sigil: $
+        value: 1.04
+    - bytesize: 4879
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dc735719df87fd8e5438a7bcf585a5f
+      module_name_from_file_guess: SPOPS::Secure::Util
+      mtime: 1077072895
+      name: blib/lib/SPOPS/Secure/Util.pm
+      packages:
+        - SPOPS::Secure::Util
+      primary_package: SPOPS::Secure::Util
+      uses:
+        - strict
+        - Data::Dumper
+        - Log::Log4perl
+        - SPOPS::Secure
+      version_info:
+        filename: blib/lib/SPOPS/Secure/Util.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 19196
+      file_mime_type: ~
+      line_count: ~
+      md5: c536212dfcb8c851ed1b5fb01954e7e2
+      module_name_from_file_guess: SPOPS::Tie
+      mtime: 1083440727
+      name: blib/lib/SPOPS/Tie.pm
+      packages:
+        - SPOPS::Tie
+      primary_package: SPOPS::Tie
+      uses:
+        - strict
+        - base
+        - vars
+        - Data::Dumper
+        - Log::Log4perl
+        - SPOPS::Exception
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Tie.pm
+        identifier: SPOPS::Tie::VERSION
+        line_number: 15
+        sigil: $
+        value: 3.07
+    - bytesize: 5204
+      file_mime_type: ~
+      line_count: ~
+      md5: c60aabcd3eaf192b4f0b439aaea3fe6b
+      module_name_from_file_guess: SPOPS::Tie::StrictField
+      mtime: 1084241254
+      name: blib/lib/SPOPS/Tie/StrictField.pm
+      packages:
+        - SPOPS::Tie::StrictField
+      primary_package: SPOPS::Tie::StrictField
+      uses:
+        - strict
+        - base
+        - Log::Log4perl
+        - SPOPS::Tie
+      version_info:
+        filename: blib/lib/SPOPS/Tie/StrictField.pm
+        identifier: SPOPS::Tie::StrictField::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.04
+    - bytesize: 3227
+      file_mime_type: ~
+      line_count: ~
+      md5: d362875cbee219b8a5084510e100c65c
+      module_name_from_file_guess: SPOPS::Tool::CreateOnly
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/CreateOnly.pm
+      packages:
+        - SPOPS::Tool::CreateOnly
+      primary_package: SPOPS::Tool::CreateOnly
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/Tool/CreateOnly.pm
+        identifier: SPOPS::Tool::CreateOnly::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 4202
+      file_mime_type: ~
+      line_count: ~
+      md5: 857576d466a21fc4d6c84d7e93a04454
+      module_name_from_file_guess: SPOPS::Tool::DBI::Datasource
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/DBI/Datasource.pm
+      packages:
+        - SPOPS::Tool::DBI::Datasource
+      primary_package: SPOPS::Tool::DBI::Datasource
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/Tool/DBI/Datasource.pm
+        identifier: SPOPS::Tool::DBI::Datasource::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.04
+    - bytesize: 3341
+      file_mime_type: ~
+      line_count: ~
+      md5: 00b49fec3e520ca1ebd875f13f7259a5
+      module_name_from_file_guess: SPOPS::Tool::DBI::DiscoverField
+      mtime: 1079102303
+      name: blib/lib/SPOPS/Tool/DBI/DiscoverField.pm
+      packages:
+        - SPOPS::Tool::DBI::DiscoverField
+      primary_package: SPOPS::Tool::DBI::DiscoverField
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/Tool/DBI/DiscoverField.pm
+        identifier: SPOPS::Tool::DBI::DiscoverField::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.05
+    - bytesize: 3612
+      file_mime_type: ~
+      line_count: ~
+      md5: b74250329c602d15a671078a32386489
+      module_name_from_file_guess: SPOPS::Tool::DBI::FindDefaults
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/DBI/FindDefaults.pm
+      packages:
+        - SPOPS::Tool::DBI::FindDefaults
+      primary_package: SPOPS::Tool::DBI::FindDefaults
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/Tool/DBI/FindDefaults.pm
+        identifier: SPOPS::Tool::DBI::FindDefaults::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 13253
+      file_mime_type: ~
+      line_count: ~
+      md5: 85dc959d7194b96fa653d1ac7af8f614
+      module_name_from_file_guess: SPOPS::Tool::DBI::MaintainLinkedList
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/DBI/MaintainLinkedList.pm
+      packages:
+        - SPOPS::Tool::DBI::MaintainLinkedList
+      primary_package: SPOPS::Tool::DBI::MaintainLinkedList
+      uses:
+        - strict
+        - Log::Log4perl
+        - Data::Dumper
+        - SPOPS
+        - SPOPS::ClassFactory
+        - constant
+      version_info:
+        filename: blib/lib/SPOPS/Tool/DBI/MaintainLinkedList.pm
+        identifier: SPOPS::Tool::DBI::MaintainLinkedList::VERSION
+        line_number: 15
+        sigil: $
+        value: 1.04
+    - bytesize: 8321
+      file_mime_type: ~
+      line_count: ~
+      md5: fc4cc6fc0e9ce51a81099d6f08969cf9
+      module_name_from_file_guess: SPOPS::Tool::DateConvert
+      mtime: 1077757297
+      name: blib/lib/SPOPS/Tool/DateConvert.pm
+      packages:
+        - SPOPS::Tool::DateConvert
+      primary_package: SPOPS::Tool::DateConvert
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - DateTime::Format::Strptime
+      version_info:
+        filename: blib/lib/SPOPS/Tool/DateConvert.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4073
+      file_mime_type: ~
+      line_count: ~
+      md5: adf95cda395264fe27db225aca055356
+      module_name_from_file_guess: SPOPS::Tool::LDAP::Datasource
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/LDAP/Datasource.pm
+      packages:
+        - SPOPS::Tool::LDAP::Datasource
+      primary_package: SPOPS::Tool::LDAP::Datasource
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/Tool/LDAP/Datasource.pm
+        identifier: SPOPS::Tool::LDAP::Datasource::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 2576
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f90590b22d8590f567e1616deb09734
+      module_name_from_file_guess: SPOPS::Tool::ReadOnly
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/ReadOnly.pm
+      packages:
+        - SPOPS::Tool::ReadOnly
+      primary_package: SPOPS::Tool::ReadOnly
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - SPOPS::ClassFactory
+      version_info:
+        filename: blib/lib/SPOPS/Tool/ReadOnly.pm
+        identifier: SPOPS::Tool::ReadOnly::VERSION
+        line_number: 12
+        sigil: $
+        value: 3.02
+    - bytesize: 3644
+      file_mime_type: ~
+      line_count: ~
+      md5: 71a937a4ff0309930b5a344e4231b174
+      module_name_from_file_guess: SPOPS::Tool::UTFConvert
+      mtime: 1073701299
+      name: blib/lib/SPOPS/Tool/UTFConvert.pm
+      packages:
+        - SPOPS::Tool::UTFConvert
+      primary_package: SPOPS::Tool::UTFConvert
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - utf8
+        - Encode
+        - Unicode::String
+      version_info:
+        filename: blib/lib/SPOPS/Tool/UTFConvert.pm
+        identifier: SPOPS::Tool::UTFConvert::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.03
+    - bytesize: 8063
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ae111405897295139eea287fe48e366
+      module_name_from_file_guess: SPOPS::Utility
+      mtime: 1073701300
+      name: blib/lib/SPOPS/Utility.pm
+      packages:
+        - SPOPS::Utility
+      primary_package: SPOPS::Utility
+      uses:
+        - strict
+        - Log::Log4perl
+        - SPOPS
+        - Class::Date
+      version_info:
+        filename: blib/lib/SPOPS/Utility.pm
+        identifier: SPOPS::Utility::VERSION
+        line_number: 11
+        sigil: $
+        value: 3.04
+  modules:
+    - blib/lib/SPOPS.pm
+    - blib/lib/SPOPS/ClassFactory.pm
+    - blib/lib/SPOPS/ClassFactory/DBI.pm
+    - blib/lib/SPOPS/ClassFactory/DefaultBehavior.pm
+    - blib/lib/SPOPS/ClassFactory/LDAP.pm
+    - blib/lib/SPOPS/DBI.pm
+    - blib/lib/SPOPS/DBI/InterBase.pm
+    - blib/lib/SPOPS/DBI/MySQL.pm
+    - blib/lib/SPOPS/DBI/Oracle.pm
+    - blib/lib/SPOPS/DBI/Pg.pm
+    - blib/lib/SPOPS/DBI/SQLite.pm
+    - blib/lib/SPOPS/DBI/Sybase.pm
+    - blib/lib/SPOPS/DBI/TypeInfo.pm
+    - blib/lib/SPOPS/Error.pm
+    - blib/lib/SPOPS/Exception.pm
+    - blib/lib/SPOPS/Exception/DBI.pm
+    - blib/lib/SPOPS/Exception/LDAP.pm
+    - blib/lib/SPOPS/Exception/Security.pm
+    - blib/lib/SPOPS/Export.pm
+    - blib/lib/SPOPS/Export/DBI/Data.pm
+    - blib/lib/SPOPS/Export/Object.pm
+    - blib/lib/SPOPS/Export/Perl.pm
+    - blib/lib/SPOPS/Export/SQL.pm
+    - blib/lib/SPOPS/Export/XML.pm
+    - blib/lib/SPOPS/GDBM.pm
+    - blib/lib/SPOPS/HashFile.pm
+    - blib/lib/SPOPS/Import.pm
+    - blib/lib/SPOPS/Import/DBI/Data.pm
+    - blib/lib/SPOPS/Import/DBI/Table.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/InterBase.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/MySQL.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/Oracle.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/Pg.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/SQLite.pm
+    - blib/lib/SPOPS/Import/DBI/TableTransform/Sybase.pm
+    - blib/lib/SPOPS/Import/Object.pm
+    - blib/lib/SPOPS/Initialize.pm
+    - blib/lib/SPOPS/Iterator.pm
+    - blib/lib/SPOPS/Iterator/DBI.pm
+    - blib/lib/SPOPS/Iterator/LDAP.pm
+    - blib/lib/SPOPS/Iterator/WrapList.pm
+    - blib/lib/SPOPS/Key/DBI/HandleField.pm
+    - blib/lib/SPOPS/Key/DBI/Identity.pm
+    - blib/lib/SPOPS/Key/DBI/Pool.pm
+    - blib/lib/SPOPS/Key/DBI/Sequence.pm
+    - blib/lib/SPOPS/Key/Random.pm
+    - blib/lib/SPOPS/Key/UUID.pm
+    - blib/lib/SPOPS/LDAP.pm
+    - blib/lib/SPOPS/LDAP/MultiDatasource.pm
+    - blib/lib/SPOPS/Loopback.pm
+    - blib/lib/SPOPS/SQLInterface.pm
+    - blib/lib/SPOPS/Secure.pm
+    - blib/lib/SPOPS/Secure/DBI.pm
+    - blib/lib/SPOPS/Secure/Hierarchy.pm
+    - blib/lib/SPOPS/Secure/Loopback.pm
+    - blib/lib/SPOPS/Secure/Util.pm
+    - blib/lib/SPOPS/Tie.pm
+    - blib/lib/SPOPS/Tie/StrictField.pm
+    - blib/lib/SPOPS/Tool/CreateOnly.pm
+    - blib/lib/SPOPS/Tool/DBI/Datasource.pm
+    - blib/lib/SPOPS/Tool/DBI/DiscoverField.pm
+    - blib/lib/SPOPS/Tool/DBI/FindDefaults.pm
+    - blib/lib/SPOPS/Tool/DBI/MaintainLinkedList.pm
+    - blib/lib/SPOPS/Tool/DateConvert.pm
+    - blib/lib/SPOPS/Tool/LDAP/Datasource.pm
+    - blib/lib/SPOPS/Tool/ReadOnly.pm
+    - blib/lib/SPOPS/Tool/UTFConvert.pm
+    - blib/lib/SPOPS/Utility.pm
+  test_info:
+    - bytesize: 8643
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b2ea2895ae2e03f8b1ecaf9788280ee
+      mtime: 1079102199
+      name: t/00_base.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 8380
+      file_mime_type: ~
+      line_count: ~
+      md5: 2df4ef28a1f4659f80972b48056bcb3a
+      mtime: 1079103257
+      name: t/00_base_case.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 2962
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a5b35abc3741e692d7d9e29d04a9a0f
+      mtime: 1077760950
+      name: t/01_tie.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 916
+      file_mime_type: ~
+      line_count: ~
+      md5: 29b410c279f8a4a24e7201d736142e72
+      mtime: 1030497392
+      name: t/02_tie_strict.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1429
+      file_mime_type: ~
+      line_count: ~
+      md5: 86baaa4e1c14660e6263a1707ba8bc9a
+      mtime: 1077760950
+      name: t/03_uuid_key.t
+      uses:
+        - strict
+        - Test::More
+        - Data::UUID
+    - bytesize: 1299
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a1d2a552cfee944eb3c5315976aab0a
+      mtime: 1077760950
+      name: t/04_random_key.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 4951
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f073db84410144a5cc1f2479fe586ca
+      mtime: 1045432916
+      name: t/05_exception.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 1271
+      file_mime_type: ~
+      line_count: ~
+      md5: e616768e323a26468f2ead150287bb34
+      mtime: 1077760950
+      name: t/06_ruleset.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 3000
+      file_mime_type: ~
+      line_count: ~
+      md5: c0433636cede3a49c95b7a8e2c9a538d
+      mtime: 1077760949
+      name: t/07_utility.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 3010
+      file_mime_type: ~
+      line_count: ~
+      md5: fb2228e8ecdd67e839dcfca0621a7e22
+      mtime: 1077760949
+      name: t/10_hash_file.t
+      uses:
+        - File::Copy
+        - Test::More
+    - bytesize: 3152
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d00985be59ab98244b939f369f31e67
+      mtime: 1030497392
+      name: t/20_gdbm.t
+      uses:
+        - strict
+        - constant
+        - GDBM_File
+        - Test::More
+    - bytesize: 16159
+      file_mime_type: ~
+      line_count: ~
+      md5: d06e9a94e5d3b86696b6ef50971b8385
+      mtime: 1052594561
+      name: t/30_dbi.t
+      uses:
+        - strict
+        - Data::Dumper
+        - constant
+        - Test::More
+    - bytesize: 6735
+      file_mime_type: ~
+      line_count: ~
+      md5: 705dbe223cf46fc45ea983e4073a35e0
+      mtime: 1030497392
+      name: t/31_dbi_multifield.t
+      uses:
+        - strict
+        - Data::Dumper
+        - constant
+        - Test::More
+    - bytesize: 1399
+      file_mime_type: ~
+      line_count: ~
+      md5: bd0765ad79b7d518c59ea61b8d0ef97b
+      mtime: 1031575237
+      name: t/32_dbi_inline_config.t
+      uses:
+        - strict
+        - constant
+        - Test::More
+    - bytesize: 1816
+      file_mime_type: ~
+      line_count: ~
+      md5: c20d7e2e0e780c12a0664f7274c1bc7f
+      mtime: 1031575237
+      name: t/33_dbi_discover_field.t
+      uses:
+        - strict
+        - constant
+        - Test::More
+    - bytesize: 2326
+      file_mime_type: ~
+      line_count: ~
+      md5: 4faa9e25c63dfe5f4a839e8d9a9b7830
+      mtime: 1030497392
+      name: t/34_dbi_find_defaults.t
+      uses:
+        - strict
+        - constant
+        - Test::More
+    - bytesize: 5370
+      file_mime_type: ~
+      line_count: ~
+      md5: b1f6bf15c3b62ec28466ebebdaafd91b
+      mtime: 1041570770
+      name: t/35_dbi_type_info.t
+      uses:
+        - strict
+        - constant
+        - Test::More
+        - DBI
+    - bytesize: 4763
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b21abfd3dcae48704ba42cae7474081
+      mtime: 1041487109
+      name: t/36_dbi_linked_list.t
+      uses:
+        - strict
+        - constant
+        - Test::More
+    - bytesize: 4156
+      file_mime_type: ~
+      line_count: ~
+      md5: 87f1e63b9aa9183f7ab466b374fbb14e
+      mtime: 1045806089
+      name: t/37_dbi_lazy_load.t
+      uses:
+        - strict
+        - constant
+        - Data::Dumper
+        - Test::More
+    - bytesize: 12810
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bea00ed5f7f432b9885ca189cdc931e
+      mtime: 1034251662
+      name: t/40_ldap.t
+      uses:
+        - strict
+        - constant
+        - Data::Dumper
+        - Test::More
+    - bytesize: 2224
+      file_mime_type: ~
+      line_count: ~
+      md5: 7811d197e262b2b81c4e51ae29579957
+      mtime: 1034251662
+      name: t/41_ldap_inline_config.t
+      uses:
+        - strict
+        - constant
+        - Test::More
+    - bytesize: 1427
+      file_mime_type: ~
+      line_count: ~
+      md5: e8c1bc25a40cbd245b102c73257c6108
+      mtime: 1077760949
+      name: t/50_rule_create_only.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 1255
+      file_mime_type: ~
+      line_count: ~
+      md5: d3eb4b1366798e3d34c27541a494dcea
+      mtime: 1077760949
+      name: t/51_rule_read_only.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 4539
+      file_mime_type: ~
+      line_count: ~
+      md5: 106bb85b6cd42fa8c0d100f3c07e6185
+      mtime: 1077760949
+      name: t/52_rule_date_convert.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 3004
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c94ffa0043b644ad0d5559e0a94f368
+      mtime: 1077760949
+      name: t/60_export_object.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 3189
+      file_mime_type: ~
+      line_count: ~
+      md5: ac00f289745c1d8ceb6f82c2b9cec855
+      mtime: 1077760949
+      name: t/61_export_xml.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 2669
+      file_mime_type: ~
+      line_count: ~
+      md5: 70c306d7e6ac717fb93eb78ab672b90d
+      mtime: 1077760949
+      name: t/62_export_perl.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 3007
+      file_mime_type: ~
+      line_count: ~
+      md5: c228856c1dcc45103336a571edda7722
+      mtime: 1077760949
+      name: t/63_export_sql.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: be4abd004781dcc159dbd6ce459981bb
+      mtime: 1077760949
+      name: t/64_export_dbdata.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 7803
+      file_mime_type: ~
+      line_count: ~
+      md5: 3eb1cbd1ec3d8d529e85150844cf8b41
+      mtime: 1077760949
+      name: t/80_security.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 6098
+      file_mime_type: ~
+      line_count: ~
+      md5: 209887bcbdad6a76486fd3c9843db052
+      mtime: 1077760949
+      name: t/81_security_hierarchical.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+        - Data::Dumper
+  tests:
+    - t/00_base.t
+    - t/00_base_case.t
+    - t/01_tie.t
+    - t/02_tie_strict.t
+    - t/03_uuid_key.t
+    - t/04_random_key.t
+    - t/05_exception.t
+    - t/06_ruleset.t
+    - t/07_utility.t
+    - t/10_hash_file.t
+    - t/20_gdbm.t
+    - t/30_dbi.t
+    - t/31_dbi_multifield.t
+    - t/32_dbi_inline_config.t
+    - t/33_dbi_discover_field.t
+    - t/34_dbi_find_defaults.t
+    - t/35_dbi_type_info.t
+    - t/36_dbi_linked_list.t
+    - t/37_dbi_lazy_load.t
+    - t/40_ldap.t
+    - t/41_ldap_inline_config.t
+    - t/50_rule_create_only.t
+    - t/51_rule_read_only.t
+    - t/52_rule_date_convert.t
+    - t/60_export_object.t
+    - t/61_export_xml.t
+    - t/62_export_perl.t
+    - t/63_export_sql.t
+    - t/64_export_dbdata.t
+    - t/80_security.t
+    - t/81_security_hierarchical.t
+  unpack_dir: /usr/home/brian/Ja3Gdka2Ge/MyCPAN-Indexer-21832.G_UK
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 21832
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1269998497
+  examine_start_time: 1269998410
+  examine_time: 87
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 26251
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 21832
+  ppid: 26251
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/Ja3Gdka2Ge
+  run_end_time: 1269998497
+  run_start_time: 1269998410
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/Ja3Gdka2Ge
+  uuid: 75CA2A88-3BDC-11DF-B21B-14BAE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

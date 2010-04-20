@@ -1,0 +1,3440 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Provide commonly requested regular expressions
+    author:
+      - 'Abigail <regexp-common@abigail.be>'
+    build_requires:
+      ExtUtils::MakeMaker: 0
+      strict: 0
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+      strict: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.56
+    keywords:
+      - regular expression
+      - pattern
+    license: mit
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Regexp-Common
+    no_index:
+      directory:
+        - t
+        - inc
+    requires:
+      perl: 5.00473
+      strict: 0
+      vars: 0
+    resources:
+      repository: git://github.com/Abigail/Regexp-Common.git
+    test_requires:
+      strict: 0
+    version: 2009123001
+  blib:
+    - blib/lib/Regexp/Common.pm
+    - blib/lib/Regexp/Common/CC.pm
+    - blib/lib/Regexp/Common/SEN.pm
+    - blib/lib/Regexp/Common/URI.pm
+    - blib/lib/Regexp/Common/URI/RFC1035.pm
+    - blib/lib/Regexp/Common/URI/RFC1738.pm
+    - blib/lib/Regexp/Common/URI/RFC1808.pm
+    - blib/lib/Regexp/Common/URI/RFC2384.pm
+    - blib/lib/Regexp/Common/URI/RFC2396.pm
+    - blib/lib/Regexp/Common/URI/RFC2806.pm
+    - blib/lib/Regexp/Common/URI/fax.pm
+    - blib/lib/Regexp/Common/URI/file.pm
+    - blib/lib/Regexp/Common/URI/ftp.pm
+    - blib/lib/Regexp/Common/URI/gopher.pm
+    - blib/lib/Regexp/Common/URI/http.pm
+    - blib/lib/Regexp/Common/URI/news.pm
+    - blib/lib/Regexp/Common/URI/pop.pm
+    - blib/lib/Regexp/Common/URI/prospero.pm
+    - blib/lib/Regexp/Common/URI/tel.pm
+    - blib/lib/Regexp/Common/URI/telnet.pm
+    - blib/lib/Regexp/Common/URI/tv.pm
+    - blib/lib/Regexp/Common/URI/wais.pm
+    - blib/lib/Regexp/Common/_support.pm
+    - blib/lib/Regexp/Common/balanced.pm
+    - blib/lib/Regexp/Common/comment.pm
+    - blib/lib/Regexp/Common/delimited.pm
+    - blib/lib/Regexp/Common/lingua.pm
+    - blib/lib/Regexp/Common/list.pm
+    - blib/lib/Regexp/Common/net.pm
+    - blib/lib/Regexp/Common/number.pm
+    - blib/lib/Regexp/Common/profanity.pm
+    - blib/lib/Regexp/Common/whitespace.pm
+    - blib/lib/Regexp/Common/zip.pm
+    - blib/man3/Regexp::Common.3
+    - blib/man3/Regexp::Common::CC.3
+    - blib/man3/Regexp::Common::SEN.3
+    - blib/man3/Regexp::Common::URI.3
+    - blib/man3/Regexp::Common::URI::RFC1035.3
+    - blib/man3/Regexp::Common::URI::RFC1738.3
+    - blib/man3/Regexp::Common::URI::RFC1808.3
+    - blib/man3/Regexp::Common::URI::RFC2384.3
+    - blib/man3/Regexp::Common::URI::RFC2396.3
+    - blib/man3/Regexp::Common::URI::RFC2806.3
+    - blib/man3/Regexp::Common::URI::fax.3
+    - blib/man3/Regexp::Common::URI::file.3
+    - blib/man3/Regexp::Common::URI::ftp.3
+    - blib/man3/Regexp::Common::URI::gopher.3
+    - blib/man3/Regexp::Common::URI::http.3
+    - blib/man3/Regexp::Common::URI::news.3
+    - blib/man3/Regexp::Common::URI::pop.3
+    - blib/man3/Regexp::Common::URI::prospero.3
+    - blib/man3/Regexp::Common::URI::tel.3
+    - blib/man3/Regexp::Common::URI::telnet.3
+    - blib/man3/Regexp::Common::URI::tv.3
+    - blib/man3/Regexp::Common::URI::wais.3
+    - blib/man3/Regexp::Common::_support.3
+    - blib/man3/Regexp::Common::balanced.3
+    - blib/man3/Regexp::Common::comment.3
+    - blib/man3/Regexp::Common::delimited.3
+    - blib/man3/Regexp::Common::lingua.3
+    - blib/man3/Regexp::Common::list.3
+    - blib/man3/Regexp::Common::net.3
+    - blib/man3/Regexp::Common::number.3
+    - blib/man3/Regexp::Common::profanity.3
+    - blib/man3/Regexp::Common::whitespace.3
+    - blib/man3/Regexp::Common::zip.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Regexp::Common
+  build_output: |
+    cp lib/Regexp/Common/URI/news.pm blib/lib/Regexp/Common/URI/news.pm
+    cp lib/Regexp/Common/_support.pm blib/lib/Regexp/Common/_support.pm
+    cp lib/Regexp/Common/balanced.pm blib/lib/Regexp/Common/balanced.pm
+    cp lib/Regexp/Common/URI/ftp.pm blib/lib/Regexp/Common/URI/ftp.pm
+    cp lib/Regexp/Common/comment.pm blib/lib/Regexp/Common/comment.pm
+    cp lib/Regexp/Common/URI/telnet.pm blib/lib/Regexp/Common/URI/telnet.pm
+    cp lib/Regexp/Common/URI/RFC2396.pm blib/lib/Regexp/Common/URI/RFC2396.pm
+    cp lib/Regexp/Common/whitespace.pm blib/lib/Regexp/Common/whitespace.pm
+    cp lib/Regexp/Common/URI/tel.pm blib/lib/Regexp/Common/URI/tel.pm
+    cp lib/Regexp/Common/URI/RFC1035.pm blib/lib/Regexp/Common/URI/RFC1035.pm
+    cp lib/Regexp/Common/profanity.pm blib/lib/Regexp/Common/profanity.pm
+    cp lib/Regexp/Common/URI.pm blib/lib/Regexp/Common/URI.pm
+    cp lib/Regexp/Common/URI/RFC1738.pm blib/lib/Regexp/Common/URI/RFC1738.pm
+    cp lib/Regexp/Common/CC.pm blib/lib/Regexp/Common/CC.pm
+    cp lib/Regexp/Common/URI/RFC2806.pm blib/lib/Regexp/Common/URI/RFC2806.pm
+    cp lib/Regexp/Common.pm blib/lib/Regexp/Common.pm
+    cp lib/Regexp/Common/URI/prospero.pm blib/lib/Regexp/Common/URI/prospero.pm
+    cp lib/Regexp/Common/URI/RFC2384.pm blib/lib/Regexp/Common/URI/RFC2384.pm
+    cp lib/Regexp/Common/list.pm blib/lib/Regexp/Common/list.pm
+    cp lib/Regexp/Common/URI/file.pm blib/lib/Regexp/Common/URI/file.pm
+    cp lib/Regexp/Common/number.pm blib/lib/Regexp/Common/number.pm
+    cp lib/Regexp/Common/zip.pm blib/lib/Regexp/Common/zip.pm
+    cp lib/Regexp/Common/delimited.pm blib/lib/Regexp/Common/delimited.pm
+    cp lib/Regexp/Common/URI/RFC1808.pm blib/lib/Regexp/Common/URI/RFC1808.pm
+    cp lib/Regexp/Common/URI/wais.pm blib/lib/Regexp/Common/URI/wais.pm
+    cp lib/Regexp/Common/URI/tv.pm blib/lib/Regexp/Common/URI/tv.pm
+    cp lib/Regexp/Common/URI/http.pm blib/lib/Regexp/Common/URI/http.pm
+    cp lib/Regexp/Common/lingua.pm blib/lib/Regexp/Common/lingua.pm
+    cp lib/Regexp/Common/URI/fax.pm blib/lib/Regexp/Common/URI/fax.pm
+    cp lib/Regexp/Common/net.pm blib/lib/Regexp/Common/net.pm
+    cp lib/Regexp/Common/SEN.pm blib/lib/Regexp/Common/SEN.pm
+    cp lib/Regexp/Common/URI/pop.pm blib/lib/Regexp/Common/URI/pop.pm
+    cp lib/Regexp/Common/URI/gopher.pm blib/lib/Regexp/Common/URI/gopher.pm
+    Manifying blib/man3/Regexp::Common::URI::news.3
+    Manifying blib/man3/Regexp::Common::_support.3
+    Manifying blib/man3/Regexp::Common::balanced.3
+    Manifying blib/man3/Regexp::Common::comment.3
+    Manifying blib/man3/Regexp::Common::URI::telnet.3
+    Manifying blib/man3/Regexp::Common::URI::RFC2396.3
+    Manifying blib/man3/Regexp::Common::URI::tel.3
+    Manifying blib/man3/Regexp::Common::URI::RFC1738.3
+    Manifying blib/man3/Regexp::Common::CC.3
+    Manifying blib/man3/Regexp::Common::URI::RFC2384.3
+    Manifying blib/man3/Regexp::Common::URI::prospero.3
+    Manifying blib/man3/Regexp::Common::list.3
+    Manifying blib/man3/Regexp::Common::zip.3
+    Manifying blib/man3/Regexp::Common::number.3
+    Manifying blib/man3/Regexp::Common::URI::file.3
+    Manifying blib/man3/Regexp::Common::URI::RFC1808.3
+    Manifying blib/man3/Regexp::Common::URI::tv.3
+    Manifying blib/man3/Regexp::Common::URI::wais.3
+    Manifying blib/man3/Regexp::Common::URI::gopher.3
+    Manifying blib/man3/Regexp::Common::URI::pop.3
+    Manifying blib/man3/Regexp::Common::SEN.3
+    Manifying blib/man3/Regexp::Common::URI::ftp.3
+    Manifying blib/man3/Regexp::Common::whitespace.3
+    Manifying blib/man3/Regexp::Common::URI::RFC1035.3
+    Manifying blib/man3/Regexp::Common::profanity.3
+    Manifying blib/man3/Regexp::Common::URI.3
+    Manifying blib/man3/Regexp::Common::URI::RFC2806.3
+    Manifying blib/man3/Regexp::Common.3
+    Manifying blib/man3/Regexp::Common::delimited.3
+    Manifying blib/man3/Regexp::Common::URI::http.3
+    Manifying blib/man3/Regexp::Common::lingua.3
+    Manifying blib/man3/Regexp::Common::URI::fax.3
+    Manifying blib/man3/Regexp::Common::net.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH/Regexp-Common-2009123001/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH/Regexp-Common-2009123001
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH/Regexp-Common-2009123001/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH/Regexp-Common-2009123001/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: ABIGAIL
+  dist_basename: Regexp-Common-2009123001.tar.gz
+  dist_date: 1262142233
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH/Regexp-Common-2009123001
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH/Regexp-Common-2009123001
+  dist_file: /home/brian/CPAN/authors/id/A/AB/ABIGAIL/Regexp-Common-2009123001.tar.gz
+  dist_md5: 0026a84a30386c71dcc30299cd457d51
+  dist_size: 112423
+  manifest:
+    - COPYRIGHT
+    - COPYRIGHT.AL
+    - COPYRIGHT.AL2
+    - COPYRIGHT.BSD
+    - COPYRIGHT.MIT
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - TODO
+    - lib/Regexp/Common.pm
+    - lib/Regexp/Common/CC.pm
+    - lib/Regexp/Common/SEN.pm
+    - lib/Regexp/Common/URI.pm
+    - lib/Regexp/Common/URI/RFC1035.pm
+    - lib/Regexp/Common/URI/RFC1738.pm
+    - lib/Regexp/Common/URI/RFC1808.pm
+    - lib/Regexp/Common/URI/RFC2384.pm
+    - lib/Regexp/Common/URI/RFC2396.pm
+    - lib/Regexp/Common/URI/RFC2806.pm
+    - lib/Regexp/Common/URI/fax.pm
+    - lib/Regexp/Common/URI/file.pm
+    - lib/Regexp/Common/URI/ftp.pm
+    - lib/Regexp/Common/URI/gopher.pm
+    - lib/Regexp/Common/URI/http.pm
+    - lib/Regexp/Common/URI/news.pm
+    - lib/Regexp/Common/URI/pop.pm
+    - lib/Regexp/Common/URI/prospero.pm
+    - lib/Regexp/Common/URI/tel.pm
+    - lib/Regexp/Common/URI/telnet.pm
+    - lib/Regexp/Common/URI/tv.pm
+    - lib/Regexp/Common/URI/wais.pm
+    - lib/Regexp/Common/_support.pm
+    - lib/Regexp/Common/balanced.pm
+    - lib/Regexp/Common/comment.pm
+    - lib/Regexp/Common/delimited.pm
+    - lib/Regexp/Common/lingua.pm
+    - lib/Regexp/Common/list.pm
+    - lib/Regexp/Common/net.pm
+    - lib/Regexp/Common/number.pm
+    - lib/Regexp/Common/profanity.pm
+    - lib/Regexp/Common/whitespace.pm
+    - lib/Regexp/Common/zip.pm
+    - t/Common.pm
+    - t/SEN/usa_ssn.t
+    - t/URI/any.t
+    - t/URI/fax.t
+    - t/URI/file.t
+    - t/URI/ftp.t
+    - t/URI/gopher.t
+    - t/URI/http.t
+    - t/URI/news.t
+    - t/URI/nntp.t
+    - t/URI/pop.t
+    - t/URI/prospero.t
+    - t/URI/tel.t
+    - t/URI/telnet.t
+    - t/URI/tv.t
+    - t/URI/wais.t
+    - t/comment/delimited.t
+    - t/comment/html.t
+    - t/comment/nested.t
+    - t/comment/single_line.t
+    - t/comment/single_or_multiline.t
+    - t/number/decimal.t
+    - t/number/integer.t
+    - t/number/number.t
+    - t/test___luhn.t
+    - t/test_balanced.t
+    - t/test_bases.t
+    - t/test_bases_sep.t
+    - t/test_comments.t
+    - t/test_curry.t
+    - t/test_delimited.t
+    - t/test_domain.t
+    - t/test_i.t
+    - t/test_ip.t
+    - t/test_keep.t
+    - t/test_lingua_palindrome.t
+    - t/test_list.t
+    - t/test_mac.t
+    - t/test_no_import.t
+    - t/test_profanity.t
+    - t/test_roman.t
+    - t/test_squares.t
+    - t/test_sub.t
+    - t/test_sub_named.t
+    - t/test_ws.t
+    - t/zip/australia.t
+    - t/zip/belgium.t
+    - t/zip/denmark.t
+    - t/zip/france.t
+    - t/zip/germany.t
+    - t/zip/greenland.t
+    - t/zip/italy.t
+    - t/zip/netherlands.t
+    - t/zip/norway.t
+    - t/zip/spain.t
+    - t/zip/us.t
+    - t/zip/zip.t
+    - t/zzz_50_pod.t
+    - t/zzz_60_pod_coverage.t
+  manifest_file_info:
+    - bytesize: 406
+      file_mime_type: ~
+      line_count: ~
+      md5: 97d9303acdfc078a050e61dc5c1a9a76
+      mtime: 1211577729
+      name: COPYRIGHT
+    - bytesize: 4997
+      file_mime_type: ~
+      line_count: ~
+      md5: 401c49c7cb9a50f58d9be8d54be8e832
+      mtime: 1211577212
+      name: COPYRIGHT.AL
+    - bytesize: 8708
+      file_mime_type: ~
+      line_count: ~
+      md5: 22c255c16533593431aae9628aa44c11
+      mtime: 1211577124
+      name: COPYRIGHT.AL2
+    - bytesize: 1504
+      file_mime_type: ~
+      line_count: ~
+      md5: 745ca11c45806560cddd6d40ed346286
+      mtime: 1211576874
+      name: COPYRIGHT.BSD
+    - bytesize: 1077
+      file_mime_type: ~
+      line_count: ~
+      md5: 91ff926228f206358919ca20aaa59d5d
+      mtime: 1211576656
+      name: COPYRIGHT.MIT
+    - bytesize: 8535
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1262139356
+      name: Changes
+    - bytesize: 2101
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1262132247
+      name: MANIFEST
+    - bytesize: 808
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1262142179
+      name: META.yml
+    - bytesize: 1579
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1262131248
+      name: Makefile.PL
+    - bytesize: 3846
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1262135588
+      name: README
+    - bytesize: 436
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1262112628
+      name: TODO
+    - bytesize: 26224
+      file_mime_type: ~
+      line_count: ~
+      md5: 38da6facac906330c259b935514bebc3
+      mtime: 1262141902
+      name: lib/Regexp/Common.pm
+    - bytesize: 3049
+      file_mime_type: ~
+      line_count: ~
+      md5: 47dfedeb48f05f93e43c84b2742b2bc8
+      mtime: 1262137550
+      name: lib/Regexp/Common/CC.pm
+    - bytesize: 3484
+      file_mime_type: ~
+      line_count: ~
+      md5: 31c750422821aa945325fe392ea756dc
+      mtime: 1262135718
+      name: lib/Regexp/Common/SEN.pm
+    - bytesize: 3284
+      file_mime_type: ~
+      line_count: ~
+      md5: b4a2c43f847055c4eabf539e9ed66abe
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI.pm
+    - bytesize: 1992
+      file_mime_type: ~
+      line_count: ~
+      md5: e96cf9b4a9b81db6f2a79d8ba9fed76c
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/RFC1035.pm
+    - bytesize: 4776
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d680618b0d112de07132ae841ef33d2
+      mtime: 1262136973
+      name: lib/Regexp/Common/URI/RFC1738.pm
+    - bytesize: 4034
+      file_mime_type: ~
+      line_count: ~
+      md5: 3112781fac8a8816bf163d356de6f707
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/RFC1808.pm
+    - bytesize: 2294
+      file_mime_type: ~
+      line_count: ~
+      md5: 348199c043d7f01455a94b2f199309f5
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/RFC2384.pm
+    - bytesize: 5121
+      file_mime_type: ~
+      line_count: ~
+      md5: 957b9a6969eeebfffe2ff6392e1429e4
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/RFC2396.pm
+    - bytesize: 8021
+      file_mime_type: ~
+      line_count: ~
+      md5: ac090b50342ce85b4e10f957f8a77856
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/RFC2806.pm
+    - bytesize: 2711
+      file_mime_type: ~
+      line_count: ~
+      md5: 7797986f8980f2dc5e21366757211ddb
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/fax.pm
+    - bytesize: 2034
+      file_mime_type: ~
+      line_count: ~
+      md5: 5214df268190d9cc097c0c8a6ed4d684
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/file.pm
+    - bytesize: 5447
+      file_mime_type: ~
+      line_count: ~
+      md5: 76fbc50437a733c73767dde809463e41
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/ftp.pm
+    - bytesize: 4484
+      file_mime_type: ~
+      line_count: ~
+      md5: 4ed9b8cf5d32e9ef22f6b203774bb636
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/gopher.pm
+    - bytesize: 2803
+      file_mime_type: ~
+      line_count: ~
+      md5: 68df8efa742d4e93e80958e18784df11
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/http.pm
+    - bytesize: 2765
+      file_mime_type: ~
+      line_count: ~
+      md5: e90af4a55ec03c79ddfa9e33fe2c84cf
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/news.pm
+    - bytesize: 2031
+      file_mime_type: ~
+      line_count: ~
+      md5: 22384d80710066057d0d9d033c030f3b
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/pop.pm
+    - bytesize: 2109
+      file_mime_type: ~
+      line_count: ~
+      md5: 412d91738e745dcf0603c4fd803c7eb5
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/prospero.pm
+    - bytesize: 2747
+      file_mime_type: ~
+      line_count: ~
+      md5: 354f19a41a28af47201d84bbc401fd13
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/tel.pm
+    - bytesize: 2254
+      file_mime_type: ~
+      line_count: ~
+      md5: 97e7ef34c60171a502c9eef04cf02f6e
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/telnet.pm
+    - bytesize: 1964
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c5dc77d6e28c958614730261f8374d4
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/tv.pm
+    - bytesize: 2405
+      file_mime_type: ~
+      line_count: ~
+      md5: f7e16589cbf099122a9dfcca4b9530b0
+      mtime: 1262135718
+      name: lib/Regexp/Common/URI/wais.pm
+    - bytesize: 1995
+      file_mime_type: ~
+      line_count: ~
+      md5: bd2a5b2751c62b07ee666afa96de167a
+      mtime: 1262135718
+      name: lib/Regexp/Common/_support.pm
+    - bytesize: 5246
+      file_mime_type: ~
+      line_count: ~
+      md5: eb4c969863b8be809a98247c564ba47a
+      mtime: 1262135718
+      name: lib/Regexp/Common/balanced.pm
+    - bytesize: 31091
+      file_mime_type: ~
+      line_count: ~
+      md5: ada3ac370e8a866d7f5c81a52ffd130f
+      mtime: 1262135718
+      name: lib/Regexp/Common/comment.pm
+    - bytesize: 4104
+      file_mime_type: ~
+      line_count: ~
+      md5: 80cb3102800005aa7f6638cc51bd59d4
+      mtime: 1262135718
+      name: lib/Regexp/Common/delimited.pm
+    - bytesize: 2419
+      file_mime_type: ~
+      line_count: ~
+      md5: e1e1f8c79466fbfce52df254dd9a3f71
+      mtime: 1262135718
+      name: lib/Regexp/Common/lingua.pm
+    - bytesize: 4177
+      file_mime_type: ~
+      line_count: ~
+      md5: b5cc66fd1d440a466fa884261186d9cb
+      mtime: 1262135718
+      name: lib/Regexp/Common/list.pm
+    - bytesize: 8679
+      file_mime_type: ~
+      line_count: ~
+      md5: 3cf90afc10977660741b4d51994a967e
+      mtime: 1262135718
+      name: lib/Regexp/Common/net.pm
+    - bytesize: 13094
+      file_mime_type: ~
+      line_count: ~
+      md5: fc787aed8fe12b19a1b98bf663bd320d
+      mtime: 1262135718
+      name: lib/Regexp/Common/number.pm
+    - bytesize: 4396
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b340fb1e3175c9578226baf8c803734
+      mtime: 1262135718
+      name: lib/Regexp/Common/profanity.pm
+    - bytesize: 1886
+      file_mime_type: ~
+      line_count: ~
+      md5: e9d2f6d55ce7c10ba6b9453770f195f6
+      mtime: 1262135718
+      name: lib/Regexp/Common/whitespace.pm
+    - bytesize: 21679
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ed2b8ab80d9c983c573141c76a8f4bc
+      mtime: 1262135718
+      name: lib/Regexp/Common/zip.pm
+    - bytesize: 28163
+      file_mime_type: ~
+      line_count: ~
+      md5: 1eb7953d3e8b516618310145d9b7a237
+      mtime: 1262130978
+      name: t/Common.pm
+    - bytesize: 2132
+      file_mime_type: ~
+      line_count: ~
+      md5: faa56133a65b74ba6b39350d66442638
+      mtime: 1262113657
+      name: t/SEN/usa_ssn.t
+    - bytesize: 4994
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c14fbe7a481f8393d46d0fcc3e89b0e
+      mtime: 1262136360
+      name: t/URI/any.t
+    - bytesize: 3493
+      file_mime_type: ~
+      line_count: ~
+      md5: 8672dc131a8dd4f54ef40182737e1f7c
+      mtime: 1262112592
+      name: t/URI/fax.t
+    - bytesize: 1722
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a2a7ef1d21ecdcf6216492ee68ad820
+      mtime: 1262113657
+      name: t/URI/file.t
+    - bytesize: 6172
+      file_mime_type: ~
+      line_count: ~
+      md5: 33864020622238cf3fcdbb99a72dcfef
+      mtime: 1211578317
+      name: t/URI/ftp.t
+    - bytesize: 3596
+      file_mime_type: ~
+      line_count: ~
+      md5: afda861badbc8c97131bd7cb1d07d68e
+      mtime: 1262113657
+      name: t/URI/gopher.t
+    - bytesize: 2583
+      file_mime_type: ~
+      line_count: ~
+      md5: 9826a0b5240e842a28629920d8d1ba6a
+      mtime: 1262113657
+      name: t/URI/http.t
+    - bytesize: 2029
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a729c8e3b3c4a829f6eba5c24dbefa
+      mtime: 1262136312
+      name: t/URI/news.t
+    - bytesize: 2136
+      file_mime_type: ~
+      line_count: ~
+      md5: de68e85b33962c1ec5399606e5bd3a32
+      mtime: 1262113657
+      name: t/URI/nntp.t
+    - bytesize: 2222
+      file_mime_type: ~
+      line_count: ~
+      md5: 48ad3ee162f07766ee77c3122a8a3f53
+      mtime: 1262113657
+      name: t/URI/pop.t
+    - bytesize: 2935
+      file_mime_type: ~
+      line_count: ~
+      md5: 7358798fd07d786e9848bf449639178f
+      mtime: 1262113657
+      name: t/URI/prospero.t
+    - bytesize: 2722
+      file_mime_type: ~
+      line_count: ~
+      md5: 37daeaa389869dc8c864b40a5cd4d77e
+      mtime: 1262112592
+      name: t/URI/tel.t
+    - bytesize: 2473
+      file_mime_type: ~
+      line_count: ~
+      md5: fd4000284b057e7d6d770d65af413020
+      mtime: 1262113657
+      name: t/URI/telnet.t
+    - bytesize: 1189
+      file_mime_type: ~
+      line_count: ~
+      md5: eab472068a6ea52c8dbb3e25430634b7
+      mtime: 1262131090
+      name: t/URI/tv.t
+    - bytesize: 3327
+      file_mime_type: ~
+      line_count: ~
+      md5: 1728a5552ecca42e753b74d124e58152
+      mtime: 1262113657
+      name: t/URI/wais.t
+    - bytesize: 2962
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a09a70e0f30705aac16c0c69c1de6e
+      mtime: 1262113658
+      name: t/comment/delimited.t
+    - bytesize: 2464
+      file_mime_type: ~
+      line_count: ~
+      md5: db3f237cfb7f440cd3e22f85190164a6
+      mtime: 1262113658
+      name: t/comment/html.t
+    - bytesize: 6845
+      file_mime_type: ~
+      line_count: ~
+      md5: 399a22d49bda854f9cce40e8794f5897
+      mtime: 1262113658
+      name: t/comment/nested.t
+    - bytesize: 6538
+      file_mime_type: ~
+      line_count: ~
+      md5: 54304e2042c4967a009b624ee4ba55fc
+      mtime: 1262113658
+      name: t/comment/single_line.t
+    - bytesize: 5509
+      file_mime_type: ~
+      line_count: ~
+      md5: a29ea4cc9386da9374190e6ca3c7fe84
+      mtime: 1262113658
+      name: t/comment/single_or_multiline.t
+    - bytesize: 3626
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a47ef86a7a327c78183bf623f1eccdc
+      mtime: 1262113658
+      name: t/number/decimal.t
+    - bytesize: 11024
+      file_mime_type: ~
+      line_count: ~
+      md5: 60e9435561b264262ef16db99e81f4b3
+      mtime: 1262113658
+      name: t/number/integer.t
+    - bytesize: 910
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d31e4e17c57cbb6da5b4c3390bcd902
+      mtime: 1262113657
+      name: t/number/number.t
+    - bytesize: 1125
+      file_mime_type: ~
+      line_count: ~
+      md5: ebf5c6d5f5dd235706e129968bd28379
+      mtime: 1262131355
+      name: t/test___luhn.t
+    - bytesize: 3388
+      file_mime_type: ~
+      line_count: ~
+      md5: e2cd0709e083bfe2a925515961c98c3e
+      mtime: 1262130825
+      name: t/test_balanced.t
+    - bytesize: 5436
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a0b0d741416580e20382b9e561f1a39
+      mtime: 1262130825
+      name: t/test_bases.t
+    - bytesize: 5540
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ab5c68e9e733e74f6faa52446d44f20
+      mtime: 1262130825
+      name: t/test_bases_sep.t
+    - bytesize: 8016
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f3be792ae6db591574f4f9305fe7051
+      mtime: 1262130825
+      name: t/test_comments.t
+    - bytesize: 1506
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dbc7270d307450ce998502f0ce15304
+      mtime: 1128808799
+      name: t/test_curry.t
+    - bytesize: 2121
+      file_mime_type: ~
+      line_count: ~
+      md5: e7be495c509c87aacb7f14ed5cf63e45
+      mtime: 1262130825
+      name: t/test_delimited.t
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a5184112f7ff6c888b3eab195157312
+      mtime: 1262130825
+      name: t/test_domain.t
+    - bytesize: 2161
+      file_mime_type: ~
+      line_count: ~
+      md5: 02f32164a359acd1cb0d128a1a40d693
+      mtime: 1262113658
+      name: t/test_i.t
+    - bytesize: 2145
+      file_mime_type: ~
+      line_count: ~
+      md5: d53c32ad125016c5babf8ee9d493b6a5
+      mtime: 1262130825
+      name: t/test_ip.t
+    - bytesize: 5174
+      file_mime_type: ~
+      line_count: ~
+      md5: e08c2225a9e5780d781334a79af71847
+      mtime: 1262112592
+      name: t/test_keep.t
+    - bytesize: 6765
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c305d8a507eee1ae59d4217e7d22210
+      mtime: 1262131424
+      name: t/test_lingua_palindrome.t
+    - bytesize: 1439
+      file_mime_type: ~
+      line_count: ~
+      md5: 6675798bcb63d5052a78e0a607f164cc
+      mtime: 1262130825
+      name: t/test_list.t
+    - bytesize: 3115
+      file_mime_type: ~
+      line_count: ~
+      md5: fc6ca5f206209c746509a53965d736aa
+      mtime: 1128808799
+      name: t/test_mac.t
+    - bytesize: 272
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f6ec94e07e2b2585a578856270f87b8
+      mtime: 1262112592
+      name: t/test_no_import.t
+    - bytesize: 7203
+      file_mime_type: ~
+      line_count: ~
+      md5: cddfd994926c3e671188c8bab6c7f66f
+      mtime: 1262130825
+      name: t/test_profanity.t
+    - bytesize: 35089
+      file_mime_type: ~
+      line_count: ~
+      md5: ba95d4de4cb0aa8159d50abcab0467be
+      mtime: 1262113658
+      name: t/test_roman.t
+    - bytesize: 1471
+      file_mime_type: ~
+      line_count: ~
+      md5: e6eda9aec4f080fa21c92c1d5db2a1f1
+      mtime: 1262133286
+      name: t/test_squares.t
+    - bytesize: 1612
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a9d1322455c69c8628b41474f7366bb
+      mtime: 1128808799
+      name: t/test_sub.t
+    - bytesize: 626
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a531e15661374c262a2f6cc8b2f2df
+      mtime: 1128808799
+      name: t/test_sub_named.t
+    - bytesize: 927
+      file_mime_type: ~
+      line_count: ~
+      md5: ee1f83a29ac90f38c04486657dfe6c67
+      mtime: 1262130825
+      name: t/test_ws.t
+    - bytesize: 5501
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c21e4b684b49b1385d7aa106912ce80
+      mtime: 1262131090
+      name: t/zip/australia.t
+    - bytesize: 4049
+      file_mime_type: ~
+      line_count: ~
+      md5: ba01089f7742689bb6dd8f0c55c032ac
+      mtime: 1262113657
+      name: t/zip/belgium.t
+    - bytesize: 4395
+      file_mime_type: ~
+      line_count: ~
+      md5: eafa1ac0162bbcc047cb9aaf1c6fd534
+      mtime: 1262113657
+      name: t/zip/denmark.t
+    - bytesize: 5135
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b1ecf0280a1780de122181b6874ca3e
+      mtime: 1262131090
+      name: t/zip/france.t
+    - bytesize: 4959
+      file_mime_type: ~
+      line_count: ~
+      md5: fcf48aeee5d48970fa85045b76bfd00d
+      mtime: 1262131090
+      name: t/zip/germany.t
+    - bytesize: 4193
+      file_mime_type: ~
+      line_count: ~
+      md5: 390cceef0708d7e6d4816b05b6a958e0
+      mtime: 1262113657
+      name: t/zip/greenland.t
+    - bytesize: 3666
+      file_mime_type: ~
+      line_count: ~
+      md5: 368864c72d5ee447067f502fcb4a22d8
+      mtime: 1262113657
+      name: t/zip/italy.t
+    - bytesize: 8248
+      file_mime_type: ~
+      line_count: ~
+      md5: be3b6359a6146bea03b9b2e1e71de350
+      mtime: 1262131090
+      name: t/zip/netherlands.t
+    - bytesize: 3572
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a97d720fc0607178cf72ffbdc1fa40e
+      mtime: 1262113657
+      name: t/zip/norway.t
+    - bytesize: 5194
+      file_mime_type: ~
+      line_count: ~
+      md5: f073ec1fe26691d830b4eae746ee2ece
+      mtime: 1262131090
+      name: t/zip/spain.t
+    - bytesize: 11036
+      file_mime_type: ~
+      line_count: ~
+      md5: 249e2b570630c99f566a7922f452d22f
+      mtime: 1262113657
+      name: t/zip/us.t
+    - bytesize: 2266
+      file_mime_type: ~
+      line_count: ~
+      md5: ece01a35466e0b598ff23aad5eb587d7
+      mtime: 1262113657
+      name: t/zip/zip.t
+    - bytesize: 209
+      file_mime_type: ~
+      line_count: ~
+      md5: 900dfed53b4823379c963195ff6cd4e7
+      mtime: 1262131593
+      name: t/zzz_50_pod.t
+    - bytesize: 262
+      file_mime_type: ~
+      line_count: ~
+      md5: 52ea73bbc1037fb4a141e6eb451e98d6
+      mtime: 1262131593
+      name: t/zzz_60_pod_coverage.t
+  module_info:
+    - bytesize: 26224
+      file_mime_type: ~
+      line_count: ~
+      md5: d381e33b5ff9cee616643ba083294ea2
+      module_name_from_file_guess: Regexp::Common
+      mtime: 1262141902
+      name: blib/lib/Regexp/Common.pm
+      packages:
+        - Regexp::Common
+        - Regexp::Common::Entry
+      primary_package: Regexp::Common
+      uses:
+        - ''
+        - strict
+        - warnings
+        - vars
+        - Carp
+        - overload
+      version_info:
+        filename: blib/lib/Regexp/Common.pm
+        identifier: VERSION
+        line_number: 21
+        sigil: $
+        value: 2009123001
+    - bytesize: 3049
+      file_mime_type: ~
+      line_count: ~
+      md5: adf1352a81a0be467da313a204878125
+      module_name_from_file_guess: Regexp::Common::CC
+      mtime: 1262137550
+      name: blib/lib/Regexp/Common/CC.pm
+      packages:
+        - Regexp::Common::CC
+      primary_package: Regexp::Common::CC
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::_support
+        - re
+      version_info:
+        filename: blib/lib/Regexp/Common/CC.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3484
+      file_mime_type: ~
+      line_count: ~
+      md5: fabd5422a418730e91d6d5e26c45af66
+      module_name_from_file_guess: Regexp::Common::SEN
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/SEN.pm
+      packages:
+        - Regexp::Common::SEN
+      primary_package: Regexp::Common::SEN
+      uses:
+        - strict
+        - Regexp::Common
+      version_info:
+        filename: blib/lib/Regexp/Common/SEN.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3284
+      file_mime_type: ~
+      line_count: ~
+      md5: 14ac3e5238303b778e261536ae61fb50
+      module_name_from_file_guess: Regexp::Common::URI
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI.pm
+      packages:
+        - Regexp::Common::URI
+      primary_package: Regexp::Common::URI
+      uses:
+        - strict
+        - Exporter
+        - vars
+        - Regexp::Common
+      version_info:
+        filename: blib/lib/Regexp/Common/URI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1992
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b9c966700596069851bce2e44ee9af4
+      module_name_from_file_guess: Regexp::Common::URI::RFC1035
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/RFC1035.pm
+      packages:
+        - Regexp::Common::URI::RFC1035
+      primary_package: Regexp::Common::URI::RFC1035
+      uses:
+        - strict
+        - Regexp::Common
+        - vars
+        - Exporter
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/RFC1035.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4776
+      file_mime_type: ~
+      line_count: ~
+      md5: bc8dcad2daa7168ab9f0af7f8305d4a7
+      module_name_from_file_guess: Regexp::Common::URI::RFC1738
+      mtime: 1262136973
+      name: blib/lib/Regexp/Common/URI/RFC1738.pm
+      packages:
+        - Regexp::Common::URI::RFC1738
+      primary_package: Regexp::Common::URI::RFC1738
+      uses:
+        - strict
+        - Regexp::Common
+        - vars
+        - Exporter
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/RFC1738.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4034
+      file_mime_type: ~
+      line_count: ~
+      md5: e6af95066135a36793a60c7ec376b089
+      module_name_from_file_guess: Regexp::Common::URI::RFC1808
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/RFC1808.pm
+      packages:
+        - Regexp::Common::URI::RFC1808
+      primary_package: Regexp::Common::URI::RFC1808
+      uses:
+        - strict
+        - vars
+        - Exporter
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/RFC1808.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2294
+      file_mime_type: ~
+      line_count: ~
+      md5: bef9136db0589e72708534617d63a2bb
+      module_name_from_file_guess: Regexp::Common::URI::RFC2384
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/RFC2384.pm
+      packages:
+        - Regexp::Common::URI::RFC2384
+      primary_package: Regexp::Common::URI::RFC2384
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI::RFC1738
+        - vars
+        - Exporter
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/RFC2384.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5121
+      file_mime_type: ~
+      line_count: ~
+      md5: ae425bb1111d877f310e0d095573b208
+      module_name_from_file_guess: Regexp::Common::URI::RFC2396
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/RFC2396.pm
+      packages:
+        - Regexp::Common::URI::RFC2396
+      primary_package: Regexp::Common::URI::RFC2396
+      uses:
+        - strict
+        - Regexp::Common
+        - vars
+        - Exporter
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/RFC2396.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8021
+      file_mime_type: ~
+      line_count: ~
+      md5: 1dbc5eb3cde6082a3f9918e5170736d9
+      module_name_from_file_guess: Regexp::Common::URI::RFC2806
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/RFC2806.pm
+      packages:
+        - Regexp::Common::URI::RFC2806
+      primary_package: Regexp::Common::URI::RFC2806
+      uses:
+        - strict
+        - Regexp::Common::URI::RFC1035
+        - Regexp::Common::URI::RFC2396
+        - vars
+        - Exporter
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/RFC2806.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2711
+      file_mime_type: ~
+      line_count: ~
+      md5: c47d6c367c1b6aa504b8806ac026748a
+      module_name_from_file_guess: Regexp::Common::URI::fax
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/fax.pm
+      packages:
+        - Regexp::Common::URI::fax
+      primary_package: Regexp::Common::URI::fax
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC2806
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/fax.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2034
+      file_mime_type: ~
+      line_count: ~
+      md5: 807d662d2fa21f6b81a4ca7764ef491b
+      module_name_from_file_guess: Regexp::Common::URI::file
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/file.pm
+      packages:
+        - Regexp::Common::URI::file
+      primary_package: Regexp::Common::URI::file
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/file.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5447
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ac170440d5750f6db2b7e51b2e50066
+      module_name_from_file_guess: Regexp::Common::URI::ftp
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/ftp.pm
+      packages:
+        - Regexp::Common::URI::ftp
+      primary_package: Regexp::Common::URI::ftp
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC2396
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/ftp.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4484
+      file_mime_type: ~
+      line_count: ~
+      md5: 517d96bc0bf4a61b771eb07048e187f7
+      module_name_from_file_guess: Regexp::Common::URI::gopher
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/gopher.pm
+      packages:
+        - Regexp::Common::URI::gopher
+      primary_package: Regexp::Common::URI::gopher
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+        - Regexp::Common::URI::RFC1808
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/gopher.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2803
+      file_mime_type: ~
+      line_count: ~
+      md5: 63e2095192ed19ae0c7a4dc27a1e8838
+      module_name_from_file_guess: Regexp::Common::URI::http
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/http.pm
+      packages:
+        - Regexp::Common::URI::http
+      primary_package: Regexp::Common::URI::http
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC2396
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/http.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2765
+      file_mime_type: ~
+      line_count: ~
+      md5: 3ea8ed377d929afaf8c45da552c7d986
+      module_name_from_file_guess: Regexp::Common::URI::news
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/news.pm
+      packages:
+        - Regexp::Common::URI::news
+      primary_package: Regexp::Common::URI::news
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/news.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2031
+      file_mime_type: ~
+      line_count: ~
+      md5: cb51d363f322624aa301ece6655247ed
+      module_name_from_file_guess: Regexp::Common::URI::pop
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/pop.pm
+      packages:
+        - Regexp::Common::URI::pop
+      primary_package: Regexp::Common::URI::pop
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+        - Regexp::Common::URI::RFC2384
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/pop.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2109
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b909b8f3684a5eda43dbc6b07dc3676
+      module_name_from_file_guess: Regexp::Common::URI::prospero
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/prospero.pm
+      packages:
+        - Regexp::Common::URI::prospero
+      primary_package: Regexp::Common::URI::prospero
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/prospero.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2747
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ed17f9595468d49b4a9bac08cda0814
+      module_name_from_file_guess: Regexp::Common::URI::tel
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/tel.pm
+      packages:
+        - Regexp::Common::URI::tel
+      primary_package: Regexp::Common::URI::tel
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC2806
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/tel.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2254
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a3a79bc7e660e56deb7d7723ac308ae
+      module_name_from_file_guess: Regexp::Common::URI::telnet
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/telnet.pm
+      packages:
+        - Regexp::Common::URI::telnet
+      primary_package: Regexp::Common::URI::telnet
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/telnet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1964
+      file_mime_type: ~
+      line_count: ~
+      md5: e41152f8148a61c36826c95ffd036968
+      module_name_from_file_guess: Regexp::Common::URI::tv
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/tv.pm
+      packages:
+        - Regexp::Common::URI::tv
+      primary_package: Regexp::Common::URI::tv
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC2396
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/tv.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2405
+      file_mime_type: ~
+      line_count: ~
+      md5: 33f15bc50210410db2ced3bb09b51517
+      module_name_from_file_guess: Regexp::Common::URI::wais
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/URI/wais.pm
+      packages:
+        - Regexp::Common::URI::wais
+      primary_package: Regexp::Common::URI::wais
+      uses:
+        - strict
+        - Regexp::Common
+        - Regexp::Common::URI
+        - Regexp::Common::URI::RFC1738
+      version_info:
+        filename: blib/lib/Regexp/Common/URI/wais.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1995
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b3fb516d6aeaf3d1d11a4a59a7c47b
+      module_name_from_file_guess: Regexp::Common::_support
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/_support.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+      version_info:
+        filename: blib/lib/Regexp/Common/_support.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5246
+      file_mime_type: ~
+      line_count: ~
+      md5: dddd69e228f2b25b3333a7153e76522f
+      module_name_from_file_guess: Regexp::Common::balanced
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/balanced.pm
+      packages:
+        - Regexp::Common::balanced
+      primary_package: Regexp::Common::balanced
+      uses:
+        - strict
+        - Regexp::Common
+        - re
+      version_info:
+        filename: blib/lib/Regexp/Common/balanced.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 31091
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c06f06daff295bdc85de0d23c4d1def
+      module_name_from_file_guess: Regexp::Common::comment
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/comment.pm
+      packages:
+        - Regexp::Common::comment
+      primary_package: Regexp::Common::comment
+      uses: []
+      version_info:
+        filename: blib/lib/Regexp/Common/comment.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4104
+      file_mime_type: ~
+      line_count: ~
+      md5: a94dbd4add4ad39064ad048a812002c7
+      module_name_from_file_guess: Regexp::Common::delimited
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/delimited.pm
+      packages:
+        - Regexp::Common::delimited
+      primary_package: Regexp::Common::delimited
+      uses:
+        - strict
+        - Regexp::Common
+        - Carp
+      version_info:
+        filename: blib/lib/Regexp/Common/delimited.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2419
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d7e0ae9e41a863f407925630778b040
+      module_name_from_file_guess: Regexp::Common::lingua
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/lingua.pm
+      packages:
+        - Regexp::Common::lingua
+      primary_package: Regexp::Common::lingua
+      uses:
+        - strict
+        - Regexp::Common
+        - re
+      version_info:
+        filename: blib/lib/Regexp/Common/lingua.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4177
+      file_mime_type: ~
+      line_count: ~
+      md5: 94ac611833a5852beb852245365fa5e4
+      module_name_from_file_guess: Regexp::Common::list
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/list.pm
+      packages:
+        - Regexp::Common::list
+      primary_package: Regexp::Common::list
+      uses:
+        - strict
+        - Regexp::Common
+      version_info:
+        filename: blib/lib/Regexp/Common/list.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8679
+      file_mime_type: ~
+      line_count: ~
+      md5: 6332aab50c6f3b2daf6b7317d084d94d
+      module_name_from_file_guess: Regexp::Common::net
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/net.pm
+      packages:
+        - Regexp::Common::net
+      primary_package: Regexp::Common::net
+      uses:
+        - Regexp::Common
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Regexp/Common/net.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 13094
+      file_mime_type: ~
+      line_count: ~
+      md5: 562a52b16f905cea86da4c6d23b04bd8
+      module_name_from_file_guess: Regexp::Common::number
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/number.pm
+      packages:
+        - Regexp::Common::number
+      primary_package: Regexp::Common::number
+      uses:
+        - strict
+        - Config
+        - Regexp::Common
+        - Carp
+        - re
+      version_info:
+        filename: blib/lib/Regexp/Common/number.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4396
+      file_mime_type: ~
+      line_count: ~
+      md5: a52519fbd1d41922b3e6273ca74c72b5
+      module_name_from_file_guess: Regexp::Common::profanity
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/profanity.pm
+      packages:
+        - Regexp::Common::profanity
+      primary_package: Regexp::Common::profanity
+      uses:
+        - strict
+        - Regexp::Common
+      version_info:
+        filename: blib/lib/Regexp/Common/profanity.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1886
+      file_mime_type: ~
+      line_count: ~
+      md5: 167eb03dfc055bd253abb2c1dd5645c9
+      module_name_from_file_guess: Regexp::Common::whitespace
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/whitespace.pm
+      packages:
+        - Regexp::Common::whitespace
+      primary_package: Regexp::Common::whitespace
+      uses:
+        - strict
+        - Regexp::Common
+      version_info:
+        filename: blib/lib/Regexp/Common/whitespace.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 21679
+      file_mime_type: ~
+      line_count: ~
+      md5: 4625cbf01fda9c9f1ed54f8f04c0f409
+      module_name_from_file_guess: Regexp::Common::zip
+      mtime: 1262135718
+      name: blib/lib/Regexp/Common/zip.pm
+      packages:
+        - Regexp::Common::zip
+      primary_package: Regexp::Common::zip
+      uses:
+        - strict
+        - Regexp::Common
+      version_info:
+        filename: blib/lib/Regexp/Common/zip.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Regexp/Common.pm
+    - blib/lib/Regexp/Common/CC.pm
+    - blib/lib/Regexp/Common/SEN.pm
+    - blib/lib/Regexp/Common/URI.pm
+    - blib/lib/Regexp/Common/URI/RFC1035.pm
+    - blib/lib/Regexp/Common/URI/RFC1738.pm
+    - blib/lib/Regexp/Common/URI/RFC1808.pm
+    - blib/lib/Regexp/Common/URI/RFC2384.pm
+    - blib/lib/Regexp/Common/URI/RFC2396.pm
+    - blib/lib/Regexp/Common/URI/RFC2806.pm
+    - blib/lib/Regexp/Common/URI/fax.pm
+    - blib/lib/Regexp/Common/URI/file.pm
+    - blib/lib/Regexp/Common/URI/ftp.pm
+    - blib/lib/Regexp/Common/URI/gopher.pm
+    - blib/lib/Regexp/Common/URI/http.pm
+    - blib/lib/Regexp/Common/URI/news.pm
+    - blib/lib/Regexp/Common/URI/pop.pm
+    - blib/lib/Regexp/Common/URI/prospero.pm
+    - blib/lib/Regexp/Common/URI/tel.pm
+    - blib/lib/Regexp/Common/URI/telnet.pm
+    - blib/lib/Regexp/Common/URI/tv.pm
+    - blib/lib/Regexp/Common/URI/wais.pm
+    - blib/lib/Regexp/Common/_support.pm
+    - blib/lib/Regexp/Common/balanced.pm
+    - blib/lib/Regexp/Common/comment.pm
+    - blib/lib/Regexp/Common/delimited.pm
+    - blib/lib/Regexp/Common/lingua.pm
+    - blib/lib/Regexp/Common/list.pm
+    - blib/lib/Regexp/Common/net.pm
+    - blib/lib/Regexp/Common/number.pm
+    - blib/lib/Regexp/Common/profanity.pm
+    - blib/lib/Regexp/Common/whitespace.pm
+    - blib/lib/Regexp/Common/zip.pm
+  test_info:
+    - bytesize: 1439
+      file_mime_type: ~
+      line_count: ~
+      md5: 6675798bcb63d5052a78e0a607f164cc
+      mtime: 1262130825
+      name: t/test_list.t
+      uses:
+        - Regexp::Common
+    - bytesize: 626
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a531e15661374c262a2f6cc8b2f2df
+      mtime: 1128808799
+      name: t/test_sub_named.t
+      uses:
+        - Regexp::Common
+    - bytesize: 5540
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ab5c68e9e733e74f6faa52446d44f20
+      mtime: 1262130825
+      name: t/test_bases_sep.t
+      uses:
+        - Regexp::Common
+    - bytesize: 1125
+      file_mime_type: ~
+      line_count: ~
+      md5: ebf5c6d5f5dd235706e129968bd28379
+      mtime: 1262131355
+      name: t/test___luhn.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - Regexp::Common::_support
+        - warnings
+    - bytesize: 7203
+      file_mime_type: ~
+      line_count: ~
+      md5: cddfd994926c3e671188c8bab6c7f66f
+      mtime: 1262130825
+      name: t/test_profanity.t
+      uses:
+        - Regexp::Common
+    - bytesize: 2161
+      file_mime_type: ~
+      line_count: ~
+      md5: 02f32164a359acd1cb0d128a1a40d693
+      mtime: 1262113658
+      name: t/test_i.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+    - bytesize: 2121
+      file_mime_type: ~
+      line_count: ~
+      md5: e7be495c509c87aacb7f14ed5cf63e45
+      mtime: 1262130825
+      name: t/test_delimited.t
+      uses:
+        - Regexp::Common
+    - bytesize: 3115
+      file_mime_type: ~
+      line_count: ~
+      md5: fc6ca5f206209c746509a53965d736aa
+      mtime: 1128808799
+      name: t/test_mac.t
+      uses:
+        - Regexp::Common
+    - bytesize: 6765
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c305d8a507eee1ae59d4217e7d22210
+      mtime: 1262131424
+      name: t/test_lingua_palindrome.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+    - bytesize: 8016
+      file_mime_type: ~
+      line_count: ~
+      md5: 4f3be792ae6db591574f4f9305fe7051
+      mtime: 1262130825
+      name: t/test_comments.t
+      uses:
+        - Regexp::Common
+    - bytesize: 5436
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a0b0d741416580e20382b9e561f1a39
+      mtime: 1262130825
+      name: t/test_bases.t
+      uses:
+        - Regexp::Common
+    - bytesize: 927
+      file_mime_type: ~
+      line_count: ~
+      md5: ee1f83a29ac90f38c04486657dfe6c67
+      mtime: 1262130825
+      name: t/test_ws.t
+      uses:
+        - Regexp::Common
+    - bytesize: 272
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f6ec94e07e2b2585a578856270f87b8
+      mtime: 1262112592
+      name: t/test_no_import.t
+      uses:
+        - Regexp::Common
+    - bytesize: 5174
+      file_mime_type: ~
+      line_count: ~
+      md5: e08c2225a9e5780d781334a79af71847
+      mtime: 1262112592
+      name: t/test_keep.t
+      uses:
+        - Regexp::Common
+    - bytesize: 3388
+      file_mime_type: ~
+      line_count: ~
+      md5: e2cd0709e083bfe2a925515961c98c3e
+      mtime: 1262130825
+      name: t/test_balanced.t
+      uses:
+        - Regexp::Common
+    - bytesize: 262
+      file_mime_type: ~
+      line_count: ~
+      md5: 52ea73bbc1037fb4a141e6eb451e98d6
+      mtime: 1262131593
+      name: t/zzz_60_pod_coverage.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a5184112f7ff6c888b3eab195157312
+      mtime: 1262130825
+      name: t/test_domain.t
+      uses:
+        - Regexp::Common
+    - bytesize: 35089
+      file_mime_type: ~
+      line_count: ~
+      md5: ba95d4de4cb0aa8159d50abcab0467be
+      mtime: 1262113658
+      name: t/test_roman.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+    - bytesize: 1612
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a9d1322455c69c8628b41474f7366bb
+      mtime: 1128808799
+      name: t/test_sub.t
+      uses:
+        - Regexp::Common
+    - bytesize: 209
+      file_mime_type: ~
+      line_count: ~
+      md5: 900dfed53b4823379c963195ff6cd4e7
+      mtime: 1262131593
+      name: t/zzz_50_pod.t
+      uses:
+        - Test::More
+        - strict
+        - warnings
+    - bytesize: 1506
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dbc7270d307450ce998502f0ce15304
+      mtime: 1128808799
+      name: t/test_curry.t
+      uses:
+        - Regexp::Common
+    - bytesize: 2145
+      file_mime_type: ~
+      line_count: ~
+      md5: d53c32ad125016c5babf8ee9d493b6a5
+      mtime: 1262130825
+      name: t/test_ip.t
+      uses:
+        - Regexp::Common
+    - bytesize: 1471
+      file_mime_type: ~
+      line_count: ~
+      md5: e6eda9aec4f080fa21c92c1d5db2a1f1
+      mtime: 1262133286
+      name: t/test_squares.t
+      uses:
+        - strict
+        - lib
+        - Config
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 3327
+      file_mime_type: ~
+      line_count: ~
+      md5: 1728a5552ecca42e753b74d124e58152
+      mtime: 1262113657
+      name: t/URI/wais.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 2473
+      file_mime_type: ~
+      line_count: ~
+      md5: fd4000284b057e7d6d770d65af413020
+      mtime: 1262113657
+      name: t/URI/telnet.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 1722
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a2a7ef1d21ecdcf6216492ee68ad820
+      mtime: 1262113657
+      name: t/URI/file.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 2029
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a729c8e3b3c4a829f6eba5c24dbefa
+      mtime: 1262136312
+      name: t/URI/news.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 2583
+      file_mime_type: ~
+      line_count: ~
+      md5: 9826a0b5240e842a28629920d8d1ba6a
+      mtime: 1262113657
+      name: t/URI/http.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 2935
+      file_mime_type: ~
+      line_count: ~
+      md5: 7358798fd07d786e9848bf449639178f
+      mtime: 1262113657
+      name: t/URI/prospero.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 3596
+      file_mime_type: ~
+      line_count: ~
+      md5: afda861badbc8c97131bd7cb1d07d68e
+      mtime: 1262113657
+      name: t/URI/gopher.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 1189
+      file_mime_type: ~
+      line_count: ~
+      md5: eab472068a6ea52c8dbb3e25430634b7
+      mtime: 1262131090
+      name: t/URI/tv.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+    - bytesize: 4994
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c14fbe7a481f8393d46d0fcc3e89b0e
+      mtime: 1262136360
+      name: t/URI/any.t
+      uses:
+        - Regexp::Common
+    - bytesize: 2136
+      file_mime_type: ~
+      line_count: ~
+      md5: de68e85b33962c1ec5399606e5bd3a32
+      mtime: 1262113657
+      name: t/URI/nntp.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 3493
+      file_mime_type: ~
+      line_count: ~
+      md5: 8672dc131a8dd4f54ef40182737e1f7c
+      mtime: 1262112592
+      name: t/URI/fax.t
+      uses:
+        - Regexp::Common
+    - bytesize: 2222
+      file_mime_type: ~
+      line_count: ~
+      md5: 48ad3ee162f07766ee77c3122a8a3f53
+      mtime: 1262113657
+      name: t/URI/pop.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 2722
+      file_mime_type: ~
+      line_count: ~
+      md5: 37daeaa389869dc8c864b40a5cd4d77e
+      mtime: 1262112592
+      name: t/URI/tel.t
+      uses:
+        - Regexp::Common
+    - bytesize: 6172
+      file_mime_type: ~
+      line_count: ~
+      md5: 33864020622238cf3fcdbb99a72dcfef
+      mtime: 1211578317
+      name: t/URI/ftp.t
+      uses:
+        - Regexp::Common
+    - bytesize: 3626
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a47ef86a7a327c78183bf623f1eccdc
+      mtime: 1262113658
+      name: t/number/decimal.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 910
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d31e4e17c57cbb6da5b4c3390bcd902
+      mtime: 1262113657
+      name: t/number/number.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 11024
+      file_mime_type: ~
+      line_count: ~
+      md5: 60e9435561b264262ef16db99e81f4b3
+      mtime: 1262113658
+      name: t/number/integer.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+    - bytesize: 5509
+      file_mime_type: ~
+      line_count: ~
+      md5: a29ea4cc9386da9374190e6ca3c7fe84
+      mtime: 1262113658
+      name: t/comment/single_or_multiline.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 2464
+      file_mime_type: ~
+      line_count: ~
+      md5: db3f237cfb7f440cd3e22f85190164a6
+      mtime: 1262113658
+      name: t/comment/html.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 6538
+      file_mime_type: ~
+      line_count: ~
+      md5: 54304e2042c4967a009b624ee4ba55fc
+      mtime: 1262113658
+      name: t/comment/single_line.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 6845
+      file_mime_type: ~
+      line_count: ~
+      md5: 399a22d49bda854f9cce40e8794f5897
+      mtime: 1262113658
+      name: t/comment/nested.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 2962
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a09a70e0f30705aac16c0c69c1de6e
+      mtime: 1262113658
+      name: t/comment/delimited.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 4959
+      file_mime_type: ~
+      line_count: ~
+      md5: fcf48aeee5d48970fa85045b76bfd00d
+      mtime: 1262131090
+      name: t/zip/germany.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+        - constant
+    - bytesize: 4049
+      file_mime_type: ~
+      line_count: ~
+      md5: ba01089f7742689bb6dd8f0c55c032ac
+      mtime: 1262113657
+      name: t/zip/belgium.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 2266
+      file_mime_type: ~
+      line_count: ~
+      md5: ece01a35466e0b598ff23aad5eb587d7
+      mtime: 1262113657
+      name: t/zip/zip.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+    - bytesize: 5194
+      file_mime_type: ~
+      line_count: ~
+      md5: f073ec1fe26691d830b4eae746ee2ece
+      mtime: 1262131090
+      name: t/zip/spain.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+        - constant
+    - bytesize: 4193
+      file_mime_type: ~
+      line_count: ~
+      md5: 390cceef0708d7e6d4816b05b6a958e0
+      mtime: 1262113657
+      name: t/zip/greenland.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 3572
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a97d720fc0607178cf72ffbdc1fa40e
+      mtime: 1262113657
+      name: t/zip/norway.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+        - constant
+    - bytesize: 3666
+      file_mime_type: ~
+      line_count: ~
+      md5: 368864c72d5ee447067f502fcb4a22d8
+      mtime: 1262113657
+      name: t/zip/italy.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - constant
+    - bytesize: 5135
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b1ecf0280a1780de122181b6874ca3e
+      mtime: 1262131090
+      name: t/zip/france.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+        - constant
+    - bytesize: 5501
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c21e4b684b49b1385d7aa106912ce80
+      mtime: 1262131090
+      name: t/zip/australia.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+        - constant
+    - bytesize: 11036
+      file_mime_type: ~
+      line_count: ~
+      md5: 249e2b570630c99f566a7922f452d22f
+      mtime: 1262113657
+      name: t/zip/us.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 8248
+      file_mime_type: ~
+      line_count: ~
+      md5: be3b6359a6146bea03b9b2e1e71de350
+      mtime: 1262131090
+      name: t/zip/netherlands.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - warnings
+        - constant
+    - bytesize: 4395
+      file_mime_type: ~
+      line_count: ~
+      md5: eafa1ac0162bbcc047cb9aaf1c6fd534
+      mtime: 1262113657
+      name: t/zip/denmark.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - warnings
+    - bytesize: 2132
+      file_mime_type: ~
+      line_count: ~
+      md5: faa56133a65b74ba6b39350d66442638
+      mtime: 1262113657
+      name: t/SEN/usa_ssn.t
+      uses:
+        - strict
+        - lib
+        - Regexp::Common
+        - t::Common
+        - constant
+  tests:
+    - t/test_list.t
+    - t/test_sub_named.t
+    - t/test_bases_sep.t
+    - t/test___luhn.t
+    - t/test_profanity.t
+    - t/test_i.t
+    - t/test_delimited.t
+    - t/test_mac.t
+    - t/test_lingua_palindrome.t
+    - t/test_comments.t
+    - t/test_bases.t
+    - t/test_ws.t
+    - t/test_no_import.t
+    - t/test_keep.t
+    - t/test_balanced.t
+    - t/zzz_60_pod_coverage.t
+    - t/test_domain.t
+    - t/test_roman.t
+    - t/test_sub.t
+    - t/zzz_50_pod.t
+    - t/test_curry.t
+    - t/test_ip.t
+    - t/test_squares.t
+    - t/URI/wais.t
+    - t/URI/telnet.t
+    - t/URI/file.t
+    - t/URI/news.t
+    - t/URI/http.t
+    - t/URI/prospero.t
+    - t/URI/gopher.t
+    - t/URI/tv.t
+    - t/URI/any.t
+    - t/URI/nntp.t
+    - t/URI/fax.t
+    - t/URI/pop.t
+    - t/URI/tel.t
+    - t/URI/ftp.t
+    - t/number/decimal.t
+    - t/number/number.t
+    - t/number/integer.t
+    - t/comment/single_or_multiline.t
+    - t/comment/html.t
+    - t/comment/single_line.t
+    - t/comment/nested.t
+    - t/comment/delimited.t
+    - t/zip/germany.t
+    - t/zip/belgium.t
+    - t/zip/zip.t
+    - t/zip/spain.t
+    - t/zip/greenland.t
+    - t/zip/norway.t
+    - t/zip/italy.t
+    - t/zip/france.t
+    - t/zip/australia.t
+    - t/zip/us.t
+    - t/zip/netherlands.t
+    - t/zip/denmark.t
+    - t/SEN/usa_ssn.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-54502.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 54502
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268851063
+  examine_start_time: 1268851027
+  examine_time: 36
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 54502
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268851063
+  run_start_time: 1268851027
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

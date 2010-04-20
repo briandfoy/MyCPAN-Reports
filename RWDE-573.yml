@@ -1,0 +1,2906 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: 'RWDE - Rapid Web Development Framework'
+    author: []
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.48
+    license: unknown
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: RWDE
+    no_index:
+      directory:
+        - t
+        - inc
+    requires:
+      Apache::Session: 0
+      Cache::Memcached: 0
+      Crypt::CBC: 0
+      Crypt::Rijndael: 1.05
+      DBD::Pg: 2.6
+      Data::Dumper: 0
+      Data::Validate::Domain: 0
+      Digest::HMAC_SHA1: 0
+      Digest::MD5: 0
+      Error: 0
+      Gearman::Client: 0
+      Gearman::Worker: 0
+      HTTP::Date: 0
+      MIME::Base64: 0
+      Mail::RFC822::Address: 0
+      NEXT: 0
+      Net::SMTP: 0
+      Net::Server: 0
+      SCGI: 0
+      Storable: 0
+      Sys::Syslog: 0
+      Template: 0
+      YAML: 0
+    version: 573
+  blib:
+    - blib/lib/RWDE.pm
+    - blib/lib/RWDE/AbstractFactory.pm
+    - blib/lib/RWDE/CCR.pm
+    - blib/lib/RWDE/CCRproxy.pm
+    - blib/lib/RWDE/Configuration.pm
+    - blib/lib/RWDE/Configuration_content.pm
+    - blib/lib/RWDE/DB/BigFile.pm
+    - blib/lib/RWDE/DB/Cachable.pm
+    - blib/lib/RWDE/DB/DbRegistry.pm
+    - blib/lib/RWDE/DB/DefaultDB.pm
+    - blib/lib/RWDE/DB/Deletable.pm
+    - blib/lib/RWDE/DB/Immutable.pm
+    - blib/lib/RWDE/DB/Items.pm
+    - blib/lib/RWDE/DB/MemcachedAdapter.pm
+    - blib/lib/RWDE/DB/MemcachedRegistry.pm
+    - blib/lib/RWDE/DB/Record.pm
+    - blib/lib/RWDE/DB/S3.pm
+    - blib/lib/RWDE/Exceptions.pm
+    - blib/lib/RWDE/Gearman/Client.pm
+    - blib/lib/RWDE/Gearman/Worker.pm
+    - blib/lib/RWDE/Interpreter.pm
+    - blib/lib/RWDE/Logger.pm
+    - blib/lib/RWDE/Logging.pm
+    - blib/lib/RWDE/LoginUser.pm
+    - blib/lib/RWDE/Mailing.pm
+    - blib/lib/RWDE/Mapper.pm
+    - blib/lib/RWDE/PostMaster.pm
+    - blib/lib/RWDE/Proxy.pm
+    - blib/lib/RWDE/RObject.pm
+    - blib/lib/RWDE/Runnable.pm
+    - blib/lib/RWDE/Scheduler/Pending_action.pm
+    - blib/lib/RWDE/Scheduler/Scheduler.pm
+    - blib/lib/RWDE/Scheduler/SchedulerWorker.pm
+    - blib/lib/RWDE/Search.pm
+    - blib/lib/RWDE/SearchClient/Indexable.pm
+    - blib/lib/RWDE/Singleton.pm
+    - blib/lib/RWDE/Time.pm
+    - blib/lib/RWDE/Utility.pm
+    - blib/lib/RWDE/Web/AbstractCommand.pm
+    - blib/lib/RWDE/Web/AppServer.pm
+    - blib/lib/RWDE/Web/CGIadapter.pm
+    - blib/lib/RWDE/Web/CommandProxy.pm
+    - blib/lib/RWDE/Web/FCGIadapter.pm
+    - blib/lib/RWDE/Web/Helper.pm
+    - blib/lib/RWDE/Web/SCGIadapter.pm
+    - blib/lib/RWDE/Web/Session.pm
+    - blib/lib/RWDE/Web/TemplateAdapter.pm
+    - blib/man3/RWDE.3
+    - blib/man3/RWDE::AbstractFactory.3
+    - blib/man3/RWDE::CCR.3
+    - blib/man3/RWDE::CCRproxy.3
+    - blib/man3/RWDE::Configuration.3
+    - blib/man3/RWDE::Configuration_content.3
+    - blib/man3/RWDE::DB::Deletable.3
+    - blib/man3/RWDE::DB::Items.3
+    - blib/man3/RWDE::DB::Record.3
+    - blib/man3/RWDE::Exceptions.3
+    - blib/man3/RWDE::Logger.3
+    - blib/man3/RWDE::Logging.3
+    - blib/man3/RWDE::LoginUser.3
+    - blib/man3/RWDE::Mailing.3
+    - blib/man3/RWDE::Mapper.3
+    - blib/man3/RWDE::PostMaster.3
+    - blib/man3/RWDE::Proxy.3
+    - blib/man3/RWDE::RObject.3
+    - blib/man3/RWDE::SearchClient::Indexable.3
+    - blib/man3/RWDE::Time.3
+    - blib/man3/RWDE::Utility.3
+    - blib/man3/RWDE::Web::AbstractCommand.3
+    - blib/man3/RWDE::Web::Helper.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Apache::Session 0 not found.
+    Warning: prerequisite Cache::Memcached 0 not found.
+    Warning: prerequisite Crypt::CBC 0 not found.
+    Warning: prerequisite Crypt::Rijndael 1.05 not found.
+    Warning: prerequisite DBD::Pg 2.6 not found.
+    Warning: prerequisite Data::Validate::Domain 0 not found.
+    Warning: prerequisite Digest::HMAC_SHA1 0 not found.
+    Warning: prerequisite Error 0 not found.
+    Warning: prerequisite Gearman::Client 0 not found.
+    Warning: prerequisite Gearman::Worker 0 not found.
+    Warning: prerequisite HTTP::Date 0 not found.
+    Warning: prerequisite Mail::RFC822::Address 0 not found.
+    Warning: prerequisite Net::Server 0 not found.
+    Warning: prerequisite SCGI 0 not found.
+    Warning: prerequisite Template 0 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for RWDE
+  build_output: |
+    cp lib/RWDE/Web/SCGIadapter.pm blib/lib/RWDE/Web/SCGIadapter.pm
+    cp lib/RWDE/Interpreter.pm blib/lib/RWDE/Interpreter.pm
+    cp lib/RWDE/Search.pm blib/lib/RWDE/Search.pm
+    cp lib/RWDE/DB/MemcachedRegistry.pm blib/lib/RWDE/DB/MemcachedRegistry.pm
+    cp lib/RWDE/Scheduler/Pending_action.pm blib/lib/RWDE/Scheduler/Pending_action.pm
+    cp lib/RWDE/Runnable.pm blib/lib/RWDE/Runnable.pm
+    cp lib/RWDE/Time.pm blib/lib/RWDE/Time.pm
+    cp lib/RWDE/Web/AbstractCommand.pm blib/lib/RWDE/Web/AbstractCommand.pm
+    cp lib/RWDE/Gearman/Client.pm blib/lib/RWDE/Gearman/Client.pm
+    cp lib/RWDE/SearchClient/Indexable.pm blib/lib/RWDE/SearchClient/Indexable.pm
+    cp lib/RWDE/Web/AppServer.pm blib/lib/RWDE/Web/AppServer.pm
+    cp lib/RWDE/PostMaster.pm blib/lib/RWDE/PostMaster.pm
+    cp lib/RWDE/Gearman/Worker.pm blib/lib/RWDE/Gearman/Worker.pm
+    cp lib/RWDE/Web/FCGIadapter.pm blib/lib/RWDE/Web/FCGIadapter.pm
+    cp lib/RWDE/Proxy.pm blib/lib/RWDE/Proxy.pm
+    cp lib/RWDE/DB/DbRegistry.pm blib/lib/RWDE/DB/DbRegistry.pm
+    cp lib/RWDE/CCRproxy.pm blib/lib/RWDE/CCRproxy.pm
+    cp lib/RWDE/DB/Items.pm blib/lib/RWDE/DB/Items.pm
+    cp lib/RWDE/DB/Record.pm blib/lib/RWDE/DB/Record.pm
+    cp lib/RWDE/Web/CommandProxy.pm blib/lib/RWDE/Web/CommandProxy.pm
+    cp lib/RWDE/DB/Immutable.pm blib/lib/RWDE/DB/Immutable.pm
+    cp lib/RWDE/Mailing.pm blib/lib/RWDE/Mailing.pm
+    cp lib/RWDE/Utility.pm blib/lib/RWDE/Utility.pm
+    cp lib/RWDE/Configuration_content.pm blib/lib/RWDE/Configuration_content.pm
+    cp lib/RWDE/DB/Deletable.pm blib/lib/RWDE/DB/Deletable.pm
+    cp lib/RWDE/CCR.pm blib/lib/RWDE/CCR.pm
+    cp lib/RWDE/Logging.pm blib/lib/RWDE/Logging.pm
+    cp lib/RWDE/Mapper.pm blib/lib/RWDE/Mapper.pm
+    cp lib/RWDE/DB/S3.pm blib/lib/RWDE/DB/S3.pm
+    cp lib/RWDE/Web/TemplateAdapter.pm blib/lib/RWDE/Web/TemplateAdapter.pm
+    cp lib/RWDE/DB/BigFile.pm blib/lib/RWDE/DB/BigFile.pm
+    cp lib/RWDE/DB/DefaultDB.pm blib/lib/RWDE/DB/DefaultDB.pm
+    cp lib/RWDE/Exceptions.pm blib/lib/RWDE/Exceptions.pm
+    cp lib/RWDE/Scheduler/SchedulerWorker.pm blib/lib/RWDE/Scheduler/SchedulerWorker.pm
+    cp lib/RWDE/RObject.pm blib/lib/RWDE/RObject.pm
+    cp lib/RWDE/LoginUser.pm blib/lib/RWDE/LoginUser.pm
+    cp lib/RWDE/Web/CGIadapter.pm blib/lib/RWDE/Web/CGIadapter.pm
+    cp lib/RWDE.pm blib/lib/RWDE.pm
+    cp lib/RWDE/AbstractFactory.pm blib/lib/RWDE/AbstractFactory.pm
+    cp lib/RWDE/Singleton.pm blib/lib/RWDE/Singleton.pm
+    cp lib/RWDE/DB/MemcachedAdapter.pm blib/lib/RWDE/DB/MemcachedAdapter.pm
+    cp lib/RWDE/Configuration.pm blib/lib/RWDE/Configuration.pm
+    cp lib/RWDE/Scheduler/Scheduler.pm blib/lib/RWDE/Scheduler/Scheduler.pm
+    cp lib/RWDE/Web/Session.pm blib/lib/RWDE/Web/Session.pm
+    cp lib/RWDE/Logger.pm blib/lib/RWDE/Logger.pm
+    cp lib/RWDE/Web/Helper.pm blib/lib/RWDE/Web/Helper.pm
+    cp lib/RWDE/DB/Cachable.pm blib/lib/RWDE/DB/Cachable.pm
+    Manifying blib/man3/RWDE::Utility.3
+    Manifying blib/man3/RWDE::Configuration_content.3
+    Manifying blib/man3/RWDE::DB::Deletable.3
+    Manifying blib/man3/RWDE::CCR.3
+    Manifying blib/man3/RWDE::Logging.3
+    Manifying blib/man3/RWDE::Mapper.3
+    Manifying blib/man3/RWDE::Web::AbstractCommand.3
+    Manifying blib/man3/RWDE::Time.3
+    Manifying blib/man3/RWDE::SearchClient::Indexable.3
+    Manifying blib/man3/RWDE::Exceptions.3
+    Manifying blib/man3/RWDE::LoginUser.3
+    Manifying blib/man3/RWDE::RObject.3
+    Manifying blib/man3/RWDE::PostMaster.3
+    Manifying blib/man3/RWDE::Proxy.3
+    Manifying blib/man3/RWDE.3
+    Manifying blib/man3/RWDE::AbstractFactory.3
+    Manifying blib/man3/RWDE::CCRproxy.3
+    Manifying blib/man3/RWDE::DB::Items.3
+    Manifying blib/man3/RWDE::Configuration.3
+    Manifying blib/man3/RWDE::DB::Record.3
+    Manifying blib/man3/RWDE::Logger.3
+    Manifying blib/man3/RWDE::Web::Helper.3
+    Manifying blib/man3/RWDE::Mailing.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV/RWDE-573/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV/RWDE-573
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV/RWDE-573/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV/RWDE-573/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DAMJANP
+  dist_basename: RWDE-573.tar.gz
+  dist_date: 1248212019
+  dist_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV/RWDE-573
+  dist_extract_path: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV/RWDE-573
+  dist_file: /home/brian/CPAN/authors/id/D/DA/DAMJANP/RWDE-573.tar.gz
+  dist_md5: 7aa7f7a43134453253c9d5ebcd26cbe0
+  dist_size: 54664
+  manifest:
+    - AUTHORS
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - lib/RWDE.pm
+    - lib/RWDE/AbstractFactory.pm
+    - lib/RWDE/CCR.pm
+    - lib/RWDE/CCRproxy.pm
+    - lib/RWDE/Configuration.pm
+    - lib/RWDE/Configuration_content.pm
+    - lib/RWDE/DB/BigFile.pm
+    - lib/RWDE/DB/Cachable.pm
+    - lib/RWDE/DB/DbRegistry.pm
+    - lib/RWDE/DB/DefaultDB.pm
+    - lib/RWDE/DB/Deletable.pm
+    - lib/RWDE/DB/Immutable.pm
+    - lib/RWDE/DB/Items.pm
+    - lib/RWDE/DB/MemcachedAdapter.pm
+    - lib/RWDE/DB/MemcachedRegistry.pm
+    - lib/RWDE/DB/Record.pm
+    - lib/RWDE/DB/S3.pm
+    - lib/RWDE/Exceptions.pm
+    - lib/RWDE/Gearman/Client.pm
+    - lib/RWDE/Gearman/Worker.pm
+    - lib/RWDE/Interpreter.pm
+    - lib/RWDE/Logger.pm
+    - lib/RWDE/Logging.pm
+    - lib/RWDE/LoginUser.pm
+    - lib/RWDE/Mailing.pm
+    - lib/RWDE/Mapper.pm
+    - lib/RWDE/PostMaster.pm
+    - lib/RWDE/Proxy.pm
+    - lib/RWDE/RObject.pm
+    - lib/RWDE/Runnable.pm
+    - lib/RWDE/Scheduler/Pending_action.pm
+    - lib/RWDE/Scheduler/Scheduler.pm
+    - lib/RWDE/Scheduler/SchedulerWorker.pm
+    - lib/RWDE/Search.pm
+    - lib/RWDE/SearchClient/Indexable.pm
+    - lib/RWDE/Singleton.pm
+    - lib/RWDE/Time.pm
+    - lib/RWDE/Utility.pm
+    - lib/RWDE/Web/AbstractCommand.pm
+    - lib/RWDE/Web/AppServer.pm
+    - lib/RWDE/Web/CGIadapter.pm
+    - lib/RWDE/Web/CommandProxy.pm
+    - lib/RWDE/Web/FCGIadapter.pm
+    - lib/RWDE/Web/Helper.pm
+    - lib/RWDE/Web/SCGIadapter.pm
+    - lib/RWDE/Web/Session.pm
+    - lib/RWDE/Web/TemplateAdapter.pm
+  manifest_file_info:
+    - bytesize: 144
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d350169560e75d0cf9fc8e3574a3639
+      mtime: 1222178194
+      name: AUTHORS
+    - bytesize: 1278
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1248211934
+      name: MANIFEST
+    - bytesize: 1104
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1248211934
+      name: META.yml
+    - bytesize: 1191
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1223042324
+      name: Makefile.PL
+    - bytesize: 1532
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1248211934
+      name: README
+    - bytesize: 1650
+      file_mime_type: ~
+      line_count: ~
+      md5: 14316fb53e3d3b18aa6ea7800281cf4c
+      mtime: 1248211918
+      name: lib/RWDE.pm
+    - bytesize: 814
+      file_mime_type: ~
+      line_count: ~
+      md5: c33bdd5e871252fdef66e1cfeb399350
+      mtime: 1220916551
+      name: lib/RWDE/AbstractFactory.pm
+    - bytesize: 8476
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fa2e11edd8f25493cbecdbb40f1ab07
+      mtime: 1238036878
+      name: lib/RWDE/CCR.pm
+    - bytesize: 1350
+      file_mime_type: ~
+      line_count: ~
+      md5: 41178f7d0ac14a6d16ce199340b630c6
+      mtime: 1220916620
+      name: lib/RWDE/CCRproxy.pm
+    - bytesize: 2216
+      file_mime_type: ~
+      line_count: ~
+      md5: 919b85bb07a26ba5eea1d986817fd0f8
+      mtime: 1220916620
+      name: lib/RWDE/Configuration.pm
+    - bytesize: 1165
+      file_mime_type: ~
+      line_count: ~
+      md5: 83af6b80dcd3cd3b66ab5c2d9422196b
+      mtime: 1242959674
+      name: lib/RWDE/Configuration_content.pm
+    - bytesize: 1987
+      file_mime_type: ~
+      line_count: ~
+      md5: d5aec20b5846264688f3d6e5318d2906
+      mtime: 1232305642
+      name: lib/RWDE/DB/BigFile.pm
+    - bytesize: 1877
+      file_mime_type: ~
+      line_count: ~
+      md5: b349de93b4296d8f4c05336927a4c18c
+      mtime: 1220916775
+      name: lib/RWDE/DB/Cachable.pm
+    - bytesize: 18220
+      file_mime_type: ~
+      line_count: ~
+      md5: ce8d8734c360d94703ce9b2dfd7ea851
+      mtime: 1242959674
+      name: lib/RWDE/DB/DbRegistry.pm
+    - bytesize: 517
+      file_mime_type: ~
+      line_count: ~
+      md5: 59f7301dec85c07cc3053fedcb349634
+      mtime: 1220916775
+      name: lib/RWDE/DB/DefaultDB.pm
+    - bytesize: 529
+      file_mime_type: ~
+      line_count: ~
+      md5: 468b11bca8bfefa178c799c1bb4beaaa
+      mtime: 1220916775
+      name: lib/RWDE/DB/Deletable.pm
+    - bytesize: 490
+      file_mime_type: ~
+      line_count: ~
+      md5: 538f6f5b1f0057f8ff1ae430f3e6e31e
+      mtime: 1220916775
+      name: lib/RWDE/DB/Immutable.pm
+    - bytesize: 12075
+      file_mime_type: ~
+      line_count: ~
+      md5: e4100cf6d90dd9d55b83833aa86cdbe1
+      mtime: 1220916775
+      name: lib/RWDE/DB/Items.pm
+    - bytesize: 1057
+      file_mime_type: ~
+      line_count: ~
+      md5: 26739dd5efa29a60197de4264090431a
+      mtime: 1220916775
+      name: lib/RWDE/DB/MemcachedAdapter.pm
+    - bytesize: 1398
+      file_mime_type: ~
+      line_count: ~
+      md5: af1d7d27011f28ad43539de6a18576ca
+      mtime: 1220916775
+      name: lib/RWDE/DB/MemcachedRegistry.pm
+    - bytesize: 27882
+      file_mime_type: ~
+      line_count: ~
+      md5: d7d7da9cef88d0269c7ae0feab9b98e1
+      mtime: 1232679091
+      name: lib/RWDE/DB/Record.pm
+    - bytesize: 6492
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bf74c081ab5feafd30dba2f36a1bd0f
+      mtime: 1220916775
+      name: lib/RWDE/DB/S3.pm
+    - bytesize: 4079
+      file_mime_type: ~
+      line_count: ~
+      md5: 43c164344ab685249cb07db8888617f8
+      mtime: 1221449737
+      name: lib/RWDE/Exceptions.pm
+    - bytesize: 3031
+      file_mime_type: ~
+      line_count: ~
+      md5: fbd7d4c5b0ac0d6df1f4b138dfb6664e
+      mtime: 1241551910
+      name: lib/RWDE/Gearman/Client.pm
+    - bytesize: 2539
+      file_mime_type: ~
+      line_count: ~
+      md5: 6327de3d6c530a8d01a2b15d31dff69d
+      mtime: 1233377471
+      name: lib/RWDE/Gearman/Worker.pm
+    - bytesize: 4793
+      file_mime_type: ~
+      line_count: ~
+      md5: b0097a9fa3741cebe9bf52721d0fce05
+      mtime: 1220916620
+      name: lib/RWDE/Interpreter.pm
+    - bytesize: 2403
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d90e46ca14f999de3b4a7d4ba0fae9b
+      mtime: 1220916620
+      name: lib/RWDE/Logger.pm
+    - bytesize: 556
+      file_mime_type: ~
+      line_count: ~
+      md5: bba464c1a57bab2361a4734581acfc72
+      mtime: 1220916620
+      name: lib/RWDE/Logging.pm
+    - bytesize: 3337
+      file_mime_type: ~
+      line_count: ~
+      md5: f6c279f58131994c14ecf0b4aa9d78c7
+      mtime: 1220916620
+      name: lib/RWDE/LoginUser.pm
+    - bytesize: 2298
+      file_mime_type: ~
+      line_count: ~
+      md5: f0e65c46e7aceb92d99c89d46e5382ef
+      mtime: 1220916620
+      name: lib/RWDE/Mailing.pm
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: c687512ce6616b5b98276fc74e0940f8
+      mtime: 1228417593
+      name: lib/RWDE/Mapper.pm
+    - bytesize: 7043
+      file_mime_type: ~
+      line_count: ~
+      md5: d749da4618679d888434f4cddc270d0b
+      mtime: 1226267399
+      name: lib/RWDE/PostMaster.pm
+    - bytesize: 847
+      file_mime_type: ~
+      line_count: ~
+      md5: e832ae2d7c38cc342a9b4ee7ae2b2912
+      mtime: 1220916620
+      name: lib/RWDE/Proxy.pm
+    - bytesize: 13316
+      file_mime_type: ~
+      line_count: ~
+      md5: 6078ef3be9f6d860fe855d5078558809
+      mtime: 1226438204
+      name: lib/RWDE/RObject.pm
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fe23c4400b5540ddbe77864692e8388
+      mtime: 1245863793
+      name: lib/RWDE/Runnable.pm
+    - bytesize: 5518
+      file_mime_type: ~
+      line_count: ~
+      md5: 78fa320743889d29f2ee003836b91c3e
+      mtime: 1220917037
+      name: lib/RWDE/Scheduler/Pending_action.pm
+    - bytesize: 9190
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b1798a8b0e3dddce0315f12cdec66a4
+      mtime: 1228070456
+      name: lib/RWDE/Scheduler/Scheduler.pm
+    - bytesize: 2133
+      file_mime_type: ~
+      line_count: ~
+      md5: a6d05e53e478eeef18f6cfb1a7e61bfc
+      mtime: 1228069326
+      name: lib/RWDE/Scheduler/SchedulerWorker.pm
+    - bytesize: 357
+      file_mime_type: ~
+      line_count: ~
+      md5: c8fac98e8139b0e7b6eca898e4419105
+      mtime: 1220916620
+      name: lib/RWDE/Search.pm
+    - bytesize: 4390
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f44ee11a6e6ba22a3701befba0bba86
+      mtime: 1220917037
+      name: lib/RWDE/SearchClient/Indexable.pm
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: e3206e2d56428147815796bf328fbdf2
+      mtime: 1220916620
+      name: lib/RWDE/Singleton.pm
+    - bytesize: 6809
+      file_mime_type: ~
+      line_count: ~
+      md5: 1df44a65c1c2268792f5279549b8a14a
+      mtime: 1221510103
+      name: lib/RWDE/Time.pm
+    - bytesize: 8731
+      file_mime_type: ~
+      line_count: ~
+      md5: 74f35ab850be23a05e6444f2f518b173
+      mtime: 1246326790
+      name: lib/RWDE/Utility.pm
+    - bytesize: 4112
+      file_mime_type: ~
+      line_count: ~
+      md5: ef9927949f4c1833feace97b644140e6
+      mtime: 1220917037
+      name: lib/RWDE/Web/AbstractCommand.pm
+    - bytesize: 2149
+      file_mime_type: ~
+      line_count: ~
+      md5: bf98bdf2790da97c83480bf02bc65a42
+      mtime: 1226851444
+      name: lib/RWDE/Web/AppServer.pm
+    - bytesize: 10176
+      file_mime_type: ~
+      line_count: ~
+      md5: 14f27e3a5b85b73e997ba812f8a2b24b
+      mtime: 1246326718
+      name: lib/RWDE/Web/CGIadapter.pm
+    - bytesize: 3861
+      file_mime_type: ~
+      line_count: ~
+      md5: df6f02569d517c81514ee740771d221c
+      mtime: 1231430210
+      name: lib/RWDE/Web/CommandProxy.pm
+    - bytesize: 1393
+      file_mime_type: ~
+      line_count: ~
+      md5: f55d2adca94ee8acd345802c13e9df50
+      mtime: 1246281063
+      name: lib/RWDE/Web/FCGIadapter.pm
+    - bytesize: 2645
+      file_mime_type: ~
+      line_count: ~
+      md5: c1980104d55b1c9e7f0eacc29d6618ee
+      mtime: 1220917037
+      name: lib/RWDE/Web/Helper.pm
+    - bytesize: 1172
+      file_mime_type: ~
+      line_count: ~
+      md5: 26a6dc3731f4cceec1bfb3a1216a6889
+      mtime: 1246281063
+      name: lib/RWDE/Web/SCGIadapter.pm
+    - bytesize: 4883
+      file_mime_type: ~
+      line_count: ~
+      md5: 6e84b8b50c37a0073e288848bc29790d
+      mtime: 1246389007
+      name: lib/RWDE/Web/Session.pm
+    - bytesize: 1938
+      file_mime_type: ~
+      line_count: ~
+      md5: ae0f78986b041de8ae1a705655ba7b30
+      mtime: 1220917037
+      name: lib/RWDE/Web/TemplateAdapter.pm
+  module_info:
+    - bytesize: 1650
+      file_mime_type: ~
+      line_count: ~
+      md5: f9d0950af24423bc23944286414fa02f
+      module_name_from_file_guess: RWDE
+      mtime: 1248211918
+      name: blib/lib/RWDE.pm
+      packages:
+        - RWDE
+      primary_package: RWDE
+      uses:
+        - vars
+      version_info:
+        filename: blib/lib/RWDE.pm
+        identifier: VERSION
+        line_number: 3
+        sigil: $
+        value: 573
+    - bytesize: 814
+      file_mime_type: ~
+      line_count: ~
+      md5: 26cd7704e57ead17301348f7fdeb5125
+      module_name_from_file_guess: RWDE::AbstractFactory
+      mtime: 1220916551
+      name: blib/lib/RWDE/AbstractFactory.pm
+      packages:
+        - RWDE::AbstractFactory
+      primary_package: RWDE::AbstractFactory
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - vars
+        - ''
+      version_info:
+        filename: blib/lib/RWDE/AbstractFactory.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 506
+    - bytesize: 8476
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d33e264b4fca3961c5abf865e6efd1e
+      module_name_from_file_guess: RWDE::CCR
+      mtime: 1238036878
+      name: blib/lib/RWDE/CCR.pm
+      packages:
+        - RWDE::CCR
+      primary_package: RWDE::CCR
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - Digest::MD5
+        - vars
+        - integer
+      version_info:
+        filename: blib/lib/RWDE/CCR.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 558
+    - bytesize: 1350
+      file_mime_type: ~
+      line_count: ~
+      md5: b77d4096d55b0be3c8f7817f75c6ff85
+      module_name_from_file_guess: RWDE::CCRproxy
+      mtime: 1220916620
+      name: blib/lib/RWDE/CCRproxy.pm
+      packages:
+        - RWDE::CCRproxy
+      primary_package: RWDE::CCRproxy
+      uses:
+        - strict
+        - warnings
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/CCRproxy.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 507
+    - bytesize: 2216
+      file_mime_type: ~
+      line_count: ~
+      md5: 94c9448fc1053668aa1bbfc474b6d6fd
+      module_name_from_file_guess: RWDE::Configuration
+      mtime: 1220916620
+      name: blib/lib/RWDE/Configuration.pm
+      packages:
+        - RWDE::Configuration
+      primary_package: RWDE::Configuration
+      uses:
+        - strict
+        - YAML
+        - RWDE::Configuration_content
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Configuration.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 507
+    - bytesize: 1165
+      file_mime_type: ~
+      line_count: ~
+      md5: 8076492a12c886a1c011d9b69d762215
+      module_name_from_file_guess: RWDE::Configuration_content
+      mtime: 1242959674
+      name: blib/lib/RWDE/Configuration_content.pm
+      packages:
+        - RWDE::Configuration_content
+      primary_package: RWDE::Configuration_content
+      uses:
+        - strict
+        - Error
+        - YAML
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Configuration_content.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 561
+    - bytesize: 1987
+      file_mime_type: ~
+      line_count: ~
+      md5: 65ba7c97bf8d1e8f8afd1994c443a0c3
+      module_name_from_file_guess: RWDE::DB::BigFile
+      mtime: 1232305642
+      name: blib/lib/RWDE/DB/BigFile.pm
+      packages:
+        - RWDE::DB::BigFile
+      primary_package: RWDE::DB::BigFile
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Configuration
+        - RWDE::Exceptions
+        - RWDE::DB::S3
+        - vars
+        - CGI
+      version_info:
+        filename: blib/lib/RWDE/DB/BigFile.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 554
+    - bytesize: 1877
+      file_mime_type: ~
+      line_count: ~
+      md5: d6ccbc6c1d77af704dc4cf88d8d0d7ea
+      module_name_from_file_guess: RWDE::DB::Cachable
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/Cachable.pm
+      packages:
+        - RWDE::DB::Cachable
+      primary_package: RWDE::DB::Cachable
+      uses:
+        - strict
+        - warnings
+        - NEXT
+        - Error
+        - RWDE::Exceptions
+        - RWDE::DB::MemcachedRegistry
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/Cachable.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 508
+    - bytesize: 18220
+      file_mime_type: ~
+      line_count: ~
+      md5: f9b988ffdbfa09c3b4b34d0f188bed6a
+      module_name_from_file_guess: RWDE::DB::DbRegistry
+      mtime: 1242959674
+      name: blib/lib/RWDE/DB/DbRegistry.pm
+      packages:
+        - RWDE::DB::DbRegistry
+      primary_package: RWDE::DB::DbRegistry
+      uses:
+        - strict
+        - warnings
+        - DBI
+        - Error
+        - RWDE::Configuration
+        - RWDE::Exceptions
+        - RWDE::RObject
+        - base
+        - vars
+        - IO::Select
+      version_info:
+        filename: blib/lib/RWDE/DB/DbRegistry.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 561
+    - bytesize: 517
+      file_mime_type: ~
+      line_count: ~
+      md5: 65bb5fc6707ba12023cf861458756969
+      module_name_from_file_guess: RWDE::DB::DefaultDB
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/DefaultDB.pm
+      packages:
+        - RWDE::DB::DefaultDB
+      primary_package: RWDE::DB::DefaultDB
+      uses:
+        - strict
+        - warnings
+        - RWDE::DB::DbRegistry
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/DefaultDB.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 508
+    - bytesize: 529
+      file_mime_type: ~
+      line_count: ~
+      md5: 0239a381a8c97af5762c2462774d1131
+      module_name_from_file_guess: RWDE::DB::Deletable
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/Deletable.pm
+      packages:
+        - RWDE::DB::Deletable
+      primary_package: RWDE::DB::Deletable
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/Deletable.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 508
+    - bytesize: 490
+      file_mime_type: ~
+      line_count: ~
+      md5: c43ef34d20408857b51b78880977d061
+      module_name_from_file_guess: RWDE::DB::Immutable
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/Immutable.pm
+      packages:
+        - RWDE::DB::Immutable
+      primary_package: RWDE::DB::Immutable
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/Immutable.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 508
+    - bytesize: 12075
+      file_mime_type: ~
+      line_count: ~
+      md5: 552f35efdaf01ca407ab463ad581c10c
+      module_name_from_file_guess: RWDE::DB::Items
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/Items.pm
+      packages:
+        - RWDE::DB::Items
+      primary_package: RWDE::DB::Items
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::AbstractFactory
+        - RWDE::Exceptions
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/Items.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 508
+    - bytesize: 1057
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ac68b55f4e5192df500262f421cd31c
+      module_name_from_file_guess: RWDE::DB::MemcachedAdapter
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/MemcachedAdapter.pm
+      packages:
+        - RWDE::DB::MemcachedAdapter
+      primary_package: RWDE::DB::MemcachedAdapter
+      uses:
+        - strict
+        - warnings
+        - Cache::Memcached
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/MemcachedAdapter.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 508
+    - bytesize: 1398
+      file_mime_type: ~
+      line_count: ~
+      md5: ffb2b0a3a54ed19e3918cc344fafeded
+      module_name_from_file_guess: RWDE::DB::MemcachedRegistry
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/MemcachedRegistry.pm
+      packages:
+        - RWDE::DB::MemcachedRegistry
+      primary_package: RWDE::DB::MemcachedRegistry
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Configuration
+        - RWDE::Exceptions
+        - RWDE::DB::MemcachedAdapter
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/MemcachedRegistry.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 508
+    - bytesize: 27882
+      file_mime_type: ~
+      line_count: ~
+      md5: fb02816d95645d31f0dd3c737d680c07
+      module_name_from_file_guess: RWDE::DB::Record
+      mtime: 1232679091
+      name: blib/lib/RWDE/DB/Record.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Crypt::CBC
+        - Crypt::Rijndael
+        - Error
+        - MIME::Base64
+        - Storable
+        - RWDE::Exceptions
+        - RWDE::DB::DbRegistry
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/Record.pm
+        identifier: VERSION
+        line_number: 28
+        sigil: $
+        value: 555
+    - bytesize: 6492
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f1266c72a896636cc2f049e2c1fd792
+      module_name_from_file_guess: RWDE::DB::S3
+      mtime: 1220916775
+      name: blib/lib/RWDE/DB/S3.pm
+      packages:
+        - RWDE::DB::S3
+      primary_package: RWDE::DB::S3
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - Data::Dumper
+        - LWP::UserAgent
+        - Digest::HMAC_SHA1
+        - HTTP::Date
+        - MIME::Base64
+        - RWDE::Configuration
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/DB/S3.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 508
+    - bytesize: 4079
+      file_mime_type: ~
+      line_count: ~
+      md5: 88ee7f69f2525506465db57b3923236e
+      module_name_from_file_guess: RWDE::Exceptions
+      mtime: 1221449737
+      name: blib/lib/RWDE/Exceptions.pm
+      packages:
+        - RWDE::Exceptions
+        - RWDE::BaseException
+        - RWDE::DevelException
+        - RWDE::DataMissingException
+        - RWDE::DataBadException
+        - RWDE::DataLimitException
+        - RWDE::DataDuplicateException
+        - RWDE::DataNotFoundException
+        - RWDE::BadPasswordException
+        - RWDE::SSLException
+        - RWDE::Web::SessionMissingException
+        - RWDE::StatusException
+        - RWDE::DatabaseErrorException
+        - RWDE::PolicyException
+        - RWDE::PermissionException
+        - RWDE::DefaultException
+      primary_package: RWDE::Exceptions
+      uses:
+        - vars
+        - strict
+        - warnings
+        - RWDE::DB::DbRegistry
+        - base
+        - overload
+      version_info:
+        filename: blib/lib/RWDE/Exceptions.pm
+        identifier: VERSION
+        line_number: 4
+        sigil: $
+        value: 515
+    - bytesize: 3031
+      file_mime_type: ~
+      line_count: ~
+      md5: d2905af8dc4e84ff662602d04b3db9f8
+      module_name_from_file_guess: RWDE::Gearman::Client
+      mtime: 1241551910
+      name: blib/lib/RWDE/Gearman/Client.pm
+      packages:
+        - RWDE::Gearman::Client
+      primary_package: RWDE::Gearman::Client
+      uses:
+        - strict
+        - Error
+        - Gearman::Client
+        - Storable
+        - RWDE::Configuration
+        - RWDE::Exceptions
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Gearman/Client.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 560
+    - bytesize: 2539
+      file_mime_type: ~
+      line_count: ~
+      md5: 256c883afe80820693d7590184fef82d
+      module_name_from_file_guess: RWDE::Gearman::Worker
+      mtime: 1233377471
+      name: blib/lib/RWDE/Gearman/Worker.pm
+      packages:
+        - RWDE::Gearman::Worker
+      primary_package: RWDE::Gearman::Worker
+      uses:
+        - strict
+        - warnings
+        - Error
+        - Storable
+        - Gearman::Worker
+        - RWDE::Configuration
+        - RWDE::DB::DbRegistry
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Gearman/Worker.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 556
+    - bytesize: 4793
+      file_mime_type: ~
+      line_count: ~
+      md5: ed4cbe5841b811669472d136779a7122
+      module_name_from_file_guess: RWDE::Interpreter
+      mtime: 1220916620
+      name: blib/lib/RWDE/Interpreter.pm
+      packages:
+        - RWDE::Interpreter
+      primary_package: RWDE::Interpreter
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Interpreter.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 507
+    - bytesize: 2403
+      file_mime_type: ~
+      line_count: ~
+      md5: a1b8512829489a8c50d72c841d6fd431
+      module_name_from_file_guess: RWDE::Logger
+      mtime: 1220916620
+      name: blib/lib/RWDE/Logger.pm
+      packages:
+        - RWDE::Logger
+      primary_package: RWDE::Logger
+      uses:
+        - strict
+        - warnings
+        - Error
+        - Sys::Syslog
+        - RWDE::Configuration
+        - RWDE::Exceptions
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Logger.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 507
+    - bytesize: 556
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b5021bd1bcf4c0f651897a9c54195ba
+      module_name_from_file_guess: RWDE::Logging
+      mtime: 1220916620
+      name: blib/lib/RWDE/Logging.pm
+      packages:
+        - RWDE::Logging
+      primary_package: RWDE::Logging
+      uses:
+        - strict
+        - warnings
+        - RWDE::Logger
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Logging.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 507
+    - bytesize: 3337
+      file_mime_type: ~
+      line_count: ~
+      md5: 566f800928328fdfb0f1c2ceb12bed17
+      module_name_from_file_guess: RWDE::LoginUser
+      mtime: 1220916620
+      name: blib/lib/RWDE/LoginUser.pm
+      packages:
+        - RWDE::LoginUser
+      primary_package: RWDE::LoginUser
+      uses:
+        - strict
+        - warnings
+        - RWDE::Configuration
+        - Error
+        - RWDE::Exceptions
+        - RWDE::RObject
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/LoginUser.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 507
+    - bytesize: 2298
+      file_mime_type: ~
+      line_count: ~
+      md5: fa7d1458ea45ad5ff9f72c98e61833cf
+      module_name_from_file_guess: RWDE::Mailing
+      mtime: 1220916620
+      name: blib/lib/RWDE/Mailing.pm
+      packages:
+        - RWDE::Mailing
+      primary_package: RWDE::Mailing
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Mailing.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 507
+    - bytesize: 1190
+      file_mime_type: ~
+      line_count: ~
+      md5: 6285d05e662568f1af2ea9fa512b4931
+      module_name_from_file_guess: RWDE::Mapper
+      mtime: 1228417593
+      name: blib/lib/RWDE/Mapper.pm
+      packages:
+        - RWDE::Mapper
+      primary_package: RWDE::Mapper
+      uses:
+        - strict
+        - warnings
+        - RWDE::Gearman::Client
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Mapper.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 536
+    - bytesize: 7043
+      file_mime_type: ~
+      line_count: ~
+      md5: c01cce43eac6092fcd57b200ddd042ae
+      module_name_from_file_guess: RWDE::PostMaster
+      mtime: 1226267399
+      name: blib/lib/RWDE/PostMaster.pm
+      packages:
+        - RWDE::PostMaster
+      primary_package: RWDE::PostMaster
+      uses:
+        - strict
+        - warnings
+        - base
+        - Template
+        - Net::SMTP
+        - RWDE::Configuration
+        - RWDE::RObject
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/PostMaster.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 527
+    - bytesize: 847
+      file_mime_type: ~
+      line_count: ~
+      md5: 863fbbaaec867b24b8fb871957d8ce84
+      module_name_from_file_guess: RWDE::Proxy
+      mtime: 1220916620
+      name: blib/lib/RWDE/Proxy.pm
+      packages:
+        - RWDE::Proxy
+      primary_package: RWDE::Proxy
+      uses:
+        - strict
+        - warnings
+        - RWDE::AbstractFactory
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Proxy.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 507
+    - bytesize: 13316
+      file_mime_type: ~
+      line_count: ~
+      md5: 06fccabd6093fa1d5eb62c880bb2b883
+      module_name_from_file_guess: RWDE::RObject
+      mtime: 1226438204
+      name: blib/lib/RWDE/RObject.pm
+      packages:
+        - RWDE::RObject
+      primary_package: RWDE::RObject
+      uses:
+        - strict
+        - warnings
+        - Data::Validate::Domain
+        - Mail::RFC822::Address
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/RObject.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 528
+    - bytesize: 2456
+      file_mime_type: ~
+      line_count: ~
+      md5: f83c1e3285ded5294ef1b16f4679ab5f
+      module_name_from_file_guess: RWDE::Runnable
+      mtime: 1245863793
+      name: blib/lib/RWDE/Runnable.pm
+      packages:
+        - RWDE::Runnable
+      primary_package: RWDE::Runnable
+      uses:
+        - strict
+        - warnings
+        - Error
+        - Getopt::Std
+        - POSIX
+        - RWDE::DB::DbRegistry
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Runnable.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 564
+    - bytesize: 5518
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c5d4053d09ba8905ebe3874bbc9f1dc
+      module_name_from_file_guess: RWDE::Scheduler::Pending_action
+      mtime: 1220917037
+      name: blib/lib/RWDE/Scheduler/Pending_action.pm
+      packages:
+        - RWDE::Scheduler::Pending_action
+      primary_package: RWDE::Scheduler::Pending_action
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - RWDE::Time
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Scheduler/Pending_action.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 509
+    - bytesize: 9190
+      file_mime_type: ~
+      line_count: ~
+      md5: 9dc101c6397195f3c42b23017ee286f5
+      module_name_from_file_guess: RWDE::Scheduler::Scheduler
+      mtime: 1228070456
+      name: blib/lib/RWDE/Scheduler/Scheduler.pm
+      packages:
+        - RWDE::Scheduler::Scheduler
+      primary_package: RWDE::Scheduler::Scheduler
+      uses:
+        - strict
+        - warnings
+        - Error
+        - POSIX
+        - RWDE::DB::DbRegistry
+        - RWDE::DB::Record
+        - RWDE::Exceptions
+        - RWDE::Time
+        - RWDE::Scheduler::SchedulerWorker
+        - RWDE::Scheduler::Pending_action
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Scheduler/Scheduler.pm
+        identifier: VERSION
+        line_number: 33
+        sigil: $
+        value: 535
+    - bytesize: 2133
+      file_mime_type: ~
+      line_count: ~
+      md5: 1366fb208fe6599f8280b102f63e9bdb
+      module_name_from_file_guess: RWDE::Scheduler::SchedulerWorker
+      mtime: 1228069326
+      name: blib/lib/RWDE/Scheduler/SchedulerWorker.pm
+      packages:
+        - RWDE::Scheduler::SchedulerWorker
+      primary_package: RWDE::Scheduler::SchedulerWorker
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Scheduler/SchedulerWorker.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 534
+    - bytesize: 357
+      file_mime_type: ~
+      line_count: ~
+      md5: f62663f103575a755b792a4a87203f03
+      module_name_from_file_guess: RWDE::Search
+      mtime: 1220916620
+      name: blib/lib/RWDE/Search.pm
+      packages:
+        - RWDE::Search
+      primary_package: RWDE::Search
+      uses:
+        - strict
+        - warnings
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Search.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 507
+    - bytesize: 4390
+      file_mime_type: ~
+      line_count: ~
+      md5: a4d8e778f77aa93f8d3553bb5fe87de6
+      module_name_from_file_guess: RWDE::SearchClient::Indexable
+      mtime: 1220917037
+      name: blib/lib/RWDE/SearchClient/Indexable.pm
+      packages:
+        - RWDE::SearchClient::Indexable
+      primary_package: RWDE::SearchClient::Indexable
+      uses:
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - RWDE::Search
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/SearchClient/Indexable.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 509
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 2dde54444802103a70f5e224ef7d9f44
+      module_name_from_file_guess: RWDE::Singleton
+      mtime: 1220916620
+      name: blib/lib/RWDE/Singleton.pm
+      packages:
+        - RWDE::Singleton
+      primary_package: RWDE::Singleton
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Singleton.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 507
+    - bytesize: 6809
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cdccd9d689606574961fc1cfc9389c8
+      module_name_from_file_guess: RWDE::Time
+      mtime: 1221510103
+      name: blib/lib/RWDE/Time.pm
+      packages:
+        - RWDE::Time
+      primary_package: RWDE::Time
+      uses:
+        - strict
+        - warnings
+        - RWDE::DB::Record
+        - RWDE::DB::DefaultDB
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Time.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 516
+    - bytesize: 8731
+      file_mime_type: ~
+      line_count: ~
+      md5: f5fb592edb14e31e197b07e850761dc4
+      module_name_from_file_guess: RWDE::Utility
+      mtime: 1246326790
+      name: blib/lib/RWDE/Utility.pm
+      packages:
+        - RWDE::Utility
+      primary_package: RWDE::Utility
+      uses:
+        - strict
+        - warnings
+        - RWDE::Logging
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Utility.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 568
+    - bytesize: 4112
+      file_mime_type: ~
+      line_count: ~
+      md5: 47763f374a893e038fe21787efb42487
+      module_name_from_file_guess: RWDE::Web::AbstractCommand
+      mtime: 1220917037
+      name: blib/lib/RWDE/Web/AbstractCommand.pm
+      packages:
+        - RWDE::Web::AbstractCommand
+      primary_package: RWDE::Web::AbstractCommand
+      uses:
+        - strict
+        - RWDE::DB::Record
+        - RWDE::Exceptions
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Web/AbstractCommand.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 509
+    - bytesize: 2149
+      file_mime_type: ~
+      line_count: ~
+      md5: 15a66c08912130bb7b4f4c3bc942cf9c
+      module_name_from_file_guess: RWDE::Web::AppServer
+      mtime: 1226851444
+      name: blib/lib/RWDE/Web/AppServer.pm
+      packages:
+        - RWDE::Web::AppServer
+      primary_package: RWDE::Web::AppServer
+      uses:
+        - strict
+        - warnings
+        - Sys::Syslog
+        - RWDE::Configuration
+        - RWDE::Logger
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Web/AppServer.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 531
+    - bytesize: 10176
+      file_mime_type: ~
+      line_count: ~
+      md5: a94bcce80ae9464f21e942f8aa002b8f
+      module_name_from_file_guess: RWDE::Web::CGIadapter
+      mtime: 1246326718
+      name: blib/lib/RWDE/Web/CGIadapter.pm
+      packages:
+        - RWDE::Web::CGIadapter
+      primary_package: RWDE::Web::CGIadapter
+      uses:
+        - vars
+        - strict
+        - warnings
+        - Error
+        - RWDE::Exceptions
+        - RWDE::CCR
+        - base
+      version_info:
+        filename: blib/lib/RWDE/Web/CGIadapter.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 567
+    - bytesize: 3861
+      file_mime_type: ~
+      line_count: ~
+      md5: d20bc2c7ca600d47c33c45da1404a702
+      module_name_from_file_guess: RWDE::Web::CommandProxy
+      mtime: 1231430210
+      name: blib/lib/RWDE/Web/CommandProxy.pm
+      packages:
+        - RWDE::Web::CommandProxy
+      primary_package: RWDE::Web::CommandProxy
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Error
+        - RWDE::AbstractFactory
+        - RWDE::Configuration
+        - RWDE::Exceptions
+        - RWDE::Web::Helper
+        - RWDE::Web::TemplateAdapter
+        - base
+      version_info:
+        filename: blib/lib/RWDE/Web/CommandProxy.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 550
+    - bytesize: 1393
+      file_mime_type: ~
+      line_count: ~
+      md5: 987223df6fc0bc9e800a78ff1ff349dd
+      module_name_from_file_guess: RWDE::Web::FCGIadapter
+      mtime: 1246281063
+      name: blib/lib/RWDE/Web/FCGIadapter.pm
+      packages:
+        - RWDE::Web::FCGIadapter
+      primary_package: RWDE::Web::FCGIadapter
+      uses:
+        - strict
+        - warnings
+        - CGI
+        - FCGI
+        - Error
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Web/FCGIadapter.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 566
+    - bytesize: 2645
+      file_mime_type: ~
+      line_count: ~
+      md5: e255a657cd951f8962d9c7b2ebbc68b6
+      module_name_from_file_guess: RWDE::Web::Helper
+      mtime: 1220917037
+      name: blib/lib/RWDE/Web/Helper.pm
+      packages:
+        - RWDE::Web::Helper
+      primary_package: RWDE::Web::Helper
+      uses:
+        - strict
+        - warnings
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Web/Helper.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 509
+    - bytesize: 1172
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d2cb36e16756737ba75860c79984708
+      module_name_from_file_guess: RWDE::Web::SCGIadapter
+      mtime: 1246281063
+      name: blib/lib/RWDE/Web/SCGIadapter.pm
+      packages:
+        - RWDE::Web::SCGIadapter
+      primary_package: RWDE::Web::SCGIadapter
+      uses:
+        - strict
+        - warnings
+        - CGI
+        - SCGI::Request
+        - Error
+        - RWDE::Exceptions
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Web/SCGIadapter.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 566
+    - bytesize: 4883
+      file_mime_type: ~
+      line_count: ~
+      md5: cd89409211031656a4cacfc95ba1c744
+      module_name_from_file_guess: RWDE::Web::Session
+      mtime: 1246389007
+      name: blib/lib/RWDE/Web/Session.pm
+      packages:
+        - RWDE::Web::Session
+      primary_package: RWDE::Web::Session
+      uses:
+        - strict
+        - warnings
+        - Apache::Session::Postgres
+        - Error
+        - RWDE::Exceptions
+        - base
+        - vars
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/RWDE/Web/Session.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 572
+    - bytesize: 1938
+      file_mime_type: ~
+      line_count: ~
+      md5: f4796661b97a587ff40b9cda8a5861ae
+      module_name_from_file_guess: RWDE::Web::TemplateAdapter
+      mtime: 1220917037
+      name: blib/lib/RWDE/Web/TemplateAdapter.pm
+      packages:
+        - RWDE::Web::TemplateAdapter
+      primary_package: RWDE::Web::TemplateAdapter
+      uses:
+        - strict
+        - warnings
+        - Error
+        - Template
+        - RWDE::Configuration
+        - RWDE::RObject
+        - base
+        - vars
+      version_info:
+        filename: blib/lib/RWDE/Web/TemplateAdapter.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 509
+  modules:
+    - blib/lib/RWDE.pm
+    - blib/lib/RWDE/AbstractFactory.pm
+    - blib/lib/RWDE/CCR.pm
+    - blib/lib/RWDE/CCRproxy.pm
+    - blib/lib/RWDE/Configuration.pm
+    - blib/lib/RWDE/Configuration_content.pm
+    - blib/lib/RWDE/DB/BigFile.pm
+    - blib/lib/RWDE/DB/Cachable.pm
+    - blib/lib/RWDE/DB/DbRegistry.pm
+    - blib/lib/RWDE/DB/DefaultDB.pm
+    - blib/lib/RWDE/DB/Deletable.pm
+    - blib/lib/RWDE/DB/Immutable.pm
+    - blib/lib/RWDE/DB/Items.pm
+    - blib/lib/RWDE/DB/MemcachedAdapter.pm
+    - blib/lib/RWDE/DB/MemcachedRegistry.pm
+    - blib/lib/RWDE/DB/Record.pm
+    - blib/lib/RWDE/DB/S3.pm
+    - blib/lib/RWDE/Exceptions.pm
+    - blib/lib/RWDE/Gearman/Client.pm
+    - blib/lib/RWDE/Gearman/Worker.pm
+    - blib/lib/RWDE/Interpreter.pm
+    - blib/lib/RWDE/Logger.pm
+    - blib/lib/RWDE/Logging.pm
+    - blib/lib/RWDE/LoginUser.pm
+    - blib/lib/RWDE/Mailing.pm
+    - blib/lib/RWDE/Mapper.pm
+    - blib/lib/RWDE/PostMaster.pm
+    - blib/lib/RWDE/Proxy.pm
+    - blib/lib/RWDE/RObject.pm
+    - blib/lib/RWDE/Runnable.pm
+    - blib/lib/RWDE/Scheduler/Pending_action.pm
+    - blib/lib/RWDE/Scheduler/Scheduler.pm
+    - blib/lib/RWDE/Scheduler/SchedulerWorker.pm
+    - blib/lib/RWDE/Search.pm
+    - blib/lib/RWDE/SearchClient/Indexable.pm
+    - blib/lib/RWDE/Singleton.pm
+    - blib/lib/RWDE/Time.pm
+    - blib/lib/RWDE/Utility.pm
+    - blib/lib/RWDE/Web/AbstractCommand.pm
+    - blib/lib/RWDE/Web/AppServer.pm
+    - blib/lib/RWDE/Web/CGIadapter.pm
+    - blib/lib/RWDE/Web/CommandProxy.pm
+    - blib/lib/RWDE/Web/FCGIadapter.pm
+    - blib/lib/RWDE/Web/Helper.pm
+    - blib/lib/RWDE/Web/SCGIadapter.pm
+    - blib/lib/RWDE/Web/Session.pm
+    - blib/lib/RWDE/Web/TemplateAdapter.pm
+  test_info: []
+  tests: []
+  unpack_dir: /usr/home/brian/i__vnZDpnW/MyCPAN-Indexer-64910._AwV
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 64910
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1269066948
+  examine_start_time: 1269066912
+  examine_time: 36
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 14475
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 64910
+  ppid: 14475
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  retyr_errors: 1
+  root_working_dir: /usr/home/brian/i__vnZDpnW
+  run_end_time: 1269066948
+  run_start_time: 1269066912
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/i__vnZDpnW
+  uuid: 4EE68794-32D7-11DF-B35D-579DE8F9184E
+  worker_class: MyCPAN::Indexer::Worker

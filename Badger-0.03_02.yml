@@ -1,0 +1,3738 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Application programming toolkit
+    author:
+      - 'Andy Wardley <abw@wardley.org>'
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.46
+    license: unknown
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Badger
+    no_index:
+      directory:
+        - t
+        - inc
+    requires: {}
+    version: 0.03_02
+  blib:
+    - blib/lib/Badger.pm
+    - blib/lib/Badger/Base.pm
+    - blib/lib/Badger/Class.pm
+    - blib/lib/Badger/Class/Config.pm
+    - blib/lib/Badger/Class/Methods.pm
+    - blib/lib/Badger/Class/Vars.pm
+    - blib/lib/Badger/Codec.pm
+    - blib/lib/Badger/Codec/Base64.pm
+    - blib/lib/Badger/Codec/Chain.pm
+    - blib/lib/Badger/Codec/Encode.pm
+    - blib/lib/Badger/Codec/Encoding.pm
+    - blib/lib/Badger/Codec/JSON.pm
+    - blib/lib/Badger/Codec/Storable.pm
+    - blib/lib/Badger/Codec/URI.pm
+    - blib/lib/Badger/Codec/URL.pm
+    - blib/lib/Badger/Codec/Unicode.pm
+    - blib/lib/Badger/Codec/YAML.pm
+    - blib/lib/Badger/Codecs.pm
+    - blib/lib/Badger/Config.pm
+    - blib/lib/Badger/Constants.pm
+    - blib/lib/Badger/Debug.pm
+    - blib/lib/Badger/Exception.pm
+    - blib/lib/Badger/Exporter.pm
+    - blib/lib/Badger/Factory.pm
+    - blib/lib/Badger/Factory/Class.pm
+    - blib/lib/Badger/Filesystem.pm
+    - blib/lib/Badger/Filesystem/Directory.pm
+    - blib/lib/Badger/Filesystem/File.pm
+    - blib/lib/Badger/Filesystem/Path.pm
+    - blib/lib/Badger/Filesystem/Virtual.pm
+    - blib/lib/Badger/Filesystem/Visitor.pm
+    - blib/lib/Badger/Hub.pm
+    - blib/lib/Badger/Mixin.pm
+    - blib/lib/Badger/Prototype.pm
+    - blib/lib/Badger/Rainbow.pm
+    - blib/lib/Badger/Test.pm
+    - blib/lib/Badger/Test/Manager.pm
+    - blib/lib/Badger/Utils.pm
+    - blib/man3/Badger.3
+    - blib/man3/Badger::Base.3
+    - blib/man3/Badger::Class.3
+    - blib/man3/Badger::Class::Config.3
+    - blib/man3/Badger::Class::Methods.3
+    - blib/man3/Badger::Class::Vars.3
+    - blib/man3/Badger::Codec.3
+    - blib/man3/Badger::Codec::Base64.3
+    - blib/man3/Badger::Codec::Chain.3
+    - blib/man3/Badger::Codec::Encode.3
+    - blib/man3/Badger::Codec::Encoding.3
+    - blib/man3/Badger::Codec::JSON.3
+    - blib/man3/Badger::Codec::Storable.3
+    - blib/man3/Badger::Codec::URI.3
+    - blib/man3/Badger::Codec::URL.3
+    - blib/man3/Badger::Codec::Unicode.3
+    - blib/man3/Badger::Codec::YAML.3
+    - blib/man3/Badger::Codecs.3
+    - blib/man3/Badger::Config.3
+    - blib/man3/Badger::Constants.3
+    - blib/man3/Badger::Debug.3
+    - blib/man3/Badger::Exception.3
+    - blib/man3/Badger::Exporter.3
+    - blib/man3/Badger::Factory.3
+    - blib/man3/Badger::Factory::Class.3
+    - blib/man3/Badger::Filesystem.3
+    - blib/man3/Badger::Filesystem::Directory.3
+    - blib/man3/Badger::Filesystem::File.3
+    - blib/man3/Badger::Filesystem::Path.3
+    - blib/man3/Badger::Filesystem::Virtual.3
+    - blib/man3/Badger::Filesystem::Visitor.3
+    - blib/man3/Badger::Hub.3
+    - blib/man3/Badger::Mixin.3
+    - blib/man3/Badger::Prototype.3
+    - blib/man3/Badger::Rainbow.3
+    - blib/man3/Badger::Test.3
+    - blib/man3/Badger::Test::Manager.3
+    - blib/man3/Badger::Utils.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Badger
+  build_output: |
+    cp lib/Badger/Codecs.pm blib/lib/Badger/Codecs.pm
+    cp lib/Badger/Factory.pm blib/lib/Badger/Factory.pm
+    cp lib/Badger/Codec/JSON.pm blib/lib/Badger/Codec/JSON.pm
+    cp lib/Badger/Exception.pm blib/lib/Badger/Exception.pm
+    cp lib/Badger/Filesystem.pm blib/lib/Badger/Filesystem.pm
+    cp lib/Badger/Test/Manager.pm blib/lib/Badger/Test/Manager.pm
+    cp lib/Badger/Utils.pm blib/lib/Badger/Utils.pm
+    cp lib/Badger.pm blib/lib/Badger.pm
+    cp lib/Badger/Debug.pm blib/lib/Badger/Debug.pm
+    cp lib/Badger/Constants.pm blib/lib/Badger/Constants.pm
+    cp lib/Badger/Codec/URI.pm blib/lib/Badger/Codec/URI.pm
+    cp lib/Badger/Codec.pm blib/lib/Badger/Codec.pm
+    cp lib/Badger/Codec/YAML.pm blib/lib/Badger/Codec/YAML.pm
+    cp lib/Badger/Filesystem/Visitor.pm blib/lib/Badger/Filesystem/Visitor.pm
+    cp lib/Badger/Codec/Encode.pm blib/lib/Badger/Codec/Encode.pm
+    cp lib/Badger/Class/Vars.pm blib/lib/Badger/Class/Vars.pm
+    cp lib/Badger/Class/Methods.pm blib/lib/Badger/Class/Methods.pm
+    cp lib/Badger/Hub.pm blib/lib/Badger/Hub.pm
+    cp lib/Badger/Filesystem/Directory.pm blib/lib/Badger/Filesystem/Directory.pm
+    cp lib/Badger/Base.pm blib/lib/Badger/Base.pm
+    cp lib/Badger/Class.pm blib/lib/Badger/Class.pm
+    cp lib/Badger/Prototype.pm blib/lib/Badger/Prototype.pm
+    cp lib/Badger/Codec/Base64.pm blib/lib/Badger/Codec/Base64.pm
+    cp lib/Badger/Filesystem/File.pm blib/lib/Badger/Filesystem/File.pm
+    cp lib/Badger/Filesystem/Virtual.pm blib/lib/Badger/Filesystem/Virtual.pm
+    cp lib/Badger/Filesystem/Path.pm blib/lib/Badger/Filesystem/Path.pm
+    cp lib/Badger/Factory/Class.pm blib/lib/Badger/Factory/Class.pm
+    cp lib/Badger/Exporter.pm blib/lib/Badger/Exporter.pm
+    cp lib/Badger/Mixin.pm blib/lib/Badger/Mixin.pm
+    cp lib/Badger/Codec/Encoding.pm blib/lib/Badger/Codec/Encoding.pm
+    cp lib/Badger/Test.pm blib/lib/Badger/Test.pm
+    cp lib/Badger/Codec/Storable.pm blib/lib/Badger/Codec/Storable.pm
+    cp lib/Badger/Codec/URL.pm blib/lib/Badger/Codec/URL.pm
+    cp lib/Badger/Codec/Unicode.pm blib/lib/Badger/Codec/Unicode.pm
+    cp lib/Badger/Config.pm blib/lib/Badger/Config.pm
+    cp lib/Badger/Class/Config.pm blib/lib/Badger/Class/Config.pm
+    cp lib/Badger/Rainbow.pm blib/lib/Badger/Rainbow.pm
+    cp lib/Badger/Codec/Chain.pm blib/lib/Badger/Codec/Chain.pm
+    Manifying blib/man3/Badger::Codecs.3
+    Manifying blib/man3/Badger::Codec::JSON.3
+    Manifying blib/man3/Badger::Factory.3
+    Manifying blib/man3/Badger::Exception.3
+    Manifying blib/man3/Badger::Test::Manager.3
+    Manifying blib/man3/Badger::Filesystem.3
+    Manifying blib/man3/Badger::Utils.3
+    Manifying blib/man3/Badger.3
+    Manifying blib/man3/Badger::Debug.3
+    Manifying blib/man3/Badger::Constants.3
+    Manifying blib/man3/Badger::Codec::URI.3
+    Manifying blib/man3/Badger::Codec.3
+    Manifying blib/man3/Badger::Codec::YAML.3
+    Manifying blib/man3/Badger::Filesystem::Visitor.3
+    Manifying blib/man3/Badger::Codec::Encode.3
+    Manifying blib/man3/Badger::Class::Vars.3
+    Manifying blib/man3/Badger::Class::Methods.3
+    Manifying blib/man3/Badger::Filesystem::Directory.3
+    Manifying blib/man3/Badger::Hub.3
+    Manifying blib/man3/Badger::Base.3
+    Manifying blib/man3/Badger::Class.3
+    Manifying blib/man3/Badger::Prototype.3
+    Manifying blib/man3/Badger::Codec::Base64.3
+    Manifying blib/man3/Badger::Filesystem::File.3
+    Manifying blib/man3/Badger::Filesystem::Virtual.3
+    Manifying blib/man3/Badger::Filesystem::Path.3
+    Manifying blib/man3/Badger::Factory::Class.3
+    Manifying blib/man3/Badger::Exporter.3
+    Manifying blib/man3/Badger::Mixin.3
+    Manifying blib/man3/Badger::Codec::Encoding.3
+    Manifying blib/man3/Badger::Test.3
+    Manifying blib/man3/Badger::Codec::Storable.3
+    Manifying blib/man3/Badger::Codec::URL.3
+    Manifying blib/man3/Badger::Config.3
+    Manifying blib/man3/Badger::Codec::Unicode.3
+    Manifying blib/man3/Badger::Rainbow.3
+    Manifying blib/man3/Badger::Class::Config.3
+    Manifying blib/man3/Badger::Codec::Chain.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH/Badger-0.03_02/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH/Badger-0.03_02
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH/Badger-0.03_02/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH/Badger-0.03_02/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: ABW
+  dist_basename: Badger-0.03_02.tar.gz
+  dist_date: 1227005863
+  dist_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH/Badger-0.03_02
+  dist_extract_path: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH/Badger-0.03_02
+  dist_file: /home/brian/CPAN/authors/id/A/AB/ABW/Badger-0.03_02.tar.gz
+  dist_md5: 166d6dead525dc6bd759e636a82796f8
+  dist_size: 195010
+  manifest:
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - TODO
+    - lib/Badger.pm
+    - lib/Badger/Base.pm
+    - lib/Badger/Class.pm
+    - lib/Badger/Class/Config.pm
+    - lib/Badger/Class/Methods.pm
+    - lib/Badger/Class/Vars.pm
+    - lib/Badger/Codec.pm
+    - lib/Badger/Codec/Base64.pm
+    - lib/Badger/Codec/Chain.pm
+    - lib/Badger/Codec/Encode.pm
+    - lib/Badger/Codec/Encoding.pm
+    - lib/Badger/Codec/JSON.pm
+    - lib/Badger/Codec/Storable.pm
+    - lib/Badger/Codec/URI.pm
+    - lib/Badger/Codec/URL.pm
+    - lib/Badger/Codec/Unicode.pm
+    - lib/Badger/Codec/YAML.pm
+    - lib/Badger/Codecs.pm
+    - lib/Badger/Config.pm
+    - lib/Badger/Constants.pm
+    - lib/Badger/Debug.pm
+    - lib/Badger/Exception.pm
+    - lib/Badger/Exporter.pm
+    - lib/Badger/Factory.pm
+    - lib/Badger/Factory/Class.pm
+    - lib/Badger/Filesystem.pm
+    - lib/Badger/Filesystem/Directory.pm
+    - lib/Badger/Filesystem/File.pm
+    - lib/Badger/Filesystem/Path.pm
+    - lib/Badger/Filesystem/Virtual.pm
+    - lib/Badger/Filesystem/Visitor.pm
+    - lib/Badger/Hub.pm
+    - lib/Badger/Mixin.pm
+    - lib/Badger/Prototype.pm
+    - lib/Badger/Rainbow.pm
+    - lib/Badger/Test.pm
+    - lib/Badger/Test/Manager.pm
+    - lib/Badger/Utils.pm
+    - pod/Badger/Changes.pod
+    - pod/Badger/FAQ.pod
+    - t/class/config.t
+    - t/class/lib/My/Config1.pm
+    - t/class/lib/My/Config2.pm
+    - t/class/lib/My/Config3.pm
+    - t/class/lib/My/Config4.pm
+    - t/class/lib/My/Config5.pm
+    - t/class/lib/My/Vars1.pm
+    - t/class/lib/My/Vars2.pm
+    - t/class/lib/My/Vars3.pm
+    - t/class/lib/My/Vars4.pm
+    - t/class/lib/My/Vars5.pm
+    - t/class/lib/My/Vars6.pm
+    - t/class/lib/My/Vars7.pm
+    - t/class/methods.t
+    - t/class/vars.t
+    - t/codec/base64.t
+    - t/codec/codec.t
+    - t/codec/codecs.t
+    - t/codec/encode.t
+    - t/codec/encoding.t
+    - t/codec/lib/My/Codec/Foo.pm
+    - t/codec/storable.t
+    - t/codec/unicode.t
+    - t/codec/uri.t
+    - t/codec/url.t
+    - t/core/base.t
+    - t/core/class.t
+    - t/core/config.t
+    - t/core/constants.t
+    - t/core/debug.t
+    - t/core/dump.t
+    - t/core/exception.t
+    - t/core/exporter.t
+    - t/core/factory.t
+    - t/core/hub.t
+    - t/core/lib/Class/Bottom.pm
+    - t/core/lib/Class/Middle.pm
+    - t/core/lib/Class/Top.pm
+    - t/core/lib/My/BadModule.pm
+    - t/core/lib/My/Class.pm
+    - t/core/lib/My/Constants.pm
+    - t/core/lib/My/Debugger1.pm
+    - t/core/lib/My/Debugger2.pm
+    - t/core/lib/My/Debugger3.pm
+    - t/core/lib/My/Exporter/Base1.pm
+    - t/core/lib/My/Exporter/Base2.pm
+    - t/core/lib/My/Exporter/Explicit.pm
+    - t/core/lib/My/Exporter/Subclass1.pm
+    - t/core/lib/My/Exporter/Subclass2.pm
+    - t/core/lib/My/Exporter4.pm
+    - t/core/lib/My/Exporter5.pm
+    - t/core/lib/My/Exporter6.pm
+    - t/core/lib/My/Exporter7.pm
+    - t/core/lib/My/Exporter8.pm
+    - t/core/lib/My/Exporter9.pm
+    - t/core/lib/My/Extra/Wudget.pm
+    - t/core/lib/My/Mixin/Bar.pm
+    - t/core/lib/My/Mixin/Baz.pm
+    - t/core/lib/My/Mixin/Foo.pm
+    - t/core/lib/My/Widget.pm
+    - t/core/lib/My/Wodget.pm
+    - t/core/mixin.t
+    - t/core/prototype.t
+    - t/core/rainbow.t
+    - t/core/test.t
+    - t/core/trace.t
+    - t/core/utils.t
+    - t/filesystem/directory.t
+    - t/filesystem/file.t
+    - t/filesystem/filesystem.t
+    - t/filesystem/path.t
+    - t/filesystem/testfiles/callsigns
+    - t/filesystem/testfiles/dirtest1
+    - t/filesystem/testfiles/dirtest2
+    - t/filesystem/testfiles/newfile
+    - t/filesystem/testfiles/vdir_four/wibble
+    - t/filesystem/testfiles/vdir_four/wobble/hello
+    - t/filesystem/testfiles/vdir_one/foo
+    - t/filesystem/testfiles/vdir_three/bar
+    - t/filesystem/testfiles/vdir_three/baz
+    - t/filesystem/testfiles/vdir_three/foo
+    - t/filesystem/testfiles/vdir_two/bar
+    - t/filesystem/testfiles/vdir_two/foo
+    - t/filesystem/testfiles/visitor/large
+    - t/filesystem/testfiles/visitor/medium
+    - t/filesystem/testfiles/visitor/one/badger
+    - t/filesystem/testfiles/visitor/one/mushroom
+    - t/filesystem/testfiles/visitor/one/snake
+    - t/filesystem/testfiles/visitor/small
+    - t/filesystem/testfiles/visitor/tmp/README
+    - t/filesystem/testfiles/visitor/tmp/goodbye.html.old
+    - t/filesystem/testfiles/visitor/two/goodbye.bak
+    - t/filesystem/testfiles/visitor/two/goodbye.html
+    - t/filesystem/testfiles/visitor/two/goodbye.txt
+    - t/filesystem/testfiles/visitor/two/hello.html
+    - t/filesystem/testfiles/visitor/two/hello.txt
+    - t/filesystem/virtual.t
+    - t/filesystem/visitor.t
+    - t/misc/badger.t
+    - t/misc/moose.t
+    - t/pod/coverage.t
+    - t/pod/kwalitee.t
+  manifest_file_info:
+    - bytesize: 2715
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1226939880
+      name: Changes
+    - bytesize: 3833
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1227004150
+      name: MANIFEST
+    - bytesize: 486
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1227004150
+      name: META.yml
+    - bytesize: 507
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1226580000
+      name: Makefile.PL
+    - bytesize: 6864
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1226940025
+      name: README
+    - bytesize: 4606
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1226770388
+      name: TODO
+    - bytesize: 22724
+      file_mime_type: ~
+      line_count: ~
+      md5: a4d29cacb37aa5700a5a835041ed591a
+      mtime: 1227004057
+      name: lib/Badger.pm
+    - bytesize: 53647
+      file_mime_type: ~
+      line_count: ~
+      md5: a5837e6837b458dfe88ffd82f641f5b7
+      mtime: 1226580000
+      name: lib/Badger/Base.pm
+    - bytesize: 91642
+      file_mime_type: ~
+      line_count: ~
+      md5: 590345608896144ab6b4bf3d9193a07d
+      mtime: 1227003719
+      name: lib/Badger/Class.pm
+    - bytesize: 15551
+      file_mime_type: ~
+      line_count: ~
+      md5: 58f8943898903fb06fd91ac1e3f2e5b5
+      mtime: 1226940997
+      name: lib/Badger/Class/Config.pm
+    - bytesize: 11425
+      file_mime_type: ~
+      line_count: ~
+      md5: e0c5a4cc0bdad4cba19c671cb3e2d09c
+      mtime: 1226580000
+      name: lib/Badger/Class/Methods.pm
+    - bytesize: 7849
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fb6f946c1f56b5ebcee539c1ce721eb
+      mtime: 1226580000
+      name: lib/Badger/Class/Vars.pm
+    - bytesize: 2926
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d911e255021d2df033e7707fd7fa4ff
+      mtime: 1226580000
+      name: lib/Badger/Codec.pm
+    - bytesize: 2353
+      file_mime_type: ~
+      line_count: ~
+      md5: d53210163a387bdc53168664e81fa604
+      mtime: 1226580000
+      name: lib/Badger/Codec/Base64.pm
+    - bytesize: 4265
+      file_mime_type: ~
+      line_count: ~
+      md5: e467a276c77820060cb7e4f8d34d884f
+      mtime: 1226580000
+      name: lib/Badger/Codec/Chain.pm
+    - bytesize: 3601
+      file_mime_type: ~
+      line_count: ~
+      md5: ac080bde2ef6a1bc9deb1790a31d419b
+      mtime: 1226580000
+      name: lib/Badger/Codec/Encode.pm
+    - bytesize: 3917
+      file_mime_type: ~
+      line_count: ~
+      md5: 14ae34a0d7cd542c0de72b1d89b82830
+      mtime: 1226580000
+      name: lib/Badger/Codec/Encoding.pm
+    - bytesize: 2021
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cb4b7f25028a60659d2f65a9cd094a9
+      mtime: 1226580000
+      name: lib/Badger/Codec/JSON.pm
+    - bytesize: 2280
+      file_mime_type: ~
+      line_count: ~
+      md5: 550640ff0b1469c9aab5b99e77cf46be
+      mtime: 1226580000
+      name: lib/Badger/Codec/Storable.pm
+    - bytesize: 2414
+      file_mime_type: ~
+      line_count: ~
+      md5: 9959cb7b96288c6958f4a141a0020fa6
+      mtime: 1226580000
+      name: lib/Badger/Codec/URI.pm
+    - bytesize: 2826
+      file_mime_type: ~
+      line_count: ~
+      md5: b649c28e2e15f59be50d009409a422b0
+      mtime: 1226593983
+      name: lib/Badger/Codec/URL.pm
+    - bytesize: 4969
+      file_mime_type: ~
+      line_count: ~
+      md5: 627e901db17060bb8bc923a93644c315
+      mtime: 1226580000
+      name: lib/Badger/Codec/Unicode.pm
+    - bytesize: 2054
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ea7b88138230dafbf0bb2e4b1d568b4
+      mtime: 1226580000
+      name: lib/Badger/Codec/YAML.pm
+    - bytesize: 17588
+      file_mime_type: ~
+      line_count: ~
+      md5: c65bed9a22c3c55fde02d5ffb98013dd
+      mtime: 1226934418
+      name: lib/Badger/Codecs.pm
+    - bytesize: 3195
+      file_mime_type: ~
+      line_count: ~
+      md5: c85baf4ce601ba23eab7f2270983d20c
+      mtime: 1226580000
+      name: lib/Badger/Config.pm
+    - bytesize: 5868
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e3680b547504d0a7a277156f74ddd15
+      mtime: 1226580000
+      name: lib/Badger/Constants.pm
+    - bytesize: 29913
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c4a6af08be6857b428e19714245293f
+      mtime: 1226934206
+      name: lib/Badger/Debug.pm
+    - bytesize: 14841
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c774dc7ed285f4406c32b9feaff8abd
+      mtime: 1226933406
+      name: lib/Badger/Exception.pm
+    - bytesize: 32630
+      file_mime_type: ~
+      line_count: ~
+      md5: 549ba094cac20bf8e6991b5c5664f579
+      mtime: 1226580000
+      name: lib/Badger/Exporter.pm
+    - bytesize: 11710
+      file_mime_type: ~
+      line_count: ~
+      md5: c3d21cef61f5088684a9c943fffa274f
+      mtime: 1226684762
+      name: lib/Badger/Factory.pm
+    - bytesize: 4320
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d96641eb0eb9cbd759bff10e76c1c11
+      mtime: 1226580000
+      name: lib/Badger/Factory/Class.pm
+    - bytesize: 48191
+      file_mime_type: ~
+      line_count: ~
+      md5: 40b3437e2a2497cdee809c67ab221947
+      mtime: 1226580000
+      name: lib/Badger/Filesystem.pm
+    - bytesize: 14351
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ee944f8991290f3a55f165634e53602
+      mtime: 1226580000
+      name: lib/Badger/Filesystem/Directory.pm
+    - bytesize: 10602
+      file_mime_type: ~
+      line_count: ~
+      md5: de48489149dd8fd912480d67468fcfae
+      mtime: 1226580000
+      name: lib/Badger/Filesystem/File.pm
+    - bytesize: 30439
+      file_mime_type: ~
+      line_count: ~
+      md5: 9114ccd21cd2bc892e6c29f2d74adb9f
+      mtime: 1226580000
+      name: lib/Badger/Filesystem/Path.pm
+    - bytesize: 15368
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a0dace4c6689e5e84d6d89cfbd7ec3a
+      mtime: 1226580000
+      name: lib/Badger/Filesystem/Virtual.pm
+    - bytesize: 14678
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d5252f55d1d33ef35eed3bc62f945da
+      mtime: 1226580000
+      name: lib/Badger/Filesystem/Visitor.pm
+    - bytesize: 17060
+      file_mime_type: ~
+      line_count: ~
+      md5: e5c54420454ec8b95a2da7f250c5b024
+      mtime: 1226580000
+      name: lib/Badger/Hub.pm
+    - bytesize: 4894
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c5f137555d793785e2b47b8bf6b9ac9
+      mtime: 1226580000
+      name: lib/Badger/Mixin.pm
+    - bytesize: 5386
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c3aa27c026cce35faaee8f22eb3c458
+      mtime: 1226580000
+      name: lib/Badger/Prototype.pm
+    - bytesize: 4339
+      file_mime_type: ~
+      line_count: ~
+      md5: 93bfaed3d054243509f550a68e9aaaa9
+      mtime: 1226580000
+      name: lib/Badger/Rainbow.pm
+    - bytesize: 10549
+      file_mime_type: ~
+      line_count: ~
+      md5: ff6aaa537cd8012f10651e7fbd9a2ffa
+      mtime: 1226580000
+      name: lib/Badger/Test.pm
+    - bytesize: 14598
+      file_mime_type: ~
+      line_count: ~
+      md5: f2d6ab1c02785f22f88d6a28d9abae24
+      mtime: 1226580000
+      name: lib/Badger/Test/Manager.pm
+    - bytesize: 9061
+      file_mime_type: ~
+      line_count: ~
+      md5: d32fc0ab4c0088649df0840423c0ccad
+      mtime: 1226580000
+      name: lib/Badger/Utils.pm
+    - bytesize: 3063
+      file_mime_type: ~
+      line_count: ~
+      md5: 46eacbddccc98f04c9771b9404841dbc
+      mtime: 1226939598
+      name: pod/Badger/Changes.pod
+    - bytesize: 8378
+      file_mime_type: ~
+      line_count: ~
+      md5: d65b279ff8d82e2145a27e130563c68e
+      mtime: 1226939604
+      name: pod/Badger/FAQ.pod
+    - bytesize: 4319
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cd7561d58dfc04e90c387fde76e5116
+      mtime: 1226579999
+      name: t/class/config.t
+    - bytesize: 241
+      file_mime_type: ~
+      line_count: ~
+      md5: 30919a45ae777c8a1f6fcbcf88c0f837
+      mtime: 1226579999
+      name: t/class/lib/My/Config1.pm
+    - bytesize: 506
+      file_mime_type: ~
+      line_count: ~
+      md5: 544595145e64a2f6b1b5d9d0bfa30f97
+      mtime: 1226579999
+      name: t/class/lib/My/Config2.pm
+    - bytesize: 611
+      file_mime_type: ~
+      line_count: ~
+      md5: 2558e629bc2c2c3818e47f7b59a54320
+      mtime: 1226579999
+      name: t/class/lib/My/Config3.pm
+    - bytesize: 370
+      file_mime_type: ~
+      line_count: ~
+      md5: 20fcef5cbb462e5c3433701fd9502d18
+      mtime: 1226579999
+      name: t/class/lib/My/Config4.pm
+    - bytesize: 407
+      file_mime_type: ~
+      line_count: ~
+      md5: b875a1e823dc95c9bd30e80b5c449ac2
+      mtime: 1226579999
+      name: t/class/lib/My/Config5.pm
+    - bytesize: 157
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a05ec5007e49fb10e0eea976fa5cf96
+      mtime: 1226579999
+      name: t/class/lib/My/Vars1.pm
+    - bytesize: 137
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ba5556e8510e9300c21a79ed4bb4266
+      mtime: 1226579999
+      name: t/class/lib/My/Vars2.pm
+    - bytesize: 142
+      file_mime_type: ~
+      line_count: ~
+      md5: df6376fdc8c8186924f0ddb54e97703d
+      mtime: 1226579999
+      name: t/class/lib/My/Vars3.pm
+    - bytesize: 170
+      file_mime_type: ~
+      line_count: ~
+      md5: bdbcc3e591793be9736b70ce2194a848
+      mtime: 1226579999
+      name: t/class/lib/My/Vars4.pm
+    - bytesize: 142
+      file_mime_type: ~
+      line_count: ~
+      md5: fa1bb178b278bca2ba02bf97f586c519
+      mtime: 1226579999
+      name: t/class/lib/My/Vars5.pm
+    - bytesize: 165
+      file_mime_type: ~
+      line_count: ~
+      md5: 2653634dec160be511b4b87f7c2633e6
+      mtime: 1226579999
+      name: t/class/lib/My/Vars6.pm
+    - bytesize: 443
+      file_mime_type: ~
+      line_count: ~
+      md5: 28bc16b1b691c76613a9a860af219e65
+      mtime: 1226579999
+      name: t/class/lib/My/Vars7.pm
+    - bytesize: 4734
+      file_mime_type: ~
+      line_count: ~
+      md5: 1128e3dc9d33397f8e7d756ab7296002
+      mtime: 1226579999
+      name: t/class/methods.t
+    - bytesize: 5514
+      file_mime_type: ~
+      line_count: ~
+      md5: 61c3e8bed0afffc2568e1a3a451500f7
+      mtime: 1226579999
+      name: t/class/vars.t
+    - bytesize: 894
+      file_mime_type: ~
+      line_count: ~
+      md5: c4f111d85f01e36f57c90aba185bcf21
+      mtime: 1226580000
+      name: t/codec/base64.t
+    - bytesize: 690
+      file_mime_type: ~
+      line_count: ~
+      md5: dcb147cbdab7e9e35f1fa0523c6bb252
+      mtime: 1226580000
+      name: t/codec/codec.t
+    - bytesize: 6408
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a45cd27c048419e67229cea4e906c63
+      mtime: 1226580000
+      name: t/codec/codecs.t
+    - bytesize: 3230
+      file_mime_type: ~
+      line_count: ~
+      md5: 52e80f97b284021cb28b1b2e70c4af32
+      mtime: 1226580000
+      name: t/codec/encode.t
+    - bytesize: 1933
+      file_mime_type: ~
+      line_count: ~
+      md5: d8f61a061c568addcf7ec64c46979329
+      mtime: 1226580000
+      name: t/codec/encoding.t
+    - bytesize: 256
+      file_mime_type: ~
+      line_count: ~
+      md5: ae69a1fc75a578b4d6000a0e96c1cc47
+      mtime: 1226580000
+      name: t/codec/lib/My/Codec/Foo.pm
+    - bytesize: 1265
+      file_mime_type: ~
+      line_count: ~
+      md5: b7eeee6e93d0f09baf157e4e64f13af5
+      mtime: 1226580000
+      name: t/codec/storable.t
+    - bytesize: 3280
+      file_mime_type: ~
+      line_count: ~
+      md5: 5afb73a61ef8a4501a389d2138eeb4ac
+      mtime: 1226580000
+      name: t/codec/unicode.t
+    - bytesize: 908
+      file_mime_type: ~
+      line_count: ~
+      md5: d43028fdefe7e56e6f9f5f95dabb1d8c
+      mtime: 1226594163
+      name: t/codec/uri.t
+    - bytesize: 982
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ab40bef0ca6fa34f18a0e3929d393d6
+      mtime: 1226594248
+      name: t/codec/url.t
+    - bytesize: 17070
+      file_mime_type: ~
+      line_count: ~
+      md5: 359c4531ec651bcb7059c7a18e9b1eb7
+      mtime: 1226579999
+      name: t/core/base.t
+    - bytesize: 20457
+      file_mime_type: ~
+      line_count: ~
+      md5: e735f6300cf09b180e7c6c1f3efc8f24
+      mtime: 1226579999
+      name: t/core/class.t
+    - bytesize: 914
+      file_mime_type: ~
+      line_count: ~
+      md5: 685b4f3a27f10205f371781cc0a37932
+      mtime: 1226579999
+      name: t/core/config.t
+    - bytesize: 1384
+      file_mime_type: ~
+      line_count: ~
+      md5: 152705da71440a1e60740df6be594886
+      mtime: 1226579999
+      name: t/core/constants.t
+    - bytesize: 5964
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c8e7786b2a37c98e8d52aa80e2c9210
+      mtime: 1226579999
+      name: t/core/debug.t
+    - bytesize: 1841
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ff18568693d73891b16a3afc43d89bc
+      mtime: 1226917425
+      name: t/core/dump.t
+    - bytesize: 5048
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fd3e7e7a698883b0c49c758690be79
+      mtime: 1226579999
+      name: t/core/exception.t
+    - bytesize: 8352
+      file_mime_type: ~
+      line_count: ~
+      md5: 64945f74bc6f21e21df53a1da0243c6d
+      mtime: 1226579999
+      name: t/core/exporter.t
+    - bytesize: 4757
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fde2879ef42796bbda8ff605d82f522
+      mtime: 1226579999
+      name: t/core/factory.t
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: cbef05c76afb17e78f0cbf851e8665d1
+      mtime: 1226579999
+      name: t/core/hub.t
+    - bytesize: 160
+      file_mime_type: ~
+      line_count: ~
+      md5: b8c67d4a50353d2c5bb33e84b8cf2834
+      mtime: 1226579999
+      name: t/core/lib/Class/Bottom.pm
+    - bytesize: 161
+      file_mime_type: ~
+      line_count: ~
+      md5: b0bc8209c76da6a80cd5c43f20c236c7
+      mtime: 1226579999
+      name: t/core/lib/Class/Middle.pm
+    - bytesize: 152
+      file_mime_type: ~
+      line_count: ~
+      md5: bccc22b46c88e67f86756933bf801ac0
+      mtime: 1226579999
+      name: t/core/lib/Class/Top.pm
+    - bytesize: 55
+      file_mime_type: ~
+      line_count: ~
+      md5: a57e86df969a3aee0147c243d6a3fd6a
+      mtime: 1226579999
+      name: t/core/lib/My/BadModule.pm
+    - bytesize: 397
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cccb9ac6e7da3372eca5ecacc480bcb
+      mtime: 1226579999
+      name: t/core/lib/My/Class.pm
+    - bytesize: 132
+      file_mime_type: ~
+      line_count: ~
+      md5: f9e6de59130589c66c10177785aa2efa
+      mtime: 1226579999
+      name: t/core/lib/My/Constants.pm
+    - bytesize: 626
+      file_mime_type: ~
+      line_count: ~
+      md5: b37b7fb957d96481a8ee78bdd8b538ef
+      mtime: 1226579999
+      name: t/core/lib/My/Debugger1.pm
+    - bytesize: 405
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f1f231ce7b1685019da51b45a6462b9
+      mtime: 1226579999
+      name: t/core/lib/My/Debugger2.pm
+    - bytesize: 481
+      file_mime_type: ~
+      line_count: ~
+      md5: d3e5ed5263834d39a83d9437aae70461
+      mtime: 1226579999
+      name: t/core/lib/My/Debugger3.pm
+    - bytesize: 468
+      file_mime_type: ~
+      line_count: ~
+      md5: b5c3ba2e8e1993423924419624f049f2
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter/Base1.pm
+    - bytesize: 446
+      file_mime_type: ~
+      line_count: ~
+      md5: af75ef3f5f081726a3d3f24afbd006be
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter/Base2.pm
+    - bytesize: 1078
+      file_mime_type: ~
+      line_count: ~
+      md5: 35c2a46e60239b3dc80a5b56e81ee540
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter/Explicit.pm
+    - bytesize: 373
+      file_mime_type: ~
+      line_count: ~
+      md5: e10c420c4e7bfe0faa70a1ca3fd7bfb3
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter/Subclass1.pm
+    - bytesize: 373
+      file_mime_type: ~
+      line_count: ~
+      md5: a9d90a164092ce04176cafc7caff9f4a
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter/Subclass2.pm
+    - bytesize: 180
+      file_mime_type: ~
+      line_count: ~
+      md5: 37205f2985917761bc288f1aab5a28f4
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter4.pm
+    - bytesize: 366
+      file_mime_type: ~
+      line_count: ~
+      md5: b417f73acd45add96ed5cd5a9633a0bd
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter5.pm
+    - bytesize: 444
+      file_mime_type: ~
+      line_count: ~
+      md5: 0695ded21b61731db6fc55e959714abc
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter6.pm
+    - bytesize: 563
+      file_mime_type: ~
+      line_count: ~
+      md5: 4bb050e8f7cc931f77683b9038d7792a
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter7.pm
+    - bytesize: 516
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f91d81ee650d16393c426bbe3c1d5d8
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter8.pm
+    - bytesize: 498
+      file_mime_type: ~
+      line_count: ~
+      md5: 223d084921277deec0d1f87928211196
+      mtime: 1226579999
+      name: t/core/lib/My/Exporter9.pm
+    - bytesize: 361
+      file_mime_type: ~
+      line_count: ~
+      md5: a4a26b7e24d73d3b36f41824788ea339
+      mtime: 1226579999
+      name: t/core/lib/My/Extra/Wudget.pm
+    - bytesize: 1669
+      file_mime_type: ~
+      line_count: ~
+      md5: e3e273ca2459e90a6c1d8a5c51837ad9
+      mtime: 1226579999
+      name: t/core/lib/My/Mixin/Bar.pm
+    - bytesize: 206
+      file_mime_type: ~
+      line_count: ~
+      md5: bc2903c687a68cb6b32afa4b85b67f0c
+      mtime: 1226579999
+      name: t/core/lib/My/Mixin/Baz.pm
+    - bytesize: 146
+      file_mime_type: ~
+      line_count: ~
+      md5: 57fad29c6a83e615bb4de627277dd10b
+      mtime: 1226579999
+      name: t/core/lib/My/Mixin/Foo.pm
+    - bytesize: 193
+      file_mime_type: ~
+      line_count: ~
+      md5: af02b74ba67fe7d0d65ce5e8c88df4e8
+      mtime: 1226579999
+      name: t/core/lib/My/Widget.pm
+    - bytesize: 258
+      file_mime_type: ~
+      line_count: ~
+      md5: 36fc86dde72fe34280b55474c3923915
+      mtime: 1226579999
+      name: t/core/lib/My/Wodget.pm
+    - bytesize: 1915
+      file_mime_type: ~
+      line_count: ~
+      md5: 72648cdc99342246b2c361c7ad8864d8
+      mtime: 1226579999
+      name: t/core/mixin.t
+    - bytesize: 3338
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f82b0077557dcc2e73052ad5b36d825
+      mtime: 1226579999
+      name: t/core/prototype.t
+    - bytesize: 986
+      file_mime_type: ~
+      line_count: ~
+      md5: 403c19c1e4b78e6c20da7db679e95a35
+      mtime: 1226579999
+      name: t/core/rainbow.t
+    - bytesize: 1406
+      file_mime_type: ~
+      line_count: ~
+      md5: 91e6242b636f630d836ef455882784d0
+      mtime: 1226579999
+      name: t/core/test.t
+    - bytesize: 1483
+      file_mime_type: ~
+      line_count: ~
+      md5: cd3109c2de873bc6cf0df9e9eaa8802b
+      mtime: 1226579999
+      name: t/core/trace.t
+    - bytesize: 5485
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d77acd341e00c62cd986854ddb2c227
+      mtime: 1226579999
+      name: t/core/utils.t
+    - bytesize: 7083
+      file_mime_type: ~
+      line_count: ~
+      md5: 011250b728b636e11f18fa722eda1dc1
+      mtime: 1226579999
+      name: t/filesystem/directory.t
+    - bytesize: 4613
+      file_mime_type: ~
+      line_count: ~
+      md5: 4752b7443f8c5d10eca0d949eee45e53
+      mtime: 1226579999
+      name: t/filesystem/file.t
+    - bytesize: 6529
+      file_mime_type: ~
+      line_count: ~
+      md5: e6d546d9361e08f7b135ad5fb7487a72
+      mtime: 1226579999
+      name: t/filesystem/filesystem.t
+    - bytesize: 5662
+      file_mime_type: ~
+      line_count: ~
+      md5: c03ef068bc949a80d4042c510a12e5dd
+      mtime: 1226579999
+      name: t/filesystem/path.t
+    - bytesize: 164
+      file_mime_type: ~
+      line_count: ~
+      md5: 4109eec12d50f65ca3618e8c7ef44dc9
+      mtime: 1226579999
+      name: t/filesystem/testfiles/callsigns
+    - bytesize: 55
+      file_mime_type: ~
+      line_count: ~
+      md5: d0fc5847854032a97e7d606ea601c1f7
+      mtime: 1227004136
+      name: t/filesystem/testfiles/dirtest1
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: f5f204af93cd871e815a5da7e8465848
+      mtime: 1227004136
+      name: t/filesystem/testfiles/dirtest2
+    - bytesize: 13
+      file_mime_type: ~
+      line_count: ~
+      md5: 12bc7406228e271c68604df3fefcc777
+      mtime: 1227004136
+      name: t/filesystem/testfiles/newfile
+    - bytesize: 46
+      file_mime_type: ~
+      line_count: ~
+      md5: 66b285456a194c2baca387984dfab7ad
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_four/wibble
+    - bytesize: 101
+      file_mime_type: ~
+      line_count: ~
+      md5: 84726f9b89cf3e57b31e5d9f70a44266
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_four/wobble/hello
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: e5850b9f6a80619709bd89f5d2671ca3
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_one/foo
+    - bytesize: 26
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b1a13d013ea1faeced22f46543c7d7e
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_three/bar
+    - bytesize: 26
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f181481ccb02b5ab5c59f052769957d
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_three/baz
+    - bytesize: 26
+      file_mime_type: ~
+      line_count: ~
+      md5: e51ef31cb98f55f2dcac9c20712cd206
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_three/foo
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 3949c80cb1257b9bb17f5fd016ba583e
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_two/bar
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 2431bdcea343aa3fd59b2e5b0ad1dc9e
+      mtime: 1226579999
+      name: t/filesystem/testfiles/vdir_two/foo
+    - bytesize: 434
+      file_mime_type: ~
+      line_count: ~
+      md5: 29d719e60a28f95781ab860ad793f8c2
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/large
+    - bytesize: 200
+      file_mime_type: ~
+      line_count: ~
+      md5: 63aae597d673b6a111e061ac594169d3
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/medium
+    - bytesize: 231
+      file_mime_type: ~
+      line_count: ~
+      md5: 417ba4de94b8667ec51cbc2e8b7ae196
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/one/badger
+    - bytesize: 21
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b33e1af7557bb0c9373ca2076ccd5f7
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/one/mushroom
+    - bytesize: 15
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d5c40205863af945896dca34f0d6749
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/one/snake
+    - bytesize: 19
+      file_mime_type: ~
+      line_count: ~
+      md5: e86ab09a5c188c79278960f6f4325aee
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/small
+    - bytesize: 84
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c135c67e915898dcf95fc155663504f
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/tmp/README
+    - bytesize: 1142
+      file_mime_type: ~
+      line_count: ~
+      md5: e129c8ff2e632b004b3dbb74a069224a
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/tmp/goodbye.html.old
+    - bytesize: 25
+      file_mime_type: ~
+      line_count: ~
+      md5: 58eb1532b27de1c60171e7df2b96c29a
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/two/goodbye.bak
+    - bytesize: 1142
+      file_mime_type: ~
+      line_count: ~
+      md5: 03808f8f4a91e24f6ac5599635335b3a
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/two/goodbye.html
+    - bytesize: 409
+      file_mime_type: ~
+      line_count: ~
+      md5: 21a16a9aed468ca6eaa105d76af846c1
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/two/goodbye.txt
+    - bytesize: 732
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e966c2863679361e9a8e8e88c2c9849
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/two/hello.html
+    - bytesize: 19
+      file_mime_type: ~
+      line_count: ~
+      md5: 02c6459bbd78e40fbb0cf93ecfca4c96
+      mtime: 1226579999
+      name: t/filesystem/testfiles/visitor/two/hello.txt
+    - bytesize: 6844
+      file_mime_type: ~
+      line_count: ~
+      md5: aaf28c851883c5a0745690ce40b4f6c2
+      mtime: 1226579999
+      name: t/filesystem/virtual.t
+    - bytesize: 6312
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e979a5867f62add254bd60bdc3a8033
+      mtime: 1226579999
+      name: t/filesystem/visitor.t
+    - bytesize: 948
+      file_mime_type: ~
+      line_count: ~
+      md5: b40ff2f0cbb4c770115f3284c824525d
+      mtime: 1227004101
+      name: t/misc/badger.t
+    - bytesize: 1426
+      file_mime_type: ~
+      line_count: ~
+      md5: f6fadda8e9cd222ddd1f44d261010ccc
+      mtime: 1226939682
+      name: t/misc/moose.t
+    - bytesize: 846
+      file_mime_type: ~
+      line_count: ~
+      md5: aa7fb8d2853ee28224ce4af7875ede9b
+      mtime: 1227003910
+      name: t/pod/coverage.t
+    - bytesize: 635
+      file_mime_type: ~
+      line_count: ~
+      md5: c559627948fb12630684201b7e792257
+      mtime: 1226579999
+      name: t/pod/kwalitee.t
+  module_info:
+    - bytesize: 22724
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a6a147151d29c381498c47031e8f12c
+      module_name_from_file_guess: Badger
+      mtime: 1227004057
+      name: blib/lib/Badger.pm
+      packages:
+        - Badger
+      primary_package: Badger
+      uses:
+        - ''
+        - Carp
+        - Badger::Hub
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 0.03_02
+    - bytesize: 53647
+      file_mime_type: ~
+      line_count: ~
+      md5: 9abc3cfb1fe7f90e9fad9498133a1449
+      module_name_from_file_guess: Badger::Base
+      mtime: 1226580000
+      name: blib/lib/Badger/Base.pm
+      packages:
+        - Badger::Base
+      primary_package: Badger::Base
+      uses:
+        - Badger::Class
+        - Badger::Exception
+        - Badger::Debug
+        - Carp
+      version_info:
+        filename: blib/lib/Badger/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 91642
+      file_mime_type: ~
+      line_count: ~
+      md5: fcf2505163463151ad73fa5ef59ecc34
+      module_name_from_file_guess: Badger::Class
+      mtime: 1227003719
+      name: blib/lib/Badger/Class.pm
+      packages: []
+      primary_package: ~
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+        - constant
+        - Badger::Constants
+        - overload
+      version_info:
+        filename: blib/lib/Badger/Class.pm
+        identifier: VERSION
+        line_number: 48
+        sigil: $
+        value: 0.01
+    - bytesize: 15551
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b1ce6f72ef1376b8eb59d74a50d3e00
+      module_name_from_file_guess: Badger::Class::Config
+      mtime: 1226940997
+      name: blib/lib/Badger/Class/Config.pm
+      packages:
+        - Badger::Class::Config
+      primary_package: Badger::Class::Config
+      uses:
+        - Carp
+        - Badger::Debug
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Class/Config.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11425
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a9ce160fc79a6d8e0a0982722ba4d80
+      module_name_from_file_guess: Badger::Class::Methods
+      mtime: 1226580000
+      name: blib/lib/Badger/Class/Methods.pm
+      packages:
+        - Badger::Class::Methods
+      primary_package: Badger::Class::Methods
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Class/Methods.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7849
+      file_mime_type: ~
+      line_count: ~
+      md5: 1db4fd251d64cc5ab2d3b4522b2a9f15
+      module_name_from_file_guess: Badger::Class::Vars
+      mtime: 1226580000
+      name: blib/lib/Badger/Class/Vars.pm
+      packages:
+        - Badger::Class::Vars
+      primary_package: Badger::Class::Vars
+      uses:
+        - Badger::Debug
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Class/Vars.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2926
+      file_mime_type: ~
+      line_count: ~
+      md5: ad992b2ba30d4d6488f45d5b0bc228ae
+      module_name_from_file_guess: Badger::Codec
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec.pm
+      packages:
+        - Badger::Codec
+      primary_package: Badger::Codec
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Codec.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2353
+      file_mime_type: ~
+      line_count: ~
+      md5: d984020338b2f9d1b5f16bae4ecbfa41
+      module_name_from_file_guess: Badger::Codec::Base64
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/Base64.pm
+      packages:
+        - Badger::Codec::Base64
+      primary_package: Badger::Codec::Base64
+      uses:
+        - Badger::Class
+        - MIME::Base64
+      version_info:
+        filename: blib/lib/Badger/Codec/Base64.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4265
+      file_mime_type: ~
+      line_count: ~
+      md5: b3c65d3772e402ad859aef7c599df172
+      module_name_from_file_guess: Badger::Codec::Chain
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/Chain.pm
+      packages:
+        - Badger::Codec::Chain
+      primary_package: Badger::Codec::Chain
+      uses:
+        - Badger::Codecs
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Codec/Chain.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3601
+      file_mime_type: ~
+      line_count: ~
+      md5: 191195110e326df832d51ef0cc3146ee
+      module_name_from_file_guess: Badger::Codec::Encode
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/Encode.pm
+      packages:
+        - Badger::Codec::Encode
+      primary_package: Badger::Codec::Encode
+      uses:
+        - Badger::Class
+        - Encode
+        - bytes
+      version_info:
+        filename: blib/lib/Badger/Codec/Encode.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3917
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e06bfd8b7de07956cc50e59bf4704ca
+      module_name_from_file_guess: Badger::Codec::Encoding
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/Encoding.pm
+      packages:
+        - Badger::Codec::Encoding
+      primary_package: Badger::Codec::Encoding
+      uses:
+        - Badger::Class
+        - Encode
+        - bytes
+      version_info:
+        filename: blib/lib/Badger/Codec/Encoding.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2021
+      file_mime_type: ~
+      line_count: ~
+      md5: c3892f8b72fcfbcb786b9aaa3b1e3963
+      module_name_from_file_guess: Badger::Codec::JSON
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/JSON.pm
+      packages:
+        - Badger::Codec::JSON
+      primary_package: Badger::Codec::JSON
+      uses:
+        - Badger::Class
+        - JSON
+      version_info:
+        filename: blib/lib/Badger/Codec/JSON.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2280
+      file_mime_type: ~
+      line_count: ~
+      md5: e8667bd36e0640654ed3fe6f0f1de8b0
+      module_name_from_file_guess: Badger::Codec::Storable
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/Storable.pm
+      packages:
+        - Badger::Codec::Storable
+      primary_package: Badger::Codec::Storable
+      uses:
+        - Badger::Class
+        - Storable
+      version_info:
+        filename: blib/lib/Badger/Codec/Storable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2414
+      file_mime_type: ~
+      line_count: ~
+      md5: 849365a3e5623ff1db29b523e0c62881
+      module_name_from_file_guess: Badger::Codec::URI
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/URI.pm
+      packages:
+        - Badger::Codec::URI
+      primary_package: Badger::Codec::URI
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Codec/URI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2826
+      file_mime_type: ~
+      line_count: ~
+      md5: 2254d94e46f31fd41f12604864acfccd
+      module_name_from_file_guess: Badger::Codec::URL
+      mtime: 1226593983
+      name: blib/lib/Badger/Codec/URL.pm
+      packages:
+        - Badger::Codec::URL
+      primary_package: Badger::Codec::URL
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Codec/URL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4969
+      file_mime_type: ~
+      line_count: ~
+      md5: 77d408599eb0fd5554e3b65257856d3c
+      module_name_from_file_guess: Badger::Codec::Unicode
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/Unicode.pm
+      packages:
+        - Badger::Codec::Unicode
+      primary_package: Badger::Codec::Unicode
+      uses:
+        - ''
+        - Badger::Class
+        - Encode
+        - bytes
+      version_info:
+        filename: blib/lib/Badger/Codec/Unicode.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2054
+      file_mime_type: ~
+      line_count: ~
+      md5: 748153cc1ec795a1f218f1d1de79f37d
+      module_name_from_file_guess: Badger::Codec::YAML
+      mtime: 1226580000
+      name: blib/lib/Badger/Codec/YAML.pm
+      packages:
+        - Badger::Codec::YAML
+      primary_package: Badger::Codec::YAML
+      uses:
+        - Badger::Class
+        - ''
+      version_info:
+        filename: blib/lib/Badger/Codec/YAML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17588
+      file_mime_type: ~
+      line_count: ~
+      md5: f88de18d8c940489ee489a2dc2b86e4b
+      module_name_from_file_guess: Badger::Codecs
+      mtime: 1226934418
+      name: blib/lib/Badger/Codecs.pm
+      packages:
+        - Badger::Codecs
+      primary_package: Badger::Codecs
+      uses:
+        - Carp
+        - Badger::Codec::Chain
+        - Badger::Factory::Class
+      version_info:
+        filename: blib/lib/Badger/Codecs.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3195
+      file_mime_type: ~
+      line_count: ~
+      md5: 68d67a48dd1fcac9cf5dd33ff9870f91
+      module_name_from_file_guess: Badger::Config
+      mtime: 1226580000
+      name: blib/lib/Badger/Config.pm
+      packages:
+        - Badger::Config
+      primary_package: Badger::Config
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Config.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5868
+      file_mime_type: ~
+      line_count: ~
+      md5: e13cdbf86dfd5d0f2cbb3eb6a298b1dc
+      module_name_from_file_guess: Badger::Constants
+      mtime: 1226580000
+      name: blib/lib/Badger/Constants.pm
+      packages:
+        - Badger::Constants
+      primary_package: Badger::Constants
+      uses:
+        - strict
+        - warnings
+        - base
+        - constant
+      version_info:
+        filename: blib/lib/Badger/Constants.pm
+        identifier: VERSION
+        line_number: 15
+        sigil: $
+        value: 0.01
+    - bytesize: 29913
+      file_mime_type: ~
+      line_count: ~
+      md5: 01e25449119b4ff2de0db7ee4c5bb627
+      module_name_from_file_guess: Badger::Debug
+      mtime: 1226934206
+      name: blib/lib/Badger/Debug.pm
+      packages:
+        - Badger::Debug
+      primary_package: Badger::Debug
+      uses:
+        - Carp
+        - Badger::Rainbow
+        - Scalar::Util
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Debug.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14841
+      file_mime_type: ~
+      line_count: ~
+      md5: b6150589749555d1dfaacfd1e3388ccd
+      module_name_from_file_guess: Badger::Exception
+      mtime: 1226933406
+      name: blib/lib/Badger/Exception.pm
+      packages:
+        - Badger::Exception
+      primary_package: Badger::Exception
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Exception.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 32630
+      file_mime_type: ~
+      line_count: ~
+      md5: e14b1037529c48e6dee3aae178697ded
+      module_name_from_file_guess: Badger::Exporter
+      mtime: 1226580000
+      name: blib/lib/Badger/Exporter.pm
+      packages:
+        - Badger::Exporter
+      primary_package: Badger::Exporter
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/Badger/Exporter.pm
+        identifier: VERSION
+        line_number: 49
+        sigil: $
+        value: 0.01
+    - bytesize: 11710
+      file_mime_type: ~
+      line_count: ~
+      md5: b05c00da82d6970b72f2fa28038fa5bc
+      module_name_from_file_guess: Badger::Factory
+      mtime: 1226684762
+      name: blib/lib/Badger/Factory.pm
+      packages:
+        - Badger::Factory
+      primary_package: Badger::Factory
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Factory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4320
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b8544cfcd26a4d3e3d3db01b93f24c1
+      module_name_from_file_guess: Badger::Factory::Class
+      mtime: 1226580000
+      name: blib/lib/Badger/Factory/Class.pm
+      packages:
+        - Badger::Factory::Class
+      primary_package: Badger::Factory::Class
+      uses:
+        - Carp
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Factory/Class.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 48191
+      file_mime_type: ~
+      line_count: ~
+      md5: f29413e82402d6fc160fad80eb2678d8
+      module_name_from_file_guess: Badger::Filesystem
+      mtime: 1226580000
+      name: blib/lib/Badger/Filesystem.pm
+      packages:
+        - Badger::Filesystem
+      primary_package: Badger::Filesystem
+      uses:
+        - File::Spec
+        - Cwd
+        - Badger::Class
+        - Badger::Filesystem::File
+        - Badger::Filesystem::Directory
+        - IO::File
+        - File::Path
+        - IO::Dir
+      version_info:
+        filename: blib/lib/Badger/Filesystem.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14351
+      file_mime_type: ~
+      line_count: ~
+      md5: 4cadf5d3b3b666b6c8c07f9f7d960b54
+      module_name_from_file_guess: Badger::Filesystem::Directory
+      mtime: 1226580000
+      name: blib/lib/Badger/Filesystem/Directory.pm
+      packages:
+        - Badger::Filesystem::Directory
+      primary_package: Badger::Filesystem::Directory
+      uses:
+        - Badger::Class
+        - Badger::Filesystem::Path
+      version_info:
+        filename: blib/lib/Badger/Filesystem/Directory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10602
+      file_mime_type: ~
+      line_count: ~
+      md5: c5b1279c0b60fb794e5dc662e497ee6d
+      module_name_from_file_guess: Badger::Filesystem::File
+      mtime: 1226580000
+      name: blib/lib/Badger/Filesystem/File.pm
+      packages:
+        - Badger::Filesystem::File
+      primary_package: Badger::Filesystem::File
+      uses:
+        - Badger::Class
+        - Badger::Filesystem::Path
+      version_info:
+        filename: blib/lib/Badger/Filesystem/File.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 30439
+      file_mime_type: ~
+      line_count: ~
+      md5: fa453c942c210313b502b1c8b8e5b567
+      module_name_from_file_guess: Badger::Filesystem::Path
+      mtime: 1226580000
+      name: blib/lib/Badger/Filesystem/Path.pm
+      packages:
+        - Badger::Filesystem::Path
+      primary_package: Badger::Filesystem::Path
+      uses:
+        - File::Spec
+        - Badger::Class
+        - Badger::Filesystem
+        - Badger::Filesystem::Directory
+      version_info:
+        filename: blib/lib/Badger/Filesystem/Path.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 15368
+      file_mime_type: ~
+      line_count: ~
+      md5: bf14b8fcdc76676bd45df0fb81e660b4
+      module_name_from_file_guess: Badger::Filesystem::Virtual
+      mtime: 1226580000
+      name: blib/lib/Badger/Filesystem/Virtual.pm
+      packages:
+        - Badger::Filesystem::Virtual
+      primary_package: Badger::Filesystem::Virtual
+      uses:
+        - Badger::Debug
+        - Badger::Class
+        - IO::Dir
+      version_info:
+        filename: blib/lib/Badger/Filesystem/Virtual.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14678
+      file_mime_type: ~
+      line_count: ~
+      md5: 570cc6994ca28cfc764a36f6ccc19d37
+      module_name_from_file_guess: Badger::Filesystem::Visitor
+      mtime: 1226580000
+      name: blib/lib/Badger/Filesystem/Visitor.pm
+      packages:
+        - Badger::Filesystem::Visitor
+      primary_package: Badger::Filesystem::Visitor
+      uses:
+        - Badger::Class
+        - Badger::Debug
+      version_info:
+        filename: blib/lib/Badger/Filesystem/Visitor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17060
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f3d63818a913e862a0704d814e67439
+      module_name_from_file_guess: Badger::Hub
+      mtime: 1226580000
+      name: blib/lib/Badger/Hub.pm
+      packages:
+        - Badger::Hub
+      primary_package: Badger::Hub
+      uses:
+        - Badger::Class
+        - Badger::Config
+      version_info:
+        filename: blib/lib/Badger/Hub.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4894
+      file_mime_type: ~
+      line_count: ~
+      md5: 04169b4970bbc743eb89229b95f4fc80
+      module_name_from_file_guess: Badger::Mixin
+      mtime: 1226580000
+      name: blib/lib/Badger/Mixin.pm
+      packages:
+        - Badger::Mixin
+      primary_package: Badger::Mixin
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Mixin.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5386
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b5e7ad1cc3793fe2cb8a469c0caf964
+      module_name_from_file_guess: Badger::Prototype
+      mtime: 1226580000
+      name: blib/lib/Badger/Prototype.pm
+      packages:
+        - Badger::Prototype
+      primary_package: Badger::Prototype
+      uses:
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Prototype.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4339
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bec10f4a52e9bb917bac5a3d163c137
+      module_name_from_file_guess: Badger::Rainbow
+      mtime: 1226580000
+      name: blib/lib/Badger/Rainbow.pm
+      packages:
+        - Badger::Rainbow
+      primary_package: Badger::Rainbow
+      uses:
+        - Carp
+        - Badger::Class
+      version_info:
+        filename: blib/lib/Badger/Rainbow.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10549
+      file_mime_type: ~
+      line_count: ~
+      md5: d1c2a72b7fda4561506bbd48e4f2e18c
+      module_name_from_file_guess: Badger::Test
+      mtime: 1226580000
+      name: blib/lib/Badger/Test.pm
+      packages:
+        - Badger::Test
+      primary_package: Badger::Test
+      uses:
+        - Carp
+        - Badger::Class
+        - Badger::Debug
+        - Badger::Test::Manager
+      version_info:
+        filename: blib/lib/Badger/Test.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14598
+      file_mime_type: ~
+      line_count: ~
+      md5: 47efccad7c3d3931c5e427e4d534b2ec
+      module_name_from_file_guess: Badger::Test::Manager
+      mtime: 1226580000
+      name: blib/lib/Badger/Test/Manager.pm
+      packages:
+        - Badger::Test::Manager
+      primary_package: Badger::Test::Manager
+      uses:
+        - Badger::Class
+        - Badger::Rainbow
+      version_info:
+        filename: blib/lib/Badger/Test/Manager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9061
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fee1b422b71d5e68a24ce5176067f7c
+      module_name_from_file_guess: Badger::Utils
+      mtime: 1226580000
+      name: blib/lib/Badger/Utils.pm
+      packages:
+        - Badger::Utils
+      primary_package: Badger::Utils
+      uses:
+        - strict
+        - warnings
+        - base
+        - File::Path
+        - Scalar::Util
+        - Badger::Constants
+        - Badger::Debug
+        - overload
+        - constant
+        - ''
+      version_info:
+        filename: blib/lib/Badger/Utils.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 0.01
+  modules:
+    - blib/lib/Badger.pm
+    - blib/lib/Badger/Base.pm
+    - blib/lib/Badger/Class.pm
+    - blib/lib/Badger/Class/Config.pm
+    - blib/lib/Badger/Class/Methods.pm
+    - blib/lib/Badger/Class/Vars.pm
+    - blib/lib/Badger/Codec.pm
+    - blib/lib/Badger/Codec/Base64.pm
+    - blib/lib/Badger/Codec/Chain.pm
+    - blib/lib/Badger/Codec/Encode.pm
+    - blib/lib/Badger/Codec/Encoding.pm
+    - blib/lib/Badger/Codec/JSON.pm
+    - blib/lib/Badger/Codec/Storable.pm
+    - blib/lib/Badger/Codec/URI.pm
+    - blib/lib/Badger/Codec/URL.pm
+    - blib/lib/Badger/Codec/Unicode.pm
+    - blib/lib/Badger/Codec/YAML.pm
+    - blib/lib/Badger/Codecs.pm
+    - blib/lib/Badger/Config.pm
+    - blib/lib/Badger/Constants.pm
+    - blib/lib/Badger/Debug.pm
+    - blib/lib/Badger/Exception.pm
+    - blib/lib/Badger/Exporter.pm
+    - blib/lib/Badger/Factory.pm
+    - blib/lib/Badger/Factory/Class.pm
+    - blib/lib/Badger/Filesystem.pm
+    - blib/lib/Badger/Filesystem/Directory.pm
+    - blib/lib/Badger/Filesystem/File.pm
+    - blib/lib/Badger/Filesystem/Path.pm
+    - blib/lib/Badger/Filesystem/Virtual.pm
+    - blib/lib/Badger/Filesystem/Visitor.pm
+    - blib/lib/Badger/Hub.pm
+    - blib/lib/Badger/Mixin.pm
+    - blib/lib/Badger/Prototype.pm
+    - blib/lib/Badger/Rainbow.pm
+    - blib/lib/Badger/Test.pm
+    - blib/lib/Badger/Test/Manager.pm
+    - blib/lib/Badger/Utils.pm
+  test_info:
+    - bytesize: 4319
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cd7561d58dfc04e90c387fde76e5116
+      mtime: 1226579999
+      name: t/class/config.t
+      uses:
+        - lib
+        - Badger::Test
+        - My::Config1
+        - My::Config2
+        - My::Config3
+        - My::Config4
+        - My::Config5
+    - bytesize: 4734
+      file_mime_type: ~
+      line_count: ~
+      md5: 1128e3dc9d33397f8e7d756ab7296002
+      mtime: 1226579999
+      name: t/class/methods.t
+      uses:
+        - lib
+        - Badger::Test
+        - Badger::Class::Methods
+        - Badger::Class
+    - bytesize: 5514
+      file_mime_type: ~
+      line_count: ~
+      md5: 61c3e8bed0afffc2568e1a3a451500f7
+      mtime: 1226579999
+      name: t/class/vars.t
+      uses:
+        - lib
+        - Badger::Test
+        - My::Vars1
+        - My::Vars2
+        - My::Vars3
+        - My::Vars4
+        - My::Vars5
+        - My::Vars6
+        - My::Vars7
+    - bytesize: 894
+      file_mime_type: ~
+      line_count: ~
+      md5: c4f111d85f01e36f57c90aba185bcf21
+      mtime: 1226580000
+      name: t/codec/base64.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codec::Base64
+        - Badger::Test
+        - constant
+    - bytesize: 690
+      file_mime_type: ~
+      line_count: ~
+      md5: dcb147cbdab7e9e35f1fa0523c6bb252
+      mtime: 1226580000
+      name: t/codec/codec.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codec
+        - Badger::Test
+    - bytesize: 6408
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a45cd27c048419e67229cea4e906c63
+      mtime: 1226580000
+      name: t/codec/codecs.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codecs
+        - Badger::Test
+        - constant
+    - bytesize: 3230
+      file_mime_type: ~
+      line_count: ~
+      md5: 52e80f97b284021cb28b1b2e70c4af32
+      mtime: 1226580000
+      name: t/codec/encode.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codec::Encode
+        - Badger::Test
+        - constant
+        - Encode
+        - bytes
+        - Badger::Codecs
+    - bytesize: 1933
+      file_mime_type: ~
+      line_count: ~
+      md5: d8f61a061c568addcf7ec64c46979329
+      mtime: 1226580000
+      name: t/codec/encoding.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codec::Encoding
+        - Badger::Test
+        - constant
+        - Encode
+        - bytes
+        - Badger::Codecs
+    - bytesize: 1265
+      file_mime_type: ~
+      line_count: ~
+      md5: b7eeee6e93d0f09baf157e4e64f13af5
+      mtime: 1226580000
+      name: t/codec/storable.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codec::Storable
+        - constant
+        - Badger::Test
+    - bytesize: 3280
+      file_mime_type: ~
+      line_count: ~
+      md5: 5afb73a61ef8a4501a389d2138eeb4ac
+      mtime: 1226580000
+      name: t/codec/unicode.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Codec::Unicode
+        - Badger::Test
+        - constant
+        - Encode
+        - bytes
+        - Badger::Codecs
+    - bytesize: 908
+      file_mime_type: ~
+      line_count: ~
+      md5: d43028fdefe7e56e6f9f5f95dabb1d8c
+      mtime: 1226594163
+      name: t/codec/uri.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Badger::Codecs
+    - bytesize: 982
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ab40bef0ca6fa34f18a0e3929d393d6
+      mtime: 1226594248
+      name: t/codec/url.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Badger::Codecs
+    - bytesize: 17070
+      file_mime_type: ~
+      line_count: ~
+      md5: 359c4531ec651bcb7059c7a18e9b1eb7
+      mtime: 1226579999
+      name: t/core/base.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Base
+        - Badger::Test
+        - Badger
+        - base
+        - vars
+        - Badger::Class
+    - bytesize: 20457
+      file_mime_type: ~
+      line_count: ~
+      md5: e735f6300cf09b180e7c6c1f3efc8f24
+      mtime: 1226579999
+      name: t/core/class.t
+      uses:
+        - lib
+        - Badger::Class
+        - Badger::Test
+        - Class::Top
+        - base
+        - My::Class
+    - bytesize: 914
+      file_mime_type: ~
+      line_count: ~
+      md5: 685b4f3a27f10205f371781cc0a37932
+      mtime: 1226579999
+      name: t/core/config.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Config
+        - Badger::Test
+    - bytesize: 1384
+      file_mime_type: ~
+      line_count: ~
+      md5: 152705da71440a1e60740df6be594886
+      mtime: 1226579999
+      name: t/core/constants.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Constants
+        - Badger::Test
+    - bytesize: 5964
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c8e7786b2a37c98e8d52aa80e2c9210
+      mtime: 1226579999
+      name: t/core/debug.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Debug
+        - Badger::Base
+        - Badger::Test
+        - My::Debugger1
+        - My::Debugger2
+        - My::Debugger3
+    - bytesize: 1841
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ff18568693d73891b16a3afc43d89bc
+      mtime: 1226917425
+      name: t/core/dump.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Debug
+        - Badger::Base
+        - Badger::Test
+        - base
+    - bytesize: 5048
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fd3e7e7a698883b0c49c758690be79
+      mtime: 1226579999
+      name: t/core/exception.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Badger::Utils
+        - Badger::Exception
+        - constant
+        - base
+    - bytesize: 8352
+      file_mime_type: ~
+      line_count: ~
+      md5: 64945f74bc6f21e21df53a1da0243c6d
+      mtime: 1226579999
+      name: t/core/exporter.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Exporter
+        - Badger::Test
+        - My::Exporter::Base1
+        - My::Exporter::Base2
+        - My::Exporter::Subclass1
+        - My::Exporter::Subclass2
+        - My::Exporter5
+        - My::Exporter6
+        - My::Exporter7
+        - My::Exporter9
+        - My::Exporter::Explicit
+    - bytesize: 4757
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fde2879ef42796bbda8ff605d82f522
+      mtime: 1226579999
+      name: t/core/factory.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Badger::Class
+        - Badger::Factory::Class
+    - bytesize: 1871
+      file_mime_type: ~
+      line_count: ~
+      md5: cbef05c76afb17e78f0cbf851e8665d1
+      mtime: 1226579999
+      name: t/core/hub.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Hub
+        - Badger::Test
+        - base
+    - bytesize: 1915
+      file_mime_type: ~
+      line_count: ~
+      md5: 72648cdc99342246b2c361c7ad8864d8
+      mtime: 1226579999
+      name: t/core/mixin.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Mixin
+        - Badger::Test
+        - Badger::Class
+    - bytesize: 3338
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f82b0077557dcc2e73052ad5b36d825
+      mtime: 1226579999
+      name: t/core/prototype.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - base
+    - bytesize: 986
+      file_mime_type: ~
+      line_count: ~
+      md5: 403c19c1e4b78e6c20da7db679e95a35
+      mtime: 1226579999
+      name: t/core/rainbow.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Rainbow
+        - Badger::Test
+    - bytesize: 1406
+      file_mime_type: ~
+      line_count: ~
+      md5: 91e6242b636f630d836ef455882784d0
+      mtime: 1226579999
+      name: t/core/test.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+    - bytesize: 1483
+      file_mime_type: ~
+      line_count: ~
+      md5: cd3109c2de873bc6cf0df9e9eaa8802b
+      mtime: 1226579999
+      name: t/core/trace.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Badger::Exception
+    - bytesize: 5485
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d77acd341e00c62cd986854ddb2c227
+      mtime: 1226579999
+      name: t/core/utils.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Utils
+        - Badger::Debug
+        - Badger::Test
+        - base
+        - Badger::Class
+    - bytesize: 7083
+      file_mime_type: ~
+      line_count: ~
+      md5: 011250b728b636e11f18fa722eda1dc1
+      mtime: 1226579999
+      name: t/filesystem/directory.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - File::Spec
+        - Badger::Filesystem::Directory
+        - Badger::Filesystem::Virtual
+        - Badger::Test
+    - bytesize: 4613
+      file_mime_type: ~
+      line_count: ~
+      md5: 4752b7443f8c5d10eca0d949eee45e53
+      mtime: 1226579999
+      name: t/filesystem/file.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - Badger::Filesystem
+        - Badger::Filesystem::File
+        - Badger::Filesystem::Directory
+        - Badger::Test
+    - bytesize: 6529
+      file_mime_type: ~
+      line_count: ~
+      md5: e6d546d9361e08f7b135ad5fb7487a72
+      mtime: 1226579999
+      name: t/filesystem/filesystem.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - File::Spec
+        - Badger::Filesystem
+        - Badger::Test
+    - bytesize: 5662
+      file_mime_type: ~
+      line_count: ~
+      md5: c03ef068bc949a80d4042c510a12e5dd
+      mtime: 1226579999
+      name: t/filesystem/path.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - File::Spec
+        - Badger::Filesystem
+        - Badger::Filesystem::Path
+        - Badger::Test
+    - bytesize: 6844
+      file_mime_type: ~
+      line_count: ~
+      md5: aaf28c851883c5a0745690ce40b4f6c2
+      mtime: 1226579999
+      name: t/filesystem/virtual.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - File::Spec
+        - Badger::Test
+        - Badger::Filesystem
+        - Badger::Filesystem::Virtual
+    - bytesize: 6312
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e979a5867f62add254bd60bdc3a8033
+      mtime: 1226579999
+      name: t/filesystem/visitor.t
+      uses:
+        - lib
+        - strict
+        - warnings
+        - File::Spec
+        - Badger::Filesystem
+        - Badger::Test
+        - base
+    - bytesize: 948
+      file_mime_type: ~
+      line_count: ~
+      md5: b40ff2f0cbb4c770115f3284c824525d
+      mtime: 1227004101
+      name: t/misc/badger.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Badger
+    - bytesize: 1426
+      file_mime_type: ~
+      line_count: ~
+      md5: f6fadda8e9cd222ddd1f44d261010ccc
+      mtime: 1226939682
+      name: t/misc/moose.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Badger::Test
+        - Moose
+        - Badger::Class
+    - bytesize: 846
+      file_mime_type: ~
+      line_count: ~
+      md5: aa7fb8d2853ee28224ce4af7875ede9b
+      mtime: 1227003910
+      name: t/pod/coverage.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+    - bytesize: 635
+      file_mime_type: ~
+      line_count: ~
+      md5: c559627948fb12630684201b7e792257
+      mtime: 1226579999
+      name: t/pod/kwalitee.t
+      uses:
+        - strict
+        - warnings
+        - lib
+        - Test::More
+  tests:
+    - t/class/config.t
+    - t/class/methods.t
+    - t/class/vars.t
+    - t/codec/base64.t
+    - t/codec/codec.t
+    - t/codec/codecs.t
+    - t/codec/encode.t
+    - t/codec/encoding.t
+    - t/codec/storable.t
+    - t/codec/unicode.t
+    - t/codec/uri.t
+    - t/codec/url.t
+    - t/core/base.t
+    - t/core/class.t
+    - t/core/config.t
+    - t/core/constants.t
+    - t/core/debug.t
+    - t/core/dump.t
+    - t/core/exception.t
+    - t/core/exporter.t
+    - t/core/factory.t
+    - t/core/hub.t
+    - t/core/mixin.t
+    - t/core/prototype.t
+    - t/core/rainbow.t
+    - t/core/test.t
+    - t/core/trace.t
+    - t/core/utils.t
+    - t/filesystem/directory.t
+    - t/filesystem/file.t
+    - t/filesystem/filesystem.t
+    - t/filesystem/path.t
+    - t/filesystem/virtual.t
+    - t/filesystem/visitor.t
+    - t/misc/badger.t
+    - t/misc/moose.t
+    - t/pod/coverage.t
+    - t/pod/kwalitee.t
+  unpack_dir: /usr/home/brian/cptiypuyMa/MyCPAN-Indexer-59071.bXhH
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 15
+  backpan_dir: /home/brian/CPAN
+  child_pid: 59071
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Parallel
+  error_report_subdir: /usr/home/brian/indexer_reports/error
+  examine_end_time: 1268851874
+  examine_start_time: 1268851823
+  examine_time: 51
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::Text
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 87117
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 59071
+  ppid: 87117
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /usr/home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  reports_dir: /home/brian/backpan_reports
+  retry_errors: 1
+  root_working_dir: /usr/home/brian/cptiypuyMa
+  run_end_time: 1268851874
+  run_start_time: 1268851823
+  success_report_subdir: /usr/home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/cptiypuyMa
+  uuid: A28BFB6E-31EB-11DF-84A8-19B9E9F9184E
+  worker_class: MyCPAN::Indexer::Worker
