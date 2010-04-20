@@ -1,0 +1,3925 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: framework for parsing Pod
+    author:
+      - 'Allison Randal <allison@perl.org>'
+    build_requires:
+      ExtUtils::MakeMaker: 0
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.55_02
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: Pod-Simple
+    no_index:
+      directory:
+        - t
+        - inc
+    requires:
+      Carp: 0
+      Config: 0
+      Cwd: 0
+      File::Basename: 0
+      File::Find: 0
+      File::Spec: 0
+      Pod::Escapes: 1.04
+      Symbol: 0
+      Test: 1.25
+      Test::More: 0
+      Text::Wrap: 98.112902
+      constant: 0
+      integer: 0
+      overload: 0
+      strict: 0
+    version: 3.10
+  blib:
+    - blib/lib/Pod/Simple.pm
+    - blib/lib/Pod/Simple.pod
+    - blib/lib/Pod/Simple/BlackBox.pm
+    - blib/lib/Pod/Simple/Checker.pm
+    - blib/lib/Pod/Simple/Debug.pm
+    - blib/lib/Pod/Simple/DumpAsText.pm
+    - blib/lib/Pod/Simple/DumpAsXML.pm
+    - blib/lib/Pod/Simple/HTML.pm
+    - blib/lib/Pod/Simple/HTMLBatch.pm
+    - blib/lib/Pod/Simple/HTMLLegacy.pm
+    - blib/lib/Pod/Simple/LinkSection.pm
+    - blib/lib/Pod/Simple/Methody.pm
+    - blib/lib/Pod/Simple/Progress.pm
+    - blib/lib/Pod/Simple/PullParser.pm
+    - blib/lib/Pod/Simple/PullParserEndToken.pm
+    - blib/lib/Pod/Simple/PullParserStartToken.pm
+    - blib/lib/Pod/Simple/PullParserTextToken.pm
+    - blib/lib/Pod/Simple/PullParserToken.pm
+    - blib/lib/Pod/Simple/RTF.pm
+    - blib/lib/Pod/Simple/Search.pm
+    - blib/lib/Pod/Simple/SimpleTree.pm
+    - blib/lib/Pod/Simple/Subclassing.pod
+    - blib/lib/Pod/Simple/Text.pm
+    - blib/lib/Pod/Simple/TextContent.pm
+    - blib/lib/Pod/Simple/TiedOutFH.pm
+    - blib/lib/Pod/Simple/Transcode.pm
+    - blib/lib/Pod/Simple/TranscodeDumb.pm
+    - blib/lib/Pod/Simple/TranscodeSmart.pm
+    - blib/lib/Pod/Simple/XHTML.pm
+    - blib/lib/Pod/Simple/XMLOutStream.pm
+    - blib/lib/perlpod.pod
+    - blib/lib/perlpodspec.pod
+    - blib/man3/Pod::Simple.3
+    - blib/man3/Pod::Simple::Checker.3
+    - blib/man3/Pod::Simple::Debug.3
+    - blib/man3/Pod::Simple::DumpAsText.3
+    - blib/man3/Pod::Simple::DumpAsXML.3
+    - blib/man3/Pod::Simple::HTML.3
+    - blib/man3/Pod::Simple::HTMLBatch.3
+    - blib/man3/Pod::Simple::LinkSection.3
+    - blib/man3/Pod::Simple::Methody.3
+    - blib/man3/Pod::Simple::PullParser.3
+    - blib/man3/Pod::Simple::PullParserEndToken.3
+    - blib/man3/Pod::Simple::PullParserStartToken.3
+    - blib/man3/Pod::Simple::PullParserTextToken.3
+    - blib/man3/Pod::Simple::PullParserToken.3
+    - blib/man3/Pod::Simple::RTF.3
+    - blib/man3/Pod::Simple::Search.3
+    - blib/man3/Pod::Simple::SimpleTree.3
+    - blib/man3/Pod::Simple::Subclassing.3
+    - blib/man3/Pod::Simple::Text.3
+    - blib/man3/Pod::Simple::TextContent.3
+    - blib/man3/Pod::Simple::XHTML.3
+    - blib/man3/Pod::Simple::XMLOutStream.3
+    - blib/man3/perlpod.3
+    - blib/man3/perlpodspec.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Pod::Simple
+  build_output: |
+    cp lib/Pod/Simple/LinkSection.pm blib/lib/Pod/Simple/LinkSection.pm
+    cp lib/Pod/Simple/DumpAsText.pm blib/lib/Pod/Simple/DumpAsText.pm
+    cp lib/Pod/Simple/XMLOutStream.pm blib/lib/Pod/Simple/XMLOutStream.pm
+    cp lib/Pod/Simple/Progress.pm blib/lib/Pod/Simple/Progress.pm
+    cp lib/Pod/Simple/TextContent.pm blib/lib/Pod/Simple/TextContent.pm
+    cp lib/Pod/Simple/Text.pm blib/lib/Pod/Simple/Text.pm
+    cp lib/Pod/Simple/Search.pm blib/lib/Pod/Simple/Search.pm
+    cp lib/Pod/Simple/TranscodeSmart.pm blib/lib/Pod/Simple/TranscodeSmart.pm
+    cp lib/Pod/Simple/Debug.pm blib/lib/Pod/Simple/Debug.pm
+    cp lib/Pod/Simple/PullParserStartToken.pm blib/lib/Pod/Simple/PullParserStartToken.pm
+    cp lib/perlpodspec.pod blib/lib/perlpodspec.pod
+    cp lib/Pod/Simple/Methody.pm blib/lib/Pod/Simple/Methody.pm
+    cp lib/Pod/Simple/PullParserTextToken.pm blib/lib/Pod/Simple/PullParserTextToken.pm
+    cp lib/Pod/Simple/PullParserEndToken.pm blib/lib/Pod/Simple/PullParserEndToken.pm
+    cp lib/Pod/Simple.pm blib/lib/Pod/Simple.pm
+    cp lib/Pod/Simple/TranscodeDumb.pm blib/lib/Pod/Simple/TranscodeDumb.pm
+    cp lib/Pod/Simple/HTMLBatch.pm blib/lib/Pod/Simple/HTMLBatch.pm
+    cp lib/Pod/Simple/RTF.pm blib/lib/Pod/Simple/RTF.pm
+    cp lib/Pod/Simple/Checker.pm blib/lib/Pod/Simple/Checker.pm
+    cp lib/Pod/Simple/PullParser.pm blib/lib/Pod/Simple/PullParser.pm
+    cp lib/Pod/Simple/PullParserToken.pm blib/lib/Pod/Simple/PullParserToken.pm
+    cp lib/Pod/Simple/SimpleTree.pm blib/lib/Pod/Simple/SimpleTree.pm
+    cp lib/Pod/Simple/XHTML.pm blib/lib/Pod/Simple/XHTML.pm
+    cp lib/Pod/Simple/TiedOutFH.pm blib/lib/Pod/Simple/TiedOutFH.pm
+    cp lib/perlpod.pod blib/lib/perlpod.pod
+    cp lib/Pod/Simple/HTML.pm blib/lib/Pod/Simple/HTML.pm
+    cp lib/Pod/Simple.pod blib/lib/Pod/Simple.pod
+    cp lib/Pod/Simple/Subclassing.pod blib/lib/Pod/Simple/Subclassing.pod
+    cp lib/Pod/Simple/HTMLLegacy.pm blib/lib/Pod/Simple/HTMLLegacy.pm
+    cp lib/Pod/Simple/BlackBox.pm blib/lib/Pod/Simple/BlackBox.pm
+    cp lib/Pod/Simple/DumpAsXML.pm blib/lib/Pod/Simple/DumpAsXML.pm
+    cp lib/Pod/Simple/Transcode.pm blib/lib/Pod/Simple/Transcode.pm
+    Manifying blib/man3/Pod::Simple::DumpAsText.3
+    Manifying blib/man3/Pod::Simple::LinkSection.3
+    Manifying blib/man3/Pod::Simple::XMLOutStream.3
+    Manifying blib/man3/Pod::Simple::TextContent.3
+    Manifying blib/man3/Pod::Simple::Search.3
+    Manifying blib/man3/Pod::Simple::Text.3
+    Manifying blib/man3/Pod::Simple::PullParserStartToken.3
+    Manifying blib/man3/Pod::Simple::Debug.3
+    Manifying blib/man3/perlpodspec.3
+    Manifying blib/man3/Pod::Simple::Methody.3
+    Manifying blib/man3/Pod::Simple::PullParserEndToken.3
+    Manifying blib/man3/Pod::Simple::PullParserTextToken.3
+    Manifying blib/man3/Pod::Simple::HTMLBatch.3
+    Manifying blib/man3/Pod::Simple::RTF.3
+    Manifying blib/man3/Pod::Simple::Checker.3
+    Manifying blib/man3/Pod::Simple::PullParser.3
+    Manifying blib/man3/Pod::Simple::SimpleTree.3
+    Manifying blib/man3/Pod::Simple::PullParserToken.3
+    Manifying blib/man3/perlpod.3
+    Manifying blib/man3/Pod::Simple::XHTML.3
+    Manifying blib/man3/Pod::Simple::HTML.3
+    Manifying blib/man3/Pod::Simple::Subclassing.3
+    Manifying blib/man3/Pod::Simple.3
+    Manifying blib/man3/Pod::Simple::DumpAsXML.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq/Pod-Simple-3.10/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq/Pod-Simple-3.10
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq/Pod-Simple-3.10/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq/Pod-Simple-3.10/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DWHEELER
+  dist_basename: Pod-Simple-3.10.tar.gz
+  dist_date: 1258049882
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq/Pod-Simple-3.10
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq/Pod-Simple-3.10
+  dist_file: /home/brian/CPAN/authors/id/D/DW/DWHEELER/Pod-Simple-3.10.tar.gz
+  dist_md5: 613cca6ec8f5a1209df1ceb6e2d02bed
+  dist_size: 245778
+  manifest:
+    - ChangeLog
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - lib/Pod/Simple.pm
+    - lib/Pod/Simple.pod
+    - lib/Pod/Simple/BlackBox.pm
+    - lib/Pod/Simple/Checker.pm
+    - lib/Pod/Simple/Debug.pm
+    - lib/Pod/Simple/DumpAsText.pm
+    - lib/Pod/Simple/DumpAsXML.pm
+    - lib/Pod/Simple/HTML.pm
+    - lib/Pod/Simple/HTMLBatch.pm
+    - lib/Pod/Simple/HTMLLegacy.pm
+    - lib/Pod/Simple/LinkSection.pm
+    - lib/Pod/Simple/Methody.pm
+    - lib/Pod/Simple/Progress.pm
+    - lib/Pod/Simple/PullParser.pm
+    - lib/Pod/Simple/PullParserEndToken.pm
+    - lib/Pod/Simple/PullParserStartToken.pm
+    - lib/Pod/Simple/PullParserTextToken.pm
+    - lib/Pod/Simple/PullParserToken.pm
+    - lib/Pod/Simple/RTF.pm
+    - lib/Pod/Simple/Search.pm
+    - lib/Pod/Simple/SimpleTree.pm
+    - lib/Pod/Simple/Subclassing.pod
+    - lib/Pod/Simple/Text.pm
+    - lib/Pod/Simple/TextContent.pm
+    - lib/Pod/Simple/TiedOutFH.pm
+    - lib/Pod/Simple/Transcode.pm
+    - lib/Pod/Simple/TranscodeDumb.pm
+    - lib/Pod/Simple/TranscodeSmart.pm
+    - lib/Pod/Simple/XHTML.pm
+    - lib/Pod/Simple/XMLOutStream.pm
+    - lib/perlpod.pod
+    - lib/perlpodspec.pod
+    - t/00about.t
+    - t/20_skip.t
+    - t/ac_d.t
+    - t/accept01.t
+    - t/accept05.t
+    - t/basic.t
+    - t/begin.t
+    - t/cbacks.t
+    - t/chunking.t
+    - t/closeys.t
+    - t/corpus.t
+    - t/corpus/2202jp.txt
+    - t/corpus/2202jp.xml
+    - t/corpus/2202jpx.txt
+    - t/corpus/2202jpx.xml
+    - t/corpus/2202jpy.txt
+    - t/corpus/2202jpy.xml
+    - t/corpus/2202jpz.txt
+    - t/corpus/2202jpz.xml
+    - t/corpus/8859_7.pod
+    - t/corpus/8859_7.xml
+    - t/corpus/cp1256.txt
+    - t/corpus/cp1256.xml
+    - t/corpus/fet_cont.txt
+    - t/corpus/fet_cont.xml
+    - t/corpus/fet_dup.txt
+    - t/corpus/fet_dup.xml
+    - t/corpus/iso6.txt
+    - t/corpus/iso6.xml
+    - t/corpus/koi8r.txt
+    - t/corpus/koi8r.xml
+    - t/corpus/laozi38.txt
+    - t/corpus/laozi38.xml
+    - t/corpus/laozi38b.txt
+    - t/corpus/laozi38b.xml
+    - t/corpus/laozi38p.pod
+    - t/corpus/laozi38p.xml
+    - t/corpus/lat1fr.txt
+    - t/corpus/lat1fr.xml
+    - t/corpus/lat1frim.txt
+    - t/corpus/lat1frim.xml
+    - t/corpus/nonesuch.txt
+    - t/corpus/nonesuch.xml
+    - t/corpus/pasternak_cp1251.txt
+    - t/corpus/pasternak_cp1251.xml
+    - t/corpus/plain.txt
+    - t/corpus/plain.xml
+    - t/corpus/plain_explicit.txt
+    - t/corpus/plain_explicit.xml
+    - t/corpus/plain_latin1.txt
+    - t/corpus/plain_latin1.xml
+    - t/corpus/plain_utf8.txt
+    - t/corpus/plain_utf8.xml
+    - t/corpus/polish_utf8.txt
+    - t/corpus/polish_utf8.xml
+    - t/corpus/s2763_sjis.txt
+    - t/corpus/s2763_sjis.xml
+    - t/corpus/thai_iso11.txt
+    - t/corpus/thai_iso11.xml
+    - t/corpus2/README
+    - t/corpus2/fiqhakbar_iso6.txt
+    - t/corpus2/fiqhakbar_iso6.xml
+    - t/corpus2/polish_implicit_utf8.txt
+    - t/corpus2/polish_utf16be_bom.txt
+    - t/corpus2/polish_utf16le_bom.txt
+    - t/corpus2/polish_utf8_bom.txt
+    - t/corpus2/polish_utf8_bom.xml
+    - t/corpus2/polish_utf8_bom2.txt
+    - t/corpus2/polish_utf8_bom2.xml
+    - t/encod01.t
+    - t/encod02.t
+    - t/encod03.t
+    - t/end_over.t
+    - t/fcodes.t
+    - t/fcodes_e.t
+    - t/fcodes_l.t
+    - t/fcodes_s.t
+    - t/for.t
+    - t/fornot.t
+    - t/fullstop.t
+    - t/heads.t
+    - t/html01.t
+    - t/html02.t
+    - t/html03.t
+    - t/htmlbat.t
+    - t/items.t
+    - t/items02.t
+    - t/itemstar.t
+    - t/junk1.pod
+    - t/junk1o.txt
+    - t/junk2.pod
+    - t/junk2o.txt
+    - t/linkclas.t
+    - t/perlcyg.pod
+    - t/perlcygo.txt
+    - t/perlfaq.pod
+    - t/perlfaqo.txt
+    - t/perlvar.pod
+    - t/perlvaro.txt
+    - t/puller.t
+    - t/pulltitl.t
+    - t/reinit.t
+    - t/render.t
+    - t/search05.t
+    - t/search10.t
+    - t/search12.t
+    - t/search20.t
+    - t/search22.t
+    - t/search25.t
+    - t/search26.t
+    - t/search27.t
+    - t/search28.t
+    - t/search29.t
+    - t/search50.t
+    - t/stree.t
+    - t/strpvbtm.t
+    - t/testlib1/Blorm.pm
+    - t/testlib1/Zonk/Fiddle.txt
+    - t/testlib1/Zonk/Pronk.pm
+    - t/testlib1/Zonk/Veng.pm
+    - t/testlib1/hinkhonk/Glunk.pod
+    - t/testlib1/hinkhonk/Vliff.pm
+    - t/testlib1/hinkhonk/readme.txt
+    - t/testlib1/pod/perlflif.pod
+    - t/testlib1/pod/perlthng.pod
+    - t/testlib1/squaa.pm
+    - t/testlib1/squaa/Glunk.pod
+    - t/testlib1/squaa/Vliff.pm
+    - t/testlib1/zikzik.pod
+    - t/testlib2/Suzzle.pm
+    - t/testlib2/hinkhonk/Glunk.pod
+    - t/testlib2/hinkhonk/Vliff.pm
+    - t/testlib2/hinkhonk/readme.txt
+    - t/testlib2/pod/perlthng.pod
+    - t/testlib2/pod/perlzuk.pod
+    - t/testlib2/squaa/Vliff.pm
+    - t/testlib2/squaa/Wowo.pod
+    - t/testlib3/squaa/Vliff.pm
+    - t/tiedfh.t
+    - t/verb_fmt.t
+    - t/verbatim.t
+    - t/x_nixer.t
+    - t/xhtml01.t
+    - t/xhtml05.t
+    - t/xhtml10.t
+  manifest_file_info:
+    - bytesize: 12819
+      file_mime_type: ~
+      line_count: ~
+      md5: 02f0b547c2779d25cff89672135f20e3
+      mtime: 1258047079
+      name: ChangeLog
+    - bytesize: 3707
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1258047335
+      name: MANIFEST
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1258047392
+      name: META.yml
+    - bytesize: 1026
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1256664566
+      name: Makefile.PL
+    - bytesize: 229
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1212468742
+      name: README
+    - bytesize: 50150
+      file_mime_type: ~
+      line_count: ~
+      md5: e2152ef97df0545fdc1b968383fdbbe5
+      mtime: 1258047041
+      name: lib/Pod/Simple.pm
+    - bytesize: 8211
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e5d4229529fff1c04f4bf2c8c372381
+      mtime: 1256596123
+      name: lib/Pod/Simple.pod
+    - bytesize: 63675
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c9bf28177cde643c3b35c01070bc622
+      mtime: 1256599647
+      name: lib/Pod/Simple/BlackBox.pm
+    - bytesize: 4657
+      file_mime_type: ~
+      line_count: ~
+      md5: f998f34da835671cc52399d7e57f32f6
+      mtime: 1212468742
+      name: lib/Pod/Simple/Checker.pm
+    - bytesize: 3858
+      file_mime_type: ~
+      line_count: ~
+      md5: 160c2eb9f7c58afae4eb11a3099d4ad5
+      mtime: 1256582863
+      name: lib/Pod/Simple/Debug.pm
+    - bytesize: 3265
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ba8fad6a2002710f2437acbe27183c4
+      mtime: 1212468742
+      name: lib/Pod/Simple/DumpAsText.pm
+    - bytesize: 3873
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d604fbb94a7af05bb449dfb88fb8920
+      mtime: 1212468742
+      name: lib/Pod/Simple/DumpAsXML.pm
+    - bytesize: 26559
+      file_mime_type: ~
+      line_count: ~
+      md5: 6be61f5d2fcbc787b0d460c6f4aa2d6f
+      mtime: 1256596038
+      name: lib/Pod/Simple/HTML.pm
+    - bytesize: 39738
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b5db95e6801bfef5815520c300f24e3
+      mtime: 1256586083
+      name: lib/Pod/Simple/HTMLBatch.pm
+    - bytesize: 2758
+      file_mime_type: ~
+      line_count: ~
+      md5: aab924d84518687e65d5ebe882893cfd
+      mtime: 1212468742
+      name: lib/Pod/Simple/HTMLLegacy.pm
+    - bytesize: 3547
+      file_mime_type: ~
+      line_count: ~
+      md5: 3625670e1bab8c4a62dc56688028a109
+      mtime: 1212468742
+      name: lib/Pod/Simple/LinkSection.pm
+    - bytesize: 2854
+      file_mime_type: ~
+      line_count: ~
+      md5: e2925f21492d76f2976168a22ad4de1f
+      mtime: 1212468742
+      name: lib/Pod/Simple/Methody.pm
+    - bytesize: 2413
+      file_mime_type: ~
+      line_count: ~
+      md5: 28ed2dce7f1e3aed4da3f198e9134371
+      mtime: 1212468742
+      name: lib/Pod/Simple/Progress.pm
+    - bytesize: 24199
+      file_mime_type: ~
+      line_count: ~
+      md5: d95780d0fb43b10c3e7f71e92c653952
+      mtime: 1251826283
+      name: lib/Pod/Simple/PullParser.pm
+    - bytesize: 2124
+      file_mime_type: ~
+      line_count: ~
+      md5: 2cf1e6ea7bf84323dbfe58575ce1630c
+      mtime: 1212468742
+      name: lib/Pod/Simple/PullParserEndToken.pm
+    - bytesize: 3291
+      file_mime_type: ~
+      line_count: ~
+      md5: 221eccaabbee55e88c7da722baad92e4
+      mtime: 1212468742
+      name: lib/Pod/Simple/PullParserStartToken.pm
+    - bytesize: 2411
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b691a587881ece086df1314340d2dd2
+      mtime: 1212468742
+      name: lib/Pod/Simple/PullParserTextToken.pm
+    - bytesize: 3285
+      file_mime_type: ~
+      line_count: ~
+      md5: dfbe0d89edd815fabbdb7807e912661a
+      mtime: 1212468742
+      name: lib/Pod/Simple/PullParserToken.pm
+    - bytesize: 20942
+      file_mime_type: ~
+      line_count: ~
+      md5: 610327ed48697508bebff6f50af0d97b
+      mtime: 1212468742
+      name: lib/Pod/Simple/RTF.pm
+    - bytesize: 32346
+      file_mime_type: ~
+      line_count: ~
+      md5: 912abf5207d5546cea07072f7386dcf9
+      mtime: 1212468742
+      name: lib/Pod/Simple/Search.pm
+    - bytesize: 3879
+      file_mime_type: ~
+      line_count: ~
+      md5: 5bc1951e1e2dbfc9aaeeecf191c65a34
+      mtime: 1212468742
+      name: lib/Pod/Simple/SimpleTree.pm
+    - bytesize: 27810
+      file_mime_type: ~
+      line_count: ~
+      md5: 83971817946d789c567b6135c1308707
+      mtime: 1212468742
+      name: lib/Pod/Simple/Subclassing.pod
+    - bytesize: 4102
+      file_mime_type: ~
+      line_count: ~
+      md5: 371534f47d8f7efd0474658a725aa13b
+      mtime: 1212468742
+      name: lib/Pod/Simple/Text.pm
+    - bytesize: 1832
+      file_mime_type: ~
+      line_count: ~
+      md5: bdd2c625f4b2ff3a33602938fe75c78d
+      mtime: 1212468742
+      name: lib/Pod/Simple/TextContent.pm
+    - bytesize: 2694
+      file_mime_type: ~
+      line_count: ~
+      md5: 612951d16a26f6b7b8f53c20a58db517
+      mtime: 1212468742
+      name: lib/Pod/Simple/TiedOutFH.pm
+    - bytesize: 656
+      file_mime_type: ~
+      line_count: ~
+      md5: 388dac6ce14b18e095e40e1af282b974
+      mtime: 1212468742
+      name: lib/Pod/Simple/Transcode.pm
+    - bytesize: 1189
+      file_mime_type: ~
+      line_count: ~
+      md5: 77a6d8616d6a19fc94150fb972b5d9a8
+      mtime: 1212468742
+      name: lib/Pod/Simple/TranscodeDumb.pm
+    - bytesize: 631
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fa64cfa6bed718bba74e905b0b0216e
+      mtime: 1212468742
+      name: lib/Pod/Simple/TranscodeSmart.pm
+    - bytesize: 15848
+      file_mime_type: ~
+      line_count: ~
+      md5: 28ec5ec5766a87840b5b3509b5608ae5
+      mtime: 1258047041
+      name: lib/Pod/Simple/XHTML.pm
+    - bytesize: 4157
+      file_mime_type: ~
+      line_count: ~
+      md5: 186f45be176005eb1992b66846210bef
+      mtime: 1212468742
+      name: lib/Pod/Simple/XMLOutStream.pm
+    - bytesize: 21661
+      file_mime_type: ~
+      line_count: ~
+      md5: f3f61d8fd64df73961e7cf7dbfa485ce
+      mtime: 1256589569
+      name: lib/perlpod.pod
+    - bytesize: 67104
+      file_mime_type: ~
+      line_count: ~
+      md5: 31f1eefdfc2ef3b83f9752b2b58b2752
+      mtime: 1256589569
+      name: lib/perlpodspec.pod
+    - bytesize: 3180
+      file_mime_type: ~
+      line_count: ~
+      md5: 40b3e8b1f9d3f5d0a3b822854ed5e2de
+      mtime: 1212468742
+      name: t/00about.t
+    - bytesize: 308
+      file_mime_type: ~
+      line_count: ~
+      md5: 349597bb4a7186bc3ab0d37e8c90f807
+      mtime: 1212468742
+      name: t/20_skip.t
+    - bytesize: 3413
+      file_mime_type: ~
+      line_count: ~
+      md5: b61a5f0d63dc6c7bbe0cc8d336458951
+      mtime: 1212468742
+      name: t/ac_d.t
+    - bytesize: 2730
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a4bffcb36248166a4ab52d1117932c6
+      mtime: 1212468742
+      name: t/accept01.t
+    - bytesize: 4824
+      file_mime_type: ~
+      line_count: ~
+      md5: 2058f2a283051a4f651d1ec9adae813c
+      mtime: 1212468742
+      name: t/accept05.t
+    - bytesize: 2439
+      file_mime_type: ~
+      line_count: ~
+      md5: 53b8959a065de77c4e07c0a7d730005b
+      mtime: 1212468742
+      name: t/basic.t
+    - bytesize: 22753
+      file_mime_type: ~
+      line_count: ~
+      md5: 62153c230a6d908ac7ec25eb4737409d
+      mtime: 1250800487
+      name: t/begin.t
+    - bytesize: 1839
+      file_mime_type: ~
+      line_count: ~
+      md5: 66c046106c24289ad74d6f0543d8221e
+      mtime: 1212468742
+      name: t/cbacks.t
+    - bytesize: 1194
+      file_mime_type: ~
+      line_count: ~
+      md5: 6012e8d8ad65e2f6da99fe29f0941147
+      mtime: 1212468742
+      name: t/chunking.t
+    - bytesize: 648
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b69ea87b7568d87972fc0be141bd24
+      mtime: 1212468742
+      name: t/closeys.t
+    - bytesize: 4038
+      file_mime_type: ~
+      line_count: ~
+      md5: 03a98f27ea3b09bfd8ed151bd1e1d15d
+      mtime: 1212468742
+      name: t/corpus.t
+    - bytesize: 1526
+      file_mime_type: ~
+      line_count: ~
+      md5: a622c3c32f0215c530bd581c88ef4e03
+      mtime: 1256751904
+      name: t/corpus/2202jp.txt
+    - bytesize: 4781
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a640de08181b7bededbfef443c918db
+      mtime: 1235196825
+      name: t/corpus/2202jp.xml
+    - bytesize: 1526
+      file_mime_type: ~
+      line_count: ~
+      md5: 14803421a9db36edfdaf19cbe273d535
+      mtime: 1256751904
+      name: t/corpus/2202jpx.txt
+    - bytesize: 4781
+      file_mime_type: ~
+      line_count: ~
+      md5: e561ced443636874e166ddcd86b0abac
+      mtime: 1235196825
+      name: t/corpus/2202jpx.xml
+    - bytesize: 1526
+      file_mime_type: ~
+      line_count: ~
+      md5: 66f759df0c34ae93f8979cb3162dd841
+      mtime: 1256751904
+      name: t/corpus/2202jpy.txt
+    - bytesize: 4789
+      file_mime_type: ~
+      line_count: ~
+      md5: f22a5b889528688ed5fd4df75cabf732
+      mtime: 1235196825
+      name: t/corpus/2202jpy.xml
+    - bytesize: 169
+      file_mime_type: ~
+      line_count: ~
+      md5: dac9d1de9cc0e45a091fb633da99fa1c
+      mtime: 1256751904
+      name: t/corpus/2202jpz.txt
+    - bytesize: 315
+      file_mime_type: ~
+      line_count: ~
+      md5: 58d267e4f60a6f1271457e2a114da6ef
+      mtime: 1235196825
+      name: t/corpus/2202jpz.xml
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: 566503fd436104ad90f1072f6d41b4e0
+      mtime: 1212468742
+      name: t/corpus/8859_7.pod
+    - bytesize: 3007
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c97b44671b9d48c6b5bf3d1b0ce5389
+      mtime: 1235196825
+      name: t/corpus/8859_7.xml
+    - bytesize: 993
+      file_mime_type: ~
+      line_count: ~
+      md5: ee2159bfb4e6684aaa39051491e90dd5
+      mtime: 1256751904
+      name: t/corpus/cp1256.txt
+    - bytesize: 5035
+      file_mime_type: ~
+      line_count: ~
+      md5: 46eefac9ef59aa4eba51f785b1a38df9
+      mtime: 1235196825
+      name: t/corpus/cp1256.xml
+    - bytesize: 299
+      file_mime_type: ~
+      line_count: ~
+      md5: 54b59ae0f41c162c5e625bd918c156d4
+      mtime: 1256751904
+      name: t/corpus/fet_cont.txt
+    - bytesize: 1149
+      file_mime_type: ~
+      line_count: ~
+      md5: 53f6e6afce90c35811c1577d77ecfaf7
+      mtime: 1235196825
+      name: t/corpus/fet_cont.xml
+    - bytesize: 1297
+      file_mime_type: ~
+      line_count: ~
+      md5: a18261146352e3038f0fe043d12c2cef
+      mtime: 1256751904
+      name: t/corpus/fet_dup.txt
+    - bytesize: 6335
+      file_mime_type: ~
+      line_count: ~
+      md5: 8731576016dbf435c6615433e4195c46
+      mtime: 1235196825
+      name: t/corpus/fet_dup.xml
+    - bytesize: 1004
+      file_mime_type: ~
+      line_count: ~
+      md5: e1b4d3e04a290768a45d0ba77f88a862
+      mtime: 1256751904
+      name: t/corpus/iso6.txt
+    - bytesize: 5048
+      file_mime_type: ~
+      line_count: ~
+      md5: bf2957b8d9dc9d69629a98f635815241
+      mtime: 1235196825
+      name: t/corpus/iso6.xml
+    - bytesize: 1196
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6dc7211a41766a88f0d9b3fb488dc4
+      mtime: 1256751904
+      name: t/corpus/koi8r.txt
+    - bytesize: 6267
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ab00035f4d62e9b84733297066219f
+      mtime: 1235196825
+      name: t/corpus/koi8r.xml
+    - bytesize: 785
+      file_mime_type: ~
+      line_count: ~
+      md5: 00a643d16003aa0f4f71cdb90b6c1720
+      mtime: 1256751904
+      name: t/corpus/laozi38.txt
+    - bytesize: 3064
+      file_mime_type: ~
+      line_count: ~
+      md5: 3953c769b25a17f60bd833104f6f3026
+      mtime: 1235196825
+      name: t/corpus/laozi38.xml
+    - bytesize: 790
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ede8160b5d47142a5bf7178c06e0633
+      mtime: 1256751904
+      name: t/corpus/laozi38b.txt
+    - bytesize: 3064
+      file_mime_type: ~
+      line_count: ~
+      md5: 2222b6e5188559394ee78a0e4fec1466
+      mtime: 1235196825
+      name: t/corpus/laozi38b.xml
+    - bytesize: 949
+      file_mime_type: ~
+      line_count: ~
+      md5: 384480928cb6dd1279424f11f1be007f
+      mtime: 1256751904
+      name: t/corpus/laozi38p.pod
+    - bytesize: 3452
+      file_mime_type: ~
+      line_count: ~
+      md5: 4182272f115a09f16060eb868ba5d372
+      mtime: 1235196825
+      name: t/corpus/laozi38p.xml
+    - bytesize: 1316
+      file_mime_type: ~
+      line_count: ~
+      md5: b03c0c09e379e28a3ec2d46205d0009d
+      mtime: 1256751904
+      name: t/corpus/lat1fr.txt
+    - bytesize: 2033
+      file_mime_type: ~
+      line_count: ~
+      md5: d2312b2b86d645c2f01ab749e223201f
+      mtime: 1235196825
+      name: t/corpus/lat1fr.xml
+    - bytesize: 1294
+      file_mime_type: ~
+      line_count: ~
+      md5: 89e88628efa5d8f41770660e4bc8fec8
+      mtime: 1256751904
+      name: t/corpus/lat1frim.txt
+    - bytesize: 2032
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fcc093150ce8940836a8bbea28c2284
+      mtime: 1235196825
+      name: t/corpus/lat1frim.xml
+    - bytesize: 92
+      file_mime_type: ~
+      line_count: ~
+      md5: 66984b00c00e2137801da86246699d99
+      mtime: 1256751904
+      name: t/corpus/nonesuch.txt
+    - bytesize: 2010
+      file_mime_type: ~
+      line_count: ~
+      md5: c170a288d633286740b74d94f2fc8e99
+      mtime: 1235196825
+      name: t/corpus/nonesuch.xml
+    - bytesize: 1716
+      file_mime_type: ~
+      line_count: ~
+      md5: 93e7def3acafc80f5ee830dc6a150065
+      mtime: 1256751904
+      name: t/corpus/pasternak_cp1251.txt
+    - bytesize: 9368
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bb92fb8aa78c67c61cdb4fdaaeb2d78
+      mtime: 1235196825
+      name: t/corpus/pasternak_cp1251.xml
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: cbdee1bd422e023ea377980a9692e77c
+      mtime: 1256751904
+      name: t/corpus/plain.txt
+    - bytesize: 697
+      file_mime_type: ~
+      line_count: ~
+      md5: fc023ef6340048ed29e0dffdcb203ede
+      mtime: 1235196825
+      name: t/corpus/plain.xml
+    - bytesize: 420
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a37cd0cfba9c2b94963bc3e9fe9b3b
+      mtime: 1256751904
+      name: t/corpus/plain_explicit.txt
+    - bytesize: 698
+      file_mime_type: ~
+      line_count: ~
+      md5: ac900b85ac44752e546237bb597d32e6
+      mtime: 1235196825
+      name: t/corpus/plain_explicit.xml
+    - bytesize: 487
+      file_mime_type: ~
+      line_count: ~
+      md5: bb410846718166d7cae49233e0bb6238
+      mtime: 1256751904
+      name: t/corpus/plain_latin1.txt
+    - bytesize: 716
+      file_mime_type: ~
+      line_count: ~
+      md5: 86720bf732758d0273344ada9cbe714e
+      mtime: 1235196825
+      name: t/corpus/plain_latin1.xml
+    - bytesize: 475
+      file_mime_type: ~
+      line_count: ~
+      md5: c2b66b3a34d3b8444d5e3eaa3533ef0b
+      mtime: 1256751904
+      name: t/corpus/plain_utf8.txt
+    - bytesize: 713
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b90fc879e6f03b60d78fd941e054d35
+      mtime: 1235196825
+      name: t/corpus/plain_utf8.xml
+    - bytesize: 1551
+      file_mime_type: ~
+      line_count: ~
+      md5: d4337e6dc0bfc2ddb6ef09da240e4e5f
+      mtime: 1256751904
+      name: t/corpus/polish_utf8.txt
+    - bytesize: 2511
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a5eef289dde12851c0b73cb7d941af1
+      mtime: 1235196825
+      name: t/corpus/polish_utf8.xml
+    - bytesize: 515
+      file_mime_type: ~
+      line_count: ~
+      md5: e0f3f454a876e73bc87e941b320ef6f7
+      mtime: 1256751904
+      name: t/corpus/s2763_sjis.txt
+    - bytesize: 1825
+      file_mime_type: ~
+      line_count: ~
+      md5: e0c3783425a98f266df0286e658ae2f1
+      mtime: 1235196825
+      name: t/corpus/s2763_sjis.xml
+    - bytesize: 1410
+      file_mime_type: ~
+      line_count: ~
+      md5: d195676d31525739865db972aa89f88f
+      mtime: 1256751904
+      name: t/corpus/thai_iso11.txt
+    - bytesize: 7560
+      file_mime_type: ~
+      line_count: ~
+      md5: fb8673f8635c24da879ee11f3c019a74
+      mtime: 1235196825
+      name: t/corpus/thai_iso11.xml
+    - bytesize: 164
+      file_mime_type: ~
+      line_count: ~
+      md5: ec61bfd45e1b927959bd4371d4e638e5
+      mtime: 1212468741
+      name: t/corpus2/README
+    - bytesize: 1785
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d252c0c3c92abb3749bac99091b3916
+      mtime: 1212468741
+      name: t/corpus2/fiqhakbar_iso6.txt
+    - bytesize: 9545
+      file_mime_type: ~
+      line_count: ~
+      md5: 071ca31e05015138802b43e1e348aab6
+      mtime: 1212468741
+      name: t/corpus2/fiqhakbar_iso6.xml
+    - bytesize: 1535
+      file_mime_type: ~
+      line_count: ~
+      md5: e051d5c56d37544e49636da32f0ed69e
+      mtime: 1212468741
+      name: t/corpus2/polish_implicit_utf8.txt
+    - bytesize: 3058
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b438a9d4fc78f81ef035cd9a93f9853
+      mtime: 1212468741
+      name: t/corpus2/polish_utf16be_bom.txt
+    - bytesize: 3058
+      file_mime_type: ~
+      line_count: ~
+      md5: 901059ad53b63d9a87f16b8b51bfb6c1
+      mtime: 1212468741
+      name: t/corpus2/polish_utf16le_bom.txt
+    - bytesize: 1538
+      file_mime_type: ~
+      line_count: ~
+      md5: 73554bfa41938900e706079682ccb374
+      mtime: 1256751904
+      name: t/corpus2/polish_utf8_bom.txt
+    - bytesize: 2946
+      file_mime_type: ~
+      line_count: ~
+      md5: f4354001c719de3343718cb4ccc1cb1c
+      mtime: 1212468741
+      name: t/corpus2/polish_utf8_bom.xml
+    - bytesize: 1538
+      file_mime_type: ~
+      line_count: ~
+      md5: cc52af4a9df3e98e4dd0cbfa3c467f19
+      mtime: 1256751904
+      name: t/corpus2/polish_utf8_bom2.txt
+    - bytesize: 2946
+      file_mime_type: ~
+      line_count: ~
+      md5: f265bec4f2b0352a3f91fd50a958bb2d
+      mtime: 1212468741
+      name: t/corpus2/polish_utf8_bom2.xml
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: f03bd6214c0704b913a795eea66b4311
+      mtime: 1212468742
+      name: t/encod01.t
+    - bytesize: 1285
+      file_mime_type: ~
+      line_count: ~
+      md5: b3bed61805e9d7a385e57a70176f62d5
+      mtime: 1212468742
+      name: t/encod02.t
+    - bytesize: 1249
+      file_mime_type: ~
+      line_count: ~
+      md5: 317a6aa55bcd779e805f385c9fe32be6
+      mtime: 1212468742
+      name: t/encod03.t
+    - bytesize: 1270
+      file_mime_type: ~
+      line_count: ~
+      md5: becd9f7633c299f9dea043b26970e505
+      mtime: 1212468742
+      name: t/end_over.t
+    - bytesize: 4135
+      file_mime_type: ~
+      line_count: ~
+      md5: 68fd84a042632589c711e21860bf6fc6
+      mtime: 1256599656
+      name: t/fcodes.t
+    - bytesize: 2686
+      file_mime_type: ~
+      line_count: ~
+      md5: 325e4fa9cf80d57662277ad34c8c892e
+      mtime: 1212468742
+      name: t/fcodes_e.t
+    - bytesize: 22303
+      file_mime_type: ~
+      line_count: ~
+      md5: cbf3da4ec78018809950a6cff9505570
+      mtime: 1256601232
+      name: t/fcodes_l.t
+    - bytesize: 3427
+      file_mime_type: ~
+      line_count: ~
+      md5: 11ecc45225336b092894b1184b256097
+      mtime: 1256599890
+      name: t/fcodes_s.t
+    - bytesize: 5159
+      file_mime_type: ~
+      line_count: ~
+      md5: de4b88af126936563d8550c38acd7524
+      mtime: 1212468742
+      name: t/for.t
+    - bytesize: 5404
+      file_mime_type: ~
+      line_count: ~
+      md5: be7adb3482836425b64a12e26ac4838d
+      mtime: 1212468742
+      name: t/fornot.t
+    - bytesize: 1969
+      file_mime_type: ~
+      line_count: ~
+      md5: 6aa74d609db3061991e0b77181ce756b
+      mtime: 1212468742
+      name: t/fullstop.t
+    - bytesize: 2642
+      file_mime_type: ~
+      line_count: ~
+      md5: 602858dee860bbffb4c7fcadc5b7d82e
+      mtime: 1212468742
+      name: t/heads.t
+    - bytesize: 1454
+      file_mime_type: ~
+      line_count: ~
+      md5: 2179dfeb2dade87f37e9dc20f7b49eb2
+      mtime: 1256596016
+      name: t/html01.t
+    - bytesize: 806
+      file_mime_type: ~
+      line_count: ~
+      md5: a3ed7724400a369914e3b10acaee7847
+      mtime: 1212468742
+      name: t/html02.t
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: ea77abaee3f2a0602cd14d5b9eb8db23
+      mtime: 1212468742
+      name: t/html03.t
+    - bytesize: 2374
+      file_mime_type: ~
+      line_count: ~
+      md5: e57a48e5cdfb91999770dc23a8b5320e
+      mtime: 1256586284
+      name: t/htmlbat.t
+    - bytesize: 8464
+      file_mime_type: ~
+      line_count: ~
+      md5: 4775b94e080a9b8df3c9653e114913a7
+      mtime: 1250800487
+      name: t/items.t
+    - bytesize: 1307
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a0afae6bc4aa019ac13a6ddd962c146
+      mtime: 1212468742
+      name: t/items02.t
+    - bytesize: 1705
+      file_mime_type: ~
+      line_count: ~
+      md5: ae47f36a17485508fcb02adf0e86de4d
+      mtime: 1212468742
+      name: t/itemstar.t
+    - bytesize: 52
+      file_mime_type: ~
+      line_count: ~
+      md5: 39ac74cec0839ad4d592ab21d7cf9233
+      mtime: 1212468742
+      name: t/junk1.pod
+    - bytesize: 318
+      file_mime_type: ~
+      line_count: ~
+      md5: 9db91c7df6a4fa15c842051dea90178e
+      mtime: 1212468742
+      name: t/junk1o.txt
+    - bytesize: 46
+      file_mime_type: ~
+      line_count: ~
+      md5: 03bfe75403a2b45cd8ba0b3feefbb0d8
+      mtime: 1212468742
+      name: t/junk2.pod
+    - bytesize: 251
+      file_mime_type: ~
+      line_count: ~
+      md5: 46a2dd6edcfa5894fe47d93b8e656e46
+      mtime: 1212468742
+      name: t/junk2o.txt
+    - bytesize: 1490
+      file_mime_type: ~
+      line_count: ~
+      md5: 54c07e3e5c149bdc1b00055360dd1843
+      mtime: 1212468742
+      name: t/linkclas.t
+    - bytesize: 20405
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c6f982e7a16701a61ad941b8a2828ae
+      mtime: 1212468742
+      name: t/perlcyg.pod
+    - bytesize: 19079
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b6a5f2db3aea1f1fae3aa0a12bcab13
+      mtime: 1212468742
+      name: t/perlcygo.txt
+    - bytesize: 31321
+      file_mime_type: ~
+      line_count: ~
+      md5: e742952f800e3292f92bf48a5a30f2bf
+      mtime: 1212468742
+      name: t/perlfaq.pod
+    - bytesize: 30617
+      file_mime_type: ~
+      line_count: ~
+      md5: a96925cd44d1365ddca06d33a3f430e3
+      mtime: 1212468742
+      name: t/perlfaqo.txt
+    - bytesize: 41546
+      file_mime_type: ~
+      line_count: ~
+      md5: d9bf1986f9caea8db5e487e9c4ad742e
+      mtime: 1212468742
+      name: t/perlvar.pod
+    - bytesize: 39058
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b0d718b26423374459a2eced6cdbf31
+      mtime: 1212468742
+      name: t/perlvaro.txt
+    - bytesize: 8115
+      file_mime_type: ~
+      line_count: ~
+      md5: dbce263a4c37b44e1f2826ffbd5ebae2
+      mtime: 1212468742
+      name: t/puller.t
+    - bytesize: 10759
+      file_mime_type: ~
+      line_count: ~
+      md5: e7e0567be010308229c894a945a26186
+      mtime: 1251825703
+      name: t/pulltitl.t
+    - bytesize: 1918
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bcfb81ae6f5c5d1b803512834350edc
+      mtime: 1212468742
+      name: t/reinit.t
+    - bytesize: 3582
+      file_mime_type: ~
+      line_count: ~
+      md5: fc97ec3a66169124e94f5b545128adc1
+      mtime: 1212468742
+      name: t/render.t
+    - bytesize: 934
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e65ed864c40e0c579c9a47b29054a8e
+      mtime: 1212468742
+      name: t/search05.t
+    - bytesize: 1824
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b59f37767b3ebeed8cbdeec61431d97
+      mtime: 1212468742
+      name: t/search10.t
+    - bytesize: 1692
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fcef7695586591ed5cc68b77061ec82
+      mtime: 1212468742
+      name: t/search12.t
+    - bytesize: 2222
+      file_mime_type: ~
+      line_count: ~
+      md5: 6880708002ad5ff7344ab341ca5d87cb
+      mtime: 1257571087
+      name: t/search20.t
+    - bytesize: 3284
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d7699b43204c0fd4fd711bd1fb1944a
+      mtime: 1257571087
+      name: t/search22.t
+    - bytesize: 2825
+      file_mime_type: ~
+      line_count: ~
+      md5: d2d4f98b0766516a7f83c5c818355cbc
+      mtime: 1257571087
+      name: t/search25.t
+    - bytesize: 2050
+      file_mime_type: ~
+      line_count: ~
+      md5: 515cec32c75e24749381d142a70d60a5
+      mtime: 1212468742
+      name: t/search26.t
+    - bytesize: 2779
+      file_mime_type: ~
+      line_count: ~
+      md5: 91e508368ca538e9fed8778cf3fed179
+      mtime: 1257571087
+      name: t/search27.t
+    - bytesize: 1832
+      file_mime_type: ~
+      line_count: ~
+      md5: 64463e22aefe93942cd6beb76a30495a
+      mtime: 1212468742
+      name: t/search28.t
+    - bytesize: 1823
+      file_mime_type: ~
+      line_count: ~
+      md5: a24d1ca16bfe3537769e8af6a3771a38
+      mtime: 1212468742
+      name: t/search29.t
+    - bytesize: 2567
+      file_mime_type: ~
+      line_count: ~
+      md5: 023dee5de2f0557617b93dba5bffa7c4
+      mtime: 1257571087
+      name: t/search50.t
+    - bytesize: 3245
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b2cd1ef8e8599a79f39796ef7d41485
+      mtime: 1212468742
+      name: t/stree.t
+    - bytesize: 4040
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ef6313a815479da499f1ea99dbfc00b
+      mtime: 1256583568
+      name: t/strpvbtm.t
+    - bytesize: 86
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d0d209e7f8f3fa7cac5d618c1c5a703
+      mtime: 1212468741
+      name: t/testlib1/Blorm.pm
+    - bytesize: 83
+      file_mime_type: ~
+      line_count: ~
+      md5: ef1727e90618512eeb69e6d2c4b167f4
+      mtime: 1212468741
+      name: t/testlib1/Zonk/Fiddle.txt
+    - bytesize: 1310
+      file_mime_type: ~
+      line_count: ~
+      md5: 47577f4ca4c984fcf001081fc237ed2e
+      mtime: 1212468741
+      name: t/testlib1/Zonk/Pronk.pm
+    - bytesize: 41
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a27b14488bc2f547cc1482d92f4624f
+      mtime: 1212468741
+      name: t/testlib1/Zonk/Veng.pm
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: 1241cd2967273663ac7ae5ab38564452
+      mtime: 1212468741
+      name: t/testlib1/hinkhonk/Glunk.pod
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: 1671486493100feb2ca4ec6c2376a821
+      mtime: 1212468741
+      name: t/testlib1/hinkhonk/Vliff.pm
+    - bytesize: 40
+      file_mime_type: ~
+      line_count: ~
+      md5: af4a21469770e0b204657758bce27acc
+      mtime: 1212468741
+      name: t/testlib1/hinkhonk/readme.txt
+    - bytesize: 61
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e7748ff5fb125c544496bd4f6c75e57
+      mtime: 1212468741
+      name: t/testlib1/pod/perlflif.pod
+    - bytesize: 61
+      file_mime_type: ~
+      line_count: ~
+      md5: 2901bee2a4f9eaf2fe89706f5c0964fb
+      mtime: 1212468741
+      name: t/testlib1/pod/perlthng.pod
+    - bytesize: 102
+      file_mime_type: ~
+      line_count: ~
+      md5: fb7659c6395e9b8a8c2737a32bca48b8
+      mtime: 1212468741
+      name: t/testlib1/squaa.pm
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: 6adea0921fef86e7a76bcee333118349
+      mtime: 1212468741
+      name: t/testlib1/squaa/Glunk.pod
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a9f0504dc2246daae73c1dce78d1a2b
+      mtime: 1212468741
+      name: t/testlib1/squaa/Vliff.pm
+    - bytesize: 87
+      file_mime_type: ~
+      line_count: ~
+      md5: 41eb776038933c25001b6bdbc6fabfc1
+      mtime: 1212468741
+      name: t/testlib1/zikzik.pod
+    - bytesize: 82
+      file_mime_type: ~
+      line_count: ~
+      md5: 027fbec12e1a6a926cd7bca4a443d10f
+      mtime: 1212468742
+      name: t/testlib2/Suzzle.pm
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a116209e1e2f239c6784da89abc87a4
+      mtime: 1212468741
+      name: t/testlib2/hinkhonk/Glunk.pod
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: d38c53b7af2b6dd5ca5698c5e6a4e9c2
+      mtime: 1212468741
+      name: t/testlib2/hinkhonk/Vliff.pm
+    - bytesize: 40
+      file_mime_type: ~
+      line_count: ~
+      md5: 114e65375847fe081673b37d394d764b
+      mtime: 1212468741
+      name: t/testlib2/hinkhonk/readme.txt
+    - bytesize: 61
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fdfcb453a28456d08413ffcb244ad9e
+      mtime: 1212468741
+      name: t/testlib2/pod/perlthng.pod
+    - bytesize: 61
+      file_mime_type: ~
+      line_count: ~
+      md5: 521ed32eb1d43e0dcafc4c656ac959cf
+      mtime: 1212468741
+      name: t/testlib2/pod/perlzuk.pod
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: d8a14471aa0dba2a6a9fe160705b1704
+      mtime: 1212468742
+      name: t/testlib2/squaa/Vliff.pm
+    - bytesize: 94
+      file_mime_type: ~
+      line_count: ~
+      md5: a6eebb0fbfacd7aa003a6ee11b05060a
+      mtime: 1212468742
+      name: t/testlib2/squaa/Wowo.pod
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: 88d6bab95c6b2229d97b36fa70a0c65d
+      mtime: 1212468742
+      name: t/testlib3/squaa/Vliff.pm
+    - bytesize: 1254
+      file_mime_type: ~
+      line_count: ~
+      md5: 47111802983fa1d2af9f1bf51a5a8dac
+      mtime: 1212468742
+      name: t/tiedfh.t
+    - bytesize: 13256
+      file_mime_type: ~
+      line_count: ~
+      md5: 12abe0eb276351d04d296bdf71651836
+      mtime: 1250800487
+      name: t/verb_fmt.t
+    - bytesize: 7835
+      file_mime_type: ~
+      line_count: ~
+      md5: 02cb1aba96b97a354cac4eb37f43aeef
+      mtime: 1250800487
+      name: t/verbatim.t
+    - bytesize: 4761
+      file_mime_type: ~
+      line_count: ~
+      md5: c6ee591b1f42ce099371c5b8aac02628
+      mtime: 1212468742
+      name: t/x_nixer.t
+    - bytesize: 10801
+      file_mime_type: ~
+      line_count: ~
+      md5: 2025ae23642c0c98a534e7b2b36305aa
+      mtime: 1257790174
+      name: t/xhtml01.t
+    - bytesize: 1200
+      file_mime_type: ~
+      line_count: ~
+      md5: 8112c4444a0255c5b87d31916f8b9a81
+      mtime: 1212468742
+      name: t/xhtml05.t
+    - bytesize: 8005
+      file_mime_type: ~
+      line_count: ~
+      md5: 83fcca0442a13ca2e8936efa94159298
+      mtime: 1256321398
+      name: t/xhtml10.t
+  module_info:
+    - bytesize: 50150
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ad8b30d7677b1daebff90296577ff62
+      module_name_from_file_guess: Pod::Simple
+      mtime: 1258047041
+      name: blib/lib/Pod/Simple.pm
+      packages:
+        - Pod::Simple
+      primary_package: Pod::Simple
+      uses:
+        - ''
+        - strict
+        - Carp
+        - integer
+        - Pod::Escapes
+        - Pod::Simple::LinkSection
+        - Pod::Simple::BlackBox
+        - vars
+        - Pod::Simple::TiedOutFH
+        - Symbol
+      version_info:
+        filename: blib/lib/Pod/Simple.pm
+        identifier: VERSION
+        line_number: 21
+        sigil: $
+        value: 3.10
+    - bytesize: 63675
+      file_mime_type: ~
+      line_count: ~
+      md5: 4039abf5e6d0036d513ba50cdf5224e6
+      module_name_from_file_guess: Pod::Simple::BlackBox
+      mtime: 1256599647
+      name: blib/lib/Pod/Simple/BlackBox.pm
+      packages:
+        - Pod::Simple::BlackBox
+      primary_package: Pod::Simple::BlackBox
+      uses:
+        - integer
+        - strict
+        - Carp
+        - Pod::Simple
+        - Pod::Simple::Transcode
+        - UNIVERSAL
+      version_info:
+        filename: blib/lib/Pod/Simple/BlackBox.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4657
+      file_mime_type: ~
+      line_count: ~
+      md5: 35df5912a9892a583f86c2fc7495ca15
+      module_name_from_file_guess: Pod::Simple::Checker
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/Checker.pm
+      packages:
+        - Pod::Simple::Checker
+      primary_package: Pod::Simple::Checker
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Pod::Simple::Methody
+        - Pod::Simple
+        - vars
+        - Text::Wrap
+      version_info:
+        filename: blib/lib/Pod/Simple/Checker.pm
+        identifier: VERSION
+        line_number: 12
+        sigil: $
+        value: 2.02
+    - bytesize: 3858
+      file_mime_type: ~
+      line_count: ~
+      md5: f695696c0623606e565efc42973040a2
+      module_name_from_file_guess: Pod::Simple::Debug
+      mtime: 1256582863
+      name: blib/lib/Pod/Simple/Debug.pm
+      packages:
+        - Pod::Simple::Debug
+      primary_package: Pod::Simple::Debug
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Pod::Simple
+      version_info:
+        filename: blib/lib/Pod/Simple/Debug.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3265
+      file_mime_type: ~
+      line_count: ~
+      md5: 0256062725c8919fe024d75b7c86de08
+      module_name_from_file_guess: Pod::Simple::DumpAsText
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/DumpAsText.pm
+      packages:
+        - Pod::Simple::DumpAsText
+      primary_package: Pod::Simple::DumpAsText
+      uses:
+        - ''
+        - Pod::Simple
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/Pod/Simple/DumpAsText.pm
+        identifier: VERSION
+        line_number: 4
+        sigil: $
+        value: 2.02
+    - bytesize: 3873
+      file_mime_type: ~
+      line_count: ~
+      md5: d5f86df77356ed4d9c6ecb846c357fb3
+      module_name_from_file_guess: Pod::Simple::DumpAsXML
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/DumpAsXML.pm
+      packages:
+        - Pod::Simple::DumpAsXML
+      primary_package: Pod::Simple::DumpAsXML
+      uses:
+        - ''
+        - Pod::Simple
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/Pod/Simple/DumpAsXML.pm
+        identifier: VERSION
+        line_number: 4
+        sigil: $
+        value: 2.02
+    - bytesize: 26559
+      file_mime_type: ~
+      line_count: ~
+      md5: 32108da9909d67d17efc93e7ac5926cd
+      module_name_from_file_guess: Pod::Simple::HTML
+      mtime: 1256596038
+      name: blib/lib/Pod/Simple/HTML.pm
+      packages:
+        - Pod::Simple::HTML
+      primary_package: Pod::Simple::HTML
+      uses:
+        - ''
+        - strict
+        - Pod::Simple::PullParser
+        - vars
+        - UNIVERSAL
+        - Carp
+      version_info:
+        filename: blib/lib/Pod/Simple/HTML.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 3.03
+    - bytesize: 39738
+      file_mime_type: ~
+      line_count: ~
+      md5: 97587384156d140c13d766084919dd01
+      module_name_from_file_guess: Pod::Simple::HTMLBatch
+      mtime: 1256586083
+      name: blib/lib/Pod/Simple/HTMLBatch.pm
+      packages:
+        - Pod::Simple::HTMLBatch
+      primary_package: Pod::Simple::HTMLBatch
+      uses:
+        - ''
+        - strict
+        - vars
+        - Pod::Simple::HTML
+        - File::Spec
+        - UNIVERSAL
+        - Pod::Simple::Search
+        - Config
+        - Pod::Simple::Progress
+        - Symbol
+        - Carp
+      version_info:
+        filename: blib/lib/Pod/Simple/HTMLBatch.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 3.02
+    - bytesize: 2758
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a6521a6f03b429445a77610a5140cda
+      module_name_from_file_guess: Pod::Simple::HTMLLegacy
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/HTMLLegacy.pm
+      packages:
+        - Pod::Simple::HTMLLegacy
+      primary_package: Pod::Simple::HTMLLegacy
+      uses:
+        - ''
+        - strict
+        - vars
+        - Getopt::Long
+        - Pod::Simple::HTML
+      version_info:
+        filename: blib/lib/Pod/Simple/HTMLLegacy.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 5.01
+    - bytesize: 3547
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e7e03aa2990f1606a4d719388d66b1e
+      module_name_from_file_guess: Pod::Simple::LinkSection
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/LinkSection.pm
+      packages:
+        - Pod::Simple::LinkSection
+      primary_package: Pod::Simple::LinkSection
+      uses:
+        - ''
+        - strict
+        - Pod::Simple::BlackBox
+        - overload
+      version_info:
+        filename: blib/lib/Pod/Simple/LinkSection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2854
+      file_mime_type: ~
+      line_count: ~
+      md5: e16a65e4eb502db56fbde6c8257f9515
+      module_name_from_file_guess: Pod::Simple::Methody
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/Methody.pm
+      packages:
+        - Pod::Simple::Methody
+      primary_package: Pod::Simple::Methody
+      uses:
+        - ''
+        - strict
+        - Pod::Simple
+        - vars
+      version_info:
+        filename: blib/lib/Pod/Simple/Methody.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 2.02
+    - bytesize: 2413
+      file_mime_type: ~
+      line_count: ~
+      md5: b07b709b8aa9b5fd6edbbde1ead9b554
+      module_name_from_file_guess: Pod::Simple::Progress
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/Progress.pm
+      packages:
+        - Pod::Simple::Progress
+      primary_package: Pod::Simple::Progress
+      uses:
+        - ''
+        - strict
+      version_info:
+        filename: blib/lib/Pod/Simple/Progress.pm
+        identifier: VERSION
+        line_number: 4
+        sigil: $
+        value: 1.01
+    - bytesize: 24199
+      file_mime_type: ~
+      line_count: ~
+      md5: 5313e2f5b1b907a095228c67731cb6f5
+      module_name_from_file_guess: Pod::Simple::PullParser
+      mtime: 1251826283
+      name: blib/lib/Pod/Simple/PullParser.pm
+      packages:
+        - Pod::Simple::PullParser
+      primary_package: Pod::Simple::PullParser
+      uses:
+        - ''
+        - Pod::Simple
+        - strict
+        - Carp
+        - Pod::Simple::PullParserStartToken
+        - Pod::Simple::PullParserEndToken
+        - Pod::Simple::PullParserTextToken
+        - UNIVERSAL
+      version_info:
+        filename: blib/lib/Pod/Simple/PullParser.pm
+        identifier: VERSION
+        line_number: 4
+        sigil: $
+        value: 2.02
+    - bytesize: 2124
+      file_mime_type: ~
+      line_count: ~
+      md5: b2fad030e860ce2240e76e9632d03cd3
+      module_name_from_file_guess: Pod::Simple::PullParserEndToken
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/PullParserEndToken.pm
+      packages:
+        - Pod::Simple::PullParserEndToken
+      primary_package: Pod::Simple::PullParserEndToken
+      uses:
+        - ''
+        - Pod::Simple::PullParserToken
+        - strict
+      version_info:
+        filename: blib/lib/Pod/Simple/PullParserEndToken.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3291
+      file_mime_type: ~
+      line_count: ~
+      md5: 3daa89f06690ac1d1be96b195ae1a237
+      module_name_from_file_guess: Pod::Simple::PullParserStartToken
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/PullParserStartToken.pm
+      packages:
+        - Pod::Simple::PullParserStartToken
+      primary_package: Pod::Simple::PullParserStartToken
+      uses:
+        - ''
+        - Pod::Simple::PullParserToken
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/Pod/Simple/PullParserStartToken.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2411
+      file_mime_type: ~
+      line_count: ~
+      md5: a04faccb00a3d61419ba5754ed4b6b16
+      module_name_from_file_guess: Pod::Simple::PullParserTextToken
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/PullParserTextToken.pm
+      packages:
+        - Pod::Simple::PullParserTextToken
+      primary_package: Pod::Simple::PullParserTextToken
+      uses:
+        - ''
+        - Pod::Simple::PullParserToken
+        - strict
+      version_info:
+        filename: blib/lib/Pod/Simple/PullParserTextToken.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3285
+      file_mime_type: ~
+      line_count: ~
+      md5: e44753daeef544beaf70194f8078bf96
+      module_name_from_file_guess: Pod::Simple::PullParserToken
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/PullParserToken.pm
+      packages:
+        - Pod::Simple::PullParserToken
+      primary_package: Pod::Simple::PullParserToken
+      uses:
+        - ''
+        - strict
+      version_info:
+        filename: blib/lib/Pod/Simple/PullParserToken.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 2.02
+    - bytesize: 20942
+      file_mime_type: ~
+      line_count: ~
+      md5: 41457d5f017550170ea8cd2546003684
+      module_name_from_file_guess: Pod::Simple::RTF
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/RTF.pm
+      packages:
+        - Pod::Simple::RTF
+      primary_package: Pod::Simple::RTF
+      uses:
+        - ''
+        - strict
+        - vars
+        - Pod::Simple::PullParser
+        - Carp
+        - integer
+      version_info:
+        filename: blib/lib/Pod/Simple/RTF.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 2.02
+    - bytesize: 32346
+      file_mime_type: ~
+      line_count: ~
+      md5: a30c39b60fb159a563c20340702acbdb
+      module_name_from_file_guess: Pod::Simple::Search
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/Search.pm
+      packages:
+        - Pod::Simple::Search
+      primary_package: Pod::Simple::Search
+      uses:
+        - ''
+        - strict
+        - vars
+        - Carp
+        - File::Spec
+        - File::Basename
+        - Config
+        - Cwd
+      version_info:
+        filename: blib/lib/Pod/Simple/Search.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 3.04
+    - bytesize: 3879
+      file_mime_type: ~
+      line_count: ~
+      md5: fb9199675cfd97bfbb12f2db75cc1526
+      module_name_from_file_guess: Pod::Simple::SimpleTree
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/SimpleTree.pm
+      packages:
+        - Pod::Simple::SimpleTree
+      primary_package: Pod::Simple::SimpleTree
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Pod::Simple
+        - vars
+      version_info:
+        filename: blib/lib/Pod/Simple/SimpleTree.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 2.02
+    - bytesize: 4102
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bbe7c817989dac032424769e3df886c
+      module_name_from_file_guess: Pod::Simple::Text
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/Text.pm
+      packages:
+        - Pod::Simple::Text
+      primary_package: Pod::Simple::Text
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Pod::Simple::Methody
+        - Pod::Simple
+        - vars
+        - Text::Wrap
+      version_info:
+        filename: blib/lib/Pod/Simple/Text.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 2.02
+    - bytesize: 1832
+      file_mime_type: ~
+      line_count: ~
+      md5: 6bdda3bad6e9e1ef4d9399b636689953
+      module_name_from_file_guess: Pod::Simple::TextContent
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/TextContent.pm
+      packages:
+        - Pod::Simple::TextContent
+      primary_package: Pod::Simple::TextContent
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Pod::Simple
+        - vars
+      version_info:
+        filename: blib/lib/Pod/Simple/TextContent.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 2.02
+    - bytesize: 2694
+      file_mime_type: ~
+      line_count: ~
+      md5: 138d15450a267347fd9411787a7fbb35
+      module_name_from_file_guess: Pod::Simple::TiedOutFH
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/TiedOutFH.pm
+      packages:
+        - Pod::Simple::TiedOutFH
+      primary_package: Pod::Simple::TiedOutFH
+      uses:
+        - strict
+        - Symbol
+        - Carp
+      version_info:
+        filename: blib/lib/Pod/Simple/TiedOutFH.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 656
+      file_mime_type: ~
+      line_count: ~
+      md5: 6725d143b28ad180ff58696adfbf78be
+      module_name_from_file_guess: Pod::Simple::Transcode
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/Transcode.pm
+      packages:
+        - Pod::Simple::Transcode
+      primary_package: Pod::Simple::Transcode
+      uses:
+        - ''
+      version_info:
+        filename: blib/lib/Pod/Simple/Transcode.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1189
+      file_mime_type: ~
+      line_count: ~
+      md5: 2db855a586b88edb84e6a38b1350d815
+      module_name_from_file_guess: Pod::Simple::TranscodeDumb
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/TranscodeDumb.pm
+      packages:
+        - Pod::Simple::TranscodeDumb
+      primary_package: Pod::Simple::TranscodeDumb
+      uses:
+        - ''
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/Pod/Simple/TranscodeDumb.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 2.02
+    - bytesize: 631
+      file_mime_type: ~
+      line_count: ~
+      md5: d5187f2d824710fd75ce7bbe8f709bd8
+      module_name_from_file_guess: Pod::Simple::TranscodeSmart
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/TranscodeSmart.pm
+      packages:
+        - Pod::Simple::TranscodeSmart
+      primary_package: Pod::Simple::TranscodeSmart
+      uses:
+        - ''
+        - strict
+        - Pod::Simple
+        - Encode
+      version_info:
+        filename: blib/lib/Pod/Simple/TranscodeSmart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 15848
+      file_mime_type: ~
+      line_count: ~
+      md5: daadba63b62a9b88d2b08c6405a0e676
+      module_name_from_file_guess: Pod::Simple::XHTML
+      mtime: 1258047041
+      name: blib/lib/Pod/Simple/XHTML.pm
+      packages:
+        - Pod::Simple::XHTML
+      primary_package: Pod::Simple::XHTML
+      uses:
+        - strict
+        - vars
+        - Carp
+        - Pod::Simple::Methody
+      version_info:
+        filename: blib/lib/Pod/Simple/XHTML.pm
+        identifier: VERSION
+        line_number: 31
+        sigil: $
+        value: 3.10
+    - bytesize: 4157
+      file_mime_type: ~
+      line_count: ~
+      md5: cdaad3630a068f45f0d279e39a59bf51
+      module_name_from_file_guess: Pod::Simple::XMLOutStream
+      mtime: 1212468742
+      name: blib/lib/Pod/Simple/XMLOutStream.pm
+      packages:
+        - Pod::Simple::XMLOutStream
+      primary_package: Pod::Simple::XMLOutStream
+      uses:
+        - ''
+        - strict
+        - Carp
+        - Pod::Simple
+        - vars
+      version_info:
+        filename: blib/lib/Pod/Simple/XMLOutStream.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 2.02
+  modules:
+    - blib/lib/Pod/Simple.pm
+    - blib/lib/Pod/Simple/BlackBox.pm
+    - blib/lib/Pod/Simple/Checker.pm
+    - blib/lib/Pod/Simple/Debug.pm
+    - blib/lib/Pod/Simple/DumpAsText.pm
+    - blib/lib/Pod/Simple/DumpAsXML.pm
+    - blib/lib/Pod/Simple/HTML.pm
+    - blib/lib/Pod/Simple/HTMLBatch.pm
+    - blib/lib/Pod/Simple/HTMLLegacy.pm
+    - blib/lib/Pod/Simple/LinkSection.pm
+    - blib/lib/Pod/Simple/Methody.pm
+    - blib/lib/Pod/Simple/Progress.pm
+    - blib/lib/Pod/Simple/PullParser.pm
+    - blib/lib/Pod/Simple/PullParserEndToken.pm
+    - blib/lib/Pod/Simple/PullParserStartToken.pm
+    - blib/lib/Pod/Simple/PullParserTextToken.pm
+    - blib/lib/Pod/Simple/PullParserToken.pm
+    - blib/lib/Pod/Simple/RTF.pm
+    - blib/lib/Pod/Simple/Search.pm
+    - blib/lib/Pod/Simple/SimpleTree.pm
+    - blib/lib/Pod/Simple/Text.pm
+    - blib/lib/Pod/Simple/TextContent.pm
+    - blib/lib/Pod/Simple/TiedOutFH.pm
+    - blib/lib/Pod/Simple/Transcode.pm
+    - blib/lib/Pod/Simple/TranscodeDumb.pm
+    - blib/lib/Pod/Simple/TranscodeSmart.pm
+    - blib/lib/Pod/Simple/XHTML.pm
+    - blib/lib/Pod/Simple/XMLOutStream.pm
+  test_info:
+    - bytesize: 3180
+      file_mime_type: ~
+      line_count: ~
+      md5: 40b3e8b1f9d3f5d0a3b822854ed5e2de
+      mtime: 1212468742
+      name: t/00about.t
+      uses:
+        - ''
+        - strict
+        - Test
+    - bytesize: 308
+      file_mime_type: ~
+      line_count: ~
+      md5: 349597bb4a7186bc3ab0d37e8c90f807
+      mtime: 1212468742
+      name: t/20_skip.t
+      uses: []
+    - bytesize: 3413
+      file_mime_type: ~
+      line_count: ~
+      md5: b61a5f0d63dc6c7bbe0cc8d336458951
+      mtime: 1212468742
+      name: t/ac_d.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 2730
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a4bffcb36248166a4ab52d1117932c6
+      mtime: 1212468742
+      name: t/accept01.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 4824
+      file_mime_type: ~
+      line_count: ~
+      md5: 2058f2a283051a4f651d1ec9adae813c
+      mtime: 1212468742
+      name: t/accept05.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 2439
+      file_mime_type: ~
+      line_count: ~
+      md5: 53b8959a065de77c4e07c0a7d730005b
+      mtime: 1212468742
+      name: t/basic.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::BlackBox
+        - Pod::Simple
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 22753
+      file_mime_type: ~
+      line_count: ~
+      md5: 62153c230a6d908ac7ec25eb4737409d
+      mtime: 1250800487
+      name: t/begin.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1839
+      file_mime_type: ~
+      line_count: ~
+      md5: 66c046106c24289ad74d6f0543d8221e
+      mtime: 1212468742
+      name: t/cbacks.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::XMLOutStream
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::DumpAsText
+    - bytesize: 1194
+      file_mime_type: ~
+      line_count: ~
+      md5: 6012e8d8ad65e2f6da99fe29f0941147
+      mtime: 1212468742
+      name: t/chunking.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 648
+      file_mime_type: ~
+      line_count: ~
+      md5: c9b69ea87b7568d87972fc0be141bd24
+      mtime: 1212468742
+      name: t/closeys.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 4038
+      file_mime_type: ~
+      line_count: ~
+      md5: 03a98f27ea3b09bfd8ed151bd1e1d15d
+      mtime: 1212468742
+      name: t/corpus.t
+      uses:
+        - Config
+        - Test
+        - File::Spec
+        - strict
+        - Pod::Simple::DumpAsXML
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: f03bd6214c0704b913a795eea66b4311
+      mtime: 1212468742
+      name: t/encod01.t
+      uses:
+        - Test
+        - File::Spec
+        - strict
+        - Pod::Simple
+        - Pod::Simple::DumpAsXML
+    - bytesize: 1285
+      file_mime_type: ~
+      line_count: ~
+      md5: b3bed61805e9d7a385e57a70176f62d5
+      mtime: 1212468742
+      name: t/encod02.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1249
+      file_mime_type: ~
+      line_count: ~
+      md5: 317a6aa55bcd779e805f385c9fe32be6
+      mtime: 1212468742
+      name: t/encod03.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1270
+      file_mime_type: ~
+      line_count: ~
+      md5: becd9f7633c299f9dea043b26970e505
+      mtime: 1212468742
+      name: t/end_over.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 4135
+      file_mime_type: ~
+      line_count: ~
+      md5: 68fd84a042632589c711e21860bf6fc6
+      mtime: 1256599656
+      name: t/fcodes.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 2686
+      file_mime_type: ~
+      line_count: ~
+      md5: 325e4fa9cf80d57662277ad34c8c892e
+      mtime: 1212468742
+      name: t/fcodes_e.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 22303
+      file_mime_type: ~
+      line_count: ~
+      md5: cbf3da4ec78018809950a6cff9505570
+      mtime: 1256601232
+      name: t/fcodes_l.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 3427
+      file_mime_type: ~
+      line_count: ~
+      md5: 11ecc45225336b092894b1184b256097
+      mtime: 1256599890
+      name: t/fcodes_s.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::XMLOutStream
+        - Pod::Simple::Text
+    - bytesize: 5159
+      file_mime_type: ~
+      line_count: ~
+      md5: de4b88af126936563d8550c38acd7524
+      mtime: 1212468742
+      name: t/for.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 5404
+      file_mime_type: ~
+      line_count: ~
+      md5: be7adb3482836425b64a12e26ac4838d
+      mtime: 1212468742
+      name: t/fornot.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1969
+      file_mime_type: ~
+      line_count: ~
+      md5: 6aa74d609db3061991e0b77181ce756b
+      mtime: 1212468742
+      name: t/fullstop.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 2642
+      file_mime_type: ~
+      line_count: ~
+      md5: 602858dee860bbffb4c7fcadc5b7d82e
+      mtime: 1212468742
+      name: t/heads.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 8464
+      file_mime_type: ~
+      line_count: ~
+      md5: 4775b94e080a9b8df3c9653e114913a7
+      mtime: 1250800487
+      name: t/items.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1454
+      file_mime_type: ~
+      line_count: ~
+      md5: 2179dfeb2dade87f37e9dc20f7b49eb2
+      mtime: 1256596016
+      name: t/html01.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::HTML
+    - bytesize: 806
+      file_mime_type: ~
+      line_count: ~
+      md5: a3ed7724400a369914e3b10acaee7847
+      mtime: 1212468742
+      name: t/html02.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::HTML
+    - bytesize: 714
+      file_mime_type: ~
+      line_count: ~
+      md5: ea77abaee3f2a0602cd14d5b9eb8db23
+      mtime: 1212468742
+      name: t/html03.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::HTML
+    - bytesize: 2374
+      file_mime_type: ~
+      line_count: ~
+      md5: e57a48e5cdfb91999770dc23a8b5320e
+      mtime: 1256586284
+      name: t/htmlbat.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::HTMLBatch
+        - File::Spec
+        - Cwd
+        - File::Path
+        - File::Find
+    - bytesize: 1307
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a0afae6bc4aa019ac13a6ddd962c146
+      mtime: 1212468742
+      name: t/items02.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1705
+      file_mime_type: ~
+      line_count: ~
+      md5: ae47f36a17485508fcb02adf0e86de4d
+      mtime: 1212468742
+      name: t/itemstar.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 1490
+      file_mime_type: ~
+      line_count: ~
+      md5: 54c07e3e5c149bdc1b00055360dd1843
+      mtime: 1212468742
+      name: t/linkclas.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::LinkSection
+        - Pod::Simple::BlackBox
+    - bytesize: 8115
+      file_mime_type: ~
+      line_count: ~
+      md5: dbce263a4c37b44e1f2826ffbd5ebae2
+      mtime: 1212468742
+      name: t/puller.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::PullParser
+    - bytesize: 10759
+      file_mime_type: ~
+      line_count: ~
+      md5: e7e0567be010308229c894a945a26186
+      mtime: 1251825703
+      name: t/pulltitl.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::PullParser
+    - bytesize: 1918
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bcfb81ae6f5c5d1b803512834350edc
+      mtime: 1212468742
+      name: t/reinit.t
+      uses:
+        - lib
+        - strict
+        - Test
+        - File::Spec
+        - Pod::Simple::Text
+    - bytesize: 3582
+      file_mime_type: ~
+      line_count: ~
+      md5: fc97ec3a66169124e94f5b545128adc1
+      mtime: 1212468742
+      name: t/render.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::TextContent
+        - Pod::Simple::Text
+        - Pod::Simple::TiedOutFH
+        - File::Spec
+    - bytesize: 934
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e65ed864c40e0c579c9a47b29054a8e
+      mtime: 1212468742
+      name: t/search05.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+    - bytesize: 1824
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b59f37767b3ebeed8cbdeec61431d97
+      mtime: 1212468742
+      name: t/search10.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 1692
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fcef7695586591ed5cc68b77061ec82
+      mtime: 1212468742
+      name: t/search12.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 2222
+      file_mime_type: ~
+      line_count: ~
+      md5: 6880708002ad5ff7344ab341ca5d87cb
+      mtime: 1257571087
+      name: t/search20.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 3284
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d7699b43204c0fd4fd711bd1fb1944a
+      mtime: 1257571087
+      name: t/search22.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 2825
+      file_mime_type: ~
+      line_count: ~
+      md5: d2d4f98b0766516a7f83c5c818355cbc
+      mtime: 1257571087
+      name: t/search25.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 2050
+      file_mime_type: ~
+      line_count: ~
+      md5: 515cec32c75e24749381d142a70d60a5
+      mtime: 1212468742
+      name: t/search26.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 2779
+      file_mime_type: ~
+      line_count: ~
+      md5: 91e508368ca538e9fed8778cf3fed179
+      mtime: 1257571087
+      name: t/search27.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 1832
+      file_mime_type: ~
+      line_count: ~
+      md5: 64463e22aefe93942cd6beb76a30495a
+      mtime: 1212468742
+      name: t/search28.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 1823
+      file_mime_type: ~
+      line_count: ~
+      md5: a24d1ca16bfe3537769e8af6a3771a38
+      mtime: 1212468742
+      name: t/search29.t
+      uses:
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - File::Spec
+        - Cwd
+        - Pod::Simple
+    - bytesize: 2567
+      file_mime_type: ~
+      line_count: ~
+      md5: 023dee5de2f0557617b93dba5bffa7c4
+      mtime: 1257571087
+      name: t/search50.t
+      uses:
+        - File::Spec
+        - strict
+        - Pod::Simple::Search
+        - Test
+        - Pod::Simple
+    - bytesize: 3245
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b2cd1ef8e8599a79f39796ef7d41485
+      mtime: 1212468742
+      name: t/stree.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::SimpleTree
+        - UNIVERSAL
+    - bytesize: 4040
+      file_mime_type: ~
+      line_count: ~
+      md5: 0ef6313a815479da499f1ea99dbfc00b
+      mtime: 1256583568
+      name: t/strpvbtm.t
+      uses: []
+    - bytesize: 1254
+      file_mime_type: ~
+      line_count: ~
+      md5: 47111802983fa1d2af9f1bf51a5a8dac
+      mtime: 1212468742
+      name: t/tiedfh.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::TiedOutFH
+    - bytesize: 13256
+      file_mime_type: ~
+      line_count: ~
+      md5: 12abe0eb276351d04d296bdf71651836
+      mtime: 1250800487
+      name: t/verb_fmt.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 7835
+      file_mime_type: ~
+      line_count: ~
+      md5: 02cb1aba96b97a354cac4eb37f43aeef
+      mtime: 1250800487
+      name: t/verbatim.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::DumpAsXML
+        - Pod::Simple::XMLOutStream
+    - bytesize: 4761
+      file_mime_type: ~
+      line_count: ~
+      md5: c6ee591b1f42ce099371c5b8aac02628
+      mtime: 1212468742
+      name: t/x_nixer.t
+      uses:
+        - strict
+        - Test
+        - Pod::Simple::XMLOutStream
+        - Pod::Simple::DumpAsXML
+    - bytesize: 10801
+      file_mime_type: ~
+      line_count: ~
+      md5: 2025ae23642c0c98a534e7b2b36305aa
+      mtime: 1257790174
+      name: t/xhtml01.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 1200
+      file_mime_type: ~
+      line_count: ~
+      md5: 8112c4444a0255c5b87d31916f8b9a81
+      mtime: 1212468742
+      name: t/xhtml05.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+    - bytesize: 8005
+      file_mime_type: ~
+      line_count: ~
+      md5: 83fcca0442a13ca2e8936efa94159298
+      mtime: 1256321398
+      name: t/xhtml10.t
+      uses:
+        - strict
+        - lib
+        - Test::More
+  tests:
+    - t/00about.t
+    - t/20_skip.t
+    - t/ac_d.t
+    - t/accept01.t
+    - t/accept05.t
+    - t/basic.t
+    - t/begin.t
+    - t/cbacks.t
+    - t/chunking.t
+    - t/closeys.t
+    - t/corpus.t
+    - t/encod01.t
+    - t/encod02.t
+    - t/encod03.t
+    - t/end_over.t
+    - t/fcodes.t
+    - t/fcodes_e.t
+    - t/fcodes_l.t
+    - t/fcodes_s.t
+    - t/for.t
+    - t/fornot.t
+    - t/fullstop.t
+    - t/heads.t
+    - t/items.t
+    - t/html01.t
+    - t/html02.t
+    - t/html03.t
+    - t/htmlbat.t
+    - t/items02.t
+    - t/itemstar.t
+    - t/linkclas.t
+    - t/puller.t
+    - t/pulltitl.t
+    - t/reinit.t
+    - t/render.t
+    - t/search05.t
+    - t/search10.t
+    - t/search12.t
+    - t/search20.t
+    - t/search22.t
+    - t/search25.t
+    - t/search26.t
+    - t/search27.t
+    - t/search28.t
+    - t/search29.t
+    - t/search50.t
+    - t/stree.t
+    - t/strpvbtm.t
+    - t/tiedfh.t
+    - t/verb_fmt.t
+    - t/verbatim.t
+    - t/x_nixer.t
+    - t/xhtml01.t
+    - t/xhtml05.t
+    - t/xhtml10.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.hyDq
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271751067
+  examine_start_time: 1271750974
+  examine_time: 93
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 49674
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 49674
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271751067
+  run_start_time: 1271750974
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

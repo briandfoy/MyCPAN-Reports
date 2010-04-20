@@ -1,0 +1,3359 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: Yet another XML web API framework
+    author:
+      - |-
+        You can reach the current maintainers by emailing us at C<cpan@fotango.com>,
+        but if you're reporting bugs I<please> use the RT system mentioned above so
+        we can track the issues you report.
+    build_requires:
+      File::Find::Rule: 0
+      Test::Differences: 0
+      Test::Exception: 0
+      Test::More: 0
+      Test::XML: 0
+    generated_by: Module::Build version 0.2611
+    license: perl
+    name: Froody
+    provides:
+      Froody:
+        file: lib/Froody.pm
+        version: 42.005
+      Froody::API:
+        file: lib/Froody/API.pm
+      Froody::API::Reflection:
+        file: lib/Froody/API/Reflection.pm
+      Froody::API::XML:
+        file: lib/Froody/API/XML.pm
+      Froody::Base:
+        file: lib/Froody/Base.pm
+      Froody::Dispatch:
+        file: lib/Froody/Dispatch.pm
+      Froody::Error:
+        file: lib/Froody/Error.pm
+      Froody::ErrorType:
+        file: lib/Froody/ErrorType.pm
+        version: 0.01
+      Froody::Implementation:
+        file: lib/Froody/Implementation.pm
+        version: 0.01
+      Froody::Invoker:
+        file: lib/Froody/Invoker.pm
+        version: 0.01
+      Froody::Invoker::Implementation:
+        file: lib/Froody/Invoker/Implementation.pm
+      Froody::Invoker::Null:
+        file: lib/Froody/Invoker/Null.pm
+        version: 0.01
+      Froody::Invoker::Reflection:
+        file: lib/Froody/Invoker/Reflection.pm
+      Froody::Invoker::Remote:
+        file: lib/Froody/Invoker/Remote.pm
+        version: 0.01
+      Froody::Logger:
+        file: lib/Froody/Logger.pm
+      Froody::Logger::Compat:
+        file: lib/Froody/Logger.pm
+      Froody::Method:
+        file: lib/Froody/Method.pm
+        version: 0.01
+      Froody::Reflection:
+        file: lib/Froody/Reflection.pm
+      Froody::Repository:
+        file: lib/Froody/Repository.pm
+        version: 0.01
+      Froody::Request:
+        file: lib/Froody/Request.pm
+      Froody::Request::Apache:
+        file: lib/Froody/Request/Apache.pm
+      Froody::Request::CGI:
+        file: lib/Froody/Request/CGI.pm
+      Froody::Response:
+        file: lib/Froody/Response.pm
+      Froody::Response::Content:
+        file: lib/Froody/Response/Content.pm
+        version: 0.01
+      Froody::Response::Error:
+        file: lib/Froody/Response/Error.pm
+      Froody::Response::PerlDS:
+        file: lib/Froody/Response/PerlDS.pm
+      Froody::Response::String:
+        file: lib/Froody/Response/String.pm
+      Froody::Response::Terse:
+        file: lib/Froody/Response/Terse.pm
+      Froody::Response::XML:
+        file: lib/Froody/Response/XML.pm
+      Froody::Server:
+        file: lib/Froody/Server.pm
+      Froody::Server::Apache:
+        file: lib/Froody/Server/Apache.pm
+      Froody::Server::CGI:
+        file: lib/Froody/Server/CGI.pm
+      Froody::Server::Standalone:
+        file: lib/Froody/Server/Standalone.pm
+      Froody::Structure:
+        file: lib/Froody/Structure.pm
+        version: 0.01
+      Froody::Upload:
+        file: lib/Froody/Upload.pm
+      Froody::Walker:
+        file: lib/Froody/Walker.pm
+      Froody::Walker::TerseToPerlDS:
+        file: lib/Froody/Walker/TerseToPerlDS.pm
+      Froody::Walker::TerseToXML:
+        file: lib/Froody/Walker/TerseToXML.pm
+      Froody::Walker::XMLToTerse:
+        file: lib/Froody/Walker/XMLToTerse.pm
+    recommends:
+      Apache: 0
+      Apache::Constants: 0
+      Apache::Cookie: 0
+      Apache::Request: 0
+    requires:
+      Class::Accessor: 0
+      Class::Accessor::Chained: 0
+      Error: 0.15
+      File::Spec: 0
+      HTTP::Request::Common: 0
+      HTTP::Server::Simple: 0
+      LWP::Simple: 0
+      LWP::UserAgent: 0
+      List::MoreUtils: 0
+      Params::Validate: 0
+      UNIVERSAL::require: 0
+      XML::LibXML: 0
+      YAML: 0
+      perl: 5.008
+    version: 42.005
+  blib:
+    - blib/bindoc/froody.1
+    - blib/lib/Froody.pm
+    - blib/lib/Froody/API.pm
+    - blib/lib/Froody/API/Reflection.pm
+    - blib/lib/Froody/API/XML.pm
+    - blib/lib/Froody/Base.pm
+    - blib/lib/Froody/DataFormats.pod
+    - blib/lib/Froody/Dispatch.pm
+    - blib/lib/Froody/Error.pm
+    - blib/lib/Froody/Error/Standard.pod
+    - blib/lib/Froody/ErrorType.pm
+    - blib/lib/Froody/Implementation.pm
+    - blib/lib/Froody/Invoker.pm
+    - blib/lib/Froody/Invoker/Implementation.pm
+    - blib/lib/Froody/Invoker/Null.pm
+    - blib/lib/Froody/Invoker/Reflection.pm
+    - blib/lib/Froody/Invoker/Remote.pm
+    - blib/lib/Froody/Logger.pm
+    - blib/lib/Froody/Method.pm
+    - blib/lib/Froody/QuickStart.pod
+    - blib/lib/Froody/Reflection.pm
+    - blib/lib/Froody/Repository.pm
+    - blib/lib/Froody/Request.pm
+    - blib/lib/Froody/Request/Apache.pm
+    - blib/lib/Froody/Request/CGI.pm
+    - blib/lib/Froody/Response.pm
+    - blib/lib/Froody/Response/Content.pm
+    - blib/lib/Froody/Response/Error.pm
+    - blib/lib/Froody/Response/PerlDS.pm
+    - blib/lib/Froody/Response/String.pm
+    - blib/lib/Froody/Response/Terse.pm
+    - blib/lib/Froody/Response/XML.pm
+    - blib/lib/Froody/Server.pm
+    - blib/lib/Froody/Server/Apache.pm
+    - blib/lib/Froody/Server/CGI.pm
+    - blib/lib/Froody/Server/Standalone.pm
+    - blib/lib/Froody/Structure.pm
+    - blib/lib/Froody/Upload.pm
+    - blib/lib/Froody/Walker.pm
+    - blib/lib/Froody/Walker/TerseToPerlDS.pm
+    - blib/lib/Froody/Walker/TerseToXML.pm
+    - blib/lib/Froody/Walker/XMLToTerse.pm
+    - blib/libdoc/Froody.3
+    - blib/libdoc/Froody::API.3
+    - blib/libdoc/Froody::API::Reflection.3
+    - blib/libdoc/Froody::API::XML.3
+    - blib/libdoc/Froody::Base.3
+    - blib/libdoc/Froody::DataFormats.3
+    - blib/libdoc/Froody::Dispatch.3
+    - blib/libdoc/Froody::Error.3
+    - blib/libdoc/Froody::Error::Standard.3
+    - blib/libdoc/Froody::ErrorType.3
+    - blib/libdoc/Froody::Implementation.3
+    - blib/libdoc/Froody::Invoker.3
+    - blib/libdoc/Froody::Invoker::Implementation.3
+    - blib/libdoc/Froody::Invoker::Null.3
+    - blib/libdoc/Froody::Invoker::Reflection.3
+    - blib/libdoc/Froody::Invoker::Remote.3
+    - blib/libdoc/Froody::Logger.3
+    - blib/libdoc/Froody::Method.3
+    - blib/libdoc/Froody::QuickStart.3
+    - blib/libdoc/Froody::Reflection.3
+    - blib/libdoc/Froody::Repository.3
+    - blib/libdoc/Froody::Request.3
+    - blib/libdoc/Froody::Request::Apache.3
+    - blib/libdoc/Froody::Request::CGI.3
+    - blib/libdoc/Froody::Response.3
+    - blib/libdoc/Froody::Response::Content.3
+    - blib/libdoc/Froody::Response::Error.3
+    - blib/libdoc/Froody::Response::PerlDS.3
+    - blib/libdoc/Froody::Response::String.3
+    - blib/libdoc/Froody::Response::Terse.3
+    - blib/libdoc/Froody::Response::XML.3
+    - blib/libdoc/Froody::Server.3
+    - blib/libdoc/Froody::Server::Apache.3
+    - blib/libdoc/Froody::Server::CGI.3
+    - blib/libdoc/Froody::Server::Standalone.3
+    - blib/libdoc/Froody::Structure.3
+    - blib/libdoc/Froody::Upload.3
+    - blib/libdoc/Froody::Walker.3
+    - blib/libdoc/Froody::Walker::TerseToPerlDS.3
+    - blib/libdoc/Froody::Walker::TerseToXML.3
+    - blib/libdoc/Froody::Walker::XMLToTerse.3
+    - blib/script/froody
+  build_file: Build.PL
+  build_file_output: |
+    Checking prerequisites...
+      requires:
+        !  Class::Accessor is not installed
+        !  Class::Accessor::Chained is not installed
+        !  Error is not installed
+        !  HTTP::Request::Common is not installed
+        !  HTTP::Server::Simple is not installed
+        !  LWP::Simple is not installed
+        !  LWP::UserAgent is not installed
+        !  UNIVERSAL::require is not installed
+        !  XML::LibXML is not installed
+      build_requires:
+        !  Test::Differences is not installed
+        !  Test::Exception is not installed
+        !  Test::XML is not installed
+      recommends:
+        *  Apache is not installed
+        *  Apache::Constants is not installed
+        *  Apache::Cookie is not installed
+        *  Apache::Request is not installed
+        *  Pod::Coverage::CountParents is not installed
+    
+    ERRORS/WARNINGS FOUND IN PREREQUISITES.  You may wish to install the versions
+    of the modules indicated above before proceeding with this installation
+    
+    Run 'Build installdeps' to install missing prerequisites.
+    
+    Creating new 'MYMETA.yml' with configuration results
+    Creating new 'Build' script for 'Froody' version '42.005'
+  build_output: "Building Froody\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+      make: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Build.PL
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Makefile.PL
+    build_files:
+      Build.PL: Build.PL
+      Makefile.PL: Makefile.PL
+    build_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005
+    has_build_and_makefile: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Makefile.PL
+    has_build_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Build.PL
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: 0
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: FOTANGO
+  dist_basename: Froody-42.005.tar.gz
+  dist_date: 1131359741
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D/Froody-42.005
+  dist_file: /home/brian/CPAN/authors/id/F/FO/FOTANGO/Froody-42.005.tar.gz
+  dist_md5: 87b71daa54c090509cdd82e7caf8f30c
+  dist_size: 74559
+  manifest:
+    - Build.PL
+    - Changes
+    - MANIFEST
+    - MANIFEST.SKIP
+    - META.yml
+    - Makefile.PL
+    - NINJA
+    - README
+    - TODO
+    - bin/froody
+    - bin/froody.cgi
+    - bin/what_tests.pl
+    - examples/corelist/Corelist.pm
+    - examples/time/Time.pm
+    - lib/Froody.pm
+    - lib/Froody/API.pm
+    - lib/Froody/API/Reflection.pm
+    - lib/Froody/API/XML.pm
+    - lib/Froody/Base.pm
+    - lib/Froody/DataFormats.pod
+    - lib/Froody/Dispatch.pm
+    - lib/Froody/Error.pm
+    - lib/Froody/Error/Standard.pod
+    - lib/Froody/ErrorType.pm
+    - lib/Froody/Implementation.pm
+    - lib/Froody/Invoker.pm
+    - lib/Froody/Invoker/Implementation.pm
+    - lib/Froody/Invoker/Null.pm
+    - lib/Froody/Invoker/Reflection.pm
+    - lib/Froody/Invoker/Remote.pm
+    - lib/Froody/Logger.pm
+    - lib/Froody/Method.pm
+    - lib/Froody/QuickStart.pod
+    - lib/Froody/Reflection.pm
+    - lib/Froody/Repository.pm
+    - lib/Froody/Request.pm
+    - lib/Froody/Request/Apache.pm
+    - lib/Froody/Request/CGI.pm
+    - lib/Froody/Response.pm
+    - lib/Froody/Response/Content.pm
+    - lib/Froody/Response/Error.pm
+    - lib/Froody/Response/PerlDS.pm
+    - lib/Froody/Response/String.pm
+    - lib/Froody/Response/Terse.pm
+    - lib/Froody/Response/XML.pm
+    - lib/Froody/Server.pm
+    - lib/Froody/Server/Apache.pm
+    - lib/Froody/Server/CGI.pm
+    - lib/Froody/Server/Standalone.pm
+    - lib/Froody/Structure.pm
+    - lib/Froody/Upload.pm
+    - lib/Froody/Walker.pm
+    - lib/Froody/Walker/TerseToPerlDS.pm
+    - lib/Froody/Walker/TerseToXML.pm
+    - lib/Froody/Walker/XMLToTerse.pm
+    - mbk/Module/Build/Kwalitee.pm
+    - t/000compile.t
+    - t/001pragmas.t
+    - t/003pod.t
+    - t/004uselib.t
+    - t/api.t
+    - t/complex_invoke.t
+    - t/copy.t
+    - t/dispatch.t
+    - t/err_isa.t
+    - t/error.t
+    - t/high-level.t
+    - t/implementation.t
+    - t/inv_rem.t
+    - t/lib/DTest.pm
+    - t/lib/DTest/Test.pm
+    - t/lib/Other.pm
+    - t/lib/Testproject/API.pm
+    - t/lib/Testproject/Object.pm
+    - t/meta_err.t
+    - t/method.t
+    - t/method_basic.t
+    - t/reflection.t
+    - t/reflection2.t
+    - t/repos.t
+    - t/rsp_basic.t
+    - t/rsp_convert.t
+    - t/rsp_err.t
+    - t/rsp_perlds.t
+    - t/rsp_terse.t
+    - t/rsp_xml.t
+    - t/structure.t
+    - t/t.t
+    - t/xml.t
+  manifest_file_info:
+    - bytesize: 1017
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1131359571
+      name: Build.PL
+    - bytesize: 486
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1131359571
+      name: Changes
+    - bytesize: 1756
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1131359572
+      name: MANIFEST
+    - bytesize: 83
+      file_mime_type: ~
+      line_count: ~
+      md5: 14d9dd14083735e9bdd96084a5e1f5c5
+      mtime: 1131359572
+      name: MANIFEST.SKIP
+    - bytesize: 3344
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1131359571
+      name: META.yml
+    - bytesize: 1318
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1131359572
+      name: Makefile.PL
+    - bytesize: 135
+      file_mime_type: ~
+      line_count: ~
+      md5: e5581feafd037b1ee151b0f2ba3f3e64
+      mtime: 1131359571
+      name: NINJA
+    - bytesize: 2857
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1131359571
+      name: README
+    - bytesize: 329
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1131359571
+      name: TODO
+    - bytesize: 5937
+      file_mime_type: ~
+      line_count: ~
+      md5: 32476a7d05c47615125375e9f2a0d281
+      mtime: 1131359571
+      name: bin/froody
+    - bytesize: 269
+      file_mime_type: ~
+      line_count: ~
+      md5: 2be0e82a28072bdd9c76732dfba38b5d
+      mtime: 1131359571
+      name: bin/froody.cgi
+    - bytesize: 1439
+      file_mime_type: ~
+      line_count: ~
+      md5: de357dcd9ceea00760dfd364e85d732d
+      mtime: 1131359571
+      name: bin/what_tests.pl
+    - bytesize: 3651
+      file_mime_type: ~
+      line_count: ~
+      md5: 6fe32531974c85805533a8c03ff7edd3
+      mtime: 1131359571
+      name: examples/corelist/Corelist.pm
+    - bytesize: 3991
+      file_mime_type: ~
+      line_count: ~
+      md5: ff9a49e8273f652eaf0b26f5f55a5161
+      mtime: 1131359571
+      name: examples/time/Time.pm
+    - bytesize: 3098
+      file_mime_type: ~
+      line_count: ~
+      md5: 7eb4ae17aae1460c86917dd813855d04
+      mtime: 1131359571
+      name: lib/Froody.pm
+    - bytesize: 1909
+      file_mime_type: ~
+      line_count: ~
+      md5: d403da96fcf4e566254511513b26c70f
+      mtime: 1131359571
+      name: lib/Froody/API.pm
+    - bytesize: 3746
+      file_mime_type: ~
+      line_count: ~
+      md5: 6787d8e7e42161110fa20a78b5bcff49
+      mtime: 1131359571
+      name: lib/Froody/API/Reflection.pm
+    - bytesize: 14793
+      file_mime_type: ~
+      line_count: ~
+      md5: fa3ec8f4f7543e75020d4d18b0223985
+      mtime: 1131359572
+      name: lib/Froody/API/XML.pm
+    - bytesize: 4675
+      file_mime_type: ~
+      line_count: ~
+      md5: 13b7b3c6a28353f511903ea6452e029e
+      mtime: 1131359572
+      name: lib/Froody/Base.pm
+    - bytesize: 3573
+      file_mime_type: ~
+      line_count: ~
+      md5: ccd4e853386f636104f5e4210e4f9272
+      mtime: 1131359572
+      name: lib/Froody/DataFormats.pod
+    - bytesize: 10441
+      file_mime_type: ~
+      line_count: ~
+      md5: e9fade662228db843dc407b6d456763d
+      mtime: 1131359571
+      name: lib/Froody/Dispatch.pm
+    - bytesize: 6318
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e527d340c28ac470777c508d9924d1e
+      mtime: 1131359571
+      name: lib/Froody/Error.pm
+    - bytesize: 3391
+      file_mime_type: ~
+      line_count: ~
+      md5: 3bf67aed8ff2f99bd1606b873342e4ce
+      mtime: 1131359571
+      name: lib/Froody/Error/Standard.pod
+    - bytesize: 1542
+      file_mime_type: ~
+      line_count: ~
+      md5: b6a243dafe1316458bbdffd231300de3
+      mtime: 1131359571
+      name: lib/Froody/ErrorType.pm
+    - bytesize: 5623
+      file_mime_type: ~
+      line_count: ~
+      md5: f00eb7f66f4ac6ca4da15e304b04116a
+      mtime: 1131359572
+      name: lib/Froody/Implementation.pm
+    - bytesize: 3735
+      file_mime_type: ~
+      line_count: ~
+      md5: 899cccdaf9f76934bbaf54019f381af4
+      mtime: 1131359571
+      name: lib/Froody/Invoker.pm
+    - bytesize: 7667
+      file_mime_type: ~
+      line_count: ~
+      md5: e57fc6187b6443acb294b773a123a1ce
+      mtime: 1131359571
+      name: lib/Froody/Invoker/Implementation.pm
+    - bytesize: 1142
+      file_mime_type: ~
+      line_count: ~
+      md5: 78cf0d0ac72437b74dec6c9dd8c6e14c
+      mtime: 1131359571
+      name: lib/Froody/Invoker/Null.pm
+    - bytesize: 2874
+      file_mime_type: ~
+      line_count: ~
+      md5: 66fd3f7bf03134944d11ef6ec509b827
+      mtime: 1131359571
+      name: lib/Froody/Invoker/Reflection.pm
+    - bytesize: 2448
+      file_mime_type: ~
+      line_count: ~
+      md5: 44a543dc717da6bb63069c1685f2f26c
+      mtime: 1131359571
+      name: lib/Froody/Invoker/Remote.pm
+    - bytesize: 1708
+      file_mime_type: ~
+      line_count: ~
+      md5: 45dafb2edc21bbad14e55a9510c0a44f
+      mtime: 1131359572
+      name: lib/Froody/Logger.pm
+    - bytesize: 8555
+      file_mime_type: ~
+      line_count: ~
+      md5: e03f0ecd50d0c46dc2d2c82fd8dff652
+      mtime: 1131359571
+      name: lib/Froody/Method.pm
+    - bytesize: 13362
+      file_mime_type: ~
+      line_count: ~
+      md5: 42e3385a4992deb37d21cbc9d0b38dbe
+      mtime: 1131359571
+      name: lib/Froody/QuickStart.pod
+    - bytesize: 3762
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b1d37d2b6e7e2dbc4dd3bee6d8345c6
+      mtime: 1131359571
+      name: lib/Froody/Reflection.pm
+    - bytesize: 6514
+      file_mime_type: ~
+      line_count: ~
+      md5: ebf6b507bf964c4afa5509b594cd8870
+      mtime: 1131359571
+      name: lib/Froody/Repository.pm
+    - bytesize: 1170
+      file_mime_type: ~
+      line_count: ~
+      md5: 63b6aec81c4c13967928a765b9757b54
+      mtime: 1131359571
+      name: lib/Froody/Request.pm
+    - bytesize: 1870
+      file_mime_type: ~
+      line_count: ~
+      md5: d3e8315edf87834e8078cc147e6f64a8
+      mtime: 1131359571
+      name: lib/Froody/Request/Apache.pm
+    - bytesize: 1615
+      file_mime_type: ~
+      line_count: ~
+      md5: a34cb6aa942bb7501bb93fa1839f236f
+      mtime: 1131359571
+      name: lib/Froody/Request/CGI.pm
+    - bytesize: 5108
+      file_mime_type: ~
+      line_count: ~
+      md5: 79ea9c068050bfff25b2aa49a856e908
+      mtime: 1131359572
+      name: lib/Froody/Response.pm
+    - bytesize: 3451
+      file_mime_type: ~
+      line_count: ~
+      md5: 6647c2118ae215075f0e10ab1812eb36
+      mtime: 1131359572
+      name: lib/Froody/Response/Content.pm
+    - bytesize: 3349
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c84c95d737420e49d91761cb86976c8
+      mtime: 1131359571
+      name: lib/Froody/Response/Error.pm
+    - bytesize: 8772
+      file_mime_type: ~
+      line_count: ~
+      md5: 3de2bc358ece6c8bb98d62709e1382cc
+      mtime: 1131359571
+      name: lib/Froody/Response/PerlDS.pm
+    - bytesize: 2887
+      file_mime_type: ~
+      line_count: ~
+      md5: 225fd14bb8f5665742b80552ab051a65
+      mtime: 1131359571
+      name: lib/Froody/Response/String.pm
+    - bytesize: 6569
+      file_mime_type: ~
+      line_count: ~
+      md5: b7d19304d8ab8ffed1a19da89ef50c26
+      mtime: 1131359571
+      name: lib/Froody/Response/Terse.pm
+    - bytesize: 3893
+      file_mime_type: ~
+      line_count: ~
+      md5: 980b3322d223f8fe17918b7edccb8c51
+      mtime: 1131359572
+      name: lib/Froody/Response/XML.pm
+    - bytesize: 3234
+      file_mime_type: ~
+      line_count: ~
+      md5: 4822c19d4a4f010165dd11f6b6b80d62
+      mtime: 1131359571
+      name: lib/Froody/Server.pm
+    - bytesize: 1273
+      file_mime_type: ~
+      line_count: ~
+      md5: b9cfb5eb8460d28dd6098a1e84b84872
+      mtime: 1131359572
+      name: lib/Froody/Server/Apache.pm
+    - bytesize: 1169
+      file_mime_type: ~
+      line_count: ~
+      md5: c860ec9217aa6c26ded6924e49b7a92e
+      mtime: 1131359571
+      name: lib/Froody/Server/CGI.pm
+    - bytesize: 2249
+      file_mime_type: ~
+      line_count: ~
+      md5: 20ae60135671715fc745d8aeb0724f2f
+      mtime: 1131359571
+      name: lib/Froody/Server/Standalone.pm
+    - bytesize: 4081
+      file_mime_type: ~
+      line_count: ~
+      md5: afd817d522099faa5e157963efcc86e9
+      mtime: 1131359571
+      name: lib/Froody/Structure.pm
+    - bytesize: 965
+      file_mime_type: ~
+      line_count: ~
+      md5: d4a255f08ed9c205084cba0f55abf560
+      mtime: 1131359572
+      name: lib/Froody/Upload.pm
+    - bytesize: 6309
+      file_mime_type: ~
+      line_count: ~
+      md5: b879104dcde8be019f138803b79f353a
+      mtime: 1131359571
+      name: lib/Froody/Walker.pm
+    - bytesize: 2647
+      file_mime_type: ~
+      line_count: ~
+      md5: 35af93c93db3b6a84ec3e8036b2a37d1
+      mtime: 1131359572
+      name: lib/Froody/Walker/TerseToPerlDS.pm
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: fcae37802ba22bf7ba73750d790a2c8f
+      mtime: 1131359571
+      name: lib/Froody/Walker/TerseToXML.pm
+    - bytesize: 2050
+      file_mime_type: ~
+      line_count: ~
+      md5: e41a9052a0c301cee4887855cf9fc169
+      mtime: 1131359571
+      name: lib/Froody/Walker/XMLToTerse.pm
+    - bytesize: 781
+      file_mime_type: ~
+      line_count: ~
+      md5: 16343505c5e98165394b8e3caca3d287
+      mtime: 1131359572
+      name: mbk/Module/Build/Kwalitee.pm
+    - bytesize: 864
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cf0bc59809f86c191df0fd181ffca12
+      mtime: 1131359571
+      name: t/000compile.t
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: 98cae19c1e61bcb704e96d4cfd0929b5
+      mtime: 1131359571
+      name: t/001pragmas.t
+    - bytesize: 1695
+      file_mime_type: ~
+      line_count: ~
+      md5: 93f3b84deeb5ea95a6e7fab5131baab4
+      mtime: 1131359571
+      name: t/003pod.t
+    - bytesize: 629
+      file_mime_type: ~
+      line_count: ~
+      md5: 05b204b4330523f71ccb247fa0694ea7
+      mtime: 1131359572
+      name: t/004uselib.t
+    - bytesize: 5725
+      file_mime_type: ~
+      line_count: ~
+      md5: fb5d3ceb0fca5ca120851074ccc1499f
+      mtime: 1131359571
+      name: t/api.t
+    - bytesize: 1622
+      file_mime_type: ~
+      line_count: ~
+      md5: ff9bfb5c99e4a57093b4ff33c7521462
+      mtime: 1131359572
+      name: t/complex_invoke.t
+    - bytesize: 2235
+      file_mime_type: ~
+      line_count: ~
+      md5: e469bb64dda32ea41bf769a9aa4618ae
+      mtime: 1131359571
+      name: t/copy.t
+    - bytesize: 2068
+      file_mime_type: ~
+      line_count: ~
+      md5: 182bc9a175ef07585201984267270736
+      mtime: 1131359572
+      name: t/dispatch.t
+    - bytesize: 1335
+      file_mime_type: ~
+      line_count: ~
+      md5: a13c8eab0527ef189c4c91fc7fc5d98f
+      mtime: 1131359572
+      name: t/err_isa.t
+    - bytesize: 1549
+      file_mime_type: ~
+      line_count: ~
+      md5: 5255d299b12e8ffe4342d78738ad1155
+      mtime: 1131359571
+      name: t/error.t
+    - bytesize: 2432
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d7e55e72ea594e5827afe5d5dc38068
+      mtime: 1131359571
+      name: t/high-level.t
+    - bytesize: 1815
+      file_mime_type: ~
+      line_count: ~
+      md5: fc2da4c9a2895f033642877842c1631c
+      mtime: 1131359571
+      name: t/implementation.t
+    - bytesize: 1157
+      file_mime_type: ~
+      line_count: ~
+      md5: 46ec17c10926b2025a4102903ea03bb8
+      mtime: 1131359571
+      name: t/inv_rem.t
+    - bytesize: 1032
+      file_mime_type: ~
+      line_count: ~
+      md5: ed5386569fae29f9bfe26a87c6c0fa36
+      mtime: 1131359571
+      name: t/lib/DTest.pm
+    - bytesize: 541
+      file_mime_type: ~
+      line_count: ~
+      md5: 732c807be7604eddbfdf525efee9f8b8
+      mtime: 1131359571
+      name: t/lib/DTest/Test.pm
+    - bytesize: 704
+      file_mime_type: ~
+      line_count: ~
+      md5: 615dcc918be249a400b11c0ae0f01286
+      mtime: 1131359571
+      name: t/lib/Other.pm
+    - bytesize: 2170
+      file_mime_type: ~
+      line_count: ~
+      md5: d12ffe03e5c11e4759dc6138278d29ff
+      mtime: 1131359572
+      name: t/lib/Testproject/API.pm
+    - bytesize: 862
+      file_mime_type: ~
+      line_count: ~
+      md5: 2bd0b4a9c853b2d9dbdbaa161b343a9f
+      mtime: 1131359571
+      name: t/lib/Testproject/Object.pm
+    - bytesize: 1669
+      file_mime_type: ~
+      line_count: ~
+      md5: acc2948b7642fd8c1edc4036fe7bcd20
+      mtime: 1131359572
+      name: t/meta_err.t
+    - bytesize: 4525
+      file_mime_type: ~
+      line_count: ~
+      md5: b87a58f26165393972ac2b909ab080be
+      mtime: 1131359572
+      name: t/method.t
+    - bytesize: 2566
+      file_mime_type: ~
+      line_count: ~
+      md5: 6020e5a2336407da2837b77c77b6be56
+      mtime: 1131359572
+      name: t/method_basic.t
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c25065076c99f0338a15ffbfa6e0011
+      mtime: 1131359571
+      name: t/reflection.t
+    - bytesize: 2135
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ac95bb1e3e00bc936766754d0de3488
+      mtime: 1131359571
+      name: t/reflection2.t
+    - bytesize: 7293
+      file_mime_type: ~
+      line_count: ~
+      md5: c64edb346849dfe107f012bf50e368df
+      mtime: 1131359571
+      name: t/repos.t
+    - bytesize: 2519
+      file_mime_type: ~
+      line_count: ~
+      md5: f03a12b2dd711f08c7a05d355605a114
+      mtime: 1131359571
+      name: t/rsp_basic.t
+    - bytesize: 6591
+      file_mime_type: ~
+      line_count: ~
+      md5: a72bc5bbe80fa1cd792d1aca9615078b
+      mtime: 1131359571
+      name: t/rsp_convert.t
+    - bytesize: 2515
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c36db4d38641e6c5710a9d719e544db
+      mtime: 1131359571
+      name: t/rsp_err.t
+    - bytesize: 1947
+      file_mime_type: ~
+      line_count: ~
+      md5: 9962b94bec0f27045372ffd462acb277
+      mtime: 1131359571
+      name: t/rsp_perlds.t
+    - bytesize: 2784
+      file_mime_type: ~
+      line_count: ~
+      md5: f043633549930e2394567e21f5c1144b
+      mtime: 1131359571
+      name: t/rsp_terse.t
+    - bytesize: 968
+      file_mime_type: ~
+      line_count: ~
+      md5: bc25d7b032f3c4ccb585e4516961bce0
+      mtime: 1131359571
+      name: t/rsp_xml.t
+    - bytesize: 1996
+      file_mime_type: ~
+      line_count: ~
+      md5: 11b9293b54ce2aa5f640e5581a69e7df
+      mtime: 1131359572
+      name: t/structure.t
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a0803cab577ddd2d4b02d862a4c666a
+      mtime: 1131359571
+      name: t/t.t
+    - bytesize: 4653
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b3cfc15ebb2d860efeea0906b1969ea
+      mtime: 1131359571
+      name: t/xml.t
+  module_info:
+    - bytesize: 3098
+      file_mime_type: ~
+      line_count: ~
+      md5: ebd2ce477b27ccbfb5d9d6f746b93cd7
+      module_name_from_file_guess: Froody
+      mtime: 1271776762
+      name: blib/lib/Froody.pm
+      packages:
+        - Froody
+      primary_package: Froody
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Froody.pm
+        identifier: VERSION
+        line_number: 9
+        sigil: $
+        value: 42.005
+    - bytesize: 1909
+      file_mime_type: ~
+      line_count: ~
+      md5: dde7ecdd201c07a3f71d11c1e6ffa98f
+      module_name_from_file_guess: Froody::API
+      mtime: 1271776762
+      name: blib/lib/Froody/API.pm
+      packages:
+        - Froody::API
+      primary_package: Froody::API
+      uses:
+        - base
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Froody/API.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3746
+      file_mime_type: ~
+      line_count: ~
+      md5: d9c26d5b19af16a39bc0653b1a841a6f
+      module_name_from_file_guess: Froody::API::Reflection
+      mtime: 1271776762
+      name: blib/lib/Froody/API/Reflection.pm
+      packages:
+        - Froody::API::Reflection
+      primary_package: Froody::API::Reflection
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Froody/API/Reflection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14793
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e3e2c0f5efe41efc4177a97c7e5737d
+      module_name_from_file_guess: Froody::API::XML
+      mtime: 1271776762
+      name: blib/lib/Froody/API/XML.pm
+      packages:
+        - Froody::API::XML
+      primary_package: Froody::API::XML
+      uses:
+        - strict
+        - warnings
+        - XML::LibXML
+        - Params::Validate
+        - Froody::Method
+        - Froody::ErrorType
+        - Froody::Response::XML
+        - base
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Froody/API/XML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4675
+      file_mime_type: ~
+      line_count: ~
+      md5: e267b6a5c46f1a66ce4b1cb50e15d6d8
+      module_name_from_file_guess: Froody::Base
+      mtime: 1271776762
+      name: blib/lib/Froody/Base.pm
+      packages:
+        - Froody::Base
+      primary_package: Froody::Base
+      uses:
+        - warnings
+        - strict
+        - Params::Validate
+        - Froody::Error
+        - Froody::Logger
+        - base
+        - UNIVERSAL::require
+        - Carp
+      version_info:
+        filename: blib/lib/Froody/Base.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 10441
+      file_mime_type: ~
+      line_count: ~
+      md5: 61dc5da5d1e8ab539c523847453c6535
+      module_name_from_file_guess: Froody::Dispatch
+      mtime: 1271776762
+      name: blib/lib/Froody/Dispatch.pm
+      packages:
+        - Froody::Dispatch
+      primary_package: Froody::Dispatch
+      uses:
+        - base
+        - warnings
+        - strict
+        - Params::Validate
+        - Scalar::Util
+        - UNIVERSAL::require
+        - Froody::Response::Terse
+        - Froody::Repository
+        - Froody::Response::Error
+        - Froody::Logger
+      version_info:
+        filename: blib/lib/Froody/Dispatch.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6318
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf1c53e0e4f9aad063c2c7d085ad4e1
+      module_name_from_file_guess: Froody::Error
+      mtime: 1271776762
+      name: blib/lib/Froody/Error.pm
+      packages:
+        - Froody::Error
+      primary_package: Froody::Error
+      uses:
+        - base
+        - strict
+        - warnings
+        - Scalar::Util
+        - Storable
+      version_info:
+        filename: blib/lib/Froody/Error.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1542
+      file_mime_type: ~
+      line_count: ~
+      md5: 18e97cf34cc5249d316cf2233069a584
+      module_name_from_file_guess: Froody::ErrorType
+      mtime: 1271776762
+      name: blib/lib/Froody/ErrorType.pm
+      packages:
+        - Froody::ErrorType
+      primary_package: Froody::ErrorType
+      uses:
+        - base
+        - strict
+        - warnings
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Froody/ErrorType.pm
+        identifier: VERSION
+        line_number: 8
+        sigil: $
+        value: 0.01
+    - bytesize: 5623
+      file_mime_type: ~
+      line_count: ~
+      md5: 2de1cf66be0f3237662db9d2e514b999
+      module_name_from_file_guess: Froody::Implementation
+      mtime: 1271776762
+      name: blib/lib/Froody/Implementation.pm
+      packages:
+        - Froody::Implementation
+      primary_package: Froody::Implementation
+      uses:
+        - strict
+        - warnings
+        - Scalar::Util
+        - List::MoreUtils
+        - Froody::Error
+        - Froody::Logger
+        - UNIVERSAL::require
+      version_info:
+        filename: blib/lib/Froody/Implementation.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 0.01
+    - bytesize: 3735
+      file_mime_type: ~
+      line_count: ~
+      md5: a6d40d1e098a17977a05909dd99fdb00
+      module_name_from_file_guess: Froody::Invoker
+      mtime: 1271776762
+      name: blib/lib/Froody/Invoker.pm
+      packages:
+        - Froody::Invoker
+      primary_package: Froody::Invoker
+      uses:
+        - base
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Froody/Invoker.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.01
+    - bytesize: 7667
+      file_mime_type: ~
+      line_count: ~
+      md5: c55c75e998484b0fe01dd0c77386cca4
+      module_name_from_file_guess: Froody::Invoker::Implementation
+      mtime: 1271776762
+      name: blib/lib/Froody/Invoker/Implementation.pm
+      packages:
+        - Froody::Invoker::Implementation
+      primary_package: Froody::Invoker::Implementation
+      uses:
+        - base
+        - strict
+        - warnings
+        - File::Spec
+        - Froody::Response::Terse
+        - Froody::Error
+        - Froody::Logger
+        - constant
+        - Scalar::Util
+        - Params::Validate
+      version_info:
+        filename: blib/lib/Froody/Invoker/Implementation.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1142
+      file_mime_type: ~
+      line_count: ~
+      md5: 89f10f833a8ec080d43088a973e4ffed
+      module_name_from_file_guess: Froody::Invoker::Null
+      mtime: 1271776762
+      name: blib/lib/Froody/Invoker/Null.pm
+      packages:
+        - Froody::Invoker::Null
+      primary_package: Froody::Invoker::Null
+      uses:
+        - strict
+        - warnings
+        - base
+        - Froody::Response
+        - Froody::Response::PerlDS
+      version_info:
+        filename: blib/lib/Froody/Invoker/Null.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 0.01
+    - bytesize: 2874
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fb6f03789606f06ee93c2980c57d508
+      module_name_from_file_guess: Froody::Invoker::Reflection
+      mtime: 1271776762
+      name: blib/lib/Froody/Invoker/Reflection.pm
+      packages:
+        - Froody::Invoker::Reflection
+      primary_package: Froody::Invoker::Reflection
+      uses:
+        - base
+        - Froody::Reflection
+        - strict
+        - warnings
+        - Scalar::Util
+        - Froody::Response::Terse
+        - Froody::Logger
+        - constant
+      version_info:
+        filename: blib/lib/Froody/Invoker/Reflection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2448
+      file_mime_type: ~
+      line_count: ~
+      md5: c4ca073c8ad63b7c2e604ebefe69d529
+      module_name_from_file_guess: Froody::Invoker::Remote
+      mtime: 1271776762
+      name: blib/lib/Froody/Invoker/Remote.pm
+      packages:
+        - Froody::Invoker::Remote
+      primary_package: Froody::Invoker::Remote
+      uses:
+        - strict
+        - warnings
+        - base
+        - Froody::Response
+        - LWP::Simple
+        - URI
+        - Froody::Response::String
+        - Froody::Response::Error
+        - HTTP::Request::Common
+        - LWP::UserAgent
+      version_info:
+        filename: blib/lib/Froody/Invoker/Remote.pm
+        identifier: VERSION
+        line_number: 13
+        sigil: $
+        value: 0.01
+    - bytesize: 1708
+      file_mime_type: ~
+      line_count: ~
+      md5: 42d4f406d87ffad4016fa509a4ebf2be
+      module_name_from_file_guess: Froody::Logger
+      mtime: 1271776762
+      name: blib/lib/Froody/Logger.pm
+      packages:
+        - Froody::Logger
+        - Froody::Logger::Compat
+      primary_package: Froody::Logger
+      uses:
+        - strict
+        - warnings
+        - base
+        - Logger
+        - Carp
+      version_info:
+        filename: blib/lib/Froody/Logger.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8555
+      file_mime_type: ~
+      line_count: ~
+      md5: 99a574950cb64f6d104cbeec1e779678
+      module_name_from_file_guess: Froody::Method
+      mtime: 1271776762
+      name: blib/lib/Froody/Method.pm
+      packages:
+        - Froody::Method
+      primary_package: Froody::Method
+      uses:
+        - base
+        - strict
+        - warnings
+        - XML::LibXML
+        - Carp
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Froody/Method.pm
+        identifier: VERSION
+        line_number: 11
+        sigil: $
+        value: 0.01
+    - bytesize: 3762
+      file_mime_type: ~
+      line_count: ~
+      md5: 27cfddb14652591a21b68ee826439df5
+      module_name_from_file_guess: Froody::Reflection
+      mtime: 1271776762
+      name: blib/lib/Froody/Reflection.pm
+      packages:
+        - Froody::Reflection
+      primary_package: Froody::Reflection
+      uses:
+        - base
+        - strict
+        - warnings
+        - Params::Validate
+        - Froody::Logger
+        - Froody::Response::XML
+        - Froody::Response::PerlDS
+      version_info:
+        filename: blib/lib/Froody/Reflection.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6514
+      file_mime_type: ~
+      line_count: ~
+      md5: b4dfb2ff12bb0651ba1ceb24026182d6
+      module_name_from_file_guess: Froody::Repository
+      mtime: 1271776762
+      name: blib/lib/Froody/Repository.pm
+      packages:
+        - Froody::Repository
+      primary_package: Froody::Repository
+      uses:
+        - base
+        - Froody::API::Reflection
+        - Froody::Invoker::Reflection
+        - Froody::Dispatch
+        - Froody::Invoker::Remote
+        - Froody::Method
+        - Froody::ErrorType
+        - strict
+        - warnings
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Froody/Repository.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 0.01
+    - bytesize: 1170
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ea807a8bb75f5bec6fb3e1c958f94df
+      module_name_from_file_guess: Froody::Request
+      mtime: 1271776762
+      name: blib/lib/Froody/Request.pm
+      packages:
+        - Froody::Request
+      primary_package: Froody::Request
+      uses:
+        - warnings
+        - strict
+        - base
+      version_info:
+        filename: blib/lib/Froody/Request.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1870
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b0b7a8ca3b77cbe563d302acaf3afd2
+      module_name_from_file_guess: Froody::Request::Apache
+      mtime: 1271776762
+      name: blib/lib/Froody/Request/Apache.pm
+      packages:
+        - Froody::Request::Apache
+      primary_package: Froody::Request::Apache
+      uses:
+        - warnings
+        - strict
+        - Froody::Error
+        - Froody::Upload
+        - base
+      version_info:
+        filename: blib/lib/Froody/Request/Apache.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1615
+      file_mime_type: ~
+      line_count: ~
+      md5: 6298e4d86212f07ce315ac89ebefb6ff
+      module_name_from_file_guess: Froody::Request::CGI
+      mtime: 1271776762
+      name: blib/lib/Froody/Request/CGI.pm
+      packages:
+        - Froody::Request::CGI
+      primary_package: Froody::Request::CGI
+      uses:
+        - warnings
+        - strict
+        - CGI
+        - Froody::Error
+        - Froody::Upload
+        - base
+      version_info:
+        filename: blib/lib/Froody/Request/CGI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5108
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b94ee4051ffc9b9de67a1f5c137791f
+      module_name_from_file_guess: Froody::Response
+      mtime: 1271776762
+      name: blib/lib/Froody/Response.pm
+      packages:
+        - Froody::Response
+      primary_package: Froody::Response
+      uses:
+        - base
+        - warnings
+        - strict
+        - Params::Validate
+        - CGI
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Froody/Response.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3451
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d29233de61c35ebc46d30f1873ecc9f
+      module_name_from_file_guess: Froody::Response::Content
+      mtime: 1271776762
+      name: blib/lib/Froody/Response/Content.pm
+      packages:
+        - Froody::Response::Content
+      primary_package: Froody::Response::Content
+      uses:
+        - base
+        - strict
+        - warnings
+        - Storable
+        - Froody::Error
+      version_info:
+        filename: blib/lib/Froody/Response/Content.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.01
+    - bytesize: 3349
+      file_mime_type: ~
+      line_count: ~
+      md5: 744f096312aac954656043eb1e4085a6
+      module_name_from_file_guess: Froody::Response::Error
+      mtime: 1271776762
+      name: blib/lib/Froody/Response/Error.pm
+      packages:
+        - Froody::Response::Error
+      primary_package: Froody::Response::Error
+      uses:
+        - base
+        - warnings
+        - strict
+        - Froody::Response::Terse
+        - Scalar::Util
+      version_info:
+        filename: blib/lib/Froody/Response/Error.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8772
+      file_mime_type: ~
+      line_count: ~
+      md5: a0989a83f9d4056b37b996b409d9a899
+      module_name_from_file_guess: Froody::Response::PerlDS
+      mtime: 1271776762
+      name: blib/lib/Froody/Response/PerlDS.pm
+      packages:
+        - Froody::Response::PerlDS
+      primary_package: Froody::Response::PerlDS
+      uses:
+        - base
+        - warnings
+        - strict
+        - XML::LibXML
+        - Encode
+        - Params::Validate
+        - utf8
+      version_info:
+        filename: blib/lib/Froody/Response/PerlDS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2887
+      file_mime_type: ~
+      line_count: ~
+      md5: 51daf0c32670d03db9c7a1cc49c875ac
+      module_name_from_file_guess: Froody::Response::String
+      mtime: 1271776762
+      name: blib/lib/Froody/Response/String.pm
+      packages:
+        - Froody::Response::String
+      primary_package: Froody::Response::String
+      uses:
+        - base
+        - warnings
+        - strict
+        - Encode
+      version_info:
+        filename: blib/lib/Froody/Response/String.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6569
+      file_mime_type: ~
+      line_count: ~
+      md5: 1948823a2c87b915e03abdf365018a33
+      module_name_from_file_guess: Froody::Response::Terse
+      mtime: 1271776762
+      name: blib/lib/Froody/Response/Terse.pm
+      packages:
+        - Froody::Response::Terse
+      primary_package: Froody::Response::Terse
+      uses:
+        - base
+        - warnings
+        - strict
+        - XML::LibXML
+        - Encode
+        - Params::Validate
+        - Storable
+        - Froody::Logger
+        - Froody::Response::Error
+      version_info:
+        filename: blib/lib/Froody/Response/Terse.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3893
+      file_mime_type: ~
+      line_count: ~
+      md5: c09ae40e8d1930945e189a02c7a59053
+      module_name_from_file_guess: Froody::Response::XML
+      mtime: 1271776762
+      name: blib/lib/Froody/Response/XML.pm
+      packages:
+        - Froody::Response::XML
+      primary_package: Froody::Response::XML
+      uses:
+        - base
+        - warnings
+        - strict
+        - Encode
+        - Scalar::Util
+        - XML::LibXML
+      version_info:
+        filename: blib/lib/Froody/Response/XML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3234
+      file_mime_type: ~
+      line_count: ~
+      md5: 9bca8e9ce271e4e564f0b4ea6b17ec3a
+      module_name_from_file_guess: Froody::Server
+      mtime: 1271776762
+      name: blib/lib/Froody/Server.pm
+      packages:
+        - Froody::Server
+      primary_package: Froody::Server
+      uses:
+        - base
+        - warnings
+        - strict
+        - CGI
+        - Scalar::Util
+        - Params::Validate
+        - Froody::Dispatch
+        - Froody::Response
+        - Froody::Logger
+        - Froody::Server::CGI
+      version_info:
+        filename: blib/lib/Froody/Server.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1273
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fbf8f68d4fc4860eeb016e56e2f5878
+      module_name_from_file_guess: Froody::Server::Apache
+      mtime: 1271776762
+      name: blib/lib/Froody/Server/Apache.pm
+      packages:
+        - Froody::Server::Apache
+      primary_package: Froody::Server::Apache
+      uses:
+        - warnings
+        - strict
+        - base
+        - Froody::Request::Apache
+      version_info:
+        filename: blib/lib/Froody/Server/Apache.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1169
+      file_mime_type: ~
+      line_count: ~
+      md5: 05f16bdfc8aea3f9ba9472b9688b73e7
+      module_name_from_file_guess: Froody::Server::CGI
+      mtime: 1271776762
+      name: blib/lib/Froody/Server/CGI.pm
+      packages:
+        - Froody::Server::CGI
+      primary_package: Froody::Server::CGI
+      uses:
+        - warnings
+        - strict
+        - base
+        - CGI
+        - Scalar::Util
+        - Params::Validate
+        - Froody::Dispatch
+        - Froody::Response
+        - Froody::Request::CGI
+      version_info:
+        filename: blib/lib/Froody/Server/CGI.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2249
+      file_mime_type: ~
+      line_count: ~
+      md5: 778d621fb66a8f4624acd85cd68a4f18
+      module_name_from_file_guess: Froody::Server::Standalone
+      mtime: 1271776762
+      name: blib/lib/Froody/Server/Standalone.pm
+      packages:
+        - Froody::Server::Standalone
+      primary_package: Froody::Server::Standalone
+      uses:
+        - base
+        - Froody
+        - strict
+        - warnings
+        - HTTP::Date
+        - Froody::Request::CGI
+        - Froody::Dispatch
+      version_info:
+        filename: blib/lib/Froody/Server/Standalone.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4081
+      file_mime_type: ~
+      line_count: ~
+      md5: 370310480868e38857f616f33163c77f
+      module_name_from_file_guess: Froody::Structure
+      mtime: 1271776762
+      name: blib/lib/Froody/Structure.pm
+      packages:
+        - Froody::Structure
+      primary_package: Froody::Structure
+      uses:
+        - base
+        - strict
+        - warnings
+        - Scalar::Util
+        - Storable
+      version_info:
+        filename: blib/lib/Froody/Structure.pm
+        identifier: VERSION
+        line_number: 10
+        sigil: $
+        value: 0.01
+    - bytesize: 965
+      file_mime_type: ~
+      line_count: ~
+      md5: a29b2891f799c31a38b8d3b9a5856094
+      module_name_from_file_guess: Froody::Upload
+      mtime: 1271776762
+      name: blib/lib/Froody/Upload.pm
+      packages:
+        - Froody::Upload
+      primary_package: Froody::Upload
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Froody/Upload.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6309
+      file_mime_type: ~
+      line_count: ~
+      md5: c1eb7d48cfae2e7c7056a8acd9cc648f
+      module_name_from_file_guess: Froody::Walker
+      mtime: 1271776762
+      name: blib/lib/Froody/Walker.pm
+      packages:
+        - Froody::Walker
+      primary_package: Froody::Walker
+      uses:
+        - strict
+        - warnings
+        - Froody::Logger
+      version_info:
+        filename: blib/lib/Froody/Walker.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2647
+      file_mime_type: ~
+      line_count: ~
+      md5: 77b037a11737d41f0455bf6121d0a1ee
+      module_name_from_file_guess: Froody::Walker::TerseToPerlDS
+      mtime: 1271776762
+      name: blib/lib/Froody/Walker/TerseToPerlDS.pm
+      packages:
+        - Froody::Walker::TerseToPerlDS
+      primary_package: Froody::Walker::TerseToPerlDS
+      uses:
+        - base
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Froody/Walker/TerseToPerlDS.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1694
+      file_mime_type: ~
+      line_count: ~
+      md5: 674d7abe81fed32d5a1123a393ffd136
+      module_name_from_file_guess: Froody::Walker::TerseToXML
+      mtime: 1271776762
+      name: blib/lib/Froody/Walker/TerseToXML.pm
+      packages:
+        - Froody::Walker::TerseToXML
+      primary_package: Froody::Walker::TerseToXML
+      uses:
+        - base
+        - strict
+        - warnings
+        - Encode
+      version_info:
+        filename: blib/lib/Froody/Walker/TerseToXML.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2050
+      file_mime_type: ~
+      line_count: ~
+      md5: 9efbd3c0561c6fb6086a2798ad31ed26
+      module_name_from_file_guess: Froody::Walker::XMLToTerse
+      mtime: 1271776762
+      name: blib/lib/Froody/Walker/XMLToTerse.pm
+      packages:
+        - Froody::Walker::XMLToTerse
+      primary_package: Froody::Walker::XMLToTerse
+      uses:
+        - strict
+        - warnings
+        - base
+      version_info:
+        filename: blib/lib/Froody/Walker/XMLToTerse.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Froody.pm
+    - blib/lib/Froody/API.pm
+    - blib/lib/Froody/API/Reflection.pm
+    - blib/lib/Froody/API/XML.pm
+    - blib/lib/Froody/Base.pm
+    - blib/lib/Froody/Dispatch.pm
+    - blib/lib/Froody/Error.pm
+    - blib/lib/Froody/ErrorType.pm
+    - blib/lib/Froody/Implementation.pm
+    - blib/lib/Froody/Invoker.pm
+    - blib/lib/Froody/Invoker/Implementation.pm
+    - blib/lib/Froody/Invoker/Null.pm
+    - blib/lib/Froody/Invoker/Reflection.pm
+    - blib/lib/Froody/Invoker/Remote.pm
+    - blib/lib/Froody/Logger.pm
+    - blib/lib/Froody/Method.pm
+    - blib/lib/Froody/Reflection.pm
+    - blib/lib/Froody/Repository.pm
+    - blib/lib/Froody/Request.pm
+    - blib/lib/Froody/Request/Apache.pm
+    - blib/lib/Froody/Request/CGI.pm
+    - blib/lib/Froody/Response.pm
+    - blib/lib/Froody/Response/Content.pm
+    - blib/lib/Froody/Response/Error.pm
+    - blib/lib/Froody/Response/PerlDS.pm
+    - blib/lib/Froody/Response/String.pm
+    - blib/lib/Froody/Response/Terse.pm
+    - blib/lib/Froody/Response/XML.pm
+    - blib/lib/Froody/Server.pm
+    - blib/lib/Froody/Server/Apache.pm
+    - blib/lib/Froody/Server/CGI.pm
+    - blib/lib/Froody/Server/Standalone.pm
+    - blib/lib/Froody/Structure.pm
+    - blib/lib/Froody/Upload.pm
+    - blib/lib/Froody/Walker.pm
+    - blib/lib/Froody/Walker/TerseToPerlDS.pm
+    - blib/lib/Froody/Walker/TerseToXML.pm
+    - blib/lib/Froody/Walker/XMLToTerse.pm
+  test_info:
+    - bytesize: 864
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cf0bc59809f86c191df0fd181ffca12
+      mtime: 1131359571
+      name: t/000compile.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - File::Find::Rule
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: 98cae19c1e61bcb704e96d4cfd0929b5
+      mtime: 1131359571
+      name: t/001pragmas.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - File::Find::Rule
+    - bytesize: 1695
+      file_mime_type: ~
+      line_count: ~
+      md5: 93f3b84deeb5ea95a6e7fab5131baab4
+      mtime: 1131359571
+      name: t/003pod.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - File::Find::Rule
+    - bytesize: 629
+      file_mime_type: ~
+      line_count: ~
+      md5: 05b204b4330523f71ccb247fa0694ea7
+      mtime: 1131359572
+      name: t/004uselib.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - File::Find::Rule
+    - bytesize: 5725
+      file_mime_type: ~
+      line_count: ~
+      md5: fb5d3ceb0fca5ca120851074ccc1499f
+      mtime: 1131359571
+      name: t/api.t
+      uses:
+        - strict
+        - lib
+        - Data::Dumper
+        - Term::ANSIColor
+        - Test::More
+        - Test::Exception
+        - Froody::Repository
+        - Scalar::Util
+        - Froody::Response::PerlDS
+    - bytesize: 1622
+      file_mime_type: ~
+      line_count: ~
+      md5: ff9bfb5c99e4a57093b4ff33c7521462
+      mtime: 1131359572
+      name: t/complex_invoke.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - lib
+        - base
+        - Froody::Repository
+    - bytesize: 2235
+      file_mime_type: ~
+      line_count: ~
+      md5: e469bb64dda32ea41bf769a9aa4618ae
+      mtime: 1131359571
+      name: t/copy.t
+      uses:
+        - strict
+        - warnings
+        - File::Spec::Functions
+        - FindBin
+        - lib
+        - Cwd
+        - File::Copy
+        - File::Path
+        - Data::Dumper
+        - Devel::Peek
+        - Term::ANSIColor
+        - File::Find::Rule
+        - Test::More
+    - bytesize: 2068
+      file_mime_type: ~
+      line_count: ~
+      md5: 182bc9a175ef07585201984267270736
+      mtime: 1131359572
+      name: t/dispatch.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Test::Exception
+        - File::Spec::Functions
+        - Encode
+        - Froody::Dispatch
+        - Froody::Repository
+        - Froody::Response::PerlDS
+    - bytesize: 1335
+      file_mime_type: ~
+      line_count: ~
+      md5: a13c8eab0527ef189c4c91fc7fc5d98f
+      mtime: 1131359572
+      name: t/err_isa.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Froody::Error
+    - bytesize: 1549
+      file_mime_type: ~
+      line_count: ~
+      md5: 5255d299b12e8ffe4342d78738ad1155
+      mtime: 1131359571
+      name: t/error.t
+      uses:
+        - warnings
+        - strict
+        - Test::More
+        - Test::Exception
+        - Froody::Error
+    - bytesize: 2432
+      file_mime_type: ~
+      line_count: ~
+      md5: 9d7e55e72ea594e5827afe5d5dc38068
+      mtime: 1131359571
+      name: t/high-level.t
+      uses:
+        - Test::More
+        - warnings
+        - strict
+        - Test::Exception
+        - lib
+        - DTest
+        - Froody::Dispatch
+        - Config
+    - bytesize: 1815
+      file_mime_type: ~
+      line_count: ~
+      md5: fc2da4c9a2895f033642877842c1631c
+      mtime: 1131359571
+      name: t/implementation.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - base
+        - Froody::API::XML
+        - Froody::Dispatch
+    - bytesize: 1157
+      file_mime_type: ~
+      line_count: ~
+      md5: 46ec17c10926b2025a4102903ea03bb8
+      mtime: 1131359571
+      name: t/inv_rem.t
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - Devel::Peek
+        - Term::ANSIColor
+        - Test::More
+        - Test::Exception
+        - Froody::Method
+        - Froody::Invoker::Remote
+    - bytesize: 1669
+      file_mime_type: ~
+      line_count: ~
+      md5: acc2948b7642fd8c1edc4036fe7bcd20
+      mtime: 1131359572
+      name: t/meta_err.t
+      uses:
+        - strict
+        - warnings
+        - File::Spec::Functions
+        - FindBin
+        - File::Find::Rule
+        - Test::More
+    - bytesize: 4525
+      file_mime_type: ~
+      line_count: ~
+      md5: b87a58f26165393972ac2b909ab080be
+      mtime: 1131359572
+      name: t/method.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Froody::API::XML
+        - Froody::Response::PerlDS
+        - Froody::Response::Terse
+        - Data::Dumper
+        - Term::ANSIColor
+        - Params::Validate
+    - bytesize: 2566
+      file_mime_type: ~
+      line_count: ~
+      md5: 6020e5a2336407da2837b77c77b6be56
+      mtime: 1131359572
+      name: t/method_basic.t
+      uses:
+        - strict
+        - warnings
+        - Test::Exception
+        - Test::More
+        - Froody::Error
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c25065076c99f0338a15ffbfa6e0011
+      mtime: 1131359571
+      name: t/reflection.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - Test::Exception
+        - Froody::Repository
+        - lib
+        - Froody::Dispatch
+    - bytesize: 2135
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ac95bb1e3e00bc936766754d0de3488
+      mtime: 1131359571
+      name: t/reflection2.t
+      uses:
+        - Test::More
+        - Test::Exception
+        - strict
+        - warnings
+        - Data::Dumper
+        - Test::Differences
+        - Test::XML
+        - Froody::Dispatch
+    - bytesize: 7293
+      file_mime_type: ~
+      line_count: ~
+      md5: c64edb346849dfe107f012bf50e368df
+      mtime: 1131359571
+      name: t/repos.t
+      uses:
+        - strict
+        - warnings
+        - Data::Dumper
+        - Devel::Peek
+        - Term::ANSIColor
+        - Test::More
+        - Test::Exception
+        - Froody::Error
+    - bytesize: 2519
+      file_mime_type: ~
+      line_count: ~
+      md5: f03a12b2dd711f08c7a05d355605a114
+      mtime: 1131359571
+      name: t/rsp_basic.t
+      uses:
+        - strict
+        - warnings
+        - Test::Exception
+        - Test::More
+    - bytesize: 6591
+      file_mime_type: ~
+      line_count: ~
+      md5: a72bc5bbe80fa1cd792d1aca9615078b
+      mtime: 1131359571
+      name: t/rsp_convert.t
+      uses:
+        - strict
+        - warnings
+        - Test::Exception
+        - Data::Dumper
+        - Test::More
+        - Froody::Response::String
+        - Froody::Response::XML
+        - Froody::Response::PerlDS
+    - bytesize: 2515
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c36db4d38641e6c5710a9d719e544db
+      mtime: 1131359571
+      name: t/rsp_err.t
+      uses:
+        - strict
+        - warnings
+        - Term::ANSIColor
+        - Test::Exception
+        - Test::XML
+        - Test::More
+        - Test::Builder
+    - bytesize: 1947
+      file_mime_type: ~
+      line_count: ~
+      md5: 9962b94bec0f27045372ffd462acb277
+      mtime: 1131359571
+      name: t/rsp_perlds.t
+      uses:
+        - strict
+        - warnings
+        - Test::Exception
+        - Test::More
+    - bytesize: 2784
+      file_mime_type: ~
+      line_count: ~
+      md5: f043633549930e2394567e21f5c1144b
+      mtime: 1131359571
+      name: t/rsp_terse.t
+      uses:
+        - strict
+        - warnings
+        - Params::Validate
+        - Test::Exception
+        - Test::More
+    - bytesize: 968
+      file_mime_type: ~
+      line_count: ~
+      md5: bc25d7b032f3c4ccb585e4516961bce0
+      mtime: 1131359571
+      name: t/rsp_xml.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - XML::LibXML
+    - bytesize: 1996
+      file_mime_type: ~
+      line_count: ~
+      md5: 11b9293b54ce2aa5f640e5581a69e7df
+      mtime: 1131359572
+      name: t/structure.t
+      uses:
+        - strict
+        - warnings
+        - Test::Exception
+        - Froody::Error
+        - Test::More
+        - Froody::Response::String
+    - bytesize: 1340
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a0803cab577ddd2d4b02d862a4c666a
+      mtime: 1131359571
+      name: t/t.t
+      uses:
+        - strict
+        - warnings
+        - FindBin
+        - Test::More
+    - bytesize: 4653
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b3cfc15ebb2d860efeea0906b1969ea
+      mtime: 1131359571
+      name: t/xml.t
+      uses:
+        - strict
+        - warnings
+        - Test::Exception
+        - Test::More
+        - Froody::Error
+  tests:
+    - t/000compile.t
+    - t/001pragmas.t
+    - t/003pod.t
+    - t/004uselib.t
+    - t/api.t
+    - t/complex_invoke.t
+    - t/copy.t
+    - t/dispatch.t
+    - t/err_isa.t
+    - t/error.t
+    - t/high-level.t
+    - t/implementation.t
+    - t/inv_rem.t
+    - t/meta_err.t
+    - t/method.t
+    - t/method_basic.t
+    - t/reflection.t
+    - t/reflection2.t
+    - t/repos.t
+    - t/rsp_basic.t
+    - t/rsp_convert.t
+    - t/rsp_err.t
+    - t/rsp_perlds.t
+    - t/rsp_terse.t
+    - t/rsp_xml.t
+    - t/structure.t
+    - t/t.t
+    - t/xml.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.ne9D
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271776783
+  examine_start_time: 1271776755
+  examine_time: 28
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 1
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271776783
+  run_start_time: 1271776755
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

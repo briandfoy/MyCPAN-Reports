@@ -1,0 +1,3090 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  blib:
+    - blib/lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+    - blib/lib/Google/Checkout/Command/AddTrackingData.pm
+    - blib/lib/Google/Checkout/Command/ArchiveOrder.pm
+    - blib/lib/Google/Checkout/Command/AuthorizeOrder.pm
+    - blib/lib/Google/Checkout/Command/CancelOrder.pm
+    - blib/lib/Google/Checkout/Command/ChargeOrder.pm
+    - blib/lib/Google/Checkout/Command/DeliverOrder.pm
+    - blib/lib/Google/Checkout/Command/GCOCommand.pm
+    - blib/lib/Google/Checkout/Command/ProcessOrder.pm
+    - blib/lib/Google/Checkout/Command/RefundOrder.pm
+    - blib/lib/Google/Checkout/Command/SendBuyerMessage.pm
+    - blib/lib/Google/Checkout/Command/UnarchiveOrder.pm
+    - blib/lib/Google/Checkout/General/ConfigReader.pm
+    - blib/lib/Google/Checkout/General/DigitalContent.pm
+    - blib/lib/Google/Checkout/General/Error.pm
+    - blib/lib/Google/Checkout/General/FlatRateShipping.pm
+    - blib/lib/Google/Checkout/General/GCO.pm
+    - blib/lib/Google/Checkout/General/GiftCertificate.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculationCallback.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculationResult.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculationResults.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculations.pm
+    - blib/lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+    - blib/lib/Google/Checkout/General/MerchantItem.pm
+    - blib/lib/Google/Checkout/General/ParameterizedUrls.pm
+    - blib/lib/Google/Checkout/General/Pickup.pm
+    - blib/lib/Google/Checkout/General/Shipping.pm
+    - blib/lib/Google/Checkout/General/ShippingRestrictions.pm
+    - blib/lib/Google/Checkout/General/ShoppingCart.pm
+    - blib/lib/Google/Checkout/General/TaxRule.pm
+    - blib/lib/Google/Checkout/General/TaxTable.pm
+    - blib/lib/Google/Checkout/General/TaxTableAreas.pm
+    - blib/lib/Google/Checkout/General/Util.pm
+    - blib/lib/Google/Checkout/Notification/ChargeAmount.pm
+    - blib/lib/Google/Checkout/Notification/ChargebackAmount.pm
+    - blib/lib/Google/Checkout/Notification/Factory.pm
+    - blib/lib/Google/Checkout/Notification/GCONotification.pm
+    - blib/lib/Google/Checkout/Notification/NewOrder.pm
+    - blib/lib/Google/Checkout/Notification/OrderStateChange.pm
+    - blib/lib/Google/Checkout/Notification/RefundAmount.pm
+    - blib/lib/Google/Checkout/Notification/RiskInformation.pm
+    - blib/lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+    - blib/lib/Google/Checkout/XML/CommandXmlWriter.pm
+    - blib/lib/Google/Checkout/XML/Constants.pm
+    - blib/lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+    - blib/lib/Google/Checkout/XML/Writer.pm
+    - blib/man3/Google::Checkout::Command::AddMerchantOrderNumber.3
+    - blib/man3/Google::Checkout::Command::AddTrackingData.3
+    - blib/man3/Google::Checkout::Command::ArchiveOrder.3
+    - blib/man3/Google::Checkout::Command::AuthorizeOrder.3
+    - blib/man3/Google::Checkout::Command::CancelOrder.3
+    - blib/man3/Google::Checkout::Command::ChargeOrder.3
+    - blib/man3/Google::Checkout::Command::DeliverOrder.3
+    - blib/man3/Google::Checkout::Command::GCOCommand.3
+    - blib/man3/Google::Checkout::Command::ProcessOrder.3
+    - blib/man3/Google::Checkout::Command::RefundOrder.3
+    - blib/man3/Google::Checkout::Command::SendBuyerMessage.3
+    - blib/man3/Google::Checkout::Command::UnarchiveOrder.3
+    - blib/man3/Google::Checkout::General::ConfigReader.3
+    - blib/man3/Google::Checkout::General::DigitalContent.3
+    - blib/man3/Google::Checkout::General::Error.3
+    - blib/man3/Google::Checkout::General::FlatRateShipping.3
+    - blib/man3/Google::Checkout::General::GCO.3
+    - blib/man3/Google::Checkout::General::GiftCertificate.3
+    - blib/man3/Google::Checkout::General::MerchantCalculatedShipping.3
+    - blib/man3/Google::Checkout::General::MerchantCalculationCallback.3
+    - blib/man3/Google::Checkout::General::MerchantCalculationResult.3
+    - blib/man3/Google::Checkout::General::MerchantCalculationResults.3
+    - blib/man3/Google::Checkout::General::MerchantCalculations.3
+    - blib/man3/Google::Checkout::General::MerchantCheckoutFlow.3
+    - blib/man3/Google::Checkout::General::MerchantItem.3
+    - blib/man3/Google::Checkout::General::ParameterizedUrls.3
+    - blib/man3/Google::Checkout::General::Pickup.3
+    - blib/man3/Google::Checkout::General::Shipping.3
+    - blib/man3/Google::Checkout::General::ShippingRestrictions.3
+    - blib/man3/Google::Checkout::General::ShoppingCart.3
+    - blib/man3/Google::Checkout::General::TaxRule.3
+    - blib/man3/Google::Checkout::General::TaxTable.3
+    - blib/man3/Google::Checkout::General::TaxTableAreas.3
+    - blib/man3/Google::Checkout::General::Util.3
+    - blib/man3/Google::Checkout::Notification::ChargeAmount.3
+    - blib/man3/Google::Checkout::Notification::ChargebackAmount.3
+    - blib/man3/Google::Checkout::Notification::Factory.3
+    - blib/man3/Google::Checkout::Notification::GCONotification.3
+    - blib/man3/Google::Checkout::Notification::NewOrder.3
+    - blib/man3/Google::Checkout::Notification::OrderStateChange.3
+    - blib/man3/Google::Checkout::Notification::RefundAmount.3
+    - blib/man3/Google::Checkout::Notification::RiskInformation.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Warning: prerequisite Crypt::SSLeay 0.45 not found.
+    Warning: prerequisite Date::Manip 5.4 not found.
+    Warning: prerequisite Digest::HMAC_SHA1 1.01 not found.
+    Warning: prerequisite HTTP::Headers 1.43 not found.
+    Warning: prerequisite HTTP::Request 1.3 not found.
+    Warning: prerequisite LWP 5.65 not found.
+    Warning: prerequisite XML::Simple 2.09 not found.
+    Warning: prerequisite XML::Writer 0.6 not found.
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Google-Checkout
+  build_output: |
+    cp lib/Google/Checkout/Command/AuthorizeOrder.pm blib/lib/Google/Checkout/Command/AuthorizeOrder.pm
+    cp lib/Google/Checkout/XML/Writer.pm blib/lib/Google/Checkout/XML/Writer.pm
+    cp lib/Google/Checkout/General/TaxTable.pm blib/lib/Google/Checkout/General/TaxTable.pm
+    cp lib/Google/Checkout/Command/ChargeOrder.pm blib/lib/Google/Checkout/Command/ChargeOrder.pm
+    cp lib/Google/Checkout/General/ParameterizedUrls.pm blib/lib/Google/Checkout/General/ParameterizedUrls.pm
+    cp lib/Google/Checkout/Notification/ChargebackAmount.pm blib/lib/Google/Checkout/Notification/ChargebackAmount.pm
+    cp lib/Google/Checkout/General/GiftCertificate.pm blib/lib/Google/Checkout/General/GiftCertificate.pm
+    cp lib/Google/Checkout/Command/ProcessOrder.pm blib/lib/Google/Checkout/Command/ProcessOrder.pm
+    cp lib/Google/Checkout/Command/SendBuyerMessage.pm blib/lib/Google/Checkout/Command/SendBuyerMessage.pm
+    cp lib/Google/Checkout/General/FlatRateShipping.pm blib/lib/Google/Checkout/General/FlatRateShipping.pm
+    cp lib/Google/Checkout/Command/RefundOrder.pm blib/lib/Google/Checkout/Command/RefundOrder.pm
+    cp lib/Google/Checkout/Command/DeliverOrder.pm blib/lib/Google/Checkout/Command/DeliverOrder.pm
+    cp lib/Google/Checkout/General/MerchantCalculationResult.pm blib/lib/Google/Checkout/General/MerchantCalculationResult.pm
+    cp lib/Google/Checkout/General/TaxTableAreas.pm blib/lib/Google/Checkout/General/TaxTableAreas.pm
+    cp lib/Google/Checkout/Notification/ChargeAmount.pm blib/lib/Google/Checkout/Notification/ChargeAmount.pm
+    cp lib/Google/Checkout/General/MerchantCalculatedShipping.pm blib/lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+    cp lib/Google/Checkout/Command/ArchiveOrder.pm blib/lib/Google/Checkout/Command/ArchiveOrder.pm
+    cp lib/Google/Checkout/Command/AddMerchantOrderNumber.pm blib/lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+    cp lib/Google/Checkout/Notification/Factory.pm blib/lib/Google/Checkout/Notification/Factory.pm
+    cp lib/Google/Checkout/General/MerchantCalculationResults.pm blib/lib/Google/Checkout/General/MerchantCalculationResults.pm
+    cp lib/Google/Checkout/General/ShoppingCart.pm blib/lib/Google/Checkout/General/ShoppingCart.pm
+    cp lib/Google/Checkout/Notification/RiskInformation.pm blib/lib/Google/Checkout/Notification/RiskInformation.pm
+    cp lib/Google/Checkout/Notification/NewOrder.pm blib/lib/Google/Checkout/Notification/NewOrder.pm
+    cp lib/Google/Checkout/XML/Constants.pm blib/lib/Google/Checkout/XML/Constants.pm
+    cp lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm blib/lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+    cp lib/Google/Checkout/General/GCO.pm blib/lib/Google/Checkout/General/GCO.pm
+    cp lib/Google/Checkout/General/Pickup.pm blib/lib/Google/Checkout/General/Pickup.pm
+    cp lib/Google/Checkout/Notification/GCONotification.pm blib/lib/Google/Checkout/Notification/GCONotification.pm
+    cp lib/Google/Checkout/XML/CheckoutXmlWriter.pm blib/lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+    cp lib/Google/Checkout/General/ShippingRestrictions.pm blib/lib/Google/Checkout/General/ShippingRestrictions.pm
+    cp lib/Google/Checkout/General/TaxRule.pm blib/lib/Google/Checkout/General/TaxRule.pm
+    cp lib/Google/Checkout/Notification/OrderStateChange.pm blib/lib/Google/Checkout/Notification/OrderStateChange.pm
+    cp lib/Google/Checkout/General/MerchantCalculations.pm blib/lib/Google/Checkout/General/MerchantCalculations.pm
+    cp lib/Google/Checkout/General/ConfigReader.pm blib/lib/Google/Checkout/General/ConfigReader.pm
+    cp lib/Google/Checkout/Notification/RefundAmount.pm blib/lib/Google/Checkout/Notification/RefundAmount.pm
+    cp lib/Google/Checkout/General/MerchantCalculationCallback.pm blib/lib/Google/Checkout/General/MerchantCalculationCallback.pm
+    cp lib/Google/Checkout/General/MerchantItem.pm blib/lib/Google/Checkout/General/MerchantItem.pm
+    cp lib/Google/Checkout/Command/CancelOrder.pm blib/lib/Google/Checkout/Command/CancelOrder.pm
+    cp lib/Google/Checkout/General/Shipping.pm blib/lib/Google/Checkout/General/Shipping.pm
+    cp lib/Google/Checkout/Command/UnarchiveOrder.pm blib/lib/Google/Checkout/Command/UnarchiveOrder.pm
+    cp lib/Google/Checkout/Command/GCOCommand.pm blib/lib/Google/Checkout/Command/GCOCommand.pm
+    cp lib/Google/Checkout/General/Util.pm blib/lib/Google/Checkout/General/Util.pm
+    cp lib/Google/Checkout/Command/AddTrackingData.pm blib/lib/Google/Checkout/Command/AddTrackingData.pm
+    cp lib/Google/Checkout/General/DigitalContent.pm blib/lib/Google/Checkout/General/DigitalContent.pm
+    cp lib/Google/Checkout/XML/CommandXmlWriter.pm blib/lib/Google/Checkout/XML/CommandXmlWriter.pm
+    cp lib/Google/Checkout/General/Error.pm blib/lib/Google/Checkout/General/Error.pm
+    cp lib/Google/Checkout/General/MerchantCheckoutFlow.pm blib/lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+    Manifying blib/man3/Google::Checkout::Command::AuthorizeOrder.3
+    Manifying blib/man3/Google::Checkout::Command::ChargeOrder.3
+    Manifying blib/man3/Google::Checkout::General::TaxTable.3
+    Manifying blib/man3/Google::Checkout::General::ParameterizedUrls.3
+    Manifying blib/man3/Google::Checkout::Notification::ChargebackAmount.3
+    Manifying blib/man3/Google::Checkout::General::GiftCertificate.3
+    Manifying blib/man3/Google::Checkout::Command::ProcessOrder.3
+    Manifying blib/man3/Google::Checkout::Command::SendBuyerMessage.3
+    Manifying blib/man3/Google::Checkout::General::FlatRateShipping.3
+    Manifying blib/man3/Google::Checkout::Command::RefundOrder.3
+    Manifying blib/man3/Google::Checkout::Command::DeliverOrder.3
+    Manifying blib/man3/Google::Checkout::General::MerchantCalculationResult.3
+    Manifying blib/man3/Google::Checkout::General::TaxTableAreas.3
+    Manifying blib/man3/Google::Checkout::Notification::ChargeAmount.3
+    Manifying blib/man3/Google::Checkout::General::MerchantCalculatedShipping.3
+    Manifying blib/man3/Google::Checkout::Command::ArchiveOrder.3
+    Manifying blib/man3/Google::Checkout::Notification::Factory.3
+    Manifying blib/man3/Google::Checkout::Command::AddMerchantOrderNumber.3
+    Manifying blib/man3/Google::Checkout::General::MerchantCalculationResults.3
+    Manifying blib/man3/Google::Checkout::Notification::NewOrder.3
+    Manifying blib/man3/Google::Checkout::Notification::RiskInformation.3
+    Manifying blib/man3/Google::Checkout::General::ShoppingCart.3
+    Manifying blib/man3/Google::Checkout::General::GCO.3
+    Manifying blib/man3/Google::Checkout::General::Pickup.3
+    Manifying blib/man3/Google::Checkout::Notification::GCONotification.3
+    Manifying blib/man3/Google::Checkout::General::ShippingRestrictions.3
+    Manifying blib/man3/Google::Checkout::General::TaxRule.3
+    Manifying blib/man3/Google::Checkout::Notification::OrderStateChange.3
+    Manifying blib/man3/Google::Checkout::General::MerchantCalculations.3
+    Manifying blib/man3/Google::Checkout::Notification::RefundAmount.3
+    Manifying blib/man3/Google::Checkout::General::ConfigReader.3
+    Manifying blib/man3/Google::Checkout::General::MerchantCalculationCallback.3
+    Manifying blib/man3/Google::Checkout::General::MerchantItem.3
+    Manifying blib/man3/Google::Checkout::Command::CancelOrder.3
+    Manifying blib/man3/Google::Checkout::General::Shipping.3
+    Manifying blib/man3/Google::Checkout::Command::GCOCommand.3
+    Manifying blib/man3/Google::Checkout::Command::UnarchiveOrder.3
+    Manifying blib/man3/Google::Checkout::General::Util.3
+    Manifying blib/man3/Google::Checkout::Command::AddTrackingData.3
+    Manifying blib/man3/Google::Checkout::General::DigitalContent.3
+    Manifying blib/man3/Google::Checkout::General::MerchantCheckoutFlow.3
+    Manifying blib/man3/Google::Checkout::General::Error.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy/Google-Checkout-1.0.9/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy/Google-Checkout-1.0.9
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy/Google-Checkout-1.0.9/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy/Google-Checkout-1.0.9/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DZHUO
+  dist_basename: Google-Checkout-1.0.9.tar.gz
+  dist_date: 1184192778
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy/Google-Checkout-1.0.9
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy/Google-Checkout-1.0.9
+  dist_file: /home/brian/CPAN/authors/id/D/DZ/DZHUO/Google-Checkout-1.0.9.tar.gz
+  dist_md5: 621810a9752634e72f6b7e383dee8069
+  dist_size: 48602
+  manifest:
+    - Changes
+    - MANIFEST
+    - Makefile.PL
+    - README
+    - conf/GCOSystemGlobal.conf
+    - examples/checkout/checkout_example1.pl
+    - examples/checkout/checkout_example2.pl
+    - examples/checkout/checkout_example3.pl
+    - examples/checkout/checkout_example4.pl
+    - examples/command/add_merchant_order_number_command_example.pl
+    - examples/command/add_tracking_data_command_example.pl
+    - examples/command/archive_order_command_example.pl
+    - examples/command/authorize_order_command_example.pl
+    - examples/command/cancel_order_command_example.pl
+    - examples/command/charge_order_command_example.pl
+    - examples/command/deliver_order_command_example.pl
+    - examples/command/process_order_command_example.pl
+    - examples/command/refund_order_command_example.pl
+    - examples/command/send_buyer_message_command_example.pl
+    - examples/command/unarchive_order_command_example.pl
+    - examples/notification/charge_amount_notification_example.pl
+    - examples/notification/chargeback_amount_notification_example.pl
+    - examples/notification/merchant_calculation_callback_example.pl
+    - examples/notification/new_order_notification_example.pl
+    - examples/notification/notification_factory_example.pl
+    - examples/notification/order_status_change_notification_example.pl
+    - examples/notification/refund_amount_notification_example.pl
+    - examples/notification/risk_information_notification_example.pl
+    - examples/notification/send_notification_response_example.pl
+    - examples/xml/charge_amount_notification.xml
+    - examples/xml/chargeback_amount_notification.xml
+    - examples/xml/merchant_calculation_callback.xml
+    - examples/xml/new_order_notification.xml
+    - examples/xml/order_state_change_notification.xml
+    - examples/xml/refund_amount_notification.xml
+    - examples/xml/risk_information_notification.xml
+    - lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+    - lib/Google/Checkout/Command/AddTrackingData.pm
+    - lib/Google/Checkout/Command/ArchiveOrder.pm
+    - lib/Google/Checkout/Command/AuthorizeOrder.pm
+    - lib/Google/Checkout/Command/CancelOrder.pm
+    - lib/Google/Checkout/Command/ChargeOrder.pm
+    - lib/Google/Checkout/Command/DeliverOrder.pm
+    - lib/Google/Checkout/Command/GCOCommand.pm
+    - lib/Google/Checkout/Command/ProcessOrder.pm
+    - lib/Google/Checkout/Command/RefundOrder.pm
+    - lib/Google/Checkout/Command/SendBuyerMessage.pm
+    - lib/Google/Checkout/Command/UnarchiveOrder.pm
+    - lib/Google/Checkout/General/ConfigReader.pm
+    - lib/Google/Checkout/General/DigitalContent.pm
+    - lib/Google/Checkout/General/Error.pm
+    - lib/Google/Checkout/General/FlatRateShipping.pm
+    - lib/Google/Checkout/General/GCO.pm
+    - lib/Google/Checkout/General/GiftCertificate.pm
+    - lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+    - lib/Google/Checkout/General/MerchantCalculationCallback.pm
+    - lib/Google/Checkout/General/MerchantCalculationResult.pm
+    - lib/Google/Checkout/General/MerchantCalculationResults.pm
+    - lib/Google/Checkout/General/MerchantCalculations.pm
+    - lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+    - lib/Google/Checkout/General/MerchantItem.pm
+    - lib/Google/Checkout/General/ParameterizedUrls.pm
+    - lib/Google/Checkout/General/Pickup.pm
+    - lib/Google/Checkout/General/Shipping.pm
+    - lib/Google/Checkout/General/ShippingRestrictions.pm
+    - lib/Google/Checkout/General/ShoppingCart.pm
+    - lib/Google/Checkout/General/TaxRule.pm
+    - lib/Google/Checkout/General/TaxTable.pm
+    - lib/Google/Checkout/General/TaxTableAreas.pm
+    - lib/Google/Checkout/General/Util.pm
+    - lib/Google/Checkout/Notification/ChargeAmount.pm
+    - lib/Google/Checkout/Notification/ChargebackAmount.pm
+    - lib/Google/Checkout/Notification/Factory.pm
+    - lib/Google/Checkout/Notification/GCONotification.pm
+    - lib/Google/Checkout/Notification/NewOrder.pm
+    - lib/Google/Checkout/Notification/OrderStateChange.pm
+    - lib/Google/Checkout/Notification/RefundAmount.pm
+    - lib/Google/Checkout/Notification/RiskInformation.pm
+    - lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+    - lib/Google/Checkout/XML/CommandXmlWriter.pm
+    - lib/Google/Checkout/XML/Constants.pm
+    - lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+    - lib/Google/Checkout/XML/Writer.pm
+    - t/00-load.t
+    - t/01-load.t
+    - t/pod-coverage.t
+    - t/pod.t
+  manifest_file_info:
+    - bytesize: 1343
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1184190634
+      name: Changes
+    - bytesize: 3883
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1184191605
+      name: MANIFEST
+    - bytesize: 728
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1171062926
+      name: Makefile.PL
+    - bytesize: 1950
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1174069797
+      name: README
+    - bytesize: 1086
+      file_mime_type: ~
+      line_count: ~
+      md5: 8d1746d7692e1f554ac93f3f887213e3
+      mtime: 1170883703
+      name: conf/GCOSystemGlobal.conf
+    - bytesize: 2711
+      file_mime_type: ~
+      line_count: ~
+      md5: 47c876c2fbe1f33c0676d1b7d5091008
+      mtime: 1184192189
+      name: examples/checkout/checkout_example1.pl
+    - bytesize: 7050
+      file_mime_type: ~
+      line_count: ~
+      md5: 3daf48dc1e771ac68db1faaf9d1abdc9
+      mtime: 1181067390
+      name: examples/checkout/checkout_example2.pl
+    - bytesize: 7292
+      file_mime_type: ~
+      line_count: ~
+      md5: 51f3a68c6cf9c86ac56e798f602a6bd5
+      mtime: 1182894647
+      name: examples/checkout/checkout_example3.pl
+    - bytesize: 7786
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a0b8f9e3c6feba0b58e5b0877a644f1
+      mtime: 1181067447
+      name: examples/checkout/checkout_example4.pl
+    - bytesize: 798
+      file_mime_type: ~
+      line_count: ~
+      md5: ec56465f33419633f35f34172cd05554
+      mtime: 1171051450
+      name: examples/command/add_merchant_order_number_command_example.pl
+    - bytesize: 843
+      file_mime_type: ~
+      line_count: ~
+      md5: be996a61e9a7ac199b4cb9b23159aca0
+      mtime: 1171048325
+      name: examples/command/add_tracking_data_command_example.pl
+    - bytesize: 627
+      file_mime_type: ~
+      line_count: ~
+      md5: 6839f11499a5b655ed22ae3a5c3f893b
+      mtime: 1170987878
+      name: examples/command/archive_order_command_example.pl
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: ca43f66752372b704dc8fb9084622b52
+      mtime: 1182881553
+      name: examples/command/authorize_order_command_example.pl
+    - bytesize: 799
+      file_mime_type: ~
+      line_count: ~
+      md5: 542f9f2401fa6ea51e54eadd17f47a92
+      mtime: 1170987893
+      name: examples/command/cancel_order_command_example.pl
+    - bytesize: 711
+      file_mime_type: ~
+      line_count: ~
+      md5: 21ed6f0aad620e1264ea4ecf17235b9a
+      mtime: 1170987903
+      name: examples/command/charge_order_command_example.pl
+    - bytesize: 779
+      file_mime_type: ~
+      line_count: ~
+      md5: e6c7f8f2307fbd942e48a7787ef4ac67
+      mtime: 1171048577
+      name: examples/command/deliver_order_command_example.pl
+    - bytesize: 673
+      file_mime_type: ~
+      line_count: ~
+      md5: a2fc08a2e606fa5fb7449a1491be676e
+      mtime: 1170987926
+      name: examples/command/process_order_command_example.pl
+    - bytesize: 867
+      file_mime_type: ~
+      line_count: ~
+      md5: 23f280dd39be088fe94e822022b8567c
+      mtime: 1170987938
+      name: examples/command/refund_order_command_example.pl
+    - bytesize: 762
+      file_mime_type: ~
+      line_count: ~
+      md5: a4066d75d42b9a1900a6166e71ab4583
+      mtime: 1171048675
+      name: examples/command/send_buyer_message_command_example.pl
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c1bb96d6b55600503dbfeb54c83792c
+      mtime: 1170987963
+      name: examples/command/unarchive_order_command_example.pl
+    - bytesize: 690
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c361ba03fd78bc4c562045d3d48b360
+      mtime: 1170982995
+      name: examples/notification/charge_amount_notification_example.pl
+    - bytesize: 701
+      file_mime_type: ~
+      line_count: ~
+      md5: 8924576c9c639059f2d40410c686ecf9
+      mtime: 1170985763
+      name: examples/notification/chargeback_amount_notification_example.pl
+    - bytesize: 4358
+      file_mime_type: ~
+      line_count: ~
+      md5: 11f2fadbddee96a6d3ad8691f8e03fd2
+      mtime: 1184020179
+      name: examples/notification/merchant_calculation_callback_example.pl
+    - bytesize: 7455
+      file_mime_type: ~
+      line_count: ~
+      md5: 461c0ee6689c0249294b37f5ad2eb780
+      mtime: 1184020716
+      name: examples/notification/new_order_notification_example.pl
+    - bytesize: 2043
+      file_mime_type: ~
+      line_count: ~
+      md5: e546e0b5a2d890281f115c565ae01944
+      mtime: 1170983595
+      name: examples/notification/notification_factory_example.pl
+    - bytesize: 1174
+      file_mime_type: ~
+      line_count: ~
+      md5: 61460e448f597f6ac226db033c5bbd43
+      mtime: 1170983819
+      name: examples/notification/order_status_change_notification_example.pl
+    - bytesize: 692
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fa5e13f6de31ec1bbff88c6099e29a5
+      mtime: 1170987669
+      name: examples/notification/refund_amount_notification_example.pl
+    - bytesize: 2406
+      file_mime_type: ~
+      line_count: ~
+      md5: 371dd777dd9bb2bc67b296bab87c9e3e
+      mtime: 1170984020
+      name: examples/notification/risk_information_notification_example.pl
+    - bytesize: 653
+      file_mime_type: ~
+      line_count: ~
+      md5: ec33fffad817e9cdbeb38819252c5506
+      mtime: 1170987705
+      name: examples/notification/send_notification_response_example.pl
+    - bytesize: 445
+      file_mime_type: ~
+      line_count: ~
+      md5: 08d4bdbb892e107065b75abfe2f519f2
+      mtime: 1170883893
+      name: examples/xml/charge_amount_notification.xml
+    - bytesize: 467
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ee3785473d92547e2cd5c7492a4545c
+      mtime: 1170883893
+      name: examples/xml/chargeback_amount_notification.xml
+    - bytesize: 2169
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ed4282fcc61c90c95eb32272825df23
+      mtime: 1184020195
+      name: examples/xml/merchant_calculation_callback.xml
+    - bytesize: 3317
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e539e12d73ad1f7c269be9036440da8
+      mtime: 1184020810
+      name: examples/xml/new_order_notification.xml
+    - bytesize: 637
+      file_mime_type: ~
+      line_count: ~
+      md5: ec32be00916a912c13b90bcf3f4bf2b0
+      mtime: 1170883893
+      name: examples/xml/order_state_change_notification.xml
+    - bytesize: 446
+      file_mime_type: ~
+      line_count: ~
+      md5: fd44fd09caac908b723204b05acea5ab
+      mtime: 1170883893
+      name: examples/xml/refund_amount_notification.xml
+    - bytesize: 940
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c6535a1f5af75ce887b2b09972bd20b
+      mtime: 1170883893
+      name: examples/xml/risk_information_notification.xml
+    - bytesize: 2941
+      file_mime_type: ~
+      line_count: ~
+      md5: e7992ab1c7fd8e6c37ca8cbc67cbc1fe
+      mtime: 1170975921
+      name: lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+    - bytesize: 2971
+      file_mime_type: ~
+      line_count: ~
+      md5: 18e4e50b037b0e9519d3bbd77b94d731
+      mtime: 1171051625
+      name: lib/Google/Checkout/Command/AddTrackingData.pm
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: a9b50acb6691c5e39ac3761e6ccdcf55
+      mtime: 1170976044
+      name: lib/Google/Checkout/Command/ArchiveOrder.pm
+    - bytesize: 1646
+      file_mime_type: ~
+      line_count: ~
+      md5: 65d7cde238c3f9e7688178172109bd18
+      mtime: 1182881335
+      name: lib/Google/Checkout/Command/AuthorizeOrder.pm
+    - bytesize: 3111
+      file_mime_type: ~
+      line_count: ~
+      md5: 668de0a8f506142d80a9d30b4497e564
+      mtime: 1170976116
+      name: lib/Google/Checkout/Command/CancelOrder.pm
+    - bytesize: 2672
+      file_mime_type: ~
+      line_count: ~
+      md5: ae10204dc36c177e12e75219e0f87b57
+      mtime: 1178052941
+      name: lib/Google/Checkout/Command/ChargeOrder.pm
+    - bytesize: 3922
+      file_mime_type: ~
+      line_count: ~
+      md5: 9babecef6258eb3320995ff76aa69ff7
+      mtime: 1178052966
+      name: lib/Google/Checkout/Command/DeliverOrder.pm
+    - bytesize: 2267
+      file_mime_type: ~
+      line_count: ~
+      md5: ee81615aeb6b97b7f0c1b127b398aa9e
+      mtime: 1178052827
+      name: lib/Google/Checkout/Command/GCOCommand.pm
+    - bytesize: 1716
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e40433bf9b787159f161566b23d50ed
+      mtime: 1170976377
+      name: lib/Google/Checkout/Command/ProcessOrder.pm
+    - bytesize: 4081
+      file_mime_type: ~
+      line_count: ~
+      md5: 3228649c305ea9a7421416e4f44bc19f
+      mtime: 1178053027
+      name: lib/Google/Checkout/Command/RefundOrder.pm
+    - bytesize: 3204
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f9834a06d17760ce1927a983c400506
+      mtime: 1170976539
+      name: lib/Google/Checkout/Command/SendBuyerMessage.pm
+    - bytesize: 1645
+      file_mime_type: ~
+      line_count: ~
+      md5: 46b3160753ab7e5a7676004832eba4a5
+      mtime: 1170976519
+      name: lib/Google/Checkout/Command/UnarchiveOrder.pm
+    - bytesize: 2007
+      file_mime_type: ~
+      line_count: ~
+      md5: d58a4f0cf9cea0b99585a2a48f1b08a0
+      mtime: 1171047421
+      name: lib/Google/Checkout/General/ConfigReader.pm
+    - bytesize: 6456
+      file_mime_type: ~
+      line_count: ~
+      md5: 35e1a2e42f3b63a7ca54318387890cf4
+      mtime: 1184190605
+      name: lib/Google/Checkout/General/DigitalContent.pm
+    - bytesize: 2506
+      file_mime_type: ~
+      line_count: ~
+      md5: 6858c5d1a08e86c0af3c31c16d5c906d
+      mtime: 1170976639
+      name: lib/Google/Checkout/General/Error.pm
+    - bytesize: 2309
+      file_mime_type: ~
+      line_count: ~
+      md5: 355c6eb5f12464db9480e80349060576
+      mtime: 1170976668
+      name: lib/Google/Checkout/General/FlatRateShipping.pm
+    - bytesize: 14874
+      file_mime_type: ~
+      line_count: ~
+      md5: 75b465ca4a21bec6362d93ebbced53eb
+      mtime: 1183139140
+      name: lib/Google/Checkout/General/GCO.pm
+    - bytesize: 3485
+      file_mime_type: ~
+      line_count: ~
+      md5: d2db981829d1d3ae0b4ede067612dbb6
+      mtime: 1184018433
+      name: lib/Google/Checkout/General/GiftCertificate.pm
+    - bytesize: 2907
+      file_mime_type: ~
+      line_count: ~
+      md5: ea4597aef346c0147db58b426640af3e
+      mtime: 1170976755
+      name: lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+    - bytesize: 5093
+      file_mime_type: ~
+      line_count: ~
+      md5: 603326e2cc7dea8500e8381757429cc0
+      mtime: 1184020280
+      name: lib/Google/Checkout/General/MerchantCalculationCallback.pm
+    - bytesize: 7755
+      file_mime_type: ~
+      line_count: ~
+      md5: ac114cbfd656c96246421b90724660aa
+      mtime: 1182815948
+      name: lib/Google/Checkout/General/MerchantCalculationResult.pm
+    - bytesize: 6485
+      file_mime_type: ~
+      line_count: ~
+      md5: aa6cf1a07f386bdef180b656373c680e
+      mtime: 1182815793
+      name: lib/Google/Checkout/General/MerchantCalculationResults.pm
+    - bytesize: 3393
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dd829937f6a399ed76ccaea04d3cc71
+      mtime: 1170977054
+      name: lib/Google/Checkout/General/MerchantCalculations.pm
+    - bytesize: 6769
+      file_mime_type: ~
+      line_count: ~
+      md5: 3932d278d185104e784c6254c811bb85
+      mtime: 1182894311
+      name: lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+    - bytesize: 6461
+      file_mime_type: ~
+      line_count: ~
+      md5: f16781efe0242966e986e6eb301d1d2d
+      mtime: 1170987536
+      name: lib/Google/Checkout/General/MerchantItem.pm
+    - bytesize: 3539
+      file_mime_type: ~
+      line_count: ~
+      md5: 5998f4b7e244a923ea3410c48bd09e4b
+      mtime: 1180993999
+      name: lib/Google/Checkout/General/ParameterizedUrls.pm
+    - bytesize: 2262
+      file_mime_type: ~
+      line_count: ~
+      md5: 0745c883801d9774c9dae8a2479d1066
+      mtime: 1170977229
+      name: lib/Google/Checkout/General/Pickup.pm
+    - bytesize: 2596
+      file_mime_type: ~
+      line_count: ~
+      md5: a3421f3b81803760365fa30265da193d
+      mtime: 1170977261
+      name: lib/Google/Checkout/General/Shipping.pm
+    - bytesize: 5197
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d3fb7b3f71a103b9785740386a83117
+      mtime: 1170977288
+      name: lib/Google/Checkout/General/ShippingRestrictions.pm
+    - bytesize: 3848
+      file_mime_type: ~
+      line_count: ~
+      md5: 598e437489455b859c9cc69ba5a20ccc
+      mtime: 1170977325
+      name: lib/Google/Checkout/General/ShoppingCart.pm
+    - bytesize: 2857
+      file_mime_type: ~
+      line_count: ~
+      md5: 94a96f84d76bccf7c66e9f0b639f15c9
+      mtime: 1170977357
+      name: lib/Google/Checkout/General/TaxRule.pm
+    - bytesize: 4177
+      file_mime_type: ~
+      line_count: ~
+      md5: f66287f1372e8d6b9e70821472d0f907
+      mtime: 1170977463
+      name: lib/Google/Checkout/General/TaxTable.pm
+    - bytesize: 3813
+      file_mime_type: ~
+      line_count: ~
+      md5: d493376db608c3defd9404051eb68d2f
+      mtime: 1170977417
+      name: lib/Google/Checkout/General/TaxTableAreas.pm
+    - bytesize: 7385
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b1c3bde172af040cd49a71466ad8724
+      mtime: 1184190699
+      name: lib/Google/Checkout/General/Util.pm
+    - bytesize: 2192
+      file_mime_type: ~
+      line_count: ~
+      md5: 05a54d51711571485f17e3e81b063dbd
+      mtime: 1170977573
+      name: lib/Google/Checkout/Notification/ChargeAmount.pm
+    - bytesize: 2277
+      file_mime_type: ~
+      line_count: ~
+      md5: 633f779f8f62dc45e445a0cc84f3c442
+      mtime: 1170977626
+      name: lib/Google/Checkout/Notification/ChargebackAmount.pm
+    - bytesize: 3579
+      file_mime_type: ~
+      line_count: ~
+      md5: c5d72aafc1a4b4731baa2b853f4225fe
+      mtime: 1170977642
+      name: lib/Google/Checkout/Notification/Factory.pm
+    - bytesize: 1914
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a0cbfef910b806977b4d44128bc533b
+      mtime: 1174682376
+      name: lib/Google/Checkout/Notification/GCONotification.pm
+    - bytesize: 14843
+      file_mime_type: ~
+      line_count: ~
+      md5: 078820ff663a97ec2e87058021f54e64
+      mtime: 1184020722
+      name: lib/Google/Checkout/Notification/NewOrder.pm
+    - bytesize: 3101
+      file_mime_type: ~
+      line_count: ~
+      md5: 94a4a048c67e5e42df4a9bb2a77790f2
+      mtime: 1170977766
+      name: lib/Google/Checkout/Notification/OrderStateChange.pm
+    - bytesize: 2065
+      file_mime_type: ~
+      line_count: ~
+      md5: 07e14c7b3f17198b41cb3ef4a4cdff90
+      mtime: 1170977808
+      name: lib/Google/Checkout/Notification/RefundAmount.pm
+    - bytesize: 4634
+      file_mime_type: ~
+      line_count: ~
+      md5: 0dbce1f54c40c0ef53d1eeb8ab751038
+      mtime: 1170977875
+      name: lib/Google/Checkout/Notification/RiskInformation.pm
+    - bytesize: 18153
+      file_mime_type: ~
+      line_count: ~
+      md5: ab87deba49bcda8e9a4f5a2e4f27082f
+      mtime: 1184192253
+      name: lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: 37497a69486baff1f2d2047e31dfbaac
+      mtime: 1176848338
+      name: lib/Google/Checkout/XML/CommandXmlWriter.pm
+    - bytesize: 11812
+      file_mime_type: ~
+      line_count: ~
+      md5: 5cacc4c5dbe1ae629c8012190a9a647f
+      mtime: 1184190607
+      name: lib/Google/Checkout/XML/Constants.pm
+    - bytesize: 778
+      file_mime_type: ~
+      line_count: ~
+      md5: 41d2274733914dce4894afa798625d12
+      mtime: 1172793631
+      name: lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+    - bytesize: 1503
+      file_mime_type: ~
+      line_count: ~
+      md5: 1178c9286cc6b8d82a2c0e27124aa1f9
+      mtime: 1170977914
+      name: lib/Google/Checkout/XML/Writer.pm
+    - bytesize: 147
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1170979331
+      name: t/00-load.t
+    - bytesize: 2726
+      file_mime_type: ~
+      line_count: ~
+      md5: e75837f98f5b2bf2cbc12e1c54e97d72
+      mtime: 1170980147
+      name: t/01-load.t
+    - bytesize: 172
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1170877931
+      name: t/pod-coverage.t
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1170877931
+      name: t/pod.t
+  module_info:
+    - bytesize: 2941
+      file_mime_type: ~
+      line_count: ~
+      md5: 05ff4b25fd95d06fe88ec483c42087aa
+      module_name_from_file_guess: Google::Checkout::Command::AddMerchantOrderNumber
+      mtime: 1170975921
+      name: blib/lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+      packages:
+        - Google::Checkout::Command::AddMerchantOrderNumber
+      primary_package: Google::Checkout::Command::AddMerchantOrderNumber
+      uses:
+        - strict
+        - warnings
+        - utf8
+        - Google::Checkout::General::Error
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+        - Google::Checkout::XML::Constants
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2971
+      file_mime_type: ~
+      line_count: ~
+      md5: dd33134e11e14b66f205a1442bf9e7a4
+      module_name_from_file_guess: Google::Checkout::Command::AddTrackingData
+      mtime: 1171051625
+      name: blib/lib/Google/Checkout/Command/AddTrackingData.pm
+      packages:
+        - Google::Checkout::Command::AddTrackingData
+      primary_package: Google::Checkout::Command::AddTrackingData
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::General::Util
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::Command::DeliverOrder
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/AddTrackingData.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1628
+      file_mime_type: ~
+      line_count: ~
+      md5: 79335995039ddfe99549c50422014c2d
+      module_name_from_file_guess: Google::Checkout::Command::ArchiveOrder
+      mtime: 1170976044
+      name: blib/lib/Google/Checkout/Command/ArchiveOrder.pm
+      packages:
+        - Google::Checkout::Command::ArchiveOrder
+      primary_package: Google::Checkout::Command::ArchiveOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/ArchiveOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1646
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a93794029a8b6b330b7401f90b5da1
+      module_name_from_file_guess: Google::Checkout::Command::AuthorizeOrder
+      mtime: 1182881335
+      name: blib/lib/Google/Checkout/Command/AuthorizeOrder.pm
+      packages:
+        - Google::Checkout::Command::AuthorizeOrder
+      primary_package: Google::Checkout::Command::AuthorizeOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/AuthorizeOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3111
+      file_mime_type: ~
+      line_count: ~
+      md5: c6f985ad65fa2e56bfa9d183beb63b12
+      module_name_from_file_guess: Google::Checkout::Command::CancelOrder
+      mtime: 1170976116
+      name: blib/lib/Google/Checkout/Command/CancelOrder.pm
+      packages:
+        - Google::Checkout::Command::CancelOrder
+      primary_package: Google::Checkout::Command::CancelOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+        - Google::Checkout::General::Error
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/CancelOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2672
+      file_mime_type: ~
+      line_count: ~
+      md5: 291a7ad685a249a2f56fcd4d28bcabd6
+      module_name_from_file_guess: Google::Checkout::Command::ChargeOrder
+      mtime: 1178052941
+      name: blib/lib/Google/Checkout/Command/ChargeOrder.pm
+      packages:
+        - Google::Checkout::Command::ChargeOrder
+      primary_package: Google::Checkout::Command::ChargeOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/ChargeOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3922
+      file_mime_type: ~
+      line_count: ~
+      md5: 05a0b9c3a0aba11d62ddf4ef1b420483
+      module_name_from_file_guess: Google::Checkout::Command::DeliverOrder
+      mtime: 1178052966
+      name: blib/lib/Google/Checkout/Command/DeliverOrder.pm
+      packages:
+        - Google::Checkout::Command::DeliverOrder
+      primary_package: Google::Checkout::Command::DeliverOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/DeliverOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2267
+      file_mime_type: ~
+      line_count: ~
+      md5: 53ba3581183c7258352fde7578640820
+      module_name_from_file_guess: Google::Checkout::Command::GCOCommand
+      mtime: 1178052827
+      name: blib/lib/Google/Checkout/Command/GCOCommand.pm
+      packages:
+        - Google::Checkout::Command::GCOCommand
+      primary_package: Google::Checkout::Command::GCOCommand
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::XML::Writer
+        - Google::Checkout::XML::Constants
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/GCOCommand.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1716
+      file_mime_type: ~
+      line_count: ~
+      md5: d916236563072e4b9b38a061c4344f66
+      module_name_from_file_guess: Google::Checkout::Command::ProcessOrder
+      mtime: 1170976377
+      name: blib/lib/Google/Checkout/Command/ProcessOrder.pm
+      packages:
+        - Google::Checkout::Command::ProcessOrder
+      primary_package: Google::Checkout::Command::ProcessOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/ProcessOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4081
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e745f324e5e657752ca2c4199b0d1fa
+      module_name_from_file_guess: Google::Checkout::Command::RefundOrder
+      mtime: 1178053027
+      name: blib/lib/Google/Checkout/Command/RefundOrder.pm
+      packages:
+        - Google::Checkout::Command::RefundOrder
+      primary_package: Google::Checkout::Command::RefundOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/RefundOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3204
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e58ffcca6c38463d7b5819371c5eafb
+      module_name_from_file_guess: Google::Checkout::Command::SendBuyerMessage
+      mtime: 1170976539
+      name: blib/lib/Google/Checkout/Command/SendBuyerMessage.pm
+      packages:
+        - Google::Checkout::Command::SendBuyerMessage
+      primary_package: Google::Checkout::Command::SendBuyerMessage
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+        - Google::Checkout::General::Error
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/SendBuyerMessage.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1645
+      file_mime_type: ~
+      line_count: ~
+      md5: 711ddf2739eb04a308ccd6c807e42bee
+      module_name_from_file_guess: Google::Checkout::Command::UnarchiveOrder
+      mtime: 1170976519
+      name: blib/lib/Google/Checkout/Command/UnarchiveOrder.pm
+      packages:
+        - Google::Checkout::Command::UnarchiveOrder
+      primary_package: Google::Checkout::Command::UnarchiveOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Command::GCOCommand
+      version_info:
+        filename: blib/lib/Google/Checkout/Command/UnarchiveOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2007
+      file_mime_type: ~
+      line_count: ~
+      md5: 69e8a6fff5ea22e4e428963f4b05a095
+      module_name_from_file_guess: Google::Checkout::General::ConfigReader
+      mtime: 1171047421
+      name: blib/lib/Google/Checkout/General/ConfigReader.pm
+      packages:
+        - Google::Checkout::General::ConfigReader
+      primary_package: Google::Checkout::General::ConfigReader
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::General::Util
+      version_info:
+        filename: blib/lib/Google/Checkout/General/ConfigReader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6456
+      file_mime_type: ~
+      line_count: ~
+      md5: fd727c79740c52c26f8531d519994de4
+      module_name_from_file_guess: Google::Checkout::General::DigitalContent
+      mtime: 1184190605
+      name: blib/lib/Google/Checkout/General/DigitalContent.pm
+      packages:
+        - Google::Checkout::General::DigitalContent
+      primary_package: Google::Checkout::General::DigitalContent
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::General::Util
+        - Google::Checkout::General::MerchantItem
+        - constant
+      version_info:
+        filename: blib/lib/Google/Checkout/General/DigitalContent.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2506
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b6fe527830934812d050129770be1e1
+      module_name_from_file_guess: Google::Checkout::General::Error
+      mtime: 1170976639
+      name: blib/lib/Google/Checkout/General/Error.pm
+      packages:
+        - Google::Checkout::General::Error
+      primary_package: Google::Checkout::General::Error
+      uses:
+        - strict
+        - warnings
+        - overload
+      version_info:
+        filename: blib/lib/Google/Checkout/General/Error.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2309
+      file_mime_type: ~
+      line_count: ~
+      md5: 64276890d62095bd2d0b8208143fb860
+      module_name_from_file_guess: Google::Checkout::General::FlatRateShipping
+      mtime: 1170976668
+      name: blib/lib/Google/Checkout/General/FlatRateShipping.pm
+      packages:
+        - Google::Checkout::General::FlatRateShipping
+      primary_package: Google::Checkout::General::FlatRateShipping
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Shipping
+      version_info:
+        filename: blib/lib/Google/Checkout/General/FlatRateShipping.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14874
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e47df8f971c6b32959eb61498e67e34
+      module_name_from_file_guess: Google::Checkout::General::GCO
+      mtime: 1183139140
+      name: blib/lib/Google/Checkout/General/GCO.pm
+      packages:
+        - Google::Checkout::General::GCO
+      primary_package: Google::Checkout::General::GCO
+      uses:
+        - strict
+        - warnings
+        - CGI
+        - Google::Checkout::General::Error
+        - LWP
+        - XML::Simple
+        - Crypt::SSLeay
+        - Google::Checkout::General::ConfigReader
+        - HTTP::Request
+        - HTTP::Headers
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::XML::CommandXmlWriter
+        - Google::Checkout::XML::CheckoutXmlWriter
+        - Google::Checkout::General::MerchantCalculationResults
+        - Google::Checkout::XML::NotificationResponseXmlWriter
+        - Google::Checkout::General::Util
+      version_info:
+        filename: blib/lib/Google/Checkout/General/GCO.pm
+        identifier: VERSION
+        line_number: 211
+        sigil: $
+        value: 1.0.9
+    - bytesize: 3485
+      file_mime_type: ~
+      line_count: ~
+      md5: dc482efe252bf127ccbf072ff771c1cf
+      module_name_from_file_guess: Google::Checkout::General::GiftCertificate
+      mtime: 1184018433
+      name: blib/lib/Google/Checkout/General/GiftCertificate.pm
+      packages:
+        - Google::Checkout::General::GiftCertificate
+      primary_package: Google::Checkout::General::GiftCertificate
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+      version_info:
+        filename: blib/lib/Google/Checkout/General/GiftCertificate.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2907
+      file_mime_type: ~
+      line_count: ~
+      md5: cdd1565a7008f1dbea4a9b6776df9ff0
+      module_name_from_file_guess: Google::Checkout::General::MerchantCalculatedShipping
+      mtime: 1170976755
+      name: blib/lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+      packages:
+        - Google::Checkout::General::MerchantCalculatedShipping
+      primary_package: Google::Checkout::General::MerchantCalculatedShipping
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Shipping
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5093
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a3f02f082dbb9be1b26c7021d294d86
+      module_name_from_file_guess: Google::Checkout::General::MerchantCalculationCallback
+      mtime: 1184020280
+      name: blib/lib/Google/Checkout/General/MerchantCalculationCallback.pm
+      packages:
+        - Google::Checkout::General::MerchantCalculationCallback
+      primary_package: Google::Checkout::General::MerchantCalculationCallback
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::Notification::NewOrder
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantCalculationCallback.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7755
+      file_mime_type: ~
+      line_count: ~
+      md5: 834b1dc13e3c87c2f0b41f06851612a3
+      module_name_from_file_guess: Google::Checkout::General::MerchantCalculationResult
+      mtime: 1182815948
+      name: blib/lib/Google/Checkout/General/MerchantCalculationResult.pm
+      packages:
+        - Google::Checkout::General::MerchantCalculationResult
+      primary_package: Google::Checkout::General::MerchantCalculationResult
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantCalculationResult.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6485
+      file_mime_type: ~
+      line_count: ~
+      md5: 0fc82d61078aa08214e60bf27372b5b9
+      module_name_from_file_guess: Google::Checkout::General::MerchantCalculationResults
+      mtime: 1182815793
+      name: blib/lib/Google/Checkout/General/MerchantCalculationResults.pm
+      packages:
+        - Google::Checkout::General::MerchantCalculationResults
+      primary_package: Google::Checkout::General::MerchantCalculationResults
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::XML::Writer
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantCalculationResults.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3393
+      file_mime_type: ~
+      line_count: ~
+      md5: 43fd1d19c47223f563f9b1c33644c02a
+      module_name_from_file_guess: Google::Checkout::General::MerchantCalculations
+      mtime: 1170977054
+      name: blib/lib/Google/Checkout/General/MerchantCalculations.pm
+      packages:
+        - Google::Checkout::General::MerchantCalculations
+      primary_package: Google::Checkout::General::MerchantCalculations
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantCalculations.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6769
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b690e5f49b81aedd90140e121cb558a
+      module_name_from_file_guess: Google::Checkout::General::MerchantCheckoutFlow
+      mtime: 1182894311
+      name: blib/lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+      packages:
+        - Google::Checkout::General::MerchantCheckoutFlow
+      primary_package: Google::Checkout::General::MerchantCheckoutFlow
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Util
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6461
+      file_mime_type: ~
+      line_count: ~
+      md5: bf4f47c43cad8c2b91a986fc77fa0a8d
+      module_name_from_file_guess: Google::Checkout::General::MerchantItem
+      mtime: 1170987536
+      name: blib/lib/Google/Checkout/General/MerchantItem.pm
+      packages:
+        - Google::Checkout::General::MerchantItem
+      primary_package: Google::Checkout::General::MerchantItem
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::General::Util
+      version_info:
+        filename: blib/lib/Google/Checkout/General/MerchantItem.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3539
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a88cb462522775d8fbd060da8239892
+      module_name_from_file_guess: Google::Checkout::General::ParameterizedUrls
+      mtime: 1180993999
+      name: blib/lib/Google/Checkout/General/ParameterizedUrls.pm
+      packages:
+        - Google::Checkout::General::ParameterizedUrls
+      primary_package: Google::Checkout::General::ParameterizedUrls
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/ParameterizedUrls.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2262
+      file_mime_type: ~
+      line_count: ~
+      md5: 60d8c3037fcc8c3f8d2cf3d7cad65f3b
+      module_name_from_file_guess: Google::Checkout::General::Pickup
+      mtime: 1170977229
+      name: blib/lib/Google/Checkout/General/Pickup.pm
+      packages:
+        - Google::Checkout::General::Pickup
+      primary_package: Google::Checkout::General::Pickup
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Shipping
+      version_info:
+        filename: blib/lib/Google/Checkout/General/Pickup.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2596
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b3d09271962c4642a9db937899cf6ec
+      module_name_from_file_guess: Google::Checkout::General::Shipping
+      mtime: 1170977261
+      name: blib/lib/Google/Checkout/General/Shipping.pm
+      packages:
+        - Google::Checkout::General::Shipping
+      primary_package: Google::Checkout::General::Shipping
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/Shipping.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5197
+      file_mime_type: ~
+      line_count: ~
+      md5: f34711f8758c355c50da25aceb9cabc0
+      module_name_from_file_guess: Google::Checkout::General::ShippingRestrictions
+      mtime: 1170977288
+      name: blib/lib/Google/Checkout/General/ShippingRestrictions.pm
+      packages:
+        - Google::Checkout::General::ShippingRestrictions
+      primary_package: Google::Checkout::General::ShippingRestrictions
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/ShippingRestrictions.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3848
+      file_mime_type: ~
+      line_count: ~
+      md5: 089c65f4e9fb4d624acabe78bfe24651
+      module_name_from_file_guess: Google::Checkout::General::ShoppingCart
+      mtime: 1170977325
+      name: blib/lib/Google/Checkout/General/ShoppingCart.pm
+      packages:
+        - Google::Checkout::General::ShoppingCart
+      primary_package: Google::Checkout::General::ShoppingCart
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Util
+      version_info:
+        filename: blib/lib/Google/Checkout/General/ShoppingCart.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2857
+      file_mime_type: ~
+      line_count: ~
+      md5: e8d3ce1078f6922dc7d979de8c3c16fd
+      module_name_from_file_guess: Google::Checkout::General::TaxRule
+      mtime: 1170977357
+      name: blib/lib/Google/Checkout/General/TaxRule.pm
+      packages:
+        - Google::Checkout::General::TaxRule
+      primary_package: Google::Checkout::General::TaxRule
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/TaxRule.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4177
+      file_mime_type: ~
+      line_count: ~
+      md5: 53c9106f5703d6d0a79ecc15a73e375f
+      module_name_from_file_guess: Google::Checkout::General::TaxTable
+      mtime: 1170977463
+      name: blib/lib/Google/Checkout/General/TaxTable.pm
+      packages:
+        - Google::Checkout::General::TaxTable
+      primary_package: Google::Checkout::General::TaxTable
+      uses:
+        - strict
+        - warnings
+      version_info:
+        filename: blib/lib/Google/Checkout/General/TaxTable.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3813
+      file_mime_type: ~
+      line_count: ~
+      md5: f475bd1640adc3b2b6998d8fb75b3fa1
+      module_name_from_file_guess: Google::Checkout::General::TaxTableAreas
+      mtime: 1170977417
+      name: blib/lib/Google/Checkout/General/TaxTableAreas.pm
+      packages:
+        - Google::Checkout::General::TaxTableAreas
+      primary_package: Google::Checkout::General::TaxTableAreas
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::ShippingRestrictions
+      version_info:
+        filename: blib/lib/Google/Checkout/General/TaxTableAreas.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7385
+      file_mime_type: ~
+      line_count: ~
+      md5: 136de7e6a3190c644a6a6d2a89726c0d
+      module_name_from_file_guess: Google::Checkout::General::Util
+      mtime: 1184190699
+      name: blib/lib/Google/Checkout/General/Util.pm
+      packages:
+        - Google::Checkout::General::Util
+      primary_package: Google::Checkout::General::Util
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - UNIVERSAL
+        - Date::Manip
+        - MIME::Base64
+        - Digest::HMAC_SHA1
+        - Google::Checkout::XML::Constants
+      version_info:
+        filename: blib/lib/Google/Checkout/General/Util.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2192
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a02a4bec9df6f36f3523a11a384d1ee
+      module_name_from_file_guess: Google::Checkout::Notification::ChargeAmount
+      mtime: 1170977573
+      name: blib/lib/Google/Checkout/Notification/ChargeAmount.pm
+      packages:
+        - Google::Checkout::Notification::ChargeAmount
+      primary_package: Google::Checkout::Notification::ChargeAmount
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::Notification::GCONotification
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/ChargeAmount.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2277
+      file_mime_type: ~
+      line_count: ~
+      md5: b4f090e7f8e4ca09bd0c38124bba5ad0
+      module_name_from_file_guess: Google::Checkout::Notification::ChargebackAmount
+      mtime: 1170977626
+      name: blib/lib/Google/Checkout/Notification/ChargebackAmount.pm
+      packages:
+        - Google::Checkout::Notification::ChargebackAmount
+      primary_package: Google::Checkout::Notification::ChargebackAmount
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::Notification::GCONotification
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/ChargebackAmount.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3579
+      file_mime_type: ~
+      line_count: ~
+      md5: a5d9a54681cc652cf584cc6fe5853dc9
+      module_name_from_file_guess: Google::Checkout::Notification::Factory
+      mtime: 1170977642
+      name: blib/lib/Google/Checkout/Notification/Factory.pm
+      packages:
+        - Google::Checkout::Notification::Factory
+      primary_package: Google::Checkout::Notification::Factory
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - Google::Checkout::General::Error
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::MerchantCalculationCallback
+        - Google::Checkout::Notification::ChargeAmount
+        - Google::Checkout::Notification::ChargebackAmount
+        - Google::Checkout::Notification::NewOrder
+        - Google::Checkout::Notification::OrderStateChange
+        - Google::Checkout::Notification::RefundAmount
+        - Google::Checkout::Notification::RiskInformation
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/Factory.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1914
+      file_mime_type: ~
+      line_count: ~
+      md5: 23104b7684cc741c3058c4561e203516
+      module_name_from_file_guess: Google::Checkout::Notification::GCONotification
+      mtime: 1174682376
+      name: blib/lib/Google/Checkout/Notification/GCONotification.pm
+      packages:
+        - Google::Checkout::Notification::GCONotification
+      primary_package: Google::Checkout::Notification::GCONotification
+      uses:
+        - strict
+        - warnings
+        - XML::Simple
+        - Google::Checkout::General::Error
+        - Google::Checkout::XML::Constants
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/GCONotification.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14843
+      file_mime_type: ~
+      line_count: ~
+      md5: a1030629d6c918bd98cec681ecad4fd7
+      module_name_from_file_guess: Google::Checkout::Notification::NewOrder
+      mtime: 1184020722
+      name: blib/lib/Google/Checkout/Notification/NewOrder.pm
+      packages:
+        - Google::Checkout::Notification::NewOrder
+      primary_package: Google::Checkout::Notification::NewOrder
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::MerchantItem
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Notification::GCONotification
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/NewOrder.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3101
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ab5f43755838491a126465f16bab340
+      module_name_from_file_guess: Google::Checkout::Notification::OrderStateChange
+      mtime: 1170977766
+      name: blib/lib/Google/Checkout/Notification/OrderStateChange.pm
+      packages:
+        - Google::Checkout::Notification::OrderStateChange
+      primary_package: Google::Checkout::Notification::OrderStateChange
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::Notification::GCONotification
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/OrderStateChange.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2065
+      file_mime_type: ~
+      line_count: ~
+      md5: bab3565bd6e3db88fae505fa60ee04a9
+      module_name_from_file_guess: Google::Checkout::Notification::RefundAmount
+      mtime: 1170977808
+      name: blib/lib/Google/Checkout/Notification/RefundAmount.pm
+      packages:
+        - Google::Checkout::Notification::RefundAmount
+      primary_package: Google::Checkout::Notification::RefundAmount
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::Notification::GCONotification
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/RefundAmount.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4634
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fd8661fa87add29761046829b0668f6
+      module_name_from_file_guess: Google::Checkout::Notification::RiskInformation
+      mtime: 1170977875
+      name: blib/lib/Google/Checkout/Notification/RiskInformation.pm
+      packages:
+        - Google::Checkout::Notification::RiskInformation
+      primary_package: Google::Checkout::Notification::RiskInformation
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::General::Error
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::Notification::GCONotification
+      version_info:
+        filename: blib/lib/Google/Checkout/Notification/RiskInformation.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 18153
+      file_mime_type: ~
+      line_count: ~
+      md5: 000c622cdea65c1f110d31f3472cb78c
+      module_name_from_file_guess: Google::Checkout::XML::CheckoutXmlWriter
+      mtime: 1184192253
+      name: blib/lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+      packages:
+        - Google::Checkout::XML::CheckoutXmlWriter
+      primary_package: Google::Checkout::XML::CheckoutXmlWriter
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::General::DigitalContent
+        - Google::Checkout::XML::Writer
+      version_info:
+        filename: blib/lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: 492f237e931ecfdc100a53c21e3ce19b
+      module_name_from_file_guess: Google::Checkout::XML::CommandXmlWriter
+      mtime: 1176848338
+      name: blib/lib/Google/Checkout/XML/CommandXmlWriter.pm
+      packages:
+        - Google::Checkout::XML::CommandXmlWriter
+      primary_package: Google::Checkout::XML::CommandXmlWriter
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Constants
+        - Google::Checkout::General::Util
+        - Google::Checkout::XML::Writer
+      version_info:
+        filename: blib/lib/Google/Checkout/XML/CommandXmlWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 11812
+      file_mime_type: ~
+      line_count: ~
+      md5: 9597bd805e413a89a47c83ce4725a46e
+      module_name_from_file_guess: Google::Checkout::XML::Constants
+      mtime: 1184190607
+      name: blib/lib/Google/Checkout/XML/Constants.pm
+      packages:
+        - Google::Checkout::XML::Constants
+      primary_package: Google::Checkout::XML::Constants
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - constant
+      version_info:
+        filename: blib/lib/Google/Checkout/XML/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 778
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ff446f1d5434881d56ce3b8244df684
+      module_name_from_file_guess: Google::Checkout::XML::NotificationResponseXmlWriter
+      mtime: 1172793631
+      name: blib/lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+      packages:
+        - Google::Checkout::XML::NotificationResponseXmlWriter
+      primary_package: Google::Checkout::XML::NotificationResponseXmlWriter
+      uses:
+        - strict
+        - warnings
+        - Google::Checkout::XML::Writer
+        - Google::Checkout::XML::Constants
+      version_info:
+        filename: blib/lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1503
+      file_mime_type: ~
+      line_count: ~
+      md5: c92e458bff43d8386d7d80f6d050506c
+      module_name_from_file_guess: Google::Checkout::XML::Writer
+      mtime: 1170977914
+      name: blib/lib/Google/Checkout/XML/Writer.pm
+      packages:
+        - Google::Checkout::XML::Writer
+      primary_package: Google::Checkout::XML::Writer
+      uses:
+        - strict
+        - warnings
+        - XML::Writer
+        - Google::Checkout::General::GCO
+        - Google::Checkout::General::Error
+        - Google::Checkout::General::Util
+      version_info:
+        filename: blib/lib/Google/Checkout/XML/Writer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/Google/Checkout/Command/AddMerchantOrderNumber.pm
+    - blib/lib/Google/Checkout/Command/AddTrackingData.pm
+    - blib/lib/Google/Checkout/Command/ArchiveOrder.pm
+    - blib/lib/Google/Checkout/Command/AuthorizeOrder.pm
+    - blib/lib/Google/Checkout/Command/CancelOrder.pm
+    - blib/lib/Google/Checkout/Command/ChargeOrder.pm
+    - blib/lib/Google/Checkout/Command/DeliverOrder.pm
+    - blib/lib/Google/Checkout/Command/GCOCommand.pm
+    - blib/lib/Google/Checkout/Command/ProcessOrder.pm
+    - blib/lib/Google/Checkout/Command/RefundOrder.pm
+    - blib/lib/Google/Checkout/Command/SendBuyerMessage.pm
+    - blib/lib/Google/Checkout/Command/UnarchiveOrder.pm
+    - blib/lib/Google/Checkout/General/ConfigReader.pm
+    - blib/lib/Google/Checkout/General/DigitalContent.pm
+    - blib/lib/Google/Checkout/General/Error.pm
+    - blib/lib/Google/Checkout/General/FlatRateShipping.pm
+    - blib/lib/Google/Checkout/General/GCO.pm
+    - blib/lib/Google/Checkout/General/GiftCertificate.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculatedShipping.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculationCallback.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculationResult.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculationResults.pm
+    - blib/lib/Google/Checkout/General/MerchantCalculations.pm
+    - blib/lib/Google/Checkout/General/MerchantCheckoutFlow.pm
+    - blib/lib/Google/Checkout/General/MerchantItem.pm
+    - blib/lib/Google/Checkout/General/ParameterizedUrls.pm
+    - blib/lib/Google/Checkout/General/Pickup.pm
+    - blib/lib/Google/Checkout/General/Shipping.pm
+    - blib/lib/Google/Checkout/General/ShippingRestrictions.pm
+    - blib/lib/Google/Checkout/General/ShoppingCart.pm
+    - blib/lib/Google/Checkout/General/TaxRule.pm
+    - blib/lib/Google/Checkout/General/TaxTable.pm
+    - blib/lib/Google/Checkout/General/TaxTableAreas.pm
+    - blib/lib/Google/Checkout/General/Util.pm
+    - blib/lib/Google/Checkout/Notification/ChargeAmount.pm
+    - blib/lib/Google/Checkout/Notification/ChargebackAmount.pm
+    - blib/lib/Google/Checkout/Notification/Factory.pm
+    - blib/lib/Google/Checkout/Notification/GCONotification.pm
+    - blib/lib/Google/Checkout/Notification/NewOrder.pm
+    - blib/lib/Google/Checkout/Notification/OrderStateChange.pm
+    - blib/lib/Google/Checkout/Notification/RefundAmount.pm
+    - blib/lib/Google/Checkout/Notification/RiskInformation.pm
+    - blib/lib/Google/Checkout/XML/CheckoutXmlWriter.pm
+    - blib/lib/Google/Checkout/XML/CommandXmlWriter.pm
+    - blib/lib/Google/Checkout/XML/Constants.pm
+    - blib/lib/Google/Checkout/XML/NotificationResponseXmlWriter.pm
+    - blib/lib/Google/Checkout/XML/Writer.pm
+  test_info:
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1170877931
+      name: t/pod.t
+      uses:
+        - Test::More
+    - bytesize: 2726
+      file_mime_type: ~
+      line_count: ~
+      md5: e75837f98f5b2bf2cbc12e1c54e97d72
+      mtime: 1170980147
+      name: t/01-load.t
+      uses:
+        - Test::More
+    - bytesize: 172
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1170877931
+      name: t/pod-coverage.t
+      uses:
+        - Test::More
+    - bytesize: 147
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1170979331
+      name: t/00-load.t
+      uses:
+        - Test::More
+  tests:
+    - t/pod.t
+    - t/01-load.t
+    - t/pod-coverage.t
+    - t/00-load.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5_Fy
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271752340
+  examine_start_time: 1271752310
+  examine_time: 30
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 1
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271752340
+  run_start_time: 1271752310
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

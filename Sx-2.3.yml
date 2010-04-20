@@ -1,0 +1,1785 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  blib:
+    - blib/lib/Sx.pm
+    - blib/lib/Sx.pod
+    - blib/lib/SxDemo.pl
+  build_file: Makefile.PL
+  build_file_output: |
+    Checking if your kit is complete...
+    Looks good
+    Note (probably harmless): No library found for -lXaw3d
+    Writing Makefile for Sx
+  build_output: |
+    cp SxDemo.pl blib/lib/SxDemo.pl
+    cp Sx.pm blib/lib/Sx.pm
+    cp Sx.pod blib/lib/Sx.pod
+    cd sx; make all
+    gcc -g -fpic -D_POSIX_SOURCE -DXAW3D -I/local/X11R6/include -c draw.c
+    In file included from draw.c:14:
+    xstuff.h:1:27: error: X11/Intrinsic.h: No such file or directory
+    xstuff.h:2:28: error: X11/StringDefs.h: No such file or directory
+    xstuff.h:3:23: error: X11/Xutil.h: No such file or directory
+    xstuff.h:4:23: error: X11/Shell.h: No such file or directory
+    xstuff.h:6:28: error: X11/Xaw3d/Form.h: No such file or directory
+    xstuff.h:7:29: error: X11/Xaw3d/Label.h: No such file or directory
+    draw.c:15:19: error: libsx.h: No such file or directory
+    draw.c:16:27: error: libsx_private.h: No such file or directory
+    In file included from draw.c:17:
+    DrawingA.h:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'drawingAreaWidgetClass'
+    DrawingA.h:44: error: expected specifier-qualifier-list before 'XEvent'
+    draw.c:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    draw.c:33: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'setup_gc'
+    draw.c:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    draw.c:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    draw.c:41: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'window'
+    draw.c:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'drawgc'
+    draw.c:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    draw.c:49: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'MakeDrawArea'
+    draw.c:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'redisplay'
+    draw.c:54: error: expected identifier or '(' before '{' token
+    draw.c:115: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'setup_gc'
+    draw.c:117: error: expected identifier or '(' before '{' token
+    draw.c:142: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+    draw.c:144: error: expected identifier or '(' before '{' token
+    draw.c: In function 'SetButtonDownCB':
+    draw.c:168: error: expected declaration specifiers before 'Widget'
+    draw.c:169: error: expected declaration specifiers before 'MouseButtonCB'
+    draw.c:171: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:171: error: (Each undeclared identifier is reported only once
+    draw.c:171: error: for each function it appears in.)
+    draw.c:171: error: 'di' undeclared (first use in this function)
+    draw.c: In function 'SetButtonUpCB':
+    draw.c:181: error: expected declaration specifiers before 'Widget'
+    draw.c:182: error: expected declaration specifiers before 'MouseButtonCB'
+    draw.c:184: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:184: error: 'di' undeclared (first use in this function)
+    draw.c: In function 'SetKeypressCB':
+    draw.c:193: error: expected declaration specifiers before 'Widget'
+    draw.c:194: error: expected declaration specifiers before 'KeyCB'
+    draw.c:196: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:196: error: 'di' undeclared (first use in this function)
+    draw.c: In function 'SetMouseMotionCB':
+    draw.c:206: error: expected declaration specifiers before 'Widget'
+    draw.c:207: error: expected declaration specifiers before 'MotionCB'
+    draw.c:209: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:209: error: 'di' undeclared (first use in this function)
+    draw.c: In function 'SetDrawMode':
+    draw.c:222: error: 'display' undeclared (first use in this function)
+    draw.c:225: error: 'SANE_XOR' undeclared (first use in this function)
+    draw.c:227: error: 'cur_di' undeclared (first use in this function)
+    draw.c:228: error: 'drawgc' undeclared (first use in this function)
+    draw.c:230: error: 'GXxor' undeclared (first use in this function)
+    draw.c: In function 'SetLineWidth':
+    draw.c:247: error: 'display' undeclared (first use in this function)
+    draw.c:248: error: 'drawgc' undeclared (first use in this function)
+    draw.c:248: error: 'LineSolid' undeclared (first use in this function)
+    draw.c:248: error: 'CapButt' undeclared (first use in this function)
+    draw.c:248: error: 'JoinMiter' undeclared (first use in this function)
+    draw.c: In function 'SetDrawArea':
+    draw.c:253: error: expected declaration specifiers before 'Widget'
+    draw.c:255: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:255: error: 'di' undeclared (first use in this function)
+    draw.c:257: error: 'lsx_curwin' undeclared (first use in this function)
+    draw.c:257: warning: comparison between pointer and integer
+    draw.c:263: error: 'window' undeclared (first use in this function)
+    draw.c:263: error: 'Window' undeclared (first use in this function)
+    draw.c:263: error: expected ';' before 'XtWindow'
+    draw.c:264: error: 'drawgc' undeclared (first use in this function)
+    draw.c:265: error: 'display' undeclared (first use in this function)
+    draw.c:266: error: 'cur_di' undeclared (first use in this function)
+    draw.c: In function 'GetDrawAreaSize':
+    draw.c:298: error: 'Arg' undeclared (first use in this function)
+    draw.c:298: error: expected ';' before 'wargs'
+    draw.c:299: error: 'Dimension' undeclared (first use in this function)
+    draw.c:299: error: expected ';' before 'nwidth'
+    draw.c:301: error: 'lsx_curwin' undeclared (first use in this function)
+    draw.c:308: error: 'wargs' undeclared (first use in this function)
+    draw.c:308: error: 'XtNwidth' undeclared (first use in this function)
+    draw.c:308: error: 'nwidth' undeclared (first use in this function)
+    draw.c:309: error: 'XtNheight' undeclared (first use in this function)
+    draw.c:309: error: 'nheight' undeclared (first use in this function)
+    draw.c: In function 'ClearDrawArea':
+    draw.c:326: error: 'display' undeclared (first use in this function)
+    draw.c:326: error: 'window' undeclared (first use in this function)
+    draw.c: In function 'SetColor':
+    draw.c:333: error: 'cur_di' undeclared (first use in this function)
+    draw.c:333: error: 'display' undeclared (first use in this function)
+    draw.c:340: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawPixel':
+    draw.c:349: error: 'display' undeclared (first use in this function)
+    draw.c:349: error: 'window' undeclared (first use in this function)
+    draw.c:349: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawLine':
+    draw.c:367: error: 'display' undeclared (first use in this function)
+    draw.c:367: error: 'window' undeclared (first use in this function)
+    draw.c:367: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawPolyline':
+    draw.c:372: error: expected declaration specifiers before 'XPoint'
+    draw.c:375: error: 'display' undeclared (first use in this function)
+    draw.c:375: error: 'window' undeclared (first use in this function)
+    draw.c:375: error: 'drawgc' undeclared (first use in this function)
+    draw.c:375: error: 'CoordModeOrigin' undeclared (first use in this function)
+    draw.c: In function 'DrawFilledPolygon':
+    draw.c:380: error: expected declaration specifiers before 'XPoint'
+    draw.c:383: error: 'display' undeclared (first use in this function)
+    draw.c:383: error: 'window' undeclared (first use in this function)
+    draw.c:383: error: 'drawgc' undeclared (first use in this function)
+    draw.c:383: error: 'Complex' undeclared (first use in this function)
+    draw.c:383: error: 'CoordModeOrigin' undeclared (first use in this function)
+    draw.c: In function 'DrawFilledBox':
+    draw.c:396: error: 'display' undeclared (first use in this function)
+    draw.c:396: error: 'window' undeclared (first use in this function)
+    draw.c:396: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawBox':
+    draw.c:409: error: 'display' undeclared (first use in this function)
+    draw.c:409: error: 'window' undeclared (first use in this function)
+    draw.c:409: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawText':
+    draw.c:419: error: 'display' undeclared (first use in this function)
+    draw.c:419: error: 'window' undeclared (first use in this function)
+    draw.c:419: error: 'drawgc' undeclared (first use in this function)
+    draw.c:419: warning: incompatible implicit declaration of built-in function 'strlen'
+    draw.c: In function 'DrawArc':
+    draw.c:434: error: 'display' undeclared (first use in this function)
+    draw.c:434: error: 'window' undeclared (first use in this function)
+    draw.c:434: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawFilledArc':
+    draw.c:450: error: 'display' undeclared (first use in this function)
+    draw.c:450: error: 'window' undeclared (first use in this function)
+    draw.c:450: error: 'drawgc' undeclared (first use in this function)
+    draw.c: In function 'DrawImage':
+    draw.c:458: error: 'XImage' undeclared (first use in this function)
+    draw.c:458: error: 'xi' undeclared (first use in this function)
+    draw.c:460: error: 'lsx_curwin' undeclared (first use in this function)
+    draw.c:463: error: 'display' undeclared (first use in this function)
+    draw.c:464: error: 'ZPixmap' undeclared (first use in this function)
+    draw.c:469: error: 'window' undeclared (first use in this function)
+    draw.c:469: error: 'drawgc' undeclared (first use in this function)
+    draw.c: At top level:
+    draw.c:485: warning: conflicting types for 'GetImage'
+    draw.c:358: warning: previous implicit declaration of 'GetImage' was here
+    draw.c: In function 'GetImage':
+    draw.c:488: error: 'XImage' undeclared (first use in this function)
+    draw.c:488: error: 'xi' undeclared (first use in this function)
+    draw.c:492: error: 'lsx_curwin' undeclared (first use in this function)
+    draw.c:496: error: 'display' undeclared (first use in this function)
+    draw.c:496: error: 'window' undeclared (first use in this function)
+    draw.c:496: error: 'ZPixmap' undeclared (first use in this function)
+    draw.c: In function '_redisplay':
+    draw.c:527: error: expected declaration specifiers before 'Widget'
+    draw.c:532: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:532: error: 'di' undeclared (first use in this function)
+    draw.c:534: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c: In function '_resize':
+    draw.c:549: error: expected declaration specifiers before 'Widget'
+    draw.c:554: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:554: error: 'di' undeclared (first use in this function)
+    draw.c:556: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c: In function '_do_input':
+    draw.c:571: error: expected declaration specifiers before 'Widget'
+    draw.c:576: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:576: error: 'di' undeclared (first use in this function)
+    draw.c:579: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:579: error: 'ButtonPress' undeclared (first use in this function)
+    draw.c:582: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:583: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:583: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:586: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:586: error: 'ButtonRelease' undeclared (first use in this function)
+    draw.c:589: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:590: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:590: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:593: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:593: error: 'KeyPress' undeclared (first use in this function)
+    draw.c:595: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:600: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:600: error: 'KeyRelease' undeclared (first use in this function)
+    draw.c:602: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c: In function '_do_motion':
+    draw.c:611: error: expected declaration specifiers before 'Widget'
+    draw.c:615: error: 'DrawInfo' undeclared (first use in this function)
+    draw.c:615: error: 'di' undeclared (first use in this function)
+    draw.c:619: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c:619: error: 'XawDrawingAreaCallbackStruct' has no member named 'event'
+    draw.c: In function 'TranslateKeyCode':
+    draw.c:629: error: expected declaration specifiers before 'XEvent'
+    draw.c:633: error: 'KeySym' undeclared (first use in this function)
+    draw.c:633: error: expected ';' before 'ks'
+    draw.c:637: error: 'XKeyEvent' undeclared (first use in this function)
+    draw.c:637: error: expected expression before ')' token
+    draw.c:641: error: 'ks' undeclared (first use in this function)
+    draw.c:641: warning: assignment makes pointer from integer without a cast
+    draw.c:643: warning: incompatible implicit declaration of built-in function 'strcpy'
+    draw.c: In function 'ScrollDrawArea':
+    draw.c:662: error: 'Window' undeclared (first use in this function)
+    draw.c:662: error: expected ';' before 'win'
+    draw.c:668: error: 'display' undeclared (first use in this function)
+    draw.c:692: error: 'win' undeclared (first use in this function)
+    draw.c:692: error: 'drawgc' undeclared (first use in this function)
+    draw.c:695: error: 'FALSE' undeclared (first use in this function)
+    *** Error code 1
+    
+    Stop in /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3/sx.
+    *** Error code 1
+    
+    Stop in /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3.
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: FMC
+  dist_basename: Sx-2.3.tar.gz
+  dist_date: 861960467
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr/Sx-2.3
+  dist_file: /home/brian/CPAN/authors/id/F/FM/FMC/Sx-2.3.tar.gz
+  dist_md5: ceb67e0be881a10f92830e0ac812b5f6
+  dist_size: 100635
+  manifest:
+    - MANIFEST
+    - Makefile.PL
+    - Makefile.old
+    - README
+    - Sx.pm
+    - Sx.pod
+    - Sx.xs
+    - SxDemo.pl
+    - libsx.h
+    - libsx_private.h
+    - suplibsx.c
+    - sx/Canvas.c
+    - sx/Canvas.h
+    - sx/CanvasP.h
+    - sx/Command.c
+    - sx/Command.h
+    - sx/CommandP.h
+    - sx/Dialog.c
+    - sx/Dialog.h
+    - sx/DrawingA.c
+    - sx/DrawingA.h
+    - sx/DrawingAP.h
+    - sx/ThreeCom.c
+    - sx/ThreeCom.h
+    - sx/ThreeComP.h
+    - sx/ThreeList.c
+    - sx/ThreeList.h
+    - sx/ThreeListP.h
+    - sx/button.c
+    - sx/callbacks.h
+    - sx/check_mark.h
+    - sx/colormap.c
+    - sx/connection
+    - sx/draw.c
+    - sx/font.c
+    - sx/libsx.c
+    - sx/libsx_defs
+    - sx/list.c
+    - sx/makefile
+    - sx/menu.c
+    - sx/misc.c
+    - sx/popups.c
+    - sx/resize.c
+    - sx/scrollbar.c
+    - sx/string_entry.c
+    - sx/toggle.c
+    - sx/version.c
+    - sx/xstuff.h
+    - test.pl
+    - typemap
+  manifest_file_info:
+    - bytesize: 575
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 861959837
+      name: MANIFEST
+    - bytesize: 823
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 861959837
+      name: Makefile.PL
+    - bytesize: 20824
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c52fdf2e213e36f4c63e390a5b60a1d
+      mtime: 861959838
+      name: Makefile.old
+    - bytesize: 2423
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 861959837
+      name: README
+    - bytesize: 3430
+      file_mime_type: ~
+      line_count: ~
+      md5: b9e71eea1bfab77e2d025e6667646852
+      mtime: 861959837
+      name: Sx.pm
+    - bytesize: 83904
+      file_mime_type: ~
+      line_count: ~
+      md5: df506ab7d0afe9be088caae17cf24dc1
+      mtime: 861959837
+      name: Sx.pod
+    - bytesize: 23620
+      file_mime_type: ~
+      line_count: ~
+      md5: 182ce7a692215d4e7f71831ba03fb9a6
+      mtime: 861959837
+      name: Sx.xs
+    - bytesize: 8924
+      file_mime_type: ~
+      line_count: ~
+      md5: c15cc75d724d94b606b58bde30dd73aa
+      mtime: 861959842
+      name: SxDemo.pl
+    - bytesize: 5981
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a8df58fd8f6bbeb8eb6d9fc2a2be734
+      mtime: 861959838
+      name: libsx.h
+    - bytesize: 1140
+      file_mime_type: ~
+      line_count: ~
+      md5: f3f27d044c14dfc8e71bf26c5484c2a6
+      mtime: 861959838
+      name: libsx_private.h
+    - bytesize: 5035
+      file_mime_type: ~
+      line_count: ~
+      md5: 1401f6e785cf5558b43051790655f546
+      mtime: 861959838
+      name: suplibsx.c
+    - bytesize: 8962
+      file_mime_type: ~
+      line_count: ~
+      md5: 0aba01f99e73723ddfc5663f2a64b7bf
+      mtime: 861959845
+      name: sx/Canvas.c
+    - bytesize: 2265
+      file_mime_type: ~
+      line_count: ~
+      md5: 28ceb8c943e86b4537e6f18182eaefb8
+      mtime: 861959845
+      name: sx/Canvas.h
+    - bytesize: 1668
+      file_mime_type: ~
+      line_count: ~
+      md5: 067bd212c73bed8f9659f24abad78f1f
+      mtime: 861959845
+      name: sx/CanvasP.h
+    - bytesize: 15860
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e250e2cb7fd5a3ef2ef9e44b742cb22
+      mtime: 861959844
+      name: sx/Command.c
+    - bytesize: 3892
+      file_mime_type: ~
+      line_count: ~
+      md5: 01a10ac06182ebb7313beafc49c448f4
+      mtime: 861959844
+      name: sx/Command.h
+    - bytesize: 3310
+      file_mime_type: ~
+      line_count: ~
+      md5: 079aa7ff0d8699f8dc83b73fdd086f7c
+      mtime: 861959844
+      name: sx/CommandP.h
+    - bytesize: 5109
+      file_mime_type: ~
+      line_count: ~
+      md5: 9881a973a4f0692263f449ddd4836b21
+      mtime: 861959843
+      name: sx/Dialog.c
+    - bytesize: 1044
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c25aa2700aa0e857dcbfc10cd1372c4
+      mtime: 861959843
+      name: sx/Dialog.h
+    - bytesize: 5129
+      file_mime_type: ~
+      line_count: ~
+      md5: 18b0dfa7874095f9fed738b32a0d3cc7
+      mtime: 861959843
+      name: sx/DrawingA.c
+    - bytesize: 1445
+      file_mime_type: ~
+      line_count: ~
+      md5: fa435e6bbb0cc8f16c9814bd25c827f7
+      mtime: 861959843
+      name: sx/DrawingA.h
+    - bytesize: 1366
+      file_mime_type: ~
+      line_count: ~
+      md5: 832de19c5a2854c8ed886ac4af48f852
+      mtime: 861959843
+      name: sx/DrawingAP.h
+    - bytesize: 19567
+      file_mime_type: ~
+      line_count: ~
+      md5: 83e5edbaf940f1dcb8b373599ba22826
+      mtime: 861959843
+      name: sx/ThreeCom.c
+    - bytesize: 3924
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c00eef039617c46e2d0aa35e43bf37a
+      mtime: 861959844
+      name: sx/ThreeCom.h
+    - bytesize: 3550
+      file_mime_type: ~
+      line_count: ~
+      md5: e079615be5fc7d0eced47789ca948e36
+      mtime: 861959844
+      name: sx/ThreeComP.h
+    - bytesize: 40830
+      file_mime_type: ~
+      line_count: ~
+      md5: 06e88cc75292f25f7d087772de9f244d
+      mtime: 861959843
+      name: sx/ThreeList.c
+    - bytesize: 7987
+      file_mime_type: ~
+      line_count: ~
+      md5: 49381c9b977aaed92ea24dddcc2ba235
+      mtime: 861959844
+      name: sx/ThreeList.h
+    - bytesize: 4204
+      file_mime_type: ~
+      line_count: ~
+      md5: 3562ff2e90c6b8ac329711d0b312d5cf
+      mtime: 861959844
+      name: sx/ThreeListP.h
+    - bytesize: 2387
+      file_mime_type: ~
+      line_count: ~
+      md5: 9643aee822c8c2eb5b8f2f7c1dcbd676
+      mtime: 861959843
+      name: sx/button.c
+    - bytesize: 1565
+      file_mime_type: ~
+      line_count: ~
+      md5: b66466a3581e05747009bb016c351c69
+      mtime: 861959843
+      name: sx/callbacks.h
+    - bytesize: 302
+      file_mime_type: ~
+      line_count: ~
+      md5: ce3207d9ab5f1f0d12eaf0ffe4231767
+      mtime: 861959843
+      name: sx/check_mark.h
+    - bytesize: 13719
+      file_mime_type: ~
+      line_count: ~
+      md5: cbfef820e270b05b3f74ca64ef3b3a13
+      mtime: 861959843
+      name: sx/colormap.c
+    - bytesize: 3440
+      file_mime_type: ~
+      line_count: ~
+      md5: 67e23f08fd7779cc5d9eeef1552ed5e6
+      mtime: 861959845
+      name: sx/connection
+    - bytesize: 15296
+      file_mime_type: ~
+      line_count: ~
+      md5: 646dfc2f8b53e5d62bde4c09fb148df3
+      mtime: 861959843
+      name: sx/draw.c
+    - bytesize: 1661
+      file_mime_type: ~
+      line_count: ~
+      md5: e097e629214774450218c55cb3b35ffc
+      mtime: 861959843
+      name: sx/font.c
+    - bytesize: 14689
+      file_mime_type: ~
+      line_count: ~
+      md5: ef61f869cb098c5214f42306e1d87ca9
+      mtime: 861959844
+      name: sx/libsx.c
+    - bytesize: 2193
+      file_mime_type: ~
+      line_count: ~
+      md5: c19477f9665a792d0e0c19391d8e0136
+      mtime: 861959844
+      name: sx/libsx_defs
+    - bytesize: 3332
+      file_mime_type: ~
+      line_count: ~
+      md5: dba27df7ae0f6a6a505d436e209d8cd3
+      mtime: 861959843
+      name: sx/list.c
+    - bytesize: 1328
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f1fbf53dab65c43a23f597df3e29bc8
+      mtime: 861959843
+      name: sx/makefile
+    - bytesize: 3752
+      file_mime_type: ~
+      line_count: ~
+      md5: 53ed7c15173beba516a1464238112c3c
+      mtime: 861959844
+      name: sx/menu.c
+    - bytesize: 7526
+      file_mime_type: ~
+      line_count: ~
+      md5: c33846202a5fd0e0dd586247dc71201f
+      mtime: 861959844
+      name: sx/misc.c
+    - bytesize: 2120
+      file_mime_type: ~
+      line_count: ~
+      md5: 00ebeeba43f56a92e30df055b6d34f6c
+      mtime: 861959844
+      name: sx/popups.c
+    - bytesize: 736
+      file_mime_type: ~
+      line_count: ~
+      md5: b897d03477af7ddb305c88f3bcd122da
+      mtime: 861959844
+      name: sx/resize.c
+    - bytesize: 5539
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b04b7deedf8ac0b90ddf9741d61e2c8
+      mtime: 861959845
+      name: sx/scrollbar.c
+    - bytesize: 7914
+      file_mime_type: ~
+      line_count: ~
+      md5: 5597bfcf825c6b5a36ced6c0020d8dd6
+      mtime: 861959845
+      name: sx/string_entry.c
+    - bytesize: 3871
+      file_mime_type: ~
+      line_count: ~
+      md5: bf937b5587e3593050bd5b24984d3e0c
+      mtime: 861959844
+      name: sx/toggle.c
+    - bytesize: 109
+      file_mime_type: ~
+      line_count: ~
+      md5: d70c01951c8cdaf73712c47b237917ba
+      mtime: 861959844
+      name: sx/version.c
+    - bytesize: 330
+      file_mime_type: ~
+      line_count: ~
+      md5: 676e55ebb6ca6fecf30eba5895ff943e
+      mtime: 861959844
+      name: sx/xstuff.h
+    - bytesize: 341
+      file_mime_type: ~
+      line_count: ~
+      md5: 66e25886c116d205584ebddcc242c66e
+      mtime: 861959842
+      name: test.pl
+    - bytesize: 1249
+      file_mime_type: ~
+      line_count: ~
+      md5: f421e5dc171b308cac8ecaead365643f
+      mtime: 861959838
+      name: typemap
+  module_info:
+    - bytesize: 3430
+      file_mime_type: ~
+      line_count: ~
+      md5: bdea6d930bc2b0e26f94e1dbfc603698
+      module_name_from_file_guess: Sx
+      mtime: 861959837
+      name: blib/lib/Sx.pm
+      packages:
+        - Sx
+      primary_package: Sx
+      uses:
+        - Exporter
+        - DynaLoader
+      version_info:
+        filename: blib/lib/Sx.pm
+        identifier: VERSION
+        line_number: 47
+        sigil: $
+        value: ~
+  modules:
+    - blib/lib/Sx.pm
+  test_info:
+    - bytesize: 341
+      file_mime_type: ~
+      line_count: ~
+      md5: 66e25886c116d205584ebddcc242c66e
+      mtime: 861959842
+      name: test.pl
+      uses:
+        - Sx
+  tests:
+    - test.pl
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.bksr
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271775698
+  examine_start_time: 1271775694
+  examine_time: 4
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 1
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271775698
+  run_start_time: 1271775694
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

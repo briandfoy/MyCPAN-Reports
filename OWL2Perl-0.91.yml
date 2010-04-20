@@ -1,0 +1,2381 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: This distribution aids in the automatic generation of perl modules from owl ontologies.
+    author:
+      - ', Edward Kawas'
+    build_requires:
+      ExtUtils::MakeMaker: 6.42
+      Test::More: 0.42
+    configure_requires:
+      ExtUtils::MakeMaker: 6.42
+    distribution_type: module
+    generated_by: Module::Install version 0.91
+    license: new BSD
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: OWL2Perl
+    no_index:
+      directory:
+        - bin/scripts
+        - inc
+        - lib/OWL/Generators/templates
+        - share
+        - t
+    requires:
+      Carp: 0
+      Class::Inspector: 1.17
+      Config::Simple: 4.58
+      File::HomeDir: 0.65
+      File::Path: 0
+      File::ShareDir: 1
+      File::Spec: 0.8
+      HTTP::Date: 5.81
+      HTTP::Request: 0
+      IO::Prompt: 0.99.2
+      IO::String: 1.08
+      LS: 1.1.7
+      LWP: 0
+      Log::Log4perl: 1.12
+      PLUTO: 0.25
+      Params::Util: 0.38
+      RDF::Core: 0.51
+      Scalar::Util: 1.2
+      Template: 2.22
+      URI: 1.4
+      Unicode::String: 2.09
+      Want: 0.18
+    version: 0.91
+  blib:
+    - blib/lib/OWL/Base.pm
+    - blib/lib/OWL/Config.pm
+    - blib/lib/OWL/Data/Boolean.pm
+    - blib/lib/OWL/Data/DateTime.pm
+    - blib/lib/OWL/Data/Def/DatatypeProperty.pm
+    - blib/lib/OWL/Data/Def/OWLClass.pm
+    - blib/lib/OWL/Data/Def/ObjectProperty.pm
+    - blib/lib/OWL/Data/Float.pm
+    - blib/lib/OWL/Data/Integer.pm
+    - blib/lib/OWL/Data/OWL/Class.pm
+    - blib/lib/OWL/Data/OWL/DatatypeProperty.pm
+    - blib/lib/OWL/Data/OWL/ObjectProperty.pm
+    - blib/lib/OWL/Data/Object.pm
+    - blib/lib/OWL/Data/String.pm
+    - blib/lib/OWL/Generators/GenOWL.pm
+    - blib/lib/OWL/Generators/templates/owl-class.tt
+    - blib/lib/OWL/Generators/templates/owl-datatype-property.tt
+    - blib/lib/OWL/Generators/templates/owl-object-property.tt
+    - blib/lib/OWL/RDF/.cvsignore
+    - blib/lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+    - blib/lib/OWL/RDF/Predicates/OMG_LSID.pm
+    - blib/lib/OWL/RDF/Predicates/OWL.pm
+    - blib/lib/OWL/RDF/Predicates/RDF.pm
+    - blib/lib/OWL/RDF/Predicates/RDFS.pm
+    - blib/lib/OWL/Utils.pm
+    - blib/lib/OWL2Perl.pm
+    - blib/lib/auto/share/dist/OWL2Perl/log4perl.properties.template
+    - blib/lib/auto/share/dist/OWL2Perl/owl2perl-config.cfg.template
+  build_file: Makefile.PL
+  build_file_output: |
+    Cannot determine perl version info from lib/OWL2Perl.pm
+    *** Module::AutoInstall version 1.03
+    *** Checking for Perl dependencies...
+    [Core Features]
+    - Test::More          ...loaded. (0.92 >= 0.42)
+    - ExtUtils::MakeMaker ...loaded. (6.55_02 >= 6.11)
+    - Carp                ...loaded. (1.11)
+    - File::Spec          ...loaded. (3.3 >= 0.8)
+    - File::Path          ...loaded. (2.07_03)
+    - File::HomeDir       ...missing. (would need 0.65)
+    - File::ShareDir      ...missing. (would need 1)
+    - Config::Simple      ...missing. (would need 4.58)
+    - Log::Log4perl       ...loaded. (1.28 >= 1.12)
+    - HTTP::Date          ...missing. (would need 5.81)
+    - Template            ...missing. (would need 2.22)
+    - Params::Util        ...loaded. (1.00 >= 0.38)
+    - Scalar::Util        ...loaded. (1.21 >= 1.2)
+    - Class::Inspector    ...loaded. (1.24 >= 1.17)
+    - Unicode::String     ...missing. (would need 2.09)
+    - IO::String          ...loaded. (1.08 >= 1.08)
+    - RDF::Core           ...missing. (would need 0.51)
+    - LS                  ...missing. (would need 1.1.7)
+    - HTTP::Request       ...missing.
+    - LWP                 ...missing.
+    - PLUTO               ...missing. (would need 0.25)
+    - URI                 ...missing. (would need 1.4)
+    - Want                ...missing. (would need 0.18)
+    - IO::Prompt          ...missing. (would need 0.99.2)
+    ==> Auto-install the 14 mandatory module(s) from CPAN? [Y/n] y
+    *** Dependencies will be installed the next time you type 'make'.
+        (You may need to do that as the 'root' user.)
+    *** Module::AutoInstall configuration finished.
+    Checking if your kit is complete...
+    Looks good
+    Warning: prerequisite Config::Simple 4.58 not found.
+    Warning: prerequisite File::HomeDir 0.65 not found.
+    Warning: prerequisite File::ShareDir 1 not found.
+    Warning: prerequisite HTTP::Date 5.81 not found.
+    Warning: prerequisite HTTP::Request 0 not found.
+    Warning: prerequisite IO::Prompt 0.99.2 not found.
+    Warning: prerequisite LS 1.1.7 not found.
+    Warning: prerequisite LWP 0 not found.
+    Warning: prerequisite PLUTO 0.25 not found.
+    Warning: prerequisite RDF::Core 0.51 not found.
+    Warning: prerequisite Template 2.22 not found.
+    Warning: prerequisite URI 1.4 not found.
+    Warning: prerequisite Unicode::String 2.09 not found.
+    Warning: prerequisite Want 0.18 not found.
+    Writing Makefile for OWL2Perl
+  build_output: |
+    cp lib/OWL/Generators/templates/owl-datatype-property.tt blib/lib/OWL/Generators/templates/owl-datatype-property.tt
+    cp lib/OWL/Data/OWL/DatatypeProperty.pm blib/lib/OWL/Data/OWL/DatatypeProperty.pm
+    cp lib/OWL/RDF/.cvsignore blib/lib/OWL/RDF/.cvsignore
+    cp lib/OWL/RDF/Predicates/OMG_LSID.pm blib/lib/OWL/RDF/Predicates/OMG_LSID.pm
+    cp lib/OWL/RDF/Predicates/DC_PROTEGE.pm blib/lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+    cp lib/OWL/Data/OWL/ObjectProperty.pm blib/lib/OWL/Data/OWL/ObjectProperty.pm
+    cp lib/OWL/Generators/GenOWL.pm blib/lib/OWL/Generators/GenOWL.pm
+    cp lib/OWL/Generators/templates/owl-class.tt blib/lib/OWL/Generators/templates/owl-class.tt
+    cp lib/OWL/Data/Float.pm blib/lib/OWL/Data/Float.pm
+    cp lib/OWL2Perl.pm blib/lib/OWL2Perl.pm
+    cp lib/OWL/Base.pm blib/lib/OWL/Base.pm
+    cp lib/OWL/Data/Integer.pm blib/lib/OWL/Data/Integer.pm
+    cp lib/OWL/Data/Boolean.pm blib/lib/OWL/Data/Boolean.pm
+    cp lib/OWL/RDF/Predicates/OWL.pm blib/lib/OWL/RDF/Predicates/OWL.pm
+    cp lib/OWL/Generators/templates/owl-object-property.tt blib/lib/OWL/Generators/templates/owl-object-property.tt
+    cp lib/OWL/Utils.pm blib/lib/OWL/Utils.pm
+    cp lib/OWL/Data/DateTime.pm blib/lib/OWL/Data/DateTime.pm
+    cp lib/OWL/Config.pm blib/lib/OWL/Config.pm
+    cp lib/OWL/Data/String.pm blib/lib/OWL/Data/String.pm
+    cp lib/OWL/Data/Object.pm blib/lib/OWL/Data/Object.pm
+    cp lib/OWL/RDF/Predicates/RDF.pm blib/lib/OWL/RDF/Predicates/RDF.pm
+    cp lib/OWL/Data/Def/ObjectProperty.pm blib/lib/OWL/Data/Def/ObjectProperty.pm
+    cp lib/OWL/Data/OWL/Class.pm blib/lib/OWL/Data/OWL/Class.pm
+    cp lib/OWL/Data/Def/DatatypeProperty.pm blib/lib/OWL/Data/Def/DatatypeProperty.pm
+    cp lib/OWL/RDF/Predicates/RDFS.pm blib/lib/OWL/RDF/Predicates/RDFS.pm
+    cp lib/OWL/Data/Def/OWLClass.pm blib/lib/OWL/Data/Def/OWLClass.pm
+    Installing blib/lib/auto/share/dist/OWL2Perl/log4perl.properties.template
+    Installing blib/lib/auto/share/dist/OWL2Perl/owl2perl-config.cfg.template
+    /home/brian/bin/perl5.10.1 "-Iinc" Makefile.PL --config= --installdeps=File::HomeDir,0.65,File::ShareDir,1,Config::Simple,4.58,HTTP::Date,5.81,Template,2.22,Unicode::String,2.09,RDF::Core,0.51,LS,1.1.7,HTTP::Request,0,LWP,0,PLUTO,0.25,URI,1.4,Want,0.18,IO::Prompt,0.99.2
+    Cannot determine perl version info from lib/OWL2Perl.pm
+    *** Installing dependencies...
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    Use of uninitialized value in split at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Config.pm line 654.
+    *** Installing File::HomeDir...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'File::HomeDir' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** File::HomeDir installation cancelled.
+    *** Installing File::ShareDir...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'File::ShareDir' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** File::ShareDir installation cancelled.
+    *** Installing Config::Simple...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Config::Simple' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Config::Simple installation cancelled.
+    *** Installing HTTP::Date...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'HTTP::Date' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** HTTP::Date installation cancelled.
+    *** Installing Template...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Template' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Template installation cancelled.
+    *** Installing Unicode::String...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'Unicode::String' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** Unicode::String installation cancelled.
+    *** Installing RDF::Core...
+    [ERROR] You do not have 'make' in your path -- 'CPANPLUS::Dist::MM' not available
+    Please check your config entry for 'make'
+    
+    [ERROR] Format 'CPANPLUS::Dist::MM' is not available
+    
+    [ERROR] Unable to create a new distribution object for 'RDF::Core' -- cannot continue
+    
+    Key 'ok' () is of invalid type for 'CPANPLUS::Backend::RV::new' provided by CPANPLUS::Backend::__ANON__ at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Backend.pm line 398
+    *** RDF::Core installation cancelled.
+    *** Installing LS...
+    Can't call method "configure_object" on an undefined value at /usr/local/perls/perl-5.10.1/lib/5.10.1/CPANPLUS/Dist/MM.pm line 134.
+    Compilation failed in require at inc/Module/Install/AutoInstall.pm line 37.
+    *** Error code 255
+    
+    Stop in /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91.
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91/Makefile.PL
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: 0.91
+    perl_command: ~
+    uses_auto_install: 1
+    uses_makemaker: 0
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 1
+  dist_archive_type: tgz
+  dist_author: EKAWAS
+  dist_basename: OWL2Perl-0.91.tar.gz
+  dist_date: 1269357618
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ/OWL2Perl-0.91
+  dist_file: /home/brian/CPAN/authors/id/E/EK/EKAWAS/OWL2Perl-0.91.tar.gz
+  dist_md5: 95b2b524e3cd8611408d1005d155f30d
+  dist_size: 60641
+  manifest:
+    - Changes
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - NOTES
+    - README
+    - bin/scripts/owl2perl-generate-modules.pl
+    - bin/scripts/owl2perl-install.pl
+    - doc/working_with_datatypes.html
+    - inc/Module/AutoInstall.pm
+    - inc/Module/Install.pm
+    - inc/Module/Install/AutoInstall.pm
+    - inc/Module/Install/Base.pm
+    - inc/Module/Install/Can.pm
+    - inc/Module/Install/Fetch.pm
+    - inc/Module/Install/Include.pm
+    - inc/Module/Install/Makefile.pm
+    - inc/Module/Install/Metadata.pm
+    - inc/Module/Install/Scripts.pm
+    - inc/Module/Install/Share.pm
+    - inc/Module/Install/Win32.pm
+    - inc/Module/Install/WriteAll.pm
+    - lib/OWL/Base.pm
+    - lib/OWL/Config.pm
+    - lib/OWL/Data/Boolean.pm
+    - lib/OWL/Data/DateTime.pm
+    - lib/OWL/Data/Def/DatatypeProperty.pm
+    - lib/OWL/Data/Def/OWLClass.pm
+    - lib/OWL/Data/Def/ObjectProperty.pm
+    - lib/OWL/Data/Float.pm
+    - lib/OWL/Data/Integer.pm
+    - lib/OWL/Data/OWL/Class.pm
+    - lib/OWL/Data/OWL/DatatypeProperty.pm
+    - lib/OWL/Data/OWL/ObjectProperty.pm
+    - lib/OWL/Data/Object.pm
+    - lib/OWL/Data/String.pm
+    - lib/OWL/Generators/GenOWL.pm
+    - lib/OWL/Generators/templates/owl-class.tt
+    - lib/OWL/Generators/templates/owl-datatype-property.tt
+    - lib/OWL/Generators/templates/owl-object-property.tt
+    - lib/OWL/RDF/.cvsignore
+    - lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+    - lib/OWL/RDF/Predicates/OMG_LSID.pm
+    - lib/OWL/RDF/Predicates/OWL.pm
+    - lib/OWL/RDF/Predicates/RDF.pm
+    - lib/OWL/RDF/Predicates/RDFS.pm
+    - lib/OWL/Utils.pm
+    - lib/OWL2Perl.pm
+    - share/log4perl.properties.template
+    - share/owl2perl-config.cfg.template
+    - t/OWL-Base.t
+    - t/OWL-Config.t
+    - t/OWL-Datatypes.t
+    - t/OWL2Perl.t
+    - t/datatypes.xml
+    - t/inheritance-bug.owl
+    - t/owl2perl-config.cfg
+  manifest_file_info:
+    - bytesize: 214
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1269347961
+      name: Changes
+    - bytesize: 1568
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1268934121
+      name: LICENSE
+    - bytesize: 1516
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1269015722
+      name: MANIFEST
+    - bytesize: 961
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1269357828
+      name: META.yml
+    - bytesize: 2086
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1269357633
+      name: Makefile.PL
+    - bytesize: 974
+      file_mime_type: ~
+      line_count: ~
+      md5: ad11572ac8074b1941d22783e2a734c9
+      mtime: 1268934140
+      name: NOTES
+    - bytesize: 1284
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1268934281
+      name: README
+    - bytesize: 13643
+      file_mime_type: ~
+      line_count: ~
+      md5: a0effcc6d1de5c1cac69fc6b0261ebfb
+      mtime: 1268934383
+      name: bin/scripts/owl2perl-generate-modules.pl
+    - bytesize: 9063
+      file_mime_type: ~
+      line_count: ~
+      md5: ae55e932db9976b400f3c85889c634e0
+      mtime: 1268934486
+      name: bin/scripts/owl2perl-install.pl
+    - bytesize: 24004
+      file_mime_type: ~
+      line_count: ~
+      md5: 662144090e582c1a8724094839e1c86d
+      mtime: 1269350304
+      name: doc/working_with_datatypes.html
+    - bytesize: 22214
+      file_mime_type: ~
+      line_count: ~
+      md5: 5df3a53b195a607829bddc376dbf459e
+      mtime: 1269357828
+      name: inc/Module/AutoInstall.pm
+    - bytesize: 10316
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc24dc3fffe027e03090047ca9427b6
+      mtime: 1269357827
+      name: inc/Module/Install.pm
+    - bytesize: 1211
+      file_mime_type: ~
+      line_count: ~
+      md5: 37fbb135dedaecade08ee4b691de9234
+      mtime: 1269357828
+      name: inc/Module/Install/AutoInstall.pm
+    - bytesize: 1014
+      file_mime_type: ~
+      line_count: ~
+      md5: d10dc1ce38751e915e2bf32516ae3c8b
+      mtime: 1269357828
+      name: inc/Module/Install/Base.pm
+    - bytesize: 1755
+      file_mime_type: ~
+      line_count: ~
+      md5: 04f840e4f9ceb246276d756839da25e5
+      mtime: 1269357828
+      name: inc/Module/Install/Can.pm
+    - bytesize: 2455
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e6776c9b4e8f095f98d9907431b50d8
+      mtime: 1269357828
+      name: inc/Module/Install/Fetch.pm
+    - bytesize: 525
+      file_mime_type: ~
+      line_count: ~
+      md5: fd7ea6ed8792cf2c61feefd0d22b9702
+      mtime: 1269357828
+      name: inc/Module/Install/Include.pm
+    - bytesize: 7171
+      file_mime_type: ~
+      line_count: ~
+      md5: 994e48cff279e8d8336818682db7f69a
+      mtime: 1269357828
+      name: inc/Module/Install/Makefile.pm
+    - bytesize: 15044
+      file_mime_type: ~
+      line_count: ~
+      md5: 070b30eb947239e67b362723b2bdbe61
+      mtime: 1269357828
+      name: inc/Module/Install/Metadata.pm
+    - bytesize: 521
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d482c1d7f02bdf8d2599f70141f1322
+      mtime: 1269357828
+      name: inc/Module/Install/Scripts.pm
+    - bytesize: 1645
+      file_mime_type: ~
+      line_count: ~
+      md5: 61baa844ea7b403718fff363f28b2e4e
+      mtime: 1269357828
+      name: inc/Module/Install/Share.pm
+    - bytesize: 1795
+      file_mime_type: ~
+      line_count: ~
+      md5: 4c73b7807d4f53f16fe1227407ca09a1
+      mtime: 1269357828
+      name: inc/Module/Install/Win32.pm
+    - bytesize: 1170
+      file_mime_type: ~
+      line_count: ~
+      md5: cc811f332afe5b36798086aeea4cdb68
+      mtime: 1269357828
+      name: inc/Module/Install/WriteAll.pm
+    - bytesize: 29167
+      file_mime_type: ~
+      line_count: ~
+      md5: c7cfe85a4c57363fef16ea0172ab26ec
+      mtime: 1269357820
+      name: lib/OWL/Base.pm
+    - bytesize: 5426
+      file_mime_type: ~
+      line_count: ~
+      md5: bece8d8bb3a5d4c94c93e67a36d1ab08
+      mtime: 1269357820
+      name: lib/OWL/Config.pm
+    - bytesize: 2348
+      file_mime_type: ~
+      line_count: ~
+      md5: 906435786a9db85f77835f7b933b4ee6
+      mtime: 1269357820
+      name: lib/OWL/Data/Boolean.pm
+    - bytesize: 2689
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d4e24a6fad5fbc0beba53071d784e89
+      mtime: 1269357820
+      name: lib/OWL/Data/DateTime.pm
+    - bytesize: 3964
+      file_mime_type: ~
+      line_count: ~
+      md5: b73fd4ca08970e7aadd63fa6e17ffafb
+      mtime: 1269357820
+      name: lib/OWL/Data/Def/DatatypeProperty.pm
+    - bytesize: 3768
+      file_mime_type: ~
+      line_count: ~
+      md5: fa49cda6a53a7d3d555eb94961524605
+      mtime: 1269357820
+      name: lib/OWL/Data/Def/OWLClass.pm
+    - bytesize: 4011
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f01e6555a93ccc56e5f635abec07af8
+      mtime: 1269357820
+      name: lib/OWL/Data/Def/ObjectProperty.pm
+    - bytesize: 2161
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e3e37c321cf4791312fc775623b3619
+      mtime: 1269357820
+      name: lib/OWL/Data/Float.pm
+    - bytesize: 2119
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c4d9d4b82bb275f42a8f3b996b48f05
+      mtime: 1269357820
+      name: lib/OWL/Data/Integer.pm
+    - bytesize: 3915
+      file_mime_type: ~
+      line_count: ~
+      md5: a0779c30b71018976d05b80be50bb75a
+      mtime: 1269357820
+      name: lib/OWL/Data/OWL/Class.pm
+    - bytesize: 2558
+      file_mime_type: ~
+      line_count: ~
+      md5: f19e99ee6e0b93827e41856c61a2ea83
+      mtime: 1269357820
+      name: lib/OWL/Data/OWL/DatatypeProperty.pm
+    - bytesize: 2907
+      file_mime_type: ~
+      line_count: ~
+      md5: 9c968678ef457dde24580f547b71d63f
+      mtime: 1269357820
+      name: lib/OWL/Data/OWL/ObjectProperty.pm
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: bf487f3cdc7f44e3589edcfb536523eb
+      mtime: 1269357820
+      name: lib/OWL/Data/Object.pm
+    - bytesize: 2186
+      file_mime_type: ~
+      line_count: ~
+      md5: 61daaef5822794a8e8a8603a1e253c00
+      mtime: 1269357820
+      name: lib/OWL/Data/String.pm
+    - bytesize: 8905
+      file_mime_type: ~
+      line_count: ~
+      md5: 29889cc8a1a2873679d58dff2c19d7e2
+      mtime: 1269357820
+      name: lib/OWL/Generators/GenOWL.pm
+    - bytesize: 6664
+      file_mime_type: ~
+      line_count: ~
+      md5: 8cdbc4ec0c0196c648241edfa5edf9d0
+      mtime: 1269357820
+      name: lib/OWL/Generators/templates/owl-class.tt
+    - bytesize: 2302
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c17b468e248d8eba5681a0df86687a2
+      mtime: 1269357820
+      name: lib/OWL/Generators/templates/owl-datatype-property.tt
+    - bytesize: 2044
+      file_mime_type: ~
+      line_count: ~
+      md5: 78a7c58c2d4a7c5af94a7a70b23fbd8e
+      mtime: 1269357820
+      name: lib/OWL/Generators/templates/owl-object-property.tt
+    - bytesize: 24
+      file_mime_type: ~
+      line_count: ~
+      md5: 82a610f4b244a7d4b981e632179f180a
+      mtime: 1269357820
+      name: lib/OWL/RDF/.cvsignore
+    - bytesize: 640
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d23bb2d495de231d0282d412fc56058
+      mtime: 1269357820
+      name: lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+    - bytesize: 429
+      file_mime_type: ~
+      line_count: ~
+      md5: da4fcc202e39000963849478ad8a18b2
+      mtime: 1269357820
+      name: lib/OWL/RDF/Predicates/OMG_LSID.pm
+    - bytesize: 393
+      file_mime_type: ~
+      line_count: ~
+      md5: f9e58ea7550534d03e1de333c66663d9
+      mtime: 1269357820
+      name: lib/OWL/RDF/Predicates/OWL.pm
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 26aa1bd36e77df9eb364cc8922330188
+      mtime: 1269357820
+      name: lib/OWL/RDF/Predicates/RDF.pm
+    - bytesize: 523
+      file_mime_type: ~
+      line_count: ~
+      md5: 241a42f24f0c9b4ec08073fe4f580c18
+      mtime: 1269357820
+      name: lib/OWL/RDF/Predicates/RDFS.pm
+    - bytesize: 4803
+      file_mime_type: ~
+      line_count: ~
+      md5: 585ef6930e6827e0fb414c58c612b514
+      mtime: 1269357820
+      name: lib/OWL/Utils.pm
+    - bytesize: 2275
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e7b2350a69b92037775e4250266245c
+      mtime: 1269357820
+      name: lib/OWL2Perl.pm
+    - bytesize: 697
+      file_mime_type: ~
+      line_count: ~
+      md5: 38d7cb7d480ce7a55ce56ed36b158753
+      mtime: 1268933046
+      name: share/log4perl.properties.template
+    - bytesize: 950
+      file_mime_type: ~
+      line_count: ~
+      md5: 659a7c00a4e868b913aed7f29f0f84cb
+      mtime: 1269014222
+      name: share/owl2perl-config.cfg.template
+    - bytesize: 3952
+      file_mime_type: ~
+      line_count: ~
+      md5: ae3101e696302e27026989285c20cfde
+      mtime: 1268934877
+      name: t/OWL-Base.t
+    - bytesize: 1056
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e538fa96d7684ec07673b1781c56265
+      mtime: 1268934915
+      name: t/OWL-Config.t
+    - bytesize: 7204
+      file_mime_type: ~
+      line_count: ~
+      md5: 8568b012b820e563d1059217f0a00b6a
+      mtime: 1269349932
+      name: t/OWL-Datatypes.t
+    - bytesize: 1083
+      file_mime_type: ~
+      line_count: ~
+      md5: de1ce74fc39ab42720a2a876ce56625f
+      mtime: 1269013916
+      name: t/OWL2Perl.t
+    - bytesize: 2344
+      file_mime_type: ~
+      line_count: ~
+      md5: 8087c3b4a46f6485017aad66a774612d
+      mtime: 1264621302
+      name: t/datatypes.xml
+    - bytesize: 1526
+      file_mime_type: ~
+      line_count: ~
+      md5: efdda80bea971308117edc396dfe9872
+      mtime: 1264622045
+      name: t/inheritance-bug.owl
+    - bytesize: 302
+      file_mime_type: ~
+      line_count: ~
+      md5: 04bb706c530d47c123b19808abdf21e8
+      mtime: 1268934743
+      name: t/owl2perl-config.cfg
+  module_info:
+    - bytesize: 29167
+      file_mime_type: ~
+      line_count: ~
+      md5: 2a18bcd9ed6d7132dea5e16d665154f6
+      module_name_from_file_guess: OWL::Base
+      mtime: 1269357820
+      name: blib/lib/OWL/Base.pm
+      packages:
+        - OWL::Base
+      primary_package: OWL::Base
+      uses:
+        - strict
+        - HTTP::Date
+        - URI
+        - LS::ID
+        - vars
+        - constant
+        - overload
+        - Carp
+        - OWL::Config
+        - Log::Log4perl
+        - Data::Dumper
+        - Dumpvalue
+        - IO::String
+      version_info:
+        filename: blib/lib/OWL/Base.pm
+        identifier: VERSION
+        line_number: 35
+        sigil: $
+        value: 1.28
+    - bytesize: 5426
+      file_mime_type: ~
+      line_count: ~
+      md5: 079537bbd614ad88058b42f632008313
+      module_name_from_file_guess: OWL::Config
+      mtime: 1269357820
+      name: blib/lib/OWL/Config.pm
+      packages:
+        - OWL::Config
+      primary_package: OWL::Config
+      uses:
+        - Config::Simple
+        - File::Spec
+        - File::HomeDir
+        - vars
+        - strict
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/OWL/Config.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 1.01
+    - bytesize: 2348
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e899aba1ff2fdbd207d3f524460efbe
+      module_name_from_file_guess: OWL::Data::Boolean
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Boolean.pm
+      packages:
+        - OWL::Data::Boolean
+      primary_package: OWL::Data::Boolean
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Boolean.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.05
+    - bytesize: 2689
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c3527b718f32a965e3e578d3bf95974
+      module_name_from_file_guess: OWL::Data::DateTime
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/DateTime.pm
+      packages:
+        - OWL::Data::DateTime
+      primary_package: OWL::Data::DateTime
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/DateTime.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.04
+    - bytesize: 3964
+      file_mime_type: ~
+      line_count: ~
+      md5: dd74b0420aeb2e11f3d355ce676299bc
+      module_name_from_file_guess: OWL::Data::Def::DatatypeProperty
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Def/DatatypeProperty.pm
+      packages:
+        - OWL::Data::Def::DatatypeProperty
+      primary_package: OWL::Data::Def::DatatypeProperty
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Def/DatatypeProperty.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 1.08
+    - bytesize: 3768
+      file_mime_type: ~
+      line_count: ~
+      md5: bb2d622812276086eaeede76cb64ec1b
+      module_name_from_file_guess: OWL::Data::Def::OWLClass
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Def/OWLClass.pm
+      packages:
+        - OWL::Data::Def::OWLClass
+      primary_package: OWL::Data::Def::OWLClass
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Def/OWLClass.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 1.22
+    - bytesize: 4011
+      file_mime_type: ~
+      line_count: ~
+      md5: 42fa969f945750c6cbecf61e0f8223d5
+      module_name_from_file_guess: OWL::Data::Def::ObjectProperty
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Def/ObjectProperty.pm
+      packages:
+        - OWL::Data::Def::ObjectProperty
+      primary_package: OWL::Data::Def::ObjectProperty
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Def/ObjectProperty.pm
+        identifier: VERSION
+        line_number: 14
+        sigil: $
+        value: 1.08
+    - bytesize: 2161
+      file_mime_type: ~
+      line_count: ~
+      md5: 133ce7e4e25eccca93b47ba73ecb3197
+      module_name_from_file_guess: OWL::Data::Float
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Float.pm
+      packages:
+        - OWL::Data::Float
+      primary_package: OWL::Data::Float
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Float.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.03
+    - bytesize: 2119
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d3ed1d636319567df84b23b46a6a8d0
+      module_name_from_file_guess: OWL::Data::Integer
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Integer.pm
+      packages:
+        - OWL::Data::Integer
+      primary_package: OWL::Data::Integer
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Integer.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.03
+    - bytesize: 3915
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a0dce4eafecccb5e387300453b75798
+      module_name_from_file_guess: OWL::Data::OWL::Class
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/OWL/Class.pm
+      packages:
+        - OWL::Data::OWL::Class
+      primary_package: OWL::Data::OWL::Class
+      uses:
+        - base
+        - strict
+        - URI
+        - RDF::Core::Statement
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/OWL/Class.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 1.11
+    - bytesize: 2558
+      file_mime_type: ~
+      line_count: ~
+      md5: 74af7ef78dbafdde3c1868918f0324a9
+      module_name_from_file_guess: OWL::Data::OWL::DatatypeProperty
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/OWL/DatatypeProperty.pm
+      packages:
+        - OWL::Data::OWL::DatatypeProperty
+      primary_package: OWL::Data::OWL::DatatypeProperty
+      uses:
+        - base
+        - strict
+        - RDF::Core::Resource
+        - RDF::Core::Statement
+        - RDF::Core::Literal
+        - RDF::Core::NodeFactory
+        - OWL::RDF::Predicates::DC_PROTEGE
+        - OWL::RDF::Predicates::OMG_LSID
+        - OWL::RDF::Predicates::OWL
+        - OWL::RDF::Predicates::RDF
+        - OWL::RDF::Predicates::RDFS
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/OWL/DatatypeProperty.pm
+        identifier: VERSION
+        line_number: 26
+        sigil: $
+        value: 1.05
+    - bytesize: 2907
+      file_mime_type: ~
+      line_count: ~
+      md5: d470b54b9568b9b3c8aee2747bf004c1
+      module_name_from_file_guess: OWL::Data::OWL::ObjectProperty
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/OWL/ObjectProperty.pm
+      packages:
+        - OWL::Data::OWL::ObjectProperty
+      primary_package: OWL::Data::OWL::ObjectProperty
+      uses:
+        - base
+        - strict
+        - RDF::Core::Resource
+        - RDF::Core::Statement
+        - OWL::RDF::Predicates::DC_PROTEGE
+        - OWL::RDF::Predicates::OMG_LSID
+        - OWL::RDF::Predicates::OWL
+        - OWL::RDF::Predicates::RDF
+        - OWL::RDF::Predicates::RDFS
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/OWL/ObjectProperty.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 1.02
+    - bytesize: 2982
+      file_mime_type: ~
+      line_count: ~
+      md5: 67fc4df984a9c7442bf3d9064ee49be7
+      module_name_from_file_guess: OWL::Data::Object
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/Object.pm
+      packages:
+        - OWL::Data::Object
+      primary_package: OWL::Data::Object
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/Object.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.02
+    - bytesize: 2186
+      file_mime_type: ~
+      line_count: ~
+      md5: ecaf8b3ad1129d531d6f064e8727a1b8
+      module_name_from_file_guess: OWL::Data::String
+      mtime: 1269357820
+      name: blib/lib/OWL/Data/String.pm
+      packages:
+        - OWL::Data::String
+      primary_package: OWL::Data::String
+      uses:
+        - base
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Data/String.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.03
+    - bytesize: 8905
+      file_mime_type: ~
+      line_count: ~
+      md5: 102be79a4c26c6fd7f4848caad6cd8f4
+      module_name_from_file_guess: OWL::Generators::GenOWL
+      mtime: 1269357820
+      name: blib/lib/OWL/Generators/GenOWL.pm
+      packages:
+        - OWL::Generators::GenOWL
+      primary_package: OWL::Generators::GenOWL
+      uses:
+        - OWL::Utils
+        - OWL::Data::Def::ObjectProperty
+        - OWL::Base
+        - base
+        - FindBin
+        - lib
+        - Template
+        - File::Spec
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Generators/GenOWL.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 1.15
+    - bytesize: 640
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d9f7960928b1fb90b22455568abfe05
+      module_name_from_file_guess: OWL::RDF::Predicates::DC_PROTEGE
+      mtime: 1269357820
+      name: blib/lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+      packages:
+        - OWL::RDF::Predicates::DC_PROTEGE
+      primary_package: OWL::RDF::Predicates::DC_PROTEGE
+      uses:
+        - strict
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 1.01
+    - bytesize: 429
+      file_mime_type: ~
+      line_count: ~
+      md5: ba34fd0896f89fbda604ff15a98d6044
+      module_name_from_file_guess: OWL::RDF::Predicates::OMG_LSID
+      mtime: 1269357820
+      name: blib/lib/OWL/RDF/Predicates/OMG_LSID.pm
+      packages:
+        - OWL::RDF::Predicates::OMG_LSID
+      primary_package: OWL::RDF::Predicates::OMG_LSID
+      uses:
+        - strict
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/OWL/RDF/Predicates/OMG_LSID.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 1.01
+    - bytesize: 393
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dec5559fb3af02aaab9c533c6816e51
+      module_name_from_file_guess: OWL::RDF::Predicates::OWL
+      mtime: 1269357820
+      name: blib/lib/OWL/RDF/Predicates/OWL.pm
+      packages:
+        - OWL::RDF::Predicates::OWL
+      primary_package: OWL::RDF::Predicates::OWL
+      uses:
+        - strict
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/OWL/RDF/Predicates/OWL.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 1.01
+    - bytesize: 403
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f3b7dfbc8a5de8cd5a43bd8c75b0bb1
+      module_name_from_file_guess: OWL::RDF::Predicates::RDF
+      mtime: 1269357820
+      name: blib/lib/OWL/RDF/Predicates/RDF.pm
+      packages:
+        - OWL::RDF::Predicates::RDF
+      primary_package: OWL::RDF::Predicates::RDF
+      uses:
+        - strict
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/OWL/RDF/Predicates/RDF.pm
+        identifier: VERSION
+        line_number: 6
+        sigil: $
+        value: 1.01
+    - bytesize: 523
+      file_mime_type: ~
+      line_count: ~
+      md5: 227757911a99f39868a3478d6d3074cc
+      module_name_from_file_guess: OWL::RDF::Predicates::RDFS
+      mtime: 1269357820
+      name: blib/lib/OWL/RDF/Predicates/RDFS.pm
+      packages:
+        - OWL::RDF::Predicates::RDFS
+      primary_package: OWL::RDF::Predicates::RDFS
+      uses:
+        - strict
+        - vars
+        - constant
+      version_info:
+        filename: blib/lib/OWL/RDF/Predicates/RDFS.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 1.01
+    - bytesize: 4803
+      file_mime_type: ~
+      line_count: ~
+      md5: 98b2bb7345d0f6230c906517de65756b
+      module_name_from_file_guess: OWL::Utils
+      mtime: 1269357820
+      name: blib/lib/OWL/Utils.pm
+      packages:
+        - OWL::Utils
+      primary_package: OWL::Utils
+      uses:
+        - File::Spec
+        - LWP::UserAgent
+        - HTTP::Request
+        - RDF::Core::Storage::Memory
+        - RDF::Core::Model
+        - RDF::Core::Model::Serializer
+        - Scalar::Util
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL/Utils.pm
+        identifier: VERSION
+        line_number: 24
+        sigil: $
+        value: 1.03
+    - bytesize: 2275
+      file_mime_type: ~
+      line_count: ~
+      md5: bb20e5f04b9df4165e74f97ddd01c1bd
+      module_name_from_file_guess: OWL2Perl
+      mtime: 1269357820
+      name: blib/lib/OWL2Perl.pm
+      packages:
+        - OWL2Perl
+      primary_package: OWL2Perl
+      uses:
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/OWL2Perl.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.91
+  modules:
+    - blib/lib/OWL/Base.pm
+    - blib/lib/OWL/Config.pm
+    - blib/lib/OWL/Data/Boolean.pm
+    - blib/lib/OWL/Data/DateTime.pm
+    - blib/lib/OWL/Data/Def/DatatypeProperty.pm
+    - blib/lib/OWL/Data/Def/OWLClass.pm
+    - blib/lib/OWL/Data/Def/ObjectProperty.pm
+    - blib/lib/OWL/Data/Float.pm
+    - blib/lib/OWL/Data/Integer.pm
+    - blib/lib/OWL/Data/OWL/Class.pm
+    - blib/lib/OWL/Data/OWL/DatatypeProperty.pm
+    - blib/lib/OWL/Data/OWL/ObjectProperty.pm
+    - blib/lib/OWL/Data/Object.pm
+    - blib/lib/OWL/Data/String.pm
+    - blib/lib/OWL/Generators/GenOWL.pm
+    - blib/lib/OWL/RDF/Predicates/DC_PROTEGE.pm
+    - blib/lib/OWL/RDF/Predicates/OMG_LSID.pm
+    - blib/lib/OWL/RDF/Predicates/OWL.pm
+    - blib/lib/OWL/RDF/Predicates/RDF.pm
+    - blib/lib/OWL/RDF/Predicates/RDFS.pm
+    - blib/lib/OWL/Utils.pm
+    - blib/lib/OWL2Perl.pm
+  test_info:
+    - bytesize: 3952
+      file_mime_type: ~
+      line_count: ~
+      md5: ae3101e696302e27026989285c20cfde
+      mtime: 1268934877
+      name: t/OWL-Base.t
+      uses:
+        - Test::More
+        - FindBin
+        - lib
+    - bytesize: 1056
+      file_mime_type: ~
+      line_count: ~
+      md5: 5e538fa96d7684ec07673b1781c56265
+      mtime: 1268934915
+      name: t/OWL-Config.t
+      uses:
+        - Test::More
+        - strict
+        - vars
+        - FindBin
+        - lib
+        - OWL::Config
+    - bytesize: 7204
+      file_mime_type: ~
+      line_count: ~
+      md5: 8568b012b820e563d1059217f0a00b6a
+      mtime: 1269349932
+      name: t/OWL-Datatypes.t
+      uses:
+        - Test::More
+        - strict
+        - vars
+        - FindBin
+        - lib
+        - File::Path
+    - bytesize: 1083
+      file_mime_type: ~
+      line_count: ~
+      md5: de1ce74fc39ab42720a2a876ce56625f
+      mtime: 1269013916
+      name: t/OWL2Perl.t
+      uses:
+        - Test::More
+        - strict
+        - FindBin
+        - lib
+  tests:
+    - t/OWL-Base.t
+    - t/OWL-Config.t
+    - t/OWL-Datatypes.t
+    - t/OWL2Perl.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.SFAZ
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271756502
+  examine_start_time: 1271756441
+  examine_time: 61
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 1
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271756502
+  run_start_time: 1271756441
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

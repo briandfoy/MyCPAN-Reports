@@ -1,0 +1,3493 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: PERL Modules for biomedical ontologies such as the Cell Cycle Ontology (CCO) and OBO ontologies in general like Gene Ontology (GO)
+    author:
+      - 'Erick Antezana <erick.antezana -@- gmail.com>'
+    build_requires:
+      ExtUtils::MakeMaker: 0
+    configure_requires:
+      ExtUtils::MakeMaker: 0
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.56
+    license: unknown
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: ONTO-PERL
+    no_index:
+      directory:
+        - t
+        - inc
+    requires: {}
+    version: 1.17
+  blib:
+    - blib/lib/OBO/CCO/CCO_ID.pm
+    - blib/lib/OBO/CCO/CCO_ID_Set.pm
+    - blib/lib/OBO/CCO/CCO_ID_Term_Map.pm
+    - blib/lib/OBO/CCO/GoaAssociation.pm
+    - blib/lib/OBO/CCO/GoaAssociationSet.pm
+    - blib/lib/OBO/CCO/GoaParser.pm
+    - blib/lib/OBO/CCO/GoaToRDF.pm
+    - blib/lib/OBO/CCO/IntActParser.pm
+    - blib/lib/OBO/CCO/Interaction.pm
+    - blib/lib/OBO/CCO/InteractionManager.pm
+    - blib/lib/OBO/CCO/Interactor.pm
+    - blib/lib/OBO/CCO/NCBIParser.pm
+    - blib/lib/OBO/CCO/NCBIToRDF.pm
+    - blib/lib/OBO/CCO/NewIntActParser.pm
+    - blib/lib/OBO/CCO/OrthoMCLParser.pm
+    - blib/lib/OBO/CCO/UniProtParser.pm
+    - blib/lib/OBO/CCO/XMLIntactParser.pm
+    - blib/lib/OBO/Core/Dbxref.pm
+    - blib/lib/OBO/Core/Def.pm
+    - blib/lib/OBO/Core/IDspace.pm
+    - blib/lib/OBO/Core/Ontology.pm
+    - blib/lib/OBO/Core/Relationship.pm
+    - blib/lib/OBO/Core/RelationshipType.pm
+    - blib/lib/OBO/Core/Synonym.pm
+    - blib/lib/OBO/Core/SynonymTypeDef.pm
+    - blib/lib/OBO/Core/Term.pm
+    - blib/lib/OBO/Parser/OBOParser.pm
+    - blib/lib/OBO/Parser/OWLParser.pm
+    - blib/lib/OBO/Util/DbxrefSet.pm
+    - blib/lib/OBO/Util/ObjectIdSet.pm
+    - blib/lib/OBO/Util/ObjectSet.pm
+    - blib/lib/OBO/Util/Ontolome.pm
+    - blib/lib/OBO/Util/Set.pm
+    - blib/lib/OBO/Util/SynonymSet.pm
+    - blib/lib/OBO/Util/SynonymTypeDefSet.pm
+    - blib/lib/OBO/Util/TermSet.pm
+    - blib/lib/ONTO-PERL.pod
+  build_file: Makefile.PL
+  build_file_output: |2
+    
+       XML::XPath is missing. This module is only required in order to
+       perform parsing operations with IntAct-XML files. However, this 
+       module is not required for using ONTO-PERL. If you do not intend 
+       to use IntAct XML files, then you may continue, and install 
+       XML::XPath in the future.
+    
+    
+       SWISS::Entry is missing. This module is only required in order to
+       perform parsing operations with UniProt files. However, this 
+       module is not required for using ONTO-PERL. If you do not intend 
+       to use UniProt files, then you may continue, and install 
+       SWISS::Entry in the future.
+    
+    
+       XML::Parser is missing. This module is only required in order to
+       perform parsing operations with XML files (obo2owl). However, this 
+       module is not fully required for using ONTO-PERL. If you do not intend 
+       to convert your files to OWL, then you may continue, and install 
+       XML::Parser in the future.
+    
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for ONTO-PERL
+  build_output: |
+    cp lib/OBO/Core/Synonym.pm blib/lib/OBO/Core/Synonym.pm
+    cp lib/OBO/CCO/Interactor.pm blib/lib/OBO/CCO/Interactor.pm
+    cp lib/OBO/Util/Set.pm blib/lib/OBO/Util/Set.pm
+    cp lib/OBO/CCO/CCO_ID_Set.pm blib/lib/OBO/CCO/CCO_ID_Set.pm
+    cp lib/OBO/Core/Def.pm blib/lib/OBO/Core/Def.pm
+    cp lib/OBO/CCO/UniProtParser.pm blib/lib/OBO/CCO/UniProtParser.pm
+    cp lib/OBO/CCO/InteractionManager.pm blib/lib/OBO/CCO/InteractionManager.pm
+    cp lib/OBO/CCO/IntActParser.pm blib/lib/OBO/CCO/IntActParser.pm
+    cp lib/OBO/CCO/XMLIntactParser.pm blib/lib/OBO/CCO/XMLIntactParser.pm
+    cp lib/OBO/Util/ObjectSet.pm blib/lib/OBO/Util/ObjectSet.pm
+    cp lib/OBO/CCO/CCO_ID_Term_Map.pm blib/lib/OBO/CCO/CCO_ID_Term_Map.pm
+    cp lib/OBO/Core/Term.pm blib/lib/OBO/Core/Term.pm
+    cp lib/OBO/Util/SynonymSet.pm blib/lib/OBO/Util/SynonymSet.pm
+    cp lib/OBO/Core/IDspace.pm blib/lib/OBO/Core/IDspace.pm
+    cp lib/OBO/Util/DbxrefSet.pm blib/lib/OBO/Util/DbxrefSet.pm
+    cp lib/OBO/Util/TermSet.pm blib/lib/OBO/Util/TermSet.pm
+    cp lib/OBO/CCO/GoaParser.pm blib/lib/OBO/CCO/GoaParser.pm
+    cp lib/OBO/Parser/OBOParser.pm blib/lib/OBO/Parser/OBOParser.pm
+    cp ONTO-PERL.pod blib/lib/ONTO-PERL.pod
+    cp lib/OBO/Core/Ontology.pm blib/lib/OBO/Core/Ontology.pm
+    cp lib/OBO/CCO/OrthoMCLParser.pm blib/lib/OBO/CCO/OrthoMCLParser.pm
+    cp lib/OBO/CCO/CCO_ID.pm blib/lib/OBO/CCO/CCO_ID.pm
+    cp lib/OBO/CCO/GoaToRDF.pm blib/lib/OBO/CCO/GoaToRDF.pm
+    cp lib/OBO/CCO/GoaAssociationSet.pm blib/lib/OBO/CCO/GoaAssociationSet.pm
+    cp lib/OBO/Core/Dbxref.pm blib/lib/OBO/Core/Dbxref.pm
+    cp lib/OBO/Util/SynonymTypeDefSet.pm blib/lib/OBO/Util/SynonymTypeDefSet.pm
+    cp lib/OBO/Core/Relationship.pm blib/lib/OBO/Core/Relationship.pm
+    cp lib/OBO/Core/SynonymTypeDef.pm blib/lib/OBO/Core/SynonymTypeDef.pm
+    cp lib/OBO/CCO/NCBIParser.pm blib/lib/OBO/CCO/NCBIParser.pm
+    cp lib/OBO/CCO/Interaction.pm blib/lib/OBO/CCO/Interaction.pm
+    cp lib/OBO/Util/Ontolome.pm blib/lib/OBO/Util/Ontolome.pm
+    cp lib/OBO/Parser/OWLParser.pm blib/lib/OBO/Parser/OWLParser.pm
+    cp lib/OBO/CCO/GoaAssociation.pm blib/lib/OBO/CCO/GoaAssociation.pm
+    cp lib/OBO/CCO/NewIntActParser.pm blib/lib/OBO/CCO/NewIntActParser.pm
+    cp lib/OBO/Util/ObjectIdSet.pm blib/lib/OBO/Util/ObjectIdSet.pm
+    cp lib/OBO/Core/RelationshipType.pm blib/lib/OBO/Core/RelationshipType.pm
+    cp lib/OBO/CCO/NCBIToRDF.pm blib/lib/OBO/CCO/NCBIToRDF.pm
+    make: don't know how to make scripts/get_relationships.pl. Stop
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw/ONTO-PERL-1.17/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw/ONTO-PERL-1.17
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw/ONTO-PERL-1.17/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw/ONTO-PERL-1.17/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: EASR
+  dist_basename: ONTO-PERL-1.17.tar.gz
+  dist_date: 1269719134
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw/ONTO-PERL-1.17
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw/ONTO-PERL-1.17
+  dist_file: /home/brian/CPAN/authors/id/E/EA/EASR/ONTO-PERL/ONTO-PERL-1.17.tar.gz
+  dist_md5: 1c6d10310405239612321c781a0c9a68
+  dist_size: 747822
+  manifest:
+    - Changes
+    - INSTALL
+    - LICENSE
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - ONTO-PERL.pod
+    - README
+    - doc/example00.html
+    - doc/example01.html
+    - doc/example02.html
+    - doc/example03.html
+    - doc/example04.html
+    - doc/example05.html
+    - doc/example06.html
+    - doc/example07.html
+    - doc/example08.html
+    - doc/example09.html
+    - doc/example10.html
+    - doc/example11.html
+    - doc/example12.html
+    - doc/example13.html
+    - lib/OBO/CCO/CCO_ID.pm
+    - lib/OBO/CCO/CCO_ID_Set.pm
+    - lib/OBO/CCO/CCO_ID_Term_Map.pm
+    - lib/OBO/CCO/GoaAssociation.pm
+    - lib/OBO/CCO/GoaAssociationSet.pm
+    - lib/OBO/CCO/GoaParser.pm
+    - lib/OBO/CCO/GoaToRDF.pm
+    - lib/OBO/CCO/IntActParser.pm
+    - lib/OBO/CCO/Interaction.pm
+    - lib/OBO/CCO/InteractionManager.pm
+    - lib/OBO/CCO/Interactor.pm
+    - lib/OBO/CCO/NCBIParser.pm
+    - lib/OBO/CCO/NCBIToRDF.pm
+    - lib/OBO/CCO/NewIntActParser.pm
+    - lib/OBO/CCO/OrthoMCLParser.pm
+    - lib/OBO/CCO/UniProtParser.pm
+    - lib/OBO/CCO/XMLIntactParser.pm
+    - lib/OBO/Core/Dbxref.pm
+    - lib/OBO/Core/Def.pm
+    - lib/OBO/Core/IDspace.pm
+    - lib/OBO/Core/Ontology.pm
+    - lib/OBO/Core/Relationship.pm
+    - lib/OBO/Core/RelationshipType.pm
+    - lib/OBO/Core/Synonym.pm
+    - lib/OBO/Core/SynonymTypeDef.pm
+    - lib/OBO/Core/Term.pm
+    - lib/OBO/Parser/OBOParser.pm
+    - lib/OBO/Parser/OWLParser.pm
+    - lib/OBO/Util/DbxrefSet.pm
+    - lib/OBO/Util/ObjectIdSet.pm
+    - lib/OBO/Util/ObjectSet.pm
+    - lib/OBO/Util/Ontolome.pm
+    - lib/OBO/Util/Set.pm
+    - lib/OBO/Util/SynonymSet.pm
+    - lib/OBO/Util/SynonymTypeDefSet.pm
+    - lib/OBO/Util/TermSet.pm
+    - scripts/get_ancestor_terms.pl
+    - scripts/get_descendent_terms.pl
+    - scripts/go2owl.pl
+    - scripts/goa2rdf.pl
+    - scripts/names.xsl
+    - scripts/obo2cco.pl
+    - scripts/obo2owl.pl
+    - scripts/obo2rdf.pl
+    - scripts/obo2tran.pl
+    - scripts/obo2xml.pl
+    - scripts/obsolete_term_id_vs_def_in_go.pl
+    - scripts/obsolete_term_id_vs_name_in_go.pl
+    - scripts/owl2obo.pl
+    - scripts/term_id_vs_term_def.pl
+    - scripts/term_id_vs_term_name.pl
+    - scripts/xml2html.xsl
+    - t/CCO_ID.t
+    - t/CCO_ID_Set.t
+    - t/CCO_ID_Term_Map.t
+    - t/Dbxref.t
+    - t/DbxrefSet.t
+    - t/Def.t
+    - t/GoaAssociation.t
+    - t/GoaAssociationSet.t
+    - t/GoaParser.t
+    - t/GoaToRDF.t
+    - t/IDspace.t
+    - t/IntActParser.t
+    - t/NCBIParser.t
+    - t/NCBIToRDF.t
+    - t/NewIntActParser.t
+    - t/OBOParser.t
+    - t/OWLParser.t
+    - t/Ontology.t
+    - t/Ontolome.t
+    - t/OrthoMCLParser.t
+    - t/Relationship.t
+    - t/RelationshipType.t
+    - t/Set.t
+    - t/Synonym.t
+    - t/SynonymSet.t
+    - t/SynonymTypeDef.t
+    - t/SynonymTypeDefSet.t
+    - t/Term.t
+    - t/TermSet.t
+    - t/UniProtParser.t
+    - t/data/Ath_cc_up.map
+    - t/data/Ath_up.map
+    - t/data/alpha.obo
+    - t/data/arath_small-05.xml
+    - t/data/arath_small-07.xml
+    - t/data/cco_b.ids
+    - t/data/cco_b_ath.ids
+    - t/data/cco_b_hsa.ids
+    - t/data/cco_b_sce.ids
+    - t/data/cco_g.ids
+    - t/data/cco_g_dummy.ids
+    - t/data/cco_i.ids
+    - t/data/cco_i_At.ids
+    - t/data/cco_id_term.map
+    - t/data/cco_o.ids
+    - t/data/cco_t.ids
+    - t/data/cco_u.ids
+    - t/data/cell.obo
+    - t/data/fake_ulo_cco.obo
+    - t/data/goa_assoc.txt
+    - t/data/goa_assoc_filt.txt
+    - t/data/header.obo
+    - t/data/names_dummy.dmp
+    - t/data/nodes_dummy.dmp
+    - t/data/out_I_A_thaliana.obo
+    - t/data/out_cco.obo
+    - t/data/out_cco.obo.old
+    - t/data/out_cco_up.obo
+    - t/data/out_omcl.obo
+    - t/data/pre_cco.obo
+    - t/data/pre_cco_core.obo
+    - t/data/test_orthomcl.dat
+    - t/data/test_ulo_cco2.owl
+    - t/data/ulo_cco.obo
+    - t/data/up_test.txt
+  manifest_file_info:
+    - bytesize: 1933
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1269717181
+      name: Changes
+    - bytesize: 1809
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1269714679
+      name: INSTALL
+    - bytesize: 20543
+      file_mime_type: ~
+      line_count: ~
+      md5: 9879d6db96fd29134fc802214163b95a
+      mtime: 1269714679
+      name: LICENSE
+    - bytesize: 2968
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1269714679
+      name: MANIFEST
+    - bytesize: 644
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1269718631
+      name: META.yml
+    - bytesize: 2726
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1269717284
+      name: Makefile.PL
+    - bytesize: 2348
+      file_mime_type: ~
+      line_count: ~
+      md5: b9169fbd3a1b3b3843b570eace34d3bc
+      mtime: 1269717538
+      name: ONTO-PERL.pod
+    - bytesize: 1811
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1269718572
+      name: README
+    - bytesize: 4034
+      file_mime_type: ~
+      line_count: ~
+      md5: 41397f29fcd90c107c60a2c132aa670e
+      mtime: 1269714679
+      name: doc/example00.html
+    - bytesize: 2890
+      file_mime_type: ~
+      line_count: ~
+      md5: c2893439968aa122c81346fb8f77ce25
+      mtime: 1269714679
+      name: doc/example01.html
+    - bytesize: 1388
+      file_mime_type: ~
+      line_count: ~
+      md5: e9b34461d895744e99a6b080b2fd0f56
+      mtime: 1269714679
+      name: doc/example02.html
+    - bytesize: 1383
+      file_mime_type: ~
+      line_count: ~
+      md5: d7762c25ae9fbb13ded4157ef4eab3a8
+      mtime: 1269714679
+      name: doc/example03.html
+    - bytesize: 6217
+      file_mime_type: ~
+      line_count: ~
+      md5: 1b23bdeff4fe5743af96a7164682366c
+      mtime: 1269714679
+      name: doc/example04.html
+    - bytesize: 1273
+      file_mime_type: ~
+      line_count: ~
+      md5: 87fe54efb34f8e933e1d38697182a8ed
+      mtime: 1269714679
+      name: doc/example05.html
+    - bytesize: 752
+      file_mime_type: ~
+      line_count: ~
+      md5: c60ef84eeded7c8c331c46aedf43e872
+      mtime: 1269714679
+      name: doc/example06.html
+    - bytesize: 809
+      file_mime_type: ~
+      line_count: ~
+      md5: 7cc797c66ae93f9a7024881387b7e890
+      mtime: 1269714679
+      name: doc/example07.html
+    - bytesize: 3720
+      file_mime_type: ~
+      line_count: ~
+      md5: 28c060da468ec0c9e92010960dd234b1
+      mtime: 1269714679
+      name: doc/example08.html
+    - bytesize: 1245
+      file_mime_type: ~
+      line_count: ~
+      md5: 82e230402550967413120bbf21cee2a9
+      mtime: 1269714679
+      name: doc/example09.html
+    - bytesize: 1461
+      file_mime_type: ~
+      line_count: ~
+      md5: b8319d52420548ef3c9ca9cd237bf60d
+      mtime: 1269714679
+      name: doc/example10.html
+    - bytesize: 7080
+      file_mime_type: ~
+      line_count: ~
+      md5: ae97a11a8b0019bc43bf6adf978590a3
+      mtime: 1269714679
+      name: doc/example11.html
+    - bytesize: 25461
+      file_mime_type: ~
+      line_count: ~
+      md5: 3236651279ed08cf292785138155925c
+      mtime: 1269714679
+      name: doc/example12.html
+    - bytesize: 3070
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d439d2e870f91e40f81f44da5291d7b
+      mtime: 1269714679
+      name: doc/example13.html
+    - bytesize: 4899
+      file_mime_type: ~
+      line_count: ~
+      md5: af0f21a128b0a60bdba16938c0f28b1a
+      mtime: 1269714680
+      name: lib/OBO/CCO/CCO_ID.pm
+    - bytesize: 3091
+      file_mime_type: ~
+      line_count: ~
+      md5: b8d49279d3157a36b1e6b9570fa1b9df
+      mtime: 1269714680
+      name: lib/OBO/CCO/CCO_ID_Set.pm
+    - bytesize: 8716
+      file_mime_type: ~
+      line_count: ~
+      md5: f0fd6622936248fd720febc2ae62d74f
+      mtime: 1269714680
+      name: lib/OBO/CCO/CCO_ID_Term_Map.pm
+    - bytesize: 12580
+      file_mime_type: ~
+      line_count: ~
+      md5: ebb602a6722a4f1620edcaf841eeb01a
+      mtime: 1269714679
+      name: lib/OBO/CCO/GoaAssociation.pm
+    - bytesize: 7434
+      file_mime_type: ~
+      line_count: ~
+      md5: abda0936173dfab4320cd3d21adb6866
+      mtime: 1269714680
+      name: lib/OBO/CCO/GoaAssociationSet.pm
+    - bytesize: 8355
+      file_mime_type: ~
+      line_count: ~
+      md5: 8dfa6e557477bab1d9b728cab2a32f69
+      mtime: 1269714680
+      name: lib/OBO/CCO/GoaParser.pm
+    - bytesize: 7351
+      file_mime_type: ~
+      line_count: ~
+      md5: e939790ed20551e0527acf5f4afc9242
+      mtime: 1269714679
+      name: lib/OBO/CCO/GoaToRDF.pm
+    - bytesize: 20663
+      file_mime_type: ~
+      line_count: ~
+      md5: ac7024eb608da33c2146072a7fab3a9d
+      mtime: 1269714680
+      name: lib/OBO/CCO/IntActParser.pm
+    - bytesize: 4821
+      file_mime_type: ~
+      line_count: ~
+      md5: 50fd94a1f6923d695eca24d0c76025cc
+      mtime: 1269714680
+      name: lib/OBO/CCO/Interaction.pm
+    - bytesize: 17749
+      file_mime_type: ~
+      line_count: ~
+      md5: 7d34b5526f33b4b90349e5b34167deb5
+      mtime: 1269714679
+      name: lib/OBO/CCO/InteractionManager.pm
+    - bytesize: 4774
+      file_mime_type: ~
+      line_count: ~
+      md5: e93d0d9f5bb8e7fa5058c6928005f50b
+      mtime: 1269714679
+      name: lib/OBO/CCO/Interactor.pm
+    - bytesize: 7193
+      file_mime_type: ~
+      line_count: ~
+      md5: 41de6c84736a2a776f0ec21dc0fd53c6
+      mtime: 1269714680
+      name: lib/OBO/CCO/NCBIParser.pm
+    - bytesize: 4875
+      file_mime_type: ~
+      line_count: ~
+      md5: 9b3e6ef4d986f3646cccce2c5b6d67d3
+      mtime: 1269714679
+      name: lib/OBO/CCO/NCBIToRDF.pm
+    - bytesize: 9633
+      file_mime_type: ~
+      line_count: ~
+      md5: 1825fd3eb10bf1d7181ec84a1ded29e6
+      mtime: 1269714680
+      name: lib/OBO/CCO/NewIntActParser.pm
+    - bytesize: 7927
+      file_mime_type: ~
+      line_count: ~
+      md5: 632f76e4e5c2bc40ece3a5afe8405009
+      mtime: 1269714680
+      name: lib/OBO/CCO/OrthoMCLParser.pm
+    - bytesize: 14804
+      file_mime_type: ~
+      line_count: ~
+      md5: a5514c6688aa571348b6c4cd577a3b1b
+      mtime: 1269714679
+      name: lib/OBO/CCO/UniProtParser.pm
+    - bytesize: 7950
+      file_mime_type: ~
+      line_count: ~
+      md5: 19ab257a81caba059a59abbbd616d875
+      mtime: 1269714680
+      name: lib/OBO/CCO/XMLIntactParser.pm
+    - bytesize: 5741
+      file_mime_type: ~
+      line_count: ~
+      md5: 41e79c2b94f0e61a4653651d6ffc16bc
+      mtime: 1269714679
+      name: lib/OBO/Core/Dbxref.pm
+    - bytesize: 6870
+      file_mime_type: ~
+      line_count: ~
+      md5: 10e1a092804f28d82c1b222134c0f1aa
+      mtime: 1269714679
+      name: lib/OBO/Core/Def.pm
+    - bytesize: 4633
+      file_mime_type: ~
+      line_count: ~
+      md5: 31658740ec6f5c6be7798aa6e3d74504
+      mtime: 1269714679
+      name: lib/OBO/Core/IDspace.pm
+    - bytesize: 132506
+      file_mime_type: ~
+      line_count: ~
+      md5: bb04c4372879fb75d10ce5674b4dbd36
+      mtime: 1269714679
+      name: lib/OBO/Core/Ontology.pm
+    - bytesize: 5918
+      file_mime_type: ~
+      line_count: ~
+      md5: e58ccec1a8b1a28f626e1875d0cace83
+      mtime: 1269714679
+      name: lib/OBO/Core/Relationship.pm
+    - bytesize: 21957
+      file_mime_type: ~
+      line_count: ~
+      md5: fcd60bb4eb5411f97e297ad286eff1a1
+      mtime: 1269714679
+      name: lib/OBO/Core/RelationshipType.pm
+    - bytesize: 8432
+      file_mime_type: ~
+      line_count: ~
+      md5: 5a83a46bedb6ea21f917e00585c1bbe1
+      mtime: 1269714679
+      name: lib/OBO/Core/Synonym.pm
+    - bytesize: 5746
+      file_mime_type: ~
+      line_count: ~
+      md5: f0909a199a4ab1b02713e1f7b136413d
+      mtime: 1269714679
+      name: lib/OBO/Core/SynonymTypeDef.pm
+    - bytesize: 20718
+      file_mime_type: ~
+      line_count: ~
+      md5: 12d5043c261be9f9fc97c18c726c93bd
+      mtime: 1269714679
+      name: lib/OBO/Core/Term.pm
+    - bytesize: 16755
+      file_mime_type: ~
+      line_count: ~
+      md5: 23f42229d8702143b9de93f2dc5e27a2
+      mtime: 1269714680
+      name: lib/OBO/Parser/OBOParser.pm
+    - bytesize: 27074
+      file_mime_type: ~
+      line_count: ~
+      md5: 85db6bdddc5a9184bd0f291bb699ec93
+      mtime: 1269714680
+      name: lib/OBO/Parser/OWLParser.pm
+    - bytesize: 2992
+      file_mime_type: ~
+      line_count: ~
+      md5: 5873af720b418526e4e75cc0e05dc73a
+      mtime: 1269714679
+      name: lib/OBO/Util/DbxrefSet.pm
+    - bytesize: 5815
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aaf2066828ce58012dfd454ba7058ed
+      mtime: 1269714679
+      name: lib/OBO/Util/ObjectIdSet.pm
+    - bytesize: 3663
+      file_mime_type: ~
+      line_count: ~
+      md5: 67664c40c508b2959fc92bda2e9c2e80
+      mtime: 1269714679
+      name: lib/OBO/Util/ObjectSet.pm
+    - bytesize: 17797
+      file_mime_type: ~
+      line_count: ~
+      md5: c4edc49f3838c2b595c5608b57beeaa3
+      mtime: 1269714679
+      name: lib/OBO/Util/Ontolome.pm
+    - bytesize: 6019
+      file_mime_type: ~
+      line_count: ~
+      md5: aea418205c8d139e6efd284c639c278a
+      mtime: 1269714679
+      name: lib/OBO/Util/Set.pm
+    - bytesize: 4524
+      file_mime_type: ~
+      line_count: ~
+      md5: 32f12b5e55568a4dc85f2fc878315bb5
+      mtime: 1269714679
+      name: lib/OBO/Util/SynonymSet.pm
+    - bytesize: 4543
+      file_mime_type: ~
+      line_count: ~
+      md5: 66c0d2edb34e0b7dcbae0a0ce103bf78
+      mtime: 1269714679
+      name: lib/OBO/Util/SynonymTypeDefSet.pm
+    - bytesize: 2961
+      file_mime_type: ~
+      line_count: ~
+      md5: 312f7bdf67695f9c8a439ce3077e80f6
+      mtime: 1269714679
+      name: lib/OBO/Util/TermSet.pm
+    - bytesize: 1556
+      file_mime_type: ~
+      line_count: ~
+      md5: c90c88a934479783b845085e66a1e172
+      mtime: 1269714679
+      name: scripts/get_ancestor_terms.pl
+    - bytesize: 1547
+      file_mime_type: ~
+      line_count: ~
+      md5: d6d07e0394843dbddcc1c91c99e72069
+      mtime: 1269715895
+      name: scripts/get_descendent_terms.pl
+    - bytesize: 1156
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fba3e863eb9b0b66f9b4c5ffe8833a9
+      mtime: 1269714679
+      name: scripts/go2owl.pl
+    - bytesize: 1278
+      file_mime_type: ~
+      line_count: ~
+      md5: e5d31cfa7ac477419749024778234668
+      mtime: 1269714679
+      name: scripts/goa2rdf.pl
+    - bytesize: 887
+      file_mime_type: ~
+      line_count: ~
+      md5: 2132de6ad9a3b54c824a70d475509819
+      mtime: 1269714679
+      name: scripts/names.xsl
+    - bytesize: 2822
+      file_mime_type: ~
+      line_count: ~
+      md5: a399ea35ad5822848969b7b67b4d5709
+      mtime: 1269715196
+      name: scripts/obo2cco.pl
+    - bytesize: 1336
+      file_mime_type: ~
+      line_count: ~
+      md5: e95519ed3466697436108d64cafe42c0
+      mtime: 1269714679
+      name: scripts/obo2owl.pl
+    - bytesize: 1325
+      file_mime_type: ~
+      line_count: ~
+      md5: f91ad367d96fa8696b293d4e355bf353
+      mtime: 1269714679
+      name: scripts/obo2rdf.pl
+    - bytesize: 1454
+      file_mime_type: ~
+      line_count: ~
+      md5: 81d107e066beb2a2f61597b220b27189
+      mtime: 1269714679
+      name: scripts/obo2tran.pl
+    - bytesize: 1209
+      file_mime_type: ~
+      line_count: ~
+      md5: 3336a8195e9a65ce627fd08cf09ffd42
+      mtime: 1269714679
+      name: scripts/obo2xml.pl
+    - bytesize: 1554
+      file_mime_type: ~
+      line_count: ~
+      md5: 75aa19da7ac86f59d97a2a7cbfcfa698
+      mtime: 1269717424
+      name: scripts/obsolete_term_id_vs_def_in_go.pl
+    - bytesize: 1487
+      file_mime_type: ~
+      line_count: ~
+      md5: 030dbc602a8ca719c5a9f904a02180ae
+      mtime: 1269717414
+      name: scripts/obsolete_term_id_vs_name_in_go.pl
+    - bytesize: 1294
+      file_mime_type: ~
+      line_count: ~
+      md5: 74035c9afeeae95c43fc8ad00ebda168
+      mtime: 1269714679
+      name: scripts/owl2obo.pl
+    - bytesize: 1040
+      file_mime_type: ~
+      line_count: ~
+      md5: a172849a8c3eeea30b0ba836aabc9677
+      mtime: 1269717337
+      name: scripts/term_id_vs_term_def.pl
+    - bytesize: 1238
+      file_mime_type: ~
+      line_count: ~
+      md5: 0b586ee7422288ff9879a1a4fb127387
+      mtime: 1269717358
+      name: scripts/term_id_vs_term_name.pl
+    - bytesize: 3136
+      file_mime_type: ~
+      line_count: ~
+      md5: c6889caf21ce7e87f7c7faf0ddf80759
+      mtime: 1269714679
+      name: scripts/xml2html.xsl
+    - bytesize: 749
+      file_mime_type: ~
+      line_count: ~
+      md5: 8461f289a61efed554605b8b2976726c
+      mtime: 1269714679
+      name: t/CCO_ID.t
+    - bytesize: 1997
+      file_mime_type: ~
+      line_count: ~
+      md5: a478c8460eda9e528564857cf03f2702
+      mtime: 1269714679
+      name: t/CCO_ID_Set.t
+    - bytesize: 1849
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f9516bbee1fc06263c2c3b056b8c96b
+      mtime: 1269714679
+      name: t/CCO_ID_Term_Map.t
+    - bytesize: 1549
+      file_mime_type: ~
+      line_count: ~
+      md5: 44ff2d40b2859d835b0763371b27ace8
+      mtime: 1269714679
+      name: t/Dbxref.t
+    - bytesize: 2262
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e95b556695e8f8fd4d00c6dbd2f45b3
+      mtime: 1269714679
+      name: t/DbxrefSet.t
+    - bytesize: 1811
+      file_mime_type: ~
+      line_count: ~
+      md5: 97f7d284a8401e5b2dc240e35db79cad
+      mtime: 1269714679
+      name: t/Def.t
+    - bytesize: 2755
+      file_mime_type: ~
+      line_count: ~
+      md5: c1845ed2ca116fa76f55f885b86b64d0
+      mtime: 1269714679
+      name: t/GoaAssociation.t
+    - bytesize: 6068
+      file_mime_type: ~
+      line_count: ~
+      md5: ea355da3d557f6e9543dd89b1b4145ba
+      mtime: 1269714679
+      name: t/GoaAssociationSet.t
+    - bytesize: 1249
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a7a5a3f1b31aeb05fc36d306b98547f
+      mtime: 1269714679
+      name: t/GoaParser.t
+    - bytesize: 547
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a87949c481c4f65315513175cb28c34
+      mtime: 1269714679
+      name: t/GoaToRDF.t
+    - bytesize: 1405
+      file_mime_type: ~
+      line_count: ~
+      md5: 067bc3effa97a5bb5a385200fc808c4a
+      mtime: 1269714679
+      name: t/IDspace.t
+    - bytesize: 2733
+      file_mime_type: ~
+      line_count: ~
+      md5: 277cf3783d1f3939bdec7b383f835a17
+      mtime: 1269714679
+      name: t/IntActParser.t
+    - bytesize: 648
+      file_mime_type: ~
+      line_count: ~
+      md5: 21265be7f85490122dd1b25db338af4d
+      mtime: 1269714679
+      name: t/NCBIParser.t
+    - bytesize: 610
+      file_mime_type: ~
+      line_count: ~
+      md5: baea48469b9d72e5ef7a2d321880c15f
+      mtime: 1269714679
+      name: t/NCBIToRDF.t
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: bca9da41dc0450a768b871d3616010df
+      mtime: 1269714679
+      name: t/NewIntActParser.t
+    - bytesize: 4376
+      file_mime_type: ~
+      line_count: ~
+      md5: 96f4af52d123a98464d70d3a2ac63fc9
+      mtime: 1269714679
+      name: t/OBOParser.t
+    - bytesize: 920
+      file_mime_type: ~
+      line_count: ~
+      md5: d2772a9f60c88d5026f2c9aa79b34e49
+      mtime: 1269714679
+      name: t/OWLParser.t
+    - bytesize: 21366
+      file_mime_type: ~
+      line_count: ~
+      md5: d7301eb38b90cb146cdc4b14c4118fbd
+      mtime: 1269714679
+      name: t/Ontology.t
+    - bytesize: 17652
+      file_mime_type: ~
+      line_count: ~
+      md5: c4670bae6b75d0e24e14367fa845895f
+      mtime: 1269714679
+      name: t/Ontolome.t
+    - bytesize: 1703
+      file_mime_type: ~
+      line_count: ~
+      md5: 71df650e8037e1024105ee7f34fa725e
+      mtime: 1269714679
+      name: t/OrthoMCLParser.t
+    - bytesize: 1909
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d730aa0d00d0d51199ecced4648d7a1
+      mtime: 1269714679
+      name: t/Relationship.t
+    - bytesize: 4862
+      file_mime_type: ~
+      line_count: ~
+      md5: c55e1ff1654e0108aac1f811aa5d58ee
+      mtime: 1269714679
+      name: t/RelationshipType.t
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: caef5618c6d121e0f22c3bbc0fb21a44
+      mtime: 1269714679
+      name: t/Set.t
+    - bytesize: 3424
+      file_mime_type: ~
+      line_count: ~
+      md5: db8ecfd00f3b906233f1e08a738a9cf2
+      mtime: 1269714679
+      name: t/Synonym.t
+    - bytesize: 3556
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b3648ea606e67d1a08ad4db0dd2cdc
+      mtime: 1269714679
+      name: t/SynonymSet.t
+    - bytesize: 1115
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c83957230e0182cd955d669dc50daf2
+      mtime: 1269714679
+      name: t/SynonymTypeDef.t
+    - bytesize: 3181
+      file_mime_type: ~
+      line_count: ~
+      md5: e9a70b24c2c1519c48d70f2eea9f7a7e
+      mtime: 1269714679
+      name: t/SynonymTypeDefSet.t
+    - bytesize: 6534
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d6bad0f835d10af04c4db3edd61c849
+      mtime: 1269714679
+      name: t/Term.t
+    - bytesize: 2649
+      file_mime_type: ~
+      line_count: ~
+      md5: 64fbb3c1db81f95058a7f48dd967f386
+      mtime: 1269714679
+      name: t/TermSet.t
+    - bytesize: 1568
+      file_mime_type: ~
+      line_count: ~
+      md5: e0e53c168a0722dd3eb5e221b5bd6bde
+      mtime: 1269714679
+      name: t/UniProtParser.t
+    - bytesize: 5246
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e7149eeb7833bfbf1b723e6ef6fc671
+      mtime: 1269714679
+      name: t/data/Ath_cc_up.map
+    - bytesize: 1085645
+      file_mime_type: ~
+      line_count: ~
+      md5: e19c5629cfdfb913ddd72eba9982ae84
+      mtime: 1269714679
+      name: t/data/Ath_up.map
+    - bytesize: 2513
+      file_mime_type: ~
+      line_count: ~
+      md5: cb82108e1dfacab14275439d1add3e36
+      mtime: 1269714679
+      name: t/data/alpha.obo
+    - bytesize: 258423
+      file_mime_type: ~
+      line_count: ~
+      md5: 42f980361192744f05545b0bc0ca68d4
+      mtime: 1269714679
+      name: t/data/arath_small-05.xml
+    - bytesize: 145550
+      file_mime_type: ~
+      line_count: ~
+      md5: 95cbc07a97e5ff689578d723268e1e3d
+      mtime: 1269714679
+      name: t/data/arath_small-07.xml
+    - bytesize: 2154
+      file_mime_type: ~
+      line_count: ~
+      md5: 9e47edfa1509b3bcce60a2fb12d006c4
+      mtime: 1269718625
+      name: t/data/cco_b.ids
+    - bytesize: 1570
+      file_mime_type: ~
+      line_count: ~
+      md5: 3178bb47329089a7d1452577241de1cf
+      mtime: 1269718625
+      name: t/data/cco_b_ath.ids
+    - bytesize: 353
+      file_mime_type: ~
+      line_count: ~
+      md5: f906042125690a411d0d227a724cc15e
+      mtime: 1269718625
+      name: t/data/cco_b_hsa.ids
+    - bytesize: 231
+      file_mime_type: ~
+      line_count: ~
+      md5: da2e1ca96f6947bddc9df3c2f3dc8406
+      mtime: 1269718625
+      name: t/data/cco_b_sce.ids
+    - bytesize: 79
+      file_mime_type: ~
+      line_count: ~
+      md5: 89ba6f3a793d84d4c89e1cc09e4363f6
+      mtime: 1269714679
+      name: t/data/cco_g.ids
+    - bytesize: 79
+      file_mime_type: ~
+      line_count: ~
+      md5: 93fe58d71aa4c58f68617f9ca247cabe
+      mtime: 1269714679
+      name: t/data/cco_g_dummy.ids
+    - bytesize: 43
+      file_mime_type: ~
+      line_count: ~
+      md5: c61d80b3e5b0669d6d0f70ae4bf1b389
+      mtime: 1269718618
+      name: t/data/cco_i.ids
+    - bytesize: 43
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c46b20add4960ac89c4cf5ac559467a
+      mtime: 1269718618
+      name: t/data/cco_i_At.ids
+    - bytesize: 318
+      file_mime_type: ~
+      line_count: ~
+      md5: a2ceb9aaef14f7563d7baa70e758f662
+      mtime: 1269714679
+      name: t/data/cco_id_term.map
+    - bytesize: 309
+      file_mime_type: ~
+      line_count: ~
+      md5: afffe4fe5afbafd0df54e75b51b76a69
+      mtime: 1269718625
+      name: t/data/cco_o.ids
+    - bytesize: 270
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fef3b38cf6e82526500046365d64fed
+      mtime: 1269718625
+      name: t/data/cco_t.ids
+    - bytesize: 21
+      file_mime_type: ~
+      line_count: ~
+      md5: 1f47bae76b1992e7d25c17667dd5c952
+      mtime: 1269718625
+      name: t/data/cco_u.ids
+    - bytesize: 205374
+      file_mime_type: ~
+      line_count: ~
+      md5: 3464d652646998389c89f8d0d7c5260c
+      mtime: 1269714679
+      name: t/data/cell.obo
+    - bytesize: 3038
+      file_mime_type: ~
+      line_count: ~
+      md5: 03d9793d6fd97697ee8d6213712b93ed
+      mtime: 1269714679
+      name: t/data/fake_ulo_cco.obo
+    - bytesize: 374735
+      file_mime_type: ~
+      line_count: ~
+      md5: 72cb404ec148fe2f0ff088c880c4dc45
+      mtime: 1269714679
+      name: t/data/goa_assoc.txt
+    - bytesize: 840
+      file_mime_type: ~
+      line_count: ~
+      md5: 666ff76866156bf169c38a86f63690d0
+      mtime: 1269714679
+      name: t/data/goa_assoc_filt.txt
+    - bytesize: 1807
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ae09ef5aa65c2b7de5dc61f0db18ee1
+      mtime: 1269714679
+      name: t/data/header.obo
+    - bytesize: 943
+      file_mime_type: ~
+      line_count: ~
+      md5: f9c6bf0bb71ab5320c99b1a070d6b9db
+      mtime: 1269714679
+      name: t/data/names_dummy.dmp
+    - bytesize: 507
+      file_mime_type: ~
+      line_count: ~
+      md5: 51fd3045cb31b48611061318cf185cdd
+      mtime: 1269714679
+      name: t/data/nodes_dummy.dmp
+    - bytesize: 198186
+      file_mime_type: ~
+      line_count: ~
+      md5: a6b29761ec8a8c43503b506e46157139
+      mtime: 1269718618
+      name: t/data/out_I_A_thaliana.obo
+    - bytesize: 183480
+      file_mime_type: ~
+      line_count: ~
+      md5: d8c5399fca498048c844d97425273da4
+      mtime: 1269718610
+      name: t/data/out_cco.obo
+    - bytesize: 181928
+      file_mime_type: ~
+      line_count: ~
+      md5: 83351af25325a716ff3e4f5a7f6762bf
+      mtime: 1269714679
+      name: t/data/out_cco.obo.old
+    - bytesize: 187064
+      file_mime_type: ~
+      line_count: ~
+      md5: 51c982ecebb31b9441788c46fde26d52
+      mtime: 1269714679
+      name: t/data/out_cco_up.obo
+    - bytesize: 8063
+      file_mime_type: ~
+      line_count: ~
+      md5: 18c414dda1e6bf35f89228ec65b53d39
+      mtime: 1269718625
+      name: t/data/out_omcl.obo
+    - bytesize: 214515
+      file_mime_type: ~
+      line_count: ~
+      md5: 3a9a5880b589ecca37156b84e6c23ea6
+      mtime: 1269714679
+      name: t/data/pre_cco.obo
+    - bytesize: 182366
+      file_mime_type: ~
+      line_count: ~
+      md5: cf9a4cae0d0496965505ec7e7aaae5c0
+      mtime: 1269714679
+      name: t/data/pre_cco_core.obo
+    - bytesize: 920
+      file_mime_type: ~
+      line_count: ~
+      md5: 11dd830378eb398cfe942c9afe1833c3
+      mtime: 1269714679
+      name: t/data/test_orthomcl.dat
+    - bytesize: 16911
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b84e56300094eaf362556ea1b9399b9
+      mtime: 1269714679
+      name: t/data/test_ulo_cco2.owl
+    - bytesize: 3168
+      file_mime_type: ~
+      line_count: ~
+      md5: 491a4a1854e5675fa8f9169cb79853aa
+      mtime: 1269714679
+      name: t/data/ulo_cco.obo
+    - bytesize: 11443
+      file_mime_type: ~
+      line_count: ~
+      md5: 41779bf65be92ddef265f650db989dc6
+      mtime: 1269714679
+      name: t/data/up_test.txt
+  module_info:
+    - bytesize: 4899
+      file_mime_type: ~
+      line_count: ~
+      md5: ef02504c73c3421ecbe8cae828bdfff0
+      module_name_from_file_guess: OBO::CCO::CCO_ID
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/CCO_ID.pm
+      packages:
+        - OBO::CCO::CCO_ID
+      primary_package: OBO::CCO::CCO_ID
+      uses:
+        - strict
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/CCO_ID.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3091
+      file_mime_type: ~
+      line_count: ~
+      md5: 90a514112add89fa4c66231d9a37409c
+      module_name_from_file_guess: OBO::CCO::CCO_ID_Set
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/CCO_ID_Set.pm
+      packages:
+        - OBO::CCO::CCO_ID_Set
+      primary_package: OBO::CCO::CCO_ID_Set
+      uses:
+        - OBO::Util::ObjectSet
+        - OBO::CCO::CCO_ID
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/CCO_ID_Set.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8716
+      file_mime_type: ~
+      line_count: ~
+      md5: c1dd1a2db2ba1c5ba43f0acf2e1c1eb2
+      module_name_from_file_guess: OBO::CCO::CCO_ID_Term_Map
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/CCO_ID_Term_Map.pm
+      packages:
+        - OBO::CCO::CCO_ID_Term_Map
+      primary_package: OBO::CCO::CCO_ID_Term_Map
+      uses:
+        - Carp
+        - strict
+        - OBO::CCO::CCO_ID_Set
+      version_info:
+        filename: blib/lib/OBO/CCO/CCO_ID_Term_Map.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 12580
+      file_mime_type: ~
+      line_count: ~
+      md5: a679fbb97e4efa343319ee9067cd1ac9
+      module_name_from_file_guess: OBO::CCO::GoaAssociation
+      mtime: 1269714679
+      name: blib/lib/OBO/CCO/GoaAssociation.pm
+      packages:
+        - OBO::CCO::GoaAssociation
+      primary_package: OBO::CCO::GoaAssociation
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/GoaAssociation.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7434
+      file_mime_type: ~
+      line_count: ~
+      md5: bcd93ba52e9e08731b85873a66e9c963
+      module_name_from_file_guess: OBO::CCO::GoaAssociationSet
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/GoaAssociationSet.pm
+      packages:
+        - OBO::CCO::GoaAssociationSet
+      primary_package: OBO::CCO::GoaAssociationSet
+      uses:
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/GoaAssociationSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8355
+      file_mime_type: ~
+      line_count: ~
+      md5: f8c6098a5d69967ca49a5c0ce24e9525
+      module_name_from_file_guess: OBO::CCO::GoaParser
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/GoaParser.pm
+      packages:
+        - OBO::CCO::GoaParser
+      primary_package: OBO::CCO::GoaParser
+      uses:
+        - OBO::Parser::OBOParser
+        - OBO::Core::Relationship
+        - OBO::Core::Dbxref
+        - OBO::Core::Term
+        - OBO::CCO::GoaAssociation
+        - OBO::CCO::CCO_ID_Term_Map
+        - OBO::Util::DbxrefSet
+        - OBO::CCO::GoaAssociationSet
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/GoaParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7351
+      file_mime_type: ~
+      line_count: ~
+      md5: 49afdbe4a5aa7e25474d78d651f83d66
+      module_name_from_file_guess: OBO::CCO::GoaToRDF
+      mtime: 1269714679
+      name: blib/lib/OBO/CCO/GoaToRDF.pm
+      packages:
+        - OBO::CCO::GoaToRDF
+      primary_package: OBO::CCO::GoaToRDF
+      uses:
+        - OBO::CCO::GoaParser
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/GoaToRDF.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 20663
+      file_mime_type: ~
+      line_count: ~
+      md5: c2f7f9e2e6e276b97a72608282e3d03b
+      module_name_from_file_guess: OBO::CCO::IntActParser
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/IntActParser.pm
+      packages:
+        - OBO::CCO::IntActParser
+      primary_package: OBO::CCO::IntActParser
+      uses:
+        - OBO::CCO::CCO_ID_Term_Map
+        - OBO::CCO::XMLIntactParser
+        - OBO::CCO::Interactor
+        - OBO::CCO::Interaction
+        - OBO::Parser::OBOParser
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/IntActParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4821
+      file_mime_type: ~
+      line_count: ~
+      md5: 996fb8a1cbe62b78c5ccb3378d19cb09
+      module_name_from_file_guess: OBO::CCO::Interaction
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/Interaction.pm
+      packages:
+        - OBO::CCO::Interaction
+      primary_package: OBO::CCO::Interaction
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/Interaction.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17749
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e754bad7f71c3672cf708e67fde2ade
+      module_name_from_file_guess: OBO::CCO::InteractionManager
+      mtime: 1269714679
+      name: blib/lib/OBO/CCO/InteractionManager.pm
+      packages:
+        - OBO::CCO::InteractionManager
+      primary_package: OBO::CCO::InteractionManager
+      uses:
+        - OBO::CCO::CCO_ID_Term_Map
+        - OBO::CCO::XMLIntactParser
+        - OBO::CCO::Interactor
+        - OBO::CCO::Interaction
+        - OBO::Parser::OBOParser
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/InteractionManager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4774
+      file_mime_type: ~
+      line_count: ~
+      md5: c00ba11915b4d544a31884b6df25a71f
+      module_name_from_file_guess: OBO::CCO::Interactor
+      mtime: 1269714679
+      name: blib/lib/OBO/CCO/Interactor.pm
+      packages:
+        - OBO::CCO::Interactor
+      primary_package: OBO::CCO::Interactor
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/Interactor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7193
+      file_mime_type: ~
+      line_count: ~
+      md5: 47268f5eb3b9c6b76c893ae4cddcfa97
+      module_name_from_file_guess: OBO::CCO::NCBIParser
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/NCBIParser.pm
+      packages:
+        - OBO::CCO::NCBIParser
+      primary_package: OBO::CCO::NCBIParser
+      uses:
+        - OBO::Parser::OBOParser
+        - OBO::Core::Ontology
+        - OBO::Core::Relationship
+        - OBO::Core::RelationshipType
+        - OBO::Core::Dbxref
+        - OBO::Core::Term
+        - OBO::CCO::CCO_ID_Term_Map
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/NCBIParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4875
+      file_mime_type: ~
+      line_count: ~
+      md5: cdb0675872672646d48da9970cace2db
+      module_name_from_file_guess: OBO::CCO::NCBIToRDF
+      mtime: 1269714679
+      name: blib/lib/OBO/CCO/NCBIToRDF.pm
+      packages:
+        - OBO::CCO::NCBIToRDF
+      primary_package: OBO::CCO::NCBIToRDF
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/NCBIToRDF.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 9633
+      file_mime_type: ~
+      line_count: ~
+      md5: 3b6d71d60cc73f6fd88106a3b0441d87
+      module_name_from_file_guess: OBO::CCO::NewIntActParser
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/NewIntActParser.pm
+      packages:
+        - OBO::CCO::NewIntActParser
+      primary_package: OBO::CCO::NewIntActParser
+      uses:
+        - OBO::Parser::OBOParser
+        - OBO::Core::Relationship
+        - OBO::Core::Dbxref
+        - OBO::Core::Term
+        - OBO::CCO::CCO_ID_Term_Map
+        - OBO::Util::DbxrefSet
+        - OBO::Util::Set
+        - Data::Dumper
+        - strict
+        - warnings
+        - Carp
+        - XML::XPath
+      version_info:
+        filename: blib/lib/OBO/CCO/NewIntActParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7927
+      file_mime_type: ~
+      line_count: ~
+      md5: f0ecd757bfbf5b48476a842430755e63
+      module_name_from_file_guess: OBO::CCO::OrthoMCLParser
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/OrthoMCLParser.pm
+      packages:
+        - OBO::CCO::OrthoMCLParser
+      primary_package: OBO::CCO::OrthoMCLParser
+      uses:
+        - OBO::Core::RelationshipType
+        - OBO::Core::Relationship
+        - OBO::Core::Term
+        - OBO::CCO::CCO_ID_Term_Map
+        - OBO::Core::Ontology
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/OrthoMCLParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 14804
+      file_mime_type: ~
+      line_count: ~
+      md5: 278f89d0935367153198c2678bc2ce0a
+      module_name_from_file_guess: OBO::CCO::UniProtParser
+      mtime: 1269714679
+      name: blib/lib/OBO/CCO/UniProtParser.pm
+      packages:
+        - OBO::CCO::UniProtParser
+      primary_package: OBO::CCO::UniProtParser
+      uses:
+        - OBO::Parser::OBOParser
+        - OBO::Core::Relationship
+        - OBO::Core::Dbxref
+        - OBO::Util::DbxrefSet
+        - OBO::Core::Term
+        - OBO::Util::Set
+        - OBO::CCO::CCO_ID_Term_Map
+        - SWISS::Entry
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/UniProtParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 7950
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e7b1f6d507d832a110b351468263821
+      module_name_from_file_guess: OBO::CCO::XMLIntactParser
+      mtime: 1269714680
+      name: blib/lib/OBO/CCO/XMLIntactParser.pm
+      packages:
+        - OBO::CCO::XMLIntactParser
+      primary_package: OBO::CCO::XMLIntactParser
+      uses:
+        - XML::Simple
+        - OBO::CCO::Interactor
+        - OBO::CCO::Interaction
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/CCO/XMLIntactParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5741
+      file_mime_type: ~
+      line_count: ~
+      md5: 8bf344165c95f47c4000d02cbeac3df7
+      module_name_from_file_guess: OBO::Core::Dbxref
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/Dbxref.pm
+      packages:
+        - OBO::Core::Dbxref
+      primary_package: OBO::Core::Dbxref
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/Dbxref.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6870
+      file_mime_type: ~
+      line_count: ~
+      md5: e31e830511f9b7289fa16ac6ffa53601
+      module_name_from_file_guess: OBO::Core::Def
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/Def.pm
+      packages:
+        - OBO::Core::Def
+      primary_package: OBO::Core::Def
+      uses:
+        - OBO::Util::DbxrefSet
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/Def.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4633
+      file_mime_type: ~
+      line_count: ~
+      md5: c0b6639361a0c3e0e5f2a1a9589dda68
+      module_name_from_file_guess: OBO::Core::IDspace
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/IDspace.pm
+      packages:
+        - OBO::Core::IDspace
+      primary_package: OBO::Core::IDspace
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/IDspace.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 132506
+      file_mime_type: ~
+      line_count: ~
+      md5: c6154abf419b1524f648082b12a831c2
+      module_name_from_file_guess: OBO::Core::Ontology
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/Ontology.pm
+      packages:
+        - OBO::Core::Ontology
+      primary_package: OBO::Core::Ontology
+      uses:
+        - OBO::Core::IDspace
+        - OBO::Util::SynonymTypeDefSet
+        - OBO::Util::TermSet
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/Ontology.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5918
+      file_mime_type: ~
+      line_count: ~
+      md5: 92647b903c228d6d648ab689d65bd1e0
+      module_name_from_file_guess: OBO::Core::Relationship
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/Relationship.pm
+      packages:
+        - OBO::Core::Relationship
+      primary_package: OBO::Core::Relationship
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/Relationship.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 21957
+      file_mime_type: ~
+      line_count: ~
+      md5: 60253303de94860394360d9ed5325c1d
+      module_name_from_file_guess: OBO::Core::RelationshipType
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/RelationshipType.pm
+      packages:
+        - OBO::Core::RelationshipType
+      primary_package: OBO::Core::RelationshipType
+      uses:
+        - OBO::Core::Dbxref
+        - OBO::Core::Def
+        - OBO::Util::SynonymSet
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/RelationshipType.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8432
+      file_mime_type: ~
+      line_count: ~
+      md5: 033b70dc086e4d59afa4f899e20e51ba
+      module_name_from_file_guess: OBO::Core::Synonym
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/Synonym.pm
+      packages:
+        - OBO::Core::Synonym
+      primary_package: OBO::Core::Synonym
+      uses:
+        - OBO::Core::Dbxref
+        - OBO::Core::Def
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/Synonym.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5746
+      file_mime_type: ~
+      line_count: ~
+      md5: 5b76feb64becf16cc9a54d7836c09eab
+      module_name_from_file_guess: OBO::Core::SynonymTypeDef
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/SynonymTypeDef.pm
+      packages:
+        - OBO::Core::SynonymTypeDef
+      primary_package: OBO::Core::SynonymTypeDef
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/SynonymTypeDef.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 20718
+      file_mime_type: ~
+      line_count: ~
+      md5: 1271c0c7b2efaad3e4544c0aa14ac9f1
+      module_name_from_file_guess: OBO::Core::Term
+      mtime: 1269714679
+      name: blib/lib/OBO/Core/Term.pm
+      packages:
+        - OBO::Core::Term
+      primary_package: OBO::Core::Term
+      uses:
+        - OBO::Core::Def
+        - OBO::Core::Synonym
+        - OBO::Util::SynonymSet
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Core/Term.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 16755
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d373742c7f71a76e5f0e444ffad8bca
+      module_name_from_file_guess: OBO::Parser::OBOParser
+      mtime: 1269714680
+      name: blib/lib/OBO/Parser/OBOParser.pm
+      packages:
+        - OBO::Parser::OBOParser
+      primary_package: OBO::Parser::OBOParser
+      uses:
+        - OBO::Core::Term
+        - OBO::Core::Ontology
+        - OBO::Core::Dbxref
+        - OBO::Core::Relationship
+        - OBO::Core::RelationshipType
+        - OBO::Core::SynonymTypeDef
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Parser/OBOParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 27074
+      file_mime_type: ~
+      line_count: ~
+      md5: 460e29d081848e60518f96a0e1f4f9df
+      module_name_from_file_guess: OBO::Parser::OWLParser
+      mtime: 1269714680
+      name: blib/lib/OBO/Parser/OWLParser.pm
+      packages:
+        - OBO::Parser::OWLParser
+      primary_package: OBO::Parser::OWLParser
+      uses:
+        - OBO::Core::Term
+        - OBO::Core::Ontology
+        - OBO::Core::Dbxref
+        - OBO::Core::Relationship
+        - OBO::Core::RelationshipType
+        - XML::Parser
+        - Data::Dumper
+        - strict
+        - warnings
+        - Carp
+        - constant
+      version_info:
+        filename: blib/lib/OBO/Parser/OWLParser.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2992
+      file_mime_type: ~
+      line_count: ~
+      md5: 14c54d6b3e9f0eb638e0c6f8d560be05
+      module_name_from_file_guess: OBO::Util::DbxrefSet
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/DbxrefSet.pm
+      packages:
+        - OBO::Util::DbxrefSet
+      primary_package: OBO::Util::DbxrefSet
+      uses:
+        - OBO::Util::ObjectSet
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/DbxrefSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5815
+      file_mime_type: ~
+      line_count: ~
+      md5: 622e2ed6831940d025fb6d8c4b30124f
+      module_name_from_file_guess: OBO::Util::ObjectIdSet
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/ObjectIdSet.pm
+      packages:
+        - OBO::Util::ObjectIdSet
+      primary_package: OBO::Util::ObjectIdSet
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/ObjectIdSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3663
+      file_mime_type: ~
+      line_count: ~
+      md5: b60980a6f9526972f05dadd4b27f8ff9
+      module_name_from_file_guess: OBO::Util::ObjectSet
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/ObjectSet.pm
+      packages:
+        - OBO::Util::ObjectSet
+      primary_package: OBO::Util::ObjectSet
+      uses:
+        - OBO::Util::ObjectIdSet
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/ObjectSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 17797
+      file_mime_type: ~
+      line_count: ~
+      md5: dbd86b2d158f65e5d888662ad908d86d
+      module_name_from_file_guess: OBO::Util::Ontolome
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/Ontolome.pm
+      packages:
+        - OBO::Util::Ontolome
+      primary_package: OBO::Util::Ontolome
+      uses:
+        - OBO::Util::ObjectSet
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/Ontolome.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 6019
+      file_mime_type: ~
+      line_count: ~
+      md5: ed746d3d76eb30e62503b96bb2f83a82
+      module_name_from_file_guess: OBO::Util::Set
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/Set.pm
+      packages:
+        - OBO::Util::Set
+      primary_package: OBO::Util::Set
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/Set.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4524
+      file_mime_type: ~
+      line_count: ~
+      md5: 8c95b73a06ad91119b8152d039104240
+      module_name_from_file_guess: OBO::Util::SynonymSet
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/SynonymSet.pm
+      packages:
+        - OBO::Util::SynonymSet
+      primary_package: OBO::Util::SynonymSet
+      uses:
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/SynonymSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4543
+      file_mime_type: ~
+      line_count: ~
+      md5: eb6d4a908a2a00bff925b6464e4997e8
+      module_name_from_file_guess: OBO::Util::SynonymTypeDefSet
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/SynonymTypeDefSet.pm
+      packages:
+        - OBO::Util::SynonymTypeDefSet
+      primary_package: OBO::Util::SynonymTypeDefSet
+      uses:
+        - OBO::Util::Set
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/SynonymTypeDefSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2961
+      file_mime_type: ~
+      line_count: ~
+      md5: c60841170bdafe7c15cb5e991e9f1c24
+      module_name_from_file_guess: OBO::Util::TermSet
+      mtime: 1269714679
+      name: blib/lib/OBO/Util/TermSet.pm
+      packages:
+        - OBO::Util::TermSet
+      primary_package: OBO::Util::TermSet
+      uses:
+        - OBO::Util::ObjectSet
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: blib/lib/OBO/Util/TermSet.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - blib/lib/OBO/CCO/CCO_ID.pm
+    - blib/lib/OBO/CCO/CCO_ID_Set.pm
+    - blib/lib/OBO/CCO/CCO_ID_Term_Map.pm
+    - blib/lib/OBO/CCO/GoaAssociation.pm
+    - blib/lib/OBO/CCO/GoaAssociationSet.pm
+    - blib/lib/OBO/CCO/GoaParser.pm
+    - blib/lib/OBO/CCO/GoaToRDF.pm
+    - blib/lib/OBO/CCO/IntActParser.pm
+    - blib/lib/OBO/CCO/Interaction.pm
+    - blib/lib/OBO/CCO/InteractionManager.pm
+    - blib/lib/OBO/CCO/Interactor.pm
+    - blib/lib/OBO/CCO/NCBIParser.pm
+    - blib/lib/OBO/CCO/NCBIToRDF.pm
+    - blib/lib/OBO/CCO/NewIntActParser.pm
+    - blib/lib/OBO/CCO/OrthoMCLParser.pm
+    - blib/lib/OBO/CCO/UniProtParser.pm
+    - blib/lib/OBO/CCO/XMLIntactParser.pm
+    - blib/lib/OBO/Core/Dbxref.pm
+    - blib/lib/OBO/Core/Def.pm
+    - blib/lib/OBO/Core/IDspace.pm
+    - blib/lib/OBO/Core/Ontology.pm
+    - blib/lib/OBO/Core/Relationship.pm
+    - blib/lib/OBO/Core/RelationshipType.pm
+    - blib/lib/OBO/Core/Synonym.pm
+    - blib/lib/OBO/Core/SynonymTypeDef.pm
+    - blib/lib/OBO/Core/Term.pm
+    - blib/lib/OBO/Parser/OBOParser.pm
+    - blib/lib/OBO/Parser/OWLParser.pm
+    - blib/lib/OBO/Util/DbxrefSet.pm
+    - blib/lib/OBO/Util/ObjectIdSet.pm
+    - blib/lib/OBO/Util/ObjectSet.pm
+    - blib/lib/OBO/Util/Ontolome.pm
+    - blib/lib/OBO/Util/Set.pm
+    - blib/lib/OBO/Util/SynonymSet.pm
+    - blib/lib/OBO/Util/SynonymTypeDefSet.pm
+    - blib/lib/OBO/Util/TermSet.pm
+  test_info:
+    - bytesize: 1909
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d730aa0d00d0d51199ecced4648d7a1
+      mtime: 1269714679
+      name: t/Relationship.t
+      uses:
+        - Test
+        - OBO::Core::Relationship
+        - OBO::Core::Term
+        - strict
+    - bytesize: 3424
+      file_mime_type: ~
+      line_count: ~
+      md5: db8ecfd00f3b906233f1e08a738a9cf2
+      mtime: 1269714679
+      name: t/Synonym.t
+      uses:
+        - Test
+        - OBO::Core::Synonym
+        - OBO::Core::Dbxref
+    - bytesize: 6068
+      file_mime_type: ~
+      line_count: ~
+      md5: ea355da3d557f6e9543dd89b1b4145ba
+      mtime: 1269714679
+      name: t/GoaAssociationSet.t
+      uses:
+        - Test
+        - OBO::Util::Set
+        - OBO::CCO::GoaAssociationSet
+        - OBO::CCO::GoaAssociation
+        - strict
+    - bytesize: 4376
+      file_mime_type: ~
+      line_count: ~
+      md5: 96f4af52d123a98464d70d3a2ac63fc9
+      mtime: 1269714679
+      name: t/OBOParser.t
+      uses:
+        - Test
+        - OBO::Parser::OBOParser
+        - strict
+    - bytesize: 1703
+      file_mime_type: ~
+      line_count: ~
+      md5: 71df650e8037e1024105ee7f34fa725e
+      mtime: 1269714679
+      name: t/OrthoMCLParser.t
+      uses:
+        - Test
+        - OBO::CCO::OrthoMCLParser
+        - Carp
+        - strict
+        - warnings
+    - bytesize: 1549
+      file_mime_type: ~
+      line_count: ~
+      md5: 44ff2d40b2859d835b0763371b27ace8
+      mtime: 1269714679
+      name: t/Dbxref.t
+      uses:
+        - Test
+        - OBO::Core::Dbxref
+        - strict
+    - bytesize: 2755
+      file_mime_type: ~
+      line_count: ~
+      md5: c1845ed2ca116fa76f55f885b86b64d0
+      mtime: 1269714679
+      name: t/GoaAssociation.t
+      uses:
+        - Test
+        - OBO::CCO::GoaAssociation
+        - strict
+    - bytesize: 2262
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e95b556695e8f8fd4d00c6dbd2f45b3
+      mtime: 1269714679
+      name: t/DbxrefSet.t
+      uses:
+        - Test
+        - OBO::Util::DbxrefSet
+        - OBO::Core::Dbxref
+        - strict
+    - bytesize: 547
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a87949c481c4f65315513175cb28c34
+      mtime: 1269714679
+      name: t/GoaToRDF.t
+      uses:
+        - Test
+        - OBO::CCO::GoaToRDF
+        - Carp
+        - strict
+        - warnings
+    - bytesize: 648
+      file_mime_type: ~
+      line_count: ~
+      md5: 21265be7f85490122dd1b25db338af4d
+      mtime: 1269714679
+      name: t/NCBIParser.t
+      uses:
+        - Test
+        - OBO::CCO::NCBIParser
+        - strict
+    - bytesize: 2649
+      file_mime_type: ~
+      line_count: ~
+      md5: 64fbb3c1db81f95058a7f48dd967f386
+      mtime: 1269714679
+      name: t/TermSet.t
+      uses:
+        - Test
+        - OBO::Util::TermSet
+        - OBO::Core::Term
+    - bytesize: 2733
+      file_mime_type: ~
+      line_count: ~
+      md5: 277cf3783d1f3939bdec7b383f835a17
+      mtime: 1269714679
+      name: t/IntActParser.t
+      uses:
+        - Test::More
+        - OBO::Parser::OBOParser
+        - strict
+        - OBO::CCO::XMLIntactParser
+        - OBO::CCO::IntActParser
+    - bytesize: 749
+      file_mime_type: ~
+      line_count: ~
+      md5: 8461f289a61efed554605b8b2976726c
+      mtime: 1269714679
+      name: t/CCO_ID.t
+      uses:
+        - Test
+        - OBO::CCO::CCO_ID
+        - strict
+    - bytesize: 1568
+      file_mime_type: ~
+      line_count: ~
+      md5: e0e53c168a0722dd3eb5e221b5bd6bde
+      mtime: 1269714679
+      name: t/UniProtParser.t
+      uses:
+        - Test::More
+        - Carp
+        - strict
+        - warnings
+        - OBO::CCO::UniProtParser
+    - bytesize: 1849
+      file_mime_type: ~
+      line_count: ~
+      md5: 7f9516bbee1fc06263c2c3b056b8c96b
+      mtime: 1269714679
+      name: t/CCO_ID_Term_Map.t
+      uses:
+        - Test
+        - Data::Dumper
+        - OBO::CCO::CCO_ID_Term_Map
+        - strict
+    - bytesize: 610
+      file_mime_type: ~
+      line_count: ~
+      md5: baea48469b9d72e5ef7a2d321880c15f
+      mtime: 1269714679
+      name: t/NCBIToRDF.t
+      uses:
+        - Test
+        - OBO::CCO::NCBIToRDF
+        - Carp
+        - strict
+        - warnings
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: bca9da41dc0450a768b871d3616010df
+      mtime: 1269714679
+      name: t/NewIntActParser.t
+      uses:
+        - Test::More
+        - Carp
+        - strict
+        - warnings
+        - OBO::CCO::NewIntActParser
+    - bytesize: 3181
+      file_mime_type: ~
+      line_count: ~
+      md5: e9a70b24c2c1519c48d70f2eea9f7a7e
+      mtime: 1269714679
+      name: t/SynonymTypeDefSet.t
+      uses:
+        - Test
+        - OBO::Util::SynonymTypeDefSet
+        - OBO::Core::SynonymTypeDef
+    - bytesize: 1811
+      file_mime_type: ~
+      line_count: ~
+      md5: 97f7d284a8401e5b2dc240e35db79cad
+      mtime: 1269714679
+      name: t/Def.t
+      uses:
+        - Test
+        - OBO::Core::Def
+        - OBO::Core::Dbxref
+        - strict
+    - bytesize: 920
+      file_mime_type: ~
+      line_count: ~
+      md5: d2772a9f60c88d5026f2c9aa79b34e49
+      mtime: 1269714679
+      name: t/OWLParser.t
+      uses:
+        - Test::More
+        - Carp
+        - strict
+        - warnings
+        - OBO::Parser::OWLParser
+    - bytesize: 4862
+      file_mime_type: ~
+      line_count: ~
+      md5: c55e1ff1654e0108aac1f811aa5d58ee
+      mtime: 1269714679
+      name: t/RelationshipType.t
+      uses:
+        - Test
+        - OBO::Core::RelationshipType
+        - OBO::Core::Synonym
+        - strict
+    - bytesize: 1249
+      file_mime_type: ~
+      line_count: ~
+      md5: 8a7a5a3f1b31aeb05fc36d306b98547f
+      mtime: 1269714679
+      name: t/GoaParser.t
+      uses:
+        - Test
+        - OBO::CCO::GoaParser
+        - Carp
+        - strict
+        - warnings
+    - bytesize: 1115
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c83957230e0182cd955d669dc50daf2
+      mtime: 1269714679
+      name: t/SynonymTypeDef.t
+      uses:
+        - Test
+        - OBO::Core::SynonymTypeDef
+        - strict
+    - bytesize: 3556
+      file_mime_type: ~
+      line_count: ~
+      md5: 31b3648ea606e67d1a08ad4db0dd2cdc
+      mtime: 1269714679
+      name: t/SynonymSet.t
+      uses:
+        - Test
+        - OBO::Util::SynonymSet
+        - OBO::Core::Synonym
+    - bytesize: 1405
+      file_mime_type: ~
+      line_count: ~
+      md5: 067bc3effa97a5bb5a385200fc808c4a
+      mtime: 1269714679
+      name: t/IDspace.t
+      uses:
+        - Test
+        - OBO::Core::IDspace
+        - strict
+    - bytesize: 17652
+      file_mime_type: ~
+      line_count: ~
+      md5: c4670bae6b75d0e24e14367fa845895f
+      mtime: 1269714679
+      name: t/Ontolome.t
+      uses:
+        - Test
+        - strict
+        - OBO::Core::Ontology
+        - OBO::Util::Ontolome
+        - OBO::Core::Term
+        - OBO::Core::Relationship
+        - OBO::Core::RelationshipType
+        - OBO::Parser::OBOParser
+    - bytesize: 1465
+      file_mime_type: ~
+      line_count: ~
+      md5: caef5618c6d121e0f22c3bbc0fb21a44
+      mtime: 1269714679
+      name: t/Set.t
+      uses:
+        - Test
+        - OBO::Util::Set
+        - strict
+    - bytesize: 6534
+      file_mime_type: ~
+      line_count: ~
+      md5: 1d6bad0f835d10af04c4db3edd61c849
+      mtime: 1269714679
+      name: t/Term.t
+      uses:
+        - Test
+        - OBO::Core::Term
+        - OBO::Core::Def
+        - OBO::Util::DbxrefSet
+        - OBO::Core::Dbxref
+        - OBO::Core::Synonym
+        - strict
+    - bytesize: 1997
+      file_mime_type: ~
+      line_count: ~
+      md5: a478c8460eda9e528564857cf03f2702
+      mtime: 1269714679
+      name: t/CCO_ID_Set.t
+      uses:
+        - Test
+        - OBO::CCO::CCO_ID_Set
+        - OBO::CCO::CCO_ID
+        - strict
+    - bytesize: 21366
+      file_mime_type: ~
+      line_count: ~
+      md5: d7301eb38b90cb146cdc4b14c4118fbd
+      mtime: 1269714679
+      name: t/Ontology.t
+      uses:
+        - Test
+        - OBO::Core::Ontology
+        - OBO::Core::Term
+        - OBO::Core::Relationship
+        - OBO::Core::RelationshipType
+        - OBO::Core::SynonymTypeDef
+        - OBO::Parser::OBOParser
+        - OBO::Util::TermSet
+  tests:
+    - t/Relationship.t
+    - t/Synonym.t
+    - t/GoaAssociationSet.t
+    - t/OBOParser.t
+    - t/OrthoMCLParser.t
+    - t/Dbxref.t
+    - t/GoaAssociation.t
+    - t/DbxrefSet.t
+    - t/GoaToRDF.t
+    - t/NCBIParser.t
+    - t/TermSet.t
+    - t/IntActParser.t
+    - t/CCO_ID.t
+    - t/UniProtParser.t
+    - t/CCO_ID_Term_Map.t
+    - t/NCBIToRDF.t
+    - t/NewIntActParser.t
+    - t/SynonymTypeDefSet.t
+    - t/Def.t
+    - t/OWLParser.t
+    - t/RelationshipType.t
+    - t/GoaParser.t
+    - t/SynonymTypeDef.t
+    - t/SynonymSet.t
+    - t/IDspace.t
+    - t/Ontolome.t
+    - t/Set.t
+    - t/Term.t
+    - t/CCO_ID_Set.t
+    - t/Ontology.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.55vw
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271754050
+  examine_start_time: 1271753967
+  examine_time: 83
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 1
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271754050
+  run_start_time: 1271753967
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

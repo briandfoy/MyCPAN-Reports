@@ -1,0 +1,2693 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: The main slack-get 1.0 library
+    author:
+      - 'Arnaud DUPUIS <a.dupuis@infinityperl.org>'
+    build_requires:
+      Data::Dumper: '>= 2.121_02'
+      File::Copy: '>= 2.08'
+      Getopt::Long: 0
+      HTTP::Request: '>= 1.40'
+      HTTP::Status: '>= 1.28'
+      LWP::Simple: '>= 1.41'
+      Net::FTP: '>= 2.75'
+      POE: 0.9999
+      POE::Component::Logger: 1.0
+      Proc::Daemon: 0
+      Test::More: 0.70
+      Time::HiRes: '>= 1.66'
+      XML::Parser: 0
+      XML::Simple: 2.18
+      perl: '>= 5.8.5'
+    generated_by: Module::Build version 0.2808
+    license: perl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.2.html
+      version: 1.2
+    name: Slackware-Slackget
+    provides:
+      Slackware::Slackget:
+        file: lib/Slackware/Slackget.pm
+        version: 0.16
+      Slackware::Slackget::Base:
+        file: lib/Slackware/Slackget/Base.pm
+        version: 1.0.3
+      Slackware::Slackget::Config:
+        file: lib/Slackware/Slackget/Config.pm
+        version: 1.0.1
+      Slackware::Slackget::Date:
+        file: lib/Slackware/Slackget/Date.pm
+        version: 1.0.1
+      Slackware::Slackget::File:
+        file: lib/Slackware/Slackget/File.pm
+        version: 1.0.5
+      Slackware::Slackget::GPG:
+        file: lib/Slackware/Slackget/GPG.pm
+        version: 0.1
+      Slackware::Slackget::GPG::Signature:
+        file: lib/Slackware/Slackget/GPG/Signature.pm
+        version: 0.5
+      Slackware::Slackget::List:
+        file: lib/Slackware/Slackget/List.pm
+        version: 1.0.1
+      Slackware::Slackget::Local:
+        file: lib/Slackware/Slackget/Local.pm
+        version: 1.0.0
+      Slackware::Slackget::MD5:
+        file: lib/Slackware/Slackget/MD5.pm
+        version: 0.1
+      Slackware::Slackget::Media:
+        file: lib/Slackware/Slackget/Media.pm
+        version: 0.9.8
+      Slackware::Slackget::MediaList:
+        file: lib/Slackware/Slackget/MediaList.pm
+        version: 0.9.11
+      Slackware::Slackget::Network:
+        file: lib/Slackware/Slackget/Network.pm
+        version: 1.0.0
+      Slackware::Slackget::Network::Auth:
+        file: lib/Slackware/Slackget/Network/Auth.pm
+        version: 1.0.0
+      Slackware::Slackget::Network::Backend::Base64:
+        file: lib/Slackware/Slackget/Network/Backend/Base64.pm
+        version: 0.8.0
+      Slackware::Slackget::Network::Backend::Bzip2:
+        file: lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+        version: 0.8.0
+      Slackware::Slackget::Network::Backend::Gzip:
+        file: lib/Slackware/Slackget/Network/Backend/Gzip.pm
+        version: 0.8.1
+      Slackware::Slackget::Network::Backend::TEST:
+        file: lib/Slackware/Slackget/Network/Backend/TEST.pm
+        version: 0.8.0
+      Slackware::Slackget::Network::Backend::XML:
+        file: lib/Slackware/Slackget/Network/Backend/XML.pm
+        version: 0.9.0
+      Slackware::Slackget::Network::Connection:
+        file: lib/Slackware/Slackget/Network/Connection.pm
+        version: 1.0.0
+      Slackware::Slackget::Network::Connection::FILE:
+        file: lib/Slackware/Slackget/Network/Connection/FILE.pm
+        version: 0.6.0
+      Slackware::Slackget::Network::Connection::FTP:
+        file: lib/Slackware/Slackget/Network/Connection/FTP.pm
+        version: 1.0.0
+      Slackware::Slackget::Network::Connection::HTTP:
+        file: lib/Slackware/Slackget/Network/Connection/HTTP.pm
+        version: 1.0.0
+      Slackware::Slackget::Network::Message:
+        file: lib/Slackware/Slackget/Network/Message.pm
+        version: 0.9.1
+      Slackware::Slackget::Package:
+        file: lib/Slackware/Slackget/Package.pm
+        version: 1.0.3
+      Slackware::Slackget::PackageList:
+        file: lib/Slackware/Slackget/PackageList.pm
+        version: 1.0.0
+      Slackware::Slackget::PkgTools:
+        file: lib/Slackware/Slackget/PkgTools.pm
+        version: 1.0.1
+      Slackware::Slackget::Search:
+        file: lib/Slackware/Slackget/Search.pm
+        version: 1.0.0
+      Slackware::Slackget::SpecialFileContainer:
+        file: lib/Slackware/Slackget/SpecialFileContainer.pm
+        version: 1.0.0
+      Slackware::Slackget::SpecialFileContainerList:
+        file: lib/Slackware/Slackget/SpecialFileContainerList.pm
+        version: 1.0.0
+      Slackware::Slackget::SpecialFiles::CHECKSUMS:
+        file: lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+        version: 1.0.0
+      Slackware::Slackget::SpecialFiles::FILELIST:
+        file: lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+        version: 1.0.0
+      Slackware::Slackget::SpecialFiles::PACKAGES:
+        file: lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+        version: 1.0.0
+      Slackware::Slackget::Status:
+        file: lib/Slackware/Slackget/Status.pm
+        version: 1.0.99
+    resources:
+      license: http://dev.perl.org/licenses/
+    version: 0.16
+  blib:
+    - blib/lib/Slackware/Slackget.pm
+    - blib/lib/Slackware/Slackget/Base.pm
+    - blib/lib/Slackware/Slackget/Config.pm
+    - blib/lib/Slackware/Slackget/Date.pm
+    - blib/lib/Slackware/Slackget/File.pm
+    - blib/lib/Slackware/Slackget/GPG.pm
+    - blib/lib/Slackware/Slackget/GPG/Signature.pm
+    - blib/lib/Slackware/Slackget/List.pm
+    - blib/lib/Slackware/Slackget/Local.pm
+    - blib/lib/Slackware/Slackget/MD5.pm
+    - blib/lib/Slackware/Slackget/Media.pm
+    - blib/lib/Slackware/Slackget/MediaList.pm
+    - blib/lib/Slackware/Slackget/Network.pm
+    - blib/lib/Slackware/Slackget/Network/Auth.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/Base64.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/Gzip.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/TEST.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/XML.pm
+    - blib/lib/Slackware/Slackget/Network/Connection.pm
+    - blib/lib/Slackware/Slackget/Network/Connection/FILE.pm
+    - blib/lib/Slackware/Slackget/Network/Connection/FTP.pm
+    - blib/lib/Slackware/Slackget/Network/Connection/HTTP.pm
+    - blib/lib/Slackware/Slackget/Network/Message.pm
+    - blib/lib/Slackware/Slackget/Package.pm
+    - blib/lib/Slackware/Slackget/PackageList.pm
+    - blib/lib/Slackware/Slackget/PkgTools.pm
+    - blib/lib/Slackware/Slackget/Search.pm
+    - blib/lib/Slackware/Slackget/SpecialFileContainer.pm
+    - blib/lib/Slackware/Slackget/SpecialFileContainerList.pm
+    - blib/lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+    - blib/lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+    - blib/lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+    - blib/lib/Slackware/Slackget/Status.pm
+    - blib/libdoc/Slackware::Slackget.3
+    - blib/libdoc/Slackware::Slackget::Base.3
+    - blib/libdoc/Slackware::Slackget::Config.3
+    - blib/libdoc/Slackware::Slackget::Date.3
+    - blib/libdoc/Slackware::Slackget::File.3
+    - blib/libdoc/Slackware::Slackget::GPG.3
+    - blib/libdoc/Slackware::Slackget::GPG::Signature.3
+    - blib/libdoc/Slackware::Slackget::List.3
+    - blib/libdoc/Slackware::Slackget::Local.3
+    - blib/libdoc/Slackware::Slackget::MD5.3
+    - blib/libdoc/Slackware::Slackget::Media.3
+    - blib/libdoc/Slackware::Slackget::MediaList.3
+    - blib/libdoc/Slackware::Slackget::Network.3
+    - blib/libdoc/Slackware::Slackget::Network::Auth.3
+    - blib/libdoc/Slackware::Slackget::Network::Backend::Base64.3
+    - blib/libdoc/Slackware::Slackget::Network::Backend::Bzip2.3
+    - blib/libdoc/Slackware::Slackget::Network::Backend::Gzip.3
+    - blib/libdoc/Slackware::Slackget::Network::Backend::TEST.3
+    - blib/libdoc/Slackware::Slackget::Network::Backend::XML.3
+    - blib/libdoc/Slackware::Slackget::Network::Connection.3
+    - blib/libdoc/Slackware::Slackget::Network::Connection::FILE.3
+    - blib/libdoc/Slackware::Slackget::Network::Connection::FTP.3
+    - blib/libdoc/Slackware::Slackget::Network::Connection::HTTP.3
+    - blib/libdoc/Slackware::Slackget::Network::Message.3
+    - blib/libdoc/Slackware::Slackget::Package.3
+    - blib/libdoc/Slackware::Slackget::PackageList.3
+    - blib/libdoc/Slackware::Slackget::PkgTools.3
+    - blib/libdoc/Slackware::Slackget::Search.3
+    - blib/libdoc/Slackware::Slackget::SpecialFileContainer.3
+    - blib/libdoc/Slackware::Slackget::SpecialFileContainerList.3
+    - blib/libdoc/Slackware::Slackget::SpecialFiles::CHECKSUMS.3
+    - blib/libdoc/Slackware::Slackget::SpecialFiles::FILELIST.3
+    - blib/libdoc/Slackware::Slackget::SpecialFiles::PACKAGES.3
+    - blib/libdoc/Slackware::Slackget::Status.3
+  build_file: Build.PL
+  build_file_output: |
+    Checking prerequisites...
+      build_requires:
+        !  HTTP::Request is not installed
+        !  HTTP::Status is not installed
+        !  LWP::Simple is not installed
+        !  POE is not installed
+        !  POE::Component::Logger is not installed
+        !  Proc::Daemon is not installed
+        !  XML::Parser is not installed
+        !  XML::Simple is not installed
+    
+    ERRORS/WARNINGS FOUND IN PREREQUISITES.  You may wish to install the versions
+    of the modules indicated above before proceeding with this installation
+    
+    Run 'Build installdeps' to install missing prerequisites.
+    
+    Creating new 'MYMETA.yml' with configuration results
+    Creating new 'Build' script for 'Slackware-Slackget' version '0.16'
+  build_output: "Building Slackware-Slackget\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+      make: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Build.PL
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Makefile.PL
+    build_files:
+      Build.PL: Build.PL
+      Makefile.PL: Makefile.PL
+    build_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16
+    has_build_and_makefile: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Makefile.PL
+    has_build_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Build.PL
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: 0.3603
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: 1
+    uses_module_build_compat: 1
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DUPUISARN
+  dist_basename: Slackware-Slackget-0.16.tar.gz
+  dist_date: 1204875565
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P/Slackware-Slackget-0.16
+  dist_file: /home/brian/CPAN/authors/id/D/DU/DUPUISARN/Slackware-Slackget-0.16.tar.gz
+  dist_md5: 297ace186a905a11a7ef918b120872b2
+  dist_size: 72321
+  manifest:
+    - .cvsignore
+    - Build.PL
+    - Changes
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - README
+    - lib/Slackware/Slackget.pm
+    - lib/Slackware/Slackget/Base.pm
+    - lib/Slackware/Slackget/Config.pm
+    - lib/Slackware/Slackget/Date.pm
+    - lib/Slackware/Slackget/File.pm
+    - lib/Slackware/Slackget/GPG.pm
+    - lib/Slackware/Slackget/GPG/Signature.pm
+    - lib/Slackware/Slackget/List.pm
+    - lib/Slackware/Slackget/Local.pm
+    - lib/Slackware/Slackget/MD5.pm
+    - lib/Slackware/Slackget/Media.pm
+    - lib/Slackware/Slackget/MediaList.pm
+    - lib/Slackware/Slackget/Network.pm
+    - lib/Slackware/Slackget/Network/Auth.pm
+    - lib/Slackware/Slackget/Network/Backend/Base64.pm
+    - lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+    - lib/Slackware/Slackget/Network/Backend/Gzip.pm
+    - lib/Slackware/Slackget/Network/Backend/TEST.pm
+    - lib/Slackware/Slackget/Network/Backend/XML.pm
+    - lib/Slackware/Slackget/Network/Connection.pm
+    - lib/Slackware/Slackget/Network/Connection/FILE.pm
+    - lib/Slackware/Slackget/Network/Connection/FTP.pm
+    - lib/Slackware/Slackget/Network/Connection/HTTP.pm
+    - lib/Slackware/Slackget/Network/Message.pm
+    - lib/Slackware/Slackget/Package.pm
+    - lib/Slackware/Slackget/PackageList.pm
+    - lib/Slackware/Slackget/PkgTools.pm
+    - lib/Slackware/Slackget/Search.pm
+    - lib/Slackware/Slackget/SpecialFileContainer.pm
+    - lib/Slackware/Slackget/SpecialFileContainerList.pm
+    - lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+    - lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+    - lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+    - lib/Slackware/Slackget/Status.pm
+    - t/00-load.t
+    - t/01-Config.t
+    - t/02-File-backward-compatible.t
+    - t/03-File.t
+    - t/04-Media-backward-compatible.t
+    - t/05-Media.t
+    - t/06-Date-backward-compatible.t
+    - t/07-Date.t
+    - t/08-Package-backward-compatible.t
+    - t/09-Package.t
+    - t/10-Base.t
+    - t/boilerplate.t
+    - t/config.xml
+    - t/medias.xml
+    - t/pod-coverage.t
+    - t/pod.t
+  manifest_file_info:
+    - bytesize: 105
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d2b615139fd238e7c7471805068037e
+      mtime: 1204874980
+      name: .cvsignore
+    - bytesize: 907
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1204874980
+      name: Build.PL
+    - bytesize: 4893
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1204874979
+      name: Changes
+    - bytesize: 1699
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1204874979
+      name: MANIFEST
+    - bytesize: 4323
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1204874980
+      name: META.yml
+    - bytesize: 1116
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1204874980
+      name: Makefile.PL
+    - bytesize: 1441
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1204874980
+      name: README
+    - bytesize: 12517
+      file_mime_type: ~
+      line_count: ~
+      md5: 0f27fd44b4fbc638a923ff248459c16a
+      mtime: 1204874980
+      name: lib/Slackware/Slackget.pm
+    - bytesize: 14850
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c866abdf3394c69dde093ac85783eca
+      mtime: 1204874979
+      name: lib/Slackware/Slackget/Base.pm
+    - bytesize: 4963
+      file_mime_type: ~
+      line_count: ~
+      md5: 6faf4ada8ee7fa46b221883c3dad89a4
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Config.pm
+    - bytesize: 10217
+      file_mime_type: ~
+      line_count: ~
+      md5: 87a977dd38646b242453be5083afd9d7
+      mtime: 1204874979
+      name: lib/Slackware/Slackget/Date.pm
+    - bytesize: 17927
+      file_mime_type: ~
+      line_count: ~
+      md5: 32d368a1cb621379e9795b03436e1302
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/File.pm
+    - bytesize: 5017
+      file_mime_type: ~
+      line_count: ~
+      md5: 24b39382743400d21f4fac4165467741
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/GPG.pm
+    - bytesize: 4539
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a859fc0dffbca2b4d98359eb104a0f3
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/GPG/Signature.pm
+    - bytesize: 6511
+      file_mime_type: ~
+      line_count: ~
+      md5: 48440365cb5331007e55b610814e8c56
+      mtime: 1204874979
+      name: lib/Slackware/Slackget/List.pm
+    - bytesize: 5526
+      file_mime_type: ~
+      line_count: ~
+      md5: aac2bf0dfde5f300bec4da8d9b06aa26
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Local.pm
+    - bytesize: 4036
+      file_mime_type: ~
+      line_count: ~
+      md5: 610c966fa20efbdd1518a66f1cce886f
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/MD5.pm
+    - bytesize: 14161
+      file_mime_type: ~
+      line_count: ~
+      md5: b01ca29b628f4c05a73d730802e8c428
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Media.pm
+    - bytesize: 3118
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c3d3dfe936c1a5d8c808044e29e8ce7
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/MediaList.pm
+    - bytesize: 31245
+      file_mime_type: ~
+      line_count: ~
+      md5: 1fafaf34ec18fe8b7e8a8965e0dbaf7c
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network.pm
+    - bytesize: 14009
+      file_mime_type: ~
+      line_count: ~
+      md5: ad4a8fdb5275f31071ab334fb4fe68c5
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Auth.pm
+    - bytesize: 3315
+      file_mime_type: ~
+      line_count: ~
+      md5: eb1bbaa7e3caea3062a93ae31966719e
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Backend/Base64.pm
+    - bytesize: 3310
+      file_mime_type: ~
+      line_count: ~
+      md5: 2b64f8bf3e1901a05c97ed5c4a9d4566
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+    - bytesize: 3712
+      file_mime_type: ~
+      line_count: ~
+      md5: c415a91dfe006e5fdd651a3ee8a1b8ca
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Backend/Gzip.pm
+    - bytesize: 3283
+      file_mime_type: ~
+      line_count: ~
+      md5: 9eebbdc02de65b8afd78b62dcdc2d509
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Backend/TEST.pm
+    - bytesize: 5376
+      file_mime_type: ~
+      line_count: ~
+      md5: ea1981c2bd6d0fdf84c877965ec50a57
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Backend/XML.pm
+    - bytesize: 22103
+      file_mime_type: ~
+      line_count: ~
+      md5: 2285b4c7de3d536d1136ea6832ea0c18
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Connection.pm
+    - bytesize: 6632
+      file_mime_type: ~
+      line_count: ~
+      md5: 9283c519aa347876959d6f2e120ea79b
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Connection/FILE.pm
+    - bytesize: 9256
+      file_mime_type: ~
+      line_count: ~
+      md5: d2c299b40a8288ce60c472d9fa020597
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Connection/FTP.pm
+    - bytesize: 8989
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f550bac23402607bc6802ce857a696c
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Connection/HTTP.pm
+    - bytesize: 5497
+      file_mime_type: ~
+      line_count: ~
+      md5: 64d13ebeac31ea59c220fb6525a1d6ed
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Network/Message.pm
+    - bytesize: 28988
+      file_mime_type: ~
+      line_count: ~
+      md5: f7701480faa532f8721679be4ca68bf3
+      mtime: 1204874979
+      name: lib/Slackware/Slackget/Package.pm
+    - bytesize: 7523
+      file_mime_type: ~
+      line_count: ~
+      md5: 19e25057bbf39749262d7776b661d5de
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/PackageList.pm
+    - bytesize: 12551
+      file_mime_type: ~
+      line_count: ~
+      md5: e9d10e5289601368dc960ac384339d4f
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/PkgTools.pm
+    - bytesize: 8085
+      file_mime_type: ~
+      line_count: ~
+      md5: c457f10cfd2aeeb8a3e5b7ad56a0bee9
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Search.pm
+    - bytesize: 6611
+      file_mime_type: ~
+      line_count: ~
+      md5: c9ede0e7266cb40d5608fbf3283fd155
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/SpecialFileContainer.pm
+    - bytesize: 3167
+      file_mime_type: ~
+      line_count: ~
+      md5: c4838e13b48b19719c298d1b60945f97
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/SpecialFileContainerList.pm
+    - bytesize: 6318
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b8be2564b13c1f17b9745b3d05a6f3b
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+    - bytesize: 7279
+      file_mime_type: ~
+      line_count: ~
+      md5: 931a09b0ffada34c67625bc29a5059c8
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+    - bytesize: 6343
+      file_mime_type: ~
+      line_count: ~
+      md5: e65a9b28f4df5acf700961c0330e3e14
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+    - bytesize: 6223
+      file_mime_type: ~
+      line_count: ~
+      md5: e877cc052a2070a167aba9fe0eda9ee0
+      mtime: 1204874980
+      name: lib/Slackware/Slackget/Status.pm
+    - bytesize: 1290
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1204874980
+      name: t/00-load.t
+    - bytesize: 228
+      file_mime_type: ~
+      line_count: ~
+      md5: 36186bc0141be2469c756c3469747169
+      mtime: 1204874980
+      name: t/01-Config.t
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 0910a57f0e0f198aacd8313c98d66a8e
+      mtime: 1204874980
+      name: t/02-File-backward-compatible.t
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 88ccb51488f508ca0cae9030a84c1998
+      mtime: 1204874980
+      name: t/03-File.t
+    - bytesize: 867
+      file_mime_type: ~
+      line_count: ~
+      md5: c31c9c42f4c0d4be102b0244736c10f9
+      mtime: 1204874979
+      name: t/04-Media-backward-compatible.t
+    - bytesize: 870
+      file_mime_type: ~
+      line_count: ~
+      md5: be299df9ea87886ab49de43653109c6b
+      mtime: 1204874980
+      name: t/05-Media.t
+    - bytesize: 1175
+      file_mime_type: ~
+      line_count: ~
+      md5: 59e1f1bf00646de7270190a6cf5bfa49
+      mtime: 1204874980
+      name: t/06-Date-backward-compatible.t
+    - bytesize: 1175
+      file_mime_type: ~
+      line_count: ~
+      md5: a6640b1654fc31d656ca7ad21dc195f4
+      mtime: 1204874980
+      name: t/07-Date.t
+    - bytesize: 1499
+      file_mime_type: ~
+      line_count: ~
+      md5: 85dc99449dcad3e0857389ab9b137715
+      mtime: 1204874979
+      name: t/08-Package-backward-compatible.t
+    - bytesize: 1503
+      file_mime_type: ~
+      line_count: ~
+      md5: 98ebf45ce3669224a8da3fd3fe184ecc
+      mtime: 1204874980
+      name: t/09-Package.t
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: d4aa15d65458378518a88a811d8fbb9f
+      mtime: 1204874980
+      name: t/10-Base.t
+    - bytesize: 1324
+      file_mime_type: ~
+      line_count: ~
+      md5: ef00347cb249a6dab7368c3cb6f9cd6b
+      mtime: 1204874980
+      name: t/boilerplate.t
+    - bytesize: 7222
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f42d0759cd52b501e6485378c70baf3
+      mtime: 1204874980
+      name: t/config.xml
+    - bytesize: 20047
+      file_mime_type: ~
+      line_count: ~
+      md5: e4443a54a108f2f279da29a660d1bd65
+      mtime: 1204874980
+      name: t/medias.xml
+    - bytesize: 1505
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1204874980
+      name: t/pod-coverage.t
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1204874980
+      name: t/pod.t
+  module_info:
+    - bytesize: 12517
+      file_mime_type: ~
+      line_count: ~
+      md5: 40c425eb511f06cd7cc391eeb2bc8546
+      module_name_from_file_guess: Slackware::Slackget
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget.pm
+      packages:
+        - Slackware::Slackget
+      primary_package: Slackware::Slackget
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Base
+        - Slackware::Slackget::Network::Auth
+        - Slackware::Slackget::Config
+        - Slackware::Slackget::PkgTools
+      version_info:
+        filename: blib/lib/Slackware/Slackget.pm
+        identifier: VERSION
+        line_number: 21
+        sigil: $
+        value: 0.16
+    - bytesize: 14850
+      file_mime_type: ~
+      line_count: ~
+      md5: b35674a97475fac02ba8bac168c76226
+      module_name_from_file_guess: Slackware::Slackget::Base
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Base.pm
+      packages:
+        - Slackware::Slackget::Base
+      primary_package: Slackware::Slackget::Base
+      uses:
+        - warnings
+        - strict
+        - XML::Simple
+        - Slackware::Slackget::PackageList
+        - Slackware::Slackget::Package
+        - Slackware::Slackget::File
+        - Slackware::Slackget::Media
+        - Slackware::Slackget::MediaList
+        - Slackware::Slackget::Date
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Base.pm
+        identifier: VERSION
+        line_number: 25
+        sigil: $
+        value: 1.0.3
+    - bytesize: 4963
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a0deff3fdc87f50714a0441e01f8bbb
+      module_name_from_file_guess: Slackware::Slackget::Config
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Config.pm
+      packages:
+        - Slackware::Slackget::Config
+      primary_package: Slackware::Slackget::Config
+      uses:
+        - warnings
+        - strict
+        - XML::Simple
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Config.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 1.0.1
+    - bytesize: 10217
+      file_mime_type: ~
+      line_count: ~
+      md5: 20698aa32b4ed520874a05e5c9dbfd22
+      module_name_from_file_guess: Slackware::Slackget::Date
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Date.pm
+      packages:
+        - Slackware::Slackget::Date
+      primary_package: Slackware::Slackget::Date
+      uses:
+        - warnings
+        - strict
+        - overload
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Date.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.0.1
+    - bytesize: 17927
+      file_mime_type: ~
+      line_count: ~
+      md5: 30bf31acc36911db69318ebaf62a7367
+      module_name_from_file_guess: Slackware::Slackget::File
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/File.pm
+      packages:
+        - Slackware::Slackget::File
+      primary_package: Slackware::Slackget::File
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/File.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.0.5
+    - bytesize: 5017
+      file_mime_type: ~
+      line_count: ~
+      md5: ae16ee77b70b6c5c0f3da22544acbab0
+      module_name_from_file_guess: Slackware::Slackget::GPG
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/GPG.pm
+      packages:
+        - Slackware::Slackget::GPG
+      primary_package: Slackware::Slackget::GPG
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::GPG::Signature
+      version_info:
+        filename: blib/lib/Slackware/Slackget/GPG.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 0.1
+    - bytesize: 4539
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e1ced57b3c7a026124fe428b4a4f56b
+      module_name_from_file_guess: Slackware::Slackget::GPG::Signature
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/GPG/Signature.pm
+      packages:
+        - Slackware::Slackget::GPG::Signature
+      primary_package: Slackware::Slackget::GPG::Signature
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/GPG/Signature.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 0.5
+    - bytesize: 6511
+      file_mime_type: ~
+      line_count: ~
+      md5: e51d75e7d7909b4bc102dbde343ec63c
+      module_name_from_file_guess: Slackware::Slackget::List
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/List.pm
+      packages:
+        - Slackware::Slackget::List
+      primary_package: Slackware::Slackget::List
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/List.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.0.1
+    - bytesize: 5526
+      file_mime_type: ~
+      line_count: ~
+      md5: 00946f4af9d02ae767cfcc36af1d0c99
+      module_name_from_file_guess: Slackware::Slackget::Local
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Local.pm
+      packages:
+        - Slackware::Slackget::Local
+      primary_package: Slackware::Slackget::Local
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::File
+        - XML::Simple
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Local.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.0.0
+    - bytesize: 4036
+      file_mime_type: ~
+      line_count: ~
+      md5: 061f6213857f12cca87c1107a04cf124
+      module_name_from_file_guess: Slackware::Slackget::MD5
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/MD5.pm
+      packages:
+        - Slackware::Slackget::MD5
+      primary_package: Slackware::Slackget::MD5
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/MD5.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 0.1
+    - bytesize: 14161
+      file_mime_type: ~
+      line_count: ~
+      md5: 43f6fc0952c3326a307c5583bbef59c7
+      module_name_from_file_guess: Slackware::Slackget::Media
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Media.pm
+      packages:
+        - Slackware::Slackget::Media
+      primary_package: Slackware::Slackget::Media
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Connection
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Media.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.9.8
+    - bytesize: 3118
+      file_mime_type: ~
+      line_count: ~
+      md5: 655f4d0a14b72ade59ae3ccccf66593b
+      module_name_from_file_guess: Slackware::Slackget::MediaList
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/MediaList.pm
+      packages:
+        - Slackware::Slackget::MediaList
+      primary_package: Slackware::Slackget::MediaList
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::List
+      version_info:
+        filename: blib/lib/Slackware/Slackget/MediaList.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 0.9.11
+    - bytesize: 31245
+      file_mime_type: ~
+      line_count: ~
+      md5: 2ba2af0e8fe237a45bd82255bab73f50
+      module_name_from_file_guess: Slackware::Slackget::Network
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network.pm
+      packages:
+        - Slackware::Slackget::Network
+      primary_package: Slackware::Slackget::Network
+      uses:
+        - warnings
+        - strict
+        - constant
+        - Slackware::Slackget::Network::Message
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network.pm
+        identifier: VERSION
+        line_number: 29
+        sigil: $
+        value: 1.0.0
+    - bytesize: 14009
+      file_mime_type: ~
+      line_count: ~
+      md5: d5847e275482869b1e59fcc2aa9cc346
+      module_name_from_file_guess: Slackware::Slackget::Network::Auth
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Auth.pm
+      packages:
+        - Slackware::Slackget::Network::Auth
+      primary_package: Slackware::Slackget::Network::Auth
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Auth.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.0.0
+    - bytesize: 3315
+      file_mime_type: ~
+      line_count: ~
+      md5: a569186c38e5eadc3b609c720c9daf2c
+      module_name_from_file_guess: Slackware::Slackget::Network::Backend::Base64
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Backend/Base64.pm
+      packages:
+        - Slackware::Slackget::Network::Backend::Base64
+      primary_package: Slackware::Slackget::Network::Backend::Base64
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Message
+        - MIME::Base64
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Backend/Base64.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 0.8.0
+    - bytesize: 3310
+      file_mime_type: ~
+      line_count: ~
+      md5: 689bd02b9e887ebcc9ed1852ff6737de
+      module_name_from_file_guess: Slackware::Slackget::Network::Backend::Bzip2
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+      packages:
+        - Slackware::Slackget::Network::Backend::Bzip2
+      primary_package: Slackware::Slackget::Network::Backend::Bzip2
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Message
+        - Compress::Bzip2
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 0.8.0
+    - bytesize: 3712
+      file_mime_type: ~
+      line_count: ~
+      md5: bf3ef954e9c7135a890dc2f267f6ded9
+      module_name_from_file_guess: Slackware::Slackget::Network::Backend::Gzip
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Backend/Gzip.pm
+      packages:
+        - Slackware::Slackget::Network::Backend::Gzip
+      primary_package: Slackware::Slackget::Network::Backend::Gzip
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Message
+        - Compress::Zlib
+        - IO::Uncompress::Gunzip
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Backend/Gzip.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 0.8.1
+    - bytesize: 3283
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a7c927d3d862678cd0b725621728d8a
+      module_name_from_file_guess: Slackware::Slackget::Network::Backend::TEST
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Backend/TEST.pm
+      packages:
+        - Slackware::Slackget::Network::Backend::TEST
+      primary_package: Slackware::Slackget::Network::Backend::TEST
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Message
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Backend/TEST.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 0.8.0
+    - bytesize: 5376
+      file_mime_type: ~
+      line_count: ~
+      md5: 4fe7b41bd4fb9a274ad4b7c29972ed4a
+      module_name_from_file_guess: Slackware::Slackget::Network::Backend::XML
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Backend/XML.pm
+      packages:
+        - Slackware::Slackget::Network::Backend::XML
+      primary_package: Slackware::Slackget::Network::Backend::XML
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Message
+        - XML::Simple
+        - Data::Dumper
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Backend/XML.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 0.9.0
+    - bytesize: 22103
+      file_mime_type: ~
+      line_count: ~
+      md5: 51fd37ebf65f857fa9ec833c577db282
+      module_name_from_file_guess: Slackware::Slackget::Network::Connection
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Connection.pm
+      packages:
+        - Slackware::Slackget::Network::Connection
+      primary_package: Slackware::Slackget::Network::Connection
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Status
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Connection.pm
+        identifier: VERSION
+        line_number: 17
+        sigil: $
+        value: 1.0.0
+    - bytesize: 6632
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f16cf8283c57dd772ec53436c68bf59
+      module_name_from_file_guess: Slackware::Slackget::Network::Connection::FILE
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Connection/FILE.pm
+      packages:
+        - Slackware::Slackget::Network::Connection::FILE
+      primary_package: Slackware::Slackget::Network::Connection::FILE
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Connection
+        - Time::HiRes
+        - Slackware::Slackget::Status
+        - File::Copy
+        - Slackware::Slackget::File
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Connection/FILE.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 0.6.0
+    - bytesize: 9256
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cee1918c534d3d958579e06646f783f
+      module_name_from_file_guess: Slackware::Slackget::Network::Connection::FTP
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Connection/FTP.pm
+      packages:
+        - Slackware::Slackget::Network::Connection::FTP
+      primary_package: Slackware::Slackget::Network::Connection::FTP
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Network::Connection
+        - Time::HiRes
+        - Net::FTP
+        - File::Copy
+        - Slackware::Slackget::File
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Connection/FTP.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 1.0.0
+    - bytesize: 8989
+      file_mime_type: ~
+      line_count: ~
+      md5: 75c353f5a8eeeb71a3f1ebff80dd9c0e
+      module_name_from_file_guess: Slackware::Slackget::Network::Connection::HTTP
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Connection/HTTP.pm
+      packages:
+        - Slackware::Slackget::Network::Connection::HTTP
+      primary_package: Slackware::Slackget::Network::Connection::HTTP
+      uses:
+        - warnings
+        - strict
+        - LWP::Simple
+        - File::Basename
+        - File::Copy
+        - HTTP::Status
+        - Slackware::Slackget::Network::Connection
+        - Time::HiRes
+        - Slackware::Slackget::Status
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Connection/HTTP.pm
+        identifier: VERSION
+        line_number: 25
+        sigil: $
+        value: 1.0.0
+    - bytesize: 5497
+      file_mime_type: ~
+      line_count: ~
+      md5: 9843e2326e41c39f7201eb31c8c4a24c
+      module_name_from_file_guess: Slackware::Slackget::Network::Message
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Network/Message.pm
+      packages:
+        - Slackware::Slackget::Network::Message
+      primary_package: Slackware::Slackget::Network::Message
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Network/Message.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.9.1
+    - bytesize: 28988
+      file_mime_type: ~
+      line_count: ~
+      md5: 6604f3b43cfab8df17f6770225698b2a
+      module_name_from_file_guess: Slackware::Slackget::Package
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Package.pm
+      packages:
+        - Slackware::Slackget::Package
+      primary_package: Slackware::Slackget::Package
+      uses:
+        - warnings
+        - strict
+        - overload
+        - Slackware::Slackget::MD5
+        - Data::Dumper
+        - constant
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Package.pm
+        identifier: VERSION
+        line_number: 30
+        sigil: $
+        value: 1.0.3
+    - bytesize: 7523
+      file_mime_type: ~
+      line_count: ~
+      md5: 60a4e8c0502ff919c637ca2dc0a55de8
+      module_name_from_file_guess: Slackware::Slackget::PackageList
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/PackageList.pm
+      packages:
+        - Slackware::Slackget::PackageList
+      primary_package: Slackware::Slackget::PackageList
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Package
+        - Slackware::Slackget::List
+        - Slackware::Slackget::Date
+        - XML::Simple
+      version_info:
+        filename: blib/lib/Slackware/Slackget/PackageList.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.0.0
+    - bytesize: 12551
+      file_mime_type: ~
+      line_count: ~
+      md5: 71e2806ff4ff718b7293816455684903
+      module_name_from_file_guess: Slackware::Slackget::PkgTools
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/PkgTools.pm
+      packages:
+        - Slackware::Slackget::PkgTools
+      primary_package: Slackware::Slackget::PkgTools
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::Status
+        - File::Copy
+        - constant
+      version_info:
+        filename: blib/lib/Slackware/Slackget/PkgTools.pm
+        identifier: VERSION
+        line_number: 32
+        sigil: $
+        value: 1.0.1
+    - bytesize: 8085
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e55a34aaa72761ac385fd18a92505d0
+      module_name_from_file_guess: Slackware::Slackget::Search
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Search.pm
+      packages:
+        - Slackware::Slackget::Search
+      primary_package: Slackware::Slackget::Search
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Search.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.0.0
+    - bytesize: 6611
+      file_mime_type: ~
+      line_count: ~
+      md5: e01f11f86dbb7ea20889152a5a2ac521
+      module_name_from_file_guess: Slackware::Slackget::SpecialFileContainer
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/SpecialFileContainer.pm
+      packages:
+        - Slackware::Slackget::SpecialFileContainer
+      primary_package: Slackware::Slackget::SpecialFileContainer
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::SpecialFiles::PACKAGES
+        - Slackware::Slackget::SpecialFiles::FILELIST
+        - Slackware::Slackget::SpecialFiles::CHECKSUMS
+        - Slackware::Slackget::PackageList
+        - Slackware::Slackget::Package
+      version_info:
+        filename: blib/lib/Slackware/Slackget/SpecialFileContainer.pm
+        identifier: VERSION
+        line_number: 22
+        sigil: $
+        value: 1.0.0
+    - bytesize: 3167
+      file_mime_type: ~
+      line_count: ~
+      md5: b6e31f115f12542290db94aa575c87aa
+      module_name_from_file_guess: Slackware::Slackget::SpecialFileContainerList
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/SpecialFileContainerList.pm
+      packages:
+        - Slackware::Slackget::SpecialFileContainerList
+      primary_package: Slackware::Slackget::SpecialFileContainerList
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::List
+      version_info:
+        filename: blib/lib/Slackware/Slackget/SpecialFileContainerList.pm
+        identifier: VERSION
+        line_number: 18
+        sigil: $
+        value: 1.0.0
+    - bytesize: 6318
+      file_mime_type: ~
+      line_count: ~
+      md5: 2af998ccd9ed3359a5662ef48ac6ca4b
+      module_name_from_file_guess: Slackware::Slackget::SpecialFiles::CHECKSUMS
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+      packages:
+        - Slackware::Slackget::SpecialFiles::CHECKSUMS
+      primary_package: Slackware::Slackget::SpecialFiles::CHECKSUMS
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::File
+        - Slackware::Slackget::Package
+      version_info:
+        filename: blib/lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 1.0.0
+    - bytesize: 7279
+      file_mime_type: ~
+      line_count: ~
+      md5: 79ff4fc98f9d61af1a0a79de51800e26
+      module_name_from_file_guess: Slackware::Slackget::SpecialFiles::FILELIST
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+      packages:
+        - Slackware::Slackget::SpecialFiles::FILELIST
+      primary_package: Slackware::Slackget::SpecialFiles::FILELIST
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::File
+        - Slackware::Slackget::Date
+        - Slackware::Slackget::Package
+      version_info:
+        filename: blib/lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.0.0
+    - bytesize: 6343
+      file_mime_type: ~
+      line_count: ~
+      md5: ac2289570fb0625555edb8d3147c5f5d
+      module_name_from_file_guess: Slackware::Slackget::SpecialFiles::PACKAGES
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+      packages:
+        - Slackware::Slackget::SpecialFiles::PACKAGES
+      primary_package: Slackware::Slackget::SpecialFiles::PACKAGES
+      uses:
+        - warnings
+        - strict
+        - Slackware::Slackget::File
+        - Slackware::Slackget::Date
+        - Slackware::Slackget::Package
+      version_info:
+        filename: blib/lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+        identifier: VERSION
+        line_number: 20
+        sigil: $
+        value: 1.0.0
+    - bytesize: 6223
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f0f7d328cfba7f6c547944e40ca7b9e
+      module_name_from_file_guess: Slackware::Slackget::Status
+      mtime: 1271749335
+      name: blib/lib/Slackware/Slackget/Status.pm
+      packages:
+        - Slackware::Slackget::Status
+      primary_package: Slackware::Slackget::Status
+      uses:
+        - warnings
+        - strict
+      version_info:
+        filename: blib/lib/Slackware/Slackget/Status.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 1.0.99
+  modules:
+    - blib/lib/Slackware/Slackget.pm
+    - blib/lib/Slackware/Slackget/Base.pm
+    - blib/lib/Slackware/Slackget/Config.pm
+    - blib/lib/Slackware/Slackget/Date.pm
+    - blib/lib/Slackware/Slackget/File.pm
+    - blib/lib/Slackware/Slackget/GPG.pm
+    - blib/lib/Slackware/Slackget/GPG/Signature.pm
+    - blib/lib/Slackware/Slackget/List.pm
+    - blib/lib/Slackware/Slackget/Local.pm
+    - blib/lib/Slackware/Slackget/MD5.pm
+    - blib/lib/Slackware/Slackget/Media.pm
+    - blib/lib/Slackware/Slackget/MediaList.pm
+    - blib/lib/Slackware/Slackget/Network.pm
+    - blib/lib/Slackware/Slackget/Network/Auth.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/Base64.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/Bzip2.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/Gzip.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/TEST.pm
+    - blib/lib/Slackware/Slackget/Network/Backend/XML.pm
+    - blib/lib/Slackware/Slackget/Network/Connection.pm
+    - blib/lib/Slackware/Slackget/Network/Connection/FILE.pm
+    - blib/lib/Slackware/Slackget/Network/Connection/FTP.pm
+    - blib/lib/Slackware/Slackget/Network/Connection/HTTP.pm
+    - blib/lib/Slackware/Slackget/Network/Message.pm
+    - blib/lib/Slackware/Slackget/Package.pm
+    - blib/lib/Slackware/Slackget/PackageList.pm
+    - blib/lib/Slackware/Slackget/PkgTools.pm
+    - blib/lib/Slackware/Slackget/Search.pm
+    - blib/lib/Slackware/Slackget/SpecialFileContainer.pm
+    - blib/lib/Slackware/Slackget/SpecialFileContainerList.pm
+    - blib/lib/Slackware/Slackget/SpecialFiles/CHECKSUMS.pm
+    - blib/lib/Slackware/Slackget/SpecialFiles/FILELIST.pm
+    - blib/lib/Slackware/Slackget/SpecialFiles/PACKAGES.pm
+    - blib/lib/Slackware/Slackget/Status.pm
+  test_info:
+    - bytesize: 1175
+      file_mime_type: ~
+      line_count: ~
+      md5: 59e1f1bf00646de7270190a6cf5bfa49
+      mtime: 1204874980
+      name: t/06-Date-backward-compatible.t
+      uses:
+        - Test::More
+    - bytesize: 140
+      file_mime_type: ~
+      line_count: ~
+      md5: 7dfc7e7c433393a4a7c52d127492b7c3
+      mtime: 1204874980
+      name: t/pod.t
+      uses:
+        - Test::More
+    - bytesize: 1503
+      file_mime_type: ~
+      line_count: ~
+      md5: 98ebf45ce3669224a8da3fd3fe184ecc
+      mtime: 1204874980
+      name: t/09-Package.t
+      uses:
+        - Test::More
+    - bytesize: 1175
+      file_mime_type: ~
+      line_count: ~
+      md5: a6640b1654fc31d656ca7ad21dc195f4
+      mtime: 1204874980
+      name: t/07-Date.t
+      uses:
+        - Test::More
+    - bytesize: 228
+      file_mime_type: ~
+      line_count: ~
+      md5: 36186bc0141be2469c756c3469747169
+      mtime: 1204874980
+      name: t/01-Config.t
+      uses:
+        - Test::More
+        - Slackware::Slackget::Config
+    - bytesize: 870
+      file_mime_type: ~
+      line_count: ~
+      md5: be299df9ea87886ab49de43653109c6b
+      mtime: 1204874980
+      name: t/05-Media.t
+      uses:
+        - Test::More
+    - bytesize: 1324
+      file_mime_type: ~
+      line_count: ~
+      md5: ef00347cb249a6dab7368c3cb6f9cd6b
+      mtime: 1204874980
+      name: t/boilerplate.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 813
+      file_mime_type: ~
+      line_count: ~
+      md5: d4aa15d65458378518a88a811d8fbb9f
+      mtime: 1204874980
+      name: t/10-Base.t
+      uses:
+        - Test::More
+        - Slackware::Slackget::Base
+        - Slackware::Slackget::Config
+    - bytesize: 1290
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1204874980
+      name: t/00-load.t
+      uses:
+        - Test::More
+    - bytesize: 867
+      file_mime_type: ~
+      line_count: ~
+      md5: c31c9c42f4c0d4be102b0244736c10f9
+      mtime: 1204874979
+      name: t/04-Media-backward-compatible.t
+      uses:
+        - Test::More
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 0910a57f0e0f198aacd8313c98d66a8e
+      mtime: 1204874980
+      name: t/02-File-backward-compatible.t
+      uses:
+        - Test::More
+    - bytesize: 1505
+      file_mime_type: ~
+      line_count: ~
+      md5: 118c063c0c1b292f8fda97990133a221
+      mtime: 1204874980
+      name: t/pod-coverage.t
+      uses:
+        - Test::More
+    - bytesize: 709
+      file_mime_type: ~
+      line_count: ~
+      md5: 88ccb51488f508ca0cae9030a84c1998
+      mtime: 1204874980
+      name: t/03-File.t
+      uses:
+        - Test::More
+    - bytesize: 1499
+      file_mime_type: ~
+      line_count: ~
+      md5: 85dc99449dcad3e0857389ab9b137715
+      mtime: 1204874979
+      name: t/08-Package-backward-compatible.t
+      uses:
+        - Test::More
+  tests:
+    - t/06-Date-backward-compatible.t
+    - t/pod.t
+    - t/09-Package.t
+    - t/07-Date.t
+    - t/01-Config.t
+    - t/05-Media.t
+    - t/boilerplate.t
+    - t/10-Base.t
+    - t/00-load.t
+    - t/04-Media-backward-compatible.t
+    - t/02-File-backward-compatible.t
+    - t/pod-coverage.t
+    - t/03-File.t
+    - t/08-Package-backward-compatible.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.uA3P
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271749373
+  examine_start_time: 1271749330
+  examine_time: 43
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 49674
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 49674
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271749373
+  run_start_time: 1271749330
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

@@ -1,0 +1,1895 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    distribution_type: module
+    generated_by: ExtUtils::MakeMaker version 6.30
+    installdirs: site
+    name: Proc-ProcessTable
+    requires:
+      File::Find: 0
+      Storable: 0
+    version: 0.41
+    version_from: ProcessTable.pm
+  blib:
+    - blib/arch/auto/Proc/ProcessTable/ProcessTable.bs
+    - blib/arch/auto/Proc/ProcessTable/ProcessTable.so
+    - blib/lib/Proc/Killall.pm
+    - blib/lib/Proc/Killfam.pm
+    - blib/lib/Proc/ProcessTable.pm
+    - blib/lib/Proc/ProcessTable/Process.pm
+    - blib/lib/Proc/example.pl
+    - blib/lib/auto/Proc/ProcessTable/Process/autosplit.ix
+    - blib/man3/Proc::Killall.3
+    - blib/man3/Proc::Killfam.3
+    - blib/man3/Proc::ProcessTable.3
+    - blib/man3/Proc::ProcessTable::Process.3
+  build_file: Makefile.PL
+  build_file_output: |
+    Processing hints file hints/freebsd.pl
+    Checking if your kit is complete...
+    Looks good
+    Writing Makefile for Proc::ProcessTable::Process
+    Writing Makefile for Proc::ProcessTable
+  build_output: |
+    cp Killall.pm blib/lib/Proc/Killall.pm
+    cp ProcessTable.pm blib/lib/Proc/ProcessTable.pm
+    cp example.pl blib/lib/Proc/example.pl
+    cp Killfam.pm blib/lib/Proc/Killfam.pm
+    /home/brian/bin/perl5.10.1 /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/xsubpp  -typemap /usr/local/perls/perl-5.10.1/lib/5.10.1/ExtUtils/typemap  ProcessTable.xs > ProcessTable.xsc && mv ProcessTable.xsc ProcessTable.c
+    cc -c    -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"0.41\"  -DXS_VERSION=\"0.41\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"   ProcessTable.c
+    cc -c    -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -O    -DVERSION=\"0.41\"  -DXS_VERSION=\"0.41\" -DPIC -fPIC "-I/usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd/CORE"   OS.c
+    Running Mkbootstrap for Proc::ProcessTable ()
+    chmod 644 ProcessTable.bs
+    rm -f blib/arch/auto/Proc/ProcessTable/ProcessTable.so
+    cc  -shared  -L/usr/local/lib -fstack-protector OS.o  ProcessTable.o  -o blib/arch/auto/Proc/ProcessTable/ProcessTable.so 	    	 
+    chmod 755 blib/arch/auto/Proc/ProcessTable/ProcessTable.so
+    cp ProcessTable.bs blib/arch/auto/Proc/ProcessTable/ProcessTable.bs
+    chmod 644 blib/arch/auto/Proc/ProcessTable/ProcessTable.bs
+    cp Process.pm ../blib/lib/Proc/ProcessTable/Process.pm
+    AutoSplitting ../blib/lib/Proc/ProcessTable/Process.pm (../blib/lib/auto/Proc/ProcessTable/Process)
+    Manifying ../blib/man3/Proc::ProcessTable::Process.3
+    Manifying blib/man3/Proc::ProcessTable.3
+    Manifying blib/man3/Proc::Killall.3
+    Manifying blib/man3/Proc::Killfam.3
+  build_system_guess:
+    build_commands:
+      make: 1
+    build_file_paths:
+      Makefile.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7/Proc-ProcessTable-0.41/Makefile.PL
+    build_files:
+      Makefile.PL: Makefile.PL
+    build_pl_path: ~
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7/Proc-ProcessTable-0.41
+    has_build_and_makefile: ~
+    has_build_pl: ~
+    has_makefile_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7/Proc-ProcessTable-0.41/Makefile.PL
+    make_command: make
+    makefile_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7/Proc-ProcessTable-0.41/Makefile.PL
+    makemaker_version: 6.55_02
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: ~
+    uses_auto_install: ~
+    uses_makemaker: 1
+    uses_module_build: ~
+    uses_module_build_compat: ~
+    uses_module_install: 0
+  dist_archive_type: tgz
+  dist_author: DURIST
+  dist_basename: Proc-ProcessTable-0.41.tar.gz
+  dist_date: 1151728079
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7/Proc-ProcessTable-0.41
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7/Proc-ProcessTable-0.41
+  dist_file: /home/brian/CPAN/authors/id/D/DU/DURIST/Proc-ProcessTable-0.41.tar.gz
+  dist_md5: acb2fdbea36359d4000afc69c40f0ca4
+  dist_size: 64497
+  manifest:
+    - Changes
+    - Killall.pm
+    - Killfam.pm
+    - MANIFEST
+    - META.yml
+    - Makefile.PL
+    - PORTING
+    - Process/Makefile.PL
+    - Process/Process.pm
+    - ProcessTable.pm
+    - ProcessTable.xs
+    - README
+    - README.aix
+    - README.bsdi
+    - README.cygwin
+    - README.darwin
+    - README.dec_osf
+    - README.freebsd
+    - README.freebsd-kvm
+    - README.hpux
+    - README.linux
+    - README.netbsd
+    - README.openbsd
+    - README.solaris
+    - README.sunos
+    - README.unixware
+    - TODO
+    - contrib/pswait
+    - example.pl
+    - hints/aix.pl
+    - hints/aix_4_2.pl
+    - hints/aix_4_3.pl
+    - hints/aix_5.pl
+    - hints/bsdi.pl
+    - hints/cygwin.pl
+    - hints/darwin.pl
+    - hints/dec_osf.pl
+    - hints/freebsd.pl
+    - hints/freebsd_5.pl
+    - hints/hpux.pl
+    - hints/irix.pl
+    - hints/linux.pl
+    - hints/netbsd.pl
+    - hints/openbsd.pl
+    - hints/solaris.pl
+    - hints/sunos.pl
+    - hints/svr4.pl
+    - hints/svr5.pl
+    - os/DecOSF.c
+    - os/DecOSF.h
+    - os/FreeBSD-kvm.c
+    - os/FreeBSD-kvm.h
+    - os/FreeBSD.c
+    - os/FreeBSD.h
+    - os/HPUX.c
+    - os/IRIX.c
+    - os/IRIX.h
+    - os/Linux.c
+    - os/Linux.h
+    - os/NetBSD.c
+    - os/NetBSD.h
+    - os/OpenBSD.c
+    - os/Solaris.c
+    - os/Solaris.h
+    - os/SunOS.c
+    - os/SunOS.h
+    - os/UnixWare.c
+    - os/UnixWare.h
+    - os/aix.c
+    - os/aix.h
+    - os/aix_getprocs.c
+    - os/aix_getprocs.h
+    - os/bsdi.c
+    - os/bsdi.h
+    - os/cygwin.c
+    - os/cygwin.h
+    - os/darwin.c
+    - os/darwin.h
+    - t/process.t
+  manifest_file_info:
+    - bytesize: 11366
+      file_mime_type: ~
+      line_count: ~
+      md5: c112bb3542e98308d12d5ecb10a67abc
+      mtime: 1151727471
+      name: Changes
+    - bytesize: 2728
+      file_mime_type: ~
+      line_count: ~
+      md5: 0cdf1a59e9db078cb3db18c3b9c0b095
+      mtime: 1151553732
+      name: Killall.pm
+    - bytesize: 1338
+      file_mime_type: ~
+      line_count: ~
+      md5: 15b09152abe70253c0bb34be7a6ed575
+      mtime: 1053362073
+      name: Killfam.pm
+    - bytesize: 1125
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1150429510
+      name: MANIFEST
+    - bytesize: 383
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1151727976
+      name: META.yml
+    - bytesize: 777
+      file_mime_type: ~
+      line_count: ~
+      md5: 5d3ba18294715d9415e9e732852bfec6
+      mtime: 1120846744
+      name: Makefile.PL
+    - bytesize: 3836
+      file_mime_type: ~
+      line_count: ~
+      md5: 1daa51a70545f0b4a686fd677593ca6e
+      mtime: 1060277000
+      name: PORTING
+    - bytesize: 253
+      file_mime_type: ~
+      line_count: ~
+      md5: 2387786af12047d261e242fcf66de8ac
+      mtime: 1053362095
+      name: Process/Makefile.PL
+    - bytesize: 5000
+      file_mime_type: ~
+      line_count: ~
+      md5: d135423743f8220c9c9ef2fee3150d29
+      mtime: 1065204849
+      name: Process/Process.pm
+    - bytesize: 5006
+      file_mime_type: ~
+      line_count: ~
+      md5: c15b2f810f8ef5435a2d0dad0a152ce8
+      mtime: 1151727414
+      name: ProcessTable.pm
+    - bytesize: 9475
+      file_mime_type: ~
+      line_count: ~
+      md5: 90de27ca4dc3618262d404bff1fa6fcf
+      mtime: 1120846562
+      name: ProcessTable.xs
+    - bytesize: 4594
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1151727787
+      name: README
+    - bytesize: 2499
+      file_mime_type: ~
+      line_count: ~
+      md5: 8eda253fb63d2951351447f35ae6686a
+      mtime: 1053362073
+      name: README.aix
+    - bytesize: 641
+      file_mime_type: ~
+      line_count: ~
+      md5: 844e1747bef5419ee3f02e6ef3f77340
+      mtime: 1053362095
+      name: README.bsdi
+    - bytesize: 283
+      file_mime_type: ~
+      line_count: ~
+      md5: af034c8d0b245802090d995f7171fc9b
+      mtime: 1053362095
+      name: README.cygwin
+    - bytesize: 2558
+      file_mime_type: ~
+      line_count: ~
+      md5: f37f4c744033ac69ced286f1284f0a0c
+      mtime: 1059155614
+      name: README.darwin
+    - bytesize: 1191
+      file_mime_type: ~
+      line_count: ~
+      md5: 63c883633d89e16a47d05a182597d793
+      mtime: 1060277000
+      name: README.dec_osf
+    - bytesize: 782
+      file_mime_type: ~
+      line_count: ~
+      md5: 64552482a925095cd09994993720b794
+      mtime: 1053362095
+      name: README.freebsd
+    - bytesize: 1302
+      file_mime_type: ~
+      line_count: ~
+      md5: 968079e8c44d286501cc2053b54aa0fd
+      mtime: 1097242494
+      name: README.freebsd-kvm
+    - bytesize: 454
+      file_mime_type: ~
+      line_count: ~
+      md5: 57fcf603cac8a5970ab48adc46d62b60
+      mtime: 1053362062
+      name: README.hpux
+    - bytesize: 1837
+      file_mime_type: ~
+      line_count: ~
+      md5: b5f1af9d27631b62ca8df95739072ade
+      mtime: 1073799730
+      name: README.linux
+    - bytesize: 706
+      file_mime_type: ~
+      line_count: ~
+      md5: 025edbc04ff9c6723e9f10a35baad4f9
+      mtime: 1053362095
+      name: README.netbsd
+    - bytesize: 653
+      file_mime_type: ~
+      line_count: ~
+      md5: 27de787187819bfed581bf79f57e6c33
+      mtime: 1148584445
+      name: README.openbsd
+    - bytesize: 1401
+      file_mime_type: ~
+      line_count: ~
+      md5: 125809e574ece9d5aac22908005dfed0
+      mtime: 1053362095
+      name: README.solaris
+    - bytesize: 870
+      file_mime_type: ~
+      line_count: ~
+      md5: 3dc3342648ec2ca31602376c29c76b29
+      mtime: 1053362095
+      name: README.sunos
+    - bytesize: 969
+      file_mime_type: ~
+      line_count: ~
+      md5: d812cb03fed141587d05be4d38d16b67
+      mtime: 1053362095
+      name: README.unixware
+    - bytesize: 1425
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1060277000
+      name: TODO
+    - bytesize: 2742
+      file_mime_type: ~
+      line_count: ~
+      md5: 2c6450859087c9e78fa7fc6beacfccfc
+      mtime: 1073799425
+      name: contrib/pswait
+    - bytesize: 308
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ff7df61062343ead03216146beb516b
+      mtime: 1053362062
+      name: example.pl
+    - bytesize: 106
+      file_mime_type: ~
+      line_count: ~
+      md5: c3ebe4f93774530a2a5877dda5f5f29a
+      mtime: 1053362117
+      name: hints/aix.pl
+    - bytesize: 124
+      file_mime_type: ~
+      line_count: ~
+      md5: c22552145e2b3f04fab8ea527bbf31a1
+      mtime: 1053362117
+      name: hints/aix_4_2.pl
+    - bytesize: 124
+      file_mime_type: ~
+      line_count: ~
+      md5: acc42e868283ef13fa8e9ce5d154c1f0
+      mtime: 1053362117
+      name: hints/aix_4_3.pl
+    - bytesize: 124
+      file_mime_type: ~
+      line_count: ~
+      md5: 23f36a51e75453c72fe04d2cb529868c
+      mtime: 1053362117
+      name: hints/aix_5.pl
+    - bytesize: 76
+      file_mime_type: ~
+      line_count: ~
+      md5: 480a674154f1286f99b05031871193bd
+      mtime: 1053362117
+      name: hints/bsdi.pl
+    - bytesize: 80
+      file_mime_type: ~
+      line_count: ~
+      md5: f4b031854d8f2628f29bb1c9074a1d11
+      mtime: 1053362117
+      name: hints/cygwin.pl
+    - bytesize: 80
+      file_mime_type: ~
+      line_count: ~
+      md5: 9a6457158838a01005e1e33a3f6c7848
+      mtime: 1059155614
+      name: hints/darwin.pl
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: bc35ca3154bc7db0521c6c4c0b949e37
+      mtime: 1053362117
+      name: hints/dec_osf.pl
+    - bytesize: 82
+      file_mime_type: ~
+      line_count: ~
+      md5: 094946fce58f9aa1f79ff8361c7efde2
+      mtime: 1053362117
+      name: hints/freebsd.pl
+    - bytesize: 117
+      file_mime_type: ~
+      line_count: ~
+      md5: 6743c35f338eee5d8344e32aca9b5008
+      mtime: 1097243396
+      name: hints/freebsd_5.pl
+    - bytesize: 76
+      file_mime_type: ~
+      line_count: ~
+      md5: 38e02ab1f0250a5918bebbd0dc9a666b
+      mtime: 1053362117
+      name: hints/hpux.pl
+    - bytesize: 401
+      file_mime_type: ~
+      line_count: ~
+      md5: 346cb71921949919822aed95c4538998
+      mtime: 1053362117
+      name: hints/irix.pl
+    - bytesize: 78
+      file_mime_type: ~
+      line_count: ~
+      md5: 763cb562c34ace26f491dd48a99388b0
+      mtime: 1053362117
+      name: hints/linux.pl
+    - bytesize: 80
+      file_mime_type: ~
+      line_count: ~
+      md5: 01f68c6867d4827b3f357e7b31854547
+      mtime: 1053362117
+      name: hints/netbsd.pl
+    - bytesize: 109
+      file_mime_type: ~
+      line_count: ~
+      md5: 0da4359c8dafff3df8902bab2bc37ac3
+      mtime: 1148584445
+      name: hints/openbsd.pl
+    - bytesize: 1357
+      file_mime_type: ~
+      line_count: ~
+      md5: 99af2ea6a8572595db2c1984e9cb813a
+      mtime: 1053362117
+      name: hints/solaris.pl
+    - bytesize: 103
+      file_mime_type: ~
+      line_count: ~
+      md5: e12f58d61a217e141b71958a626af611
+      mtime: 1053362117
+      name: hints/sunos.pl
+    - bytesize: 365
+      file_mime_type: ~
+      line_count: ~
+      md5: 900401cea68001eecaa607cd47b60299
+      mtime: 1053362117
+      name: hints/svr4.pl
+    - bytesize: 365
+      file_mime_type: ~
+      line_count: ~
+      md5: 64eb2f96043d43291060202d06bb1ef8
+      mtime: 1053362117
+      name: hints/svr5.pl
+    - bytesize: 4476
+      file_mime_type: ~
+      line_count: ~
+      md5: ceb625240404732e7af8112d6e2acc94
+      mtime: 1053362156
+      name: os/DecOSF.c
+    - bytesize: 1253
+      file_mime_type: ~
+      line_count: ~
+      md5: c7e0e41c71c0e1e50234adeab3d80d67
+      mtime: 1053362156
+      name: os/DecOSF.h
+    - bytesize: 3802
+      file_mime_type: ~
+      line_count: ~
+      md5: 05f09b833ba7590b047dd6e9ca531bb5
+      mtime: 1097241660
+      name: os/FreeBSD-kvm.c
+    - bytesize: 2084
+      file_mime_type: ~
+      line_count: ~
+      md5: 49af4618fd56714513fde47df7875c21
+      mtime: 1097241616
+      name: os/FreeBSD-kvm.h
+    - bytesize: 3445
+      file_mime_type: ~
+      line_count: ~
+      md5: ac74606297fdb411941bc6104f91c5a6
+      mtime: 1053362117
+      name: os/FreeBSD.c
+    - bytesize: 1448
+      file_mime_type: ~
+      line_count: ~
+      md5: a36cfeba68230b54565cb3df3a062fdc
+      mtime: 1053362117
+      name: os/FreeBSD.h
+    - bytesize: 4374
+      file_mime_type: ~
+      line_count: ~
+      md5: 466337ad3c7fb9de399e1fe1dfae834a
+      mtime: 1151635843
+      name: os/HPUX.c
+    - bytesize: 3965
+      file_mime_type: ~
+      line_count: ~
+      md5: e10c8ccc480faa2e24fc1f0870878299
+      mtime: 1053362139
+      name: os/IRIX.c
+    - bytesize: 1226
+      file_mime_type: ~
+      line_count: ~
+      md5: 960e2f9ab5323c059bd32e34a31d1b69
+      mtime: 1053362139
+      name: os/IRIX.h
+    - bytesize: 14660
+      file_mime_type: ~
+      line_count: ~
+      md5: 140d9a35c91a69c257e53e14f598fe6c
+      mtime: 1151725923
+      name: os/Linux.c
+    - bytesize: 3085
+      file_mime_type: ~
+      line_count: ~
+      md5: 7849afdfaca95cf4638d63dade34db95
+      mtime: 1101097175
+      name: os/Linux.h
+    - bytesize: 3270
+      file_mime_type: ~
+      line_count: ~
+      md5: c311a1d102a44edab3b127b93c95944e
+      mtime: 1053362117
+      name: os/NetBSD.c
+    - bytesize: 1341
+      file_mime_type: ~
+      line_count: ~
+      md5: 8f31ad7af8d057812ded40b17844714d
+      mtime: 1053362117
+      name: os/NetBSD.h
+    - bytesize: 3475
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f531efc2c506edf3e6ea76fabb0c6e0
+      mtime: 1148584445
+      name: os/OpenBSD.c
+    - bytesize: 4631
+      file_mime_type: ~
+      line_count: ~
+      md5: 5364af32e8fa8b617f1524b68d1e789d
+      mtime: 1117417201
+      name: os/Solaris.c
+    - bytesize: 1391
+      file_mime_type: ~
+      line_count: ~
+      md5: cdecec5be21bc57a93e00160dfc2846e
+      mtime: 1053362156
+      name: os/Solaris.h
+    - bytesize: 2324
+      file_mime_type: ~
+      line_count: ~
+      md5: ecaa48bd7a1f9fb512d6873918697f69
+      mtime: 1054404255
+      name: os/SunOS.c
+    - bytesize: 2609
+      file_mime_type: ~
+      line_count: ~
+      md5: bf4953d03f8ef0626db88baf68bdf47d
+      mtime: 1053362139
+      name: os/SunOS.h
+    - bytesize: 2590
+      file_mime_type: ~
+      line_count: ~
+      md5: 0116f8499872bf44ada343fecc24c460
+      mtime: 1053362139
+      name: os/UnixWare.c
+    - bytesize: 1045
+      file_mime_type: ~
+      line_count: ~
+      md5: f8f9320a75c2d2384f7eb33edc0c83d4
+      mtime: 1053362139
+      name: os/UnixWare.h
+    - bytesize: 6647
+      file_mime_type: ~
+      line_count: ~
+      md5: fba0b875490aae45b889ddb7c0120054
+      mtime: 1054008175
+      name: os/aix.c
+    - bytesize: 2951
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a8277b60198efbbc2c1caf7c5900587
+      mtime: 1054008175
+      name: os/aix.h
+    - bytesize: 7463
+      file_mime_type: ~
+      line_count: ~
+      md5: c34c8a5ee1b9d74575213f7a0ae6897c
+      mtime: 1054104075
+      name: os/aix_getprocs.c
+    - bytesize: 2933
+      file_mime_type: ~
+      line_count: ~
+      md5: 63f02f99fc62bcfaaceff70cf8752724
+      mtime: 1053362139
+      name: os/aix_getprocs.h
+    - bytesize: 5847
+      file_mime_type: ~
+      line_count: ~
+      md5: adaa434b06a7896066321fab19d1258b
+      mtime: 1054404255
+      name: os/bsdi.c
+    - bytesize: 3345
+      file_mime_type: ~
+      line_count: ~
+      md5: 83358e222981011a821c29723a433bc0
+      mtime: 1053362160
+      name: os/bsdi.h
+    - bytesize: 6669
+      file_mime_type: ~
+      line_count: ~
+      md5: 74f97c51cff969552c325cc7f16dc58c
+      mtime: 1151553954
+      name: os/cygwin.c
+    - bytesize: 115
+      file_mime_type: ~
+      line_count: ~
+      md5: 12434923718266b18087ee6e040eb96b
+      mtime: 1053362117
+      name: os/cygwin.h
+    - bytesize: 25890
+      file_mime_type: ~
+      line_count: ~
+      md5: f35785b6433009d9d50beeadf945d4ec
+      mtime: 1078978450
+      name: os/darwin.c
+    - bytesize: 6310
+      file_mime_type: ~
+      line_count: ~
+      md5: 0c4b6726edff1578ceb7119bf9dce242
+      mtime: 1060277000
+      name: os/darwin.h
+    - bytesize: 1555
+      file_mime_type: ~
+      line_count: ~
+      md5: b86070de331b9ffbd09be6341c499cb6
+      mtime: 1053362160
+      name: t/process.t
+  module_info:
+    - bytesize: 2728
+      file_mime_type: ~
+      line_count: ~
+      md5: 77c30f29e13ca4b6f35cfc115c4a63dc
+      module_name_from_file_guess: Proc::Killall
+      mtime: 1151553732
+      name: blib/lib/Proc/Killall.pm
+      packages:
+        - Proc::Killall
+      primary_package: Proc::Killall
+      uses:
+        - Exporter
+        - Carp
+        - Proc::ProcessTable
+        - Config
+        - strict
+        - vars
+      version_info:
+        filename: blib/lib/Proc/Killall.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 1.0
+    - bytesize: 1338
+      file_mime_type: ~
+      line_count: ~
+      md5: be057c6f934eaa0834ca95c01ba310a7
+      module_name_from_file_guess: Proc::Killfam
+      mtime: 1053362073
+      name: blib/lib/Proc/Killfam.pm
+      packages:
+        - Proc::Killfam
+      primary_package: Proc::Killfam
+      uses:
+        - Exporter
+        - base
+        - subs
+        - vars
+        - strict
+      version_info:
+        filename: blib/lib/Proc/Killfam.pm
+        identifier: Proc::Killfam::VERSION
+        line_number: 1
+        sigil: $
+        value: 1.0
+    - bytesize: 5006
+      file_mime_type: ~
+      line_count: ~
+      md5: 7039382bd96f4495a805e2e0b6bcd34c
+      module_name_from_file_guess: Proc::ProcessTable
+      mtime: 1151727414
+      name: blib/lib/Proc/ProcessTable.pm
+      packages:
+        - Proc::ProcessTable
+      primary_package: Proc::ProcessTable
+      uses:
+        - ''
+        - strict
+        - Carp
+        - vars
+        - Exporter
+        - DynaLoader
+        - Proc::ProcessTable::Process
+        - File::Find
+        - Storable
+      version_info:
+        filename: blib/lib/Proc/ProcessTable.pm
+        identifier: VERSION
+        line_number: 19
+        sigil: $
+        value: 0.41
+    - bytesize: 5000
+      file_mime_type: ~
+      line_count: ~
+      md5: 09ddc4b07192166d1963fc78c77f41b8
+      module_name_from_file_guess: Proc::ProcessTable::Process
+      mtime: 1065204849
+      name: blib/lib/Proc/ProcessTable/Process.pm
+      packages:
+        - Proc::ProcessTable::Process
+      primary_package: Proc::ProcessTable::Process
+      uses:
+        - strict
+        - vars
+        - Exporter
+        - AutoLoader
+        - Carp
+        - File::Basename
+      version_info:
+        filename: blib/lib/Proc/ProcessTable/Process.pm
+        identifier: VERSION
+        line_number: 16
+        sigil: $
+        value: 0.02
+  modules:
+    - blib/lib/Proc/Killall.pm
+    - blib/lib/Proc/Killfam.pm
+    - blib/lib/Proc/ProcessTable.pm
+    - blib/lib/Proc/ProcessTable/Process.pm
+  test_info:
+    - bytesize: 1555
+      file_mime_type: ~
+      line_count: ~
+      md5: b86070de331b9ffbd09be6341c499cb6
+      mtime: 1053362160
+      name: t/process.t
+      uses:
+        - strict
+        - Test
+        - Proc::ProcessTable
+  tests:
+    - t/process.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.5Sv7
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271749492
+  examine_start_time: 1271749482
+  examine_time: 10
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 49674
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 49674
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271749492
+  run_start_time: 1271749482
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker

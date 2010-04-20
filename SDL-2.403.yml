@@ -1,0 +1,5821 @@
+--- !!perl/hash:MyCPAN::Indexer
+dist_info:
+  META.yml:
+    abstract: SDL bindings to Perl
+    author:
+      - 'Kartik Thakore <KTHAKORE@cpan.org>'
+    build_requires:
+      Alien::SDL: 1.2
+      ExtUtils::CBuilder: 0
+      IO::CaptureOutput: 0
+      Test::Most: 0.21
+      Test::Simple: 0.88
+    configure_requires:
+      Alien::SDL: 1.2
+      ExtUtils::CBuilder: 0.260301
+      File::Find: 0
+      Module::Build: 0.36
+      YAML: 0.68
+    generated_by: Module::Build version 0.3603
+    license: lgpl
+    meta-spec:
+      url: http://module-build.sourceforge.net/META-spec-v1.4.html
+      version: 1.4
+    name: SDL
+    provides:
+      SDL:
+        file: lib/SDL.pm
+        version: 2.403
+      SDL::App:
+        file: lib/SDL/App.pm
+      SDL::Audio:
+        file: lib/SDL/Audio.pm
+      SDL::AudioCVT:
+        file: lib/SDL/AudioCVT.pm
+      SDL::AudioSpec:
+        file: lib/SDL/AudioSpec.pm
+      SDL::CD:
+        file: lib/SDL/CD.pm
+      SDL::CDROM:
+        file: lib/SDL/CDROM.pm
+      SDL::CDTrack:
+        file: lib/SDL/CDTrack.pm
+      SDL::Color:
+        file: lib/SDL/Color.pm
+      SDL::Config:
+        file: lib/SDL/Config.pm
+      SDL::Constants:
+        file: lib/SDL/Constants.pm
+      SDL::Cursor:
+        file: lib/SDL/Cursor.pm
+      SDL::Event:
+        file: lib/SDL/Event.pm
+      SDL::Events:
+        file: lib/SDL/Events.pm
+      SDL::GFX:
+        file: lib/SDL/GFX.pm
+      SDL::GFX::BlitFunc:
+        file: lib/SDL/GFX/BlitFunc.pm
+      SDL::GFX::FPSManager:
+        file: lib/SDL/GFX/FPSManager.pm
+      SDL::GFX::Framerate:
+        file: lib/SDL/GFX/Framerate.pm
+      SDL::GFX::ImageFilter:
+        file: lib/SDL/GFX/ImageFilter.pm
+      SDL::GFX::Primitives:
+        file: lib/SDL/GFX/Primitives.pm
+      SDL::GFX::Rotozoom:
+        file: lib/SDL/GFX/Rotozoom.pm
+      SDL::Game::Event:
+        file: lib/SDL/Game/Event.pm
+      SDL::Game::Rect:
+        file: lib/SDL/Game/Rect.pm
+        version: 0.01
+      SDL::Image:
+        file: lib/SDL/Image.pm
+      SDL::Internal::Loader:
+        file: lib/SDL/Internal/Loader.pm
+      SDL::Joystick:
+        file: lib/SDL/Joystick.pm
+      SDL::MPEG:
+        file: lib/SDL/MPEG.pm
+      SDL::Mixer:
+        file: lib/SDL/Mixer.pm
+      SDL::Mixer::Channels:
+        file: lib/SDL/Mixer/Channels.pm
+      SDL::Mixer::Effects:
+        file: lib/SDL/Mixer/Effects.pm
+      SDL::Mixer::Groups:
+        file: lib/SDL/Mixer/Groups.pm
+      SDL::Mixer::MixChunk:
+        file: lib/SDL/Mixer/MixChunk.pm
+      SDL::Mixer::MixMusic:
+        file: lib/SDL/Mixer/MixMusic.pm
+      SDL::Mixer::Music:
+        file: lib/SDL/Mixer/Music.pm
+      SDL::Mixer::Samples:
+        file: lib/SDL/Mixer/Samples.pm
+      SDL::Mouse:
+        file: lib/SDL/Mouse.pm
+      SDL::MultiThread:
+        file: lib/SDL/MultiThread.pm
+      SDL::Music:
+        file: lib/SDL/Music.pm
+      SDL::Net:
+        file: lib/SDL/Net.pm
+      SDL::Net::IPaddress:
+        file: lib/SDL/Net/IPaddress.pm
+      SDL::Net::TCP:
+        file: lib/SDL/Net/TCP.pm
+      SDL::Net::UDP:
+        file: lib/SDL/Net/UDP.pm
+      SDL::OpenGL:
+        file: lib/SDL/OpenGL.pm
+      SDL::OpenGL::Constants:
+        file: lib/SDL/OpenGL/Constants.pm
+      SDL::Overlay:
+        file: lib/SDL/Overlay.pm
+      SDL::Palette:
+        file: lib/SDL/Palette.pm
+      SDL::Pango:
+        file: lib/SDL/Pango.pm
+      SDL::Pango::Context:
+        file: lib/SDL/Pango/Context.pm
+      SDL::PixelFormat:
+        file: lib/SDL/PixelFormat.pm
+      SDL::RWOps:
+        file: lib/SDL/RWOps.pm
+      SDL::Rect:
+        file: lib/SDL/Rect.pm
+      SDL::SMPEG:
+        file: lib/SDL/SMPEG.pm
+      SDL::Sound:
+        file: lib/SDL/Sound.pm
+      SDL::Surface:
+        file: lib/SDL/Surface.pm
+      SDL::TTF:
+        file: lib/SDL/TTF.pm
+      SDL::TTF::Font:
+        file: lib/SDL/TTF/Font.pm
+      SDL::TTFont:
+        file: lib/SDL/TTFont.pm
+      SDL::Time:
+        file: lib/SDL/Time.pm
+      SDL::Timer:
+        file: lib/SDL/Timer.pm
+      SDL::Tool::Font:
+        file: lib/SDL/Tool/Font.pm
+      SDL::Tool::Graphic:
+        file: lib/SDL/Tool/Graphic.pm
+      SDL::Tutorial:
+        file: lib/SDL/Tutorial.pm
+      SDL::Tutorial::Animation:
+        file: lib/SDL/Tutorial/Animation.pm
+      SDL::Tutorial::LunarLander:
+        file: lib/SDL/Tutorial/LunarLander.pm
+      SDL::Version:
+        file: lib/SDL/Version.pm
+      SDL::Video:
+        file: lib/SDL/Video.pm
+      SDL::VideoInfo:
+        file: lib/SDL/VideoInfo.pm
+      SDL_perl:
+        file: lib/SDL_perl.pm
+    resources:
+      bugtracker: http://sdlperl.ath.cx/projects/SDLPerl
+      license: http://opensource.org/licenses/lgpl-license.php
+      repository: http://github.com/kthakore/SDL_perl
+    version: 2.403
+  blib: []
+  build_file: Build.PL
+  build_file_output: |
+    Can't locate Alien/SDL.pm in @INC (@INC contains: inc /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/5.10.1 /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1 .) at Build.PL line 12.
+    BEGIN failed--compilation aborted at Build.PL line 12.
+  build_output: "Can't open perl script \"./Build\": No such file or directory\n"
+  build_system_guess:
+    build_commands:
+      /home/brian/bin/perl5.10.1 Build.PL: 1
+    build_file_paths:
+      Build.PL: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x/SDL-2.403/Build.PL
+    build_files:
+      Build.PL: Build.PL
+    build_pl_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x/SDL-2.403/Build.PL
+    build_pl_wraps_makefile_pl: ~
+    dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x/SDL-2.403
+    has_build_and_makefile: ~
+    has_build_pl: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x/SDL-2.403/Build.PL
+    has_makefile_pl: ~
+    make_command: ~
+    makefile_pl_path: ~
+    makemaker_version: ~
+    module_build_version: ~
+    module_install_version: ~
+    perl_command: /home/brian/bin/perl5.10.1
+    uses_auto_install: ~
+    uses_makemaker: ~
+    uses_module_build: 0
+    uses_module_build_compat: ~
+    uses_module_install: ~
+  dist_archive_type: tgz
+  dist_author: FROGGS
+  dist_basename: SDL-2.403.tar.gz
+  dist_date: 1271157347
+  dist_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x/SDL-2.403
+  dist_extract_path: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x/SDL-2.403
+  dist_file: /home/brian/CPAN/authors/id/F/FR/FROGGS/SDL-2.403.tar.gz
+  dist_md5: 3ad3b504cf16f58b51e1a2e9f91e6189
+  dist_size: 1422779
+  manifest:
+    - Build.PL
+    - CHANGELOG
+    - CONTRIBUTORS
+    - INSTALL
+    - MANIFEST
+    - META.yml
+    - MacOSX/Info.plist
+    - MacOSX/SDLPerl.icns
+    - MacOSX/launcher.h
+    - MacOSX/launcher.m
+    - README
+    - TODO
+    - examples/adventure/README
+    - examples/adventure/adventure.pl
+    - examples/adventure/data/hero.png
+    - examples/adventure/walker.pm
+    - examples/cookbook/1.pl
+    - examples/openglapp.pl
+    - examples/sols/ch02.pl
+    - inc/My/Builder.pm
+    - inc/My/Builder/Darwin.pm
+    - inc/My/Builder/Unix.pm
+    - inc/My/Builder/Windows.pm
+    - lib/SDL.pm
+    - lib/SDL/App.pm
+    - lib/SDL/Audio.pm
+    - lib/SDL/AudioCVT.pm
+    - lib/SDL/AudioSpec.pm
+    - lib/SDL/CD.pm
+    - lib/SDL/CDROM.pm
+    - lib/SDL/CDTrack.pm
+    - lib/SDL/Color.pm
+    - lib/SDL/Config.pm
+    - lib/SDL/Constants.pm
+    - lib/SDL/Cursor.pm
+    - lib/SDL/Event.pm
+    - lib/SDL/Events.pm
+    - lib/SDL/GFX.pm
+    - lib/SDL/GFX/BlitFunc.pm
+    - lib/SDL/GFX/FPSManager.pm
+    - lib/SDL/GFX/Framerate.pm
+    - lib/SDL/GFX/ImageFilter.pm
+    - lib/SDL/GFX/Primitives.pm
+    - lib/SDL/GFX/Rotozoom.pm
+    - lib/SDL/Game/Event.pm
+    - lib/SDL/Game/Rect.pm
+    - lib/SDL/Image.pm
+    - lib/SDL/Internal/Loader.pm
+    - lib/SDL/Joystick.pm
+    - lib/SDL/MPEG.pm
+    - lib/SDL/Mixer.pm
+    - lib/SDL/Mixer/Channels.pm
+    - lib/SDL/Mixer/Effects.pm
+    - lib/SDL/Mixer/Groups.pm
+    - lib/SDL/Mixer/MixChunk.pm
+    - lib/SDL/Mixer/MixMusic.pm
+    - lib/SDL/Mixer/Music.pm
+    - lib/SDL/Mixer/Samples.pm
+    - lib/SDL/Mouse.pm
+    - lib/SDL/MultiThread.pm
+    - lib/SDL/Music.pm
+    - lib/SDL/Net.pm
+    - lib/SDL/Net/IPaddress.pm
+    - lib/SDL/Net/TCP.pm
+    - lib/SDL/Net/UDP.pm
+    - lib/SDL/OpenGL.pm
+    - lib/SDL/OpenGL/Constants.pm
+    - lib/SDL/Overlay.pm
+    - lib/SDL/Palette.pm
+    - lib/SDL/Pango.pm
+    - lib/SDL/Pango/Context.pm
+    - lib/SDL/PixelFormat.pm
+    - lib/SDL/RWOps.pm
+    - lib/SDL/Rect.pm
+    - lib/SDL/SMPEG.pm
+    - lib/SDL/Sound.pm
+    - lib/SDL/Surface.pm
+    - lib/SDL/TTF.pm
+    - lib/SDL/TTF.pod
+    - lib/SDL/TTF/Font.pm
+    - lib/SDL/TTFont.pm
+    - lib/SDL/Time.pm
+    - lib/SDL/Timer.pm
+    - lib/SDL/Tool/Font.pm
+    - lib/SDL/Tool/Graphic.pm
+    - lib/SDL/Tutorial.pm
+    - lib/SDL/Tutorial/Animation.pm
+    - lib/SDL/Tutorial/LunarLander.pm
+    - lib/SDL/Version.pm
+    - lib/SDL/Video.pm
+    - lib/SDL/VideoInfo.pm
+    - lib/SDL_perl.pm
+    - lib/pods/SDL.pod
+    - lib/pods/SDL/App.pod
+    - lib/pods/SDL/Audio.pod
+    - lib/pods/SDL/AudioCVT.pod
+    - lib/pods/SDL/AudioSpec.pod
+    - lib/pods/SDL/CD.pod
+    - lib/pods/SDL/CDROM.pod
+    - lib/pods/SDL/CDTrack.pod
+    - lib/pods/SDL/Color.pod
+    - lib/pods/SDL/Cookbook.pod
+    - lib/pods/SDL/Cookbook/PDL.pod
+    - lib/pods/SDL/Credits.pod
+    - lib/pods/SDL/Cursor.pod
+    - lib/pods/SDL/Event.pod
+    - lib/pods/SDL/Events.pod
+    - lib/pods/SDL/GFX/BlitFunc.pod
+    - lib/pods/SDL/GFX/FPSManager.pod
+    - lib/pods/SDL/GFX/Framerate.pod
+    - lib/pods/SDL/GFX/ImageFilter.pod
+    - lib/pods/SDL/GFX/Primitives.pod
+    - lib/pods/SDL/GFX/Rotozoom.pod
+    - lib/pods/SDL/Game/Palette.pod
+    - lib/pods/SDL/Image.pod
+    - lib/pods/SDL/Joystick.pod
+    - lib/pods/SDL/MPEG.pod
+    - lib/pods/SDL/Mixer.pod
+    - lib/pods/SDL/Mixer/Channels.pod
+    - lib/pods/SDL/Mixer/Effects.pod
+    - lib/pods/SDL/Mixer/Groups.pod
+    - lib/pods/SDL/Mixer/MixChunk.pod
+    - lib/pods/SDL/Mixer/MixMusic.pod
+    - lib/pods/SDL/Mixer/Music.pod
+    - lib/pods/SDL/Mixer/Samples.pod
+    - lib/pods/SDL/Mouse.pod
+    - lib/pods/SDL/MultiThread.pod
+    - lib/pods/SDL/Music.pod
+    - lib/pods/SDL/OpenGL.pod
+    - lib/pods/SDL/Overlay.pod
+    - lib/pods/SDL/Palette.pod
+    - lib/pods/SDL/Pango.pod
+    - lib/pods/SDL/Pango/Context.pod
+    - lib/pods/SDL/PixelFormat.pod
+    - lib/pods/SDL/RWOps.pod
+    - lib/pods/SDL/Rect.pod
+    - lib/pods/SDL/SMPEG.pod
+    - lib/pods/SDL/Sound.pod
+    - lib/pods/SDL/Surface.pod
+    - lib/pods/SDL/TTF.pod
+    - lib/pods/SDL/TTF/Font.pod
+    - lib/pods/SDL/Time.pod
+    - lib/pods/SDL/Tool/Font.pod
+    - lib/pods/SDL/Tool/Graphic.pod
+    - lib/pods/SDL/Tutorial.pod
+    - lib/pods/SDL/Tutorial/Animation.pod
+    - lib/pods/SDL/Tutorial/LunarLander.pod
+    - lib/pods/SDL/Version.pod
+    - lib/pods/SDL/Video.pod
+    - lib/pods/SDL/VideoInfo.pod
+    - src/Core/Audio.xs
+    - src/Core/CDROM.xs
+    - src/Core/Events.xs
+    - src/Core/Joystick.xs
+    - src/Core/Mouse.xs
+    - src/Core/MultiThread.xs
+    - src/Core/SDL.xs
+    - src/Core/Time.xs
+    - src/Core/Video.xs
+    - src/Core/objects/AudioCVT.xs
+    - src/Core/objects/AudioSpec.xs
+    - src/Core/objects/CD.xs
+    - src/Core/objects/CDTrack.xs
+    - src/Core/objects/Color.xs
+    - src/Core/objects/Cursor.xs
+    - src/Core/objects/Event.xs
+    - src/Core/objects/Overlay.xs
+    - src/Core/objects/Palette.xs
+    - src/Core/objects/PixelFormat.xs
+    - src/Core/objects/RWOps.xs
+    - src/Core/objects/Rect.xs
+    - src/Core/objects/Surface.xs
+    - src/Core/objects/Version.xs
+    - src/Core/objects/VideoInfo.xs
+    - src/Core/objects/keysym.xs
+    - src/Core/objects/typemap
+    - src/GFX/BlitFunc.xs
+    - src/GFX/CHANGELOG
+    - src/GFX/FPSManager.xs
+    - src/GFX/Framerate.xs
+    - src/GFX/GFX.xs
+    - src/GFX/ImageFilter.xs
+    - src/GFX/Primitives.xs
+    - src/GFX/README
+    - src/GFX/Rotozoom.xs
+    - src/Image.xs
+    - src/Mixer/Channels.xs
+    - src/Mixer/Effects.xs
+    - src/Mixer/Groups.xs
+    - src/Mixer/Mixer.xs
+    - src/Mixer/Music.xs
+    - src/Mixer/README
+    - src/Mixer/Samples.xs
+    - src/Mixer/objects/MixChunk.xs
+    - src/Mixer/objects/MixMusic.xs
+    - src/Net/Net.xs
+    - src/Net/TCP.xs
+    - src/Net/UDP.xs
+    - src/Net/objects/GenericSocket.xs
+    - src/Net/objects/IPaddress.xs
+    - src/Net/objects/SocketSet.xs
+    - src/Net/objects/TCPsocket.xs
+    - src/Net/objects/UDPpacket.xs
+    - src/Net/objects/UDPsocket.xs
+    - src/OpenGL.xs
+    - src/Pango/Pango.xs
+    - src/Pango/objects/Context.xs
+    - src/SDL.xs
+    - src/SMPEG.xs
+    - src/TTF/README
+    - src/TTF/TTF.xs
+    - src/TTF/objects/Font.xs
+    - src/defines.h
+    - src/support/darwin_support.h
+    - src/support/darwin_support.m
+    - src/support/win32.c
+    - t/00-load.t
+    - t/apppm.t
+    - t/colorpm.t
+    - t/config.t
+    - t/core.t
+    - t/core_audio.t
+    - t/core_audiospec.t
+    - t/core_cd.t
+    - t/core_error.t
+    - t/core_events.t
+    - t/core_joystick.t
+    - t/core_mouse.t
+    - t/core_multi.t
+    - t/core_overlay.t
+    - t/core_palette.t
+    - t/core_rect.t
+    - t/core_rwops.t
+    - t/core_surface.t
+    - t/core_timer.t
+    - t/core_version.t
+    - t/core_video.t
+    - t/core_video_convert_surface.t
+    - t/eventpm.t
+    - t/extendingrect.t
+    - t/gfx.t
+    - t/gfx_fpsmanager.t
+    - t/gfx_framerate.t
+    - t/gfx_imagefilter.t
+    - t/gfx_primitives.t
+    - t/gfx_primitives2.t
+    - t/gfx_rotozoom.t
+    - t/image.t
+    - t/image_xpm_array.t
+    - t/intergation1.t
+    - t/lib/SDL/TestTool.pm
+    - t/mixer.t
+    - t/mixer_channels.t
+    - t/mixer_effects.t
+    - t/mixer_groups.t
+    - t/mixer_mixchunk.t
+    - t/mixer_mixmusic.t
+    - t/mixer_music.t
+    - t/mixer_samples.t
+    - t/mpegpm.t
+    - t/opengl.t
+    - t/pango.t
+    - t/sdlgamerect.t
+    - t/smpeg.t
+    - t/soundpm.t
+    - t/ttf.t
+    - t/ttf_font.t
+    - test/data/24P_Arial_NeonYellow.png
+    - test/data/24P_Copperplate_Blue.png
+    - test/data/5x7.fnt
+    - test/data/LargeFont.bmp
+    - test/data/README
+    - test/data/aircut3.ttf
+    - test/data/electrohar.ttf
+    - test/data/highlight.png
+    - test/data/icon.bmp
+    - test/data/logo.png
+    - test/data/menu.png
+    - test/data/pattern_red_white_2x2.bmp
+    - test/data/picture.bmp
+    - test/data/sample.wav
+    - test/data/silence.wav
+    - test/data/tribe_i.wav
+    - typemap
+  manifest_file_info:
+    - bytesize: 13519
+      file_mime_type: ~
+      line_count: ~
+      md5: 07acf2723d76bb34afc399ca65b12f32
+      mtime: 1271155778
+      name: Build.PL
+    - bytesize: 22874
+      file_mime_type: ~
+      line_count: ~
+      md5: d3bb3391c79904494c60ee2ac2f33070
+      mtime: 1270839178
+      name: CHANGELOG
+    - bytesize: 970
+      file_mime_type: ~
+      line_count: ~
+      md5: 98f07bc20cb66328be238119df96c490
+      mtime: 1270839178
+      name: CONTRIBUTORS
+    - bytesize: 7365
+      file_mime_type: ~
+      line_count: ~
+      md5: 6a755e7d228a2b491321dbae0a7a248b
+      mtime: 1268088621
+      name: INSTALL
+    - bytesize: 6310
+      file_mime_type: ~
+      line_count: ~
+      md5: 0bf22fc49ca50df354c7619caaaa96d2
+      mtime: 1271155973
+      name: MANIFEST
+    - bytesize: 4148
+      file_mime_type: ~
+      line_count: ~
+      md5: 38952f3ca8e128f6e52564ccc11228c7
+      mtime: 1271156694
+      name: META.yml
+    - bytesize: 1418
+      file_mime_type: ~
+      line_count: ~
+      md5: 365cb7a661244807535f339d9b665918
+      mtime: 1259509087
+      name: MacOSX/Info.plist
+    - bytesize: 34717
+      file_mime_type: ~
+      line_count: ~
+      md5: 24977ead1f63398f0aa2aac10c89c3e1
+      mtime: 1259509087
+      name: MacOSX/SDLPerl.icns
+    - bytesize: 357
+      file_mime_type: ~
+      line_count: ~
+      md5: f64828390c957531cc722fb385174587
+      mtime: 1259509087
+      name: MacOSX/launcher.h
+    - bytesize: 5344
+      file_mime_type: ~
+      line_count: ~
+      md5: 03e2555a0468709835de6df3df83a7af
+      mtime: 1270839178
+      name: MacOSX/launcher.m
+    - bytesize: 1447
+      file_mime_type: ~
+      line_count: ~
+      md5: c47c7c7383225ab55ff591cb59c41e6b
+      mtime: 1270839178
+      name: README
+    - bytesize: 234
+      file_mime_type: ~
+      line_count: ~
+      md5: b7b1e314614cf326c6e2b6eba1540682
+      mtime: 1270839178
+      name: TODO
+    - bytesize: 324
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e8e5637e05c40c0812943adf2a03a56
+      mtime: 1268088621
+      name: examples/adventure/README
+    - bytesize: 6683
+      file_mime_type: ~
+      line_count: ~
+      md5: 93988bab552b174e911e88de7c0572c1
+      mtime: 1270839178
+      name: examples/adventure/adventure.pl
+    - bytesize: 57630
+      file_mime_type: ~
+      line_count: ~
+      md5: bc0f96612fbf5277d936b931ab07eed8
+      mtime: 1268088621
+      name: examples/adventure/data/hero.png
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: b425e78defc2047447194241c28acd81
+      mtime: 1268088621
+      name: examples/adventure/walker.pm
+    - bytesize: 418
+      file_mime_type: ~
+      line_count: ~
+      md5: bbb56855d256614785c7ab642b1a0841
+      mtime: 1270839178
+      name: examples/cookbook/1.pl
+    - bytesize: 2167
+      file_mime_type: ~
+      line_count: ~
+      md5: c79c693daf790dbefeb3c0d2cb65bd7e
+      mtime: 1270839178
+      name: examples/openglapp.pl
+    - bytesize: 1456
+      file_mime_type: ~
+      line_count: ~
+      md5: 934a2186e6375c0075ee795934290729
+      mtime: 1268088621
+      name: examples/sols/ch02.pl
+    - bytesize: 4928
+      file_mime_type: ~
+      line_count: ~
+      md5: c87cdfba557eefeec05fd772d34226df
+      mtime: 1270839178
+      name: inc/My/Builder.pm
+    - bytesize: 3368
+      file_mime_type: ~
+      line_count: ~
+      md5: cdcc84a2f432f88123af7f5889447d73
+      mtime: 1270839179
+      name: inc/My/Builder/Darwin.pm
+    - bytesize: 55
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f878a8d78031bf1abf914bc4500d897
+      mtime: 1270839179
+      name: inc/My/Builder/Unix.pm
+    - bytesize: 58
+      file_mime_type: ~
+      line_count: ~
+      md5: 3079840fc1f3de9caffa521dbd9e1eb8
+      mtime: 1270839179
+      name: inc/My/Builder/Windows.pm
+    - bytesize: 2260
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dcb54ce5e84cfe9fd80eba6f84554bd
+      mtime: 1271155941
+      name: lib/SDL.pm
+    - bytesize: 5089
+      file_mime_type: ~
+      line_count: ~
+      md5: 5afdf3764d6377944fe945a85e2be5ff
+      mtime: 1270839179
+      name: lib/SDL/App.pm
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aee24ad826e98183496ff38ff0e36af
+      mtime: 1270839179
+      name: lib/SDL/Audio.pm
+    - bytesize: 544
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bb54155606994ef29208131ad96ab64
+      mtime: 1270839179
+      name: lib/SDL/AudioCVT.pm
+    - bytesize: 546
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b65dc9450a831c0292ce79c12ac8a0c
+      mtime: 1270839179
+      name: lib/SDL/AudioSpec.pm
+    - bytesize: 977
+      file_mime_type: ~
+      line_count: ~
+      md5: ce31b4688298d1d1f94c86e63f68e972
+      mtime: 1270839179
+      name: lib/SDL/CD.pm
+    - bytesize: 621
+      file_mime_type: ~
+      line_count: ~
+      md5: 37ae1c641dde5b1c7ea551bb516449cc
+      mtime: 1270839179
+      name: lib/SDL/CDROM.pm
+    - bytesize: 625
+      file_mime_type: ~
+      line_count: ~
+      md5: dc658a4039a466eeadbbb12c41aeef8a
+      mtime: 1270839179
+      name: lib/SDL/CDTrack.pm
+    - bytesize: 852
+      file_mime_type: ~
+      line_count: ~
+      md5: 02ab54653d9070e15b9bc1b8bfba1408
+      mtime: 1270839179
+      name: lib/SDL/Color.pm
+    - bytesize: 273
+      file_mime_type: ~
+      line_count: ~
+      md5: 560bf82f5999adb1e5208eaf0fcfc077
+      mtime: 1270839179
+      name: lib/SDL/Config.pm
+    - bytesize: 183474
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f908557b391fc3e65de02cf766194ee
+      mtime: 1270839179
+      name: lib/SDL/Constants.pm
+    - bytesize: 210
+      file_mime_type: ~
+      line_count: ~
+      md5: 0be49271f9fcba94bb4ed9474f892b8e
+      mtime: 1270839179
+      name: lib/SDL/Cursor.pm
+    - bytesize: 972
+      file_mime_type: ~
+      line_count: ~
+      md5: f347bc0cb8b7666fd1ac06bd98281d80
+      mtime: 1270839179
+      name: lib/SDL/Event.pm
+    - bytesize: 974
+      file_mime_type: ~
+      line_count: ~
+      md5: d00449345e33d3d668ccd3ef7cb3daee
+      mtime: 1270839179
+      name: lib/SDL/Events.pm
+    - bytesize: 460
+      file_mime_type: ~
+      line_count: ~
+      md5: 95e7089f1c4bbd6583e1ed4ddfe9cb32
+      mtime: 1270839179
+      name: lib/SDL/GFX.pm
+    - bytesize: 480
+      file_mime_type: ~
+      line_count: ~
+      md5: 7878eace6cafe2039511762d91dbbebe
+      mtime: 1270839179
+      name: lib/SDL/GFX/BlitFunc.pm
+    - bytesize: 484
+      file_mime_type: ~
+      line_count: ~
+      md5: d7879fc48363d32b47b316cbf0eb3877
+      mtime: 1270839179
+      name: lib/SDL/GFX/FPSManager.pm
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: bbce9179ad3db6a2146af1ef1fe52dac
+      mtime: 1270839179
+      name: lib/SDL/GFX/Framerate.pm
+    - bytesize: 486
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d2afe2348747612627c03269b53d540
+      mtime: 1270839179
+      name: lib/SDL/GFX/ImageFilter.pm
+    - bytesize: 484
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d1fec46617435dab78af96190f6b49f
+      mtime: 1270839179
+      name: lib/SDL/GFX/Primitives.pm
+    - bytesize: 480
+      file_mime_type: ~
+      line_count: ~
+      md5: 381bba881a64a5c114e13bf07612b6b3
+      mtime: 1270839179
+      name: lib/SDL/GFX/Rotozoom.pm
+    - bytesize: 3485
+      file_mime_type: ~
+      line_count: ~
+      md5: b09440cc04561db5ad6abb5f9a0aaf41
+      mtime: 1268088621
+      name: lib/SDL/Game/Event.pm
+    - bytesize: 25306
+      file_mime_type: ~
+      line_count: ~
+      md5: e6078743bb2227e735f639db0cd24a59
+      mtime: 1268088621
+      name: lib/SDL/Game/Rect.pm
+    - bytesize: 470
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e0f74298cea6dd43d6c10c578b94669
+      mtime: 1270839179
+      name: lib/SDL/Image.pm
+    - bytesize: 1724
+      file_mime_type: ~
+      line_count: ~
+      md5: da59456de80e1816876ae868cc1adc0c
+      mtime: 1270839179
+      name: lib/SDL/Internal/Loader.pm
+    - bytesize: 214
+      file_mime_type: ~
+      line_count: ~
+      md5: 5281922813e1f3a2b2afef7fc2f0aa1b
+      mtime: 1270839179
+      name: lib/SDL/Joystick.pm
+    - bytesize: 2108
+      file_mime_type: ~
+      line_count: ~
+      md5: aed232ba503b6b25c9bca96ee3f0d087
+      mtime: 1270839179
+      name: lib/SDL/MPEG.pm
+    - bytesize: 863
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ad6b4255934f5c94549dbffb8dc6381
+      mtime: 1270839179
+      name: lib/SDL/Mixer.pm
+    - bytesize: 882
+      file_mime_type: ~
+      line_count: ~
+      md5: 13cbe0050c92b37349f988f99f582d9a
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Channels.pm
+    - bytesize: 880
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ccf9bb8f0b429c61421ede0c5184c48
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Effects.pm
+    - bytesize: 878
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a53d791c74f2cc78c43dbbfbfe2667
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Groups.pm
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 87e82a80b1df6efe53fcfe3438167203
+      mtime: 1270839179
+      name: lib/SDL/Mixer/MixChunk.pm
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 44d054bc3e91d7053da95455279c9dc7
+      mtime: 1270839179
+      name: lib/SDL/Mixer/MixMusic.pm
+    - bytesize: 876
+      file_mime_type: ~
+      line_count: ~
+      md5: 5365fb56ac3d83ee07f20b7b561c6e77
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Music.pm
+    - bytesize: 881
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e281da7c7715347e2bd0805711413d7
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Samples.pm
+    - bytesize: 146
+      file_mime_type: ~
+      line_count: ~
+      md5: bc430852bb1c298cbbd94a4d8e358f28
+      mtime: 1268088621
+      name: lib/SDL/Mouse.pm
+    - bytesize: 220
+      file_mime_type: ~
+      line_count: ~
+      md5: 856168796a7ed3bbdd9ece86c2704403
+      mtime: 1270839179
+      name: lib/SDL/MultiThread.pm
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ecca63913fb71b46930ab9eb1269d82
+      mtime: 1268088621
+      name: lib/SDL/Music.pm
+    - bytesize: 472
+      file_mime_type: ~
+      line_count: ~
+      md5: 035d21c95e14423e3e32450bb7da2a54
+      mtime: 1270839179
+      name: lib/SDL/Net.pm
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 76a304a4ac6b9d6eaaa1370e70011491
+      mtime: 1270839179
+      name: lib/SDL/Net/IPaddress.pm
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: d939a73dc4dc81eefc65d5eb7658d60d
+      mtime: 1270839179
+      name: lib/SDL/Net/TCP.pm
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: 366db4d85096c373ec27d68b1d39d5ac
+      mtime: 1270839179
+      name: lib/SDL/Net/UDP.pm
+    - bytesize: 1032
+      file_mime_type: ~
+      line_count: ~
+      md5: 070de8d3c5701f8e19643405ee7901e4
+      mtime: 1270839179
+      name: lib/SDL/OpenGL.pm
+    - bytesize: 89640
+      file_mime_type: ~
+      line_count: ~
+      md5: b1adf6de143146a96cd199c2b579f56c
+      mtime: 1259509087
+      name: lib/SDL/OpenGL/Constants.pm
+    - bytesize: 856
+      file_mime_type: ~
+      line_count: ~
+      md5: 95e3f6a9c369363ff3e34f05a7391961
+      mtime: 1270839179
+      name: lib/SDL/Overlay.pm
+    - bytesize: 856
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c896ec9ae495a31b9920868704aae67
+      mtime: 1270839179
+      name: lib/SDL/Palette.pm
+    - bytesize: 549
+      file_mime_type: ~
+      line_count: ~
+      md5: eb8d55071359252d8182ce818e8585c4
+      mtime: 1270839179
+      name: lib/SDL/Pango.pm
+    - bytesize: 567
+      file_mime_type: ~
+      line_count: ~
+      md5: 69faf9cd0aeb47419b05c2171d50837e
+      mtime: 1270839179
+      name: lib/SDL/Pango/Context.pm
+    - bytesize: 863
+      file_mime_type: ~
+      line_count: ~
+      md5: bb7d5fd29d20432929684aa8e49c2d57
+      mtime: 1270839179
+      name: lib/SDL/PixelFormat.pm
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: 08b6c24fd4549a57f7bf62cddbcc9385
+      mtime: 1270839179
+      name: lib/SDL/RWOps.pm
+    - bytesize: 849
+      file_mime_type: ~
+      line_count: ~
+      md5: 65c8a8e7991dfc3425974c06540edc72
+      mtime: 1270839179
+      name: lib/SDL/Rect.pm
+    - bytesize: 1738
+      file_mime_type: ~
+      line_count: ~
+      md5: 870bc349037007733ee76ac3d3e210f2
+      mtime: 1270839179
+      name: lib/SDL/SMPEG.pm
+    - bytesize: 1539
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c6998c21be88c551b22ccc7efcfc9b3
+      mtime: 1268088621
+      name: lib/SDL/Sound.pm
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fbf6e3057fa5b220f2885b4cf749077
+      mtime: 1270839179
+      name: lib/SDL/Surface.pm
+    - bytesize: 529
+      file_mime_type: ~
+      line_count: ~
+      md5: c89c54bbd9a593216b3433b49cd2b781
+      mtime: 1270839179
+      name: lib/SDL/TTF.pm
+    - bytesize: 107
+      file_mime_type: ~
+      line_count: ~
+      md5: 184fd1b6ef4717451c411248450ecf89
+      mtime: 1270839179
+      name: lib/SDL/TTF.pod
+    - bytesize: 541
+      file_mime_type: ~
+      line_count: ~
+      md5: b7ff2752c4743fa8ac6a2e27c5b12b3f
+      mtime: 1270839179
+      name: lib/SDL/TTF/Font.pm
+    - bytesize: 4221
+      file_mime_type: ~
+      line_count: ~
+      md5: 59d0f67153608e9763ef9ad1be02938a
+      mtime: 1268088621
+      name: lib/SDL/TTFont.pm
+    - bytesize: 206
+      file_mime_type: ~
+      line_count: ~
+      md5: 70720965ae2a25d9ef4811df3c2d1365
+      mtime: 1270839179
+      name: lib/SDL/Time.pm
+    - bytesize: 2310
+      file_mime_type: ~
+      line_count: ~
+      md5: 4abb0ac78ecbd6c27318bfe289a62821
+      mtime: 1270839179
+      name: lib/SDL/Timer.pm
+    - bytesize: 2303
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c9e885543b44acca97b6cf4bd4714de
+      mtime: 1270839179
+      name: lib/SDL/Tool/Font.pm
+    - bytesize: 3750
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e8aeedef7738ee3c7588dd081c647ee
+      mtime: 1268088621
+      name: lib/SDL/Tool/Graphic.pm
+    - bytesize: 1478
+      file_mime_type: ~
+      line_count: ~
+      md5: 0381dddc57975dc359d145853c4c5f0e
+      mtime: 1268088621
+      name: lib/SDL/Tutorial.pm
+    - bytesize: 8129
+      file_mime_type: ~
+      line_count: ~
+      md5: 0710754e02ed719ae1deda893becf277
+      mtime: 1270839179
+      name: lib/SDL/Tutorial/Animation.pm
+    - bytesize: 67948
+      file_mime_type: ~
+      line_count: ~
+      md5: 437079e1248454340d08ff61662edcfa
+      mtime: 1270839179
+      name: lib/SDL/Tutorial/LunarLander.pm
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fe4c4963eade3438e899ab0348c65dd
+      mtime: 1270839179
+      name: lib/SDL/Version.pm
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 6de5e8fb2d68aee178c50018e4d9825f
+      mtime: 1270839179
+      name: lib/SDL/Video.pm
+    - bytesize: 859
+      file_mime_type: ~
+      line_count: ~
+      md5: e8febd120202738f3fbb5db747f0fede
+      mtime: 1270839179
+      name: lib/SDL/VideoInfo.pm
+    - bytesize: 1260
+      file_mime_type: ~
+      line_count: ~
+      md5: 60b2dd57d2c24ad114331eb6704b8f7f
+      mtime: 1270839179
+      name: lib/SDL_perl.pm
+    - bytesize: 4112
+      file_mime_type: ~
+      line_count: ~
+      md5: c711a2e318903389757e92c144133875
+      mtime: 1270839179
+      name: lib/pods/SDL.pod
+    - bytesize: 3584
+      file_mime_type: ~
+      line_count: ~
+      md5: 35874d40a858240a94f4e91afb03651c
+      mtime: 1268088622
+      name: lib/pods/SDL/App.pod
+    - bytesize: 9770
+      file_mime_type: ~
+      line_count: ~
+      md5: 9f8a67f427af1fcf4cae821a6887623c
+      mtime: 1270839179
+      name: lib/pods/SDL/Audio.pod
+    - bytesize: 1830
+      file_mime_type: ~
+      line_count: ~
+      md5: 74e53b749be83798e31440ab3f3f60c4
+      mtime: 1268088622
+      name: lib/pods/SDL/AudioCVT.pod
+    - bytesize: 2346
+      file_mime_type: ~
+      line_count: ~
+      md5: a4a3e4e1f75a0177c4a54eb2c904faa8
+      mtime: 1270839179
+      name: lib/pods/SDL/AudioSpec.pod
+    - bytesize: 2704
+      file_mime_type: ~
+      line_count: ~
+      md5: fa8aa829c2b0a46c4f09b660adea95c8
+      mtime: 1270839179
+      name: lib/pods/SDL/CD.pod
+    - bytesize: 648
+      file_mime_type: ~
+      line_count: ~
+      md5: 53189b0ef541949d3c7878c7bcac66f2
+      mtime: 1270839179
+      name: lib/pods/SDL/CDROM.pod
+    - bytesize: 1100
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ddfbc9f751f8c7bf0f44abd2c5c2eb6
+      mtime: 1270839179
+      name: lib/pods/SDL/CDTrack.pod
+    - bytesize: 1173
+      file_mime_type: ~
+      line_count: ~
+      md5: ee7fee5e22a9c259d625b0e16fe1b07d
+      mtime: 1268088622
+      name: lib/pods/SDL/Color.pod
+    - bytesize: 96
+      file_mime_type: ~
+      line_count: ~
+      md5: 4464dc5177732eb645c5aea2fc48c6b2
+      mtime: 1270839179
+      name: lib/pods/SDL/Cookbook.pod
+    - bytesize: 23053
+      file_mime_type: ~
+      line_count: ~
+      md5: ec97f596ce853a2b31d62c564b51612b
+      mtime: 1270839179
+      name: lib/pods/SDL/Cookbook/PDL.pod
+    - bytesize: 514
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fd96b5ebc9d40921e33f6bdd528620a
+      mtime: 1270839179
+      name: lib/pods/SDL/Credits.pod
+    - bytesize: 1847
+      file_mime_type: ~
+      line_count: ~
+      md5: 775cb877e0e7050df0c5ef6b3f4e8dbb
+      mtime: 1268088622
+      name: lib/pods/SDL/Cursor.pod
+    - bytesize: 15007
+      file_mime_type: ~
+      line_count: ~
+      md5: fe2bcb926e3612b17541fa21ceef5457
+      mtime: 1268088622
+      name: lib/pods/SDL/Event.pod
+    - bytesize: 14252
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b46c697905f28b984ebdca4e96c0faf
+      mtime: 1270839179
+      name: lib/pods/SDL/Events.pod
+    - bytesize: 98
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e92afd8955c420e6a52df9c31deeb8b
+      mtime: 1270839179
+      name: lib/pods/SDL/GFX/BlitFunc.pod
+    - bytesize: 628
+      file_mime_type: ~
+      line_count: ~
+      md5: f4341023a76c214bfed53b9603456be5
+      mtime: 1270839179
+      name: lib/pods/SDL/GFX/FPSManager.pod
+    - bytesize: 982
+      file_mime_type: ~
+      line_count: ~
+      md5: baebea41247d19dea150c613633698d5
+      mtime: 1270839179
+      name: lib/pods/SDL/GFX/Framerate.pod
+    - bytesize: 10194
+      file_mime_type: ~
+      line_count: ~
+      md5: 3fdc5f46ed9e3d618d95834ed97f07b7
+      mtime: 1270839180
+      name: lib/pods/SDL/GFX/ImageFilter.pod
+    - bytesize: 7851
+      file_mime_type: ~
+      line_count: ~
+      md5: 958cc29ecc54de70a2c7f8945fe56f43
+      mtime: 1270839180
+      name: lib/pods/SDL/GFX/Primitives.pod
+    - bytesize: 2673
+      file_mime_type: ~
+      line_count: ~
+      md5: 89ecc5c27f0df72dd0474f7d49d4c00a
+      mtime: 1270839180
+      name: lib/pods/SDL/GFX/Rotozoom.pod
+    - bytesize: 737
+      file_mime_type: ~
+      line_count: ~
+      md5: f1c885b29fe66e86a6bb4a26a4a5bdce
+      mtime: 1268088622
+      name: lib/pods/SDL/Game/Palette.pod
+    - bytesize: 9971
+      file_mime_type: ~
+      line_count: ~
+      md5: 30defed5a09bb499298ee24a707ef05e
+      mtime: 1270839180
+      name: lib/pods/SDL/Image.pod
+    - bytesize: 5718
+      file_mime_type: ~
+      line_count: ~
+      md5: 33635b01f53d2711901aac30659a10f7
+      mtime: 1268088622
+      name: lib/pods/SDL/Joystick.pod
+    - bytesize: 1036
+      file_mime_type: ~
+      line_count: ~
+      md5: f5c1d8718f06422e26e727781fd72b87
+      mtime: 1268088622
+      name: lib/pods/SDL/MPEG.pod
+    - bytesize: 4816
+      file_mime_type: ~
+      line_count: ~
+      md5: 2f34cb5c935603528b3e69d7a2e6572e
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer.pod
+    - bytesize: 5037
+      file_mime_type: ~
+      line_count: ~
+      md5: 665c5ebc15c0a9ecd355d491c489c740
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/Channels.pod
+    - bytesize: 6615
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e5813c099715e242fb1e35e89c7921c
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/Effects.pod
+    - bytesize: 2590
+      file_mime_type: ~
+      line_count: ~
+      md5: 7aef455cbc0414f7fe55f9f5656588c3
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/Groups.pod
+    - bytesize: 639
+      file_mime_type: ~
+      line_count: ~
+      md5: fad083070656557cb8958ae27edc60d3
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/MixChunk.pod
+    - bytesize: 247
+      file_mime_type: ~
+      line_count: ~
+      md5: 021742a690e66df8482b4c27a30c7219
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/MixMusic.pod
+    - bytesize: 5757
+      file_mime_type: ~
+      line_count: ~
+      md5: ed1c01466155ab82809a025f6ee36dce
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/Music.pod
+    - bytesize: 2068
+      file_mime_type: ~
+      line_count: ~
+      md5: 658295273a5941db3bc9a5d9a6efbd83
+      mtime: 1270839180
+      name: lib/pods/SDL/Mixer/Samples.pod
+    - bytesize: 1474
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d58a378b10893bce3b1ad04adaa4427
+      mtime: 1268088622
+      name: lib/pods/SDL/Mouse.pod
+    - bytesize: 184
+      file_mime_type: ~
+      line_count: ~
+      md5: 13b21b4b0f42058bec9f8951e50285cd
+      mtime: 1270839180
+      name: lib/pods/SDL/MultiThread.pod
+    - bytesize: 359
+      file_mime_type: ~
+      line_count: ~
+      md5: c6808e74eda40868f3681c2b79166842
+      mtime: 1268088622
+      name: lib/pods/SDL/Music.pod
+    - bytesize: 1687
+      file_mime_type: ~
+      line_count: ~
+      md5: 43b9f946f2dfbf0c540c1bc1953aa0c7
+      mtime: 1268088622
+      name: lib/pods/SDL/OpenGL.pod
+    - bytesize: 2399
+      file_mime_type: ~
+      line_count: ~
+      md5: 69ba63de1406bdbc9658cb193b01ffe4
+      mtime: 1270839180
+      name: lib/pods/SDL/Overlay.pod
+    - bytesize: 785
+      file_mime_type: ~
+      line_count: ~
+      md5: ad91a8f73be4a60495eccea3cd352911
+      mtime: 1268088622
+      name: lib/pods/SDL/Palette.pod
+    - bytesize: 5224
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d18cf4c0a49e146f4752f8c178ac8d4
+      mtime: 1270839180
+      name: lib/pods/SDL/Pango.pod
+    - bytesize: 356
+      file_mime_type: ~
+      line_count: ~
+      md5: a82ae637480e2378eee2364949484695
+      mtime: 1270839180
+      name: lib/pods/SDL/Pango/Context.pod
+    - bytesize: 1892
+      file_mime_type: ~
+      line_count: ~
+      md5: a3f272a4c3f502726103c6973960e2da
+      mtime: 1268088622
+      name: lib/pods/SDL/PixelFormat.pod
+    - bytesize: 5852
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fa85bd51818263feffe17697a2f143d
+      mtime: 1268088622
+      name: lib/pods/SDL/RWOps.pod
+    - bytesize: 1314
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ec37f8ccd77bb2eec9147fd9f60fe84
+      mtime: 1268088622
+      name: lib/pods/SDL/Rect.pod
+    - bytesize: 1869
+      file_mime_type: ~
+      line_count: ~
+      md5: 7399456d9fa857d36c72228ca7cf618a
+      mtime: 1268088622
+      name: lib/pods/SDL/SMPEG.pod
+    - bytesize: 440
+      file_mime_type: ~
+      line_count: ~
+      md5: 34d3f5f858c3aaded48e13756f311251
+      mtime: 1268088622
+      name: lib/pods/SDL/Sound.pod
+    - bytesize: 3216
+      file_mime_type: ~
+      line_count: ~
+      md5: 947ccfe4a9b32ee5be4f06c93dcce933
+      mtime: 1270839180
+      name: lib/pods/SDL/Surface.pod
+    - bytesize: 20185
+      file_mime_type: ~
+      line_count: ~
+      md5: 046a8bce2204ed2dc041f64005282243
+      mtime: 1270839180
+      name: lib/pods/SDL/TTF.pod
+    - bytesize: 649
+      file_mime_type: ~
+      line_count: ~
+      md5: d32d2541b82ca6d6c9061655190dafc0
+      mtime: 1270839180
+      name: lib/pods/SDL/TTF/Font.pod
+    - bytesize: 2748
+      file_mime_type: ~
+      line_count: ~
+      md5: 30007d4c90ac822aeb2f763d88be4898
+      mtime: 1270839180
+      name: lib/pods/SDL/Time.pod
+    - bytesize: 493
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ff10d456022901ca3293b25c0483f5d
+      mtime: 1268088622
+      name: lib/pods/SDL/Tool/Font.pod
+    - bytesize: 733
+      file_mime_type: ~
+      line_count: ~
+      md5: 10dfde38c34fa738d4ca520de10dfaee
+      mtime: 1268088622
+      name: lib/pods/SDL/Tool/Graphic.pod
+    - bytesize: 2938
+      file_mime_type: ~
+      line_count: ~
+      md5: 2d0e56a5965caf311c5be8cdedacc32e
+      mtime: 1270839180
+      name: lib/pods/SDL/Tutorial.pod
+    - bytesize: 5235
+      file_mime_type: ~
+      line_count: ~
+      md5: fe6f87234e73e5d16eb27a6f9d570f5e
+      mtime: 1270839180
+      name: lib/pods/SDL/Tutorial/Animation.pod
+    - bytesize: 6630
+      file_mime_type: ~
+      line_count: ~
+      md5: d55d458ee96961445ec3e958630c6985
+      mtime: 1270839180
+      name: lib/pods/SDL/Tutorial/LunarLander.pod
+    - bytesize: 1018
+      file_mime_type: ~
+      line_count: ~
+      md5: 200668c3436c9093b0beb60d1163a848
+      mtime: 1268088622
+      name: lib/pods/SDL/Version.pod
+    - bytesize: 48930
+      file_mime_type: ~
+      line_count: ~
+      md5: 0a724f8741c45e52ae036e035d08e6b3
+      mtime: 1270839180
+      name: lib/pods/SDL/Video.pod
+    - bytesize: 2120
+      file_mime_type: ~
+      line_count: ~
+      md5: 17f0609ecceb46968b0076fc9794156f
+      mtime: 1268088622
+      name: lib/pods/SDL/VideoInfo.pod
+    - bytesize: 1949
+      file_mime_type: ~
+      line_count: ~
+      md5: 35e1e4a38e7153506345744e4d4c64fa
+      mtime: 1270839180
+      name: src/Core/Audio.xs
+    - bytesize: 346
+      file_mime_type: ~
+      line_count: ~
+      md5: f6e11230a315f7ce9602a4ed1d977f14
+      mtime: 1270839180
+      name: src/Core/CDROM.xs
+    - bytesize: 3908
+      file_mime_type: ~
+      line_count: ~
+      md5: 38cb5768fc518feb946306af1d4bcc17
+      mtime: 1270839180
+      name: src/Core/Events.xs
+    - bytesize: 2187
+      file_mime_type: ~
+      line_count: ~
+      md5: 7bda92f4f3647a28a0d6e0d93c09bbec
+      mtime: 1270839180
+      name: src/Core/Joystick.xs
+    - bytesize: 575
+      file_mime_type: ~
+      line_count: ~
+      md5: 711650c41d36e5c1944a926c8a6c01b4
+      mtime: 1268088622
+      name: src/Core/Mouse.xs
+    - bytesize: 452
+      file_mime_type: ~
+      line_count: ~
+      md5: 740e2e5268517f2e21b8a8ab2cc029a5
+      mtime: 1268088622
+      name: src/Core/MultiThread.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 3d03ac9455b5b25af0be3f21888f37c0
+      mtime: 1268088622
+      name: src/Core/SDL.xs
+    - bytesize: 1099
+      file_mime_type: ~
+      line_count: ~
+      md5: 481ca58ac6721e92fcf91e7823976fac
+      mtime: 1270839180
+      name: src/Core/Time.xs
+    - bytesize: 10511
+      file_mime_type: ~
+      line_count: ~
+      md5: 90915e1b52655497fed7bbbe06c4389c
+      mtime: 1270839180
+      name: src/Core/Video.xs
+    - bytesize: 2532
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ba975392c123088ea9bef2aa30de026
+      mtime: 1270839180
+      name: src/Core/objects/AudioCVT.xs
+    - bytesize: 3612
+      file_mime_type: ~
+      line_count: ~
+      md5: ac1519ef34394701efa89092fcdf322b
+      mtime: 1270839180
+      name: src/Core/objects/AudioSpec.xs
+    - bytesize: 1684
+      file_mime_type: ~
+      line_count: ~
+      md5: 037716fc01324312e7c12588d95c0796
+      mtime: 1270839180
+      name: src/Core/objects/CD.xs
+    - bytesize: 557
+      file_mime_type: ~
+      line_count: ~
+      md5: 2778f84638facd063e339c62817e9a34
+      mtime: 1270839180
+      name: src/Core/objects/CDTrack.xs
+    - bytesize: 1037
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e4c4a983bd931990461fdb943e9f5b0
+      mtime: 1270839180
+      name: src/Core/objects/Color.xs
+    - bytesize: 1025
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e0e96f333544d1f21b2b96898e42dd7
+      mtime: 1270839180
+      name: src/Core/objects/Cursor.xs
+    - bytesize: 15074
+      file_mime_type: ~
+      line_count: ~
+      md5: 9651570573545ffe27feecce90fe096a
+      mtime: 1270839180
+      name: src/Core/objects/Event.xs
+    - bytesize: 1224
+      file_mime_type: ~
+      line_count: ~
+      md5: 98b24ab1eb9766d65e3b3af44bfdfe2f
+      mtime: 1270839180
+      name: src/Core/objects/Overlay.xs
+    - bytesize: 886
+      file_mime_type: ~
+      line_count: ~
+      md5: 55f5843b2e120d6034a801c3811e07b7
+      mtime: 1270839180
+      name: src/Core/objects/Palette.xs
+    - bytesize: 2823
+      file_mime_type: ~
+      line_count: ~
+      md5: adc7a90b8c1917dfa14b4cb23b4d8a93
+      mtime: 1270839180
+      name: src/Core/objects/PixelFormat.xs
+    - bytesize: 1630
+      file_mime_type: ~
+      line_count: ~
+      md5: 580630e5f0f6311d46d313074d31884a
+      mtime: 1268088622
+      name: src/Core/objects/RWOps.xs
+    - bytesize: 1552
+      file_mime_type: ~
+      line_count: ~
+      md5: d1f012da95b8c55a459e2eeea873027a
+      mtime: 1270839180
+      name: src/Core/objects/Rect.xs
+    - bytesize: 3830
+      file_mime_type: ~
+      line_count: ~
+      md5: 97db7ac6829c72e7cc01977d641994f9
+      mtime: 1270839180
+      name: src/Core/objects/Surface.xs
+    - bytesize: 954
+      file_mime_type: ~
+      line_count: ~
+      md5: 0101da4a9d735ba7abfb8f162090eee9
+      mtime: 1270839180
+      name: src/Core/objects/Version.xs
+    - bytesize: 2322
+      file_mime_type: ~
+      line_count: ~
+      md5: deb9fffd84dd0d4f20457123c7e07af4
+      mtime: 1268088622
+      name: src/Core/objects/VideoInfo.xs
+    - bytesize: 1375
+      file_mime_type: ~
+      line_count: ~
+      md5: fabed6f1c151c788d54cd2fe1b121c8a
+      mtime: 1269475134
+      name: src/Core/objects/keysym.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 6ddf4813fd7b922867e5013a6609ea68
+      mtime: 1268088622
+      name: src/Core/objects/typemap
+    - bytesize: 452
+      file_mime_type: ~
+      line_count: ~
+      md5: 82032467112f3e1e4b020f317f509358
+      mtime: 1270839180
+      name: src/GFX/BlitFunc.xs
+    - bytesize: 9776
+      file_mime_type: ~
+      line_count: ~
+      md5: 94f4a851ecb908dd6dc2b27eccd4d6c3
+      mtime: 1270839180
+      name: src/GFX/CHANGELOG
+    - bytesize: 2027
+      file_mime_type: ~
+      line_count: ~
+      md5: fb91f3171b5cc1d0e3a538868d656243
+      mtime: 1270839180
+      name: src/GFX/FPSManager.xs
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 8324ee2abdd865f78ec5f25be627a842
+      mtime: 1270839180
+      name: src/GFX/Framerate.xs
+    - bytesize: 1148
+      file_mime_type: ~
+      line_count: ~
+      md5: f0bcc00e9ee0eb5c36faf304a144e478
+      mtime: 1270839180
+      name: src/GFX/GFX.xs
+    - bytesize: 9610
+      file_mime_type: ~
+      line_count: ~
+      md5: 892bd4e25bdb1c6b914749d6ff815c41
+      mtime: 1270839180
+      name: src/GFX/ImageFilter.xs
+    - bytesize: 17943
+      file_mime_type: ~
+      line_count: ~
+      md5: 42b02befeb7568fd28c973d3ba49e276
+      mtime: 1270839180
+      name: src/GFX/Primitives.xs
+    - bytesize: 56
+      file_mime_type: ~
+      line_count: ~
+      md5: 5251d3e56d611259ece8b1605cc005c7
+      mtime: 1270839180
+      name: src/GFX/README
+    - bytesize: 3932
+      file_mime_type: ~
+      line_count: ~
+      md5: e059f3dc64ab1f0fb757ab054321d61a
+      mtime: 1270839180
+      name: src/GFX/Rotozoom.xs
+    - bytesize: 6084
+      file_mime_type: ~
+      line_count: ~
+      md5: 22c47506db9c97830e2cb9f1d750a7c1
+      mtime: 1270839180
+      name: src/Image.xs
+    - bytesize: 3119
+      file_mime_type: ~
+      line_count: ~
+      md5: 4e12d2316f58fd168de566f766f14b09
+      mtime: 1270839180
+      name: src/Mixer/Channels.xs
+    - bytesize: 4998
+      file_mime_type: ~
+      line_count: ~
+      md5: bf64a63dbc0622b1771d00d3ac41e534
+      mtime: 1270839180
+      name: src/Mixer/Effects.xs
+    - bytesize: 1518
+      file_mime_type: ~
+      line_count: ~
+      md5: ac745eb53cb6e3c5d5697f670ce291d6
+      mtime: 1270839180
+      name: src/Mixer/Groups.xs
+    - bytesize: 2004
+      file_mime_type: ~
+      line_count: ~
+      md5: a12de0316b884dd6891188b4891034e4
+      mtime: 1270839180
+      name: src/Mixer/Mixer.xs
+    - bytesize: 5592
+      file_mime_type: ~
+      line_count: ~
+      md5: 3c3b39e1f080262144f13c889416dfa2
+      mtime: 1270839180
+      name: src/Mixer/Music.xs
+    - bytesize: 77
+      file_mime_type: ~
+      line_count: ~
+      md5: 22686dac2d984802833d899d50fd7af7
+      mtime: 1268088622
+      name: src/Mixer/README
+    - bytesize: 2239
+      file_mime_type: ~
+      line_count: ~
+      md5: 8b51bda7ba51d49ff64a1a657d8864c3
+      mtime: 1270839181
+      name: src/Mixer/Samples.xs
+    - bytesize: 842
+      file_mime_type: ~
+      line_count: ~
+      md5: a8b054ba7598188042452094e54dd68d
+      mtime: 1270839181
+      name: src/Mixer/objects/MixChunk.xs
+    - bytesize: 497
+      file_mime_type: ~
+      line_count: ~
+      md5: cd54edfbae0e3d01dd4c623b1070a43e
+      mtime: 1270839181
+      name: src/Mixer/objects/MixMusic.xs
+    - bytesize: 3018
+      file_mime_type: ~
+      line_count: ~
+      md5: f8308e59c5355fe022f1acc38c10beda
+      mtime: 1270839181
+      name: src/Net/Net.xs
+    - bytesize: 1495
+      file_mime_type: ~
+      line_count: ~
+      md5: 4129139bb069d0ca1ad32f0854a40544
+      mtime: 1270839181
+      name: src/Net/TCP.xs
+    - bytesize: 1838
+      file_mime_type: ~
+      line_count: ~
+      md5: 993a901e1e6da89662c8edd21768ad98
+      mtime: 1270839181
+      name: src/Net/UDP.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 433ec8c9ca5ea675e2fb75f6266c219a
+      mtime: 1270839181
+      name: src/Net/objects/GenericSocket.xs
+    - bytesize: 1122
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ed33638dec2f971305fa07f90c69810
+      mtime: 1270839181
+      name: src/Net/objects/IPaddress.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b6513f802001fd296030f4859e84904
+      mtime: 1270839181
+      name: src/Net/objects/SocketSet.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: c078f3116841557f2cf6679462f4a395
+      mtime: 1270839181
+      name: src/Net/objects/TCPsocket.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 8fc501acb658b6473adc6988e793e027
+      mtime: 1270839181
+      name: src/Net/objects/UDPpacket.xs
+    - bytesize: 0
+      file_mime_type: ~
+      line_count: ~
+      md5: 1614c23b17560f4116ed3927bce95159
+      mtime: 1270839181
+      name: src/Net/objects/UDPsocket.xs
+    - bytesize: 55398
+      file_mime_type: ~
+      line_count: ~
+      md5: f7db6261858bfe58e8397619c9938104
+      mtime: 1270839181
+      name: src/OpenGL.xs
+    - bytesize: 3955
+      file_mime_type: ~
+      line_count: ~
+      md5: cac9dbe7c3c2fdf6fdd108db80c63d08
+      mtime: 1270839181
+      name: src/Pango/Pango.xs
+    - bytesize: 622
+      file_mime_type: ~
+      line_count: ~
+      md5: 85676284516c83bff844c642a968625d
+      mtime: 1270839181
+      name: src/Pango/objects/Context.xs
+    - bytesize: 4511
+      file_mime_type: ~
+      line_count: ~
+      md5: d428924f7d8dcbf803ea6a7ec60500d5
+      mtime: 1270839181
+      name: src/SDL.xs
+    - bytesize: 4356
+      file_mime_type: ~
+      line_count: ~
+      md5: 6b290d94b70be3ca283af1828463c3c1
+      mtime: 1270839181
+      name: src/SMPEG.xs
+    - bytesize: 53
+      file_mime_type: ~
+      line_count: ~
+      md5: 612c767d45176539ee20f7941d21c0bf
+      mtime: 1268088622
+      name: src/TTF/README
+    - bytesize: 11287
+      file_mime_type: ~
+      line_count: ~
+      md5: 1e6a702c62637774c962f7cee296eada
+      mtime: 1270839181
+      name: src/TTF/TTF.xs
+    - bytesize: 652
+      file_mime_type: ~
+      line_count: ~
+      md5: b6403829a3840ddb8826d4b811734ed9
+      mtime: 1270839181
+      name: src/TTF/objects/Font.xs
+    - bytesize: 1799
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c879b3060e18e9139360527410c4d7b
+      mtime: 1259509088
+      name: src/defines.h
+    - bytesize: 57
+      file_mime_type: ~
+      line_count: ~
+      md5: 3150a18fc10e60afa31126577774af1e
+      mtime: 1259509088
+      name: src/support/darwin_support.h
+    - bytesize: 1117
+      file_mime_type: ~
+      line_count: ~
+      md5: 025ceb16736451861e6c90b45dd8eff3
+      mtime: 1259509088
+      name: src/support/darwin_support.m
+    - bytesize: 51
+      file_mime_type: ~
+      line_count: ~
+      md5: f85958dfc43ba8dc4eda5f8b4d7f0707
+      mtime: 1259509088
+      name: src/support/win32.c
+    - bytesize: 856
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1270839181
+      name: t/00-load.t
+    - bytesize: 2541
+      file_mime_type: ~
+      line_count: ~
+      md5: 58beadf006c939fc7024704126a4fa3f
+      mtime: 1270839181
+      name: t/apppm.t
+    - bytesize: 981
+      file_mime_type: ~
+      line_count: ~
+      md5: 52fd1a10be6f89106b7aebf34ab3718d
+      mtime: 1270839181
+      name: t/colorpm.t
+    - bytesize: 1588
+      file_mime_type: ~
+      line_count: ~
+      md5: c8205b1933fec0d7f2b5efc26ae9b559
+      mtime: 1270839181
+      name: t/config.t
+    - bytesize: 3220
+      file_mime_type: ~
+      line_count: ~
+      md5: 16f8a2bcecdde4aba0de3bbf036be09d
+      mtime: 1270839637
+      name: t/core.t
+    - bytesize: 4201
+      file_mime_type: ~
+      line_count: ~
+      md5: 124e10e88a19ebb073b743492c90644b
+      mtime: 1270839181
+      name: t/core_audio.t
+    - bytesize: 1408
+      file_mime_type: ~
+      line_count: ~
+      md5: 91a3f2d995a79dbb39cb31e688db5355
+      mtime: 1270841420
+      name: t/core_audiospec.t
+    - bytesize: 3910
+      file_mime_type: ~
+      line_count: ~
+      md5: a407872b787cbb77d219960c130659fb
+      mtime: 1270839181
+      name: t/core_cd.t
+    - bytesize: 841
+      file_mime_type: ~
+      line_count: ~
+      md5: d3bb9047f2a8b18934e30fa936893fb8
+      mtime: 1270839181
+      name: t/core_error.t
+    - bytesize: 52582
+      file_mime_type: ~
+      line_count: ~
+      md5: 4014a15442852ed5d2f2b472da68b22e
+      mtime: 1270839181
+      name: t/core_events.t
+    - bytesize: 897
+      file_mime_type: ~
+      line_count: ~
+      md5: e5cab05f4a030fe4fc38bfb729c6809e
+      mtime: 1270839181
+      name: t/core_joystick.t
+    - bytesize: 621
+      file_mime_type: ~
+      line_count: ~
+      md5: d7f87b1c7b35fc5ddbf579fc21c148c0
+      mtime: 1270839181
+      name: t/core_mouse.t
+    - bytesize: 890
+      file_mime_type: ~
+      line_count: ~
+      md5: 1055d2e701baeab7892f43e886b8e8ba
+      mtime: 1270839181
+      name: t/core_multi.t
+    - bytesize: 628
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a398bb88d9efca9ea04415db12a0847
+      mtime: 1270839181
+      name: t/core_overlay.t
+    - bytesize: 1355
+      file_mime_type: ~
+      line_count: ~
+      md5: 7694cb800b9f85a74d3d5566cdbead29
+      mtime: 1270839181
+      name: t/core_palette.t
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: 18f5f51ee488d8fc1f880d732be09555
+      mtime: 1270839181
+      name: t/core_rect.t
+    - bytesize: 1112
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ef803a7a36806cd5e1434dc690eb120
+      mtime: 1270839181
+      name: t/core_rwops.t
+    - bytesize: 3794
+      file_mime_type: ~
+      line_count: ~
+      md5: ea0d4b2db7df418b1bd85fdab325fd9e
+      mtime: 1270839181
+      name: t/core_surface.t
+    - bytesize: 1407
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c0ec5a9c929c1ae0a6bdccd2cb10430
+      mtime: 1270841472
+      name: t/core_timer.t
+    - bytesize: 732
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c1ac50d74d6f58f98b478544d8c842f
+      mtime: 1268088622
+      name: t/core_version.t
+    - bytesize: 14096
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a1c5226d6be801f63755af37c3e673b
+      mtime: 1270839181
+      name: t/core_video.t
+    - bytesize: 1413
+      file_mime_type: ~
+      line_count: ~
+      md5: 9316a60a68cb02c512abac041f64c341
+      mtime: 1270839181
+      name: t/core_video_convert_surface.t
+    - bytesize: 1661
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f1be6523be5350c632c199788cbdb7a
+      mtime: 1270839181
+      name: t/eventpm.t
+    - bytesize: 511
+      file_mime_type: ~
+      line_count: ~
+      md5: 191b390fe5c4b3be94649e1e8f9888de
+      mtime: 1270839181
+      name: t/extendingrect.t
+    - bytesize: 477
+      file_mime_type: ~
+      line_count: ~
+      md5: 000ee10ac660f6d93054a67076de9f23
+      mtime: 1270839181
+      name: t/gfx.t
+    - bytesize: 1385
+      file_mime_type: ~
+      line_count: ~
+      md5: 955d64df3cbf8c97cc9b3636cdd68bc9
+      mtime: 1270839181
+      name: t/gfx_fpsmanager.t
+    - bytesize: 1258
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cdc2acbd608194b783586b08e5c145b
+      mtime: 1270839181
+      name: t/gfx_framerate.t
+    - bytesize: 4455
+      file_mime_type: ~
+      line_count: ~
+      md5: ef622471be0ecd49070a2d263c64e90a
+      mtime: 1270839181
+      name: t/gfx_imagefilter.t
+    - bytesize: 12108
+      file_mime_type: ~
+      line_count: ~
+      md5: 44dfec21ced152a24b7b2e110da4c919
+      mtime: 1270839181
+      name: t/gfx_primitives.t
+    - bytesize: 7495
+      file_mime_type: ~
+      line_count: ~
+      md5: aa5e60465ebd27f20136ae527772db89
+      mtime: 1270839181
+      name: t/gfx_primitives2.t
+    - bytesize: 5037
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b26da7093e16b8dfadfefdb76b95ebf
+      mtime: 1270839181
+      name: t/gfx_rotozoom.t
+    - bytesize: 3326
+      file_mime_type: ~
+      line_count: ~
+      md5: d6d8374cc4dda7f3be74192abf67aa94
+      mtime: 1270839181
+      name: t/image.t
+    - bytesize: 2509
+      file_mime_type: ~
+      line_count: ~
+      md5: ae689d93462fc6d3dc9cc2aed1aedcee
+      mtime: 1270839181
+      name: t/image_xpm_array.t
+    - bytesize: 2478
+      file_mime_type: ~
+      line_count: ~
+      md5: c084d5ab1e542978cf32823a34534f71
+      mtime: 1270839181
+      name: t/intergation1.t
+    - bytesize: 1458
+      file_mime_type: ~
+      line_count: ~
+      md5: 1a4d1ee1d7e4588994a2c4642012ba37
+      mtime: 1270839181
+      name: t/lib/SDL/TestTool.pm
+    - bytesize: 2762
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d982e99d2ae44e551bf06b4d96cc7b4
+      mtime: 1270839181
+      name: t/mixer.t
+    - bytesize: 4129
+      file_mime_type: ~
+      line_count: ~
+      md5: fd5716fd5b77404cce555b3622640b78
+      mtime: 1270839181
+      name: t/mixer_channels.t
+    - bytesize: 6182
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ac15cc7d4be99a591099981d60f4021
+      mtime: 1270841488
+      name: t/mixer_effects.t
+    - bytesize: 3687
+      file_mime_type: ~
+      line_count: ~
+      md5: db8f24e8bb8e3f6d97a1b2fffd55c632
+      mtime: 1270839181
+      name: t/mixer_groups.t
+    - bytesize: 1033
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f2c2f729e441eaaa79412a0ad8116e5
+      mtime: 1270839181
+      name: t/mixer_mixchunk.t
+    - bytesize: 977
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b3f4eb622a331cd55efb927a73e39a8
+      mtime: 1270839181
+      name: t/mixer_mixmusic.t
+    - bytesize: 5939
+      file_mime_type: ~
+      line_count: ~
+      md5: 27132a85d3c0297a9d8a7c4b67e886f0
+      mtime: 1270841504
+      name: t/mixer_music.t
+    - bytesize: 2308
+      file_mime_type: ~
+      line_count: ~
+      md5: 52d0cba463ae79e2f5324659f1d86314
+      mtime: 1270839181
+      name: t/mixer_samples.t
+    - bytesize: 1723
+      file_mime_type: ~
+      line_count: ~
+      md5: 905e4d6673adfcb8c1a2996ef0a9608a
+      mtime: 1270839181
+      name: t/mpegpm.t
+    - bytesize: 2018
+      file_mime_type: ~
+      line_count: ~
+      md5: 873997f36b28cd6a18784b01d37f111c
+      mtime: 1270839181
+      name: t/opengl.t
+    - bytesize: 4024
+      file_mime_type: ~
+      line_count: ~
+      md5: 346fb2b9f7332e6c684e717bcbcfb77a
+      mtime: 1270839181
+      name: t/pango.t
+    - bytesize: 5173
+      file_mime_type: ~
+      line_count: ~
+      md5: 14e6f4dea7eaa14a09a79b7c66031df2
+      mtime: 1270839181
+      name: t/sdlgamerect.t
+    - bytesize: 487
+      file_mime_type: ~
+      line_count: ~
+      md5: f18ba72174c0dc08e204d8170e138cd6
+      mtime: 1270839181
+      name: t/smpeg.t
+    - bytesize: 1394
+      file_mime_type: ~
+      line_count: ~
+      md5: 5903188b55d14d5c5f7f5fbd5ffee7ca
+      mtime: 1270839181
+      name: t/soundpm.t
+    - bytesize: 14311
+      file_mime_type: ~
+      line_count: ~
+      md5: cccb8364be4588993067b0fbd4869a88
+      mtime: 1270839181
+      name: t/ttf.t
+    - bytesize: 1055
+      file_mime_type: ~
+      line_count: ~
+      md5: 114812fdfc8252c9a492d149d0d8d6f7
+      mtime: 1270839181
+      name: t/ttf_font.t
+    - bytesize: 60231
+      file_mime_type: ~
+      line_count: ~
+      md5: f6863ae7c0ed812857d3979d99cc9157
+      mtime: 1259509088
+      name: test/data/24P_Arial_NeonYellow.png
+    - bytesize: 16858
+      file_mime_type: ~
+      line_count: ~
+      md5: 57df283a69a98d20c1e3de878e0bc422
+      mtime: 1259509088
+      name: test/data/24P_Copperplate_Blue.png
+    - bytesize: 1792
+      file_mime_type: ~
+      line_count: ~
+      md5: 935c73c0ec2a6fab11e00cd74a726232
+      mtime: 1270839182
+      name: test/data/5x7.fnt
+    - bytesize: 221238
+      file_mime_type: ~
+      line_count: ~
+      md5: 8aba3e8ef9dc9b0f259734732c5af5c2
+      mtime: 1259509088
+      name: test/data/LargeFont.bmp
+    - bytesize: 828
+      file_mime_type: ~
+      line_count: ~
+      md5: c761e28198622758061a818bdea4b4d4
+      mtime: 1270839182
+      name: test/data/README
+    - bytesize: 21548
+      file_mime_type: ~
+      line_count: ~
+      md5: 062b82372fec8f72500179b141512134
+      mtime: 1259509088
+      name: test/data/aircut3.ttf
+    - bytesize: 16980
+      file_mime_type: ~
+      line_count: ~
+      md5: beda821e375a3b88cc6ae2f497072969
+      mtime: 1259509088
+      name: test/data/electrohar.ttf
+    - bytesize: 25092
+      file_mime_type: ~
+      line_count: ~
+      md5: fccc1dd0f5ffcac39fd84d11c78cb535
+      mtime: 1259509088
+      name: test/data/highlight.png
+    - bytesize: 578
+      file_mime_type: ~
+      line_count: ~
+      md5: e7a8c054e8482d397c3176d5f51cebea
+      mtime: 1259509088
+      name: test/data/icon.bmp
+    - bytesize: 121649
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c7f4130e5ca274cfcfd0a17e4f33f76
+      mtime: 1259509088
+      name: test/data/logo.png
+    - bytesize: 22439
+      file_mime_type: ~
+      line_count: ~
+      md5: 0293e476ca766ff0fc5a48666f4f7ab2
+      mtime: 1259509088
+      name: test/data/menu.png
+    - bytesize: 1086
+      file_mime_type: ~
+      line_count: ~
+      md5: 7e4bdbc1bdbb7521e5ccb134fb4117ec
+      mtime: 1270839182
+      name: test/data/pattern_red_white_2x2.bmp
+    - bytesize: 108054
+      file_mime_type: ~
+      line_count: ~
+      md5: 673aaa3c91229cee92a09ab0351fe83d
+      mtime: 1270839182
+      name: test/data/picture.bmp
+    - bytesize: 481770
+      file_mime_type: ~
+      line_count: ~
+      md5: 64068aaf1457f00c3903a4b49dfcba32
+      mtime: 1270839182
+      name: test/data/sample.wav
+    - bytesize: 630666
+      file_mime_type: ~
+      line_count: ~
+      md5: bd9a0e3da3a78bae2575c3351d36f47d
+      mtime: 1270839182
+      name: test/data/silence.wav
+    - bytesize: 132598
+      file_mime_type: ~
+      line_count: ~
+      md5: fdf45500a9583c5036e0368474f8619f
+      mtime: 1270839182
+      name: test/data/tribe_i.wav
+    - bytesize: 2823
+      file_mime_type: ~
+      line_count: ~
+      md5: f421e5dc171b308cac8ecaead365643f
+      mtime: 1270839182
+      name: typemap
+  module_info:
+    - bytesize: 2260
+      file_mime_type: ~
+      line_count: ~
+      md5: 5dcb54ce5e84cfe9fd80eba6f84554bd
+      module_name_from_file_guess: SDL
+      mtime: 1271155941
+      name: lib/SDL.pm
+      packages:
+        - SDL
+      primary_package: SDL
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL_perl
+        - SDL::Constants
+        - base
+      version_info:
+        filename: lib/SDL.pm
+        identifier: VERSION
+        line_number: 55
+        sigil: $
+        value: 2.403
+    - bytesize: 1260
+      file_mime_type: ~
+      line_count: ~
+      md5: 60b2dd57d2c24ad114331eb6704b8f7f
+      module_name_from_file_guess: SDL_perl
+      mtime: 1270839179
+      name: lib/SDL_perl.pm
+      packages:
+        - SDL_perl
+      primary_package: SDL_perl
+      uses:
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL_perl.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 5089
+      file_mime_type: ~
+      line_count: ~
+      md5: 5afdf3764d6377944fe945a85e2be5ff
+      module_name_from_file_guess: SDL::App
+      mtime: 1270839179
+      name: lib/SDL/App.pm
+      packages:
+        - SDL::App
+      primary_package: SDL::App
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+        - SDL::Rect
+        - SDL::Video
+        - SDL::Event
+        - SDL::Events
+        - SDL::Surface
+        - SDL::PixelFormat
+      version_info:
+        filename: lib/SDL/App.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 538
+      file_mime_type: ~
+      line_count: ~
+      md5: 5aee24ad826e98183496ff38ff0e36af
+      module_name_from_file_guess: SDL::Audio
+      mtime: 1270839179
+      name: lib/SDL/Audio.pm
+      packages:
+        - SDL::Audio
+      primary_package: SDL::Audio
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Audio.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 544
+      file_mime_type: ~
+      line_count: ~
+      md5: 1bb54155606994ef29208131ad96ab64
+      module_name_from_file_guess: SDL::AudioCVT
+      mtime: 1270839179
+      name: lib/SDL/AudioCVT.pm
+      packages:
+        - SDL::AudioCVT
+      primary_package: SDL::AudioCVT
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/AudioCVT.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 546
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b65dc9450a831c0292ce79c12ac8a0c
+      module_name_from_file_guess: SDL::AudioSpec
+      mtime: 1270839179
+      name: lib/SDL/AudioSpec.pm
+      packages:
+        - SDL::AudioSpec
+      primary_package: SDL::AudioSpec
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/AudioSpec.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 977
+      file_mime_type: ~
+      line_count: ~
+      md5: ce31b4688298d1d1f94c86e63f68e972
+      module_name_from_file_guess: SDL::CD
+      mtime: 1270839179
+      name: lib/SDL/CD.pm
+      packages:
+        - SDL::CD
+      primary_package: SDL::CD
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/CD.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 621
+      file_mime_type: ~
+      line_count: ~
+      md5: 37ae1c641dde5b1c7ea551bb516449cc
+      module_name_from_file_guess: SDL::CDROM
+      mtime: 1270839179
+      name: lib/SDL/CDROM.pm
+      packages:
+        - SDL::CDROM
+      primary_package: SDL::CDROM
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/CDROM.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 625
+      file_mime_type: ~
+      line_count: ~
+      md5: dc658a4039a466eeadbbb12c41aeef8a
+      module_name_from_file_guess: SDL::CDTrack
+      mtime: 1270839179
+      name: lib/SDL/CDTrack.pm
+      packages:
+        - SDL::CDTrack
+      primary_package: SDL::CDTrack
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/CDTrack.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 852
+      file_mime_type: ~
+      line_count: ~
+      md5: 02ab54653d9070e15b9bc1b8bfba1408
+      module_name_from_file_guess: SDL::Color
+      mtime: 1270839179
+      name: lib/SDL/Color.pm
+      packages:
+        - SDL::Color
+      primary_package: SDL::Color
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Color.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 273
+      file_mime_type: ~
+      line_count: ~
+      md5: 560bf82f5999adb1e5208eaf0fcfc077
+      module_name_from_file_guess: SDL::Config
+      mtime: 1270839179
+      name: lib/SDL/Config.pm
+      packages:
+        - SDL::Config
+      primary_package: SDL::Config
+      uses:
+        - strict
+        - warnings
+        - SDL::ConfigData
+      version_info:
+        filename: lib/SDL/Config.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 183474
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f908557b391fc3e65de02cf766194ee
+      module_name_from_file_guess: SDL::Constants
+      mtime: 1270839179
+      name: lib/SDL/Constants.pm
+      packages:
+        - SDL::Constants
+      primary_package: SDL::Constants
+      uses:
+        - warnings
+        - base
+        - Config
+        - constant
+      version_info:
+        filename: lib/SDL/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 210
+      file_mime_type: ~
+      line_count: ~
+      md5: 0be49271f9fcba94bb4ed9474f892b8e
+      module_name_from_file_guess: SDL::Cursor
+      mtime: 1270839179
+      name: lib/SDL/Cursor.pm
+      packages:
+        - SDL::Cursor
+      primary_package: SDL::Cursor
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Cursor.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 972
+      file_mime_type: ~
+      line_count: ~
+      md5: f347bc0cb8b7666fd1ac06bd98281d80
+      module_name_from_file_guess: SDL::Event
+      mtime: 1270839179
+      name: lib/SDL/Event.pm
+      packages:
+        - SDL::Event
+      primary_package: SDL::Event
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Event.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 974
+      file_mime_type: ~
+      line_count: ~
+      md5: d00449345e33d3d668ccd3ef7cb3daee
+      module_name_from_file_guess: SDL::Events
+      mtime: 1270839179
+      name: lib/SDL/Events.pm
+      packages:
+        - SDL::Events
+      primary_package: SDL::Events
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Events.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 460
+      file_mime_type: ~
+      line_count: ~
+      md5: 95e7089f1c4bbd6583e1ed4ddfe9cb32
+      module_name_from_file_guess: SDL::GFX
+      mtime: 1270839179
+      name: lib/SDL/GFX.pm
+      packages:
+        - SDL::GFX
+      primary_package: SDL::GFX
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 470
+      file_mime_type: ~
+      line_count: ~
+      md5: 8e0f74298cea6dd43d6c10c578b94669
+      module_name_from_file_guess: SDL::Image
+      mtime: 1270839179
+      name: lib/SDL/Image.pm
+      packages:
+        - SDL::Image
+      primary_package: SDL::Image
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Image.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 214
+      file_mime_type: ~
+      line_count: ~
+      md5: 5281922813e1f3a2b2afef7fc2f0aa1b
+      module_name_from_file_guess: SDL::Joystick
+      mtime: 1270839179
+      name: lib/SDL/Joystick.pm
+      packages:
+        - SDL::Joystick
+      primary_package: SDL::Joystick
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Joystick.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 863
+      file_mime_type: ~
+      line_count: ~
+      md5: 9ad6b4255934f5c94549dbffb8dc6381
+      module_name_from_file_guess: SDL::Mixer
+      mtime: 1270839179
+      name: lib/SDL/Mixer.pm
+      packages:
+        - SDL::Mixer
+      primary_package: SDL::Mixer
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 146
+      file_mime_type: ~
+      line_count: ~
+      md5: bc430852bb1c298cbbd94a4d8e358f28
+      module_name_from_file_guess: SDL::Mouse
+      mtime: 1268088621
+      name: lib/SDL/Mouse.pm
+      packages:
+        - SDL::Mouse
+      primary_package: SDL::Mouse
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+      version_info:
+        filename: lib/SDL/Mouse.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2108
+      file_mime_type: ~
+      line_count: ~
+      md5: aed232ba503b6b25c9bca96ee3f0d087
+      module_name_from_file_guess: SDL::MPEG
+      mtime: 1270839179
+      name: lib/SDL/MPEG.pm
+      packages:
+        - SDL::MPEG
+      primary_package: SDL::MPEG
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+      version_info:
+        filename: lib/SDL/MPEG.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 220
+      file_mime_type: ~
+      line_count: ~
+      md5: 856168796a7ed3bbdd9ece86c2704403
+      module_name_from_file_guess: SDL::MultiThread
+      mtime: 1270839179
+      name: lib/SDL/MultiThread.pm
+      packages:
+        - SDL::MultiThread
+      primary_package: SDL::MultiThread
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/MultiThread.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1452
+      file_mime_type: ~
+      line_count: ~
+      md5: 7ecca63913fb71b46930ab9eb1269d82
+      module_name_from_file_guess: SDL::Music
+      mtime: 1268088621
+      name: lib/SDL/Music.pm
+      packages:
+        - SDL::Music
+      primary_package: SDL::Music
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+      version_info:
+        filename: lib/SDL/Music.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 472
+      file_mime_type: ~
+      line_count: ~
+      md5: 035d21c95e14423e3e32450bb7da2a54
+      module_name_from_file_guess: SDL::Net
+      mtime: 1270839179
+      name: lib/SDL/Net.pm
+      packages:
+        - SDL::Net
+      primary_package: SDL::Net
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Net.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1032
+      file_mime_type: ~
+      line_count: ~
+      md5: 070de8d3c5701f8e19643405ee7901e4
+      module_name_from_file_guess: SDL::OpenGL
+      mtime: 1270839179
+      name: lib/SDL/OpenGL.pm
+      packages:
+        - SDL::OpenGL
+      primary_package: SDL::OpenGL
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::OpenGL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/OpenGL.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 856
+      file_mime_type: ~
+      line_count: ~
+      md5: 95e3f6a9c369363ff3e34f05a7391961
+      module_name_from_file_guess: SDL::Overlay
+      mtime: 1270839179
+      name: lib/SDL/Overlay.pm
+      packages:
+        - SDL::Overlay
+      primary_package: SDL::Overlay
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Overlay.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 849
+      file_mime_type: ~
+      line_count: ~
+      md5: 65c8a8e7991dfc3425974c06540edc72
+      module_name_from_file_guess: SDL::Rect
+      mtime: 1270839179
+      name: lib/SDL/Rect.pm
+      packages:
+        - SDL::Rect
+      primary_package: SDL::Rect
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Rect.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 856
+      file_mime_type: ~
+      line_count: ~
+      md5: 1c896ec9ae495a31b9920868704aae67
+      module_name_from_file_guess: SDL::Palette
+      mtime: 1270839179
+      name: lib/SDL/Palette.pm
+      packages:
+        - SDL::Palette
+      primary_package: SDL::Palette
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Palette.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 549
+      file_mime_type: ~
+      line_count: ~
+      md5: eb8d55071359252d8182ce818e8585c4
+      module_name_from_file_guess: SDL::Pango
+      mtime: 1270839179
+      name: lib/SDL/Pango.pm
+      packages:
+        - SDL::Pango
+      primary_package: SDL::Pango
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Pango.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 863
+      file_mime_type: ~
+      line_count: ~
+      md5: bb7d5fd29d20432929684aa8e49c2d57
+      module_name_from_file_guess: SDL::PixelFormat
+      mtime: 1270839179
+      name: lib/SDL/PixelFormat.pm
+      packages:
+        - SDL::PixelFormat
+      primary_package: SDL::PixelFormat
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/PixelFormat.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: 08b6c24fd4549a57f7bf62cddbcc9385
+      module_name_from_file_guess: SDL::RWOps
+      mtime: 1270839179
+      name: lib/SDL/RWOps.pm
+      packages:
+        - SDL::RWOps
+      primary_package: SDL::RWOps
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/RWOps.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1738
+      file_mime_type: ~
+      line_count: ~
+      md5: 870bc349037007733ee76ac3d3e210f2
+      module_name_from_file_guess: SDL::SMPEG
+      mtime: 1270839179
+      name: lib/SDL/SMPEG.pm
+      packages:
+        - SDL::SMPEG
+      primary_package: SDL::SMPEG
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+        - SDL::Surface
+        - SDL::MPEG
+      version_info:
+        filename: lib/SDL/SMPEG.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1539
+      file_mime_type: ~
+      line_count: ~
+      md5: 5c6998c21be88c551b22ccc7efcfc9b3
+      module_name_from_file_guess: SDL::Sound
+      mtime: 1268088621
+      name: lib/SDL/Sound.pm
+      packages:
+        - SDL::Sound
+      primary_package: SDL::Sound
+      uses:
+        - strict
+        - warnings
+        - Carp
+      version_info:
+        filename: lib/SDL/Sound.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 855
+      file_mime_type: ~
+      line_count: ~
+      md5: 7fbf6e3057fa5b220f2885b4cf749077
+      module_name_from_file_guess: SDL::Surface
+      mtime: 1270839179
+      name: lib/SDL/Surface.pm
+      packages:
+        - SDL::Surface
+      primary_package: SDL::Surface
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Surface.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 206
+      file_mime_type: ~
+      line_count: ~
+      md5: 70720965ae2a25d9ef4811df3c2d1365
+      module_name_from_file_guess: SDL::Time
+      mtime: 1270839179
+      name: lib/SDL/Time.pm
+      packages:
+        - SDL::Time
+      primary_package: SDL::Time
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Time.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2310
+      file_mime_type: ~
+      line_count: ~
+      md5: 4abb0ac78ecbd6c27318bfe289a62821
+      module_name_from_file_guess: SDL::Timer
+      mtime: 1270839179
+      name: lib/SDL/Timer.pm
+      packages:
+        - SDL::Timer
+      primary_package: SDL::Timer
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+      version_info:
+        filename: lib/SDL/Timer.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 529
+      file_mime_type: ~
+      line_count: ~
+      md5: c89c54bbd9a593216b3433b49cd2b781
+      module_name_from_file_guess: SDL::TTF
+      mtime: 1270839179
+      name: lib/SDL/TTF.pm
+      packages:
+        - SDL::TTF
+      primary_package: SDL::TTF
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/TTF.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 4221
+      file_mime_type: ~
+      line_count: ~
+      md5: 59d0f67153608e9763ef9ad1be02938a
+      module_name_from_file_guess: SDL::TTFont
+      mtime: 1268088621
+      name: lib/SDL/TTFont.pm
+      packages:
+        - SDL::TTFont
+      primary_package: SDL::TTFont
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+        - SDL::Surface
+        - vars
+      version_info:
+        filename: lib/SDL/TTFont.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1478
+      file_mime_type: ~
+      line_count: ~
+      md5: 0381dddc57975dc359d145853c4c5f0e
+      module_name_from_file_guess: SDL::Tutorial
+      mtime: 1268088621
+      name: lib/SDL/Tutorial.pm
+      packages:
+        - SDL::Tutorial
+      primary_package: SDL::Tutorial
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::App
+      version_info:
+        filename: lib/SDL/Tutorial.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 212
+      file_mime_type: ~
+      line_count: ~
+      md5: 5fe4c4963eade3438e899ab0348c65dd
+      module_name_from_file_guess: SDL::Version
+      mtime: 1270839179
+      name: lib/SDL/Version.pm
+      packages:
+        - SDL::Version
+      primary_package: SDL::Version
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Version.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 851
+      file_mime_type: ~
+      line_count: ~
+      md5: 6de5e8fb2d68aee178c50018e4d9825f
+      module_name_from_file_guess: SDL::Video
+      mtime: 1270839179
+      name: lib/SDL/Video.pm
+      packages:
+        - SDL::Video
+      primary_package: SDL::Video
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Video.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 859
+      file_mime_type: ~
+      line_count: ~
+      md5: e8febd120202738f3fbb5db747f0fede
+      module_name_from_file_guess: SDL::VideoInfo
+      mtime: 1270839179
+      name: lib/SDL/VideoInfo.pm
+      packages:
+        - SDL::VideoInfo
+      primary_package: SDL::VideoInfo
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/VideoInfo.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3485
+      file_mime_type: ~
+      line_count: ~
+      md5: b09440cc04561db5ad6abb5f9a0aaf41
+      module_name_from_file_guess: SDL::Game::Event
+      mtime: 1268088621
+      name: lib/SDL/Game/Event.pm
+      packages:
+        - SDL::Game::Event
+      primary_package: SDL::Game::Event
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+      version_info:
+        filename: lib/SDL/Game/Event.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 25306
+      file_mime_type: ~
+      line_count: ~
+      md5: e6078743bb2227e735f639db0cd24a59
+      module_name_from_file_guess: SDL::Game::Rect
+      mtime: 1268088621
+      name: lib/SDL/Game/Rect.pm
+      packages:
+        - SDL::Game::Rect
+      primary_package: SDL::Game::Rect
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - base
+      version_info:
+        filename: lib/SDL/Game/Rect.pm
+        identifier: VERSION
+        line_number: 7
+        sigil: $
+        value: 0.01
+    - bytesize: 480
+      file_mime_type: ~
+      line_count: ~
+      md5: 7878eace6cafe2039511762d91dbbebe
+      module_name_from_file_guess: SDL::GFX::BlitFunc
+      mtime: 1270839179
+      name: lib/SDL/GFX/BlitFunc.pm
+      packages:
+        - SDL::GFX::BlitFunc
+      primary_package: SDL::GFX::BlitFunc
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX/BlitFunc.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 484
+      file_mime_type: ~
+      line_count: ~
+      md5: d7879fc48363d32b47b316cbf0eb3877
+      module_name_from_file_guess: SDL::GFX::FPSManager
+      mtime: 1270839179
+      name: lib/SDL/GFX/FPSManager.pm
+      packages:
+        - SDL::GFX::FPSManager
+      primary_package: SDL::GFX::FPSManager
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX/FPSManager.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: bbce9179ad3db6a2146af1ef1fe52dac
+      module_name_from_file_guess: SDL::GFX::Framerate
+      mtime: 1270839179
+      name: lib/SDL/GFX/Framerate.pm
+      packages:
+        - SDL::GFX::Framerate
+      primary_package: SDL::GFX::Framerate
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX/Framerate.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 486
+      file_mime_type: ~
+      line_count: ~
+      md5: 4d2afe2348747612627c03269b53d540
+      module_name_from_file_guess: SDL::GFX::ImageFilter
+      mtime: 1270839179
+      name: lib/SDL/GFX/ImageFilter.pm
+      packages:
+        - SDL::GFX::ImageFilter
+      primary_package: SDL::GFX::ImageFilter
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX/ImageFilter.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 484
+      file_mime_type: ~
+      line_count: ~
+      md5: 0d1fec46617435dab78af96190f6b49f
+      module_name_from_file_guess: SDL::GFX::Primitives
+      mtime: 1270839179
+      name: lib/SDL/GFX/Primitives.pm
+      packages:
+        - SDL::GFX::Primitives
+      primary_package: SDL::GFX::Primitives
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX/Primitives.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 480
+      file_mime_type: ~
+      line_count: ~
+      md5: 381bba881a64a5c114e13bf07612b6b3
+      module_name_from_file_guess: SDL::GFX::Rotozoom
+      mtime: 1270839179
+      name: lib/SDL/GFX/Rotozoom.pm
+      packages:
+        - SDL::GFX::Rotozoom
+      primary_package: SDL::GFX::Rotozoom
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/GFX/Rotozoom.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 1724
+      file_mime_type: ~
+      line_count: ~
+      md5: da59456de80e1816876ae868cc1adc0c
+      module_name_from_file_guess: SDL::Internal::Loader
+      mtime: 1270839179
+      name: lib/SDL/Internal/Loader.pm
+      packages:
+        - SDL::Internal::Loader
+      primary_package: SDL::Internal::Loader
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - SDL::ConfigData
+        - Alien::SDL
+        - DynaLoader
+      version_info:
+        filename: lib/SDL/Internal/Loader.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 882
+      file_mime_type: ~
+      line_count: ~
+      md5: 13cbe0050c92b37349f988f99f582d9a
+      module_name_from_file_guess: SDL::Mixer::Channels
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Channels.pm
+      packages:
+        - SDL::Mixer::Channels
+      primary_package: SDL::Mixer::Channels
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/Channels.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 880
+      file_mime_type: ~
+      line_count: ~
+      md5: 8ccf9bb8f0b429c61421ede0c5184c48
+      module_name_from_file_guess: SDL::Mixer::Effects
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Effects.pm
+      packages:
+        - SDL::Mixer::Effects
+      primary_package: SDL::Mixer::Effects
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/Effects.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 878
+      file_mime_type: ~
+      line_count: ~
+      md5: b9a53d791c74f2cc78c43dbbfbfe2667
+      module_name_from_file_guess: SDL::Mixer::Groups
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Groups.pm
+      packages:
+        - SDL::Mixer::Groups
+      primary_package: SDL::Mixer::Groups
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/Groups.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 87e82a80b1df6efe53fcfe3438167203
+      module_name_from_file_guess: SDL::Mixer::MixChunk
+      mtime: 1270839179
+      name: lib/SDL/Mixer/MixChunk.pm
+      packages:
+        - SDL::Mixer::MixChunk
+      primary_package: SDL::Mixer::MixChunk
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/MixChunk.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 883
+      file_mime_type: ~
+      line_count: ~
+      md5: 44d054bc3e91d7053da95455279c9dc7
+      module_name_from_file_guess: SDL::Mixer::MixMusic
+      mtime: 1270839179
+      name: lib/SDL/Mixer/MixMusic.pm
+      packages:
+        - SDL::Mixer::MixMusic
+      primary_package: SDL::Mixer::MixMusic
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/MixMusic.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 876
+      file_mime_type: ~
+      line_count: ~
+      md5: 5365fb56ac3d83ee07f20b7b561c6e77
+      module_name_from_file_guess: SDL::Mixer::Music
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Music.pm
+      packages:
+        - SDL::Mixer::Music
+      primary_package: SDL::Mixer::Music
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/Music.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 881
+      file_mime_type: ~
+      line_count: ~
+      md5: 3e281da7c7715347e2bd0805711413d7
+      module_name_from_file_guess: SDL::Mixer::Samples
+      mtime: 1270839179
+      name: lib/SDL/Mixer/Samples.pm
+      packages:
+        - SDL::Mixer::Samples
+      primary_package: SDL::Mixer::Samples
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Mixer/Samples.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 225
+      file_mime_type: ~
+      line_count: ~
+      md5: 76a304a4ac6b9d6eaaa1370e70011491
+      module_name_from_file_guess: SDL::Net::IPaddress
+      mtime: 1270839179
+      name: lib/SDL/Net/IPaddress.pm
+      packages:
+        - SDL::Net::IPaddress
+      primary_package: SDL::Net::IPaddress
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Net/IPaddress.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: d939a73dc4dc81eefc65d5eb7658d60d
+      module_name_from_file_guess: SDL::Net::TCP
+      mtime: 1270839179
+      name: lib/SDL/Net/TCP.pm
+      packages:
+        - SDL::Net::TCP
+      primary_package: SDL::Net::TCP
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Net/TCP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 213
+      file_mime_type: ~
+      line_count: ~
+      md5: 366db4d85096c373ec27d68b1d39d5ac
+      module_name_from_file_guess: SDL::Net::UDP
+      mtime: 1270839179
+      name: lib/SDL/Net/UDP.pm
+      packages:
+        - SDL::Net::UDP
+      primary_package: SDL::Net::UDP
+      uses:
+        - strict
+        - warnings
+        - Exporter
+        - DynaLoader
+        - SDL::Internal::Loader
+      version_info:
+        filename: lib/SDL/Net/UDP.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 89640
+      file_mime_type: ~
+      line_count: ~
+      md5: b1adf6de143146a96cd199c2b579f56c
+      module_name_from_file_guess: SDL::OpenGL::Constants
+      mtime: 1259509087
+      name: lib/SDL/OpenGL/Constants.pm
+      packages:
+        - SDL::OpenGL::Constants
+      primary_package: SDL::OpenGL::Constants
+      uses: []
+      version_info:
+        filename: lib/SDL/OpenGL/Constants.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 567
+      file_mime_type: ~
+      line_count: ~
+      md5: 69faf9cd0aeb47419b05c2171d50837e
+      module_name_from_file_guess: SDL::Pango::Context
+      mtime: 1270839179
+      name: lib/SDL/Pango/Context.pm
+      packages:
+        - SDL::Pango::Context
+      primary_package: SDL::Pango::Context
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/Pango/Context.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 2303
+      file_mime_type: ~
+      line_count: ~
+      md5: 7c9e885543b44acca97b6cf4bd4714de
+      module_name_from_file_guess: SDL::Tool::Font
+      mtime: 1270839179
+      name: lib/SDL/Tool/Font.pm
+      packages:
+        - SDL::Tool::Font
+      primary_package: SDL::Tool::Font
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+        - SDL::Font
+        - SDL::TTFont
+      version_info:
+        filename: lib/SDL/Tool/Font.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 3750
+      file_mime_type: ~
+      line_count: ~
+      md5: 2e8aeedef7738ee3c7588dd081c647ee
+      module_name_from_file_guess: SDL::Tool::Graphic
+      mtime: 1268088621
+      name: lib/SDL/Tool/Graphic.pm
+      packages:
+        - SDL::Tool::Graphic
+      primary_package: SDL::Tool::Graphic
+      uses:
+        - strict
+        - warnings
+        - Carp
+        - SDL
+        - SDL::Config
+        - SDL::Surface
+      version_info:
+        filename: lib/SDL/Tool/Graphic.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 541
+      file_mime_type: ~
+      line_count: ~
+      md5: b7ff2752c4743fa8ac6a2e27c5b12b3f
+      module_name_from_file_guess: SDL::TTF::Font
+      mtime: 1270839179
+      name: lib/SDL/TTF/Font.pm
+      packages:
+        - SDL::TTF::Font
+      primary_package: SDL::TTF::Font
+      uses:
+        - strict
+        - warnings
+        - vars
+        - Exporter
+        - DynaLoader
+        - SDL::Constants
+        - SDL::Internal::Loader
+        - base
+      version_info:
+        filename: lib/SDL/TTF/Font.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 8129
+      file_mime_type: ~
+      line_count: ~
+      md5: 0710754e02ed719ae1deda893becf277
+      module_name_from_file_guess: SDL::Tutorial::Animation
+      mtime: 1270839179
+      name: lib/SDL/Tutorial/Animation.pm
+      packages:
+        - SDL::Tutorial::Animation
+      primary_package: SDL::Tutorial::Animation
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::App
+        - SDL::Rect
+        - SDL::Color
+        - SDL::Video
+      version_info:
+        filename: lib/SDL/Tutorial/Animation.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+    - bytesize: 67948
+      file_mime_type: ~
+      line_count: ~
+      md5: 437079e1248454340d08ff61662edcfa
+      module_name_from_file_guess: SDL::Tutorial::LunarLander
+      mtime: 1270839179
+      name: lib/SDL/Tutorial/LunarLander.pm
+      packages:
+        - SDL::Tutorial::LunarLander
+      primary_package: SDL::Tutorial::LunarLander
+      uses: []
+      version_info:
+        filename: lib/SDL/Tutorial/LunarLander.pm
+        identifier: ~
+        line_number: ~
+        sigil: ~
+        value: ~
+  modules:
+    - lib/SDL.pm
+    - lib/SDL_perl.pm
+    - lib/SDL/App.pm
+    - lib/SDL/Audio.pm
+    - lib/SDL/AudioCVT.pm
+    - lib/SDL/AudioSpec.pm
+    - lib/SDL/CD.pm
+    - lib/SDL/CDROM.pm
+    - lib/SDL/CDTrack.pm
+    - lib/SDL/Color.pm
+    - lib/SDL/Config.pm
+    - lib/SDL/Constants.pm
+    - lib/SDL/Cursor.pm
+    - lib/SDL/Event.pm
+    - lib/SDL/Events.pm
+    - lib/SDL/GFX.pm
+    - lib/SDL/Image.pm
+    - lib/SDL/Joystick.pm
+    - lib/SDL/Mixer.pm
+    - lib/SDL/Mouse.pm
+    - lib/SDL/MPEG.pm
+    - lib/SDL/MultiThread.pm
+    - lib/SDL/Music.pm
+    - lib/SDL/Net.pm
+    - lib/SDL/OpenGL.pm
+    - lib/SDL/Overlay.pm
+    - lib/SDL/Rect.pm
+    - lib/SDL/Palette.pm
+    - lib/SDL/Pango.pm
+    - lib/SDL/PixelFormat.pm
+    - lib/SDL/RWOps.pm
+    - lib/SDL/SMPEG.pm
+    - lib/SDL/Sound.pm
+    - lib/SDL/Surface.pm
+    - lib/SDL/Time.pm
+    - lib/SDL/Timer.pm
+    - lib/SDL/TTF.pm
+    - lib/SDL/TTFont.pm
+    - lib/SDL/Tutorial.pm
+    - lib/SDL/Version.pm
+    - lib/SDL/Video.pm
+    - lib/SDL/VideoInfo.pm
+    - lib/SDL/Game/Event.pm
+    - lib/SDL/Game/Rect.pm
+    - lib/SDL/GFX/BlitFunc.pm
+    - lib/SDL/GFX/FPSManager.pm
+    - lib/SDL/GFX/Framerate.pm
+    - lib/SDL/GFX/ImageFilter.pm
+    - lib/SDL/GFX/Primitives.pm
+    - lib/SDL/GFX/Rotozoom.pm
+    - lib/SDL/Internal/Loader.pm
+    - lib/SDL/Mixer/Channels.pm
+    - lib/SDL/Mixer/Effects.pm
+    - lib/SDL/Mixer/Groups.pm
+    - lib/SDL/Mixer/MixChunk.pm
+    - lib/SDL/Mixer/MixMusic.pm
+    - lib/SDL/Mixer/Music.pm
+    - lib/SDL/Mixer/Samples.pm
+    - lib/SDL/Net/IPaddress.pm
+    - lib/SDL/Net/TCP.pm
+    - lib/SDL/Net/UDP.pm
+    - lib/SDL/OpenGL/Constants.pm
+    - lib/SDL/Pango/Context.pm
+    - lib/SDL/Tool/Font.pm
+    - lib/SDL/Tool/Graphic.pm
+    - lib/SDL/TTF/Font.pm
+    - lib/SDL/Tutorial/Animation.pm
+    - lib/SDL/Tutorial/LunarLander.pm
+  test_info:
+    - bytesize: 856
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f0e9abb9433d27462c6ec3ec4f46802
+      mtime: 1270839181
+      name: t/00-load.t
+      uses:
+        - strict
+        - warnings
+        - Test::Most
+    - bytesize: 2541
+      file_mime_type: ~
+      line_count: ~
+      md5: 58beadf006c939fc7024704126a4fa3f
+      mtime: 1270839181
+      name: t/apppm.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - SDL::Video
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 981
+      file_mime_type: ~
+      line_count: ~
+      md5: 52fd1a10be6f89106b7aebf34ab3718d
+      mtime: 1270839181
+      name: t/colorpm.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1588
+      file_mime_type: ~
+      line_count: ~
+      md5: c8205b1933fec0d7f2b5efc26ae9b559
+      mtime: 1270839181
+      name: t/config.t
+      uses:
+        - Test::More
+    - bytesize: 3220
+      file_mime_type: ~
+      line_count: ~
+      md5: 16f8a2bcecdde4aba0de3bbf036be09d
+      mtime: 1270839637
+      name: t/core.t
+      uses:
+        - strict
+        - Config
+        - SDL
+        - SDL::Video
+        - SDL::Version
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 4201
+      file_mime_type: ~
+      line_count: ~
+      md5: 124e10e88a19ebb073b743492c90644b
+      mtime: 1270839181
+      name: t/core_audio.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Audio
+        - SDL::AudioSpec
+        - Test::More
+        - Devel::Peek
+        - lib
+        - SDL::TestTool
+    - bytesize: 1408
+      file_mime_type: ~
+      line_count: ~
+      md5: 91a3f2d995a79dbb39cb31e688db5355
+      mtime: 1270841420
+      name: t/core_audiospec.t
+      uses:
+        - strict
+        - threads
+        - threads::shared
+        - SDL
+        - SDL::Audio
+        - SDL::AudioSpec
+        - Test::More
+        - Devel::Peek
+        - Config
+        - lib
+        - SDL::TestTool
+        - bytes
+    - bytesize: 3910
+      file_mime_type: ~
+      line_count: ~
+      md5: a407872b787cbb77d219960c130659fb
+      mtime: 1270839181
+      name: t/core_cd.t
+      uses:
+        - strict
+        - SDL
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::CD
+        - SDL::CDROM
+        - SDL::CDTrack
+    - bytesize: 841
+      file_mime_type: ~
+      line_count: ~
+      md5: d3bb9047f2a8b18934e30fa936893fb8
+      mtime: 1270839181
+      name: t/core_error.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 52582
+      file_mime_type: ~
+      line_count: ~
+      md5: 4014a15442852ed5d2f2b472da68b22e
+      mtime: 1270839181
+      name: t/core_events.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Event
+        - SDL::Events
+        - SDL::Surface
+        - SDL::Video
+        - Devel::Peek
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 897
+      file_mime_type: ~
+      line_count: ~
+      md5: e5cab05f4a030fe4fc38bfb729c6809e
+      mtime: 1270839181
+      name: t/core_joystick.t
+      uses:
+        - strict
+        - SDL
+        - Test::More
+        - SDL::Joystick
+    - bytesize: 621
+      file_mime_type: ~
+      line_count: ~
+      md5: d7f87b1c7b35fc5ddbf579fc21c148c0
+      mtime: 1270839181
+      name: t/core_mouse.t
+      uses:
+        - strict
+        - SDL
+        - Test::More
+        - SDL::Mouse
+        - SDL::Cursor
+        - SDL::Surface
+    - bytesize: 890
+      file_mime_type: ~
+      line_count: ~
+      md5: 1055d2e701baeab7892f43e886b8e8ba
+      mtime: 1270839181
+      name: t/core_multi.t
+      uses:
+        - strict
+        - SDL
+        - Test::More
+    - bytesize: 628
+      file_mime_type: ~
+      line_count: ~
+      md5: 4a398bb88d9efca9ea04415db12a0847
+      mtime: 1270839181
+      name: t/core_overlay.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - SDL
+        - SDL::Surface
+        - SDL::Video
+        - lib
+        - SDL::TestTool
+    - bytesize: 1355
+      file_mime_type: ~
+      line_count: ~
+      md5: 7694cb800b9f85a74d3d5566cdbead29
+      mtime: 1270839181
+      name: t/core_palette.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+        - SDL
+        - SDL::Surface
+        - SDL::PixelFormat
+        - SDL::Video
+        - lib
+        - SDL::TestTool
+    - bytesize: 482
+      file_mime_type: ~
+      line_count: ~
+      md5: 18f5f51ee488d8fc1f880d732be09555
+      mtime: 1270839181
+      name: t/core_rect.t
+      uses:
+        - strict
+        - warnings
+        - Test::More
+    - bytesize: 1112
+      file_mime_type: ~
+      line_count: ~
+      md5: 5ef803a7a36806cd5e1434dc690eb120
+      mtime: 1270839181
+      name: t/core_rwops.t
+      uses:
+        - strict
+        - SDL
+        - Test::More
+        - SDL::RWOps
+    - bytesize: 3794
+      file_mime_type: ~
+      line_count: ~
+      md5: ea0d4b2db7df418b1bd85fdab325fd9e
+      mtime: 1270839181
+      name: t/core_surface.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - SDL::Surface
+        - SDL::App
+        - SDL::Rect
+        - SDL::Color
+        - SDL::Video
+        - SDL::PixelFormat
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 1407
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c0ec5a9c929c1ae0a6bdccd2cb10430
+      mtime: 1270841472
+      name: t/core_timer.t
+      uses:
+        - threads
+        - threads::shared
+        - strict
+        - SDL
+        - Test::More
+        - SDL::Time
+        - Config
+        - lib
+        - SDL::TestTool
+    - bytesize: 732
+      file_mime_type: ~
+      line_count: ~
+      md5: 6c1ac50d74d6f58f98b478544d8c842f
+      mtime: 1268088622
+      name: t/core_version.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Version
+        - Test::More
+    - bytesize: 14096
+      file_mime_type: ~
+      line_count: ~
+      md5: 7a1c5226d6be801f63755af37c3e673b
+      mtime: 1270839181
+      name: t/core_video.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Color
+        - SDL::Surface
+        - SDL::Config
+        - SDL::Overlay
+        - Test::More
+        - SDL::Rect
+        - SDL::Video
+        - SDL::VideoInfo
+        - lib
+        - SDL::TestTool
+    - bytesize: 477
+      file_mime_type: ~
+      line_count: ~
+      md5: 000ee10ac660f6d93054a67076de9f23
+      mtime: 1270839181
+      name: t/gfx.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Config
+        - SDL::Version
+        - SDL::GFX
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 1413
+      file_mime_type: ~
+      line_count: ~
+      md5: 9316a60a68cb02c512abac041f64c341
+      mtime: 1270839181
+      name: t/core_video_convert_surface.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Rect
+        - SDL::Color
+        - SDL::Video
+        - SDL::Surface
+        - SDL::PixelFormat
+        - SDL::Palette
+        - Test::More
+        - Data::Dumper
+        - Devel::Peek
+        - lib
+        - SDL::TestTool
+    - bytesize: 1661
+      file_mime_type: ~
+      line_count: ~
+      md5: 6f1be6523be5350c632c199788cbdb7a
+      mtime: 1270839181
+      name: t/eventpm.t
+      uses:
+        - strict
+        - Test::More
+    - bytesize: 511
+      file_mime_type: ~
+      line_count: ~
+      md5: 191b390fe5c4b3be94649e1e8f9888de
+      mtime: 1270839181
+      name: t/extendingrect.t
+      uses:
+        - base
+        - Carp
+        - Test::More
+    - bytesize: 1385
+      file_mime_type: ~
+      line_count: ~
+      md5: 955d64df3cbf8c97cc9b3636cdd68bc9
+      mtime: 1270839181
+      name: t/gfx_fpsmanager.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Config
+        - SDL::Version
+        - SDL::GFX
+        - SDL::GFX::Framerate
+        - SDL::GFX::FPSManager
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 1258
+      file_mime_type: ~
+      line_count: ~
+      md5: 6cdc2acbd608194b783586b08e5c145b
+      mtime: 1270839181
+      name: t/gfx_framerate.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Config
+        - SDL::Version
+        - SDL::GFX
+        - SDL::GFX::Framerate
+        - SDL::GFX::FPSManager
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 4455
+      file_mime_type: ~
+      line_count: ~
+      md5: ef622471be0ecd49070a2d263c64e90a
+      mtime: 1270839181
+      name: t/gfx_imagefilter.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Rect
+        - SDL::Config
+        - SDL::Video
+        - SDL::Version
+        - SDL::Surface
+        - SDL::GFX
+        - SDL::GFX::ImageFilter
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 12108
+      file_mime_type: ~
+      line_count: ~
+      md5: 44dfec21ced152a24b7b2e110da4c919
+      mtime: 1270839181
+      name: t/gfx_primitives.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Rect
+        - SDL::Config
+        - SDL::Video
+        - SDL::Version
+        - SDL::Surface
+        - SDL::GFX
+        - SDL::GFX::Primitives
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 7495
+      file_mime_type: ~
+      line_count: ~
+      md5: aa5e60465ebd27f20136ae527772db89
+      mtime: 1270839181
+      name: t/gfx_primitives2.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Rect
+        - SDL::Config
+        - SDL::Video
+        - SDL::Version
+        - SDL::Surface
+        - SDL::GFX
+        - SDL::GFX::Primitives
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 5037
+      file_mime_type: ~
+      line_count: ~
+      md5: 7b26da7093e16b8dfadfefdb76b95ebf
+      mtime: 1270839181
+      name: t/gfx_rotozoom.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Rect
+        - SDL::Config
+        - SDL::Video
+        - SDL::Version
+        - SDL::Surface
+        - SDL::GFX
+        - SDL::GFX::Rotozoom
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 3326
+      file_mime_type: ~
+      line_count: ~
+      md5: d6d8374cc4dda7f3be74192abf67aa94
+      mtime: 1270839181
+      name: t/image.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - SDL::Version
+        - SDL::Image
+        - SDL::RWOps
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 2509
+      file_mime_type: ~
+      line_count: ~
+      md5: ae689d93462fc6d3dc9cc2aed1aedcee
+      mtime: 1270839181
+      name: t/image_xpm_array.t
+      uses:
+        - SDL
+        - SDL::Config
+        - SDL::Rect
+        - SDL::Video
+        - SDL::Image
+        - SDL::Surface
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 2478
+      file_mime_type: ~
+      line_count: ~
+      md5: c084d5ab1e542978cf32823a34534f71
+      mtime: 1270839181
+      name: t/intergation1.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - SDL::Rect
+        - SDL::Game::Rect
+        - SDL::Color
+        - SDL::Video
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 2762
+      file_mime_type: ~
+      line_count: ~
+      md5: 6d982e99d2ae44e551bf06b4d96cc7b4
+      mtime: 1270839181
+      name: t/mixer.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::Mixer
+        - SDL::Version
+    - bytesize: 4129
+      file_mime_type: ~
+      line_count: ~
+      md5: fd5716fd5b77404cce555b3622640b78
+      mtime: 1270839181
+      name: t/mixer_channels.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::Mixer
+        - SDL::Mixer::Channels
+        - SDL::Mixer::Samples
+    - bytesize: 6182
+      file_mime_type: ~
+      line_count: ~
+      md5: 1ac15cc7d4be99a591099981d60f4021
+      mtime: 1270841488
+      name: t/mixer_effects.t
+      uses:
+        - strict
+        - threads
+        - threads::shared
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - Config
+        - SDL::Mixer
+        - SDL::Mixer::Channels
+        - SDL::Mixer::Effects
+        - SDL::Mixer::Samples
+    - bytesize: 3687
+      file_mime_type: ~
+      line_count: ~
+      md5: db8f24e8bb8e3f6d97a1b2fffd55c632
+      mtime: 1270839181
+      name: t/mixer_groups.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::Mixer
+        - SDL::Mixer::Channels
+        - SDL::Mixer::Groups
+        - SDL::Mixer::Samples
+    - bytesize: 1033
+      file_mime_type: ~
+      line_count: ~
+      md5: 3f2c2f729e441eaaa79412a0ad8116e5
+      mtime: 1270839181
+      name: t/mixer_mixchunk.t
+      uses:
+        - strict
+        - warnings
+        - SDL
+        - SDL::Config
+        - SDL::Mixer
+        - SDL::Mixer::Channels
+        - SDL::Mixer::Samples
+        - SDL::Mixer::MixChunk
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 977
+      file_mime_type: ~
+      line_count: ~
+      md5: 4b3f4eb622a331cd55efb927a73e39a8
+      mtime: 1270839181
+      name: t/mixer_mixmusic.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+    - bytesize: 5939
+      file_mime_type: ~
+      line_count: ~
+      md5: 27132a85d3c0297a9d8a7c4b67e886f0
+      mtime: 1270841504
+      name: t/mixer_music.t
+      uses:
+        - strict
+        - threads
+        - threads::shared
+        - SDL
+        - SDL::Config
+        - Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::Mixer
+        - SDL::Mixer::Music
+        - SDL::Mixer::Samples
+        - SDL::Version
+    - bytesize: 2308
+      file_mime_type: ~
+      line_count: ~
+      md5: 52d0cba463ae79e2f5324659f1d86314
+      mtime: 1270839181
+      name: t/mixer_samples.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::Mixer
+        - SDL::Mixer::MixChunk
+        - SDL::Mixer::Samples
+        - SDL::Mixer::Channels
+        - SDL::RWOps
+        - SDL::Version
+    - bytesize: 1723
+      file_mime_type: ~
+      line_count: ~
+      md5: 905e4d6673adfcb8c1a2996ef0a9608a
+      mtime: 1270839181
+      name: t/mpegpm.t
+      uses:
+        - strict
+        - SDL::Config
+        - Test::More
+    - bytesize: 2018
+      file_mime_type: ~
+      line_count: ~
+      md5: 873997f36b28cd6a18784b01d37f111c
+      mtime: 1270839181
+      name: t/opengl.t
+      uses:
+        - strict
+        - SDL::Config
+        - Test::More
+    - bytesize: 4024
+      file_mime_type: ~
+      line_count: ~
+      md5: 346fb2b9f7332e6c684e717bcbcfb77a
+      mtime: 1270839181
+      name: t/pango.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - SDL::Color
+        - SDL::Surface
+        - SDL::Overlay
+        - SDL::Rect
+        - SDL::Video
+        - SDL::PixelFormat
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::Pango
+        - SDL::Pango::Context
+        - SDL::Version
+    - bytesize: 5173
+      file_mime_type: ~
+      line_count: ~
+      md5: 14e6f4dea7eaa14a09a79b7c66031df2
+      mtime: 1270839181
+      name: t/sdlgamerect.t
+      uses:
+        - Test::More
+        - strict
+        - SDL
+    - bytesize: 487
+      file_mime_type: ~
+      line_count: ~
+      md5: f18ba72174c0dc08e204d8170e138cd6
+      mtime: 1270839181
+      name: t/smpeg.t
+      uses:
+        - strict
+        - SDL::Config
+        - Test::More
+    - bytesize: 1394
+      file_mime_type: ~
+      line_count: ~
+      md5: 5903188b55d14d5c5f7f5fbd5ffee7ca
+      mtime: 1270839181
+      name: t/soundpm.t
+      uses:
+        - strict
+        - SDL::Config
+        - Test::More
+    - bytesize: 14311
+      file_mime_type: ~
+      line_count: ~
+      md5: cccb8364be4588993067b0fbd4869a88
+      mtime: 1270839181
+      name: t/ttf.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - SDL::Color
+        - SDL::Surface
+        - SDL::Overlay
+        - SDL::Rect
+        - SDL::Video
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::TTF
+        - SDL::TTF::Font
+        - SDL::RWOps
+        - SDL::Version
+        - Encode
+    - bytesize: 1055
+      file_mime_type: ~
+      line_count: ~
+      md5: 114812fdfc8252c9a492d149d0d8d6f7
+      mtime: 1270839181
+      name: t/ttf_font.t
+      uses:
+        - strict
+        - SDL
+        - SDL::Config
+        - Test::More
+        - lib
+        - SDL::TestTool
+        - SDL::TTF
+        - SDL::TTF::Font
+        - SDL::Version
+  tests:
+    - t/00-load.t
+    - t/apppm.t
+    - t/colorpm.t
+    - t/config.t
+    - t/core.t
+    - t/core_audio.t
+    - t/core_audiospec.t
+    - t/core_cd.t
+    - t/core_error.t
+    - t/core_events.t
+    - t/core_joystick.t
+    - t/core_mouse.t
+    - t/core_multi.t
+    - t/core_overlay.t
+    - t/core_palette.t
+    - t/core_rect.t
+    - t/core_rwops.t
+    - t/core_surface.t
+    - t/core_timer.t
+    - t/core_version.t
+    - t/core_video.t
+    - t/gfx.t
+    - t/core_video_convert_surface.t
+    - t/eventpm.t
+    - t/extendingrect.t
+    - t/gfx_fpsmanager.t
+    - t/gfx_framerate.t
+    - t/gfx_imagefilter.t
+    - t/gfx_primitives.t
+    - t/gfx_primitives2.t
+    - t/gfx_rotozoom.t
+    - t/image.t
+    - t/image_xpm_array.t
+    - t/intergation1.t
+    - t/mixer.t
+    - t/mixer_channels.t
+    - t/mixer_effects.t
+    - t/mixer_groups.t
+    - t/mixer_mixchunk.t
+    - t/mixer_mixmusic.t
+    - t/mixer_music.t
+    - t/mixer_samples.t
+    - t/mpegpm.t
+    - t/opengl.t
+    - t/pango.t
+    - t/sdlgamerect.t
+    - t/smpeg.t
+    - t/soundpm.t
+    - t/ttf.t
+    - t/ttf_font.t
+  unpack_dir: /usr/home/brian/W39A5qpufC/MyCPAN-Indexer-57867.LF0x
+run_info:
+  ENV:
+    AUTOMATED_TESTING: 1
+    DISPLAY: localhost:0
+    HOME: /home/brian
+    PWD: /home/brian
+    TERM: vt100
+    USER: brian
+  alarm: 90
+  backpan_dir: /home/brian/CPAN
+  child_pid: 57867
+  collator_class: MyCPAN::Indexer::Collator::Null
+  completed: 1
+  copy_bad_dists: 0
+  dispatcher_class: MyCPAN::Indexer::Dispatcher::Serial
+  error_report_subdir: /home/brian/indexer_reports/error
+  examine_end_time: 1271780205
+  examine_start_time: 1271780142
+  examine_time: 63
+  indexer: MyCPAN::Indexer
+  indexer_class: MyCPAN::Indexer
+  indexer_id: 'Joe Example <joe@example.com>'
+  indexer_versions: 1.28_10
+  interface_class: MyCPAN::Indexer::Interface::ShowDist
+  log4perl_file: backpan.log4perl
+  log_file_watch_time: 30
+  operating_system: freebsd
+  operating_system_type: Unix
+  organize_dists: 0
+  parallel_jobs: 1
+  parent_pid: 1
+  pause_full_name: 'MyCPAN user <CENSORED>'
+  pause_id: MYCPAN
+  perl_config:
+    Author: ''
+    CONFIG: true
+    Date: $Date
+    Header: ''
+    Id: $Id
+    Locker: ''
+    Log: $Log
+    PATCHLEVEL: 10
+    PERL_API_REVISION: 5
+    PERL_API_SUBVERSION: 0
+    PERL_API_VERSION: 10
+    PERL_CONFIG_SH: true
+    PERL_PATCHLEVEL: ''
+    PERL_REVISION: 5
+    PERL_SUBVERSION: 1
+    PERL_VERSION: 10
+    RCSfile: $RCSfile
+    Revision: $Revision
+    SUBVERSION: 1
+    Source: ''
+    State: ''
+    _a: .a
+    _exe: ''
+    _o: .o
+    afs: false
+    afsroot: /afs
+    alignbytes: 4
+    ansi2knr: ''
+    aphostname: /bin/hostname
+    api_revision: 5
+    api_subversion: 0
+    api_version: 10
+    api_versionstring: 5.10.0
+    ar: ar
+    archlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    archname: i386-freebsd
+    archname64: ''
+    archobjs: ''
+    asctime_r_proto: 0
+    awk: awk
+    baserev: 5.0
+    bash: ''
+    bin: /usr/local/perls/perl-5.10.1/bin
+    binexp: /usr/local/perls/perl-5.10.1/bin
+    bison: bison
+    byacc: byacc
+    byteorder: 1234
+    c: ''
+    castflags: 0
+    cat: cat
+    cc: cc
+    cccdlflags: -DPIC -fPIC
+    ccdlflags: ' '
+    ccflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_nolargefiles: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    ccflags_uselargefiles: ''
+    ccname: gcc
+    ccsymbols: _LONGLONG=1
+    ccversion: ''
+    cf_by: brian
+    cf_email: brian@freebsd..local
+    cf_time: Thu Feb 25 03:44:28 CST 2010
+    chgrp: ''
+    chmod: chmod
+    chown: ''
+    clocktype: clock_t
+    comm: comm
+    compress: ''
+    config_arg0: ./Configure
+    config_arg1: -des
+    config_arg2: -Dprefix=/usr/local/perls/perl-5.10.1
+    config_argc: 2
+    config_args: -des -Dprefix=/usr/local/perls/perl-5.10.1
+    contains: grep
+    cp: cp
+    cpio: ''
+    cpp: cpp
+    cpp_stuff: 42
+    cppccsymbols: ''
+    cppflags: -DHAS_FPSETMASK -DHAS_FLOATINGPOINT_H -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include
+    cpplast: -
+    cppminus: -
+    cpprun: cc -E
+    cppstdin: cc -E
+    cppsymbols: __ELF__=1 __FreeBSD__=8 __GNUC__=4 __GNUC_MINOR__=2 _LONGLONG=1 __STDC__=1 i386=1 __i386=1 __i386__=1 unix=1 __unix=1 __unix__=1
+    crypt_r_proto: 0
+    cryptlib: ''
+    csh: csh
+    ctermid_r_proto: 0
+    ctime_r_proto: 0
+    d_Gconvert: 'sprintf((b),"%.*g",(n),(x))'
+    d_PRIEUldbl: define
+    d_PRIFUldbl: define
+    d_PRIGUldbl: define
+    d_PRIXU64: define
+    d_PRId64: define
+    d_PRIeldbl: define
+    d_PRIfldbl: define
+    d_PRIgldbl: define
+    d_PRIi64: define
+    d_PRIo64: define
+    d_PRIu64: define
+    d_PRIx64: define
+    d_SCNfldbl: define
+    d__fwalk: ~
+    d_access: define
+    d_accessx: ~
+    d_aintl: ~
+    d_alarm: define
+    d_archlib: define
+    d_asctime64: ~
+    d_asctime_r: ~
+    d_atolf: ~
+    d_atoll: define
+    d_attribute_deprecated: define
+    d_attribute_format: define
+    d_attribute_malloc: define
+    d_attribute_nonnull: define
+    d_attribute_noreturn: define
+    d_attribute_pure: define
+    d_attribute_unused: define
+    d_attribute_warn_unused_result: define
+    d_bcmp: define
+    d_bcopy: define
+    d_bsd: define
+    d_bsdgetpgrp: ~
+    d_bsdsetpgrp: define
+    d_builtin_choose_expr: define
+    d_builtin_expect: define
+    d_bzero: define
+    d_c99_variadic_macros: define
+    d_casti32: ~
+    d_castneg: define
+    d_charvspr: ~
+    d_chown: define
+    d_chroot: define
+    d_chsize: ~
+    d_class: ~
+    d_clearenv: ~
+    d_closedir: define
+    d_cmsghdr_s: define
+    d_const: define
+    d_copysignl: define
+    d_cplusplus: ~
+    d_crypt: define
+    d_crypt_r: ~
+    d_csh: define
+    d_ctermid: define
+    d_ctermid_r: ~
+    d_ctime64: ~
+    d_ctime_r: ~
+    d_cuserid: ~
+    d_dbl_dig: define
+    d_dbminitproto: ~
+    d_difftime: define
+    d_difftime64: ~
+    d_dir_dd_fd: define
+    d_dirfd: define
+    d_dirnamlen: define
+    d_dlerror: define
+    d_dlopen: define
+    d_dlsymun: ~
+    d_dosuid: ~
+    d_drand48_r: ~
+    d_drand48proto: define
+    d_dup2: define
+    d_eaccess: define
+    d_endgrent: define
+    d_endgrent_r: ~
+    d_endhent: define
+    d_endhostent_r: ~
+    d_endnent: define
+    d_endnetent_r: ~
+    d_endpent: define
+    d_endprotoent_r: ~
+    d_endpwent: define
+    d_endpwent_r: ~
+    d_endsent: define
+    d_endservent_r: ~
+    d_eofnblk: define
+    d_eunice: ~
+    d_faststdio: define
+    d_fchdir: define
+    d_fchmod: define
+    d_fchown: define
+    d_fcntl: define
+    d_fcntl_can_lock: define
+    d_fd_macros: define
+    d_fd_set: define
+    d_fds_bits: define
+    d_fgetpos: define
+    d_finite: define
+    d_finitel: ~
+    d_flexfnam: define
+    d_flock: define
+    d_flockproto: define
+    d_fork: define
+    d_fp_class: ~
+    d_fpathconf: define
+    d_fpclass: ~
+    d_fpclassify: ~
+    d_fpclassl: ~
+    d_fpos64_t: ~
+    d_frexpl: define
+    d_fs_data_s: ~
+    d_fseeko: define
+    d_fsetpos: define
+    d_fstatfs: define
+    d_fstatvfs: define
+    d_fsync: define
+    d_ftello: define
+    d_ftime: ~
+    d_futimes: define
+    d_gdbm_ndbm_h_uses_prototypes: ~
+    d_gdbmndbm_h_uses_prototypes: ~
+    d_getaddrinfo: define
+    d_getcwd: define
+    d_getespwnam: ~
+    d_getfsstat: define
+    d_getgrent: define
+    d_getgrent_r: ~
+    d_getgrgid_r: ~
+    d_getgrnam_r: ~
+    d_getgrps: define
+    d_gethbyaddr: define
+    d_gethbyname: define
+    d_gethent: define
+    d_gethname: define
+    d_gethostbyaddr_r: ~
+    d_gethostbyname_r: ~
+    d_gethostent_r: ~
+    d_gethostprotos: define
+    d_getitimer: define
+    d_getlogin: define
+    d_getlogin_r: ~
+    d_getmnt: ~
+    d_getmntent: ~
+    d_getnameinfo: define
+    d_getnbyaddr: define
+    d_getnbyname: define
+    d_getnent: define
+    d_getnetbyaddr_r: ~
+    d_getnetbyname_r: ~
+    d_getnetent_r: ~
+    d_getnetprotos: define
+    d_getpagsz: define
+    d_getpbyname: define
+    d_getpbynumber: define
+    d_getpent: define
+    d_getpgid: define
+    d_getpgrp: define
+    d_getpgrp2: ~
+    d_getppid: define
+    d_getprior: define
+    d_getprotobyname_r: ~
+    d_getprotobynumber_r: ~
+    d_getprotoent_r: ~
+    d_getprotoprotos: define
+    d_getprpwnam: ~
+    d_getpwent: define
+    d_getpwent_r: ~
+    d_getpwnam_r: ~
+    d_getpwuid_r: ~
+    d_getsbyname: define
+    d_getsbyport: define
+    d_getsent: define
+    d_getservbyname_r: ~
+    d_getservbyport_r: ~
+    d_getservent_r: ~
+    d_getservprotos: define
+    d_getspnam: ~
+    d_getspnam_r: ~
+    d_gettimeod: define
+    d_gmtime64: ~
+    d_gmtime_r: ~
+    d_gnulibc: ~
+    d_grpasswd: define
+    d_hasmntopt: ~
+    d_htonl: define
+    d_ilogbl: define
+    d_inc_version_list: ~
+    d_index: ~
+    d_inetaton: define
+    d_inetntop: define
+    d_inetpton: define
+    d_int64_t: define
+    d_isascii: define
+    d_isfinite: ~
+    d_isinf: define
+    d_isnan: define
+    d_isnanl: ~
+    d_killpg: define
+    d_lchown: define
+    d_ldbl_dig: define
+    d_libm_lib_version: ~
+    d_link: define
+    d_localtime64: ~
+    d_localtime_r: ~
+    d_localtime_r_needs_tzset: ~
+    d_locconv: define
+    d_lockf: define
+    d_longdbl: define
+    d_longlong: define
+    d_lseekproto: define
+    d_lstat: define
+    d_madvise: define
+    d_malloc_good_size: ~
+    d_malloc_size: ~
+    d_mblen: define
+    d_mbstowcs: define
+    d_mbtowc: define
+    d_memchr: define
+    d_memcmp: define
+    d_memcpy: define
+    d_memmove: define
+    d_memset: define
+    d_mkdir: define
+    d_mkdtemp: define
+    d_mkfifo: define
+    d_mkstemp: define
+    d_mkstemps: define
+    d_mktime: define
+    d_mktime64: ~
+    d_mmap: define
+    d_modfl: define
+    d_modfl_pow32_bug: ~
+    d_modflproto: define
+    d_mprotect: define
+    d_msg: define
+    d_msg_ctrunc: define
+    d_msg_dontroute: define
+    d_msg_oob: define
+    d_msg_peek: define
+    d_msg_proxy: ~
+    d_msgctl: define
+    d_msgget: define
+    d_msghdr_s: define
+    d_msgrcv: define
+    d_msgsnd: define
+    d_msync: define
+    d_munmap: define
+    d_mymalloc: ~
+    d_ndbm: define
+    d_ndbm_h_uses_prototypes: define
+    d_nice: define
+    d_nl_langinfo: define
+    d_nv_preserves_uv: define
+    d_nv_zero_is_allbits_zero: define
+    d_off64_t: ~
+    d_old_pthread_create_joinable: ~
+    d_oldpthreads: ~
+    d_oldsock: ~
+    d_open3: define
+    d_pathconf: define
+    d_pause: define
+    d_perl_otherlibdirs: ~
+    d_phostname: ~
+    d_pipe: define
+    d_poll: define
+    d_portable: define
+    d_printf_format_null: ~
+    d_procselfexe: ~
+    d_pseudofork: ~
+    d_pthread_atfork: define
+    d_pthread_attr_setscope: define
+    d_pthread_yield: ~
+    d_pwage: ~
+    d_pwchange: define
+    d_pwclass: define
+    d_pwcomment: ~
+    d_pwexpire: define
+    d_pwgecos: define
+    d_pwpasswd: define
+    d_pwquota: ~
+    d_qgcvt: ~
+    d_quad: define
+    d_random_r: ~
+    d_readdir: define
+    d_readdir64_r: ~
+    d_readdir_r: ~
+    d_readlink: define
+    d_readv: define
+    d_recvmsg: define
+    d_rename: define
+    d_rewinddir: define
+    d_rmdir: define
+    d_safebcpy: ~
+    d_safemcpy: ~
+    d_sanemcmp: define
+    d_sbrkproto: define
+    d_scalbnl: define
+    d_sched_yield: define
+    d_scm_rights: define
+    d_seekdir: define
+    d_select: define
+    d_sem: define
+    d_semctl: define
+    d_semctl_semid_ds: define
+    d_semctl_semun: define
+    d_semget: define
+    d_semop: define
+    d_sendmsg: define
+    d_setegid: define
+    d_seteuid: define
+    d_setgrent: define
+    d_setgrent_r: ~
+    d_setgrps: define
+    d_sethent: define
+    d_sethostent_r: ~
+    d_setitimer: define
+    d_setlinebuf: define
+    d_setlocale: define
+    d_setlocale_r: ~
+    d_setnent: define
+    d_setnetent_r: ~
+    d_setpent: define
+    d_setpgid: define
+    d_setpgrp: define
+    d_setpgrp2: ~
+    d_setprior: define
+    d_setproctitle: define
+    d_setprotoent_r: ~
+    d_setpwent: define
+    d_setpwent_r: ~
+    d_setregid: define
+    d_setresgid: define
+    d_setresuid: define
+    d_setreuid: define
+    d_setrgid: define
+    d_setruid: define
+    d_setsent: define
+    d_setservent_r: ~
+    d_setsid: define
+    d_setvbuf: define
+    d_sfio: ~
+    d_shm: define
+    d_shmat: define
+    d_shmatprototype: define
+    d_shmctl: define
+    d_shmdt: define
+    d_shmget: define
+    d_sigaction: define
+    d_signbit: define
+    d_sigprocmask: define
+    d_sigsetjmp: define
+    d_sitearch: define
+    d_snprintf: define
+    d_sockatmark: define
+    d_sockatmarkproto: define
+    d_socket: define
+    d_socklen_t: define
+    d_sockpair: define
+    d_socks5_init: ~
+    d_sprintf_returns_strlen: define
+    d_sqrtl: define
+    d_srand48_r: ~
+    d_srandom_r: ~
+    d_sresgproto: define
+    d_sresuproto: define
+    d_statblks: define
+    d_statfs_f_flags: define
+    d_statfs_s: define
+    d_statvfs: define
+    d_stdio_cnt_lval: define
+    d_stdio_ptr_lval: define
+    d_stdio_ptr_lval_nochange_cnt: define
+    d_stdio_ptr_lval_sets_cnt: ~
+    d_stdio_stream_array: ~
+    d_stdiobase: define
+    d_stdstdio: define
+    d_strchr: define
+    d_strcoll: define
+    d_strctcpy: define
+    d_strerrm: strerror(e)
+    d_strerror: define
+    d_strerror_r: ~
+    d_strftime: define
+    d_strlcat: define
+    d_strlcpy: define
+    d_strtod: define
+    d_strtol: define
+    d_strtold: define
+    d_strtoll: define
+    d_strtoq: define
+    d_strtoul: define
+    d_strtoull: define
+    d_strtouq: define
+    d_strxfrm: define
+    d_suidsafe: ~
+    d_symlink: define
+    d_syscall: define
+    d_syscallproto: define
+    d_sysconf: define
+    d_sysernlst: ''
+    d_syserrlst: define
+    d_system: define
+    d_tcgetpgrp: define
+    d_tcsetpgrp: define
+    d_telldir: define
+    d_telldirproto: define
+    d_time: define
+    d_timegm: define
+    d_times: define
+    d_tm_tm_gmtoff: define
+    d_tm_tm_zone: define
+    d_tmpnam_r: ~
+    d_truncate: define
+    d_ttyname_r: ~
+    d_tzname: define
+    d_u32align: ~
+    d_ualarm: define
+    d_umask: define
+    d_uname: define
+    d_union_semun: define
+    d_unordered: ~
+    d_unsetenv: define
+    d_usleep: define
+    d_usleepproto: define
+    d_ustat: ~
+    d_vendorarch: ~
+    d_vendorbin: ~
+    d_vendorlib: ~
+    d_vendorscript: ~
+    d_vfork: define
+    d_void_closedir: ~
+    d_voidsig: define
+    d_voidtty: ''
+    d_volatile: define
+    d_vprintf: define
+    d_vsnprintf: define
+    d_wait4: define
+    d_waitpid: define
+    d_wcstombs: define
+    d_wctomb: define
+    d_writev: define
+    d_xenix: ~
+    date: date
+    db_hashtype: u_int32_t
+    db_prefixtype: size_t
+    db_version_major: 1
+    db_version_minor: 0
+    db_version_patch: 0
+    defvoidused: 15
+    direntrytype: struct dirent
+    dlext: so
+    dlsrc: dl_dlopen.xs
+    doublesize: 8
+    drand01: drand48()
+    drand48_r_proto: 0
+    dtrace: ''
+    dynamic_ext: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared
+    eagain: EAGAIN
+    ebcdic: ~
+    echo: echo
+    egrep: egrep
+    emacs: ''
+    endgrent_r_proto: 0
+    endhostent_r_proto: 0
+    endnetent_r_proto: 0
+    endprotoent_r_proto: 0
+    endpwent_r_proto: 0
+    endservent_r_proto: 0
+    eunicefix: ':'
+    exe_ext: ''
+    expr: expr
+    extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize XS/APItest XS/Typemap attrs mro re threads threads/shared Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    extern_C: extern
+    extras: ''
+    fflushNULL: define
+    fflushall: ~
+    find: ''
+    firstmakefile: makefile
+    flex: ''
+    fpossize: 8
+    fpostype: fpos_t
+    freetype: void
+    from: ':'
+    full_ar: /usr/bin/ar
+    full_csh: /bin/csh
+    full_sed: /usr/bin/sed
+    gccansipedantic: ''
+    gccosandvers: ''
+    gccversion: '4.2.1 20070719  [FreeBSD]'
+    getgrent_r_proto: 0
+    getgrgid_r_proto: 0
+    getgrnam_r_proto: 0
+    gethostbyaddr_r_proto: 0
+    gethostbyname_r_proto: 0
+    gethostent_r_proto: 0
+    getlogin_r_proto: 0
+    getnetbyaddr_r_proto: 0
+    getnetbyname_r_proto: 0
+    getnetent_r_proto: 0
+    getprotobyname_r_proto: 0
+    getprotobynumber_r_proto: 0
+    getprotoent_r_proto: 0
+    getpwent_r_proto: 0
+    getpwnam_r_proto: 0
+    getpwuid_r_proto: 0
+    getservbyname_r_proto: 0
+    getservbyport_r_proto: 0
+    getservent_r_proto: 0
+    getspnam_r_proto: 0
+    gidformat: '"lu"'
+    gidsign: 1
+    gidsize: 4
+    gidtype: gid_t
+    git_branch: ''
+    git_commit_id: ''
+    git_commit_id_title: ''
+    git_describe: ''
+    git_uncommitted_changes: ''
+    glibpth: /usr/lib /usr/local/lib
+    gmake: gmake
+    gmtime_r_proto: 0
+    gnulibc_version: ''
+    grep: grep
+    groupcat: cat /etc/group
+    groupstype: gid_t
+    gzip: gzip
+    h_fcntl: false
+    h_sysfile: true
+    hint: recommended
+    hostcat: cat /etc/hosts
+    html1dir: ' '
+    html1direxp: ''
+    html3dir: ' '
+    html3direxp: ''
+    i16size: 2
+    i16type: short
+    i32size: 4
+    i32type: long
+    i64size: 8
+    i64type: long long
+    i8size: 1
+    i8type: signed char
+    i_arpainet: define
+    i_assert: define
+    i_bsdioctl: ''
+    i_crypt: ~
+    i_db: define
+    i_dbm: ~
+    i_dirent: define
+    i_dld: ~
+    i_dlfcn: define
+    i_fcntl: ~
+    i_float: define
+    i_fp: ~
+    i_fp_class: ~
+    i_gdbm: define
+    i_gdbm_ndbm: ~
+    i_gdbmndbm: ~
+    i_grp: define
+    i_ieeefp: define
+    i_inttypes: define
+    i_langinfo: define
+    i_libutil: define
+    i_limits: define
+    i_locale: define
+    i_machcthr: ~
+    i_malloc: ~
+    i_mallocmalloc: ~
+    i_math: define
+    i_memory: ~
+    i_mntent: ~
+    i_ndbm: define
+    i_netdb: define
+    i_neterrno: ~
+    i_netinettcp: define
+    i_niin: define
+    i_poll: define
+    i_prot: ~
+    i_pthread: define
+    i_pwd: define
+    i_rpcsvcdbm: ~
+    i_sfio: ~
+    i_sgtty: ~
+    i_shadow: ~
+    i_socks: ~
+    i_stdarg: define
+    i_stddef: define
+    i_stdlib: define
+    i_string: define
+    i_sunmath: ~
+    i_sysaccess: ~
+    i_sysdir: define
+    i_sysfile: define
+    i_sysfilio: define
+    i_sysin: ~
+    i_sysioctl: define
+    i_syslog: define
+    i_sysmman: define
+    i_sysmode: ~
+    i_sysmount: define
+    i_sysndir: ~
+    i_sysparam: define
+    i_syspoll: define
+    i_sysresrc: define
+    i_syssecrt: ~
+    i_sysselct: define
+    i_syssockio: define
+    i_sysstat: define
+    i_sysstatfs: ~
+    i_sysstatvfs: define
+    i_systime: define
+    i_systimek: ~
+    i_systimes: define
+    i_systypes: define
+    i_sysuio: define
+    i_sysun: define
+    i_sysutsname: define
+    i_sysvfs: ~
+    i_syswait: define
+    i_termio: ~
+    i_termios: define
+    i_time: ~
+    i_unistd: define
+    i_ustat: ~
+    i_utime: define
+    i_values: ~
+    i_varargs: ~
+    i_varhdr: stdarg.h
+    i_vfork: ~
+    ignore_versioned_solibs: ''
+    inc_version_list: ' '
+    inc_version_list_init: 0
+    incpath: ''
+    inews: ''
+    initialinstalllocation: /usr/local/perls/perl-5.10.1/bin
+    installarchlib: /usr/local/perls/perl-5.10.1/lib/5.10.1/i386-freebsd
+    installbin: /usr/local/perls/perl-5.10.1/bin
+    installhtml1dir: ''
+    installhtml3dir: ''
+    installman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installprefix: /usr/local/perls/perl-5.10.1
+    installprefixexp: /usr/local/perls/perl-5.10.1
+    installprivlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    installscript: /usr/local/perls/perl-5.10.1/bin
+    installsitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    installsitebin: /usr/local/perls/perl-5.10.1/bin
+    installsitehtml1dir: ''
+    installsitehtml3dir: ''
+    installsitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    installsiteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    installsiteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    installsitescript: /usr/local/perls/perl-5.10.1/bin
+    installstyle: lib
+    installusrbinperl: define
+    installvendorarch: ''
+    installvendorbin: ''
+    installvendorhtml1dir: ''
+    installvendorhtml3dir: ''
+    installvendorlib: ''
+    installvendorman1dir: ''
+    installvendorman3dir: ''
+    installvendorscript: ''
+    intsize: 4
+    issymlink: test -h
+    ivdformat: '"ld"'
+    ivsize: 4
+    ivtype: long
+    known_extensions: B Compress/Raw/Bzip2 Compress/Raw/Zlib Cwd DB_File Data/Dumper Devel/DProf Devel/PPPort Devel/Peek Digest/MD5 Digest/SHA Encode Fcntl File/Glob Filter/Util/Call GDBM_File Hash/Util Hash/Util/FieldHash I18N/Langinfo IO IO/Compress IPC/SysV List/Util MIME/Base64 Math/BigInt/FastCalc NDBM_File ODBM_File Opcode POSIX PerlIO/encoding PerlIO/scalar PerlIO/via SDBM_File Socket Storable Sys/Hostname Sys/Syslog Text/Soundex Time/HiRes Time/Piece Unicode/Normalize Win32 Win32API/File Win32CORE XS/APItest XS/Typemap attrs mro re threads threads/shared
+    ksh: ''
+    ld: cc
+    lddlflags: -shared  -L/usr/local/lib -fstack-protector
+    ldflags: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_nolargefiles: '-Wl,-E  -fstack-protector -L/usr/local/lib'
+    ldflags_uselargefiles: ''
+    ldlibpthname: LD_LIBRARY_PATH
+    less: less
+    lib_ext: .a
+    libc: ''
+    libperl: libperl.a
+    libpth: /usr/lib /usr/local/lib
+    libs: -lgdbm -lm -lcrypt -lutil -lc
+    libs_nolargefiles: -lgdbm -lm -lcrypt -lutil -lc
+    libsdirs: ' /usr/local/lib /usr/lib'
+    libsfiles: ' libgdbm.so.3 libm.so libcrypt.so libutil.so libc.so'
+    libsfound: ' /usr/local/lib/libgdbm.so.3 /usr/lib/libm.so /usr/lib/libcrypt.so /usr/lib/libutil.so /usr/lib/libc.so'
+    libspath: ' /usr/lib /usr/local/lib'
+    libswanted: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_nolargefiles: sfio socket bind inet nsl nm ndbm gdbm dbm db dl dld ld sun m crypt sec util c cposix posix ucb bsd BSD
+    libswanted_uselargefiles: ''
+    line: ''
+    lint: ''
+    lkflags: ''
+    ln: ln
+    lns: /bin/ln -s
+    localtime_r_proto: 0
+    locincpth: /usr/local/include /opt/local/include /usr/gnu/include /opt/gnu/include /usr/GNU/include /opt/GNU/include
+    loclibpth: /usr/local/lib /opt/local/lib /usr/gnu/lib /opt/gnu/lib /usr/GNU/lib /opt/GNU/lib
+    longdblsize: 12
+    longlongsize: 8
+    longsize: 4
+    lp: ''
+    lpr: ''
+    ls: ls
+    lseeksize: 8
+    lseektype: off_t
+    mad: ~
+    madlyh: ''
+    madlyobj: ''
+    madlysrc: ''
+    mail: ''
+    mailx: ''
+    make: make
+    make_set_make: '#'
+    mallocobj: ''
+    mallocsrc: ''
+    malloctype: void *
+    man1dir: /usr/local/perls/perl-5.10.1/man/man1
+    man1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    man1ext: 1
+    man3dir: /usr/local/perls/perl-5.10.1/man/man3
+    man3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    man3ext: 3
+    mips_type: ''
+    mistrustnm: ''
+    mkdir: mkdir
+    mmaptype: void *
+    modetype: mode_t
+    more: more
+    multiarch: ~
+    mv: ''
+    myarchname: i386-freebsd
+    mydomain: ..local
+    myhostname: freebsd
+    myuname: 'freebsd freebsd..local 8.0-release freebsd 8.0-release #0: sat nov 21 15:48:17 utc 2009 root@almeida.cse.buffalo.edu:usrobjusrsrcsysgeneric i386 '
+    n: -n
+    need_va_copy: ~
+    netdb_hlen_type: size_t
+    netdb_host_type: const void *
+    netdb_name_type: const char *
+    netdb_net_type: in_addr_t
+    nm: nm
+    nm_opt: ''
+    nm_so_opt: ''
+    nonxs_ext: Attribute/Handlers Errno Module/Pluggable Safe Test/Harness
+    nroff: nroff
+    nvEUformat: '"E"'
+    nvFUformat: '"F"'
+    nvGUformat: '"G"'
+    nv_overflows_integers_at: 256.0*256.0*256.0*256.0*256.0*256.0*2.0*2.0*2.0*2.0*2.0
+    nv_preserves_uv_bits: 32
+    nveformat: '"e"'
+    nvfformat: '"f"'
+    nvgformat: '"g"'
+    nvsize: 8
+    nvtype: double
+    o_nonblock: O_NONBLOCK
+    obj_ext: .o
+    old_pthread_create_joinable: ''
+    optimize: -O
+    orderlib: false
+    osname: freebsd
+    osvers: 8.0-release
+    otherlibdirs: ' '
+    package: perl5
+    pager: /usr/bin/less
+    passcat: cat /etc/passwd
+    patchlevel: 10
+    path_sep: ':'
+    perl: ''
+    perl5: /usr/local/bin/perl
+    perl_patchlevel: ''
+    perladmin: brian@freebsd..local
+    perllibs: -lm -lcrypt -lutil -lc
+    perlpath: /usr/local/perls/perl-5.10.1/bin/perl
+    pg: pg
+    phostname: hostname
+    pidtype: pid_t
+    plibpth: ''
+    pmake: ''
+    pr: ''
+    prefix: /usr/local/perls/perl-5.10.1
+    prefixexp: /usr/local/perls/perl-5.10.1
+    privlib: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    privlibexp: /usr/local/perls/perl-5.10.1/lib/5.10.1
+    procselfexe: ''
+    prototype: define
+    ptrsize: 4
+    quadkind: 3
+    quadtype: long long
+    randbits: 48
+    randfunc: drand48
+    random_r_proto: 0
+    randseedtype: long
+    ranlib: ':'
+    rd_nodata: -1
+    readdir64_r_proto: 0
+    readdir_r_proto: 0
+    revision: 5
+    rm: rm
+    rm_try: '/bin/rm -f try try a.out .out try.[cho] try..o core core.try* try.core*'
+    rmail: ''
+    run: ''
+    runnm: false
+    sGMTIME_max: 2147483647
+    sGMTIME_min: -2147483648
+    sLOCALTIME_max: 2147483647
+    sLOCALTIME_min: -2147483648
+    sPRIEUldbl: '"LE"'
+    sPRIFUldbl: '"LF"'
+    sPRIGUldbl: '"LG"'
+    sPRIXU64: '"llX"'
+    sPRId64: '"lld"'
+    sPRIeldbl: '"Le"'
+    sPRIfldbl: '"Lf"'
+    sPRIgldbl: '"Lg"'
+    sPRIi64: '"lli"'
+    sPRIo64: '"llo"'
+    sPRIu64: '"llu"'
+    sPRIx64: '"llx"'
+    sSCNfldbl: '"Lf"'
+    sched_yield: sched_yield()
+    scriptdir: /usr/local/perls/perl-5.10.1/bin
+    scriptdirexp: /usr/local/perls/perl-5.10.1/bin
+    sed: sed
+    seedfunc: srand48
+    selectminbits: 32
+    selecttype: fd_set *
+    sendmail: ''
+    setgrent_r_proto: 0
+    sethostent_r_proto: 0
+    setlocale_r_proto: 0
+    setnetent_r_proto: 0
+    setprotoent_r_proto: 0
+    setpwent_r_proto: 0
+    setservent_r_proto: 0
+    sh: /bin/sh
+    shar: ''
+    sharpbang: '#!'
+    shmattype: void *
+    shortsize: 2
+    shrpenv: ''
+    shsharp: true
+    sig_count: 32
+    sig_name: 'ZERO HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 IOT THR '
+    sig_name_init: '"ZERO", "HUP", "INT", "QUIT", "ILL", "TRAP", "ABRT", "EMT", "FPE", "KILL", "BUS", "SEGV", "SYS", "PIPE", "ALRM", "TERM", "URG", "STOP", "TSTP", "CONT", "CHLD", "TTIN", "TTOU", "IO", "XCPU", "XFSZ", "VTALRM", "PROF", "WINCH", "INFO", "USR1", "USR2", "IOT", "THR", 0'
+    sig_num: '0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 6 32 '
+    sig_num_init: '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 6, 32, 0'
+    sig_size: 34
+    signal_t: void
+    sitearch: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitearchexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1/i386-freebsd
+    sitebin: /usr/local/perls/perl-5.10.1/bin
+    sitebinexp: /usr/local/perls/perl-5.10.1/bin
+    sitehtml1dir: ''
+    sitehtml1direxp: ''
+    sitehtml3dir: ''
+    sitehtml3direxp: ''
+    sitelib: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    sitelib_stem: /usr/local/perls/perl-5.10.1/lib/site_perl
+    sitelibexp: /usr/local/perls/perl-5.10.1/lib/site_perl/5.10.1
+    siteman1dir: /usr/local/perls/perl-5.10.1/man/man1
+    siteman1direxp: /usr/local/perls/perl-5.10.1/man/man1
+    siteman3dir: /usr/local/perls/perl-5.10.1/man/man3
+    siteman3direxp: /usr/local/perls/perl-5.10.1/man/man3
+    siteprefix: /usr/local/perls/perl-5.10.1
+    siteprefixexp: /usr/local/perls/perl-5.10.1
+    sitescript: /usr/local/perls/perl-5.10.1/bin
+    sitescriptexp: /usr/local/perls/perl-5.10.1/bin
+    sizesize: 4
+    sizetype: size_t
+    sleep: ''
+    smail: ''
+    so: so
+    sockethdr: ''
+    socketlib: ''
+    socksizetype: socklen_t
+    sort: sort
+    spackage: Perl5
+    spitshell: cat
+    srand48_r_proto: 0
+    srandom_r_proto: 0
+    src: .
+    ssizetype: ssize_t
+    startperl: '#!/usr/local/perls/perl-5.10.1/bin/perl'
+    startsh: '#!/bin/sh'
+    static_ext: ' '
+    stdchar: char
+    stdio_base: '((fp)->_ub._base ? (fp)->_ub._base : (fp)->_bf._base)'
+    stdio_bufsiz: '((fp)->_ub._base ? (fp)->_ub._size : (fp)->_bf._size)'
+    stdio_cnt: ((fp)->_r)
+    stdio_filbuf: ''
+    stdio_ptr: ((fp)->_p)
+    stdio_stream_array: ''
+    strerror_r_proto: 0
+    strings: /usr/include/string.h
+    submit: ''
+    subversion: 1
+    sysman: /usr/share/man/man1
+    tail: ''
+    tar: ''
+    targetarch: ''
+    tbl: ''
+    tee: ''
+    test: test
+    timeincl: '/usr/include/sys/time.h '
+    timetype: time_t
+    tmpnam_r_proto: 0
+    to: ':'
+    touch: touch
+    tr: tr
+    trnl: \n
+    troff: ''
+    ttyname_r_proto: 0
+    u16size: 2
+    u16type: unsigned short
+    u32size: 4
+    u32type: unsigned long
+    u64size: 8
+    u64type: unsigned long long
+    u8size: 1
+    u8type: unsigned char
+    uidformat: '"lu"'
+    uidsign: 1
+    uidsize: 4
+    uidtype: uid_t
+    uname: uname
+    uniq: uniq
+    uquadtype: unsigned long long
+    use5005threads: ~
+    use64bitall: ~
+    use64bitint: ~
+    usecrosscompile: ~
+    usedevel: ~
+    usedl: define
+    usedtrace: ~
+    usefaststdio: ~
+    useithreads: ~
+    uselargefiles: define
+    uselongdouble: ~
+    usemallocwrap: define
+    usemorebits: ~
+    usemultiplicity: ~
+    usemymalloc: n
+    usenm: false
+    useopcode: true
+    useperlio: define
+    useposix: true
+    usereentrant: ~
+    userelocatableinc: ~
+    usesfio: false
+    useshrplib: false
+    usesitecustomize: ~
+    usesocks: ~
+    usethreads: ~
+    usevendorprefix: ~
+    usevfork: true
+    usrinc: /usr/include
+    uuname: ''
+    uvXUformat: '"lX"'
+    uvoformat: '"lo"'
+    uvsize: 4
+    uvtype: unsigned long
+    uvuformat: '"lu"'
+    uvxformat: '"lx"'
+    vendorarch: ''
+    vendorarchexp: ''
+    vendorbin: ''
+    vendorbinexp: ''
+    vendorhtml1dir: ' '
+    vendorhtml1direxp: ''
+    vendorhtml3dir: ' '
+    vendorhtml3direxp: ''
+    vendorlib: ''
+    vendorlib_stem: ''
+    vendorlibexp: ''
+    vendorman1dir: ' '
+    vendorman1direxp: ''
+    vendorman3dir: ' '
+    vendorman3direxp: ''
+    vendorprefix: ''
+    vendorprefixexp: ''
+    vendorscript: ''
+    vendorscriptexp: ''
+    version: 5.10.1
+    version_patchlevel_string: version 10 subversion 1
+    versiononly: ~
+    vi: ''
+    voidflags: 15
+    xlibpth: /usr/lib/386 /lib/386
+    yacc: /usr/bin/byacc
+    yaccflags: ''
+    zcat: ''
+    zip: zip
+  perl_path: /home/brian/bin/perl5.10.1
+  perl_version: 5.010001
+  pid: 57867
+  ppid: 1
+  prefer_bin: 0
+  queue_class: MyCPAN::Indexer::Queue
+  report_dir: /home/brian/indexer_reports
+  reporter_class: MyCPAN::Indexer::Reporter::AsYAML
+  retry_errors: 0
+  root_working_dir: /usr/home/brian/W39A5qpufC
+  run_end_time: 1271780205
+  run_start_time: 1271780142
+  success_report_subdir: /home/brian/indexer_reports/success
+  system_id: an unnamed system
+  temp_dir: /usr/home/brian/W39A5qpufC
+  uuid: 0212227C-4937-11DF-8197-D746E9F9184E
+  worker_class: MyCPAN::Indexer::Worker
